@@ -1,0 +1,15 @@
+# package directories
+node_modules
+jspm_packages
+
+# Serverless directories
+.serverless
+
+# environment variables
+.env
+
+# VSCode
+.vscode
+
+# macOS
+.DS_Store 

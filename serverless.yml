@@ -1,0 +1,33 @@
+service: baliciaga-backend
+
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  region: ap-southeast-1
+  stage: dev
+  environment:
+    NODE_ENV: production
+
+functions:
+  getCafes:
+    handler: src/fetchCangguCafes.handler
+    timeout: 180
+    events:
+      - http:
+          path: /cafes
+          method: get
+          cors: true
+      - http:
+          path: /cafes/{placeId}
+          method: get
+          cors: true
+
+plugins:
+  - serverless-offline
+  - serverless-dotenv-plugin
+
+custom:
+  serverless-offline:
+    httpPort: 3006 
