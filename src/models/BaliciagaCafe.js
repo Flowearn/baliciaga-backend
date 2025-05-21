@@ -88,6 +88,12 @@ class BaliciagaCafe {
     
     // businessStatus might be useful for frontend, e.g. "OPERATIONAL", "CLOSED_TEMPORARILY"
     this.businessStatus = newApiPlaceDetailsData.businessStatus || existingData.businessStatus || '';
+    
+    // Google Maps URI for direct linking
+    this.googleMapsUri = newApiPlaceDetailsData.googleMapsUri || existingData.googleMapsUri || '';
+    
+    // Static map image from S3
+    this.staticMapS3Url = existingData.staticMapS3Url || '';
   }
 
   /**
@@ -123,7 +129,6 @@ class BaliciagaCafe {
     return {
       placeId: this.placeId,
       name: this.name,
-      address: this.address,
       latitude: this.latitude,
       longitude: this.longitude,
       photos: this.photos,
@@ -133,12 +138,12 @@ class BaliciagaCafe {
       instagram: this.instagram,
       website: this.website,
       phoneNumber: this.phoneNumber,
-      priceLevel: this.priceLevel,
-      types: this.types,
       rating: this.rating,
       userRatingsTotal: this.userRatingsTotal,
       region: this.region,
-      businessStatus: this.businessStatus
+      businessStatus: this.businessStatus,
+      googleMapsUri: this.googleMapsUri,
+      staticMapS3Url: this.staticMapS3Url
     };
   }
   

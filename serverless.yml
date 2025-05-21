@@ -9,6 +9,33 @@ provider:
   stage: dev
   environment:
     NODE_ENV: production
+    MAPS_API_KEY_SSM_PATH: /baliciaga/${sls:stage}/googleMapsApiKey
+    S3_BUCKET_NAME_SSM_PATH: /baliciaga/${sls:stage}/s3BucketName
+    S3_DATA_FILE_KEY_SSM_PATH: /baliciaga/${sls:stage}/s3DataFileKey
+  iamRoleStatements:
+    - Effect: "Allow"
+      Action:
+        - "ssm:GetParameter"
+      Resource:
+        # Permissions for Google Maps API Key across stages
+        - "arn:aws:ssm:ap-southeast-1:335069051432:parameter/baliciaga/dev/googleMapsApiKey"
+        - "arn:aws:ssm:ap-southeast-1:335069051432:parameter/baliciaga/staging/googleMapsApiKey"
+        - "arn:aws:ssm:ap-southeast-1:335069051432:parameter/baliciaga/prod/googleMapsApiKey"
+        # Permissions for S3 Bucket Name across stages
+        - "arn:aws:ssm:ap-southeast-1:335069051432:parameter/baliciaga/dev/s3BucketName"
+        - "arn:aws:ssm:ap-southeast-1:335069051432:parameter/baliciaga/staging/s3BucketName"
+        - "arn:aws:ssm:ap-southeast-1:335069051432:parameter/baliciaga/prod/s3BucketName"
+        # Permissions for S3 Data File Key across stages
+        - "arn:aws:ssm:ap-southeast-1:335069051432:parameter/baliciaga/dev/s3DataFileKey"
+        - "arn:aws:ssm:ap-southeast-1:335069051432:parameter/baliciaga/staging/s3DataFileKey"
+        - "arn:aws:ssm:ap-southeast-1:335069051432:parameter/baliciaga/prod/s3DataFileKey"
+    # Add S3 access permissions for reading cafe data
+    - Effect: "Allow"
+      Action:
+        - "s3:GetObject"
+      Resource:
+        - "arn:aws:s3:::baliciaga-database/data/cafes.json"
+        - "arn:aws:s3:::baliciaga-database/data/*"
 
 functions:
   getCafes:
@@ -30,4 +57,10 @@ plugins:
 
 custom:
   serverless-offline:
-    httpPort: 3006 
+    httpPort: 3006
+  dotenv:
+    exclude:
+      - AWS_ACCESS_KEY_ID
+      - AWS_SECRET_ACCESS_KEY
+      - AWS_SESSION_TOKEN
+      - AWS_REGION

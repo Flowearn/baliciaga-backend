@@ -3,9 +3,9 @@
  * 封装对Google Places API新版(New)的调用
  */
 const axios = require('axios');
-const { getApiKey } = require('../utils/config'); // Removed SEARCH_CONFIG as it's not directly used here
+const appConfig = require('../utils/appConfig');
 
-const COMMON_FIELD_MASK = 'places.id,places.displayName,places.types,places.location,places.businessStatus,places.googleMapsUri,places.photos,places.viewport';
+const COMMON_FIELD_MASK = 'id,displayName,types,location,businessStatus,googleMapsUri,photos,viewport';
 const MAX_PAGES_TO_FETCH = 5;
 const PAGINATION_DELAY_MS = 2000;
 
@@ -23,7 +23,9 @@ const PAGINATION_DELAY_MS = 2000;
  * @returns {Promise<Object>} - Object containing all found places: { places: Array }.
  */
 async function searchNearbyPlaces(searchParams) {
-  const apiKey = getApiKey();
+  const config = await appConfig.getConfig();
+  const apiKey = config.MAPS_API_KEY;
+  
   // Log 1: Incoming searchParams (Kept from prompt#33)
   console.log('searchNearbyPlaces received searchParams:', JSON.stringify(searchParams, null, 2));
 
@@ -145,8 +147,9 @@ async function searchNearbyPlaces(searchParams) {
  * @returns {Promise<Object>} - Object containing all found places: { places: Array }.
  */
 async function searchTextPlaces(searchParams) { // Renamed from getAllTextSearchResults
-  const apiKey = getApiKey();
-  const fieldMask = COMMON_FIELD_MASK; // Using the common field mask
+  const config = await appConfig.getConfig();
+  const apiKey = config.MAPS_API_KEY;
+  const fieldMask = 'places.id,places.displayName,places.formattedAddress'; // Using a minimal field mask specific for searchText
 
   let allPlaces = [];
   let currentPageToken = null;
@@ -240,57 +243,84 @@ async function searchTextPlaces(searchParams) { // Renamed from getAllTextSearch
  * @returns {Promise<Object>} - 地点详情
  */
 async function getPlaceDetails(placeId) {
-  const apiKey = getApiKey();
-  // Field mask for detailed place information
-  const fieldMask = 'places.id,places.displayName,places.formattedAddress,places.location,places.rating,places.userRatingCount,places.regularOpeningHours,places.photos,places.websiteUri,places.internationalPhoneNumber,places.priceLevel,places.types,places.editorialSummary,places.reviews,places.utcOffsetMinutes,places.paymentOptions,places.goodForChildren,places.goodForGroups,places.goodForLunch,places.reservable,places.servesBreakfast,places.servesBrunch,places.servesDinner,places.servesLunch,places.takeout,places.delivery,places.dineIn,places.curbsidePickup,places.accessibilityOptions';
-
+  const config = await appConfig.getConfig();
+  const apiKey = config.MAPS_API_KEY;
+  // Updated field mask with 10 specific fields (photos removed)
+  const fieldMask = 'id,displayName,location,googleMapsUri,businessStatus,regularOpeningHours,internationalPhoneNumber,websiteUri,rating,userRatingCount';
 
   try {
     const response = await axios.get(
       `https://places.googleapis.com/v1/places/${placeId}`,
       {
         headers: {
+          'Content-Type': 'application/json',
           'X-Goog-Api-Key': apiKey,
-          // 'X-Goog-FieldMask': 'id,displayName,formattedAddress,location,rating,userRatingCount,regularOpeningHours,photos,websiteUri,internationalPhoneNumber,priceLevel,types'
-          'X-Goog-FieldMask': fieldMask // Using a more comprehensive field mask
+          'X-Goog-FieldMask': fieldMask
         }
       }
     );
-
+    
     return response.data;
   } catch (error) {
-    console.error(`Error fetching place details for ${placeId}:`, error);
+    console.error('获取地点详情错误:', error);
     if (error.response) {
-      console.error('Response data:', error.response.data);
       console.error('Response status:', error.response.status);
+      console.error('Response data:', error.response.data);
+    } else {
+      console.error('Error message:', error.message);
     }
     throw error;
   }
 }
 
 /**
- * 获取地点照片URL (使用Places API New)
- * @param {string} photoName - 照片资源名称 (e.g., "places/ChIJN1t_tDeuEmsRUsoyG83frY4/photos/AUacShih3_M3DNLHHQPhUTW2EbaGMMV8q3XGzB8s9t8ZgE6h7oEGu1P19q3_A4B3n7pGrMGFH33hFzZgYdGMAOYw_40X6kHMpyQX1p6WfRk2P5gX_pAylzARxuxhHjYgLRW0U7eZ")
- * @param {number} [maxWidth=800] - 最大宽度 (像素)
- * @param {number} [maxHeight] - 最大高度 (像素)
- * @param {boolean} [skipHttpRedirect] - 是否跳过HTTP重定向并返回JSON响应
- * @returns {string} - 照片URL 或 JSON对象 (如果 skipHttpRedirect 为 true)
+ * 生成照片URL (使用Places API New)
+ * @param {string} photoName - 照片引用名称
+ * @param {number} maxWidth - 最大宽度
+ * @param {number} maxHeight - 最大高度
+ * @param {boolean} skipHttpRedirect - 是否跳过HTTP重定向
+ * @returns {Promise<string>} - 照片URL
  */
-function getPhotoUrl(photoName, maxWidth = 800, maxHeight, skipHttpRedirect = false) {
-    const apiKey = getApiKey();
-    let url = `https://places.googleapis.com/v1/${photoName}/media?key=${apiKey}&maxWidthPx=${maxWidth}`;
-    if (maxHeight) {
-        url += `&maxHeightPx=${maxHeight}`;
-    }
-    if (skipHttpRedirect) {
-        url += `&skipHttpRedirect=${skipHttpRedirect}`;
-    }
+async function getPhotoUrl(photoName, maxWidth = 800, maxHeight, skipHttpRedirect = false) {
+  const config = await appConfig.getConfig();
+  const apiKey = config.MAPS_API_KEY;
+
+  if (!photoName) {
+    throw new Error('photoName is required');
+  }
+  
+  let url = `https://places.googleapis.com/v1/${photoName}/media?key=${apiKey}&maxWidthPx=${maxWidth}`;
+  
+  if (maxHeight) {
+    url += `&maxHeightPx=${maxHeight}`;
+  }
+  
+  if (skipHttpRedirect) {
     return url;
+  }
+  
+  try {
+    // Get the redirect URL
+    const response = await axios.get(url, {
+      maxRedirects: 0,
+      validateStatus: status => status >= 200 && status < 400
+    });
+    
+    if (response.headers.location) {
+      return response.headers.location;
+    }
+    
+    // If no redirect, return original URL
+    return url;
+  } catch (error) {
+    console.error('Error getting photo URL:', error);
+    throw error;
+  }
 }
 
 module.exports = {
-  searchNearbyPlaces, // New function
-  searchTextPlaces,   // Renamed function
+  searchNearbyPlaces,
+  searchTextPlaces,
   getPlaceDetails,
   getPhotoUrl
 }; 

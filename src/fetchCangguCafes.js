@@ -6,27 +6,36 @@
 const serverless = require('serverless-http');
 const express = require('express');
 const cors = require('cors');
-require('dotenv').config();
 const { S3Client, GetObjectCommand } = require("@aws-sdk/client-s3");
+const appConfig = require('./utils/appConfig');
 
 // 导入BaliciagaCafe模型
 const BaliciagaCafe = require('./models/BaliciagaCafe');
-
-// 初始化S3客户端
-const s3Client = new S3Client({ region: "ap-southeast-1" });
-
-// S3配置
-const S3_BUCKET_NAME = 'baliciaga-database';
-const S3_OBJECT_KEY = 'data/cafes.json';
-
-// 初始化Express应用
-const app = express();
-app.use(cors());
 
 // 预缓存的咖啡馆数据
 let cafesCache = null;
 let cacheTimestamp = null;
 const CACHE_TTL = 5 * 60 * 1000; // 5分钟缓存时间
+
+// 初始化Express应用
+const app = express();
+app.use(cors());
+
+// S3客户端
+let s3Client = null;
+
+/**
+ * 获取或创建S3客户端
+ * @returns {Promise<S3Client>} S3客户端实例
+ */
+async function getS3Client() {
+  if (s3Client === null) {
+    const config = await appConfig.getConfig();
+    s3Client = new S3Client({ region: config.AWS_REGION });
+    console.log(`S3 client initialized with region: ${config.AWS_REGION}`);
+  }
+  return s3Client;
+}
 
 /**
  * 从S3获取咖啡馆数据
@@ -34,14 +43,19 @@ const CACHE_TTL = 5 * 60 * 1000; // 5分钟缓存时间
  */
 async function fetchCafesFromS3() {
   try {
+    const config = await appConfig.getConfig();
+    const S3_BUCKET_NAME = config.S3_BUCKET_NAME;
+    const S3_OBJECT_KEY = config.S3_DATA_FILE_KEY;
+    
     console.log(`Fetching cafes data from S3: ${S3_BUCKET_NAME}/${S3_OBJECT_KEY}`);
     
+    const client = await getS3Client();
     const command = new GetObjectCommand({
       Bucket: S3_BUCKET_NAME,
       Key: S3_OBJECT_KEY
     });
     
-    const response = await s3Client.send(command);
+    const response = await client.send(command);
     
     // 将S3对象内容转换为字符串
     const bodyContents = await streamToString(response.Body);
@@ -248,12 +262,12 @@ app.get('/cafes', async (req, res) => {
 // API路由 - 获取特定咖啡馆详情
 app.get('/cafes/:placeId', async (req, res) => {
   try {
-    const { placeId } = req.params;
-    const cafe = await WorkspaceCafeDetails(placeId);
+    const cafe = await WorkspaceCafeDetails(req.params.placeId);
     
     if (!cafe) {
-      return res.status(404).json({ error: `Cafe with placeId ${placeId} not found` });
+      return res.status(404).json({ error: 'Cafe not found' });
     }
+    
     res.json(cafe.toJSON());
   } catch (error) {
     console.error(`GET /cafes/${req.params.placeId} - Error fetching cafe details:`, error.message);
@@ -261,13 +275,15 @@ app.get('/cafes/:placeId', async (req, res) => {
   }
 });
 
-// 独立运行时的端口配置 (非Serverless环境)
-if (process.env.NODE_ENV !== 'production') {
-  const PORT = process.env.PORT || 3006;
-  app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
-  });
-}
+// 创建serverless处理器
+const handler = serverless(app);
 
-// 导出Serverless处理程序
-module.exports.handler = serverless(app); 
+// 导出处理函数，供AWS Lambda使用
+module.exports.handler = async (event, context) => {
+  // 返回serverless处理器的结果
+  return await handler(event, context);
+};
+
+// 导出工作空间函数，供本地开发和测试使用
+module.exports.WorkspaceCangguCafes = WorkspaceCangguCafes;
+module.exports.WorkspaceCafeDetails = WorkspaceCafeDetails; 

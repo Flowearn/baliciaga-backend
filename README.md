@@ -109,7 +109,7 @@
    serverless deploy --stage prod
    ```
 
-3. **部署完成后，Serverless Framework将输出API Gateway端点URL，您可以使用该URL访问您的API。**
+3. **部署完成后，Serverless Framework将输出API Gateway端点URL，您可以使用该URL访问您的API。** 
 
 # 项目开发进展和更新日志
 
