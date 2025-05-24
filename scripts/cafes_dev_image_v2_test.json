@@ -1,0 +1,4081 @@
+[
+  {
+    "placeId": "ChIJ9UCFSPE50i0RVVADcFGCGXI",
+    "name": "Desa Kitsuné",
+    "latitude": -8.6549894,
+    "longitude": 115.1294004,
+    "businessStatus": "OPERATIONAL",
+    "photos": [
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/desa-kitsun_ChIJ9UCFSPE50i0RVVADcFGCGXI/photo_1.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/desa-kitsun_ChIJ9UCFSPE50i0RVVADcFGCGXI/photo_b.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/desa-kitsun_ChIJ9UCFSPE50i0RVVADcFGCGXI/photo_a.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/desa-kitsun_ChIJ9UCFSPE50i0RVVADcFGCGXI/photo_2.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/desa-kitsun_ChIJ9UCFSPE50i0RVVADcFGCGXI/photo_6.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/desa-kitsun_ChIJ9UCFSPE50i0RVVADcFGCGXI/photo_9.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/desa-kitsun_ChIJ9UCFSPE50i0RVVADcFGCGXI/photo_10.jpg"
+    ],
+    "phoneNumber": "0811-3099-0800",
+    "rating": 4.4,
+    "userRatingsTotal": 1404,
+    "website": "https://desakitsune.com/",
+    "openingHours": [
+      "Monday: 7:00 AM – 11:30 PM",
+      "Tuesday: 7:00 AM – 1:00 AM",
+      "Wednesday: 7:00 AM – 11:30 PM",
+      "Thursday: 7:00 AM – 11:30 PM",
+      "Friday: 7:00 AM – 2:00 AM",
+      "Saturday: 7:00 AM – 11:30 PM",
+      "Sunday: 7:00 AM – 11:30 PM"
+    ],
+    "isOpenNow": true,
+    "openingPeriods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 7,
+          "minute": 0
+        },
+        "close": {
+          "day": 0,
+          "hour": 23,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 1,
+          "hour": 7,
+          "minute": 0
+        },
+        "close": {
+          "day": 1,
+          "hour": 23,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 7,
+          "minute": 0
+        },
+        "close": {
+          "day": 3,
+          "hour": 1,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 7,
+          "minute": 0
+        },
+        "close": {
+          "day": 3,
+          "hour": 23,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 7,
+          "minute": 0
+        },
+        "close": {
+          "day": 4,
+          "hour": 23,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 7,
+          "minute": 0
+        },
+        "close": {
+          "day": 6,
+          "hour": 2,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 7,
+          "minute": 0
+        },
+        "close": {
+          "day": 6,
+          "hour": 23,
+          "minute": 30
+        }
+      }
+    ],
+    "instagram": "https://www.instagram.com/desakitsunebali/",
+    "region": "canggu",
+    "googleMapsUri": "https://maps.google.com/?cid=8221745881024778325",
+    "staticMapS3Url": "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/desa-kitsun_ChIJ9UCFSPE50i0RVVADcFGCGXI/desa-kitsun_static.webp"
+  },
+  {
+    "placeId": "ChIJr9bHQS050i0RW_GuYHY3vaU",
+    "name": "Sensorium Bali",
+    "latitude": -8.649618799999999,
+    "longitude": 115.1306997,
+    "businessStatus": "OPERATIONAL",
+    "photos": [
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/sensorium-bali_ChIJr9bHQS050i0RW_GuYHY3vaU/photo_1.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/sensorium-bali_ChIJr9bHQS050i0RW_GuYHY3vaU/photo_2.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/sensorium-bali_ChIJr9bHQS050i0RW_GuYHY3vaU/photo_a.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/sensorium-bali_ChIJr9bHQS050i0RW_GuYHY3vaU/photo_b.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/sensorium-bali_ChIJr9bHQS050i0RW_GuYHY3vaU/photo_c.jpg"
+    ],
+    "phoneNumber": "",
+    "rating": 4.7,
+    "userRatingsTotal": 3435,
+    "website": "https://sensoriumbali.co.id/",
+    "openingHours": [
+      "Monday: 9:00 AM – 4:30 PM",
+      "Tuesday: 9:00 AM – 4:30 PM",
+      "Wednesday: 9:00 AM – 4:30 PM",
+      "Thursday: 9:00 AM – 4:30 PM",
+      "Friday: 9:00 AM – 4:30 PM",
+      "Saturday: 9:00 AM – 4:30 PM",
+      "Sunday: 9:00 AM – 4:00 PM"
+    ],
+    "isOpenNow": true,
+    "openingPeriods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 9,
+          "minute": 0
+        },
+        "close": {
+          "day": 0,
+          "hour": 16,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 1,
+          "hour": 9,
+          "minute": 0
+        },
+        "close": {
+          "day": 1,
+          "hour": 16,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 9,
+          "minute": 0
+        },
+        "close": {
+          "day": 2,
+          "hour": 16,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 9,
+          "minute": 0
+        },
+        "close": {
+          "day": 3,
+          "hour": 16,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 9,
+          "minute": 0
+        },
+        "close": {
+          "day": 4,
+          "hour": 16,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 9,
+          "minute": 0
+        },
+        "close": {
+          "day": 5,
+          "hour": 16,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 9,
+          "minute": 0
+        },
+        "close": {
+          "day": 6,
+          "hour": 16,
+          "minute": 30
+        }
+      }
+    ],
+    "instagram": "https://www.instagram.com/sensorium_bali/",
+    "region": "canggu",
+    "googleMapsUri": "https://maps.google.com/?cid=11942762768424169819",
+    "staticMapS3Url": "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/sensorium-bali_ChIJr9bHQS050i0RW_GuYHY3vaU/sensorium-bali_static.webp"
+  },
+  {
+    "placeId": "ChIJL3L-Sfc50i0RwlAVew5QCm8",
+    "name": "Milk & Madu Beach Road",
+    "latitude": -8.6555011,
+    "longitude": 115.13198700000001,
+    "businessStatus": "OPERATIONAL",
+    "photos": [
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/milk-madu-beach-road_ChIJL3L-Sfc50i0RwlAVew5QCm8/photo_a.png",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/milk-madu-beach-road_ChIJL3L-Sfc50i0RwlAVew5QCm8/photo_b.png",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/milk-madu-beach-road_ChIJL3L-Sfc50i0RwlAVew5QCm8/photo_c.png",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/milk-madu-beach-road_ChIJL3L-Sfc50i0RwlAVew5QCm8/photo_d.png",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/milk-madu-beach-road_ChIJL3L-Sfc50i0RwlAVew5QCm8/photo_1.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/milk-madu-beach-road_ChIJL3L-Sfc50i0RwlAVew5QCm8/photo_4.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/milk-madu-beach-road_ChIJL3L-Sfc50i0RwlAVew5QCm8/photo_10.jpg"
+    ],
+    "phoneNumber": "0813-5389-6153",
+    "rating": 4.5,
+    "userRatingsTotal": 1903,
+    "website": "http://www.milkandmadu.com/",
+    "openingHours": [
+      "Monday: 7:00 AM – 10:00 PM",
+      "Tuesday: 7:00 AM – 10:00 PM",
+      "Wednesday: 7:00 AM – 10:00 PM",
+      "Thursday: 7:00 AM – 10:00 PM",
+      "Friday: 7:00 AM – 10:00 PM",
+      "Saturday: 7:00 AM – 10:00 PM",
+      "Sunday: 7:00 AM – 10:00 PM"
+    ],
+    "isOpenNow": true,
+    "openingPeriods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 7,
+          "minute": 0
+        },
+        "close": {
+          "day": 0,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 1,
+          "hour": 7,
+          "minute": 0
+        },
+        "close": {
+          "day": 1,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 7,
+          "minute": 0
+        },
+        "close": {
+          "day": 2,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 7,
+          "minute": 0
+        },
+        "close": {
+          "day": 3,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 7,
+          "minute": 0
+        },
+        "close": {
+          "day": 4,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 7,
+          "minute": 0
+        },
+        "close": {
+          "day": 5,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 7,
+          "minute": 0
+        },
+        "close": {
+          "day": 6,
+          "hour": 22,
+          "minute": 0
+        }
+      }
+    ],
+    "instagram": "https://www.instagram.com/milkandmadu/",
+    "region": "canggu",
+    "googleMapsUri": "https://maps.google.com/?cid=8001295711101866178",
+    "staticMapS3Url": "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/milk-madu-beach-road_ChIJL3L-Sfc50i0RwlAVew5QCm8/milk-madu-beach-road_static.webp"
+  },
+  {
+    "placeId": "ChIJ36pywXk40i0Rh9ZZCRMb1fQ",
+    "name": "The Avocado Factory",
+    "latitude": -8.6522267,
+    "longitude": 115.13174289999999,
+    "businessStatus": "OPERATIONAL",
+    "photos": [
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/the-avocado-factory_ChIJ36pywXk40i0Rh9ZZCRMb1fQ/photo_a.png",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/the-avocado-factory_ChIJ36pywXk40i0Rh9ZZCRMb1fQ/photo_b.png",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/the-avocado-factory_ChIJ36pywXk40i0Rh9ZZCRMb1fQ/photo_c.png",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/the-avocado-factory_ChIJ36pywXk40i0Rh9ZZCRMb1fQ/photo_d.png",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/the-avocado-factory_ChIJ36pywXk40i0Rh9ZZCRMb1fQ/photo_e.png",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/the-avocado-factory_ChIJ36pywXk40i0Rh9ZZCRMb1fQ/photo_f.png",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/the-avocado-factory_ChIJ36pywXk40i0Rh9ZZCRMb1fQ/photo_1.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/the-avocado-factory_ChIJ36pywXk40i0Rh9ZZCRMb1fQ/photo_2.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/the-avocado-factory_ChIJ36pywXk40i0Rh9ZZCRMb1fQ/photo_6.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/the-avocado-factory_ChIJ36pywXk40i0Rh9ZZCRMb1fQ/photo_8.jpg"
+    ],
+    "phoneNumber": "0812-6688-4463",
+    "rating": 4.5,
+    "userRatingsTotal": 2612,
+    "website": "https://theavocadofactory.com/?utm_source=gbpo&utm_medium=organic&utm_id=gbpo",
+    "openingHours": [
+      "Monday: 7:00 AM – 10:30 PM",
+      "Tuesday: 7:00 AM – 10:30 PM",
+      "Wednesday: 7:00 AM – 10:30 PM",
+      "Thursday: 7:00 AM – 10:30 PM",
+      "Friday: 7:00 AM – 10:30 PM",
+      "Saturday: 7:00 AM – 10:30 PM",
+      "Sunday: 7:00 AM – 10:30 PM"
+    ],
+    "isOpenNow": true,
+    "openingPeriods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 7,
+          "minute": 0
+        },
+        "close": {
+          "day": 0,
+          "hour": 22,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 1,
+          "hour": 7,
+          "minute": 0
+        },
+        "close": {
+          "day": 1,
+          "hour": 22,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 7,
+          "minute": 0
+        },
+        "close": {
+          "day": 2,
+          "hour": 22,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 7,
+          "minute": 0
+        },
+        "close": {
+          "day": 3,
+          "hour": 22,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 7,
+          "minute": 0
+        },
+        "close": {
+          "day": 4,
+          "hour": 22,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 7,
+          "minute": 0
+        },
+        "close": {
+          "day": 5,
+          "hour": 22,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 7,
+          "minute": 0
+        },
+        "close": {
+          "day": 6,
+          "hour": 22,
+          "minute": 30
+        }
+      }
+    ],
+    "instagram": "https://www.instagram.com/theavocadofactory/",
+    "region": "canggu",
+    "googleMapsUri": "https://maps.google.com/?cid=17642036883868997255",
+    "staticMapS3Url": "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/the-avocado-factory_ChIJ36pywXk40i0Rh9ZZCRMb1fQ/the-avocado-factory_static.webp"
+  },
+  {
+    "placeId": "ChIJnY-evaw50i0RD_tH6R6pDyw",
+    "name": "Revolver Canggu",
+    "latitude": -8.6531518,
+    "longitude": 115.135551,
+    "businessStatus": "OPERATIONAL",
+    "photos": [
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/revolver-canggu_ChIJnY-evaw50i0RD_tH6R6pDyw/photo_7.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/revolver-canggu_ChIJnY-evaw50i0RD_tH6R6pDyw/photo_2.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/revolver-canggu_ChIJnY-evaw50i0RD_tH6R6pDyw/photo_3.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/revolver-canggu_ChIJnY-evaw50i0RD_tH6R6pDyw/photo_4.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/revolver-canggu_ChIJnY-evaw50i0RD_tH6R6pDyw/photo_5.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/revolver-canggu_ChIJnY-evaw50i0RD_tH6R6pDyw/photo_1.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/revolver-canggu_ChIJnY-evaw50i0RD_tH6R6pDyw/photo_10.jpg"
+    ],
+    "phoneNumber": "0812-3944-6339",
+    "rating": 4.5,
+    "userRatingsTotal": 1767,
+    "website": "https://revolverbali.com/",
+    "openingHours": [
+      "Monday: 6:00 AM – 11:00 PM",
+      "Tuesday: 6:00 AM – 11:00 PM",
+      "Wednesday: 6:00 AM – 11:00 PM",
+      "Thursday: 6:00 AM – 11:00 PM",
+      "Friday: 6:00 AM – 11:00 PM",
+      "Saturday: 6:00 AM – 11:00 PM",
+      "Sunday: 6:00 AM – 11:00 PM"
+    ],
+    "isOpenNow": true,
+    "openingPeriods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 6,
+          "minute": 0
+        },
+        "close": {
+          "day": 0,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 1,
+          "hour": 6,
+          "minute": 0
+        },
+        "close": {
+          "day": 1,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 6,
+          "minute": 0
+        },
+        "close": {
+          "day": 2,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 6,
+          "minute": 0
+        },
+        "close": {
+          "day": 3,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 6,
+          "minute": 0
+        },
+        "close": {
+          "day": 4,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 6,
+          "minute": 0
+        },
+        "close": {
+          "day": 5,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 6,
+          "minute": 0
+        },
+        "close": {
+          "day": 6,
+          "hour": 23,
+          "minute": 0
+        }
+      }
+    ],
+    "instagram": "",
+    "region": "canggu",
+    "googleMapsUri": "https://maps.google.com/?cid=3174942212547410703",
+    "staticMapS3Url": "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/revolver-canggu_ChIJnY-evaw50i0RD_tH6R6pDyw/revolver-canggu_static.webp"
+  },
+  {
+    "placeId": "ChIJ1a70wvFH0i0RajIckWuoU14",
+    "name": "ZIN Cafe",
+    "latitude": -8.660006400000002,
+    "longitude": 115.13353930000001,
+    "businessStatus": "OPERATIONAL",
+    "photos": [
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/zin-cafe_ChIJ1a70wvFH0i0RajIckWuoU14/photo_1.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/zin-cafe_ChIJ1a70wvFH0i0RajIckWuoU14/photo_a.png",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/zin-cafe_ChIJ1a70wvFH0i0RajIckWuoU14/photo_b.png",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/zin-cafe_ChIJ1a70wvFH0i0RajIckWuoU14/photo_c.png",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/zin-cafe_ChIJ1a70wvFH0i0RajIckWuoU14/photo_d.png",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/zin-cafe_ChIJ1a70wvFH0i0RajIckWuoU14/photo_4.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/zin-cafe_ChIJ1a70wvFH0i0RajIckWuoU14/photo_6.jpg"
+    ],
+    "phoneNumber": "0811-3111-6647",
+    "rating": 4.7,
+    "userRatingsTotal": 1649,
+    "website": "https://zin.world/zin-cafe/",
+    "openingHours": [
+      "Monday: 6:30 AM – 12:00 AM",
+      "Tuesday: 6:30 AM – 12:00 AM",
+      "Wednesday: 6:30 AM – 12:00 AM",
+      "Thursday: 6:30 AM – 12:00 AM",
+      "Friday: 6:30 AM – 12:00 AM",
+      "Saturday: 6:30 AM – 12:00 AM",
+      "Sunday: 6:30 AM – 12:00 AM"
+    ],
+    "isOpenNow": true,
+    "openingPeriods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 6,
+          "minute": 30
+        },
+        "close": {
+          "day": 1,
+          "hour": 0,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 1,
+          "hour": 6,
+          "minute": 30
+        },
+        "close": {
+          "day": 2,
+          "hour": 0,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 6,
+          "minute": 30
+        },
+        "close": {
+          "day": 3,
+          "hour": 0,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 6,
+          "minute": 30
+        },
+        "close": {
+          "day": 4,
+          "hour": 0,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 6,
+          "minute": 30
+        },
+        "close": {
+          "day": 5,
+          "hour": 0,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 6,
+          "minute": 30
+        },
+        "close": {
+          "day": 6,
+          "hour": 0,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 6,
+          "minute": 30
+        },
+        "close": {
+          "day": 0,
+          "hour": 0,
+          "minute": 0
+        }
+      }
+    ],
+    "instagram": "https://www.instagram.com/zin_cafe/",
+    "region": "canggu",
+    "googleMapsUri": "https://maps.google.com/?cid=6796961442581721706",
+    "staticMapS3Url": "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/zin-cafe_ChIJ1a70wvFH0i0RajIckWuoU14/zin-cafe_static.webp"
+  },
+  {
+    "placeId": "ChIJg1ad-75H0i0R8aB_K9oKYj8",
+    "name": "Fold Canggu",
+    "latitude": -8.6572816,
+    "longitude": 115.1345482,
+    "businessStatus": "OPERATIONAL",
+    "photos": [
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/fold-canggu_ChIJg1ad-75H0i0R8aB_K9oKYj8/photo_4.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/fold-canggu_ChIJg1ad-75H0i0R8aB_K9oKYj8/photo_a.png",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/fold-canggu_ChIJg1ad-75H0i0R8aB_K9oKYj8/photo_3.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/fold-canggu_ChIJg1ad-75H0i0R8aB_K9oKYj8/photo_8.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/fold-canggu_ChIJg1ad-75H0i0R8aB_K9oKYj8/photo_9.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/fold-canggu_ChIJg1ad-75H0i0R8aB_K9oKYj8/photo_10.jpg"
+    ],
+    "phoneNumber": "0877-7727-6634",
+    "rating": 4.7,
+    "userRatingsTotal": 859,
+    "website": "https://foldbali.com/",
+    "openingHours": [
+      "Monday: 7:00 AM – 6:00 PM",
+      "Tuesday: 7:00 AM – 6:00 PM",
+      "Wednesday: 7:00 AM – 6:00 PM",
+      "Thursday: 7:00 AM – 6:00 PM",
+      "Friday: 7:00 AM – 6:00 PM",
+      "Saturday: 7:00 AM – 6:00 PM",
+      "Sunday: 7:00 AM – 6:00 PM"
+    ],
+    "isOpenNow": true,
+    "openingPeriods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 7,
+          "minute": 0
+        },
+        "close": {
+          "day": 0,
+          "hour": 18,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 1,
+          "hour": 7,
+          "minute": 0
+        },
+        "close": {
+          "day": 1,
+          "hour": 18,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 7,
+          "minute": 0
+        },
+        "close": {
+          "day": 2,
+          "hour": 18,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 7,
+          "minute": 0
+        },
+        "close": {
+          "day": 3,
+          "hour": 18,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 7,
+          "minute": 0
+        },
+        "close": {
+          "day": 4,
+          "hour": 18,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 7,
+          "minute": 0
+        },
+        "close": {
+          "day": 5,
+          "hour": 18,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 7,
+          "minute": 0
+        },
+        "close": {
+          "day": 6,
+          "hour": 18,
+          "minute": 0
+        }
+      }
+    ],
+    "instagram": "https://www.instagram.com/fold.bali/",
+    "region": "canggu",
+    "googleMapsUri": "https://maps.google.com/?cid=4567224904256037105",
+    "staticMapS3Url": "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/fold-canggu_ChIJg1ad-75H0i0R8aB_K9oKYj8/fold-canggu_static.webp"
+  },
+  {
+    "placeId": "ChIJVwZGvMo50i0R5i1fzyT73S4",
+    "name": "Sari Kitchen & Community - by Ekosistem",
+    "latitude": -8.6576176,
+    "longitude": 115.1311562,
+    "businessStatus": "OPERATIONAL",
+    "photos": [
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/sari-kitchen-community-by-ekosistem_ChIJVwZGvMo50i0R5i1fzyT73S4/photo_1.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/sari-kitchen-community-by-ekosistem_ChIJVwZGvMo50i0R5i1fzyT73S4/photo_2.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/sari-kitchen-community-by-ekosistem_ChIJVwZGvMo50i0R5i1fzyT73S4/photo_3.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/sari-kitchen-community-by-ekosistem_ChIJVwZGvMo50i0R5i1fzyT73S4/photo_5.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/sari-kitchen-community-by-ekosistem_ChIJVwZGvMo50i0R5i1fzyT73S4/photo_6.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/sari-kitchen-community-by-ekosistem_ChIJVwZGvMo50i0R5i1fzyT73S4/photo_7.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/sari-kitchen-community-by-ekosistem_ChIJVwZGvMo50i0R5i1fzyT73S4/photo_8.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/sari-kitchen-community-by-ekosistem_ChIJVwZGvMo50i0R5i1fzyT73S4/photo_10.jpg"
+    ],
+    "phoneNumber": "0821-4582-2655",
+    "rating": 4.7,
+    "userRatingsTotal": 1281,
+    "website": "http://www.saricanggu.com/",
+    "openingHours": [
+      "Monday: 7:00 AM – 10:00 PM",
+      "Tuesday: 7:00 AM – 10:00 PM",
+      "Wednesday: 7:00 AM – 10:00 PM",
+      "Thursday: 7:00 AM – 10:00 PM",
+      "Friday: 7:00 AM – 10:00 PM",
+      "Saturday: 7:00 AM – 10:00 PM",
+      "Sunday: 7:00 AM – 10:00 PM"
+    ],
+    "isOpenNow": true,
+    "openingPeriods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 7,
+          "minute": 0
+        },
+        "close": {
+          "day": 0,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 1,
+          "hour": 7,
+          "minute": 0
+        },
+        "close": {
+          "day": 1,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 7,
+          "minute": 0
+        },
+        "close": {
+          "day": 2,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 7,
+          "minute": 0
+        },
+        "close": {
+          "day": 3,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 7,
+          "minute": 0
+        },
+        "close": {
+          "day": 4,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 7,
+          "minute": 0
+        },
+        "close": {
+          "day": 5,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 7,
+          "minute": 0
+        },
+        "close": {
+          "day": 6,
+          "hour": 22,
+          "minute": 0
+        }
+      }
+    ],
+    "instagram": "https://www.instagram.com/saricanggu/",
+    "region": "canggu",
+    "googleMapsUri": "https://maps.google.com/?cid=3377131431114255846",
+    "staticMapS3Url": "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/sari-kitchen-community-by-ekosistem_ChIJVwZGvMo50i0R5i1fzyT73S4/sari-kitchen-community-by-ekosistem_static.webp"
+  },
+  {
+    "placeId": "ChIJq42lSa850i0RziccPzDJXhU",
+    "name": "Two Face / Coffee & Brunch [Canggu]",
+    "latitude": -8.653597099999999,
+    "longitude": 115.13051709999999,
+    "businessStatus": "OPERATIONAL",
+    "photos": [
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/two-face-coffee-brunch-canggu_ChIJq42lSa850i0RziccPzDJXhU/photo_1.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/two-face-coffee-brunch-canggu_ChIJq42lSa850i0RziccPzDJXhU/photo_2.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/two-face-coffee-brunch-canggu_ChIJq42lSa850i0RziccPzDJXhU/photo_3.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/two-face-coffee-brunch-canggu_ChIJq42lSa850i0RziccPzDJXhU/photo_4.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/two-face-coffee-brunch-canggu_ChIJq42lSa850i0RziccPzDJXhU/photo_5.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/two-face-coffee-brunch-canggu_ChIJq42lSa850i0RziccPzDJXhU/photo_6.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/two-face-coffee-brunch-canggu_ChIJq42lSa850i0RziccPzDJXhU/photo_7.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/two-face-coffee-brunch-canggu_ChIJq42lSa850i0RziccPzDJXhU/photo_8.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/two-face-coffee-brunch-canggu_ChIJq42lSa850i0RziccPzDJXhU/photo_9.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/two-face-coffee-brunch-canggu_ChIJq42lSa850i0RziccPzDJXhU/photo_10.jpg"
+    ],
+    "phoneNumber": "0812-3902-8952",
+    "rating": 4.8,
+    "userRatingsTotal": 516,
+    "website": "https://www.twofacebali.com/two-face-canggu",
+    "openingHours": [
+      "Monday: 7:30 AM – 4:00 PM",
+      "Tuesday: 7:30 AM – 4:00 PM",
+      "Wednesday: 7:30 AM – 4:00 PM",
+      "Thursday: 7:30 AM – 4:00 PM",
+      "Friday: 7:30 AM – 4:00 PM",
+      "Saturday: 7:30 AM – 4:00 PM",
+      "Sunday: 7:30 AM – 4:00 PM"
+    ],
+    "isOpenNow": false,
+    "openingPeriods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 7,
+          "minute": 30
+        },
+        "close": {
+          "day": 0,
+          "hour": 16,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 1,
+          "hour": 7,
+          "minute": 30
+        },
+        "close": {
+          "day": 1,
+          "hour": 16,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 7,
+          "minute": 30
+        },
+        "close": {
+          "day": 2,
+          "hour": 16,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 7,
+          "minute": 30
+        },
+        "close": {
+          "day": 3,
+          "hour": 16,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 7,
+          "minute": 30
+        },
+        "close": {
+          "day": 4,
+          "hour": 16,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 7,
+          "minute": 30
+        },
+        "close": {
+          "day": 5,
+          "hour": 16,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 7,
+          "minute": 30
+        },
+        "close": {
+          "day": 6,
+          "hour": 16,
+          "minute": 0
+        }
+      }
+    ],
+    "instagram": "https://www.instagram.com/twofacecoffee/",
+    "region": "canggu",
+    "googleMapsUri": "https://maps.google.com/?cid=1539889331661711310",
+    "staticMapS3Url": "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/two-face-coffee-brunch-canggu_ChIJq42lSa850i0RziccPzDJXhU/two-face-coffee-brunch-canggu_static.webp"
+  },
+  {
+    "placeId": "ChIJSzQz6CQ50i0RalL4caNfcSI",
+    "name": "HOME CAFE CANGGU",
+    "latitude": -8.6530139,
+    "longitude": 115.13799350000001,
+    "businessStatus": "OPERATIONAL",
+    "photos": [
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/home-cafe-canggu_ChIJSzQz6CQ50i0RalL4caNfcSI/photo_1.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/home-cafe-canggu_ChIJSzQz6CQ50i0RalL4caNfcSI/photo_2.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/home-cafe-canggu_ChIJSzQz6CQ50i0RalL4caNfcSI/photo_4.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/home-cafe-canggu_ChIJSzQz6CQ50i0RalL4caNfcSI/photo_5.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/home-cafe-canggu_ChIJSzQz6CQ50i0RalL4caNfcSI/photo_6.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/home-cafe-canggu_ChIJSzQz6CQ50i0RalL4caNfcSI/photo_7.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/home-cafe-canggu_ChIJSzQz6CQ50i0RalL4caNfcSI/photo_8.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/home-cafe-canggu_ChIJSzQz6CQ50i0RalL4caNfcSI/photo_10.jpg"
+    ],
+    "phoneNumber": "0813-9294-7353",
+    "rating": 4.4,
+    "userRatingsTotal": 1559,
+    "website": "",
+    "openingHours": [
+      "Monday: 7:00 AM – 11:00 PM",
+      "Tuesday: 7:00 AM – 11:00 PM",
+      "Wednesday: 7:00 AM – 11:00 PM",
+      "Thursday: 7:00 AM – 11:00 PM",
+      "Friday: 7:00 AM – 11:00 PM",
+      "Saturday: 7:00 AM – 11:00 PM",
+      "Sunday: 7:00 AM – 11:00 PM"
+    ],
+    "isOpenNow": true,
+    "openingPeriods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 7,
+          "minute": 0
+        },
+        "close": {
+          "day": 0,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 1,
+          "hour": 7,
+          "minute": 0
+        },
+        "close": {
+          "day": 1,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 7,
+          "minute": 0
+        },
+        "close": {
+          "day": 2,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 7,
+          "minute": 0
+        },
+        "close": {
+          "day": 3,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 7,
+          "minute": 0
+        },
+        "close": {
+          "day": 4,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 7,
+          "minute": 0
+        },
+        "close": {
+          "day": 5,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 7,
+          "minute": 0
+        },
+        "close": {
+          "day": 6,
+          "hour": 23,
+          "minute": 0
+        }
+      }
+    ],
+    "instagram": "https://www.instagram.com/home.cafe.canggu/",
+    "region": "canggu",
+    "googleMapsUri": "https://maps.google.com/?cid=2481870025254261354",
+    "staticMapS3Url": "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/home-cafe-canggu_ChIJSzQz6CQ50i0RalL4caNfcSI/home-cafe-canggu_static.webp"
+  },
+  {
+    "placeId": "ChIJU0lp4SNH0i0R7x72tr13TmY",
+    "name": "BAKED. Berawa",
+    "latitude": -8.6583413,
+    "longitude": 115.1402954,
+    "businessStatus": "OPERATIONAL",
+    "photos": [
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/baked-berawa_ChIJU0lp4SNH0i0R7x72tr13TmY/photo_a.png",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/baked-berawa_ChIJU0lp4SNH0i0R7x72tr13TmY/photo_1.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/baked-berawa_ChIJU0lp4SNH0i0R7x72tr13TmY/photo_2.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/baked-berawa_ChIJU0lp4SNH0i0R7x72tr13TmY/photo_6.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/baked-berawa_ChIJU0lp4SNH0i0R7x72tr13TmY/photo_10.jpg"
+    ],
+    "phoneNumber": "0877-8762-7769",
+    "rating": 4.4,
+    "userRatingsTotal": 2546,
+    "website": "https://linktr.ee/baked.indonesia",
+    "openingHours": [
+      "Monday: 7:00 AM – 7:00 PM",
+      "Tuesday: 7:00 AM – 7:00 PM",
+      "Wednesday: 7:00 AM – 7:00 PM",
+      "Thursday: 7:00 AM – 7:00 PM",
+      "Friday: 7:00 AM – 7:00 PM",
+      "Saturday: 7:00 AM – 7:00 PM",
+      "Sunday: 7:00 AM – 7:00 PM"
+    ],
+    "isOpenNow": true,
+    "openingPeriods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 7,
+          "minute": 0
+        },
+        "close": {
+          "day": 0,
+          "hour": 19,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 1,
+          "hour": 7,
+          "minute": 0
+        },
+        "close": {
+          "day": 1,
+          "hour": 19,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 7,
+          "minute": 0
+        },
+        "close": {
+          "day": 2,
+          "hour": 19,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 7,
+          "minute": 0
+        },
+        "close": {
+          "day": 3,
+          "hour": 19,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 7,
+          "minute": 0
+        },
+        "close": {
+          "day": 4,
+          "hour": 19,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 7,
+          "minute": 0
+        },
+        "close": {
+          "day": 5,
+          "hour": 19,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 7,
+          "minute": 0
+        },
+        "close": {
+          "day": 6,
+          "hour": 19,
+          "minute": 0
+        }
+      }
+    ],
+    "instagram": "https://www.instagram.com/baked.indonesia/",
+    "region": "canggu",
+    "googleMapsUri": "https://maps.google.com/?cid=7371961296754188015",
+    "staticMapS3Url": "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/baked-berawa_ChIJU0lp4SNH0i0R7x72tr13TmY/baked-berawa_static.webp"
+  },
+  {
+    "placeId": "ChIJZ6Jj8oFH0i0R0sKhEJMIyd8",
+    "name": "nüde cafe Berawa",
+    "latitude": -8.6597143,
+    "longitude": 115.1401094,
+    "businessStatus": "OPERATIONAL",
+    "photos": [
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/nde-cafe-berawa_ChIJZ6Jj8oFH0i0R0sKhEJMIyd8/photo_1.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/nde-cafe-berawa_ChIJZ6Jj8oFH0i0R0sKhEJMIyd8/photo_3.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/nde-cafe-berawa_ChIJZ6Jj8oFH0i0R0sKhEJMIyd8/photo_5.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/nde-cafe-berawa_ChIJZ6Jj8oFH0i0R0sKhEJMIyd8/photo_7.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/nde-cafe-berawa_ChIJZ6Jj8oFH0i0R0sKhEJMIyd8/photo_10.jpg"
+    ],
+    "phoneNumber": "0852-3821-4003",
+    "rating": 4.7,
+    "userRatingsTotal": 4963,
+    "website": "https://nude-bali.com/",
+    "openingHours": [
+      "Monday: 7:00 AM – 10:00 PM",
+      "Tuesday: 7:00 AM – 10:00 PM",
+      "Wednesday: 7:00 AM – 10:00 PM",
+      "Thursday: 7:00 AM – 10:00 PM",
+      "Friday: 7:00 AM – 10:00 PM",
+      "Saturday: 7:00 AM – 10:00 PM",
+      "Sunday: 7:00 AM – 10:00 PM"
+    ],
+    "isOpenNow": true,
+    "openingPeriods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 7,
+          "minute": 0
+        },
+        "close": {
+          "day": 0,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 1,
+          "hour": 7,
+          "minute": 0
+        },
+        "close": {
+          "day": 1,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 7,
+          "minute": 0
+        },
+        "close": {
+          "day": 2,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 7,
+          "minute": 0
+        },
+        "close": {
+          "day": 3,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 7,
+          "minute": 0
+        },
+        "close": {
+          "day": 4,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 7,
+          "minute": 0
+        },
+        "close": {
+          "day": 5,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 7,
+          "minute": 0
+        },
+        "close": {
+          "day": 6,
+          "hour": 22,
+          "minute": 0
+        }
+      }
+    ],
+    "instagram": "",
+    "region": "canggu",
+    "googleMapsUri": "https://maps.google.com/?cid=16125429368509022930",
+    "staticMapS3Url": "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/nde-cafe-berawa_ChIJZ6Jj8oFH0i0R0sKhEJMIyd8/nde-cafe-berawa_static.webp"
+  },
+  {
+    "placeId": "ChIJcYpksxVH0i0RCDMFafUy5N4",
+    "name": "Lusa By/Suka",
+    "latitude": -8.6601623,
+    "longitude": 115.13974879999999,
+    "businessStatus": "OPERATIONAL",
+    "photos": [
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/lusa-bysuka_ChIJcYpksxVH0i0RCDMFafUy5N4/photo_1.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/lusa-bysuka_ChIJcYpksxVH0i0RCDMFafUy5N4/photo_3.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/lusa-bysuka_ChIJcYpksxVH0i0RCDMFafUy5N4/photo_4.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/lusa-bysuka_ChIJcYpksxVH0i0RCDMFafUy5N4/photo_5.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/lusa-bysuka_ChIJcYpksxVH0i0RCDMFafUy5N4/photo_7.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/lusa-bysuka_ChIJcYpksxVH0i0RCDMFafUy5N4/photo_8.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/lusa-bysuka_ChIJcYpksxVH0i0RCDMFafUy5N4/photo_10.jpg"
+    ],
+    "phoneNumber": "0812-3708-9261",
+    "rating": 4.7,
+    "userRatingsTotal": 2214,
+    "website": "https://www.bysuka.com/lusa-by-suka",
+    "openingHours": [
+      "Monday: 7:30 AM – 11:00 PM",
+      "Tuesday: 7:30 AM – 11:00 PM",
+      "Wednesday: 7:30 AM – 11:00 PM",
+      "Thursday: 7:30 AM – 11:00 PM",
+      "Friday: 7:30 AM – 11:00 PM",
+      "Saturday: 7:30 AM – 11:00 PM",
+      "Sunday: 7:30 AM – 11:00 PM"
+    ],
+    "isOpenNow": true,
+    "openingPeriods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 7,
+          "minute": 30
+        },
+        "close": {
+          "day": 0,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 1,
+          "hour": 7,
+          "minute": 30
+        },
+        "close": {
+          "day": 1,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 7,
+          "minute": 30
+        },
+        "close": {
+          "day": 2,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 7,
+          "minute": 30
+        },
+        "close": {
+          "day": 3,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 7,
+          "minute": 30
+        },
+        "close": {
+          "day": 4,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 7,
+          "minute": 30
+        },
+        "close": {
+          "day": 5,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 7,
+          "minute": 30
+        },
+        "close": {
+          "day": 6,
+          "hour": 23,
+          "minute": 0
+        }
+      }
+    ],
+    "instagram": "https://www.instagram.com/lusabysuka/",
+    "region": "canggu",
+    "googleMapsUri": "https://maps.google.com/?cid=16061018200720356104",
+    "staticMapS3Url": "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/lusa-bysuka_ChIJcYpksxVH0i0RCDMFafUy5N4/lusa-bysuka_static.webp"
+  },
+  {
+    "placeId": "ChIJa2bVbaxcBAURDMj_jEzGDqI",
+    "name": "Hungry Bird Coffee Roaster",
+    "latitude": -8.655979799999999,
+    "longitude": 115.14103729999998,
+    "businessStatus": "OPERATIONAL",
+    "photos": [
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/hungry-bird-coffee-roaster_ChIJa2bVbaxcBAURDMj_jEzGDqI/photo_1.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/hungry-bird-coffee-roaster_ChIJa2bVbaxcBAURDMj_jEzGDqI/photo_2.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/hungry-bird-coffee-roaster_ChIJa2bVbaxcBAURDMj_jEzGDqI/photo_5.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/hungry-bird-coffee-roaster_ChIJa2bVbaxcBAURDMj_jEzGDqI/photo_6.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/hungry-bird-coffee-roaster_ChIJa2bVbaxcBAURDMj_jEzGDqI/photo_7.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/hungry-bird-coffee-roaster_ChIJa2bVbaxcBAURDMj_jEzGDqI/photo_8.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/hungry-bird-coffee-roaster_ChIJa2bVbaxcBAURDMj_jEzGDqI/photo_9.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/hungry-bird-coffee-roaster_ChIJa2bVbaxcBAURDMj_jEzGDqI/photo_10.jpg"
+    ],
+    "phoneNumber": "(0361) 9075646",
+    "rating": 4.7,
+    "userRatingsTotal": 2114,
+    "website": "http://hungrybird.coffee/",
+    "openingHours": [
+      "Monday: 8:00 AM – 5:00 PM",
+      "Tuesday: 8:00 AM – 5:00 PM",
+      "Wednesday: 8:00 AM – 5:00 PM",
+      "Thursday: 8:00 AM – 5:00 PM",
+      "Friday: 8:00 AM – 5:00 PM",
+      "Saturday: 8:00 AM – 5:00 PM",
+      "Sunday: 8:00 AM – 5:00 PM"
+    ],
+    "isOpenNow": true,
+    "openingPeriods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 8,
+          "minute": 0
+        },
+        "close": {
+          "day": 0,
+          "hour": 17,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 1,
+          "hour": 8,
+          "minute": 0
+        },
+        "close": {
+          "day": 1,
+          "hour": 17,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 8,
+          "minute": 0
+        },
+        "close": {
+          "day": 2,
+          "hour": 17,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 8,
+          "minute": 0
+        },
+        "close": {
+          "day": 3,
+          "hour": 17,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 8,
+          "minute": 0
+        },
+        "close": {
+          "day": 4,
+          "hour": 17,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 8,
+          "minute": 0
+        },
+        "close": {
+          "day": 5,
+          "hour": 17,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 8,
+          "minute": 0
+        },
+        "close": {
+          "day": 6,
+          "hour": 17,
+          "minute": 0
+        }
+      }
+    ],
+    "instagram": "",
+    "region": "canggu",
+    "googleMapsUri": "https://maps.google.com/?cid=11677488915903662092",
+    "staticMapS3Url": "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/hungry-bird-coffee-roaster_ChIJa2bVbaxcBAURDMj_jEzGDqI/hungry-bird-coffee-roaster_static.webp"
+  },
+  {
+    "placeId": "ChIJnxFCS3pH0i0RE9mJ0v6ZkHA",
+    "name": "Brunch Club Berawa",
+    "latitude": -8.655547199999999,
+    "longitude": 115.1449011,
+    "businessStatus": "OPERATIONAL",
+    "photos": [
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/brunch-club-berawa_ChIJnxFCS3pH0i0RE9mJ0v6ZkHA/photo_a.png",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/brunch-club-berawa_ChIJnxFCS3pH0i0RE9mJ0v6ZkHA/photo_b.png",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/brunch-club-berawa_ChIJnxFCS3pH0i0RE9mJ0v6ZkHA/photo_c.png",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/brunch-club-berawa_ChIJnxFCS3pH0i0RE9mJ0v6ZkHA/photo_d.png",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/brunch-club-berawa_ChIJnxFCS3pH0i0RE9mJ0v6ZkHA/photo_1.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/brunch-club-berawa_ChIJnxFCS3pH0i0RE9mJ0v6ZkHA/photo_5.jpg"
+    ],
+    "phoneNumber": "0811-3831-2910",
+    "rating": 4.7,
+    "userRatingsTotal": 1879,
+    "website": "https://brunchclubbali.com/",
+    "openingHours": [
+      "Monday: 8:00 AM – 6:00 PM",
+      "Tuesday: 8:00 AM – 6:00 PM",
+      "Wednesday: 8:00 AM – 6:00 PM",
+      "Thursday: 8:00 AM – 6:00 PM",
+      "Friday: 8:00 AM – 6:00 PM",
+      "Saturday: 8:00 AM – 6:00 PM",
+      "Sunday: 8:00 AM – 6:00 PM"
+    ],
+    "isOpenNow": true,
+    "openingPeriods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 8,
+          "minute": 0
+        },
+        "close": {
+          "day": 0,
+          "hour": 18,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 1,
+          "hour": 8,
+          "minute": 0
+        },
+        "close": {
+          "day": 1,
+          "hour": 18,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 8,
+          "minute": 0
+        },
+        "close": {
+          "day": 2,
+          "hour": 18,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 8,
+          "minute": 0
+        },
+        "close": {
+          "day": 3,
+          "hour": 18,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 8,
+          "minute": 0
+        },
+        "close": {
+          "day": 4,
+          "hour": 18,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 8,
+          "minute": 0
+        },
+        "close": {
+          "day": 5,
+          "hour": 18,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 8,
+          "minute": 0
+        },
+        "close": {
+          "day": 6,
+          "hour": 18,
+          "minute": 0
+        }
+      }
+    ],
+    "instagram": "https://www.instagram.com/brunch_club_bali/",
+    "region": "canggu",
+    "googleMapsUri": "https://maps.google.com/?cid=8111152248627255571",
+    "staticMapS3Url": "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/brunch-club-berawa_ChIJnxFCS3pH0i0RE9mJ0v6ZkHA/brunch-club-berawa_static.webp"
+  },
+  {
+    "placeId": "ChIJqdO8SytH0i0RkcWicB2oqxQ",
+    "name": "Bokashi Berawa",
+    "latitude": -8.6612604,
+    "longitude": 115.14669539999998,
+    "businessStatus": "OPERATIONAL",
+    "photos": [
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/bokashi-berawa_ChIJqdO8SytH0i0RkcWicB2oqxQ/photo_a.png",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/bokashi-berawa_ChIJqdO8SytH0i0RkcWicB2oqxQ/photo_b.png",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/bokashi-berawa_ChIJqdO8SytH0i0RkcWicB2oqxQ/photo_c.png",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/bokashi-berawa_ChIJqdO8SytH0i0RkcWicB2oqxQ/photo_d.png",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/bokashi-berawa_ChIJqdO8SytH0i0RkcWicB2oqxQ/photo_e.png",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/bokashi-berawa_ChIJqdO8SytH0i0RkcWicB2oqxQ/photo_f.png",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/bokashi-berawa_ChIJqdO8SytH0i0RkcWicB2oqxQ/photo_g.png",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/bokashi-berawa_ChIJqdO8SytH0i0RkcWicB2oqxQ/photo_8.jpg"
+    ],
+    "phoneNumber": "0818-0355-6677",
+    "rating": 4.8,
+    "userRatingsTotal": 800,
+    "website": "https://bokashibali.com/",
+    "openingHours": [
+      "Monday: 8:00 AM – 11:00 PM",
+      "Tuesday: 8:00 AM – 11:00 PM",
+      "Wednesday: 8:00 AM – 11:00 PM",
+      "Thursday: 8:00 AM – 11:00 PM",
+      "Friday: 8:00 AM – 11:00 PM",
+      "Saturday: 8:00 AM – 11:00 PM",
+      "Sunday: 8:00 AM – 11:00 PM"
+    ],
+    "isOpenNow": true,
+    "openingPeriods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 8,
+          "minute": 0
+        },
+        "close": {
+          "day": 0,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 1,
+          "hour": 8,
+          "minute": 0
+        },
+        "close": {
+          "day": 1,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 8,
+          "minute": 0
+        },
+        "close": {
+          "day": 2,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 8,
+          "minute": 0
+        },
+        "close": {
+          "day": 3,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 8,
+          "minute": 0
+        },
+        "close": {
+          "day": 4,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 8,
+          "minute": 0
+        },
+        "close": {
+          "day": 5,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 8,
+          "minute": 0
+        },
+        "close": {
+          "day": 6,
+          "hour": 23,
+          "minute": 0
+        }
+      }
+    ],
+    "instagram": "https://www.instagram.com/bokashipererenan/",
+    "region": "canggu",
+    "googleMapsUri": "https://maps.google.com/?cid=1489468946173314449",
+    "staticMapS3Url": "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/bokashi-berawa_ChIJqdO8SytH0i0RkcWicB2oqxQ/bokashi-berawa_static.webp"
+  },
+  {
+    "placeId": "ChIJOaEQDnk40i0Rzhou4NcRx-w",
+    "name": "Crate Cafe",
+    "latitude": -8.6486866,
+    "longitude": 115.1371844,
+    "businessStatus": "OPERATIONAL",
+    "photos": [
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/crate-cafe_ChIJOaEQDnk40i0Rzhou4NcRx-w/photo_1.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/crate-cafe_ChIJOaEQDnk40i0Rzhou4NcRx-w/photo_2.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/crate-cafe_ChIJOaEQDnk40i0Rzhou4NcRx-w/photo_3.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/crate-cafe_ChIJOaEQDnk40i0Rzhou4NcRx-w/photo_4.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/crate-cafe_ChIJOaEQDnk40i0Rzhou4NcRx-w/photo_5.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/crate-cafe_ChIJOaEQDnk40i0Rzhou4NcRx-w/photo_7.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/crate-cafe_ChIJOaEQDnk40i0Rzhou4NcRx-w/photo_8.jpg"
+    ],
+    "phoneNumber": "",
+    "rating": 4.2,
+    "userRatingsTotal": 4684,
+    "website": "http://lifescrate.com/",
+    "openingHours": [
+      "Monday: 6:00 AM – 4:00 PM",
+      "Tuesday: 6:00 AM – 4:00 PM",
+      "Wednesday: 6:00 AM – 4:00 PM",
+      "Thursday: 6:00 AM – 4:00 PM",
+      "Friday: 6:00 AM – 4:00 PM",
+      "Saturday: 6:00 AM – 4:00 PM",
+      "Sunday: 6:00 AM – 4:00 PM"
+    ],
+    "isOpenNow": false,
+    "openingPeriods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 6,
+          "minute": 0
+        },
+        "close": {
+          "day": 0,
+          "hour": 16,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 1,
+          "hour": 6,
+          "minute": 0
+        },
+        "close": {
+          "day": 1,
+          "hour": 16,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 6,
+          "minute": 0
+        },
+        "close": {
+          "day": 2,
+          "hour": 16,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 6,
+          "minute": 0
+        },
+        "close": {
+          "day": 3,
+          "hour": 16,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 6,
+          "minute": 0
+        },
+        "close": {
+          "day": 4,
+          "hour": 16,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 6,
+          "minute": 0
+        },
+        "close": {
+          "day": 5,
+          "hour": 16,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 6,
+          "minute": 0
+        },
+        "close": {
+          "day": 6,
+          "hour": 16,
+          "minute": 0
+        }
+      }
+    ],
+    "instagram": "https://www.instagram.com/cratecafe/",
+    "region": "canggu",
+    "googleMapsUri": "https://maps.google.com/?cid=17061625332193172174",
+    "staticMapS3Url": "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/crate-cafe_ChIJOaEQDnk40i0Rzhou4NcRx-w/crate-cafe_static.webp"
+  },
+  {
+    "placeId": "ChIJD94dpPY50i0R96D3MPX7rrc",
+    "name": "ST. ALi - Bali",
+    "latitude": -8.646774299999999,
+    "longitude": 115.12540229999999,
+    "businessStatus": "OPERATIONAL",
+    "photos": [
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/st-ali-bali_ChIJD94dpPY50i0R96D3MPX7rrc/photo_a.png",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/st-ali-bali_ChIJD94dpPY50i0R96D3MPX7rrc/photo_1.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/st-ali-bali_ChIJD94dpPY50i0R96D3MPX7rrc/photo_2.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/st-ali-bali_ChIJD94dpPY50i0R96D3MPX7rrc/photo_3.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/st-ali-bali_ChIJD94dpPY50i0R96D3MPX7rrc/photo_4.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/st-ali-bali_ChIJD94dpPY50i0R96D3MPX7rrc/photo_5.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/st-ali-bali_ChIJD94dpPY50i0R96D3MPX7rrc/photo_8.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/st-ali-bali_ChIJD94dpPY50i0R96D3MPX7rrc/photo_9.jpg"
+    ],
+    "phoneNumber": "0811-3941-6656",
+    "rating": 4.3,
+    "userRatingsTotal": 600,
+    "website": "https://stali.com.au/",
+    "openingHours": [
+      "Monday: 6:00 AM – 6:00 PM",
+      "Tuesday: 6:00 AM – 6:00 PM",
+      "Wednesday: 6:00 AM – 6:00 PM",
+      "Thursday: 6:00 AM – 6:00 PM",
+      "Friday: 6:00 AM – 6:00 PM",
+      "Saturday: 6:00 AM – 6:00 PM",
+      "Sunday: 6:00 AM – 6:00 PM"
+    ],
+    "isOpenNow": true,
+    "openingPeriods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 6,
+          "minute": 0
+        },
+        "close": {
+          "day": 0,
+          "hour": 18,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 1,
+          "hour": 6,
+          "minute": 0
+        },
+        "close": {
+          "day": 1,
+          "hour": 18,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 6,
+          "minute": 0
+        },
+        "close": {
+          "day": 2,
+          "hour": 18,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 6,
+          "minute": 0
+        },
+        "close": {
+          "day": 3,
+          "hour": 18,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 6,
+          "minute": 0
+        },
+        "close": {
+          "day": 4,
+          "hour": 18,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 6,
+          "minute": 0
+        },
+        "close": {
+          "day": 5,
+          "hour": 18,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 6,
+          "minute": 0
+        },
+        "close": {
+          "day": 6,
+          "hour": 18,
+          "minute": 0
+        }
+      }
+    ],
+    "instagram": "https://www.instagram.com/stali.id/",
+    "region": "canggu",
+    "googleMapsUri": "https://maps.google.com/?cid=13235793385395560695",
+    "staticMapS3Url": "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/st-ali-bali_ChIJD94dpPY50i0R96D3MPX7rrc/st-ali-bali_static.webp"
+  },
+  {
+    "placeId": "ChIJkfDSHYg50i0RBdXQigmMn54",
+    "name": "Brunch Club Pererenan",
+    "latitude": -8.6458152,
+    "longitude": 115.1265888,
+    "businessStatus": "OPERATIONAL",
+    "photos": [
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/brunch-club-pererenan_ChIJkfDSHYg50i0RBdXQigmMn54/photo_1.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/brunch-club-pererenan_ChIJkfDSHYg50i0RBdXQigmMn54/photo_2.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/brunch-club-pererenan_ChIJkfDSHYg50i0RBdXQigmMn54/photo_3.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/brunch-club-pererenan_ChIJkfDSHYg50i0RBdXQigmMn54/photo_5.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/brunch-club-pererenan_ChIJkfDSHYg50i0RBdXQigmMn54/photo_9.jpg"
+    ],
+    "phoneNumber": "0811-3831-2910",
+    "rating": 4.8,
+    "userRatingsTotal": 880,
+    "website": "https://www.brunchclubbali.com/",
+    "openingHours": [
+      "Monday: 8:00 AM – 6:00 PM",
+      "Tuesday: 8:00 AM – 6:00 PM",
+      "Wednesday: 8:00 AM – 6:00 PM",
+      "Thursday: 8:00 AM – 6:00 PM",
+      "Friday: 8:00 AM – 6:00 PM",
+      "Saturday: 8:00 AM – 6:00 PM",
+      "Sunday: 8:00 AM – 6:00 PM"
+    ],
+    "isOpenNow": true,
+    "openingPeriods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 8,
+          "minute": 0
+        },
+        "close": {
+          "day": 0,
+          "hour": 18,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 1,
+          "hour": 8,
+          "minute": 0
+        },
+        "close": {
+          "day": 1,
+          "hour": 18,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 8,
+          "minute": 0
+        },
+        "close": {
+          "day": 2,
+          "hour": 18,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 8,
+          "minute": 0
+        },
+        "close": {
+          "day": 3,
+          "hour": 18,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 8,
+          "minute": 0
+        },
+        "close": {
+          "day": 4,
+          "hour": 18,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 8,
+          "minute": 0
+        },
+        "close": {
+          "day": 5,
+          "hour": 18,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 8,
+          "minute": 0
+        },
+        "close": {
+          "day": 6,
+          "hour": 18,
+          "minute": 0
+        }
+      }
+    ],
+    "instagram": "https://www.instagram.com/brunch_club_bali/",
+    "region": "canggu",
+    "googleMapsUri": "https://maps.google.com/?cid=11430008351901144325",
+    "staticMapS3Url": "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/brunch-club-pererenan_ChIJkfDSHYg50i0RBdXQigmMn54/brunch-club-pererenan_static.webp"
+  },
+  {
+    "placeId": "ChIJYXyNN5U50i0RmIUNsfH9tHw",
+    "name": "MIEL SPECIALTY COFFEE CANGGU | CO-WORKING",
+    "latitude": -8.6428392,
+    "longitude": 115.1423293,
+    "businessStatus": "OPERATIONAL",
+    "photos": [
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/miel-specialty-coffee-canggu-co-working_ChIJYXyNN5U50i0RmIUNsfH9tHw/photo_1.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/miel-specialty-coffee-canggu-co-working_ChIJYXyNN5U50i0RmIUNsfH9tHw/photo_2.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/miel-specialty-coffee-canggu-co-working_ChIJYXyNN5U50i0RmIUNsfH9tHw/photo_3.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/miel-specialty-coffee-canggu-co-working_ChIJYXyNN5U50i0RmIUNsfH9tHw/photo_7.jpg"
+    ],
+    "phoneNumber": "0823-3000-0385",
+    "rating": 4.7,
+    "userRatingsTotal": 1279,
+    "website": "https://instagram.com/miel.bali?igshid=YmMyMTA2M2Y=",
+    "openingHours": [
+      "Monday: 7:00 AM – 7:00 PM",
+      "Tuesday: 7:00 AM – 7:00 PM",
+      "Wednesday: 7:00 AM – 7:00 PM",
+      "Thursday: 7:00 AM – 7:00 PM",
+      "Friday: 7:00 AM – 7:00 PM",
+      "Saturday: 7:00 AM – 7:00 PM",
+      "Sunday: 7:00 AM – 7:00 PM"
+    ],
+    "isOpenNow": true,
+    "openingPeriods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 7,
+          "minute": 0
+        },
+        "close": {
+          "day": 0,
+          "hour": 19,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 1,
+          "hour": 7,
+          "minute": 0
+        },
+        "close": {
+          "day": 1,
+          "hour": 19,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 7,
+          "minute": 0
+        },
+        "close": {
+          "day": 2,
+          "hour": 19,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 7,
+          "minute": 0
+        },
+        "close": {
+          "day": 3,
+          "hour": 19,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 7,
+          "minute": 0
+        },
+        "close": {
+          "day": 4,
+          "hour": 19,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 7,
+          "minute": 0
+        },
+        "close": {
+          "day": 5,
+          "hour": 19,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 7,
+          "minute": 0
+        },
+        "close": {
+          "day": 6,
+          "hour": 19,
+          "minute": 0
+        }
+      }
+    ],
+    "instagram": "https://www.instagram.com/miel.bali/",
+    "region": "canggu",
+    "googleMapsUri": "https://maps.google.com/?cid=8986086371010381208",
+    "staticMapS3Url": "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/miel-specialty-coffee-canggu-co-working_ChIJYXyNN5U50i0RmIUNsfH9tHw/miel-specialty-coffee-canggu-co-working_static.webp"
+  },
+  {
+    "placeId": "ChIJHzyhoW450i0Rub7_EEvisDY",
+    "name": "The Common",
+    "latitude": -8.650692200000002,
+    "longitude": 115.135678,
+    "businessStatus": "OPERATIONAL",
+    "photos": [
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/the-common_ChIJHzyhoW450i0Rub7_EEvisDY/photo_1.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/the-common_ChIJHzyhoW450i0Rub7_EEvisDY/photo_a.png",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/the-common_ChIJHzyhoW450i0Rub7_EEvisDY/photo_b.png",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/the-common_ChIJHzyhoW450i0Rub7_EEvisDY/photo_c.png",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/the-common_ChIJHzyhoW450i0Rub7_EEvisDY/photo_d.png",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/the-common_ChIJHzyhoW450i0Rub7_EEvisDY/photo_e.png",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/the-common_ChIJHzyhoW450i0Rub7_EEvisDY/photo_f.png",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/the-common_ChIJHzyhoW450i0Rub7_EEvisDY/photo_6.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/the-common_ChIJHzyhoW450i0Rub7_EEvisDY/photo_7.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/the-common_ChIJHzyhoW450i0Rub7_EEvisDY/photo_9.jpg"
+    ],
+    "phoneNumber": "0812-4654-2013",
+    "rating": 4.4,
+    "userRatingsTotal": 1114,
+    "website": "http://www.thecommonbali.com/",
+    "openingHours": [
+      "Monday: 7:00 AM – 10:00 PM",
+      "Tuesday: 7:00 AM – 10:00 PM",
+      "Wednesday: 7:00 AM – 10:00 PM",
+      "Thursday: 7:00 AM – 10:00 PM",
+      "Friday: 7:00 AM – 10:00 PM",
+      "Saturday: 7:00 AM – 10:00 PM",
+      "Sunday: 7:00 AM – 10:00 PM"
+    ],
+    "isOpenNow": true,
+    "openingPeriods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 7,
+          "minute": 0
+        },
+        "close": {
+          "day": 0,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 1,
+          "hour": 7,
+          "minute": 0
+        },
+        "close": {
+          "day": 1,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 7,
+          "minute": 0
+        },
+        "close": {
+          "day": 2,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 7,
+          "minute": 0
+        },
+        "close": {
+          "day": 3,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 7,
+          "minute": 0
+        },
+        "close": {
+          "day": 4,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 7,
+          "minute": 0
+        },
+        "close": {
+          "day": 5,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 7,
+          "minute": 0
+        },
+        "close": {
+          "day": 6,
+          "hour": 22,
+          "minute": 0
+        }
+      }
+    ],
+    "instagram": "https://www.instagram.com/thecommonbali/",
+    "region": "canggu",
+    "googleMapsUri": "https://maps.google.com/?cid=3940898485984804537",
+    "staticMapS3Url": "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/the-common_ChIJHzyhoW450i0Rub7_EEvisDY/the-common_static.webp"
+  },
+  {
+    "placeId": "ChIJMev9G3w40i0RXZlSucHydMw",
+    "name": "Cafe Vida Organic",
+    "latitude": -8.650112199999999,
+    "longitude": 115.1367506,
+    "businessStatus": "OPERATIONAL",
+    "photos": [
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/cafe-vida-organic_ChIJMev9G3w40i0RXZlSucHydMw/2024-05-09.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/cafe-vida-organic_ChIJMev9G3w40i0RXZlSucHydMw/photo_1.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/cafe-vida-organic_ChIJMev9G3w40i0RXZlSucHydMw/photo_3.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/cafe-vida-organic_ChIJMev9G3w40i0RXZlSucHydMw/photo_7.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/cafe-vida-organic_ChIJMev9G3w40i0RXZlSucHydMw/photo_8.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/cafe-vida-organic_ChIJMev9G3w40i0RXZlSucHydMw/photo_10.jpg"
+    ],
+    "phoneNumber": "0813-3988-6864",
+    "rating": 4.4,
+    "userRatingsTotal": 1486,
+    "website": "",
+    "openingHours": [
+      "Monday: 7:20 AM – 10:30 PM",
+      "Tuesday: 7:20 AM – 10:30 PM",
+      "Wednesday: 7:20 AM – 10:30 PM",
+      "Thursday: 7:20 AM – 10:30 PM",
+      "Friday: 7:20 AM – 10:30 PM",
+      "Saturday: 7:20 AM – 10:30 PM",
+      "Sunday: 7:20 AM – 10:30 PM"
+    ],
+    "isOpenNow": true,
+    "openingPeriods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 7,
+          "minute": 20
+        },
+        "close": {
+          "day": 0,
+          "hour": 22,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 1,
+          "hour": 7,
+          "minute": 20
+        },
+        "close": {
+          "day": 1,
+          "hour": 22,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 7,
+          "minute": 20
+        },
+        "close": {
+          "day": 2,
+          "hour": 22,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 7,
+          "minute": 20
+        },
+        "close": {
+          "day": 3,
+          "hour": 22,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 7,
+          "minute": 20
+        },
+        "close": {
+          "day": 4,
+          "hour": 22,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 7,
+          "minute": 20
+        },
+        "close": {
+          "day": 5,
+          "hour": 22,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 7,
+          "minute": 20
+        },
+        "close": {
+          "day": 6,
+          "hour": 22,
+          "minute": 30
+        }
+      }
+    ],
+    "instagram": "https://www.instagram.com/cafe_vida_bali/",
+    "region": "canggu",
+    "googleMapsUri": "https://maps.google.com/?cid=14732667194887543133",
+    "staticMapS3Url": "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/cafe-vida-organic_ChIJMev9G3w40i0RXZlSucHydMw/cafe-vida-organic_static.webp"
+  },
+  {
+    "placeId": "ChIJg_EuN3s40i0R6kCeRoibycg",
+    "name": "Rise & Shine Cafe Canggu",
+    "latitude": -8.6460992,
+    "longitude": 115.13386659999999,
+    "businessStatus": "OPERATIONAL",
+    "photos": [
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/rise-shine-cafe-canggu_ChIJg_EuN3s40i0R6kCeRoibycg/photo_1.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/rise-shine-cafe-canggu_ChIJg_EuN3s40i0R6kCeRoibycg/photo_2.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/rise-shine-cafe-canggu_ChIJg_EuN3s40i0R6kCeRoibycg/photo_3.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/rise-shine-cafe-canggu_ChIJg_EuN3s40i0R6kCeRoibycg/photo_5.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/rise-shine-cafe-canggu_ChIJg_EuN3s40i0R6kCeRoibycg/photo_6.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/rise-shine-cafe-canggu_ChIJg_EuN3s40i0R6kCeRoibycg/photo_7.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/rise-shine-cafe-canggu_ChIJg_EuN3s40i0R6kCeRoibycg/photo_9.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/rise-shine-cafe-canggu_ChIJg_EuN3s40i0R6kCeRoibycg/photo_10.jpg"
+    ],
+    "phoneNumber": "0822-6632-2267",
+    "rating": 4.7,
+    "userRatingsTotal": 1105,
+    "website": "https://www.instagram.com/riseandshine_bali",
+    "openingHours": [
+      "Monday: 7:00 AM – 3:00 PM",
+      "Tuesday: 7:00 AM – 3:00 PM",
+      "Wednesday: 7:00 AM – 3:00 PM",
+      "Thursday: 7:00 AM – 3:00 PM",
+      "Friday: 7:00 AM – 3:00 PM",
+      "Saturday: 7:00 AM – 3:00 PM",
+      "Sunday: 7:00 AM – 3:00 PM"
+    ],
+    "isOpenNow": false,
+    "openingPeriods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 7,
+          "minute": 0
+        },
+        "close": {
+          "day": 0,
+          "hour": 15,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 1,
+          "hour": 7,
+          "minute": 0
+        },
+        "close": {
+          "day": 1,
+          "hour": 15,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 7,
+          "minute": 0
+        },
+        "close": {
+          "day": 2,
+          "hour": 15,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 7,
+          "minute": 0
+        },
+        "close": {
+          "day": 3,
+          "hour": 15,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 7,
+          "minute": 0
+        },
+        "close": {
+          "day": 4,
+          "hour": 15,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 7,
+          "minute": 0
+        },
+        "close": {
+          "day": 5,
+          "hour": 15,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 7,
+          "minute": 0
+        },
+        "close": {
+          "day": 6,
+          "hour": 15,
+          "minute": 0
+        }
+      }
+    ],
+    "instagram": "https://www.instagram.com/riseandshine_bali",
+    "region": "canggu",
+    "googleMapsUri": "https://maps.google.com/?cid=14468266287507063018",
+    "staticMapS3Url": "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/rise-shine-cafe-canggu_ChIJg_EuN3s40i0R6kCeRoibycg/rise-shine-cafe-canggu_static.webp"
+  },
+  {
+    "placeId": "ChIJhz6xqoo50i0RZxslmCS1iow",
+    "name": "Blou Cafe Canggu",
+    "latitude": -8.64819,
+    "longitude": 115.1312074,
+    "businessStatus": "OPERATIONAL",
+    "photos": [
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/blou-cafe-canggu_ChIJhz6xqoo50i0RZxslmCS1iow/photo_a.png",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/blou-cafe-canggu_ChIJhz6xqoo50i0RZxslmCS1iow/photo_b.png",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/blou-cafe-canggu_ChIJhz6xqoo50i0RZxslmCS1iow/photo_1.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/blou-cafe-canggu_ChIJhz6xqoo50i0RZxslmCS1iow/photo_2.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/blou-cafe-canggu_ChIJhz6xqoo50i0RZxslmCS1iow/photo_4.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/blou-cafe-canggu_ChIJhz6xqoo50i0RZxslmCS1iow/photo_5.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/blou-cafe-canggu_ChIJhz6xqoo50i0RZxslmCS1iow/photo_6.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/blou-cafe-canggu_ChIJhz6xqoo50i0RZxslmCS1iow/photo_7.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/blou-cafe-canggu_ChIJhz6xqoo50i0RZxslmCS1iow/photo_9.jpg"
+    ],
+    "phoneNumber": "(0361) 6205588",
+    "rating": 4.7,
+    "userRatingsTotal": 264,
+    "website": "https://dijiwasanctuaries.com/at/ecozycanggu/facility/blou-cafe-canggu",
+    "openingHours": [
+      "Monday: 7:30 AM – 11:00 PM",
+      "Tuesday: 7:30 AM – 11:00 PM",
+      "Wednesday: 7:30 AM – 11:00 PM",
+      "Thursday: 7:30 AM – 11:00 PM",
+      "Friday: 7:30 AM – 11:00 PM",
+      "Saturday: 7:30 AM – 11:00 PM",
+      "Sunday: 7:30 AM – 11:00 PM"
+    ],
+    "isOpenNow": true,
+    "openingPeriods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 7,
+          "minute": 30
+        },
+        "close": {
+          "day": 0,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 1,
+          "hour": 7,
+          "minute": 30
+        },
+        "close": {
+          "day": 1,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 7,
+          "minute": 30
+        },
+        "close": {
+          "day": 2,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 7,
+          "minute": 30
+        },
+        "close": {
+          "day": 3,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 7,
+          "minute": 30
+        },
+        "close": {
+          "day": 4,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 7,
+          "minute": 30
+        },
+        "close": {
+          "day": 5,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 7,
+          "minute": 30
+        },
+        "close": {
+          "day": 6,
+          "hour": 23,
+          "minute": 0
+        }
+      }
+    ],
+    "instagram": "https://www.instagram.com/bloucafecanggu/",
+    "region": "canggu",
+    "googleMapsUri": "https://maps.google.com/?cid=10127105880872000359",
+    "staticMapS3Url": "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/blou-cafe-canggu_ChIJhz6xqoo50i0RZxslmCS1iow/blou-cafe-canggu_static.webp"
+  },
+  {
+    "placeId": "ChIJH21JAz5H0i0R9xl0tIvpu1w",
+    "name": "Kawisari Coffee Farm Shop & Eatery Bali",
+    "latitude": -8.6586926,
+    "longitude": 115.1306317,
+    "businessStatus": "OPERATIONAL",
+    "photos": [
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/kawisari-coffee-farm-shop-eatery-bali_ChIJH21JAz5H0i0R9xl0tIvpu1w/photo_2.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/kawisari-coffee-farm-shop-eatery-bali_ChIJH21JAz5H0i0R9xl0tIvpu1w/photo_3.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/kawisari-coffee-farm-shop-eatery-bali_ChIJH21JAz5H0i0R9xl0tIvpu1w/photo_4.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/kawisari-coffee-farm-shop-eatery-bali_ChIJH21JAz5H0i0R9xl0tIvpu1w/photo_5.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/kawisari-coffee-farm-shop-eatery-bali_ChIJH21JAz5H0i0R9xl0tIvpu1w/photo_6.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/kawisari-coffee-farm-shop-eatery-bali_ChIJH21JAz5H0i0R9xl0tIvpu1w/photo_7.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/kawisari-coffee-farm-shop-eatery-bali_ChIJH21JAz5H0i0R9xl0tIvpu1w/photo_8.jpg"
+    ],
+    "phoneNumber": "0811-3883-553",
+    "rating": 4.9,
+    "userRatingsTotal": 437,
+    "website": "http://kawisaricoffee.com/",
+    "openingHours": [
+      "Monday: 8:00 AM – 9:00 PM",
+      "Tuesday: 8:00 AM – 9:00 PM",
+      "Wednesday: 8:00 AM – 9:00 PM",
+      "Thursday: 8:00 AM – 9:00 PM",
+      "Friday: 8:00 AM – 9:00 PM",
+      "Saturday: 8:00 AM – 9:00 PM",
+      "Sunday: 8:00 AM – 9:00 PM"
+    ],
+    "isOpenNow": true,
+    "openingPeriods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 8,
+          "minute": 0
+        },
+        "close": {
+          "day": 0,
+          "hour": 21,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 1,
+          "hour": 8,
+          "minute": 0
+        },
+        "close": {
+          "day": 1,
+          "hour": 21,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 8,
+          "minute": 0
+        },
+        "close": {
+          "day": 2,
+          "hour": 21,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 8,
+          "minute": 0
+        },
+        "close": {
+          "day": 3,
+          "hour": 21,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 8,
+          "minute": 0
+        },
+        "close": {
+          "day": 4,
+          "hour": 21,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 8,
+          "minute": 0
+        },
+        "close": {
+          "day": 5,
+          "hour": 21,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 8,
+          "minute": 0
+        },
+        "close": {
+          "day": 6,
+          "hour": 21,
+          "minute": 0
+        }
+      }
+    ],
+    "instagram": "https://www.instagram.com/kawisarifarmshopbali/",
+    "region": "canggu",
+    "googleMapsUri": "https://maps.google.com/?cid=6682191258371496439",
+    "staticMapS3Url": "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/kawisari-coffee-farm-shop-eatery-bali_ChIJH21JAz5H0i0R9xl0tIvpu1w/kawisari-coffee-farm-shop-eatery-bali_static.webp"
+  },
+  {
+    "placeId": "ChIJ1_XOtHg40i0R6eyPmtRK6bc",
+    "name": "Cafe The Daun",
+    "latitude": -8.6544449,
+    "longitude": 115.1355073,
+    "businessStatus": "OPERATIONAL",
+    "photos": [
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/cafe-the-daun_ChIJ1_XOtHg40i0R6eyPmtRK6bc/photo_a.png",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/cafe-the-daun_ChIJ1_XOtHg40i0R6eyPmtRK6bc/photo_b.png",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/cafe-the-daun_ChIJ1_XOtHg40i0R6eyPmtRK6bc/photo_c.png",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/cafe-the-daun_ChIJ1_XOtHg40i0R6eyPmtRK6bc/photo_d.png",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/cafe-the-daun_ChIJ1_XOtHg40i0R6eyPmtRK6bc/photo_1.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/cafe-the-daun_ChIJ1_XOtHg40i0R6eyPmtRK6bc/photo_9.jpg"
+    ],
+    "phoneNumber": "0859-3532-6552",
+    "rating": 4.4,
+    "userRatingsTotal": 483,
+    "website": "https://www.instagram.com/thedauncoffee/",
+    "openingHours": [
+      "Monday: 7:30 AM – 11:00 PM",
+      "Tuesday: 7:30 AM – 11:00 PM",
+      "Wednesday: 7:30 AM – 11:00 PM",
+      "Thursday: 7:30 AM – 11:00 PM",
+      "Friday: 7:30 AM – 11:00 PM",
+      "Saturday: 7:30 AM – 11:00 PM",
+      "Sunday: 7:30 AM – 11:00 PM"
+    ],
+    "isOpenNow": true,
+    "openingPeriods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 7,
+          "minute": 30
+        },
+        "close": {
+          "day": 0,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 1,
+          "hour": 7,
+          "minute": 30
+        },
+        "close": {
+          "day": 1,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 7,
+          "minute": 30
+        },
+        "close": {
+          "day": 2,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 7,
+          "minute": 30
+        },
+        "close": {
+          "day": 3,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 7,
+          "minute": 30
+        },
+        "close": {
+          "day": 4,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 7,
+          "minute": 30
+        },
+        "close": {
+          "day": 5,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 7,
+          "minute": 30
+        },
+        "close": {
+          "day": 6,
+          "hour": 23,
+          "minute": 0
+        }
+      }
+    ],
+    "instagram": "",
+    "region": "canggu",
+    "googleMapsUri": "https://maps.google.com/?cid=13252205655501040873",
+    "staticMapS3Url": "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/cafe-the-daun_ChIJ1_XOtHg40i0R6eyPmtRK6bc/cafe-the-daun_static.webp"
+  },
+  {
+    "placeId": "ChIJnT3bt6VH0i0RUgvf_KGh8r8",
+    "name": "Zai Cafe Breakfast & Dinner",
+    "latitude": -8.6450592,
+    "longitude": 115.14138249999999,
+    "businessStatus": "OPERATIONAL",
+    "photos": [
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/zai-cafe-breakfast-dinner_ChIJnT3bt6VH0i0RUgvf_KGh8r8/photo_1.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/zai-cafe-breakfast-dinner_ChIJnT3bt6VH0i0RUgvf_KGh8r8/photo_2.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/zai-cafe-breakfast-dinner_ChIJnT3bt6VH0i0RUgvf_KGh8r8/photo_3.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/zai-cafe-breakfast-dinner_ChIJnT3bt6VH0i0RUgvf_KGh8r8/photo_4.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/zai-cafe-breakfast-dinner_ChIJnT3bt6VH0i0RUgvf_KGh8r8/photo_5.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/zai-cafe-breakfast-dinner_ChIJnT3bt6VH0i0RUgvf_KGh8r8/photo_6.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/zai-cafe-breakfast-dinner_ChIJnT3bt6VH0i0RUgvf_KGh8r8/photo_7.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/zai-cafe-breakfast-dinner_ChIJnT3bt6VH0i0RUgvf_KGh8r8/photo_10.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/zai-cafe-breakfast-dinner_ChIJnT3bt6VH0i0RUgvf_KGh8r8/photo_8.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/zai-cafe-breakfast-dinner_ChIJnT3bt6VH0i0RUgvf_KGh8r8/photo_9.jpg"
+    ],
+    "phoneNumber": "0812-3160-9807",
+    "rating": 4.7,
+    "userRatingsTotal": 1748,
+    "website": "https://www.instagram.com/zai_cafe/",
+    "openingHours": [
+      "Monday: 8:00 AM – 11:00 PM",
+      "Tuesday: 8:00 AM – 11:00 PM",
+      "Wednesday: 8:00 AM – 11:00 PM",
+      "Thursday: 8:00 AM – 11:00 PM",
+      "Friday: 8:00 AM – 11:00 PM",
+      "Saturday: 8:00 AM – 11:00 PM",
+      "Sunday: 8:00 AM – 11:00 PM"
+    ],
+    "isOpenNow": true,
+    "openingPeriods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 8,
+          "minute": 0
+        },
+        "close": {
+          "day": 0,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 1,
+          "hour": 8,
+          "minute": 0
+        },
+        "close": {
+          "day": 1,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 8,
+          "minute": 0
+        },
+        "close": {
+          "day": 2,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 8,
+          "minute": 0
+        },
+        "close": {
+          "day": 3,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 8,
+          "minute": 0
+        },
+        "close": {
+          "day": 4,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 8,
+          "minute": 0
+        },
+        "close": {
+          "day": 5,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 8,
+          "minute": 0
+        },
+        "close": {
+          "day": 6,
+          "hour": 23,
+          "minute": 0
+        }
+      }
+    ],
+    "instagram": "https://www.instagram.com/zai_cafe/",
+    "region": "canggu",
+    "googleMapsUri": "https://maps.google.com/?cid=13831295122712496978",
+    "staticMapS3Url": "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/zai-cafe-breakfast-dinner_ChIJnT3bt6VH0i0RUgvf_KGh8r8/zai-cafe-breakfast-dinner_static.webp"
+  },
+  {
+    "placeId": "ChIJD63X4IU50i0RFkjm_Q5AwGs",
+    "name": "Amolas Cafe",
+    "latitude": -8.641256,
+    "longitude": 115.14611420000001,
+    "businessStatus": "OPERATIONAL",
+    "photos": [
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/amolas-cafe_ChIJD63X4IU50i0RFkjm_Q5AwGs/photo_1.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/amolas-cafe_ChIJD63X4IU50i0RFkjm_Q5AwGs/photo_4.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/amolas-cafe_ChIJD63X4IU50i0RFkjm_Q5AwGs/photo_7.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/amolas-cafe_ChIJD63X4IU50i0RFkjm_Q5AwGs/photo_9.jpg"
+    ],
+    "phoneNumber": "0813-5323-4290",
+    "rating": 4.7,
+    "userRatingsTotal": 1051,
+    "website": "http://amolasgroup.com/",
+    "openingHours": [
+      "Monday: 7:30 AM – 9:00 PM",
+      "Tuesday: 7:30 AM – 9:00 PM",
+      "Wednesday: 7:30 AM – 9:00 PM",
+      "Thursday: 7:30 AM – 9:00 PM",
+      "Friday: 7:30 AM – 9:00 PM",
+      "Saturday: 7:30 AM – 9:00 PM",
+      "Sunday: 7:30 AM – 9:00 PM"
+    ],
+    "isOpenNow": true,
+    "openingPeriods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 7,
+          "minute": 30
+        },
+        "close": {
+          "day": 0,
+          "hour": 21,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 1,
+          "hour": 7,
+          "minute": 30
+        },
+        "close": {
+          "day": 1,
+          "hour": 21,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 7,
+          "minute": 30
+        },
+        "close": {
+          "day": 2,
+          "hour": 21,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 7,
+          "minute": 30
+        },
+        "close": {
+          "day": 3,
+          "hour": 21,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 7,
+          "minute": 30
+        },
+        "close": {
+          "day": 4,
+          "hour": 21,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 7,
+          "minute": 30
+        },
+        "close": {
+          "day": 5,
+          "hour": 21,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 7,
+          "minute": 30
+        },
+        "close": {
+          "day": 6,
+          "hour": 21,
+          "minute": 0
+        }
+      }
+    ],
+    "instagram": "https://www.instagram.com/amolascafe/",
+    "region": "canggu",
+    "googleMapsUri": "https://maps.google.com/?cid=7764276190720182294",
+    "staticMapS3Url": "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/amolas-cafe_ChIJD63X4IU50i0RFkjm_Q5AwGs/amolas-cafe_static.webp"
+  },
+  {
+    "placeId": "ChIJRfVHDQA50i0R78l1hYjP2iM",
+    "name": "openhouse cafe",
+    "latitude": -8.6471466,
+    "longitude": 115.12721549999998,
+    "businessStatus": "OPERATIONAL",
+    "photos": [
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/openhouse-cafe_ChIJRfVHDQA50i0R78l1hYjP2iM/photo_1.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/openhouse-cafe_ChIJRfVHDQA50i0R78l1hYjP2iM/photo_2.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/openhouse-cafe_ChIJRfVHDQA50i0R78l1hYjP2iM/photo_3.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/openhouse-cafe_ChIJRfVHDQA50i0R78l1hYjP2iM/photo_4.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/openhouse-cafe_ChIJRfVHDQA50i0R78l1hYjP2iM/photo_6.jpg"
+    ],
+    "phoneNumber": "0853-3800-7745",
+    "rating": 4.7,
+    "userRatingsTotal": 411,
+    "website": "",
+    "openingHours": [
+      "Monday: 6:00 AM – 10:00 PM",
+      "Tuesday: 6:00 AM – 10:00 PM",
+      "Wednesday: 6:00 AM – 10:00 PM",
+      "Thursday: 6:00 AM – 10:00 PM",
+      "Friday: 6:00 AM – 10:00 PM",
+      "Saturday: 6:00 AM – 10:00 PM",
+      "Sunday: 6:00 AM – 10:00 PM"
+    ],
+    "isOpenNow": true,
+    "openingPeriods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 6,
+          "minute": 0
+        },
+        "close": {
+          "day": 0,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 1,
+          "hour": 6,
+          "minute": 0
+        },
+        "close": {
+          "day": 1,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 6,
+          "minute": 0
+        },
+        "close": {
+          "day": 2,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 6,
+          "minute": 0
+        },
+        "close": {
+          "day": 3,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 6,
+          "minute": 0
+        },
+        "close": {
+          "day": 4,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 6,
+          "minute": 0
+        },
+        "close": {
+          "day": 5,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 6,
+          "minute": 0
+        },
+        "close": {
+          "day": 6,
+          "hour": 22,
+          "minute": 0
+        }
+      }
+    ],
+    "instagram": "https://www.instagram.com/openhousebali/",
+    "region": "canggu",
+    "googleMapsUri": "https://maps.google.com/?cid=2583605521511991791",
+    "staticMapS3Url": "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/openhouse-cafe_ChIJRfVHDQA50i0R78l1hYjP2iM/openhouse-cafe_static.webp"
+  },
+  {
+    "placeId": "ChIJzXC1G0A50i0RRtOZNiTSri0",
+    "name": "Mimpi Grocery",
+    "latitude": -8.644844599999999,
+    "longitude": 115.133135,
+    "businessStatus": "OPERATIONAL",
+    "photos": [
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/mimpi-grocery_ChIJzXC1G0A50i0RRtOZNiTSri0/photo_1.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/mimpi-grocery_ChIJzXC1G0A50i0RRtOZNiTSri0/photo_2.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/mimpi-grocery_ChIJzXC1G0A50i0RRtOZNiTSri0/photo_3.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/mimpi-grocery_ChIJzXC1G0A50i0RRtOZNiTSri0/photo_5.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/mimpi-grocery_ChIJzXC1G0A50i0RRtOZNiTSri0/photo_6.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/mimpi-grocery_ChIJzXC1G0A50i0RRtOZNiTSri0/photo_7.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/mimpi-grocery_ChIJzXC1G0A50i0RRtOZNiTSri0/photo_8.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/mimpi-grocery_ChIJzXC1G0A50i0RRtOZNiTSri0/photo_9.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/mimpi-grocery_ChIJzXC1G0A50i0RRtOZNiTSri0/photo_10.jpg"
+    ],
+    "phoneNumber": "0813-2606-9193",
+    "rating": 4.3,
+    "userRatingsTotal": 512,
+    "website": "https://mimpigrocery.com/",
+    "openingHours": [
+      "Monday: 7:00 AM – 4:00 PM",
+      "Tuesday: 7:00 AM – 4:00 PM",
+      "Wednesday: 7:00 AM – 4:00 PM",
+      "Thursday: 7:00 AM – 4:00 PM",
+      "Friday: 7:00 AM – 4:00 PM",
+      "Saturday: 7:00 AM – 4:00 PM",
+      "Sunday: 7:00 AM – 4:00 PM"
+    ],
+    "isOpenNow": false,
+    "openingPeriods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 7,
+          "minute": 0
+        },
+        "close": {
+          "day": 0,
+          "hour": 16,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 1,
+          "hour": 7,
+          "minute": 0
+        },
+        "close": {
+          "day": 1,
+          "hour": 16,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 7,
+          "minute": 0
+        },
+        "close": {
+          "day": 2,
+          "hour": 16,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 7,
+          "minute": 0
+        },
+        "close": {
+          "day": 3,
+          "hour": 16,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 7,
+          "minute": 0
+        },
+        "close": {
+          "day": 4,
+          "hour": 16,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 7,
+          "minute": 0
+        },
+        "close": {
+          "day": 5,
+          "hour": 16,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 7,
+          "minute": 0
+        },
+        "close": {
+          "day": 6,
+          "hour": 16,
+          "minute": 0
+        }
+      }
+    ],
+    "instagram": "https://www.instagram.com/mimpigrocery/",
+    "region": "canggu",
+    "googleMapsUri": "https://maps.google.com/?cid=3291799430631117638",
+    "staticMapS3Url": "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/mimpi-grocery_ChIJzXC1G0A50i0RRtOZNiTSri0/mimpi-grocery_static.webp"
+  },
+  {
+    "placeId": "ChIJB5JLA1c50i0RRPJ0C5V2DnQ",
+    "name": "Fine by SATUSATUCOFFEE",
+    "latitude": -8.6337558,
+    "longitude": 115.1487006,
+    "businessStatus": "OPERATIONAL",
+    "photos": [
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/fine-by-satusatucoffee_ChIJB5JLA1c50i0RRPJ0C5V2DnQ/photo_1.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/fine-by-satusatucoffee_ChIJB5JLA1c50i0RRPJ0C5V2DnQ/photo_2.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/fine-by-satusatucoffee_ChIJB5JLA1c50i0RRPJ0C5V2DnQ/photo_3.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/fine-by-satusatucoffee_ChIJB5JLA1c50i0RRPJ0C5V2DnQ/photo_7.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/fine-by-satusatucoffee_ChIJB5JLA1c50i0RRPJ0C5V2DnQ/photo_9.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/fine-by-satusatucoffee_ChIJB5JLA1c50i0RRPJ0C5V2DnQ/photo_10.jpg"
+    ],
+    "phoneNumber": "0819-1515-4822",
+    "rating": 4.7,
+    "userRatingsTotal": 330,
+    "website": "",
+    "openingHours": [
+      "Monday: 8:00 AM – 4:30 PM",
+      "Tuesday: 8:00 AM – 4:30 PM",
+      "Wednesday: 8:00 AM – 4:30 PM",
+      "Thursday: 8:00 AM – 4:30 AM",
+      "Friday: 8:00 AM – 4:30 PM",
+      "Saturday: 8:00 AM – 5:00 PM",
+      "Sunday: 8:00 AM – 4:30 PM"
+    ],
+    "isOpenNow": true,
+    "openingPeriods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 8,
+          "minute": 0
+        },
+        "close": {
+          "day": 0,
+          "hour": 16,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 1,
+          "hour": 8,
+          "minute": 0
+        },
+        "close": {
+          "day": 1,
+          "hour": 16,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 8,
+          "minute": 0
+        },
+        "close": {
+          "day": 2,
+          "hour": 16,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 8,
+          "minute": 0
+        },
+        "close": {
+          "day": 3,
+          "hour": 16,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 8,
+          "minute": 0
+        },
+        "close": {
+          "day": 5,
+          "hour": 4,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 8,
+          "minute": 0
+        },
+        "close": {
+          "day": 5,
+          "hour": 16,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 8,
+          "minute": 0
+        },
+        "close": {
+          "day": 6,
+          "hour": 17,
+          "minute": 0
+        }
+      }
+    ],
+    "instagram": "https://www.instagram.com/fine_by_satusatu/",
+    "region": "canggu",
+    "googleMapsUri": "https://maps.google.com/?cid=8362751940588008004",
+    "staticMapS3Url": "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/fine-by-satusatucoffee_ChIJB5JLA1c50i0RRPJ0C5V2DnQ/fine-by-satusatucoffee_static.webp"
+  },
+  {
+    "placeId": "ChIJq_svKGxH0i0RU-zAhMppq8Y",
+    "name": "Neighbourhood Food",
+    "latitude": -8.6608317,
+    "longitude": 115.1394541,
+    "businessStatus": "OPERATIONAL",
+    "photos": [
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/neighbourhood-food_ChIJq_svKGxH0i0RU-zAhMppq8Y/photo_1.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/neighbourhood-food_ChIJq_svKGxH0i0RU-zAhMppq8Y/photo_2.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/neighbourhood-food_ChIJq_svKGxH0i0RU-zAhMppq8Y/photo_3.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/neighbourhood-food_ChIJq_svKGxH0i0RU-zAhMppq8Y/photo_4.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/neighbourhood-food_ChIJq_svKGxH0i0RU-zAhMppq8Y/photo_5.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/neighbourhood-food_ChIJq_svKGxH0i0RU-zAhMppq8Y/photo_6.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/neighbourhood-food_ChIJq_svKGxH0i0RU-zAhMppq8Y/photo_7.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/neighbourhood-food_ChIJq_svKGxH0i0RU-zAhMppq8Y/photo_8.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/neighbourhood-food_ChIJq_svKGxH0i0RU-zAhMppq8Y/photo_9.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/neighbourhood-food_ChIJq_svKGxH0i0RU-zAhMppq8Y/photo_10.jpg"
+    ],
+    "phoneNumber": "0818-0877-4367",
+    "rating": 4.5,
+    "userRatingsTotal": 505,
+    "website": "https://linktr.ee/neighbourhoodbali",
+    "openingHours": [
+      "Monday: 7:30 AM – 6:00 PM",
+      "Tuesday: 7:30 AM – 10:00 PM",
+      "Wednesday: 7:30 AM – 10:00 PM",
+      "Thursday: 7:30 AM – 10:00 PM",
+      "Friday: 7:30 AM – 10:00 PM",
+      "Saturday: 7:30 AM – 10:00 PM",
+      "Sunday: 7:30 AM – 6:00 PM"
+    ],
+    "isOpenNow": true,
+    "openingPeriods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 7,
+          "minute": 30
+        },
+        "close": {
+          "day": 0,
+          "hour": 18,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 1,
+          "hour": 7,
+          "minute": 30
+        },
+        "close": {
+          "day": 1,
+          "hour": 18,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 7,
+          "minute": 30
+        },
+        "close": {
+          "day": 2,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 7,
+          "minute": 30
+        },
+        "close": {
+          "day": 3,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 7,
+          "minute": 30
+        },
+        "close": {
+          "day": 4,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 7,
+          "minute": 30
+        },
+        "close": {
+          "day": 5,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 7,
+          "minute": 30
+        },
+        "close": {
+          "day": 6,
+          "hour": 22,
+          "minute": 0
+        }
+      }
+    ],
+    "instagram": "https://www.instagram.com/neighbourhoodbali/",
+    "region": "canggu",
+    "googleMapsUri": "https://maps.google.com/?cid=14315652159058799699",
+    "staticMapS3Url": "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/neighbourhood-food_ChIJq_svKGxH0i0RU-zAhMppq8Y/neighbourhood-food_static.webp"
+  },
+  {
+    "placeId": "ChIJQwwZdJ050i0R0ehpWb6QBQc",
+    "name": "Barboa Bali",
+    "latitude": -8.6466468,
+    "longitude": 115.13299950000001,
+    "businessStatus": "OPERATIONAL",
+    "photos": [
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/barboa-bali_ChIJQwwZdJ050i0R0ehpWb6QBQc/photo_1.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/barboa-bali_ChIJQwwZdJ050i0R0ehpWb6QBQc/photo_2.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/barboa-bali_ChIJQwwZdJ050i0R0ehpWb6QBQc/photo_3.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/barboa-bali_ChIJQwwZdJ050i0R0ehpWb6QBQc/photo_5.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/barboa-bali_ChIJQwwZdJ050i0R0ehpWb6QBQc/photo_6.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/barboa-bali_ChIJQwwZdJ050i0R0ehpWb6QBQc/photo_9.jpg"
+    ],
+    "phoneNumber": "0823-4069-0241",
+    "rating": 4.9,
+    "userRatingsTotal": 1370,
+    "website": "https://barboabali.com/",
+    "openingHours": [
+      "Monday: 7:00 AM – 5:00 PM",
+      "Tuesday: 7:00 AM – 5:00 PM",
+      "Wednesday: 7:00 AM – 5:00 PM",
+      "Thursday: 7:00 AM – 5:00 PM",
+      "Friday: 7:00 AM – 5:00 PM",
+      "Saturday: 7:00 AM – 5:00 PM",
+      "Sunday: 7:00 AM – 5:00 PM"
+    ],
+    "isOpenNow": true,
+    "openingPeriods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 7,
+          "minute": 0
+        },
+        "close": {
+          "day": 0,
+          "hour": 17,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 1,
+          "hour": 7,
+          "minute": 0
+        },
+        "close": {
+          "day": 1,
+          "hour": 17,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 7,
+          "minute": 0
+        },
+        "close": {
+          "day": 2,
+          "hour": 17,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 7,
+          "minute": 0
+        },
+        "close": {
+          "day": 3,
+          "hour": 17,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 7,
+          "minute": 0
+        },
+        "close": {
+          "day": 4,
+          "hour": 17,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 7,
+          "minute": 0
+        },
+        "close": {
+          "day": 5,
+          "hour": 17,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 7,
+          "minute": 0
+        },
+        "close": {
+          "day": 6,
+          "hour": 17,
+          "minute": 0
+        }
+      }
+    ],
+    "instagram": "https://www.instagram.com/barboabali/",
+    "region": "canggu",
+    "googleMapsUri": "https://maps.google.com/?cid=505969680367347921",
+    "staticMapS3Url": "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/barboa-bali_ChIJQwwZdJ050i0R0ehpWb6QBQc/barboa-bali_static.webp"
+  },
+  {
+    "placeId": "ChIJt38YXDo50i0RJlB3Oz0PDjg",
+    "name": "HOME CAFE MENGWI",
+    "latitude": -8.6325446,
+    "longitude": 115.14026550000001,
+    "photos": [
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/home-cafe-mengwi_ChIJt38YXDo50i0RJlB3Oz0PDjg/photo_a.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/home-cafe-mengwi_ChIJt38YXDo50i0RJlB3Oz0PDjg/photo_b.jpg",
+      "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/home-cafe-mengwi_ChIJt38YXDo50i0RJlB3Oz0PDjg/photo_c.png"
+    ],
+    "openingPeriods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 7,
+          "minute": 0
+        },
+        "close": {
+          "day": 0,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 1,
+          "hour": 7,
+          "minute": 0
+        },
+        "close": {
+          "day": 1,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 7,
+          "minute": 0
+        },
+        "close": {
+          "day": 2,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 7,
+          "minute": 0
+        },
+        "close": {
+          "day": 3,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 7,
+          "minute": 0
+        },
+        "close": {
+          "day": 4,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 7,
+          "minute": 0
+        },
+        "close": {
+          "day": 5,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 7,
+          "minute": 0
+        },
+        "close": {
+          "day": 6,
+          "hour": 23,
+          "minute": 0
+        }
+      }
+    ],
+    "openingHours": [
+      "Monday: 7:00 AM – 11:00 PM",
+      "Tuesday: 7:00 AM – 11:00 PM",
+      "Wednesday: 7:00 AM – 11:00 PM",
+      "Thursday: 7:00 AM – 11:00 PM",
+      "Friday: 7:00 AM – 11:00 PM",
+      "Saturday: 7:00 AM – 11:00 PM",
+      "Sunday: 7:00 AM – 11:00 PM"
+    ],
+    "isOpenNow": true,
+    "website": "https://www.instagram.com/home.cafe.kiki/",
+    "phoneNumber": "+62 813-3838-5937",
+    "rating": 4.5,
+    "userRatingsTotal": 139,
+    "region": "canggu",
+    "businessStatus": "OPERATIONAL",
+    "googleMapsUri": "https://maps.google.com/?cid=4039182671463010342",
+    "staticMapS3Url": "https://baliciaga-database.s3.ap-southeast-1.amazonaws.com/image-v2/home-cafe-mengwi_ChIJt38YXDo50i0RJlB3Oz0PDjg/home-cafe-mengwi_static.webp",
+    "instagramUrl": "https://www.instagram.com/home.cafe.kiki/"
+  }
+]
