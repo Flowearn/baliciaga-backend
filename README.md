@@ -13,6 +13,33 @@
 * `serverless-offline` (用于本地开发和测试)
 * `serverless-dotenv-plugin` (用于Serverless Framework加载.env文件)
 
+## Project Overview & Key Features
+
+* **Core Stack & Architecture:**
+  * Built with Node.js and the Serverless Framework for deployment on AWS Lambda.
+  * Exposes a RESTful API via AWS API Gateway.
+  * Utilizes AWS S3 for storing the master `cafes.json` data file and all image assets (restaurant photos and static maps in WebP format under an `image-v2/` prefix).
+  * Manages configuration (API keys, S3 details) via local `.env` files for development and AWS SSM Parameter Store for deployed Lambda environments (`dev` and `prod` stages).
+
+* **Data Model (`BaliciagaCafe.js`):**
+  * A robust model class handles data shaping and ensures only specific, desired fields are exposed via the API (e.g., excluding `address`, `priceLevel`, `types`, `attributions`).
+  * Correctly maps Google Places API fields (e.g., `displayName`, `location`, `nationalPhoneNumber`, `userRatingCount`, new boolean attributes like `allowsDogs`) and preserves user-managed data (S3 photo URLs, `instagramUrl`, `gofoodUrl`).
+
+* **API Endpoints:**
+  * `GET /cafes`: Serves the list of all cafes.
+  * `GET /cafes/{placeId}`: Serves details for a specific cafe.
+  * Includes CORS configuration (e.g., `origin: '*'`) for `serverless-offline` to support local frontend development, and standard CORS for deployed stages.
+
+* **Data Processing & Management Scripts (`scripts/` directory):**
+  * **`preprocessLocalImages.js`**: Batch renames and converts new local restaurant images to lossless WebP format.
+  * **`initializeNewCafesSkeleton.js`**: Interactively adds new cafes, fetches minimal Google data (`placeId`, `name`), renames local image folders, uploads pre-processed WebP restaurant photos to S3 `image-v2/`, and creates "skeleton" JSON entries with other details as placeholders. Updates the `dev` environment S3 JSON.
+  * **`batchEnrichAndFinalizeAllCafes.js`**: The main data enrichment script. For all cafes (existing and new skeletons), it fetches comprehensive details from Google Places API (using a 13-field mask), intelligently merges this with existing data (preserving user-managed S3 WebP photo links and manual URLs), and generates/uploads new WebP static maps for new cafes. Outputs the final, complete JSON.
+  * **`optimizeStaticMapsToWebP.js`**: Standalone script for static map optimization and WebP conversion with S3 upload functionality.
+
+* **Configuration (`appConfig.js`)**: Smart configuration loading based on environment (local, `serverless-offline`, AWS Lambda via SSM), including a 5-minute cache for AWS-sourced configs.
+
+* **Image Handling**: All images (restaurant photos and static maps) are processed into optimized WebP format and served from S3 via an `image-v2/` path.
+
 ## 项目设置与运行
 
 ### 先决条件
