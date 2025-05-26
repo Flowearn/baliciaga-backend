@@ -180,11 +180,11 @@ async function WorkspaceCangguCafes() {
   try {
     // 1. 从S3获取咖啡馆JSON数据
     const cafesData = await fetchCafesFromS3();
-    
+
     // 2. 获取巴厘岛当前时间
     const currentBaliTime = getCurrentBaliTime();
     console.log(`Current Bali time: ${currentBaliTime.toISOString()}`);
-    
+
     // 3. 为每个咖啡馆计算当前的isOpenNow状态并创建BaliciagaCafe实例
     const baliciagaCafes = cafesData.map(cafeData => {
       // 计算当前营业状态
@@ -238,7 +238,7 @@ async function WorkspaceCafeDetails(placeId) {
     
     if (!cafe) {
       console.warn(`No cafe found with placeId ${placeId}`);
-      return null;
+        return null;
     }
     
     return cafe;

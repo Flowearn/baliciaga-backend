@@ -45,11 +45,29 @@ functions:
       - http:
           path: /cafes
           method: get
-          cors: true
+          cors:
+            origin: '*' # Allows all origins for local serverless-offline
+            headers:
+              - Content-Type
+              - X-Amz-Date
+              - Authorization
+              - X-Api-Key
+              - X-Amz-User-Agent
+              - X-Amz-Security-Token
+            allowCredentials: false # Usually false for public APIs
       - http:
           path: /cafes/{placeId}
           method: get
-          cors: true
+          cors:
+            origin: '*' # Allows all origins for local serverless-offline
+            headers:
+              - Content-Type
+              - X-Amz-Date
+              - Authorization
+              - X-Api-Key
+              - X-Amz-User-Agent
+              - X-Amz-Security-Token
+            allowCredentials: false # Usually false for public APIs
 
 plugins:
   - serverless-offline
@@ -57,7 +75,7 @@ plugins:
 
 custom:
   serverless-offline:
-    httpPort: 3006
+    httpPort: 3006 
   dotenv:
     exclude:
       - AWS_ACCESS_KEY_ID

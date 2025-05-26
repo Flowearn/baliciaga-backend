@@ -36,8 +36,8 @@ async function searchNearbyPlaces(searchParams) {
   // Initialize baseRequestBody without locationRestriction initially
   const baseRequestBody = {
     includedTypes: searchParams.includedTypes, // Assuming searchParams provides this, as per pererenanNearbyTest config
-    maxResultCount: 20,
-    languageCode: "en",
+      maxResultCount: 20,
+      languageCode: "en",
     // rankPreference is not set, so it defaults to POPULARITY for Nearby Search.
   };
 
@@ -48,7 +48,7 @@ async function searchNearbyPlaces(searchParams) {
   // Log values used for building locationRestriction
   console.log('For locationRestriction construction - searchParams.location:', searchParams.location);
   console.log('For locationRestriction construction - searchParams.radius:', searchParams.radius);
-
+    
   // Construct locationRestriction if location and radius are valid
   if (searchParams.location && typeof searchParams.radius === 'number') {
     const [latStr, lngStr] = String(searchParams.location).split(',');
@@ -92,15 +92,15 @@ async function searchNearbyPlaces(searchParams) {
     try {
       const response = await axios.post(
         'https://places.googleapis.com/v1/places:searchNearby',
-        requestBody,
-        {
-          headers: {
-            'Content-Type': 'application/json',
-            'X-Goog-Api-Key': apiKey,
+      requestBody,
+      {
+        headers: {
+          'Content-Type': 'application/json',
+          'X-Goog-Api-Key': apiKey,
             'X-Goog-FieldMask': COMMON_FIELD_MASK
-          }
         }
-      );
+      }
+    );
 
       console.log(`Nearby Search - Google API Response Data for Page ${pagesFetched + 1}:`, JSON.stringify(response.data, null, 2));
 
@@ -204,14 +204,14 @@ async function searchTextPlaces(searchParams) { // Renamed from getAllTextSearch
           }
         }
       );
-
+      
       console.log(`Text Search - Google API Response Data for Page ${pagesFetched + 1}:`, JSON.stringify(response.data, null, 2));
 
       if (response.data && response.data.places) {
         allPlaces = allPlaces.concat(response.data.places);
         console.log(`Text Search - Page ${pagesFetched + 1} fetched ${response.data.places.length} places. Total accumulated: ${allPlaces.length}`);
       }
-
+      
       currentPageToken = response.data.nextPageToken || null;
       pagesFetched++;
 
@@ -220,17 +220,17 @@ async function searchTextPlaces(searchParams) { // Renamed from getAllTextSearch
         await new Promise(resolve => setTimeout(resolve, PAGINATION_DELAY_MS));
       }
 
-    } catch (error) {
+  } catch (error) {
       console.error(`Error fetching page ${pagesFetched + 1} of Text Search results:`);
-      if (error.response) {
+    if (error.response) {
         console.error('Response status:', error.response.status);
-        console.error('Response data:', error.response.data);
+      console.error('Response data:', error.response.data);
       } else {
         console.error('Error message:', error.message);
-      }
+    }
       currentPageToken = null;
       break;
-    }
+  }
   } while (currentPageToken && pagesFetched < MAX_PAGES_TO_FETCH);
 
   console.log(`Finished fetching Text Search results. Total pages fetched: ${pagesFetched}. Total places: ${allPlaces.length}`);
@@ -245,9 +245,9 @@ async function searchTextPlaces(searchParams) { // Renamed from getAllTextSearch
 async function getPlaceDetails(placeId) {
   const config = await appConfig.getConfig();
   const apiKey = config.MAPS_API_KEY;
-  // Updated field mask with 10 specific fields (photos removed)
-  const fieldMask = 'id,displayName,location,googleMapsUri,businessStatus,regularOpeningHours,internationalPhoneNumber,websiteUri,rating,userRatingCount';
-
+  // Updated field mask with 13 essential fields including new attributes
+  const fieldMask = 'id,displayName,location,googleMapsUri,businessStatus,regularOpeningHours,nationalPhoneNumber,websiteUri,rating,userRatingCount,allowsDogs,outdoorSeating,servesVegetarianFood';
+  
   try {
     const response = await axios.get(
       `https://places.googleapis.com/v1/places/${placeId}`,
