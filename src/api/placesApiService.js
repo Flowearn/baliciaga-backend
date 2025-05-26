@@ -245,8 +245,8 @@ async function searchTextPlaces(searchParams) { // Renamed from getAllTextSearch
 async function getPlaceDetails(placeId) {
   const config = await appConfig.getConfig();
   const apiKey = config.MAPS_API_KEY;
-  // Updated field mask with 10 specific fields (photos removed)
-  const fieldMask = 'id,displayName,location,googleMapsUri,businessStatus,regularOpeningHours,internationalPhoneNumber,websiteUri,rating,userRatingCount';
+  // Updated field mask with 13 essential fields including new attributes
+  const fieldMask = 'id,displayName,location,googleMapsUri,businessStatus,regularOpeningHours,nationalPhoneNumber,websiteUri,rating,userRatingCount,allowsDogs,outdoorSeating,servesVegetarianFood';
   
   try {
     const response = await axios.get(
