@@ -38,12 +38,12 @@ provider:
         - "arn:aws:s3:::baliciaga-database/data/*"
 
 functions:
-  getCafes:
-    handler: src/fetchCangguCafes.handler
+  placesApi:
+    handler: src/fetchPlaces.handler
     timeout: 180
     events:
       - http:
-          path: /cafes
+          path: /places
           method: get
           cors:
             origin: '*' # Allows all origins for local serverless-offline
@@ -56,7 +56,7 @@ functions:
               - X-Amz-Security-Token
             allowCredentials: false # Usually false for public APIs
       - http:
-          path: /cafes/{placeId}
+          path: /places/{placeId}
           method: get
           cors:
             origin: '*' # Allows all origins for local serverless-offline

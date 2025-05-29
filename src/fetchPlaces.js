@@ -1,7 +1,7 @@
 /**
- * Baliciaga 咖啡馆API服务 - 核心处理程序
- * 用于获取巴厘岛苍古地区的咖啡馆数据
- * 现在基于从AWS S3读取的JSON文件，包含完整的咖啡馆信息
+ * Baliciaga 场所API服务 - 核心处理程序
+ * 用于获取巴厘岛苍古地区的场所数据（咖啡馆和酒吧）
+ * 现在基于从AWS S3读取的JSON文件，包含完整的场所信息
  */
 const serverless = require('serverless-http');
 const express = require('express');
@@ -12,8 +12,8 @@ const appConfig = require('./utils/appConfig');
 // 导入BaliciagaCafe模型
 const BaliciagaCafe = require('./models/BaliciagaCafe');
 
-// 预缓存的咖啡馆数据
-let cafesCache = null;
+// 预缓存的数据
+let cafesCache = {};
 let cacheTimestamp = null;
 const CACHE_TTL = 5 * 60 * 1000; // 5分钟缓存时间
 
@@ -38,21 +38,21 @@ async function getS3Client() {
 }
 
 /**
- * 从S3获取咖啡馆数据
- * @returns {Promise<Array<Object>>} 包含所有咖啡馆数据的JSON数组
+ * 从S3获取数据
+ * @param {string} s3ObjectKey - S3对象键
+ * @returns {Promise<Array<Object>>} 包含所有数据的JSON数组
  */
-async function fetchCafesFromS3() {
+async function fetchDataFromS3(s3ObjectKey) {
   try {
     const config = await appConfig.getConfig();
     const S3_BUCKET_NAME = config.S3_BUCKET_NAME;
-    const S3_OBJECT_KEY = config.S3_DATA_FILE_KEY;
     
-    console.log(`Fetching cafes data from S3: ${S3_BUCKET_NAME}/${S3_OBJECT_KEY}`);
+    console.log(`Fetching data from S3: ${S3_BUCKET_NAME}/${s3ObjectKey}`);
     
     const client = await getS3Client();
     const command = new GetObjectCommand({
       Bucket: S3_BUCKET_NAME,
-      Key: S3_OBJECT_KEY
+      Key: s3ObjectKey
     });
     
     const response = await client.send(command);
@@ -61,12 +61,12 @@ async function fetchCafesFromS3() {
     const bodyContents = await streamToString(response.Body);
     
     // 解析JSON
-    const cafesData = JSON.parse(bodyContents);
-    console.log(`Successfully fetched ${cafesData.length} cafes from S3`);
+    const data = JSON.parse(bodyContents);
+    console.log(`Successfully fetched ${data.length} items from S3`);
     
-    return cafesData;
+    return data;
   } catch (error) {
-    console.error('Error fetching cafes data from S3:', error);
+    console.error('Error fetching data from S3:', error);
     throw error;
   }
 }
@@ -162,116 +162,140 @@ function getCurrentBaliTime() {
 }
 
 /**
- * 获取巴厘岛苍古区域的咖啡馆列表。
+ * 获取指定分类的场所列表。
  * 流程：
- * 1. 从S3获取咖啡馆JSON数据
- * 2. 为每个咖啡馆计算当前的isOpenNow状态
- * 3. 将数据封装为BaliciagaCafe实例返回
+ * 1. 根据分类类型确定数据文件
+ * 2. 从S3获取数据
+ * 3. 为每个场所计算当前的isOpenNow状态
+ * 4. 将数据封装为BaliciagaCafe实例返回
+ * @param {string} categoryType - 分类类型 ('cafe' 或 'bar')
  * @returns {Promise<Array<BaliciagaCafe>>} BaliciagaCafe实例的数组
  */
-async function WorkspaceCangguCafes() {
+async function WorkspacePlaces(categoryType) {
   const now = Date.now();
-  if (cafesCache && cacheTimestamp && (now - cacheTimestamp < CACHE_TTL)) {
-    console.log('Using cached cafes data (BaliciagaCafe instances)');
-    return cafesCache;
+  const cacheKey = `${categoryType || 'cafe'}`;
+  
+  if (cafesCache && cafesCache[cacheKey] && cacheTimestamp && (now - cacheTimestamp < CACHE_TTL)) {
+    console.log(`Using cached ${categoryType || 'cafe'} data (BaliciagaCafe instances)`);
+    return cafesCache[cacheKey];
   }
 
-  console.log('Fetching cafes data from S3 and calculating current open status');
+  console.log(`Fetching ${categoryType || 'cafe'} data from S3 and calculating current open status`);
   try {
-    // 1. 从S3获取咖啡馆JSON数据
-    const cafesData = await fetchCafesFromS3();
+    // 1. 根据分类类型确定S3对象键
+    let s3ObjectKey = 'data/cafes-dev.json'; // 默认或 'cafe'
+    if (categoryType === 'bar') {
+      s3ObjectKey = 'data/bars-dev.json';
+    }
 
-    // 2. 获取巴厘岛当前时间
+    // 2. 从S3获取数据
+    const placesData = await fetchDataFromS3(s3ObjectKey);
+
+    // 3. 获取巴厘岛当前时间
     const currentBaliTime = getCurrentBaliTime();
     console.log(`Current Bali time: ${currentBaliTime.toISOString()}`);
 
-    // 3. 为每个咖啡馆计算当前的isOpenNow状态并创建BaliciagaCafe实例
-    const baliciagaCafes = cafesData.map(cafeData => {
+    // 4. 为每个场所计算当前的isOpenNow状态并创建BaliciagaCafe实例
+    const baliciagaPlaces = placesData.map(placeData => {
       // 计算当前营业状态
-      const isOpenNow = calculateIsOpenNow(cafeData.openingPeriods, currentBaliTime);
+      const isOpenNow = calculateIsOpenNow(placeData.openingPeriods, currentBaliTime);
       
       // 创建包含计算后的isOpenNow的数据对象
       const processedData = {
-        ...cafeData,
+        ...placeData,
         isOpenNow
       };
+      
+      // 🆕 添加诊断日志 - 检查传递给BaliciagaCafe构造函数的原始数据中的table字段
+      console.log(`[fetchPlaces.js] Processing place: ${processedData.name || processedData.placeId}`);
+      console.log(`[fetchPlaces.js] Raw 'table' field BEFORE BaliciagaCafe instantiation:`, processedData.table);
       
       // 创建BaliciagaCafe实例
       return new BaliciagaCafe({}, processedData);
     });
     
-    console.log(`Successfully processed ${baliciagaCafes.length} cafes with real-time open status.`);
+    console.log(`Successfully processed ${baliciagaPlaces.length} ${categoryType || 'cafe'} places with real-time open status.`);
 
-    cafesCache = baliciagaCafes; // 缓存BaliciagaCafe实例
+    // 初始化缓存对象如果不存在
+    if (!cafesCache) {
+      cafesCache = {};
+    }
+    cafesCache[cacheKey] = baliciagaPlaces; // 缓存BaliciagaCafe实例
     cacheTimestamp = now;
     
-    return baliciagaCafes;
+    return baliciagaPlaces;
   } catch (error) {
-    console.error('Error in WorkspaceCangguCafes:', error);
+    console.error(`Error in WorkspacePlaces for ${categoryType}:`, error);
     // 错误时不缓存
-    cafesCache = null; 
-    cacheTimestamp = null;
+    if (cafesCache) {
+      delete cafesCache[cacheKey];
+    }
     throw error;
   }
 }
 
 /**
- * 根据placeId获取单个咖啡馆详情 (BaliciagaCafe 实例)
- * @param {string} placeId - 咖啡馆的Place ID
+ * 根据placeId获取单个场所详情 (BaliciagaCafe 实例)
+ * @param {string} placeId - 场所的Place ID
+ * @param {string} categoryType - 分类类型 ('cafe' 或 'bar')
  * @returns {Promise<BaliciagaCafe|null>} BaliciagaCafe实例或null
  */
-async function WorkspaceCafeDetails(placeId) {
+async function WorkspacePlaceDetails(placeId, categoryType) {
   try {
-    // 先尝试从缓存获取所有咖啡馆
-    let cafes;
+    // 先尝试从缓存获取所有场所
+    let places;
     const now = Date.now();
-    if (cafesCache && cacheTimestamp && (now - cacheTimestamp < CACHE_TTL)) {
-      console.log('Using cached cafes data to find specific cafe');
-      cafes = cafesCache;
+    const cacheKey = `${categoryType || 'cafe'}`;
+    
+    if (cafesCache && cafesCache[cacheKey] && cacheTimestamp && (now - cacheTimestamp < CACHE_TTL)) {
+      console.log(`Using cached ${categoryType || 'cafe'} data to find specific place`);
+      places = cafesCache[cacheKey];
     } else {
-      // 如果没有缓存，则调用主函数获取所有咖啡馆
-      cafes = await WorkspaceCangguCafes();
+      // 如果没有缓存，则调用主函数获取所有场所
+      places = await WorkspacePlaces(categoryType);
     }
     
-    // 查找特定placeId的咖啡馆
-    const cafe = cafes.find(c => c.placeId === placeId);
+    // 查找特定placeId的场所
+    const place = places.find(p => p.placeId === placeId);
     
-    if (!cafe) {
-      console.warn(`No cafe found with placeId ${placeId}`);
-        return null;
+    if (!place) {
+      console.warn(`No place found with placeId ${placeId} in category ${categoryType || 'cafe'}`);
+      return null;
     }
     
-    return cafe;
+    return place;
   } catch (error) {
-    console.error(`Error in WorkspaceCafeDetails for ${placeId}:`, error);
+    console.error(`Error in WorkspacePlaceDetails for ${placeId} in category ${categoryType}:`, error);
     throw error;
   }
 }
 
-// API路由 - 获取所有咖啡馆
-app.get('/cafes', async (req, res) => {
+// API路由 - 获取所有场所
+app.get('/places', async (req, res) => {
   try {
-    const cafes = await WorkspaceCangguCafes();
-    res.json(cafes.map(cafe => cafe.toJSON()));
+    const categoryType = req.query.type;
+    const places = await WorkspacePlaces(categoryType);
+    res.json(places.map(place => place.toJSON()));
   } catch (error) {
-    console.error('GET /cafes - Error fetching cafes:', error.message);
-    res.status(502).json({ error: 'Failed to fetch cafes', message: error.message });
+    console.error('GET /places - Error fetching places:', error.message);
+    res.status(502).json({ error: 'Failed to fetch places', message: error.message });
   }
 });
 
-// API路由 - 获取特定咖啡馆详情
-app.get('/cafes/:placeId', async (req, res) => {
+// API路由 - 获取特定场所详情
+app.get('/places/:placeId', async (req, res) => {
   try {
-    const cafe = await WorkspaceCafeDetails(req.params.placeId);
+    const categoryType = req.query.type;
+    const place = await WorkspacePlaceDetails(req.params.placeId, categoryType);
     
-    if (!cafe) {
-      return res.status(404).json({ error: 'Cafe not found' });
+    if (!place) {
+      return res.status(404).json({ error: 'Place not found' });
     }
     
-    res.json(cafe.toJSON());
+    res.json(place.toJSON());
   } catch (error) {
-    console.error(`GET /cafes/${req.params.placeId} - Error fetching cafe details:`, error.message);
-    res.status(502).json({ error: 'Failed to fetch cafe details', message: error.message });
+    console.error(`GET /places/${req.params.placeId} - Error fetching place details:`, error.message);
+    res.status(502).json({ error: 'Failed to fetch place details', message: error.message });
   }
 });
 
@@ -285,5 +309,5 @@ module.exports.handler = async (event, context) => {
 };
 
 // 导出工作空间函数，供本地开发和测试使用
-module.exports.WorkspaceCangguCafes = WorkspaceCangguCafes;
-module.exports.WorkspaceCafeDetails = WorkspaceCafeDetails; 
+module.exports.WorkspacePlaces = WorkspacePlaces;
+module.exports.WorkspacePlaceDetails = WorkspacePlaceDetails; 
