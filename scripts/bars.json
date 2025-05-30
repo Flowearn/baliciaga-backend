@@ -2,126 +2,474 @@
   {
     "placeId": "ChIJN5xTyos50i0RiGBQWrCPinA",
     "name": "Honeycomb Hookah & Eatery",
-    "latitude": 0,
-    "longitude": 0,
-    "businessStatus": "",
+    "latitude": -8.6352675,
+    "longitude": 115.13945779999999,
+    "businessStatus": "OPERATIONAL",
     "photos": [
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/honeycomb-hookah-eatery/photo_a.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/honeycomb-hookah-eatery/photo_b.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/honeycomb-hookah-eatery/photo_c.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/honeycomb-hookah-eatery/photo_d.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/honeycomb-hookah-eatery/photo_e.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/honeycomb-hookah-eatery/photo_f.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/honeycomb-hookah-eatery/photo_g.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/honeycomb-hookah-eatery/photo_h.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/honeycomb-hookah-eatery/photo_i.webp"
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image/honeycomb-hookah-eatery/photo_g.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image/honeycomb-hookah-eatery/photo_h.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image/honeycomb-hookah-eatery/photo_i.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image/honeycomb-hookah-eatery/photo_a.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image/honeycomb-hookah-eatery/photo_b.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image/honeycomb-hookah-eatery/photo_c.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image/honeycomb-hookah-eatery/photo_d.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image/honeycomb-hookah-eatery/photo_e.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image/honeycomb-hookah-eatery/photo_f.webp"
     ],
-    "phoneNumber": "",
-    "rating": 0,
-    "userRatingsTotal": 0,
-    "website": "",
-    "openingHours": [],
-    "isOpenNow": null,
-    "openingPeriods": "",
-    "instagram": "",
+    "phoneNumber": "0881-0382-06999",
+    "rating": 4.8,
+    "userRatingsTotal": 636,
+    "website": "https://honeycombhookah.com/",
+    "openingHours": [
+      "Monday: 10:00 AM – 2:00 AM",
+      "Tuesday: 10:00 AM – 2:00 AM",
+      "Wednesday: 10:00 AM – 2:00 AM",
+      "Thursday: 10:00 AM – 2:00 AM",
+      "Friday: 10:00 AM – 2:00 AM",
+      "Saturday: 10:00 AM – 2:00 AM",
+      "Sunday: 10:00 AM – 2:00 AM"
+    ],
+    "isOpenNow": true,
+    "openingPeriods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 10,
+          "minute": 0
+        },
+        "close": {
+          "day": 1,
+          "hour": 2,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 1,
+          "hour": 10,
+          "minute": 0
+        },
+        "close": {
+          "day": 2,
+          "hour": 2,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 10,
+          "minute": 0
+        },
+        "close": {
+          "day": 3,
+          "hour": 2,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 10,
+          "minute": 0
+        },
+        "close": {
+          "day": 4,
+          "hour": 2,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 10,
+          "minute": 0
+        },
+        "close": {
+          "day": 5,
+          "hour": 2,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 10,
+          "minute": 0
+        },
+        "close": {
+          "day": 6,
+          "hour": 2,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 10,
+          "minute": 0
+        },
+        "close": {
+          "day": 0,
+          "hour": 2,
+          "minute": 0
+        }
+      }
+    ],
+    "instagram": "https://www.instagram.com/honeycomb.bali/",
     "region": "",
-    "googleMapsUri": "",
-    "staticMapS3Url": "",
-    "allowsDogs": false,
-    "outdoorSeating": false,
-    "servesVegetarianFood": false,
-    "table": ""
+    "googleMapsUri": "https://maps.google.com/?cid=8109452066626232456",
+    "staticMapS3Url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image/honeycomb-hookah-eatery_ChIJN5xTyos50i0RiGBQWrCPinA/honeycomb-hookah-eatery_static.webp",
+    "allowsDogs": true,
+    "outdoorSeating": true,
+    "servesVegetarianFood": true,
+    "table": "",
+    "gofoodUrl": "https://gofood.co.id/bali/restaurant/honeycomb-hookah-eatery-pasta-salad-burger-canggu-95014588-5bb0-40c4-8079-cd7e9bf20074?as=gmaps"
   },
   {
     "placeId": "ChIJk4MaNPo50i0R4vfuHDwZ_3U",
     "name": "LONGTIME | Modern Asian Restaurant & Bar Bali",
-    "latitude": 0,
-    "longitude": 0,
-    "businessStatus": "",
+    "latitude": -8.6599577,
+    "longitude": 115.13954059999999,
+    "businessStatus": "OPERATIONAL",
     "photos": [
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/longtime-modern-asian-restaurant-bar-bali/photo_a.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/longtime-modern-asian-restaurant-bar-bali/photo_b.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/longtime-modern-asian-restaurant-bar-bali/photo_c.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/longtime-modern-asian-restaurant-bar-bali/photo_d.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/longtime-modern-asian-restaurant-bar-bali/photo_e.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/longtime-modern-asian-restaurant-bar-bali/photo_f.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/longtime-modern-asian-restaurant-bar-bali/photo_g.webp"
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image/longtime-modern-asian-restaurant-bar-bali/photo_a.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image/longtime-modern-asian-restaurant-bar-bali/photo_b.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image/longtime-modern-asian-restaurant-bar-bali/photo_d.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image/longtime-modern-asian-restaurant-bar-bali/photo_e.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image/longtime-modern-asian-restaurant-bar-bali/photo_f.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image/longtime-modern-asian-restaurant-bar-bali/photo_g.webp"
     ],
-    "phoneNumber": "",
-    "rating": 0,
-    "userRatingsTotal": 0,
-    "website": "",
-    "openingHours": [],
-    "isOpenNow": null,
-    "openingPeriods": "",
-    "instagram": "",
+    "phoneNumber": "0821-4440-8260",
+    "rating": 4.8,
+    "userRatingsTotal": 345,
+    "website": "https://www.longtimebali.com/",
+    "openingHours": [
+      "Monday: 12:00 – 11:00 PM",
+      "Tuesday: 12:00 – 11:00 PM",
+      "Wednesday: 12:00 – 11:00 PM",
+      "Thursday: 12:00 – 11:00 PM",
+      "Friday: 12:00 PM – 12:00 AM",
+      "Saturday: 12:00 PM – 12:00 AM",
+      "Sunday: 12:00 – 11:00 PM"
+    ],
+    "isOpenNow": true,
+    "openingPeriods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 0,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 1,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 1,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 2,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 3,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 4,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 6,
+          "hour": 0,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 0,
+          "hour": 0,
+          "minute": 0
+        }
+      }
+    ],
     "region": "",
-    "googleMapsUri": "",
-    "staticMapS3Url": "",
+    "googleMapsUri": "https://maps.google.com/?cid=8502542367472941026",
+    "staticMapS3Url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image/longtime-modern-asian-restaurant-bar-bali_ChIJk4MaNPo50i0R4vfuHDwZ_3U/longtime-modern-asian-restaurant-bar-bali_static.webp",
     "allowsDogs": false,
-    "outdoorSeating": false,
+    "outdoorSeating": true,
     "servesVegetarianFood": false,
-    "table": ""
+    "table": "",
+    "gofoodUrl": "https://gofood.co.id/bali/restaurant/longtime-berawa-0985f916-adaa-4577-a693-c1f7ecaca261?as=gmaps",
+    "instagram": "https://www.instagram.com/longtime.bali/"
   },
   {
     "placeId": "ChIJkYxdu3E50i0RrFJjPHk8LqI",
     "name": "PLATONIC",
-    "latitude": 0,
-    "longitude": 0,
-    "businessStatus": "",
+    "latitude": -8.650168299999999,
+    "longitude": 115.13398639999998,
+    "businessStatus": "OPERATIONAL",
     "photos": [
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/platonic/photo_a.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/platonic/photo_b.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/platonic/photo_c.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/platonic/photo_d.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/platonic/photo_e.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/platonic/photo_f.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/platonic/photo_g.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/platonic/photo_h.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/platonic/photo_i.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/platonic/photo_j.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/platonic/photo_k.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/platonic/photo_l.webp"
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image/platonic/photo_a.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image/platonic/photo_i.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image/platonic/photo_j.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image/platonic/photo_k.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image/platonic/photo_b.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image/platonic/photo_e.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image/platonic/photo_f.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image/platonic/photo_g.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image/platonic/photo_h.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image/platonic/photo_l.webp"
     ],
-    "phoneNumber": "",
-    "rating": 0,
-    "userRatingsTotal": 0,
-    "website": "",
-    "openingHours": [],
-    "isOpenNow": null,
-    "openingPeriods": "",
-    "instagram": "",
+    "phoneNumber": "0821-4478-8810",
+    "rating": 4.6,
+    "userRatingsTotal": 160,
+    "website": "http://platonicintimate.com/",
+    "openingHours": [
+      "Monday: 7:00 PM – 2:00 AM",
+      "Tuesday: 7:00 PM – 2:00 AM",
+      "Wednesday: 7:00 PM – 2:00 AM",
+      "Thursday: 7:00 PM – 2:00 AM",
+      "Friday: 7:00 PM – 2:00 AM",
+      "Saturday: 7:00 PM – 2:00 AM",
+      "Sunday: Closed"
+    ],
+    "isOpenNow": true,
+    "openingPeriods": [
+      {
+        "open": {
+          "day": 1,
+          "hour": 19,
+          "minute": 0
+        },
+        "close": {
+          "day": 2,
+          "hour": 2,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 19,
+          "minute": 0
+        },
+        "close": {
+          "day": 3,
+          "hour": 2,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 19,
+          "minute": 0
+        },
+        "close": {
+          "day": 4,
+          "hour": 2,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 19,
+          "minute": 0
+        },
+        "close": {
+          "day": 5,
+          "hour": 2,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 19,
+          "minute": 0
+        },
+        "close": {
+          "day": 6,
+          "hour": 2,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 19,
+          "minute": 0
+        },
+        "close": {
+          "day": 0,
+          "hour": 2,
+          "minute": 0
+        }
+      }
+    ],
     "region": "",
-    "googleMapsUri": "",
-    "staticMapS3Url": "",
+    "googleMapsUri": "https://maps.google.com/?cid=11686344574474867372",
+    "staticMapS3Url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image/platonic_ChIJkYxdu3E50i0RrFJjPHk8LqI/platonic_static.webp",
     "allowsDogs": false,
-    "outdoorSeating": false,
+    "outdoorSeating": true,
     "servesVegetarianFood": false,
-    "table": ""
+    "table": "https://api.whatsapp.com/send/?phone=6282144788810&text&type=phone_number&app_absent=0",
+    "gofoodUrl": "",
+    "instagram": "https://www.instagram.com/platonicintimate/"
   },
   {
     "placeId": "ChIJOwB4D8E50i0RnmcWbm5B1jI",
     "name": "The Shady Fox",
-    "latitude": 0,
-    "longitude": 0,
-    "businessStatus": "",
+    "latitude": -8.6461875,
+    "longitude": 115.1278125,
+    "businessStatus": "OPERATIONAL",
     "photos": [
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/the-shady-fox/photo_a.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/the-shady-fox/photo_b.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/the-shady-fox/photo_c.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/the-shady-fox/photo_d.webp"
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image/the-shady-fox/photo_a.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image/the-shady-fox/photo_b.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image/the-shady-fox/photo_c.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image/the-shady-fox/photo_d.webp"
     ],
     "phoneNumber": "",
-    "rating": 0,
-    "userRatingsTotal": 0,
-    "website": "",
-    "openingHours": [],
-    "isOpenNow": null,
-    "openingPeriods": "",
-    "instagram": "",
+    "rating": 4.7,
+    "userRatingsTotal": 415,
+    "website": "https://tavologroup.com/",
+    "openingHours": [
+      "Monday: Closed",
+      "Tuesday: 7:00 PM – 3:00 AM",
+      "Wednesday: 7:00 PM – 3:00 AM",
+      "Thursday: 7:00 PM – 3:00 AM",
+      "Friday: 7:00 PM – 3:00 AM",
+      "Saturday: 7:00 PM – 3:00 AM",
+      "Sunday: 7:00 PM – 3:00 AM"
+    ],
+    "isOpenNow": true,
+    "openingPeriods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 19,
+          "minute": 0
+        },
+        "close": {
+          "day": 1,
+          "hour": 3,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 19,
+          "minute": 0
+        },
+        "close": {
+          "day": 3,
+          "hour": 3,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 19,
+          "minute": 0
+        },
+        "close": {
+          "day": 4,
+          "hour": 3,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 19,
+          "minute": 0
+        },
+        "close": {
+          "day": 5,
+          "hour": 3,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 19,
+          "minute": 0
+        },
+        "close": {
+          "day": 6,
+          "hour": 3,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 19,
+          "minute": 0
+        },
+        "close": {
+          "day": 0,
+          "hour": 3,
+          "minute": 0
+        }
+      }
+    ],
+    "instagram": "https://www.instagram.com/theshadyfox__/",
     "region": "",
-    "googleMapsUri": "",
-    "staticMapS3Url": "",
+    "googleMapsUri": "https://maps.google.com/?cid=3663187289461647262",
+    "staticMapS3Url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image/the-shady-fox_ChIJOwB4D8E50i0RnmcWbm5B1jI/the-shady-fox_static.webp",
     "allowsDogs": false,
     "outdoorSeating": false,
     "servesVegetarianFood": false,
@@ -130,28 +478,121 @@
   {
     "placeId": "ChIJgfLsf1pF0i0RTDMRSpGD_Zs",
     "name": "Bali Beer Cycle",
-    "latitude": 0,
-    "longitude": 0,
-    "businessStatus": "",
+    "latitude": -8.7152996,
+    "longitude": 115.173977,
+    "businessStatus": "OPERATIONAL",
     "photos": [
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/bali-beer-cycle/photo_a.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/bali-beer-cycle/photo_b.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/bali-beer-cycle/photo_c.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/bali-beer-cycle/photo_d.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/bali-beer-cycle/photo_e.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/bali-beer-cycle/photo_f.webp"
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image/bali-beer-cycle/photo_a.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image/bali-beer-cycle/photo_b.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image/bali-beer-cycle/photo_c.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image/bali-beer-cycle/photo_d.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image/bali-beer-cycle/photo_e.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image/bali-beer-cycle/photo_f.webp"
     ],
-    "phoneNumber": "",
-    "rating": 0,
-    "userRatingsTotal": 0,
-    "website": "",
-    "openingHours": [],
-    "isOpenNow": null,
-    "openingPeriods": "",
-    "instagram": "",
+    "phoneNumber": "0857-3893-0898",
+    "rating": 4.7,
+    "userRatingsTotal": 333,
+    "website": "http://balibeercycle.com/",
+    "openingHours": [
+      "Monday: 10:00 AM – 10:00 PM",
+      "Tuesday: 10:00 AM – 10:00 PM",
+      "Wednesday: 10:00 AM – 10:00 PM",
+      "Thursday: 10:00 AM – 10:00 PM",
+      "Friday: 10:00 AM – 10:00 PM",
+      "Saturday: 10:00 AM – 10:00 PM",
+      "Sunday: 10:00 AM – 10:00 PM"
+    ],
+    "isOpenNow": true,
+    "openingPeriods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 10,
+          "minute": 0
+        },
+        "close": {
+          "day": 0,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 1,
+          "hour": 10,
+          "minute": 0
+        },
+        "close": {
+          "day": 1,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 10,
+          "minute": 0
+        },
+        "close": {
+          "day": 2,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 10,
+          "minute": 0
+        },
+        "close": {
+          "day": 3,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 10,
+          "minute": 0
+        },
+        "close": {
+          "day": 4,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 10,
+          "minute": 0
+        },
+        "close": {
+          "day": 5,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 10,
+          "minute": 0
+        },
+        "close": {
+          "day": 6,
+          "hour": 22,
+          "minute": 0
+        }
+      }
+    ],
+    "instagram": "https://www.instagram.com/balibeercycle/",
     "region": "",
-    "googleMapsUri": "",
-    "staticMapS3Url": "",
+    "googleMapsUri": "https://maps.google.com/?cid=11240284905022763852",
+    "staticMapS3Url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image/bali-beer-cycle_ChIJgfLsf1pF0i0RTDMRSpGD_Zs/bali-beer-cycle_static.webp",
     "allowsDogs": false,
     "outdoorSeating": false,
     "servesVegetarianFood": false,
@@ -160,98 +601,376 @@
   {
     "placeId": "ChIJe7KSn4dH0i0RsfzzpwFhwpQ",
     "name": "The Barn Gastropub",
-    "latitude": 0,
-    "longitude": 0,
-    "businessStatus": "",
+    "latitude": -8.657000199999999,
+    "longitude": 115.13251989999998,
+    "businessStatus": "OPERATIONAL",
     "photos": [
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/barn-gastropub/photo_a.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/barn-gastropub/photo_b.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/barn-gastropub/photo_c.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/barn-gastropub/photo_d.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/barn-gastropub/photo_e.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/barn-gastropub/photo_f.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/barn-gastropub/photo_g.webp"
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image/barn-gastropub/photo_a.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image/barn-gastropub/photo_b.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image/barn-gastropub/photo_c.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image/barn-gastropub/photo_d.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image/barn-gastropub/photo_e.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image/barn-gastropub/photo_f.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image/barn-gastropub/photo_g.webp"
     ],
-    "phoneNumber": "",
-    "rating": 0,
-    "userRatingsTotal": 0,
-    "website": "",
-    "openingHours": [],
-    "isOpenNow": null,
-    "openingPeriods": "",
+    "phoneNumber": "0823-4219-8485",
+    "rating": 4.7,
+    "userRatingsTotal": 1387,
+    "website": "http://thebarnbali.com/",
+    "openingHours": [
+      "Monday: 9:00 AM – 12:00 AM",
+      "Tuesday: 9:00 AM – 12:00 AM",
+      "Wednesday: 9:00 AM – 12:00 AM",
+      "Thursday: 9:00 AM – 12:00 AM",
+      "Friday: 9:00 AM – 2:00 AM",
+      "Saturday: 9:00 AM – 2:00 AM",
+      "Sunday: 9:00 AM – 12:30 AM"
+    ],
+    "isOpenNow": true,
+    "openingPeriods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 9,
+          "minute": 0
+        },
+        "close": {
+          "day": 1,
+          "hour": 0,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 1,
+          "hour": 9,
+          "minute": 0
+        },
+        "close": {
+          "day": 2,
+          "hour": 0,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 9,
+          "minute": 0
+        },
+        "close": {
+          "day": 3,
+          "hour": 0,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 9,
+          "minute": 0
+        },
+        "close": {
+          "day": 4,
+          "hour": 0,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 9,
+          "minute": 0
+        },
+        "close": {
+          "day": 5,
+          "hour": 0,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 9,
+          "minute": 0
+        },
+        "close": {
+          "day": 6,
+          "hour": 2,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 9,
+          "minute": 0
+        },
+        "close": {
+          "day": 0,
+          "hour": 2,
+          "minute": 0
+        }
+      }
+    ],
     "instagram": "",
     "region": "",
-    "googleMapsUri": "",
-    "staticMapS3Url": "",
-    "allowsDogs": false,
-    "outdoorSeating": false,
+    "googleMapsUri": "https://maps.google.com/?cid=10719236722835848369",
+    "staticMapS3Url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image/the-barn-gastropub_ChIJe7KSn4dH0i0RsfzzpwFhwpQ/the-barn-gastropub_static.webp",
+    "allowsDogs": true,
+    "outdoorSeating": true,
     "servesVegetarianFood": false,
     "table": ""
   },
   {
     "placeId": "ChIJNzjyIBI50i0RpFdnd_ZN3pg",
     "name": "Black Sand Brewery",
-    "latitude": 0,
-    "longitude": 0,
-    "businessStatus": "",
+    "latitude": -8.6455314,
+    "longitude": 115.14123629999999,
+    "businessStatus": "OPERATIONAL",
     "photos": [
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/black-sand-brewery/photo_a.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/black-sand-brewery/photo_b.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/black-sand-brewery/photo_c.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/black-sand-brewery/photo_d.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/black-sand-brewery/photo_e.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/black-sand-brewery/photo_f.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/black-sand-brewery/photo_g.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/black-sand-brewery/photo_h.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/black-sand-brewery/photo_i.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/black-sand-brewery/photo_j.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/black-sand-brewery/photo_k.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/black-sand-brewery/photo_l.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/black-sand-brewery/photo_m.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/black-sand-brewery/photo_n.webp"
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image/black-sand-brewery/photo_e.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image/black-sand-brewery/photo_c.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image/black-sand-brewery/photo_j.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image/black-sand-brewery/photo_a.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image/black-sand-brewery/photo_d.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image/black-sand-brewery/photo_f.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image/black-sand-brewery/photo_h.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image/black-sand-brewery/photo_i.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image/black-sand-brewery/photo_k.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image/black-sand-brewery/photo_l.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image/black-sand-brewery/photo_m.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image/black-sand-brewery/photo_n.webp"
     ],
-    "phoneNumber": "",
-    "rating": 0,
-    "userRatingsTotal": 0,
-    "website": "",
-    "openingHours": [],
-    "isOpenNow": null,
-    "openingPeriods": "",
-    "instagram": "",
+    "phoneNumber": "0811-3858-991",
+    "rating": 4.7,
+    "userRatingsTotal": 2754,
+    "website": "http://www.blacksandbrewery.com/?utm_source=google&utm_medium=wix_google_business_profile&utm_campaign=11058311121729906864",
+    "openingHours": [
+      "Monday: 12:00 PM – 12:00 AM",
+      "Tuesday: 12:00 PM – 12:00 AM",
+      "Wednesday: 12:00 PM – 12:00 AM",
+      "Thursday: 12:00 PM – 12:00 AM",
+      "Friday: 12:00 PM – 12:00 AM",
+      "Saturday: 12:00 PM – 12:00 AM",
+      "Sunday: 12:00 PM – 12:00 AM"
+    ],
+    "isOpenNow": true,
+    "openingPeriods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 1,
+          "hour": 0,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 1,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 2,
+          "hour": 0,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 3,
+          "hour": 0,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 4,
+          "hour": 0,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 5,
+          "hour": 0,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 6,
+          "hour": 0,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 0,
+          "hour": 0,
+          "minute": 0
+        }
+      }
+    ],
+    "instagram": "https://www.instagram.com/blacksandbrewery/",
     "region": "",
-    "googleMapsUri": "",
-    "staticMapS3Url": "",
-    "allowsDogs": false,
-    "outdoorSeating": false,
-    "servesVegetarianFood": false,
-    "table": ""
+    "googleMapsUri": "https://maps.google.com/?cid=11015327459555366820",
+    "staticMapS3Url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image/black-sand-brewery_ChIJNzjyIBI50i0RpFdnd_ZN3pg/black-sand-brewery_static.webp",
+    "allowsDogs": true,
+    "outdoorSeating": true,
+    "servesVegetarianFood": true,
+    "gofoodUrl": "https://gofood.co.id/bali/restaurant/black-sand-brewery-canggu-577ede74-1b3f-4b9e-9444-6a8229137def?as=gmaps",
+    "table": "https://bookings.nowbookit.com/?accountid=0505a50a-8917-4706-afef-777b8d383627&venueid=10558&theme=light&colors=hex,000000"
   },
   {
     "placeId": "ChIJcfxIJo850i0RsrveoncQeBs",
     "name": "Shelter Restaurant",
-    "latitude": 0,
-    "longitude": 0,
-    "businessStatus": "",
+    "latitude": -8.648036,
+    "longitude": 115.12422600000001,
+    "businessStatus": "OPERATIONAL",
     "photos": [
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/shelter-restaurant/photo_a.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/shelter-restaurant/photo_b.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/shelter-restaurant/photo_c.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/shelter-restaurant/photo_d.webp"
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image/shelter-restaurant/photo_a.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image/shelter-restaurant/photo_b.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image/shelter-restaurant/photo_c.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image/shelter-restaurant/photo_d.webp"
     ],
-    "phoneNumber": "",
-    "rating": 0,
-    "userRatingsTotal": 0,
-    "website": "",
-    "openingHours": [],
-    "isOpenNow": null,
-    "openingPeriods": "",
+    "phoneNumber": "0823-4004-0199",
+    "rating": 4.5,
+    "userRatingsTotal": 1498,
+    "website": "http://www.shelterbali.com/",
+    "openingHours": [
+      "Monday: 12:00 PM – 12:00 AM",
+      "Tuesday: 12:00 PM – 12:00 AM",
+      "Wednesday: 12:00 PM – 12:00 AM",
+      "Thursday: 12:00 PM – 12:00 AM",
+      "Friday: 12:00 PM – 12:00 AM",
+      "Saturday: 12:00 PM – 12:00 AM",
+      "Sunday: 12:00 PM – 12:00 AM"
+    ],
+    "isOpenNow": true,
+    "openingPeriods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 1,
+          "hour": 0,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 1,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 2,
+          "hour": 0,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 3,
+          "hour": 0,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 4,
+          "hour": 0,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 5,
+          "hour": 0,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 6,
+          "hour": 0,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 0,
+          "hour": 0,
+          "minute": 0
+        }
+      }
+    ],
     "instagram": "",
     "region": "",
-    "googleMapsUri": "",
-    "staticMapS3Url": "",
+    "googleMapsUri": "https://maps.google.com/?cid=1979350142248991666",
+    "staticMapS3Url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image/shelter-restaurant_ChIJcfxIJo850i0RsrveoncQeBs/shelter-restaurant_static.webp",
     "allowsDogs": false,
-    "outdoorSeating": false,
-    "servesVegetarianFood": false,
+    "outdoorSeating": true,
+    "servesVegetarianFood": true,
     "table": ""
   }
 ]
