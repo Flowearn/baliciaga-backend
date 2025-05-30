@@ -53,26 +53,29 @@ async function loadConfig() {
     console.log("Running in ACTUAL AWS Lambda environment. Fetching config from SSM.");
     
     // 从环境变量读取SSM参数路径，如果未设置则使用默认值
-    const mapsApiKeyPath = process.env.MAPS_API_KEY_SSM_PATH || '/baliciaga/dev/googleMapsApiKey';
     const s3BucketNamePath = process.env.S3_BUCKET_NAME_SSM_PATH || '/baliciaga/dev/s3BucketName';
-    const s3DataFileKeyPath = process.env.S3_DATA_FILE_KEY_SSM_PATH || '/baliciaga/dev/s3DataFileKey';
+    const s3CafeDataFileKeyPath = process.env.S3_CAFE_DATA_FILE_KEY_SSM_PATH || '/baliciaga/dev/s3DataFileKeyCafe';
+    const s3BarDataFileKeyPath = process.env.S3_BAR_DATA_FILE_KEY_SSM_PATH || '/baliciaga/dev/s3DataFileKeyBar';
     
     try {
-      // 并行获取所有SSM参数
-      const [mapsApiKey, s3BucketName, s3DataFileKey] = await Promise.all([
-        getSsmParameter(mapsApiKeyPath),
+      // 并行获取所有SSM参数 (移除了 MAPS_API_KEY 的获取)
+      const [s3BucketName, s3CafeDataFileKey, s3BarDataFileKey] = await Promise.all([
         getSsmParameter(s3BucketNamePath),
-        getSsmParameter(s3DataFileKeyPath)
+        getSsmParameter(s3CafeDataFileKeyPath),
+        getSsmParameter(s3BarDataFileKeyPath)
       ]);
       
       config = {
-        MAPS_API_KEY: mapsApiKey,
+        // MAPS_API_KEY 在 AWS 环境中不再获取，Lambda API 处理程序不需要此密钥
         S3_BUCKET_NAME: s3BucketName,
-        S3_DATA_FILE_KEY: s3DataFileKey,
+        S3_DATA_FILE_KEYS: {
+          cafe: s3CafeDataFileKey,
+          bar: s3BarDataFileKey
+        },
         AWS_REGION: process.env.AWS_REGION || 'ap-southeast-1'
       };
       
-      console.log("Successfully loaded all config parameters from SSM.");
+      console.log("Successfully loaded config parameters from SSM (excluding MAPS_API_KEY).");
     } catch (error) {
       console.error("Failed to load required parameters from SSM:", error);
       throw new Error(`Critical configuration error: ${error.message}`);
@@ -84,11 +87,14 @@ async function loadConfig() {
       console.log("Running in local Node.js script environment. Loading config from .env file.");
     }
     
-    // 从 .env 文件加载配置
+    // 从 .env 文件加载配置 (保留本地环境的 MAPS_API_KEY 逻辑)
     config = {
       MAPS_API_KEY: process.env.MAPS_API_KEY,
       S3_BUCKET_NAME: process.env.S3_BUCKET_NAME || 'baliciaga-database',
-      S3_DATA_FILE_KEY: process.env.S3_DATA_FILE_KEY || 'data/cafes.json',
+      S3_DATA_FILE_KEYS: {
+        cafe: process.env.LOCAL_S3_CAFE_DATA_FILE_KEY || 'data/cafes-dev.json',
+        bar: process.env.LOCAL_S3_BAR_DATA_FILE_KEY || 'data/bars-dev.json'
+      },
       AWS_REGION: process.env.AWS_REGION || 'ap-southeast-1',
       // Add AWS credentials for local environment
       AWS_ACCESS_KEY_ID: process.env.AWS_ACCESS_KEY_ID,
@@ -105,8 +111,12 @@ async function loadConfig() {
       console.warn('警告: 未设置 S3_BUCKET_NAME 环境变量，使用默认值 "baliciaga-database"。');
     }
     
-    if (!config.S3_DATA_FILE_KEY) {
-      console.warn('警告: 未设置 S3_DATA_FILE_KEY 环境变量，使用默认值 "data/cafes.json"。');
+    if (!config.S3_DATA_FILE_KEYS.cafe) {
+      console.warn('警告: 未设置 LOCAL_S3_CAFE_DATA_FILE_KEY 环境变量，使用默认值 "data/cafes-dev.json"。');
+    }
+    
+    if (!config.S3_DATA_FILE_KEYS.bar) {
+      console.warn('警告: 未设置 LOCAL_S3_BAR_DATA_FILE_KEY 环境变量，使用默认值 "data/bars-dev.json"。');
     }
     
     if (!config.AWS_ACCESS_KEY_ID || !config.AWS_SECRET_ACCESS_KEY) {

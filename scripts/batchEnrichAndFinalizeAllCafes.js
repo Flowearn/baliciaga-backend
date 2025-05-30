@@ -21,11 +21,11 @@ const appConfig = require('../src/utils/appConfig');
 const placesApiService = require('../src/api/placesApiService');
 
 // Configuration Constants
-const INPUT_JSON_PATH = path.join(__dirname, 'cafes-dev.json');
-const OUTPUT_JSON_PATH = path.join(__dirname, 'cafes_final_all_details.json');
+const INPUT_JSON_PATH = path.join(__dirname, 'bars.json');
+const OUTPUT_JSON_PATH = path.join(__dirname, 'bars-dev.json');
 const S3_BUCKET_NAME = 'baliciaga-database';
 const S3_REGION = 'ap-southeast-1';
-const S3_UPLOAD_IMAGE_PATH_PREFIX = 'image-v2/';
+const S3_UPLOAD_IMAGE_PATH_PREFIX = 'bar-image-dev/';
 const S3_PUBLIC_URL_BASE = `https://${S3_BUCKET_NAME}.s3.${S3_REGION}.amazonaws.com/`;
 
 // Static Map Configuration

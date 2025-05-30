@@ -22,7 +22,7 @@ const path = require('path');
 const sharp = require('sharp');
 
 // Configuration Constants
-const BASE_INPUT_DIR = path.resolve(__dirname, '../new_photo/');
+const BASE_INPUT_DIR = path.resolve(__dirname, '../../new_photo/');
 const NEW_FILENAME_PREFIX = 'photo_';
 const VALID_IMAGE_EXTENSIONS = ['.jpg', '.jpeg', '.png', '.gif']; // Case-insensitive, excluding WebP as input
 const SYSTEM_FILES = ['.DS_Store', 'Thumbs.db', '.gitignore', '.gitkeep'];

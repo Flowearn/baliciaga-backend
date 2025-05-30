@@ -79,6 +79,9 @@ class BaliciagaCafe {
     this.instagramUrl = existingData.instagramUrl || existingData.instagram || '';
     this.gofoodUrl = existingData.gofoodUrl || '';
 
+    // Table reservation - manually provided
+    this.table = existingData.table || '';
+
     // Region information (provided by caller)
     if (region) {
       this.region = region;
@@ -123,7 +126,8 @@ class BaliciagaCafe {
       outdoorSeating: this.outdoorSeating,
       servesVegetarianFood: this.servesVegetarianFood,
       instagramUrl: this.instagramUrl,
-      gofoodUrl: this.gofoodUrl
+      gofoodUrl: this.gofoodUrl,
+      table: this.table
       // EXCLUDED FIELDS (not included in output):
       // - address (formattedAddress from API)
       // - priceLevel  
