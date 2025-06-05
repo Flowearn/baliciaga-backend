@@ -6,9 +6,9 @@ const sharp = require('sharp');
 const SCRIPT_DIR = __dirname;
 const BACKEND_DIR = path.dirname(SCRIPT_DIR);
 const PROJECT_ROOT = path.dirname(BACKEND_DIR);
-const INPUT_IMAGE_DIR = path.join(PROJECT_ROOT, 'photo_webp');
-const OUTPUT_BASE_DIR = path.join(PROJECT_ROOT, 'photo_webp_resized');
-const OUTPUT_DIR_1200 = path.join(OUTPUT_BASE_DIR, '1200');
+const INPUT_IMAGE_DIR = path.join(PROJECT_ROOT, 'new_photo');
+const OUTPUT_BASE_DIR = path.join(PROJECT_ROOT, 'new_photo_resized');
+const OUTPUT_DIR_1200 = path.join(OUTPUT_BASE_DIR, 'bars_1200');
 const TARGET_SIZE = 1200;
 
 console.log('🖼️  Baliciaga Image Resizer - 1200x1200 Generator');

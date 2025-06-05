@@ -4,13 +4,13 @@ const { S3Client, PutObjectCommand } = require('@aws-sdk/client-s3');
 const { getConfig } = require('../src/utils/appConfig');
 
 // Configuration Constants
-const LOCAL_NEW_BAR_PHOTO_BASE_DIR = path.resolve(__dirname, '../../new_photo');
-const MASTER_JSON_BLUEPRINT_PATH = path.join(__dirname, 'cafes-dev.json');
+const LOCAL_NEW_BAR_PHOTO_BASE_DIR = path.resolve(__dirname, '../../bars_batch2');
+const MASTER_JSON_BLUEPRINT_PATH = path.join(__dirname, 'bars-dev.json');
 const S3_BUCKET_NAME = 'baliciaga-database';
 const S3_REGION = 'ap-southeast-1';
 const S3_BAR_IMAGE_UPLOAD_PREFIX = 'bar-image-dev/';
 const CLOUDFRONT_BASE_URL = 'https://d2cmxnft4myi1k.cloudfront.net/';
-const OUTPUT_JSON_FILENAME = 'bars.json';
+const OUTPUT_JSON_FILENAME = 'bars-batch2.json';
 
 // Statistics tracking
 let stats = {

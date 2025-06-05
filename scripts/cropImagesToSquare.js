@@ -3,7 +3,7 @@ const path = require('path');
 const sharp = require('sharp');
 
 // Configuration Constants
-const INPUT_IMAGE_DIR = path.resolve(__dirname, '../../photo_webp');
+const INPUT_IMAGE_DIR = path.resolve(__dirname, '../../new_photo');
 const VALID_IMAGE_EXTENSIONS = ['.jpg', '.jpeg', '.png', '.gif', '.webp', '.bmp', '.tiff'];
 
 // Statistics tracking
@@ -152,7 +152,7 @@ async function cropImageToSquare(imagePath) {
       const tempFilePath = imagePath + '.tmp_crop' + fileExt;
       // Check if temp file exists before unlinking
       if (await fs.stat(tempFilePath).then(() => true).catch(() => false)) {
-        await fs.unlink(tempFilePath);
+      await fs.unlink(tempFilePath);
       }
     } catch (cleanupError) {
       // Ignore cleanup errors - file might not exist
@@ -200,7 +200,7 @@ async function main() {
     if (stats.totalSkippedStaticMaps > 0) {
       console.log(`📭 No processable image files found, but ${stats.totalSkippedStaticMaps} static map(s) were identified and skipped.`);
     } else {
-      console.log('📭 No image files found in the specified directory.');
+    console.log('📭 No image files found in the specified directory.');
     }
     console.log('Please check the path and ensure there are images with valid extensions (excluding static maps).');
     console.log(`Searched in: ${INPUT_IMAGE_DIR}`);

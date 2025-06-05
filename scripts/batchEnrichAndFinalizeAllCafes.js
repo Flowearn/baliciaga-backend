@@ -21,8 +21,8 @@ const appConfig = require('../src/utils/appConfig');
 const placesApiService = require('../src/api/placesApiService');
 
 // Configuration Constants
-const INPUT_JSON_PATH = path.join(__dirname, 'bars.json');
-const OUTPUT_JSON_PATH = path.join(__dirname, 'bars-dev.json');
+const INPUT_JSON_PATH = path.join(__dirname, 'bars-batch2.json');
+const OUTPUT_JSON_PATH = path.join(__dirname, 'bars-batch2-dev.json');
 const S3_BUCKET_NAME = 'baliciaga-database';
 const S3_REGION = 'ap-southeast-1';
 const S3_UPLOAD_IMAGE_PATH_PREFIX = 'bar-image-dev/';
