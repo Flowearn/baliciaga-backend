@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "name": "Tropical Nomad Coworking Space",
+    "google_maps_url": "https://maps.google.com/?q=Tropical+Nomad+Coworking+Space+Canggu"
+  },
+  {
+    "id": 2,
+    "name": "B Work Coworking Space Bali",
+    "google_maps_url": "https://maps.google.com/?q=B+Work+Coworking+Space+Bali+Canggu"
+  },
+  {
+    "id": 3,
+    "name": "Karya Co-Working",
+    "google_maps_url": "https://maps.google.com/?q=Karya+Co-Working+Canggu"
+  },
+  {
+    "id": 4,
+    "name": "Tribal Co-Working & Coliving Space",
+    "google_maps_url": "https://maps.google.com/?q=Tribal+Co-Working+Coliving+Space+Pererenan"
+  },
+  {
+    "id": 5,
+    "name": "Camp 308 – Co-working Space",
+    "google_maps_url": "https://maps.google.com/?q=Camp+308+Co-working+Space+Pererenan"
+  },
+  {
+    "id": 6,
+    "name": "SOKKOOL Coliving & Coworking",
+    "google_maps_url": "https://maps.google.com/?q=SOKKOOL+Coliving+Coworking+Canggu"
+  },
+  {
+    "id": 7,
+    "name": "Awan Connection Coworking Space",
+    "google_maps_url": "https://maps.google.com/?q=Awan+Connection+Coworking+Space+Canggu"
+  },
+  {
+    "id": 8,
+    "name": "Ducat Space",
+    "google_maps_url": "https://maps.google.com/?q=Ducat+Space+Canggu"
+  },
+  {
+    "id": 9,
+    "name": "Matra Coworking Space",
+    "google_maps_url": "https://maps.google.com/?q=Matra+Coworking+Space+Canggu"
+  },
+  {
+    "id": 10,
+    "name": "ZIN Café Bali",
+    "google_maps_url": "https://maps.google.com/?q=ZIN+Café+Bali+Canggu"
+  },
+  {
+    "id": 11,
+    "name": "MEET ME AT 06 (Former Kajan Eatery)",
+    "google_maps_url": "https://maps.google.com/?q=MEET+ME+AT+06+Canggu"
+  },
+  {
+    "id": 12,
+    "name": "PUCO Rooftop Coworking Space",
+    "google_maps_url": "https://maps.google.com/?q=PUCO+Rooftop+Coworking+Space+Canggu"
+  },
+  {
+    "id": 13,
+    "name": "Setter Coworking",
+    "google_maps_url": "https://maps.google.com/?q=Setter+Coworking+Canggu"
+  },
+  {
+    "id": 14,
+    "name": "Nebula Entrepreneur Coworking Space",
+    "google_maps_url": "https://maps.google.com/?q=Nebula+Entrepreneur+Coworking+Space+Canggu"
+  },
+  {
+    "id": 15,
+    "name": "Genesis Creative Centre",
+    "google_maps_url": "https://maps.google.com/?q=Genesis+Creative+Centre+Pererenan"
+  },
+  {
+    "id": 16,
+    "name": "KAI Cafe",
+    "google_maps_url": "https://maps.google.com/?q=KAI+Cafe+Canggu"
+  }
+]

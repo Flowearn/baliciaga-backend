@@ -46,7 +46,7 @@ functions:
           path: /places
           method: get
           cors:
-            origin: '*' # Allows all origins for local serverless-offline
+            origin: '*'
             headers:
               - Content-Type
               - X-Amz-Date
@@ -54,12 +54,12 @@ functions:
               - X-Api-Key
               - X-Amz-User-Agent
               - X-Amz-Security-Token
-            allowCredentials: false # Usually false for public APIs
+            allowCredentials: false
       - http:
           path: /places/{placeId}
           method: get
           cors:
-            origin: '*' # Allows all origins for local serverless-offline
+            origin: '*'
             headers:
               - Content-Type
               - X-Amz-Date
@@ -67,7 +67,7 @@ functions:
               - X-Api-Key
               - X-Amz-User-Agent
               - X-Amz-Security-Token
-            allowCredentials: false # Usually false for public APIs
+            allowCredentials: false
 
 plugins:
   - serverless-offline

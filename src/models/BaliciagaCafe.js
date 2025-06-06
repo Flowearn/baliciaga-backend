@@ -76,7 +76,7 @@ class BaliciagaCafe {
     this.servesVegetarianFood = newApiPlaceDetailsData.servesVegetarianFood ?? existingData.servesVegetarianFood ?? null;
 
     // Social media and delivery - non-API data, manually provided
-    this.instagramUrl = existingData.instagramUrl || existingData.instagram || '';
+    this.instagram = existingData.instagram || existingData.instagramUrl || '';
     this.gofoodUrl = existingData.gofoodUrl || '';
 
     // Table reservation - manually provided
@@ -128,7 +128,7 @@ class BaliciagaCafe {
       allowsDogs: this.allowsDogs,
       outdoorSeating: this.outdoorSeating,
       servesVegetarianFood: this.servesVegetarianFood,
-      instagramUrl: this.instagramUrl,
+      instagram: this.instagram,
       gofoodUrl: this.gofoodUrl,
       "tableUrl": this.tableUrl,
       "menuUrl": this.menuUrl
