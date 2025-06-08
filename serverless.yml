@@ -12,6 +12,13 @@ provider:
     S3_BUCKET_NAME_SSM_PATH: /baliciaga/${sls:stage}/s3BucketName
     S3_CAFE_DATA_FILE_KEY_SSM_PATH: /baliciaga/${sls:stage}/s3DataFileKeyCafe
     S3_BAR_DATA_FILE_KEY_SSM_PATH: /baliciaga/${sls:stage}/s3DataFileKeyBar
+    # DynamoDB Tables Environment Variables
+    LISTINGS_TABLE: Baliciaga-Listings-${sls:stage}
+    USERS_TABLE: Baliciaga-Users-${sls:stage}
+    APPLICATIONS_TABLE: Baliciaga-Applications-${sls:stage}
+    # AI Service Environment Variables
+    GEMINI_API_KEY_SSM_PATH: /baliciaga/${sls:stage}/geminiApiKey
+    STAGE: ${sls:stage}
   iamRoleStatements:
     - Effect: "Allow"
       Action:
@@ -29,6 +36,10 @@ provider:
         - "arn:aws:ssm:ap-southeast-1:335069051432:parameter/baliciaga/dev/s3DataFileKeyBar"
         - "arn:aws:ssm:ap-southeast-1:335069051432:parameter/baliciaga/staging/s3DataFileKeyBar"
         - "arn:aws:ssm:ap-southeast-1:335069051432:parameter/baliciaga/prod/s3DataFileKeyBar"
+        # Permissions for Gemini API Key across stages
+        - "arn:aws:ssm:ap-southeast-1:335069051432:parameter/baliciaga/dev/geminiApiKey"
+        - "arn:aws:ssm:ap-southeast-1:335069051432:parameter/baliciaga/staging/geminiApiKey"
+        - "arn:aws:ssm:ap-southeast-1:335069051432:parameter/baliciaga/prod/geminiApiKey"
     # Add S3 access permissions for reading cafe data
     - Effect: "Allow"
       Action:
@@ -36,6 +47,22 @@ provider:
       Resource:
         - "arn:aws:s3:::baliciaga-database/data/cafes.json"
         - "arn:aws:s3:::baliciaga-database/data/*"
+    # Add DynamoDB permissions for all tables
+    - Effect: "Allow"
+      Action:
+        - "dynamodb:PutItem"
+        - "dynamodb:UpdateItem"
+        - "dynamodb:GetItem"
+        - "dynamodb:Query"
+        - "dynamodb:Scan"
+        - "dynamodb:DeleteItem"
+      Resource:
+        - "arn:aws:dynamodb:ap-southeast-1:335069051432:table/Baliciaga-Listings-${sls:stage}"
+        - "arn:aws:dynamodb:ap-southeast-1:335069051432:table/Baliciaga-Listings-${sls:stage}/index/*"
+        - "arn:aws:dynamodb:ap-southeast-1:335069051432:table/Baliciaga-Users-${sls:stage}"
+        - "arn:aws:dynamodb:ap-southeast-1:335069051432:table/Baliciaga-Users-${sls:stage}/index/*"
+        - "arn:aws:dynamodb:ap-southeast-1:335069051432:table/Baliciaga-Applications-${sls:stage}"
+        - "arn:aws:dynamodb:ap-southeast-1:335069051432:table/Baliciaga-Applications-${sls:stage}/index/*"
 
 functions:
   placesApi:
@@ -69,6 +96,181 @@ functions:
               - X-Amz-Security-Token
             allowCredentials: false
 
+  # Get User Profile
+  getUserProfile:
+    handler: src/features/rentals/getUserProfile.handler
+    timeout: 30
+    events:
+      - http:
+          path: /users/me
+          method: get
+          cors: true
+          authorizer:
+            name: CognitoUserPoolAuthorizer
+            type: COGNITO_USER_POOLS
+            arn: 
+              Fn::GetAtt:
+                - CognitoUserPool
+                - Arn
+
+  # Create User Profile
+  createUserProfile:
+    handler: src/features/rentals/createUserProfile.handler
+    timeout: 30
+    events:
+      - http:
+          path: /users/profile
+          method: post
+          cors: true
+          authorizer:
+            name: CognitoUserPoolAuthorizer
+            type: COGNITO_USER_POOLS
+            arn: 
+              Fn::GetAtt:
+                - CognitoUserPool
+                - Arn
+
+  # Create Listing
+  createListing:
+    handler: src/features/rentals/createListing.handler
+    timeout: 30
+    events:
+      - http:
+          path: /listings
+          method: post
+          cors: true
+          authorizer:
+            name: CognitoUserPoolAuthorizer
+            type: COGNITO_USER_POOLS
+            arn: 
+              Fn::GetAtt:
+                - CognitoUserPool
+                - Arn
+
+  # Get Listings
+  getListings:
+    handler: src/features/rentals/getListings.handler
+    timeout: 30
+    events:
+      - http:
+          path: /listings
+          method: get
+          cors: true
+          # No authorizer - this is a public endpoint
+
+  # Get Listing Detail
+  getListingDetail:
+    handler: src/features/rentals/getListingDetail.handler
+    timeout: 30
+    events:
+      - http:
+          path: /listings/{listingId}
+          method: get
+          cors: true
+          # No authorizer - this is a public endpoint
+
+  # Create Application
+  createApplication:
+    handler: src/features/rentals/createApplication.handler
+    timeout: 30
+    events:
+      - http:
+          path: /listings/{listingId}/applications
+          method: post
+          cors: true
+          authorizer:
+            name: CognitoUserPoolAuthorizer
+            type: COGNITO_USER_POOLS
+            arn: 
+              Fn::GetAtt:
+                - CognitoUserPool
+                - Arn
+
+  # Get Applications for Listing (Owner Only)
+  getApplications:
+    handler: src/features/rentals/getApplications.handler
+    timeout: 30
+    events:
+      - http:
+          path: /listings/{listingId}/applications
+          method: get
+          cors: true
+          authorizer:
+            name: CognitoUserPoolAuthorizer
+            type: COGNITO_USER_POOLS
+            arn: 
+              Fn::GetAtt:
+                - CognitoUserPool
+                - Arn
+
+  # Get User's Own Applications
+  getUserApplications:
+    handler: src/features/rentals/getUserApplications.handler
+    timeout: 30
+    events:
+      - http:
+          path: /users/me/applications
+          method: get
+          cors: true
+          authorizer:
+            name: CognitoUserPoolAuthorizer
+            type: COGNITO_USER_POOLS
+            arn: 
+              Fn::GetAtt:
+                - CognitoUserPool
+                - Arn
+
+  # Get User's Own Listings
+  getUserListings:
+    handler: src/features/rentals/getUserListings.handler
+    timeout: 30
+    events:
+      - http:
+          path: /users/me/listings
+          method: get
+          cors: true
+          authorizer:
+            name: CognitoUserPoolAuthorizer
+            type: COGNITO_USER_POOLS
+            arn: 
+              Fn::GetAtt:
+                - CognitoUserPool
+                - Arn
+
+  # Update Application Status (Accept/Ignore)
+  updateApplication:
+    handler: src/features/rentals/updateApplication.handler
+    timeout: 30
+    events:
+      - http:
+          path: /applications/{applicationId}
+          method: put
+          cors: true
+          authorizer:
+            name: CognitoUserPoolAuthorizer
+            type: COGNITO_USER_POOLS
+            arn: 
+              Fn::GetAtt:
+                - CognitoUserPool
+                - Arn
+
+  # Analyze Listing Source with AI
+  analyzeListingSource:
+    handler: src/features/rentals/analyzeListingSource.handler
+    timeout: 60
+    events:
+      - http:
+          path: /listings/analyze-source
+          method: post
+          cors: true
+          authorizer:
+            name: CognitoUserPoolAuthorizer
+            type: COGNITO_USER_POOLS
+            arn: 
+              Fn::GetAtt:
+                - CognitoUserPool
+                - Arn
+
 plugins:
   - serverless-offline
   - serverless-dotenv-plugin
@@ -82,3 +284,185 @@ custom:
       - AWS_SECRET_ACCESS_KEY
       - AWS_SESSION_TOKEN
       - AWS_REGION
+
+resources:
+  Resources:
+    # Cognito User Pool
+    CognitoUserPool:
+      Type: AWS::Cognito::UserPool
+      Properties:
+        UserPoolName: baliciaga-user-pool-${sls:stage}
+        Schema:
+          - Name: email
+            AttributeDataType: String
+            Mutable: false
+            Required: true
+        Policies:
+          PasswordPolicy:
+            MinimumLength: 8
+            RequireUppercase: true
+            RequireLowercase: true
+            RequireNumbers: true
+            RequireSymbols: false
+        AutoVerifiedAttributes:
+          - email
+        UsernameAttributes:
+          - email
+
+    # Cognito User Pool Client
+    CognitoUserPoolClient:
+      Type: AWS::Cognito::UserPoolClient
+      Properties:
+        ClientName: baliciaga-user-pool-client-${sls:stage}
+        UserPoolId:
+          Ref: CognitoUserPool
+        ExplicitAuthFlows:
+          - ALLOW_USER_SRP_AUTH
+          - ALLOW_REFRESH_TOKEN_AUTH
+        GenerateSecret: false
+        ReadAttributes:
+          - email
+        WriteAttributes:
+          - email
+
+    # DynamoDB Listings Table
+    ListingsTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: Baliciaga-Listings-${sls:stage}
+        AttributeDefinitions:
+          - AttributeName: listingId
+            AttributeType: S
+          - AttributeName: status
+            AttributeType: S
+          - AttributeName: initiatorId
+            AttributeType: S
+          - AttributeName: createdAt
+            AttributeType: S
+        KeySchema:
+          - AttributeName: listingId
+            KeyType: HASH
+        GlobalSecondaryIndexes:
+          - IndexName: StatusIndex
+            KeySchema:
+              - AttributeName: status
+                KeyType: HASH
+              - AttributeName: createdAt
+                KeyType: RANGE
+            Projection:
+              ProjectionType: ALL
+          - IndexName: InitiatorIndex
+            KeySchema:
+              - AttributeName: initiatorId
+                KeyType: HASH
+            Projection:
+              ProjectionType: ALL
+        BillingMode: PAY_PER_REQUEST
+        PointInTimeRecoverySpecification:
+          PointInTimeRecoveryEnabled: true
+
+    # DynamoDB Users Table
+    UsersTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: Baliciaga-Users-${sls:stage}
+        AttributeDefinitions:
+          - AttributeName: userId
+            AttributeType: S
+          - AttributeName: cognitoSub
+            AttributeType: S
+        KeySchema:
+          - AttributeName: userId
+            KeyType: HASH
+        GlobalSecondaryIndexes:
+          - IndexName: CognitoSubIndex
+            KeySchema:
+              - AttributeName: cognitoSub
+                KeyType: HASH
+            Projection:
+              ProjectionType: ALL
+        BillingMode: PAY_PER_REQUEST
+        PointInTimeRecoverySpecification:
+          PointInTimeRecoveryEnabled: true
+
+    # DynamoDB Applications Table
+    ApplicationsTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: Baliciaga-Applications-${sls:stage}
+        AttributeDefinitions:
+          - AttributeName: applicationId
+            AttributeType: S
+          - AttributeName: listingId
+            AttributeType: S
+          - AttributeName: applicantId
+            AttributeType: S
+          - AttributeName: status
+            AttributeType: S
+          - AttributeName: createdAt
+            AttributeType: S
+        KeySchema:
+          - AttributeName: applicationId
+            KeyType: HASH
+        GlobalSecondaryIndexes:
+          # GSI for querying applications by listing
+          - IndexName: ListingApplicationsIndex
+            KeySchema:
+              - AttributeName: listingId
+                KeyType: HASH
+              - AttributeName: createdAt
+                KeyType: RANGE
+            Projection:
+              ProjectionType: ALL
+          # GSI for querying applications by user
+          - IndexName: UserApplicationsIndex
+            KeySchema:
+              - AttributeName: applicantId
+                KeyType: HASH
+              - AttributeName: createdAt
+                KeyType: RANGE
+            Projection:
+              ProjectionType: ALL
+          # GSI for querying applications by listing and status
+          - IndexName: ListingStatusIndex
+            KeySchema:
+              - AttributeName: listingId
+                KeyType: HASH
+              - AttributeName: status
+                KeyType: RANGE
+            Projection:
+              ProjectionType: ALL
+        BillingMode: PAY_PER_REQUEST
+        PointInTimeRecoverySpecification:
+          PointInTimeRecoveryEnabled: true
+
+  Outputs:
+    CognitoUserPoolId:
+      Value:
+        Ref: CognitoUserPool
+      Export:
+        Name: ${sls:stage}-CognitoUserPoolId
+    
+    CognitoUserPoolClientId:
+      Value:
+        Ref: CognitoUserPoolClient
+      Export:
+        Name: ${sls:stage}-CognitoUserPoolClientId
+
+    ListingsTableName:
+      Value:
+        Ref: ListingsTable
+      Export:
+        Name: ${sls:stage}-ListingsTableName
+
+    UsersTableName:
+      Value:
+        Ref: UsersTable
+      Export:
+        Name: ${sls:stage}-UsersTableName
+
+    ApplicationsTableName:
+      Value:
+        Ref: ApplicationsTable
+      Export:
+        Name: ${sls:stage}-ApplicationsTableName

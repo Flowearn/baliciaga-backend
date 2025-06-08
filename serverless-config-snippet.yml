@@ -1,0 +1,22 @@
+# Serverless.yml configuration snippet for getListingDetail function
+# Add this to the functions section of your serverless.yml
+
+functions:
+  # Get Listing Detail
+  getListingDetail:
+    handler: src/features/rentals/getListingDetail.handler
+    timeout: 30
+    events:
+      - http:
+          path: /listings/{listingId}
+          method: get
+          cors: true
+          # No authorizer - this is a public endpoint
+
+# Required environment variables (already added to main serverless.yml):
+# LISTINGS_TABLE: Baliciaga-Listings-${sls:stage}
+# USERS_TABLE: Baliciaga-Users-${sls:stage}
+# APPLICATIONS_TABLE: Baliciaga-Applications-${sls:stage}
+
+# Required IAM permissions (already added to main serverless.yml):
+# - dynamodb:GetItem, Query permissions for all three tables and their indexes 

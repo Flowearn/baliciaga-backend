@@ -2,10 +2,11 @@
  * batchEnrichAndFinalizeAllCafes.js
  * 
  * Batch processes all cafes from cafes-dev.json to:
- * 1. Fetch detailed information from Google Places API (13-field mask)
- * 2. Intelligently merge API data with existing JSON data
- * 3. Generate static maps for new cafes (4 skeleton entries)
- * 4. Output final comprehensive JSON file with all 38 cafes
+ * 1. Find missing placeIds through interactive Google Places text search
+ * 2. Fetch detailed information from Google Places API (13-field mask)
+ * 3. Intelligently merge API data with existing JSON data
+ * 4. Generate static maps for new cafes (4 skeleton entries)
+ * 5. Output final comprehensive JSON file with all 38 cafes
  * 
  * Usage: node batchEnrichAndFinalizeAllCafes.js
  */
@@ -14,6 +15,7 @@ const fs = require('fs/promises');
 const path = require('path');
 const axios = require('axios');
 const sharp = require('sharp');
+const inquirer = require('inquirer');
 const { S3Client, PutObjectCommand } = require('@aws-sdk/client-s3');
 
 // Import app configuration and API services
@@ -21,12 +23,12 @@ const appConfig = require('../src/utils/appConfig');
 const placesApiService = require('../src/api/placesApiService');
 
 // Configuration Constants
-const INPUT_JSON_PATH = path.join(__dirname, 'bars-batch2.json');
-const OUTPUT_JSON_PATH = path.join(__dirname, 'bars-batch2-dev.json');
+const INPUT_JSON_PATH = path.join(__dirname, 'cowork-dev.json');
+const OUTPUT_JSON_PATH = path.join(__dirname, 'cowork.json');
 const S3_BUCKET_NAME = 'baliciaga-database';
 const S3_REGION = 'ap-southeast-1';
-const S3_UPLOAD_IMAGE_PATH_PREFIX = 'bar-image-dev/';
-const S3_PUBLIC_URL_BASE = `https://${S3_BUCKET_NAME}.s3.${S3_REGION}.amazonaws.com/`;
+const S3_UPLOAD_IMAGE_PATH_PREFIX = 'cowork-image-dev/';
+const CDN_URL_BASE = 'https://d2cmxnft4myi1k.cloudfront.net/';
 
 // Static Map Configuration
 const STATIC_MAP_CONFIG = {
@@ -123,12 +125,12 @@ async function convertToOptimizedWebP(imageBuffer) {
 }
 
 /**
- * Uploads buffer to S3
+ * Uploads buffer to S3 and returns CDN URL
  * @param {Buffer} fileBuffer - File buffer to upload
  * @param {string} s3Key - S3 object key (path and filename)
  * @param {string} contentType - MIME type
  * @param {S3Client} s3Client - S3 client instance
- * @returns {Promise<string>} - Public S3 URL
+ * @returns {Promise<string>} - Public CDN URL
  */
 async function uploadBufferToS3(fileBuffer, s3Key, contentType, s3Client) {
   try {
@@ -142,9 +144,9 @@ async function uploadBufferToS3(fileBuffer, s3Key, contentType, s3Client) {
     console.log(`  → Uploading to S3: ${s3Key}`);
     await s3Client.send(new PutObjectCommand(params));
     
-    const s3Url = `${S3_PUBLIC_URL_BASE}${s3Key}`;
+    const finalUrl = `${CDN_URL_BASE}${s3Key}`;
     console.log(`  ✓ Uploaded successfully`);
-    return s3Url;
+    return finalUrl;
   } catch (error) {
     console.error('  ✗ Error uploading to S3:', error.message);
     throw new Error(`Failed to upload to S3: ${error.message}`);
@@ -159,7 +161,7 @@ async function uploadBufferToS3(fileBuffer, s3Key, contentType, s3Client) {
  * @param {string} placeId - Google Places ID
  * @param {string} googleApiKey - Google Maps API key
  * @param {S3Client} s3Client - S3 client instance
- * @returns {Promise<string>} - S3 URL of the uploaded static map
+ * @returns {Promise<string>} - CDN URL of the uploaded static map
  */
 async function generateAndUploadOptimizedStaticMap(latitude, longitude, sanitizedNamePart, placeId, googleApiKey, s3Client) {
   try {
@@ -171,11 +173,11 @@ async function generateAndUploadOptimizedStaticMap(latitude, longitude, sanitize
     // Step 2: Convert to optimized WebP
     const webpBuffer = await convertToOptimizedWebP(originalImageBuffer);
     
-    // Step 3: Upload to S3
+    // Step 3: Upload to S3 and get CDN URL
     const s3Key = `${S3_UPLOAD_IMAGE_PATH_PREFIX}${sanitizedNamePart}_${placeId}/${sanitizedNamePart}_static.webp`;
-    const s3Url = await uploadBufferToS3(webpBuffer, s3Key, 'image/webp', s3Client);
+    const cdnUrl = await uploadBufferToS3(webpBuffer, s3Key, 'image/webp', s3Client);
     
-    return s3Url;
+    return cdnUrl;
   } catch (error) {
     console.error(`  ✗ Failed to generate static map: ${error.message}`);
     throw error;
@@ -189,6 +191,102 @@ async function generateAndUploadOptimizedStaticMap(latitude, longitude, sanitize
  */
 function delay(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+
+
+/**
+ * Searches for places using Google Places "Text Search" API
+ * @param {string} query - Search query (cafe name + location)
+ * @param {string} googleApiKey - Google API key
+ * @returns {Promise<Array>} - Array of place candidates or empty array if none found
+ */
+async function searchPlacesFromText(query, googleApiKey) {
+  try {
+    console.log(`  → Searching Google Places for: "${query}"`);
+    
+    const url = 'https://maps.googleapis.com/maps/api/place/textsearch/json';
+    const params = {
+      query: `${query}, Bali, Indonesia`,
+      fields: 'place_id,name,formatted_address,business_status,rating',
+      key: googleApiKey
+    };
+    
+    const response = await axios.get(url, { 
+      params,
+      timeout: 10000 
+    });
+    
+    if (response.data.status === 'OK' && response.data.results && response.data.results.length > 0) {
+      // Return up to 5 candidates for user selection
+      return response.data.results.slice(0, 5);
+    } else {
+      console.log(`  ⚠️  No places found for query: "${query}"`);
+      return [];
+    }
+  } catch (error) {
+    console.error(`  ✗ Error searching for places: ${error.message}`);
+    return [];
+  }
+}
+
+/**
+ * Displays place candidates and gets user selection using inquirer
+ * @param {Array} candidates - Array of place candidates
+ * @param {string} cafeName - Original cafe name
+ * @returns {Promise<Object|null>} - Selected place or null if skipped
+ */
+async function selectPlaceFromCandidates(candidates, cafeName) {
+  if (!candidates || candidates.length === 0) {
+    return null;
+  }
+
+  console.log(`\n  📍 Found ${candidates.length} candidate place(s) for "${cafeName}"`);
+  
+  // Format candidates for inquirer
+  const formattedCandidates = candidates.map((place, index) => {
+    const address = place.formatted_address || 'N/A';
+    const rating = place.rating ? `★${place.rating}` : 'No rating';
+    const status = place.business_status || 'Unknown';
+    
+    return {
+      name: `${place.name} - ${address} (${rating}, ${status})`,
+      value: place.place_id,
+      short: place.name
+    };
+  });
+  
+  // Add skip option
+  formattedCandidates.push({
+    name: '--- SKIP THIS ONE ---',
+    value: 'skip',
+    short: 'Skip'
+  });
+  
+  const { placeId } = await inquirer.prompt([
+    {
+      type: 'list',
+      name: 'placeId',
+      message: `请为 "${cafeName}" 选择正确的商家:`,
+      choices: formattedCandidates,
+      pageSize: 10
+    }
+  ]);
+  
+  if (placeId === 'skip') {
+    console.log(`  → Skipping ${cafeName} (user choice: skip)`);
+    return null;
+  }
+  
+  // Find the selected place object
+  const selectedPlace = candidates.find(place => place.place_id === placeId);
+  if (selectedPlace) {
+    console.log(`  ✓ Selected: ${selectedPlace.name}`);
+    return selectedPlace;
+  } else {
+    console.log(`  ⚠️  Selection error, skipping ${cafeName}`);
+    return null;
+  }
 }
 
 /**
@@ -241,26 +339,67 @@ async function saveCafeData(cafeData, filePath) {
  */
 async function processSingleCafe(currentCafeData, googleApiKey, s3Client, index, total) {
   const cafeName = currentCafeData.name || 'Unknown Cafe';
-  const placeId = currentCafeData.placeId;
+  let placeId = currentCafeData.placeId;
   
   console.log(`\n[${index + 1}/${total}] Processing: ${cafeName}`);
-  console.log(`  Place ID: ${placeId}`);
+  console.log(`  Place ID: ${placeId || 'NOT SET'}`);
   
+  // Step 1: Interactive placeId finding if missing
+  if (!placeId || placeId.trim() === '') {
+    console.log(`  ⚠️  No placeId found for ${cafeName}`);
+    console.log(`  → Finding placeId for ${cafeName}...`);
+    
+    // Search for places using Text Search API
+    const placeCandidates = await searchPlacesFromText(cafeName, googleApiKey);
+    
+    if (placeCandidates.length > 0) {
+      // Let user select from candidates
+      const selectedPlace = await selectPlaceFromCandidates(placeCandidates, cafeName);
+      
+      if (selectedPlace) {
+        placeId = selectedPlace.place_id;
+        console.log(`  ✓ Using placeId: ${placeId}`);
+        
+        // Update the current cafe data with the found placeId
+        currentCafeData.placeId = placeId;
+      } else {
+        console.log(`  → Skipping ${cafeName} (no selection made)`);
+        // Ensure instagram field exists before returning
+        if (!currentCafeData.instagram) {
+          currentCafeData.instagram = '';
+        }
+        return currentCafeData; // Return original data without changes
+      }
+    } else {
+      console.log(`  ✗ No places found for "${cafeName}", skipping API enrichment`);
+      // Ensure instagram field exists before returning
+      if (!currentCafeData.instagram) {
+        currentCafeData.instagram = '';
+      }
+      return currentCafeData;
+    }
+  }
+
+  // Step 2: Proceed with existing API processing logic
   if (!placeId) {
-    console.log('  ⚠️  No placeId found, skipping API fetch');
+    console.log('  ⚠️  No placeId available, skipping API fetch');
+    // Ensure instagram field exists before returning
+    if (!currentCafeData.instagram) {
+      currentCafeData.instagram = '';
+    }
     return currentCafeData;
   }
 
   try {
-    // Step 1: Fetch API details using the 13-field mask
+    // Step 3: Fetch API details using the 13-field mask
     console.log(`  → Fetching details from Google Places API...`);
     const apiDetails = await placesApiService.getPlaceDetails(placeId);
     console.log(`  ✓ API details fetched successfully`);
     
-    // Step 2: Derive sanitized name
+    // Step 4: Derive sanitized name
     const sanitizedNamePart = sanitizeFolderName(apiDetails.displayName?.text || cafeName);
     
-    // Step 3: Start with current data and merge with API data
+    // Step 5: Start with current data and merge with API data
     let mergedCafe = { ...currentCafeData };
     
     // Update with API Data (overwrite if exists, add if new)
@@ -283,14 +422,19 @@ async function processSingleCafe(currentCafeData, googleApiKey, s3Client, index,
     // Preserve specific fields from currentCafeData (do NOT overwrite with apiDetails)
     // These fields are already set correctly and should not be modified:
     // - photos (S3 WebP links from user curation)
-    // - instagramUrl
+    // - instagram
     // - gofoodUrl  
     // - region
     // - staticMapS3Url (for existing cafes)
     
+    // Ensure instagram field exists (add empty string if missing)
+    if (!mergedCafe.instagram) {
+      mergedCafe.instagram = '';
+    }
+    
     console.log(`  → Updated with API data. Lat/Lng: ${mergedCafe.latitude}, ${mergedCafe.longitude}`);
     
-    // Step 4: Generate Static Map for New Cafes
+    // Step 6: Generate Static Map for New Cafes
     const needsStaticMap = (!mergedCafe.staticMapS3Url || mergedCafe.staticMapS3Url === "") 
                           && mergedCafe.latitude !== 0 
                           && mergedCafe.longitude !== 0;
@@ -322,6 +466,10 @@ async function processSingleCafe(currentCafeData, googleApiKey, s3Client, index,
   } catch (error) {
     console.error(`  ✗ Error processing ${cafeName}: ${error.message}`);
     console.log(`  → Returning original data for ${cafeName}`);
+    // Ensure instagram field exists before returning
+    if (!currentCafeData.instagram) {
+      currentCafeData.instagram = '';
+    }
     return currentCafeData;
   }
 }
@@ -365,14 +513,24 @@ async function main() {
     for (let i = 0; i < allCafes.length; i++) {
       const currentCafeData = allCafes[i];
       
-      // Process single cafe
-      const updatedCafe = await processSingleCafe(currentCafeData, googleApiKey, s3Client, i, allCafes.length);
-      updatedAllCafes.push(updatedCafe);
-      
-      // Add delay between API calls to respect rate limits
-      if (i < allCafes.length - 1) { // Don't delay after the last cafe
-        console.log(`  → Waiting ${API_DELAY_MS}ms before next cafe...`);
-        await delay(API_DELAY_MS);
+      try {
+        // Process single cafe
+        const updatedCafe = await processSingleCafe(currentCafeData, googleApiKey, s3Client, i, allCafes.length);
+        updatedAllCafes.push(updatedCafe);
+        
+        // Add delay between API calls to respect rate limits
+        if (i < allCafes.length - 1) { // Don't delay after the last cafe
+          console.log(`  → Waiting ${API_DELAY_MS}ms before next cafe...`);
+          await delay(API_DELAY_MS);
+        }
+      } catch (error) {
+        console.error(`\n❌ Error processing cafe ${i + 1}/${allCafes.length}: ${error.message}`);
+        console.log(`  → Adding original data for this cafe and continuing...`);
+        // Ensure instagram field exists before adding to results
+        if (!currentCafeData.instagram) {
+          currentCafeData.instagram = '';
+        }
+        updatedAllCafes.push(currentCafeData); // Add original data if processing fails
       }
     }
 
@@ -413,5 +571,7 @@ module.exports = {
   main,
   processSingleCafe,
   generateAndUploadOptimizedStaticMap,
-  sanitizeFolderName
+  sanitizeFolderName,
+  searchPlacesFromText,
+  selectPlaceFromCandidates
 }; 

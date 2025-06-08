@@ -1,0 +1,122 @@
+{
+    "Stacks": [
+        {
+            "StackId": "arn:aws:cloudformation:ap-southeast-1:335069051432:stack/baliciaga-backend-dev-rent/52447230-43be-11f0-9925-0218c78c8d95",
+            "StackName": "baliciaga-backend-dev-rent",
+            "ChangeSetId": "arn:aws:cloudformation:ap-southeast-1:335069051432:changeSet/baliciaga-backend-dev-rent-change-set/83056c75-36ca-458b-9286-fd7f9011ef9c",
+            "Description": "The AWS CloudFormation template for this Serverless application",
+            "CreationTime": "2025-06-07T16:41:55.238000+00:00",
+            "LastUpdatedTime": "2025-06-08T04:30:29.647000+00:00",
+            "RollbackConfiguration": {},
+            "StackStatus": "UPDATE_COMPLETE",
+            "DisableRollback": false,
+            "NotificationARNs": [],
+            "Capabilities": [
+                "CAPABILITY_IAM",
+                "CAPABILITY_NAMED_IAM"
+            ],
+            "Outputs": [
+                {
+                    "OutputKey": "GetApplicationsLambdaFunctionQualifiedArn",
+                    "OutputValue": "arn:aws:lambda:ap-southeast-1:335069051432:function:baliciaga-backend-dev-rent-getApplications:3",
+                    "Description": "Current Lambda function version",
+                    "ExportName": "sls-baliciaga-backend-dev-rent-GetApplicationsLambdaFunctionQualifiedArn"
+                },
+                {
+                    "OutputKey": "ListingsTableName",
+                    "OutputValue": "Baliciaga-Listings-dev-rent",
+                    "ExportName": "dev-rent-ListingsTableName"
+                },
+                {
+                    "OutputKey": "UsersTableName",
+                    "OutputValue": "Baliciaga-Users-dev-rent",
+                    "ExportName": "dev-rent-UsersTableName"
+                },
+                {
+                    "OutputKey": "CreateApplicationLambdaFunctionQualifiedArn",
+                    "OutputValue": "arn:aws:lambda:ap-southeast-1:335069051432:function:baliciaga-backend-dev-rent-createApplication:3",
+                    "Description": "Current Lambda function version",
+                    "ExportName": "sls-baliciaga-backend-dev-rent-CreateApplicationLambdaFunctionQualifiedArn"
+                },
+                {
+                    "OutputKey": "UpdateApplicationLambdaFunctionQualifiedArn",
+                    "OutputValue": "arn:aws:lambda:ap-southeast-1:335069051432:function:baliciaga-backend-dev-rent-updateApplication:3",
+                    "Description": "Current Lambda function version",
+                    "ExportName": "sls-baliciaga-backend-dev-rent-UpdateApplicationLambdaFunctionQualifiedArn"
+                },
+                {
+                    "OutputKey": "ServerlessDeploymentBucketName",
+                    "OutputValue": "baliciaga-backend-dev-ren-serverlessdeploymentbuck-tidfnowcocez",
+                    "ExportName": "sls-baliciaga-backend-dev-rent-ServerlessDeploymentBucketName"
+                },
+                {
+                    "OutputKey": "GetListingsLambdaFunctionQualifiedArn",
+                    "OutputValue": "arn:aws:lambda:ap-southeast-1:335069051432:function:baliciaga-backend-dev-rent-getListings:3",
+                    "Description": "Current Lambda function version",
+                    "ExportName": "sls-baliciaga-backend-dev-rent-GetListingsLambdaFunctionQualifiedArn"
+                },
+                {
+                    "OutputKey": "CognitoUserPoolClientId",
+                    "OutputValue": "1q1g3dq456j4jgg2iqvt15o55i",
+                    "ExportName": "dev-rent-CognitoUserPoolClientId"
+                },
+                {
+                    "OutputKey": "CognitoUserPoolId",
+                    "OutputValue": "ap-southeast-1_gaX6b4Idb",
+                    "ExportName": "dev-rent-CognitoUserPoolId"
+                },
+                {
+                    "OutputKey": "GetUserProfileLambdaFunctionQualifiedArn",
+                    "OutputValue": "arn:aws:lambda:ap-southeast-1:335069051432:function:baliciaga-backend-dev-rent-getUserProfile:3",
+                    "Description": "Current Lambda function version",
+                    "ExportName": "sls-baliciaga-backend-dev-rent-GetUserProfileLambdaFunctionQualifiedArn"
+                },
+                {
+                    "OutputKey": "ApplicationsTableName",
+                    "OutputValue": "Baliciaga-Applications-dev-rent",
+                    "ExportName": "dev-rent-ApplicationsTableName"
+                },
+                {
+                    "OutputKey": "PlacesApiLambdaFunctionQualifiedArn",
+                    "OutputValue": "arn:aws:lambda:ap-southeast-1:335069051432:function:baliciaga-backend-dev-rent-placesApi:3",
+                    "Description": "Current Lambda function version",
+                    "ExportName": "sls-baliciaga-backend-dev-rent-PlacesApiLambdaFunctionQualifiedArn"
+                },
+                {
+                    "OutputKey": "GetListingDetailLambdaFunctionQualifiedArn",
+                    "OutputValue": "arn:aws:lambda:ap-southeast-1:335069051432:function:baliciaga-backend-dev-rent-getListingDetail:3",
+                    "Description": "Current Lambda function version",
+                    "ExportName": "sls-baliciaga-backend-dev-rent-GetListingDetailLambdaFunctionQualifiedArn"
+                },
+                {
+                    "OutputKey": "GetUserApplicationsLambdaFunctionQualifiedArn",
+                    "OutputValue": "arn:aws:lambda:ap-southeast-1:335069051432:function:baliciaga-backend-dev-rent-getUserApplications:3",
+                    "Description": "Current Lambda function version",
+                    "ExportName": "sls-baliciaga-backend-dev-rent-GetUserApplicationsLambdaFunctionQualifiedArn"
+                },
+                {
+                    "OutputKey": "CreateListingLambdaFunctionQualifiedArn",
+                    "OutputValue": "arn:aws:lambda:ap-southeast-1:335069051432:function:baliciaga-backend-dev-rent-createListing:3",
+                    "Description": "Current Lambda function version",
+                    "ExportName": "sls-baliciaga-backend-dev-rent-CreateListingLambdaFunctionQualifiedArn"
+                },
+                {
+                    "OutputKey": "ServiceEndpoint",
+                    "OutputValue": "https://77z66u4qd6.execute-api.ap-southeast-1.amazonaws.com/dev-rent",
+                    "Description": "URL of the service endpoint",
+                    "ExportName": "sls-baliciaga-backend-dev-rent-ServiceEndpoint"
+                }
+            ],
+            "Tags": [
+                {
+                    "Key": "STAGE",
+                    "Value": "dev-rent"
+                }
+            ],
+            "EnableTerminationProtection": false,
+            "DriftInformation": {
+                "StackDriftStatus": "NOT_CHECKED"
+            }
+        }
+    ]
+}

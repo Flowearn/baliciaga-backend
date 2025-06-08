@@ -107,6 +107,12 @@ function calculateIsOpenNow(openingPeriods, currentTimeInBali) {
 
   // 检查每个营业时段
   for (const period of openingPeriods) {
+    // Handle 24/7 case (period has open but no close time)
+    if (period.open && !period.close) {
+      // This format signifies the business is always open.
+      return true;
+    }
+    
     // 确保period包含必要的字段
     if (!period.open || !period.close) continue;
 

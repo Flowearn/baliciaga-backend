@@ -1,0 +1,626 @@
+[
+  {
+    "name": "B Work Bali",
+    "photos": [
+      "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/b-work-bali/photo_a.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/b-work-bali/photo_b.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/b-work-bali/photo_c.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/b-work-bali/photo_d.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/b-work-bali/photo_e.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/b-work-bali/photo_f.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/b-work-bali/photo_g.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/b-work-bali/photo_h.webp"
+    ],
+    "placeId": "ChIJ6fBvIpg50i0R8764BCFFN60",
+    "latitude": -8.6540192,
+    "longitude": 115.13524659999999,
+    "googleMapsUri": "https://maps.google.com/?cid=12481520900396072691",
+    "businessStatus": "OPERATIONAL",
+    "openingHours": [
+      "Monday: Open 24 hours",
+      "Tuesday: Open 24 hours",
+      "Wednesday: Open 24 hours",
+      "Thursday: Open 24 hours",
+      "Friday: Open 24 hours",
+      "Saturday: Open 24 hours",
+      "Sunday: Open 24 hours"
+    ],
+    "openingPeriods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 0,
+          "minute": 0
+        }
+      }
+    ],
+    "isOpenNow": true,
+    "website": "https://bwork.id/",
+    "phoneNumber": "0817-797-908",
+    "rating": 4.4,
+    "userRatingsTotal": 255,
+    "allowsDogs": null,
+    "outdoorSeating": null,
+    "servesVegetarianFood": null,
+    "instagram": "https://www.instagram.com/bwork.bali/",
+    "staticMapS3Url": "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/b-work-bali_ChIJ6fBvIpg50i0R8764BCFFN60/b-work-bali_static.webp"
+  },
+  {
+    "name": "Ducat Space",
+    "photos": [
+      "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/ducat-space/photo_a.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/ducat-space/photo_b.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/ducat-space/photo_c.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/ducat-space/photo_d.webp"
+    ],
+    "placeId": "ChIJCd9etMVH0i0RNkfYsSkhmZg",
+    "latitude": -8.6660138,
+    "longitude": 115.14457150000001,
+    "googleMapsUri": "https://maps.google.com/?cid=10995856428162893622",
+    "businessStatus": "OPERATIONAL",
+    "openingHours": [
+      "Monday: 8:00 AM – 9:00 PM",
+      "Tuesday: 8:00 AM – 9:00 PM",
+      "Wednesday: 8:00 AM – 9:00 PM",
+      "Thursday: 8:00 AM – 9:00 PM",
+      "Friday: 8:00 AM – 9:00 PM",
+      "Saturday: 8:00 AM – 9:00 PM",
+      "Sunday: 8:00 AM – 9:00 PM"
+    ],
+    "openingPeriods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 8,
+          "minute": 0
+        },
+        "close": {
+          "day": 0,
+          "hour": 21,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 1,
+          "hour": 8,
+          "minute": 0
+        },
+        "close": {
+          "day": 1,
+          "hour": 21,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 8,
+          "minute": 0
+        },
+        "close": {
+          "day": 2,
+          "hour": 21,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 8,
+          "minute": 0
+        },
+        "close": {
+          "day": 3,
+          "hour": 21,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 8,
+          "minute": 0
+        },
+        "close": {
+          "day": 4,
+          "hour": 21,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 8,
+          "minute": 0
+        },
+        "close": {
+          "day": 5,
+          "hour": 21,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 8,
+          "minute": 0
+        },
+        "close": {
+          "day": 6,
+          "hour": 21,
+          "minute": 0
+        }
+      }
+    ],
+    "isOpenNow": true,
+    "website": "http://ducatspace.com/",
+    "phoneNumber": "0812-4453-3959",
+    "rating": 4.8,
+    "userRatingsTotal": 62,
+    "allowsDogs": null,
+    "outdoorSeating": null,
+    "servesVegetarianFood": null,
+    "instagram": "https://www.instagram.com/ducatspace/",
+    "staticMapS3Url": "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/ducat-space-cafe-offices-co-working-meeting-rooms_ChIJCd9etMVH0i0RNkfYsSkhmZg/ducat-space-cafe-offices-co-working-meeting-rooms_static.webp"
+  },
+  {
+    "name": "Genesis Creative Centre",
+    "photos": [
+      "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/genesis-creative-centre/photo_a.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/genesis-creative-centre/photo_b.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/genesis-creative-centre/photo_c.webp"
+    ],
+    "placeId": "ChIJSW0wnj9H0i0RBi6QO_C6M_o",
+    "latitude": -8.6498325,
+    "longitude": 115.12716470000001,
+    "googleMapsUri": "https://maps.google.com/?cid=18028959274248449542",
+    "businessStatus": "OPERATIONAL",
+    "openingHours": [
+      "Monday: 9:00 AM – 7:00 PM",
+      "Tuesday: 9:00 AM – 7:00 PM",
+      "Wednesday: 9:00 AM – 7:00 PM",
+      "Thursday: 9:00 AM – 7:00 PM",
+      "Friday: 9:00 AM – 7:00 PM",
+      "Saturday: 9:00 AM – 7:00 PM",
+      "Sunday: Closed"
+    ],
+    "openingPeriods": [
+      {
+        "open": {
+          "day": 1,
+          "hour": 9,
+          "minute": 0
+        },
+        "close": {
+          "day": 1,
+          "hour": 19,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 9,
+          "minute": 0
+        },
+        "close": {
+          "day": 2,
+          "hour": 19,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 9,
+          "minute": 0
+        },
+        "close": {
+          "day": 3,
+          "hour": 19,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 9,
+          "minute": 0
+        },
+        "close": {
+          "day": 4,
+          "hour": 19,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 9,
+          "minute": 0
+        },
+        "close": {
+          "day": 5,
+          "hour": 19,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 9,
+          "minute": 0
+        },
+        "close": {
+          "day": 6,
+          "hour": 19,
+          "minute": 0
+        }
+      }
+    ],
+    "isOpenNow": false,
+    "website": "http://www.inspireatgenesis.com/",
+    "phoneNumber": "0823-4092-2478",
+    "rating": 4.7,
+    "userRatingsTotal": 226,
+    "allowsDogs": null,
+    "outdoorSeating": null,
+    "servesVegetarianFood": null,
+    "instagram": "https://www.instagram.com/inspireatgenesis/",
+    "staticMapS3Url": "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/genesis-creative-centre_ChIJSW0wnj9H0i0RBi6QO_C6M_o/genesis-creative-centre_static.webp"
+  },
+  {
+    "name": "Karya Co-working Bali",
+    "photos": [
+      "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/karya-coworking-bali/photo_a.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/karya-coworking-bali/photo_b.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/karya-coworking-bali/photo_c.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/karya-coworking-bali/photo_d.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/karya-coworking-bali/photo_e.webp"
+    ],
+    "placeId": "ChIJQeo_7VxH0i0RmnzEcibuEb8",
+    "latitude": -8.660628899999999,
+    "longitude": 115.1443377,
+    "googleMapsUri": "https://maps.google.com/?cid=13768047384749964442",
+    "businessStatus": "OPERATIONAL",
+    "openingHours": [
+      "Monday: Open 24 hours",
+      "Tuesday: Open 24 hours",
+      "Wednesday: Open 24 hours",
+      "Thursday: Open 24 hours",
+      "Friday: Open 24 hours",
+      "Saturday: Open 24 hours",
+      "Sunday: Open 24 hours"
+    ],
+    "openingPeriods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 0,
+          "minute": 0
+        }
+      }
+    ],
+    "isOpenNow": true,
+    "website": "http://karyacoworking.com/",
+    "phoneNumber": "0819-9955-5558",
+    "rating": 4.9,
+    "userRatingsTotal": 93,
+    "allowsDogs": null,
+    "outdoorSeating": null,
+    "servesVegetarianFood": null,
+    "instagram": "https://www.instagram.com/karyacoworking/",
+    "staticMapS3Url": "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/karya-co-working-bali_ChIJQeo_7VxH0i0RmnzEcibuEb8/karya-co-working-bali_static.webp"
+  },
+  {
+    "name": "Nebula Entrepreneur Coworking Space",
+    "photos": [
+      "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/nebula-entrepreneur-coworking-space/photo_a.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/nebula-entrepreneur-coworking-space/photo_b.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/nebula-entrepreneur-coworking-space/photo_c.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/nebula-entrepreneur-coworking-space/photo_d.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/nebula-entrepreneur-coworking-space/photo_e.webp"
+    ],
+    "placeId": "ChIJY1RJ9Zs50i0R5x8HN0qZa9g",
+    "latitude": -8.6459554,
+    "longitude": 115.1526833,
+    "googleMapsUri": "https://maps.google.com/?cid=15594726678730317799",
+    "businessStatus": "OPERATIONAL",
+    "openingHours": [
+      "Monday: 9:00 AM – 5:00 PM",
+      "Tuesday: 9:00 AM – 5:00 PM",
+      "Wednesday: 9:00 AM – 5:00 PM",
+      "Thursday: 9:00 AM – 5:00 PM",
+      "Friday: 9:00 AM – 5:00 PM",
+      "Saturday: Closed",
+      "Sunday: Closed"
+    ],
+    "openingPeriods": [
+      {
+        "open": {
+          "day": 1,
+          "hour": 9,
+          "minute": 0
+        },
+        "close": {
+          "day": 1,
+          "hour": 17,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 9,
+          "minute": 0
+        },
+        "close": {
+          "day": 2,
+          "hour": 17,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 9,
+          "minute": 0
+        },
+        "close": {
+          "day": 3,
+          "hour": 17,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 9,
+          "minute": 0
+        },
+        "close": {
+          "day": 4,
+          "hour": 17,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 9,
+          "minute": 0
+        },
+        "close": {
+          "day": 5,
+          "hour": 17,
+          "minute": 0
+        }
+      }
+    ],
+    "isOpenNow": false,
+    "website": "https://nebula.training/",
+    "phoneNumber": "0877-9065-8914",
+    "rating": 5,
+    "userRatingsTotal": 280,
+    "allowsDogs": null,
+    "outdoorSeating": null,
+    "servesVegetarianFood": null,
+    "instagram": "https://www.instagram.com/nebulabali/",
+    "staticMapS3Url": "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/nebula-entrepreneur-coworking-space_ChIJY1RJ9Zs50i0R5x8HN0qZa9g/nebula-entrepreneur-coworking-space_static.webp"
+  },
+  {
+    "name": "PUCO Rooftop Coworking space & Eatery",
+    "photos": [
+      "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/puco-rooftop-coworking-space-eatery/photo_a.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/puco-rooftop-coworking-space-eatery/photo_b.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/puco-rooftop-coworking-space-eatery/photo_c.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/puco-rooftop-coworking-space-eatery/photo_d.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/puco-rooftop-coworking-space-eatery/photo_e.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/puco-rooftop-coworking-space-eatery/photo_f.webp"
+    ],
+    "placeId": "ChIJOy4VgxU50i0R8mawVCoFiRw",
+    "latitude": -8.638991899999999,
+    "longitude": 115.15127280000002,
+    "googleMapsUri": "https://maps.google.com/?cid=2056180384238954226",
+    "businessStatus": "OPERATIONAL",
+    "openingHours": [
+      "Monday: 8:00 AM – 12:00 AM",
+      "Tuesday: 8:00 AM – 12:00 AM",
+      "Wednesday: 8:00 AM – 12:00 AM",
+      "Thursday: 8:00 AM – 12:00 AM",
+      "Friday: 8:00 AM – 12:00 AM",
+      "Saturday: 8:00 AM – 10:30 PM",
+      "Sunday: 8:00 AM – 10:30 PM"
+    ],
+    "openingPeriods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 8,
+          "minute": 0
+        },
+        "close": {
+          "day": 0,
+          "hour": 22,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 1,
+          "hour": 8,
+          "minute": 0
+        },
+        "close": {
+          "day": 2,
+          "hour": 0,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 8,
+          "minute": 0
+        },
+        "close": {
+          "day": 3,
+          "hour": 0,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 8,
+          "minute": 0
+        },
+        "close": {
+          "day": 4,
+          "hour": 0,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 8,
+          "minute": 0
+        },
+        "close": {
+          "day": 5,
+          "hour": 0,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 8,
+          "minute": 0
+        },
+        "close": {
+          "day": 6,
+          "hour": 0,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 8,
+          "minute": 0
+        },
+        "close": {
+          "day": 6,
+          "hour": 22,
+          "minute": 30
+        }
+      }
+    ],
+    "isOpenNow": true,
+    "website": "http://pucorooftop.com/",
+    "phoneNumber": "0851-7108-8861",
+    "rating": 4.8,
+    "userRatingsTotal": 356,
+    "allowsDogs": null,
+    "outdoorSeating": null,
+    "servesVegetarianFood": null,
+    "instagram": "https://www.instagram.com/pucorooftop/",
+    "staticMapS3Url": "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/puco-rooftop-coworking-space-eatery_ChIJOy4VgxU50i0R8mawVCoFiRw/puco-rooftop-coworking-space-eatery_static.webp"
+  },
+  {
+    "name": "SETTER Coworking & Private Offices",
+    "photos": [
+      "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/setter-coworking-private-offices/photo_a.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/setter-coworking-private-offices/photo_b.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/setter-coworking-private-offices/photo_c.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/setter-coworking-private-offices/photo_d.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/setter-coworking-private-offices/photo_e.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/setter-coworking-private-offices/photo_f.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/setter-coworking-private-offices/photo_g.webp"
+    ],
+    "placeId": "ChIJc5xIUklH0i0R-2R5iW_1nx0",
+    "latitude": -8.6582176,
+    "longitude": 115.1401615,
+    "googleMapsUri": "https://maps.google.com/?cid=2134694607793513723",
+    "businessStatus": "OPERATIONAL",
+    "openingHours": [
+      "Monday: Open 24 hours",
+      "Tuesday: Open 24 hours",
+      "Wednesday: Open 24 hours",
+      "Thursday: Open 24 hours",
+      "Friday: Open 24 hours",
+      "Saturday: Open 24 hours",
+      "Sunday: Open 24 hours"
+    ],
+    "openingPeriods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 0,
+          "minute": 0
+        }
+      }
+    ],
+    "isOpenNow": true,
+    "website": "https://www.setter.work/",
+    "phoneNumber": "0888-8323-888",
+    "rating": 4.9,
+    "userRatingsTotal": 154,
+    "allowsDogs": null,
+    "outdoorSeating": null,
+    "servesVegetarianFood": null,
+    "instagram": "https://www.instagram.com/setterbali/",
+    "staticMapS3Url": "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/setter-coworking-private-offices_ChIJc5xIUklH0i0R-2R5iW_1nx0/setter-coworking-private-offices_static.webp"
+  },
+  {
+    "name": "Tropical Nomad Coworking Space",
+    "photos": [
+      "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/tropical-nomad-coworking-space/photo_a.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/tropical-nomad-coworking-space/photo_b.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/tropical-nomad-coworking-space/photo_c.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/tropical-nomad-coworking-space/photo_d.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/tropical-nomad-coworking-space/photo_e.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/tropical-nomad-coworking-space/photo_f.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/tropical-nomad-coworking-space/photo_g.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/tropical-nomad-coworking-space/photo_h.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/tropical-nomad-coworking-space/photo_i.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/tropical-nomad-coworking-space/photo_j.webp"
+    ],
+    "placeId": "ChIJvf4Cf7pF0i0RGVMhsUCiNBY",
+    "latitude": -8.6526692,
+    "longitude": 115.13802729999999,
+    "googleMapsUri": "https://maps.google.com/?cid=1600082166356726553",
+    "businessStatus": "OPERATIONAL",
+    "openingHours": [
+      "Monday: Open 24 hours",
+      "Tuesday: Open 24 hours",
+      "Wednesday: Open 24 hours",
+      "Thursday: Open 24 hours",
+      "Friday: Open 24 hours",
+      "Saturday: Open 24 hours",
+      "Sunday: Open 24 hours"
+    ],
+    "openingPeriods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 0,
+          "minute": 0
+        }
+      }
+    ],
+    "isOpenNow": true,
+    "website": "https://tropical-nomad-coworking-space.webflow.io/",
+    "phoneNumber": "0812-4692-6929",
+    "rating": 4.4,
+    "userRatingsTotal": 320,
+    "allowsDogs": null,
+    "outdoorSeating": null,
+    "servesVegetarianFood": null,
+    "instagram": "https://www.instagram.com/tropicalnomadcanggu/",
+    "staticMapS3Url": "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/tropical-nomad-coworking-space_ChIJvf4Cf7pF0i0RGVMhsUCiNBY/tropical-nomad-coworking-space_static.webp"
+  }
+]
