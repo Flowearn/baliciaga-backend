@@ -342,13 +342,16 @@ exports.handler = async (event) => {
 
         // 8. Build Response
         const response = {
-            applicationId: updatedApplication.applicationId,
-            listingId: updatedApplication.listingId,
-            applicantId: updatedApplication.applicantId,
-            status: updatedApplication.status,
-            applicationMessage: updatedApplication.applicationMessage || null,
-            createdAt: updatedApplication.createdAt,
-            updatedAt: updatedApplication.updatedAt
+            success: true,
+            data: {
+                applicationId: updatedApplication.applicationId,
+                listingId: updatedApplication.listingId,
+                applicantId: updatedApplication.applicantId,
+                status: updatedApplication.status,
+                applicationMessage: updatedApplication.applicationMessage || null,
+                createdAt: updatedApplication.createdAt,
+                updatedAt: updatedApplication.updatedAt
+            }
         };
 
         console.log(`Successfully updated application ${applicationId} to status: ${newStatus}`);
@@ -378,4 +381,3 @@ exports.handler = async (event) => {
             })
         };
     }
-}; 

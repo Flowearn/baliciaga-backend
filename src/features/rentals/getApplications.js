@@ -346,16 +346,19 @@ exports.handler = async (event) => {
 
         // 7. Build Response
         const response = {
-            listingId: listingId,
-            applications: enrichedApplications,
-            pagination: {
-                total: enrichedApplications.length,
-                limit: limit,
-                hasMore: nextCursor !== null,
-                nextCursor: nextCursor
-            },
-            filters: {
-                status: statusFilter || null
+            success: true,
+            data: {
+                listingId: listingId,
+                applications: enrichedApplications,
+                pagination: {
+                    total: enrichedApplications.length,
+                    limit: limit,
+                    hasMore: nextCursor !== null,
+                    nextCursor: nextCursor
+                },
+                filters: {
+                    status: statusFilter || null
+                }
             }
         };
 
@@ -386,4 +389,3 @@ exports.handler = async (event) => {
             })
         };
     }
-}; 

@@ -1,0 +1,25 @@
+{
+    "UserPoolClient": {
+        "UserPoolId": "us-east-1_aztxVFCyl",
+        "ClientName": "baliciaga-test-client-dev",
+        "ClientId": "18ht6t8rb9f8ogpps1t9g9io4h",
+        "LastModifiedDate": "2025-06-10T15:34:15.927000+08:00",
+        "CreationDate": "2025-06-10T15:34:15.927000+08:00",
+        "RefreshTokenValidity": 30,
+        "TokenValidityUnits": {},
+        "ReadAttributes": [
+            "email"
+        ],
+        "WriteAttributes": [
+            "email"
+        ],
+        "ExplicitAuthFlows": [
+            "ALLOW_CUSTOM_AUTH",
+            "ALLOW_REFRESH_TOKEN_AUTH"
+        ],
+        "AllowedOAuthFlowsUserPoolClient": false,
+        "EnableTokenRevocation": true,
+        "EnablePropagateAdditionalUserContextData": false,
+        "AuthSessionValidity": 3
+    }
+}

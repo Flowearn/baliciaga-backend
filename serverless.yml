@@ -63,6 +63,14 @@ provider:
         - "arn:aws:dynamodb:ap-southeast-1:335069051432:table/Baliciaga-Users-${sls:stage}/index/*"
         - "arn:aws:dynamodb:ap-southeast-1:335069051432:table/Baliciaga-Applications-${sls:stage}"
         - "arn:aws:dynamodb:ap-southeast-1:335069051432:table/Baliciaga-Applications-${sls:stage}/index/*"
+        - "arn:aws:dynamodb:ap-southeast-1:335069051432:table/baliciaga-verification-codes-${sls:stage}"
+    # 🔧 权限给认证触发器Lambda函数使用SES发送邮件和SNS发送短信
+    - Effect: "Allow"
+      Action:
+        - "ses:SendEmail"
+        - "ses:SendRawEmail"
+        - "sns:Publish"
+      Resource: "*"
 
 functions:
   placesApi:
@@ -155,8 +163,28 @@ functions:
       - http:
           path: /listings
           method: get
-          cors: true
+          cors:
+            origin: '*'
+            headers:
+              - Content-Type
+              - X-Amz-Date
+              - Authorization
+              - X-Api-Key
+              - X-Amz-Security-Token
+            allowCredentials: false
           # No authorizer - this is a public endpoint
+      - http:
+          path: /listings
+          method: options
+          cors:
+            origin: '*'
+            headers:
+              - Content-Type
+              - X-Amz-Date
+              - Authorization
+              - X-Api-Key
+              - X-Amz-Security-Token
+            allowCredentials: false
 
   # Get Listing Detail
   getListingDetail:
@@ -271,6 +299,19 @@ functions:
                 - CognitoUserPool
                 - Arn
 
+  # 🔧 无密码认证触发器 - Auth Triggers
+  DefineAuthChallenge:
+    handler: src/features/auth/defineChallenge.handler
+    timeout: 30
+
+  CreateAuthChallenge:
+    handler: src/features/auth/createChallenge.handler
+    timeout: 30
+
+  VerifyAuthChallengeResponse:
+    handler: src/features/auth/verifyChallenge.handler
+    timeout: 30
+
 plugins:
   - serverless-offline
   - serverless-dotenv-plugin
@@ -287,43 +328,62 @@ custom:
 
 resources:
   Resources:
-    # Cognito User Pool
+    # Cognito User Pool - 无密码认证配置
     CognitoUserPool:
       Type: AWS::Cognito::UserPool
       Properties:
-        UserPoolName: baliciaga-user-pool-${sls:stage}
+        UserPoolName: baliciaga-user-pool-passwordless-${sls:stage}
         Schema:
           - Name: email
             AttributeDataType: String
             Mutable: false
             Required: true
-        Policies:
-          PasswordPolicy:
-            MinimumLength: 8
-            RequireUppercase: true
-            RequireLowercase: true
-            RequireNumbers: true
-            RequireSymbols: false
-        AutoVerifiedAttributes:
-          - email
+          - Name: phone_number
+            AttributeDataType: String
+            Mutable: true
+            Required: false
+        # 🔧 明确禁用MFA以避免双重验证码
+        MfaConfiguration: "OFF"
+        # 🔧 使用邮箱作为用户名
         UsernameAttributes:
           - email
+        # 🔧 支持邮箱验证
+        AutoVerifiedAttributes:
+          - email
+        # 🔧 添加验证消息模板，确保一致的验证体验
+        VerificationMessageTemplate:
+          DefaultEmailOption: CONFIRM_WITH_CODE
+          EmailMessage: "您的验证码是 {####}"
+          EmailSubject: "Baliciaga 验证码"
+        # 🔧 自定义认证流程的Lambda触发器配置
+        LambdaConfig:
+          DefineAuthChallenge: !GetAtt DefineAuthChallengeLambdaFunction.Arn
+          CreateAuthChallenge: !GetAtt CreateAuthChallengeLambdaFunction.Arn
+          VerifyAuthChallengeResponse: !GetAtt VerifyAuthChallengeResponseLambdaFunction.Arn
+        # 🔧 允许用户自行注册（禁用高级安全功能以符合ESSENTIALS价格层）
+        AdminCreateUserConfig:
+          AllowAdminCreateUserOnly: false
 
-    # Cognito User Pool Client
+    # Cognito User Pool Client - 支持自定义认证流程
     CognitoUserPoolClient:
       Type: AWS::Cognito::UserPoolClient
       Properties:
-        ClientName: baliciaga-user-pool-client-${sls:stage}
+        ClientName: baliciaga-user-pool-client-passwordless-${sls:stage}
         UserPoolId:
           Ref: CognitoUserPool
+        # 🔧 启用自定义认证流程（无密码认证）和标准密码认证
         ExplicitAuthFlows:
-          - ALLOW_USER_SRP_AUTH
-          - ALLOW_REFRESH_TOKEN_AUTH
+          - ALLOW_CUSTOM_AUTH        # 允许自定义认证流程
+          - ALLOW_REFRESH_TOKEN_AUTH # 用于token刷新
+          - ALLOW_USER_SRP_AUTH      # 允许标准SRP密码认证
         GenerateSecret: false
+        # 🔧 支持邮箱读写
         ReadAttributes:
           - email
         WriteAttributes:
           - email
+        # 🔧 禁用不必要的挑战，避免额外的验证步骤
+        PreventUserExistenceErrors: ENABLED
 
     # DynamoDB Listings Table
     ListingsTable:
@@ -436,6 +496,48 @@ resources:
         PointInTimeRecoverySpecification:
           PointInTimeRecoveryEnabled: true
 
+    # DynamoDB Verification Codes Table - 🔧 用于存储和查询验证码，支持自动化测试
+    VerificationCodesTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: baliciaga-verification-codes-${sls:stage}
+        AttributeDefinitions:
+          - AttributeName: email
+            AttributeType: S
+        KeySchema:
+          - AttributeName: email
+            KeyType: HASH
+        BillingMode: PAY_PER_REQUEST
+        # 设置TTL，验证码5分钟后自动过期
+        TimeToLiveSpecification:
+          AttributeName: ttl
+          Enabled: true
+
+    # 🔧 Lambda权限资源 - 允许Cognito调用认证触发器
+    DefineAuthChallengeInvocationPermission:
+      Type: AWS::Lambda::Permission
+      Properties:
+        Action: lambda:InvokeFunction
+        FunctionName: !GetAtt DefineAuthChallengeLambdaFunction.Arn
+        Principal: cognito-idp.amazonaws.com
+        SourceArn: !GetAtt CognitoUserPool.Arn
+
+    CreateAuthChallengeInvocationPermission:
+      Type: AWS::Lambda::Permission
+      Properties:
+        Action: lambda:InvokeFunction
+        FunctionName: !GetAtt CreateAuthChallengeLambdaFunction.Arn
+        Principal: cognito-idp.amazonaws.com
+        SourceArn: !GetAtt CognitoUserPool.Arn
+
+    VerifyAuthChallengeInvocationPermission:
+      Type: AWS::Lambda::Permission
+      Properties:
+        Action: lambda:InvokeFunction
+        FunctionName: !GetAtt VerifyAuthChallengeResponseLambdaFunction.Arn
+        Principal: cognito-idp.amazonaws.com
+        SourceArn: !GetAtt CognitoUserPool.Arn
+
   Outputs:
     CognitoUserPoolId:
       Value:
@@ -466,3 +568,10 @@ resources:
         Ref: ApplicationsTable
       Export:
         Name: ${sls:stage}-ApplicationsTableName
+
+    VerificationCodesTableName:
+      Value:
+        Ref: VerificationCodesTable
+      Export:
+        Name: ${sls:stage}-VerificationCodesTableName
+
