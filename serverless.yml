@@ -18,6 +18,8 @@ provider:
     APPLICATIONS_TABLE: Baliciaga-Applications-${sls:stage}
     # AI Service Environment Variables
     GEMINI_API_KEY_SSM_PATH: /baliciaga/${sls:stage}/geminiApiKey
+    # Profile Pictures S3 Bucket
+    PROFILE_PICTURES_BUCKET_NAME: baliciaga-profile-pictures-${sls:stage}
     STAGE: ${sls:stage}
   iamRoleStatements:
     - Effect: "Allow"
@@ -64,6 +66,16 @@ provider:
         - "arn:aws:dynamodb:ap-southeast-1:335069051432:table/Baliciaga-Applications-${sls:stage}"
         - "arn:aws:dynamodb:ap-southeast-1:335069051432:table/Baliciaga-Applications-${sls:stage}/index/*"
         - "arn:aws:dynamodb:ap-southeast-1:335069051432:table/baliciaga-verification-codes-${sls:stage}"
+    # Add S3 permissions for listing images upload
+    - Effect: "Allow"
+      Action:
+        - "s3:PutObject"
+      Resource: "arn:aws:s3:::baliciaga-listing-images-${sls:stage}/*"
+    # Add S3 permissions for profile pictures upload
+    - Effect: "Allow"
+      Action:
+        - "s3:PutObject"
+      Resource: "arn:aws:s3:::baliciaga-profile-pictures-${sls:stage}/*"
     # 🔧 权限给认证触发器Lambda函数使用SES发送邮件和SNS发送短信
     - Effect: "Allow"
       Action:
@@ -282,6 +294,23 @@ functions:
                 - CognitoUserPool
                 - Arn
 
+  # Cancel Application (User cancels their own application)
+  cancelApplication:
+    handler: src/handlers/applications/cancelApplication.handler
+    timeout: 30
+    events:
+      - http:
+          path: /applications/{applicationId}/cancel
+          method: patch
+          cors: true
+          authorizer:
+            name: CognitoUserPoolAuthorizer
+            type: COGNITO_USER_POOLS
+            arn: 
+              Fn::GetAtt:
+                - CognitoUserPool
+                - Arn
+
   # Analyze Listing Source with AI
   analyzeListingSource:
     handler: src/features/rentals/analyzeListingSource.handler
@@ -299,6 +328,102 @@ functions:
                 - CognitoUserPool
                 - Arn
 
+  # Get Upload URL for Images
+  getUploadUrl:
+    handler: src/features/rentals/getUploadUrl.handler
+    timeout: 30
+    events:
+      - http:
+          path: /listings/upload-url
+          method: post
+          cors: true
+          authorizer:
+            name: CognitoUserPoolAuthorizer
+            type: COGNITO_USER_POOLS
+            arn: 
+              Fn::GetAtt:
+                - CognitoUserPool
+                - Arn
+
+  # Get Upload URL for Profile Pictures
+  getProfilePictureUploadUrl:
+    handler: src/features/users/getProfilePictureUploadUrl.handler
+    timeout: 30
+    events:
+      - http:
+          path: /users/me/avatar-upload-url
+          method: post
+          cors: true
+          authorizer:
+            name: CognitoUserPoolAuthorizer
+            type: COGNITO_USER_POOLS
+            arn: 
+              Fn::GetAtt:
+                - CognitoUserPool
+                - Arn
+
+  # Update Listing
+  updateListing:
+    handler: src/features/rentals/updateListing.handler
+    timeout: 30
+    events:
+      - http:
+          path: /listings/{listingId}
+          method: put
+          cors: true
+          authorizer:
+            name: CognitoUserPoolAuthorizer
+            type: COGNITO_USER_POOLS
+            arn: 
+              Fn::GetAtt:
+                - CognitoUserPool
+                - Arn
+
+  # Finalize Listing (Complete Deal)
+  finalizeListing:
+    handler: src/features/rentals/finalizeListing.handler
+    timeout: 30
+    events:
+      - http:
+          path: /listings/{listingId}/finalize
+          method: patch
+          cors: true
+          authorizer:
+            name: CognitoUserPoolAuthorizer
+            type: COGNITO_USER_POOLS
+            arn: 
+              Fn::GetAtt:
+                - CognitoUserPool
+                - Arn
+
+  # Cancel Listing (Mid-way Cancellation)
+  cancelListing:
+    handler: src/features/rentals/cancelListing.handler
+    timeout: 30
+    events:
+      - http:
+          path: /listings/{listingId}/cancel
+          method: patch
+          cors: true
+          authorizer:
+            name: CognitoUserPoolAuthorizer
+            type: COGNITO_USER_POOLS
+            arn: 
+              Fn::GetAtt:
+                - CognitoUserPool
+                - Arn
+
+  # Increment View Count
+  incrementViewCount:
+    handler: src/features/rentals/incrementViewCount.handler
+    timeout: 30
+    events:
+      - http:
+          path: /listings/{listingId}/view
+          method: post
+          cors: true
+          # No authorizer - this is a public endpoint for tracking views
+
   # 🔧 无密码认证触发器 - Auth Triggers
   DefineAuthChallenge:
     handler: src/features/auth/defineChallenge.handler
@@ -315,10 +440,20 @@ functions:
 plugins:
   - serverless-offline
   - serverless-dotenv-plugin
+  - serverless-dynamodb
 
 custom:
   serverless-offline:
     httpPort: 3006 
+  dynamodb:
+    stages:
+      - dev
+    start:
+      port: 8000
+      inMemory: true
+      migrate: true
+      noStart: true
+      javaPath: /opt/homebrew/opt/openjdk@17/bin/java
   dotenv:
     exclude:
       - AWS_ACCESS_KEY_ID
@@ -538,6 +673,47 @@ resources:
         Principal: cognito-idp.amazonaws.com
         SourceArn: !GetAtt CognitoUserPool.Arn
 
+    # S3 Bucket for Listing Images
+    ListingImagesBucket:
+      Type: AWS::S3::Bucket
+      Properties:
+        BucketName: baliciaga-listing-images-${sls:stage}
+        CorsConfiguration:
+          CorsRules:
+            - AllowedOrigins:
+                - '*' # 在生产环境中应替换为你的前端域名
+              AllowedHeaders:
+                - '*'
+              AllowedMethods:
+                - PUT
+
+    # S3 Bucket for Profile Pictures
+    ProfilePicturesBucket:
+      Type: AWS::S3::Bucket
+      Properties:
+        BucketName: baliciaga-profile-pictures-${sls:stage}
+        CorsConfiguration:
+          CorsRules:
+            - AllowedOrigins:
+                - '*' # 在生产环境中应替换为你的前端域名
+              AllowedHeaders:
+                - '*'
+              AllowedMethods:
+                - PUT
+                - GET
+
+    # S3 Bucket Policy for Profile Pictures - Allow public read access
+    ProfilePicturesBucketPolicy:
+      Type: AWS::S3::BucketPolicy
+      Properties:
+        Bucket: !Ref ProfilePicturesBucket
+        PolicyDocument:
+          Statement:
+            - Effect: Allow
+              Principal: '*'
+              Action: s3:GetObject
+              Resource: !Sub '${ProfilePicturesBucket}/*'
+
   Outputs:
     CognitoUserPoolId:
       Value:
@@ -574,4 +750,16 @@ resources:
         Ref: VerificationCodesTable
       Export:
         Name: ${sls:stage}-VerificationCodesTableName
+
+    ListingImagesBucketName:
+      Value:
+        Ref: ListingImagesBucket
+      Export:
+        Name: ${sls:stage}-ListingImagesBucketName
+
+    ProfilePicturesBucketName:
+      Value:
+        Ref: ProfilePicturesBucket
+      Export:
+        Name: ${sls:stage}-ProfilePicturesBucketName
 

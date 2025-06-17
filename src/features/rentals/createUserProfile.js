@@ -10,13 +10,9 @@
  * - CORS support
  */
 
-const AWS = require('aws-sdk');
 const { v4: uuidv4 } = require('uuid');
-
-// Initialize DynamoDB
-const dynamodb = new AWS.DynamoDB.DocumentClient({
-    region: process.env.AWS_REGION || 'ap-southeast-1'
-});
+const dynamodb = require('../../utils/dynamoDbClient');
+const { getAuthenticatedUser } = require('../../utils/authUtils');
 
 const USERS_TABLE = process.env.USERS_TABLE;
 
@@ -93,8 +89,8 @@ exports.handler = async (event) => {
  * Parse and validate the incoming request
  */
 async function parseAndValidateRequest(event) {
-    // Extract Cognito claims
-    const claims = event.requestContext?.authorizer?.claims;
+    const claims = getAuthenticatedUser(event);
+    
     if (!claims || !claims.sub) {
         throw createError(401, 'UNAUTHORIZED', 'Missing or invalid authentication token');
     }
@@ -153,12 +149,24 @@ async function validateProfile(profile) {
         profile.age = age; // Ensure it's stored as number
     }
 
-    if (profile.nationality && typeof profile.nationality !== 'string') {
-        errors.push('Nationality must be a string');
+    if (profile.languages !== undefined) {
+        if (!Array.isArray(profile.languages)) {
+            errors.push('Languages must be an array');
+        } else if (profile.languages.some(lang => typeof lang !== 'string' || lang.trim().length === 0)) {
+            errors.push('All languages must be non-empty strings');
+        }
     }
 
     if (profile.socialMedia && typeof profile.socialMedia !== 'string') {
         errors.push('Social media must be a string');
+    }
+
+    if (profile.occupation && typeof profile.occupation !== 'string') {
+        errors.push('Occupation must be a string');
+    }
+
+    if (profile.profilePictureUrl && typeof profile.profilePictureUrl !== 'string') {
+        errors.push('Profile picture URL must be a string');
     }
 
     // If any validation errors, throw
@@ -172,8 +180,10 @@ async function validateProfile(profile) {
         whatsApp: profile.whatsApp.trim(),
         ...(profile.gender && { gender: profile.gender }),
         ...(profile.age && { age: profile.age }),
-        ...(profile.nationality && { nationality: profile.nationality.trim() }),
-        ...(profile.socialMedia && { socialMedia: profile.socialMedia.trim() })
+        ...(profile.languages && { languages: profile.languages.map(lang => lang.trim()) }),
+        ...(profile.socialMedia && { socialMedia: profile.socialMedia.trim() }),
+        ...(profile.occupation && { occupation: profile.occupation.trim() }),
+        ...(profile.profilePictureUrl && { profilePictureUrl: profile.profilePictureUrl.trim() })
     };
 }
 

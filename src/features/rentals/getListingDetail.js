@@ -10,16 +10,10 @@
  * - CORS support
  */
 
-const AWS = require('aws-sdk');
-
-// Initialize DynamoDB
-const dynamodb = new AWS.DynamoDB.DocumentClient({
-    region: process.env.AWS_REGION || 'ap-southeast-1'
-});
+const dynamodb = require('../../utils/dynamoDbClient');
+const { buildCompleteResponse } = require('../../utils/responseUtils');
 
 const LISTINGS_TABLE = process.env.LISTINGS_TABLE;
-const USERS_TABLE = process.env.USERS_TABLE;
-const APPLICATIONS_TABLE = process.env.APPLICATIONS_TABLE;
 
 /**
  * Main Lambda handler
@@ -35,14 +29,11 @@ exports.handler = async (event) => {
         // 2. Get main listing data
         const listing = await getListingById(listingId);
         
-        // 3. Aggregate related data in parallel for efficiency
-        const [initiatorProfile, acceptedRoommates] = await Promise.all([
-            getUserProfile(listing.initiatorId),
-            getAcceptedRoommates(listingId)
-        ]);
+        // 3. Skip additional data aggregation - using simplified response
+        // The shared buildCompleteResponse function only needs the listing data
 
-        // 4. Build complete listing detail response
-        const completeListingDetail = buildCompleteResponse(listing, initiatorProfile, acceptedRoommates);
+        // 4. Build complete listing detail response using shared data transformation
+        const completeListingDetail = await buildCompleteResponse(listing);
 
         // 5. Return success response
         console.log(`✅ Listing detail retrieved successfully: ${listingId}`);
@@ -122,172 +113,8 @@ async function getListingById(listingId) {
     }
 }
 
-/**
- * Get user profile by userId
- */
-async function getUserProfile(userId) {
-    console.log(`👤 Querying user profile: ${userId}`);
-
-    if (!USERS_TABLE) {
-        console.warn('⚠️ USERS_TABLE not configured, skipping user profile lookup');
-        return null;
-    }
-
-    const params = {
-        TableName: USERS_TABLE,
-        Key: {
-            userId: userId
-        }
-    };
-
-    try {
-        const result = await dynamodb.get(params).promise();
-        
-        if (!result.Item) {
-            console.warn(`⚠️ User profile not found: ${userId}`);
-            return null;
-        }
-
-        const user = result.Item;
-        
-        // Return only public profile information
-        return {
-            userId: user.userId,
-            profile: {
-                name: user.profile?.name,
-                nationality: user.profile?.nationality,
-                age: user.profile?.age,
-                // Note: Do not include sensitive info like whatsApp, email
-            }
-        };
-
-    } catch (error) {
-        console.error('❌ Error getting user profile:', error);
-        return null; // Don't fail the whole request if user lookup fails
-    }
-}
-
-/**
- * Get accepted roommates for a listing
- */
-async function getAcceptedRoommates(listingId) {
-    console.log(`🤝 Querying accepted roommates for listing: ${listingId}`);
-
-    if (!APPLICATIONS_TABLE) {
-        console.warn('⚠️ APPLICATIONS_TABLE not configured, skipping roommates lookup');
-        return [];
-    }
-
-    // Note: This assumes an Applications table with ListingStatusIndex GSI exists
-    // The GSI would have: listingId (HASH) + status (RANGE) or similar structure
-    const params = {
-        TableName: APPLICATIONS_TABLE,
-        IndexName: 'ListingStatusIndex',
-        KeyConditionExpression: 'listingId = :listingId AND #status = :status',
-        ExpressionAttributeNames: {
-            '#status': 'status'
-        },
-        ExpressionAttributeValues: {
-            ':listingId': listingId,
-            ':status': 'accepted'
-        }
-    };
-
-    try {
-        const result = await dynamodb.query(params).promise();
-        
-        if (!result.Items || result.Items.length === 0) {
-            console.log(`📋 No accepted applications found for listing: ${listingId}`);
-            return [];
-        }
-
-        console.log(`📋 Found ${result.Items.length} accepted applications for listing: ${listingId}`);
-
-        // Get user profiles for all accepted applicants in parallel
-        const roommateProfiles = await Promise.all(
-            result.Items.map(application => getUserProfile(application.applicantId))
-        );
-
-        // Filter out any null profiles and return valid ones
-        return roommateProfiles.filter(profile => profile !== null);
-
-    } catch (error) {
-        console.error('❌ Error getting accepted roommates:', error);
-        return []; // Don't fail the whole request if roommates lookup fails
-    }
-}
-
-/**
- * Build complete listing detail response according to API design
- */
-function buildCompleteResponse(listing, initiatorProfile, acceptedRoommates) {
-    // Build the complete response structure based on prompt#87 API design
-    const response = {
-        // Main listing information
-        listingId: listing.listingId,
-        listingType: listing.listingType,
-        status: listing.status,
-        locationName: listing.locationName,
-        locationCoords: listing.locationCoords,
-        
-        // Property details
-        propertyDetails: listing.propertyDetails,
-        
-        // Lease details
-        leaseDetails: listing.leaseDetails,
-        
-        // Description and amenities
-        description: listing.description,
-        amenities: listing.amenities || [],
-        
-        // Preferences
-        preferences: listing.preferences,
-        
-        // Images
-        images: listing.images || [],
-        
-        // Contact info (if available)
-        contactInfo: listing.contactInfo,
-        
-        // Timestamps
-        createdAt: listing.createdAt,
-        updatedAt: listing.updatedAt,
-        
-        // Aggregated data
-        initiator: initiatorProfile || {
-            userId: listing.initiatorId,
-            profile: {
-                name: 'Profile not available'
-            }
-        },
-        
-        // Accepted roommates
-        acceptedRoommates: acceptedRoommates,
-        
-        // Summary stats
-        summary: {
-            totalRoommates: acceptedRoommates.length,
-            availableSpots: calculateAvailableSpots(listing, acceptedRoommates.length)
-        }
-    };
-
-    return response;
-}
-
-/**
- * Calculate available spots based on property details and current roommates
- */
-function calculateAvailableSpots(listing, currentRoommatesCount) {
-    const totalBedrooms = listing.propertyDetails?.bedrooms || 1;
-    
-    // For "seeking_roommate" type, initiator takes one spot
-    // For "seeking_accommodation" type, initiator is looking for a spot
-    if (listing.listingType === 'seeking_roommate') {
-        return Math.max(0, totalBedrooms - 1 - currentRoommatesCount); // -1 for initiator
-    } else {
-        return Math.max(0, totalBedrooms - currentRoommatesCount);
-    }
-}
+// Removed unused functions: getUserProfile, getAcceptedRoommates, old buildCompleteResponse
+// These functions are no longer needed as we're using the shared responseUtils functions
 
 /**
  * Create standardized error object

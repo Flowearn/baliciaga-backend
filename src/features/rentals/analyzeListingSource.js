@@ -19,45 +19,19 @@ const ssm = new AWS.SSM({
 });
 
 /**
+ * Normalize price text by removing currency symbols and thousand separators
+ */
+function normalizePriceText(raw) {
+    return raw
+        .replace(/(?:IDR|Rp|USD|\$)\s?/gi, '')  // 去币种
+        .replace(/(?<=\d)[,.](?=\d{3}\b)/g, '') // 去千位分隔符
+}
+
+/**
  * Main Lambda handler
  */
 exports.handler = async (event) => {
     console.log('🤖 analyzeListingSource Lambda triggered');
-    
-    // 1. 本地开发模式下的MOCK逻辑
-    if (process.env.IS_OFFLINE) {
-        console.log('[MOCK] AI Analysis running in local offline mode. Returning mock data.');
-        const mockExtractedData = {
-            title: "Mocked: 3BR Villa with Pool in Canggu",
-            summary: "This is a mocked response for local development - a beautiful 3-bedroom villa with private pool in the heart of Canggu.",
-            locationName: "Canggu",
-            rent: { 
-                monthly: 35000000, 
-                yearly: 400000000 
-            },
-            bedrooms: 3,
-            bathrooms: 2,
-            petFriendly: true,
-            availableFrom: "2025-09-01",
-            amenities: ["Fully furnished", "Modern kitchen", "Fast WiFi", "Private swimming pool"],
-            proximity: [
-                { time: 5, unit: "minute", poi: "Echo Beach" },
-                { time: 2, unit: "minute", poi: "La Brisa" }
-            ]
-        };
-        
-        return createResponse(200, {
-            success: true,
-            data: {
-                extractedListing: mockExtractedData,
-                sourceText: "Beautiful 3 bedroom, 2 bathroom villa available...", // Mock snippet
-                aiProcessedAt: new Date().toISOString()
-            }
-        });
-    }
-
-    // 2. 云端真实逻辑（现有代码）
-    console.log('[CLOUD] AI Analysis running in cloud mode. Calling real services.');
     console.log('Event:', JSON.stringify(event, null, 2));
 
     try {
@@ -209,49 +183,119 @@ async function getGeminiApiKey() {
  * Construct detailed analysis prompt for Gemini
  */
 function constructAnalysisPrompt(sourceText) {
-    return `
-You are an expert real estate data analyst for Bali, Indonesia. Your task is to meticulously extract structured information from a given text describing a property for rent.
+    // Normalize price text before analysis
+    const normalizedText = normalizePriceText(sourceText);
+    
+    const prompt = `
+You are an expert real estate data analyst for Bali. Your task is to extract structured information from a given text or image about a property listing.
 
 **Instructions:**
-1.  Analyze the following property description text.
-2.  Extract the specified fields and their values into the JSON schema provided.
-3.  Generate a concise, appealing 'title' based on the property's key features (e.g., "3BR Villa with Pool in Canggu").
-4.  Generate a short, one-sentence 'summary' of the property.
-5.  For boolean values like 'petFriendly', interpret phrases like "pets are welcome" as true.
-6.  For dates like 'availableFrom', parse them into YYYY-MM-DD format.
-7.  If a value for a specific field is not mentioned, use a value of null. Do not make up information.
-8.  The final output MUST be a single, valid JSON object, without any surrounding text, explanations, or markdown formatting like \`\`\`json.
+1.  Analyze the provided text and/or image content carefully.
+2.  Extract the information for the fields defined in the JSON schema below.
+3.  If a piece of information is not found, use a null value for that field.
+4.  The "locationArea" should be a general, well-known area like 'Canggu', 'Ubud', 'Pererenan', 'Seminyak', 'Uluwatu'. Do not use the full street address.
+5.  "amenities" should be an array of short, descriptive strings.
+6.  All prices must be integers, without any symbols or commas.
+7.  **You MUST respond ONLY with a single, valid JSON object that adheres to the following schema. Do not include any explanatory text, markdown formatting, or anything else outside of the JSON object.**
+8.  If the text contains a yearly price (e.g. "IDR 550,000,000 per year"), divide that value by 12 **(round to nearest integer)** and assign the result to "monthlyRent". Set "yearlyRent" to the original yearly integer.
+9.  Remove currency symbols (IDR, Rp, $, etc.) and any thousand separators (comma or dot) before returning numeric values.
+10. If both yearly and monthly prices are present, assume the yearly price already includes a bulk-lease discount. Return it unchanged in \`yearlyRent\`. Do **not** overwrite the landlord-stated \`monthlyRent\`; instead, calculate \`monthlyRentFromYearly = yearlyRent / 12\` and append it to the JSON under a new helper field \`monthlyRentEquivalent\`. If the difference is >5%, add a \`priceNote\` field with "landlord discount".
+11. For smoking, pet, furnished policies: if text has no mention, return \`null\` (leave decision to user). Do **not** coerce to \`false\`.
+12. \`locationArea\` may be **any** Bali locality explicitly mentioned (e.g. Kedungu, Kerobokan, Bingin). If no area appears, set \`locationArea\` to \`null\` and leave to user.
+13. When extracting bathroom count, accept "ensuite", "shared" etc. If text shows "5 ensuite bathrooms", "2.5 baths", or "5 suites" (assume 1 bathroom per suite), extract the number. Always return as a number, not string. If unclear, estimate based on bedrooms (minimum 1).
+14. **CRITICAL**: All price fields (monthlyRent, yearlyRent, monthlyRentEquivalent, utilities, deposit) must be integers in JSON without quotes. Never return price values as strings.
+15. If text mentions yearly price but no explicit monthly price, calculate monthlyRent = yearlyRent / 12. If text mentions both, preserve the explicit monthly price and calculate monthlyRentEquivalent separately.
 
-**JSON Output Schema:**
+**JSON Schema:**
 {
-  "title": "string | null",
-  "summary": "string | null",
-  "locationName": "string | null",
-  "rent": {
-    "monthly": "number | null",
-    "yearly": "number | null"
-  },
-  "bedrooms": "number | null",
-  "bathrooms": "number | null",
+  "title": "string",
+  "locationArea": "string | null",
+  "address": "string | null",
+  "bedrooms": "number",
+  "bathrooms": "number",
+  "monthlyRent": "number",
+  "yearlyRent": "number | null",
+  "monthlyRentEquivalent": "number | null",
+  "utilities": "number | null",
+  "deposit": "number | null",
+  "minimumStay": "number | null",
+  "furnished": "boolean | null",
   "petFriendly": "boolean | null",
-  "availableFrom": "string (YYYY-MM-DD format) | null",
-  "amenities": ["string", "string", ...],
-  "proximity": [
-    {
-      "time": "number | null",
-      "unit": "string | null",
-      "poi": "string | null"
-    }
-  ]
+  "smokingAllowed": "boolean | null",
+  "priceNote": "string | null",
+  "amenities": ["string"]
 }
 
-**Property Description Text:**
----
-${sourceText}
 ---
 
-Please return ONLY a valid JSON object.
+**Example 1:**
+
+*Input Text:* "For rent: Beautiful 2-bedroom, 2-bathroom villa in Canggu. Fully furnished with a private pool, AC in both rooms, and fast Wi-Fi. Monthly rent is IDR 25,000,000. One month security deposit required. Available August 1st, 2025, minimum stay 6 months. Pets are considered. No smoking indoors. Address: Jl. Pantai Batu Bolong No.5, Canggu, Bali."
+
+*Your JSON Response:*
+{
+  "title": "Beautiful 2BR Villa with Pool",
+  "locationArea": "Canggu",
+  "address": "Jl. Pantai Batu Bolong No.5, Canggu, Bali",
+  "bedrooms": 2,
+  "bathrooms": 2,
+  "monthlyRent": 25000000,
+  "yearlyRent": null,
+  "utilities": null,
+  "deposit": 25000000,
+  "minimumStay": 6,
+  "furnished": true,
+  "petFriendly": true,
+  "smokingAllowed": false,
+  "amenities": ["Private Pool", "AC", "Fast Wi-Fi"]
+}
+
+---
+
+Now, analyze the following content:
+${normalizedText}
 `;
+    
+    return prompt;
+}
+
+/**
+ * Validate extracted listing data
+ */
+function validateExtracted(obj) {
+    const issues = [];
+    
+    // Check required core fields
+    if (!obj.title) issues.push('missing title');
+    if (typeof obj.bedrooms !== 'number') issues.push('bedrooms not number');
+    if (typeof obj.bathrooms !== 'number') issues.push('bathrooms not number');
+    if (typeof obj.monthlyRent !== 'number') issues.push('monthlyRent not number');
+    
+    // Check yearly/monthly price consistency if both exist
+    if (obj.yearlyRent && obj.monthlyRent && obj.monthlyRentEquivalent) {
+        const difference = Math.abs(obj.monthlyRentEquivalent - obj.monthlyRent);
+        const percentDiff = (difference / obj.monthlyRent) * 100;
+        
+        // Use relaxed threshold if priceNote indicates landlord discount
+        const threshold = (obj.priceNote && obj.priceNote.includes('discount')) ? 20 : 5;
+        
+        if (percentDiff >= threshold) {
+            issues.push(`yearly/monthly mismatch: ${percentDiff.toFixed(1)}% difference`);
+        }
+    }
+    
+    // Allow null values for boolean fields (don't enforce non-null)
+    // Allow any locationArea string (don't restrict to predefined list)
+    
+    // Only warn if completely missing location AND no monthlyRent
+    if (!obj.locationArea && !obj.monthlyRent) {
+        issues.push('missing both locationArea and monthlyRent');
+    }
+    
+    return {
+        isValid: issues.length === 0,
+        issues: issues
+    };
 }
 
 /**
@@ -272,8 +316,34 @@ async function parseAIResponse(aiResponseText) {
         // Parse JSON
         const parsedData = JSON.parse(cleanedResponse);
         
-        // Validate required fields for new schema
-        const requiredFields = ['title', 'summary', 'locationName', 'rent', 'bedrooms', 'bathrooms', 'petFriendly', 'availableFrom', 'amenities', 'proximity'];
+        // Post-processing: Fix data types
+        // Convert string prices to numbers
+        const priceFields = ['monthlyRent', 'yearlyRent', 'monthlyRentEquivalent', 'utilities', 'deposit'];
+        priceFields.forEach(field => {
+            if (parsedData[field] && typeof parsedData[field] === 'string') {
+                // Remove commas and spaces, then convert to number
+                const cleanedPrice = parsedData[field].replace(/[,\s]/g, '');
+                parsedData[field] = Number(cleanedPrice) || null;
+            }
+        });
+        
+        // Convert string bathrooms to number
+        if (parsedData.bathrooms && typeof parsedData.bathrooms === 'string') {
+            parsedData.bathrooms = Number(parsedData.bathrooms) || 1;
+        }
+        
+        // Fix missing bathrooms - estimate from bedrooms or default to 1
+        if (!parsedData.bathrooms || parsedData.bathrooms === null) {
+            parsedData.bathrooms = Math.max(1, parsedData.bedrooms || 1);
+        }
+        
+        // Fix missing monthlyRent when yearlyRent exists
+        if (!parsedData.monthlyRent && parsedData.yearlyRent) {
+            parsedData.monthlyRent = Math.round(parsedData.yearlyRent / 12);
+        }
+        
+        // Validate required fields for new schema (relaxed validation)
+        const requiredFields = ['title', 'bedrooms', 'bathrooms', 'monthlyRent', 'amenities'];
         const missingFields = requiredFields.filter(field => !parsedData.hasOwnProperty(field));
         
         if (missingFields.length > 0) {
@@ -282,45 +352,51 @@ async function parseAIResponse(aiResponseText) {
 
         // Validate and transform data to match the expected format
         const validatedData = {
-            // Use AI-generated title and summary
-            title: String(parsedData.title || parsedData.locationName || 'Rental Property'),
-            monthlyRent: Number(parsedData.rent?.monthly) || 0,
+            title: String(parsedData.title || 'Rental Property'),
+            monthlyRent: Number(parsedData.monthlyRent) || 0,
             currency: 'IDR', // Default for Bali properties
-            deposit: parsedData.rent?.monthly ? Number(parsedData.rent.monthly) * 2 : 0, // Estimate 2 months rent
-            utilities: 0, // Default to included
+            deposit: parsedData.deposit ? Number(parsedData.deposit) : (parsedData.monthlyRent ? Number(parsedData.monthlyRent) : 0),
+            utilities: parsedData.utilities ? Number(parsedData.utilities) : 0,
             bedrooms: Number(parsedData.bedrooms) || 1,
             bathrooms: Number(parsedData.bathrooms) || 1,
             squareFootage: null, // Not provided in current schema
-            furnished: true, // Default assumption for Bali rentals
-            petFriendly: parsedData.petFriendly === true, // Use AI-extracted value
-            smokingAllowed: false, // Conservative default
-            address: String(parsedData.locationName || 'Address not specified'),
-            availableFrom: parsedData.availableFrom || new Date().toISOString().split('T')[0], // Use AI-extracted date or default to today
-            minimumStay: 12, // Default 12 months
-            description: String(parsedData.summary || `Property in ${parsedData.locationName || 'Bali'}`), // Use AI-generated summary
+            furnished: parsedData.furnished === true,
+            petFriendly: parsedData.petFriendly === true,
+            smokingAllowed: parsedData.smokingAllowed === true,
+            address: String(parsedData.address || 'Address not specified'),
+            locationArea: String(parsedData.locationArea || 'Bali'),
+            availableFrom: new Date().toISOString().split('T')[0], // Default to today
+            minimumStay: parsedData.minimumStay ? Number(parsedData.minimumStay) : 12,
+            description: String(parsedData.title || `Property in ${parsedData.locationArea || 'Bali'}`),
             amenities: Array.isArray(parsedData.amenities) ? parsedData.amenities : [],
-            
-            // New fields from updated schema
-            proximity: Array.isArray(parsedData.proximity) ? parsedData.proximity.map(item => ({
-                time: item.time ? Number(item.time) : null,
-                unit: item.unit ? String(item.unit) : null,
-                poi: item.poi ? String(item.poi) : null
-            })) : [],
             
             // Store original AI data for reference
             aiExtractedData: {
                 title: parsedData.title,
-                summary: parsedData.summary,
-                locationName: parsedData.locationName,
-                rent: parsedData.rent,
+                locationArea: parsedData.locationArea,
+                address: parsedData.address,
                 bedrooms: parsedData.bedrooms,
                 bathrooms: parsedData.bathrooms,
+                monthlyRent: parsedData.monthlyRent,
+                yearlyRent: parsedData.yearlyRent,
+                monthlyRentEquivalent: parsedData.monthlyRentEquivalent,
+                utilities: parsedData.utilities,
+                deposit: parsedData.deposit,
+                minimumStay: parsedData.minimumStay,
+                furnished: parsedData.furnished,
                 petFriendly: parsedData.petFriendly,
-                availableFrom: parsedData.availableFrom,
-                amenities: parsedData.amenities,
-                proximity: parsedData.proximity
+                smokingAllowed: parsedData.smokingAllowed,
+                priceNote: parsedData.priceNote,
+                amenities: parsedData.amenities
             }
         };
+
+        // Run validation on extracted data
+        const validation = validateExtracted(validatedData.aiExtractedData);
+        if (!validation.isValid) {
+            console.warn('⚠️ Validation issues found:', validation.issues);
+            // Don't throw error, just log warnings for now
+        }
 
         return validatedData;
         

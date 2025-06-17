@@ -4,7 +4,7 @@ const { randomDigits } = require('crypto-secure-random-digit');
 
 const sesClient = new SESClient({ region: 'ap-southeast-1' });
 const dynamoDbClient = new DynamoDBClient({ region: 'ap-southeast-1' });
-const tableName = `baliciaga-verification-codes-dev`; // 使用我们已部署的正确表名
+const tableName = process.env.VERIFICATION_CODES_TABLE_NAME;
 
 module.exports.handler = async (event) => {
   console.log('CreateAuthChallenge Lambda triggered. Event:', JSON.stringify(event, null, 2));

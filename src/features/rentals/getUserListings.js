@@ -1,6 +1,6 @@
-const AWS = require('aws-sdk');
-
-const dynamodb = new AWS.DynamoDB.DocumentClient();
+const dynamodb = require('../../utils/dynamoDbClient');
+const { buildCompleteResponse } = require('../../utils/responseUtils');
+const { getAuthenticatedUser } = require('../../utils/authUtils');
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
@@ -17,9 +17,9 @@ exports.handler = async (event) => {
   console.log('Event:', JSON.stringify(event, null, 2));
 
   try {
-    // Extract userId from Cognito JWT token
-    const userId = event.requestContext?.authorizer?.claims?.sub;
-    if (!userId) {
+    const claims = getAuthenticatedUser(event);
+    
+    if (!claims || !claims.sub) {
       return {
         statusCode: 401,
         headers: corsHeaders,
@@ -33,9 +33,21 @@ exports.handler = async (event) => {
         })
       };
     }
+    
+    const userId = claims.sub;
 
     // Parse query parameters
     const { limit = '10', startCursor, status = 'active' } = event.queryStringParameters || {};
+    
+    // Map frontend status to backend status for database query
+    const mapStatusToBackend = (frontendStatus) => {
+      const statusMap = {
+        'active': 'open',
+        'closed': 'closed', 
+        'paused': 'cancelled'
+      };
+      return statusMap[frontendStatus] || frontendStatus;
+    };
     
     // Validate limit parameter
     const limitNum = parseInt(limit, 10);
@@ -54,7 +66,10 @@ exports.handler = async (event) => {
       };
     }
 
-    console.log(`Fetching listings for userId: ${userId}, limit: ${limitNum}, status: ${status}`);
+    // Map frontend status to backend status for database query
+    const backendStatus = mapStatusToBackend(status);
+    
+    console.log(`Fetching listings for userId: ${userId}, limit: ${limitNum}, frontend status: ${status}, backend status: ${backendStatus}`);
 
     // Build DynamoDB query parameters
     const queryParams = {
@@ -74,7 +89,7 @@ exports.handler = async (event) => {
       queryParams.ExpressionAttributeNames = {
         '#status': 'status'
       };
-      queryParams.ExpressionAttributeValues[':status'] = status;
+      queryParams.ExpressionAttributeValues[':status'] = backendStatus;
     }
 
     // Add pagination cursor if provided
@@ -101,43 +116,59 @@ exports.handler = async (event) => {
 
     // Execute query
     const result = await dynamodb.query(queryParams).promise();
+    
+    console.log(`DynamoDB query result: Found ${result.Items.length} raw items`);
+    if (result.Items.length > 0) {
+      console.log('Sample raw item status:', result.Items[0].status);
+      console.log('All raw item statuses:', result.Items.map(item => item.status));
+    }
 
-    // Transform listings to summary format (similar to GET /listings)
-    const listingsSummary = result.Items.map(listing => ({
-      listingId: listing.listingId,
-      title: listing.title,
-      description: listing.description,
-      pricing: {
-        monthlyRent: listing.monthlyRent,
-        currency: listing.currency,
-        deposit: listing.deposit,
-        utilities: listing.utilities || 0
-      },
-      details: {
-        bedrooms: listing.bedrooms,
-        bathrooms: listing.bathrooms,
-        squareFootage: listing.squareFootage || null,
-        furnished: listing.furnished || false,
-        petFriendly: listing.petFriendly || false,
-        smokingAllowed: listing.smokingAllowed || false
-      },
-      location: {
-        address: listing.address,
-        coordinates: listing.coordinates || null
-      },
-      availability: {
-        availableFrom: listing.availableFrom,
-        minimumStay: listing.minimumStay || 1
-      },
-      photos: listing.photos || [],
-      amenities: listing.amenities || [],
-      status: listing.status,
-      createdAt: listing.createdAt,
-      updatedAt: listing.updatedAt,
-      // Additional fields for owner view
-      applicationsCount: listing.applicationsCount || 0,
-      viewsCount: listing.viewsCount || 0
+    // Get application counts for each listing
+    const listingIds = result.Items.map(item => item.listingId);
+    const applicationCountsMap = {};
+    
+    if (listingIds.length > 0) {
+      // Query applications table to get counts for each listing
+      for (const listingId of listingIds) {
+        try {
+          const appQueryParams = {
+            TableName: process.env.APPLICATIONS_TABLE,
+            IndexName: 'ListingApplicationsIndex', // GSI for querying by listingId
+            KeyConditionExpression: 'listingId = :listingId',
+            ExpressionAttributeValues: {
+              ':listingId': listingId
+            },
+            Select: 'COUNT'
+          };
+          
+          console.log(`Querying applications for listing ${listingId}, table: ${process.env.APPLICATIONS_TABLE}`);
+          console.log('Query params:', JSON.stringify(appQueryParams, null, 2));
+          
+          const appResult = await dynamodb.query(appQueryParams).promise();
+          console.log(`Application count result for ${listingId}:`, appResult.Count);
+          
+          applicationCountsMap[listingId] = appResult.Count || 0;
+        } catch (error) {
+          console.error(`Error getting application count for listing ${listingId}:`, error);
+          applicationCountsMap[listingId] = 0;
+        }
+      }
+    }
+    
+    console.log('Application counts map:', applicationCountsMap);
+
+    // Transform listings using shared buildCompleteResponse function
+    const listingsSummary = await Promise.all(result.Items.map(async (listing) => {
+      const completeResponse = await buildCompleteResponse(listing);
+      // Add additional fields for owner view with dynamic application count
+      return {
+        ...completeResponse,
+        applicationsCount: applicationCountsMap[listing.listingId] || 0,
+        viewsCount: listing.viewsCount || 0
+      };
     }));
+
+    console.log(`Transformed ${listingsSummary.length} listings using buildCompleteResponse`);
 
     // Prepare pagination information
     const hasNextPage = !!result.LastEvaluatedKey;

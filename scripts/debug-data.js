@@ -1,14 +1,10 @@
 #!/usr/bin/env node
 
-const AWS = require('aws-sdk');
+const dynamodb = require('../src/utils/dynamoDbClient');
 
-const dynamodb = new AWS.DynamoDB.DocumentClient({
-  region: 'ap-southeast-1'
-});
-
-const USERS_TABLE = 'Baliciaga-Users-dev';
-const LISTINGS_TABLE = 'Baliciaga-Listings-dev';
-const APPLICATIONS_TABLE = 'Baliciaga-Applications-dev';
+const USERS_TABLE = process.env.USERS_TABLE_NAME;
+const LISTINGS_TABLE = process.env.LISTINGS_TABLE_NAME;
+const APPLICATIONS_TABLE = process.env.APPLICATIONS_TABLE_NAME;
 
 async function debugData() {
   try {

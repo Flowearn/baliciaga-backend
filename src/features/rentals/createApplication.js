@@ -9,13 +9,8 @@
  * - CORS support
  */
 
-const AWS = require('aws-sdk');
 const { v4: uuidv4 } = require('uuid');
-
-// Initialize DynamoDB
-const dynamodb = new AWS.DynamoDB.DocumentClient({
-    region: process.env.AWS_REGION || 'ap-southeast-1'
-});
+const dynamodb = require('../../utils/dynamoDbClient');
 
 const LISTINGS_TABLE = process.env.LISTINGS_TABLE;
 const APPLICATIONS_TABLE = process.env.APPLICATIONS_TABLE;

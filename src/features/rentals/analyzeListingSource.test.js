@@ -23,7 +23,22 @@ jest.mock('@google/generative-ai', () => ({
         getGenerativeModel: jest.fn().mockReturnValue({
             generateContent: jest.fn().mockResolvedValue({
                 response: Promise.resolve({
-                    text: () => '{"locationName":"Test Location","rent":{"monthly":5000000,"yearly":null},"bedrooms":2,"bathrooms":1,"amenities":["wifi","pool"],"proximity":[]}'
+                    text: () => JSON.stringify({
+                        "title": "Test Location",
+                        "locationArea": "Ubud",
+                        "address": "Test Address, Bali",
+                        "bedrooms": 2,
+                        "bathrooms": 1,
+                        "monthlyRent": 5000000,
+                        "yearlyRent": null,
+                        "utilities": null,
+                        "deposit": 5000000,
+                        "minimumStay": 12,
+                        "furnished": true,
+                        "petFriendly": false,
+                        "smokingAllowed": false,
+                        "amenities": ["wifi", "pool"]
+                    })
                 })
             })
         })
@@ -237,7 +252,7 @@ describe('analyzeListingSource Lambda Function', () => {
             expect(listing.bedrooms).toBeDefined();
             expect(listing.bathrooms).toBeDefined();
             expect(listing.amenities).toBeDefined();
-            expect(listing.proximity).toBeDefined();
+            expect(listing.locationArea).toBeDefined();
             expect(listing.aiExtractedData).toBeDefined();
             
             console.log('✅ 响应结构验证通过：返回完整的结构化数据');

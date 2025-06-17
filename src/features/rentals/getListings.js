@@ -1,8 +1,9 @@
 const { DynamoDBClient, ScanCommand } = require('@aws-sdk/client-dynamodb');
 const { unmarshall } = require('@aws-sdk/util-dynamodb');
+const { buildCompleteResponse } = require('../../utils/responseUtils');
 
 const dynamoDb = new DynamoDBClient({ region: 'ap-southeast-1' });
-const tableName = `Baliciaga-Listings-${process.env.STAGE || 'dev'}`;
+const tableName = process.env.LISTINGS_TABLE_NAME;
 
 // Lambda handler for fetching rental listings
 // TODO: Implement getListings handler logic
@@ -16,9 +17,12 @@ module.exports.handler = async (event) => {
 
   try {
     const { Items } = await dynamoDb.send(new ScanCommand(params));
-    const listings = Items.map(item => unmarshall(item));
+    const rawListings = Items.map(item => unmarshall(item));
     
-    console.log(`Found ${listings.length} listings.`);
+    // Transform each listing using the shared buildCompleteResponse function
+    const listings = await Promise.all(rawListings.map(listing => buildCompleteResponse(listing)));
+    
+    console.log(`Found ${rawListings.length} listings, transformed to complete response format.`);
 
     return {
       statusCode: 200,
