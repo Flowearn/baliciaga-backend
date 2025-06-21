@@ -25,12 +25,18 @@ exports.handler = async (event) => {
 
     try {
         // 1. Extract and validate authentication
-        const { userId } = await validateAuthentication(event);
+        const { userId, cognitoGroups } = await validateAuthentication(event);
         
         // 2. Parse and validate request body
         const listingData = await parseAndValidateRequest(event);
         
-        // 3. Prepare listing object
+        // 3. Validate platform role permission
+        if (listingData.posterRole === 'platform' && !cognitoGroups.includes('InternalStaff')) {
+            console.log('❌ User attempted to create platform listing without InternalStaff permission');
+            throw createError(403, 'FORBIDDEN', 'You do not have permission to create platform listings');
+        }
+        
+        // 4. Prepare listing object
         const now = new Date().toISOString();
         const listing = {
             listingId: uuidv4(),
@@ -41,7 +47,7 @@ exports.handler = async (event) => {
             ...listingData
         };
 
-        // 4. Save to DynamoDB
+        // 5. Save to DynamoDB
         await saveListing(listing);
 
         // 5. Return success response
@@ -94,6 +100,7 @@ async function validateAuthentication(event) {
     }
 
     const cognitoSub = userClaims.sub;
+    const cognitoGroups = userClaims['cognito:groups'] || [];
 
     // Get the actual userId from our Users table
     try {
@@ -113,9 +120,9 @@ async function validateAuthentication(event) {
         }
 
         const userId = userResult.Items[0].userId;
-        console.log(`🔐 Authenticated user - CognitoSub: ${cognitoSub}, UserId: ${userId}`);
+        console.log(`🔐 Authenticated user - CognitoSub: ${cognitoSub}, UserId: ${userId}, Groups: ${JSON.stringify(cognitoGroups)}`);
 
-        return { userId };
+        return { userId, cognitoGroups };
     } catch (error) {
         if (error.statusCode) {
             throw error;
@@ -166,8 +173,8 @@ async function parseAndValidateRequest(event) {
     // Poster role validation (required)
     if (!body.posterRole || typeof body.posterRole !== 'string') {
         errors.push('posterRole is required and must be a string');
-    } else if (body.posterRole !== 'tenant' && body.posterRole !== 'landlord') {
-        errors.push('posterRole must be either "tenant" or "landlord"');
+    } else if (body.posterRole !== 'tenant' && body.posterRole !== 'landlord' && body.posterRole !== 'platform') {
+        errors.push('posterRole must be either "tenant", "landlord", or "platform"');
     }
 
     // Numeric field validation

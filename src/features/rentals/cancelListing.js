@@ -12,6 +12,7 @@
  */
 
 const dynamodb = require('../../utils/dynamoDbClient');
+const { getAuthenticatedUser } = require('../../utils/authUtils');
 
 const LISTINGS_TABLE = process.env.LISTINGS_TABLE;
 
@@ -24,12 +25,42 @@ exports.handler = async (event) => {
 
     try {
         // 1. Extract and validate authentication
-        const { userId } = await validateAuthentication(event);
+        const claims = getAuthenticatedUser(event);
+        if (!claims || !claims.sub) {
+            throw createError(401, 'UNAUTHORIZED', 'Missing or invalid authentication token');
+        }
+        const cognitoSub = claims.sub;
+
+        // Get the actual userId from our Users table (copied from getUserListings.js)
+        let userId;
+        try {
+            const userQuery = {
+                TableName: process.env.USERS_TABLE,
+                IndexName: 'CognitoSubIndex',
+                KeyConditionExpression: 'cognitoSub = :cognitoSub',
+                ExpressionAttributeValues: {
+                    ':cognitoSub': cognitoSub
+                }
+            };
+
+            const userResult = await dynamodb.query(userQuery).promise();
+            if (!userResult.Items || userResult.Items.length === 0) {
+                console.log('❌ User not found in database:', cognitoSub);
+                throw createError(403, 'USER_NOT_FOUND', 'User profile not found. Please create your profile first.');
+            }
+
+            userId = userResult.Items[0].userId;
+            console.log(`🔐 Authenticated user - CognitoSub: ${cognitoSub}, UserId: ${userId}`);
+        } catch (error) {
+            if (error.statusCode) throw error; // Re-throw our custom errors
+            console.error('❌ Error fetching user profile:', error);
+            throw createError(500, 'DATABASE_ERROR', 'Failed to verify user profile');
+        }
         
         // 2. Parse and validate request parameters
         const { listingId } = parsePathParameters(event);
         
-        // 3. Update listing status with ownership verification
+        // 3. Update listing status with ownership verification using correct userId
         await updateListingStatusToCancelled(listingId, userId);
 
         // 4. Return success response
@@ -69,60 +100,7 @@ exports.handler = async (event) => {
     }
 };
 
-/**
- * Validate Cognito authentication and extract user information
- */
-async function validateAuthentication(event) {
-    const claims = event.requestContext?.authorizer?.claims;
-    
-    if (!claims || !claims.sub) {
-        console.log('❌ Missing or invalid Cognito claims');
-        throw createError(401, 'UNAUTHORIZED', 'Missing or invalid authentication token');
-    }
 
-    const cognitoSub = claims.sub;
-    console.log(`🔐 Authenticated user: ${cognitoSub}`);
-
-    // Get userId from Users table
-    const userId = await getUserIdFromCognitoSub(cognitoSub);
-    
-    return { userId };
-}
-
-/**
- * Get userId from cognitoSub using Users table
- */
-async function getUserIdFromCognitoSub(cognitoSub) {
-    console.log(`🔍 Looking up userId for cognitoSub: ${cognitoSub}`);
-
-    const params = {
-        TableName: process.env.USERS_TABLE,
-        IndexName: 'CognitoSubIndex',
-        KeyConditionExpression: 'cognitoSub = :cognitoSub',
-        ExpressionAttributeValues: {
-            ':cognitoSub': cognitoSub
-        }
-    };
-
-    try {
-        const result = await dynamodb.query(params).promise();
-        
-        if (!result.Items || result.Items.length === 0) {
-            throw createError(404, 'USER_NOT_FOUND', 'User profile not found');
-        }
-
-        const userId = result.Items[0].userId;
-        console.log(`✅ Found userId: ${userId}`);
-        return userId;
-
-    } catch (error) {
-        if (error.statusCode) {
-            throw error; // Re-throw our custom errors
-        }
-        console.error('❌ DynamoDB query error:', error);
-        throw createError(500, 'DATABASE_ERROR', 'Failed to lookup user information');
-    }
-}
 
 /**
  * Parse and validate path parameters
@@ -144,6 +122,48 @@ function parsePathParameters(event) {
  */
 async function updateListingStatusToCancelled(listingId, userId) {
     console.log(`📝 Updating listing status to 'cancelled': ${listingId}`);
+
+    // First, let's get the listing to see the actual initiatorId for diagnosis
+    const getListing = {
+        TableName: LISTINGS_TABLE,
+        Key: { listingId }
+    };
+
+    try {
+        const getResult = await dynamodb.get(getListing).promise();
+        const listing = getResult.Item;
+
+        if (!listing) {
+            throw createError(404, 'LISTING_NOT_FOUND', 'Listing not found');
+        }
+
+        // Add diagnosis logs
+        console.log('--- PERMISSION CHECK DIAGNOSIS ---');
+        console.log('ID of currently logged-in user (userId):', userId);
+        console.log('ID of listing initiator from DB:', listing.initiatorId);
+        console.log('Data type of logged-in user ID:', typeof userId);
+        console.log('Data type of initiator ID from DB:', typeof listing.initiatorId);
+        console.log('Are they equal? (Strict Comparison):', userId === listing.initiatorId);
+        console.log('Current listing status:', listing.status);
+        console.log('--- END DIAGNOSIS ---');
+
+    } catch (error) {
+        console.error('❌ Error getting listing for diagnosis:', error);
+        // Continue with original update attempt even if diagnosis fails
+    }
+
+    // This goes right before the `const params = ...` line for the UpdateItemCommand
+    console.log('--- FINAL PERMISSION CHECK DIAGNOSIS ---');
+    console.log('Attempting to cancel listingId:', listingId);
+    console.log('ID being used for permission check (:userId):', userId);
+    console.log('--- END DIAGNOSIS ---');
+
+    // Add these three lines right before the `params` object is defined
+    console.log('--- ID_DIAGNOSIS_TRACE ---');
+    console.log('Listing ID being operated on:', listingId);
+    console.log('User ID being used for permission check:', userId); 
+    // We need to see what `userId` variable holds at this exact moment
+    console.log('--- END_DIAGNOSIS_TRACE ---');
 
     const params = {
         TableName: LISTINGS_TABLE,

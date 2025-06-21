@@ -4,9 +4,9 @@ jspm_packages
 
 # Serverless directories
 .serverless
+.webpack
 
 # environment variables
-.env
 .env
 .env.*
 !.env.example
@@ -17,4 +17,25 @@ jspm_packages
 .vscode
 
 # macOS
-.DS_Store 
+.DS_Store
+
+# Logs
+*.log
+backend.log
+
+# Data files
+data/
+
+# Test files
+*.test.js
+test-results/
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.backup
+
+# Scripts output
+scripts/*.json
+scripts/*.md 

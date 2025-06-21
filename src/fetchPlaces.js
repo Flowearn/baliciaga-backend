@@ -192,6 +192,8 @@ async function WorkspacePlaces(categoryType) {
     let s3ObjectKey = 'data/cafes-dev.json'; // 默认或 'cafe'
     if (categoryType === 'bar') {
       s3ObjectKey = 'data/bars-dev.json';
+    } else if (categoryType === 'cowork') {
+      s3ObjectKey = 'data/cowork-dev.json';
     }
 
     // 2. 从S3获取数据

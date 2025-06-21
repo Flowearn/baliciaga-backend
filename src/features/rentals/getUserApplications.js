@@ -28,7 +28,64 @@ exports.handler = async (event) => {
         };
     }
 
-    const applicantId = claims.sub;
+    const cognitoSub = claims.sub;
+
+    // Get the actual userId from our Users table
+    let applicantId;
+    try {
+        const userQuery = {
+            TableName: process.env.USERS_TABLE,
+            IndexName: 'CognitoSubIndex',
+            KeyConditionExpression: 'cognitoSub = :cognitoSub',
+            ExpressionAttributeValues: {
+                ':cognitoSub': cognitoSub
+            }
+        };
+
+        const { DynamoDBClient } = require("@aws-sdk/client-dynamodb");
+        const { DynamoDBDocumentClient, QueryCommand } = require("@aws-sdk/lib-dynamodb");
+        const dynamodb = DynamoDBDocumentClient.from(new DynamoDBClient({}));
+        
+        const userResult = await dynamodb.send(new QueryCommand(userQuery));
+        if (!userResult.Items || userResult.Items.length === 0) {
+            console.log('❌ User not found in database:', cognitoSub);
+            return {
+                statusCode: 403,
+                headers: {
+                    'Access-Control-Allow-Origin': '*',
+                    'Access-Control-Allow-Headers': 'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token',
+                    'Access-Control-Allow-Methods': 'GET,OPTIONS'
+                },
+                body: JSON.stringify({
+                    success: false,
+                    error: {
+                        code: 'USER_NOT_FOUND',
+                        message: 'User profile not found. Please create your profile first.'
+                    }
+                })
+            };
+        }
+
+        applicantId = userResult.Items[0].userId;
+        console.log(`🔐 Authenticated user - CognitoSub: ${cognitoSub}, ApplicantId: ${applicantId}`);
+    } catch (error) {
+        console.error('❌ Error fetching user profile:', error);
+        return {
+            statusCode: 500,
+            headers: {
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Headers': 'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token',
+                'Access-Control-Allow-Methods': 'GET,OPTIONS'
+            },
+            body: JSON.stringify({
+                success: false,
+                error: {
+                    code: 'DATABASE_ERROR',
+                    message: 'Failed to verify user profile'
+                }
+            })
+        };
+    }
 
     try {
         // --- STAGE 1: Get all applications for the user ---

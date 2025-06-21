@@ -33,6 +33,7 @@ const getAuthenticatedUser = (event) => {
       return {
         sub: userId,
         email: userEmail || '',
+        'cognito:groups': event.headers?.['x-test-user-groups'] ? event.headers['x-test-user-groups'].split(',') : []
       };
     }
   }

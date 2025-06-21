@@ -24,7 +24,34 @@ exports.handler = async (event) => {
     if (!claims || !claims.sub) {
         return { statusCode: 401, body: JSON.stringify({ message: "Unauthorized" }) };
         }
-    const requestingUserId = claims.sub;
+    
+    const cognitoSub = claims.sub;
+
+    // Get the actual userId from our Users table
+    let requestingUserId;
+    try {
+        const userQuery = {
+            TableName: process.env.USERS_TABLE,
+            IndexName: 'CognitoSubIndex',
+            KeyConditionExpression: 'cognitoSub = :cognitoSub',
+            ExpressionAttributeValues: {
+                ':cognitoSub': cognitoSub
+            }
+        };
+
+        const { QueryCommand } = require("@aws-sdk/lib-dynamodb");
+        const userResult = await docClient.send(new QueryCommand(userQuery));
+        if (!userResult.Items || userResult.Items.length === 0) {
+            console.log('❌ User not found in database:', cognitoSub);
+            return { statusCode: 403, body: JSON.stringify({ message: "User profile not found. Please create your profile first." }) };
+        }
+
+        requestingUserId = userResult.Items[0].userId;
+        console.log(`🔐 Authenticated user - CognitoSub: ${cognitoSub}, UserId: ${requestingUserId}`);
+    } catch (error) {
+        console.error('❌ Error fetching user profile:', error);
+        return { statusCode: 500, body: JSON.stringify({ message: "Failed to verify user profile" }) };
+    }
 
     try {
         // Step 1: Get the application to find the listingId
@@ -45,7 +72,18 @@ exports.handler = async (event) => {
             return { statusCode: 403, body: JSON.stringify({ message: "Forbidden: You do not own this listing." }) };
         }
 
-        // Step 4: If authorized, update the application status
+        // Step 4: If authorized, check for irrevocable acceptance logic
+        // Prevent changing accepted applications back to pending/ignored
+        if (application.status === 'accepted' && status !== 'accepted') {
+            return { 
+                statusCode: 400, 
+                body: JSON.stringify({ 
+                    message: "Cannot change status of an accepted application. Acceptance is final and irrevocable." 
+                }) 
+            };
+        }
+
+        // Step 5: Update the application status
             const updateParams = {
             TableName: APPLICATIONS_TABLE_NAME,
             Key: { applicationId },

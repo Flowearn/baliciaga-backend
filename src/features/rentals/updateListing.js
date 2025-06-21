@@ -30,7 +30,7 @@ exports.handler = async (event) => {
         }
 
         // 2. Extract and validate authentication
-        const { userId, cognitoSub } = await validateAuthentication(event);
+        const { userId, cognitoSub, cognitoGroups } = await validateAuthentication(event);
         
         // 3. Verify listing exists and user is the owner
         const existingListing = await verifyListingOwnership(listingId, userId, cognitoSub);
@@ -38,7 +38,13 @@ exports.handler = async (event) => {
         // 4. Parse and validate request body
         const updateData = await parseAndValidateRequest(event);
         
-        // 5. Update listing in DynamoDB
+        // 5. Validate platform role permission if posterRole is being updated
+        if (updateData.posterRole === 'platform' && !cognitoGroups.includes('InternalStaff')) {
+            console.log('❌ User attempted to update listing to platform role without InternalStaff permission');
+            throw createError(403, 'FORBIDDEN', 'You do not have permission to set platform role');
+        }
+        
+        // 6. Update listing in DynamoDB
         const updatedListing = await updateListing(listingId, updateData);
 
         // 6. Return success response
@@ -91,6 +97,7 @@ async function validateAuthentication(event) {
     }
 
     const cognitoSub = userClaims.sub;
+    const cognitoGroups = userClaims['cognito:groups'] || [];
 
     // Get the actual userId from our Users table
     try {
@@ -110,9 +117,9 @@ async function validateAuthentication(event) {
         }
 
         const userId = userResult.Items[0].userId;
-        console.log(`🔐 Authenticated user - CognitoSub: ${cognitoSub}, UserId: ${userId}`);
+        console.log(`🔐 Authenticated user - CognitoSub: ${cognitoSub}, UserId: ${userId}, Groups: ${JSON.stringify(cognitoGroups)}`);
 
-        return { userId, cognitoSub };
+        return { userId, cognitoSub, cognitoGroups };
     } catch (error) {
         if (error.statusCode) {
             throw error;
@@ -178,6 +185,16 @@ async function parseAndValidateRequest(event) {
     const updateData = {};
 
     // Optional field validation - only validate provided fields
+    if (body.posterRole !== undefined) {
+        if (!body.posterRole || typeof body.posterRole !== 'string') {
+            errors.push('posterRole must be a string if provided');
+        } else if (body.posterRole !== 'tenant' && body.posterRole !== 'landlord' && body.posterRole !== 'platform') {
+            errors.push('posterRole must be either "tenant", "landlord", or "platform" if provided');
+        } else {
+            updateData.posterRole = body.posterRole;
+        }
+    }
+
     if (body.title !== undefined) {
         if (!body.title || typeof body.title !== 'string' || body.title.trim().length === 0) {
             errors.push('title must be a non-empty string if provided');

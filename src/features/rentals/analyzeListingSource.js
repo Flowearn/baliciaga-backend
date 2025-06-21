@@ -1,10 +1,10 @@
 /**
  * Listing Source Analysis Lambda Function
- * Handles POST /listings/analyze-source - Extract structured information from raw text
+ * Handles POST /listings/analyze-source - Extract structured information from raw text or images
  * 
  * Features:
  * - JWT token validation via Cognito
- * - Gemini AI integration for text analysis
+ * - Gemini AI integration for text and image analysis
  * - Input validation and sanitization
  * - Structured JSON response
  * - CORS support
@@ -19,12 +19,57 @@ const ssm = new AWS.SSM({
 });
 
 /**
+ * Parse multipart/form-data from Lambda event
+ */
+function parseMultipartData(body, contentType) {
+    const boundary = contentType.split('boundary=')[1];
+    if (!boundary) {
+        throw new Error('No boundary found in content-type');
+    }
+
+    const parts = body.split(`--${boundary}`);
+    const parsedData = {};
+    
+    for (const part of parts) {
+        if (part.includes('Content-Disposition')) {
+            const nameMatch = part.match(/name="([^"]+)"/);
+            if (nameMatch) {
+                const fieldName = nameMatch[1];
+                
+                // Find where the content starts (after double newline)
+                const contentStart = part.indexOf('\r\n\r\n') + 4;
+                if (contentStart > 3) {
+                    const content = part.substring(contentStart);
+                    
+                    // Remove trailing boundary markers
+                    const cleanContent = content.replace(/\r\n--.*$/, '');
+                    
+                    if (part.includes('Content-Type: image/')) {
+                        // This is a file upload
+                        parsedData[fieldName] = {
+                            type: 'image',
+                            content: cleanContent,
+                            mimeType: part.match(/Content-Type: ([^\r\n]+)/)[1]
+                        };
+                    } else {
+                        // This is a text field
+                        parsedData[fieldName] = cleanContent;
+                    }
+                }
+            }
+        }
+    }
+    
+    return parsedData;
+}
+
+/**
  * Normalize price text by removing currency symbols and thousand separators
  */
 function normalizePriceText(raw) {
+    // NOTE: Do NOT remove currency symbols - they are needed for AI currency detection!
     return raw
-        .replace(/(?:IDR|Rp|USD|\$)\s?/gi, '')  // 去币种
-        .replace(/(?<=\d)[,.](?=\d{3}\b)/g, '') // 去千位分隔符
+        .replace(/(?<=\d)[,.](?=\d{3}\b)/g, '') // 去千位分隔符，但保留货币符号
 }
 
 /**
@@ -36,7 +81,7 @@ exports.handler = async (event) => {
 
     try {
         // 1. Parse and validate request
-        const { sourceText } = await parseAndValidateRequest(event);
+        const requestData = await parseAndValidateRequest(event);
         
         // 2. Get Gemini API key from SSM
         const geminiApiKey = await getGeminiApiKey();
@@ -45,23 +90,47 @@ exports.handler = async (event) => {
         const genAI = new GoogleGenerativeAI(geminiApiKey);
         const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash-preview-05-20" });
 
-        // 4. Construct analysis prompt
-        const prompt = constructAnalysisPrompt(sourceText);
+        let result;
         
-        // 5. Call Gemini API
-        const result = await model.generateContent(prompt);
+        if (requestData.type === 'image') {
+            // 4a. Process image with Gemini Vision
+            console.log('🖼️ Processing image with Gemini Vision');
+            
+            const imagePart = {
+                inlineData: {
+                    data: Buffer.from(requestData.imageContent, 'binary').toString('base64'),
+                    mimeType: requestData.mimeType
+                }
+            };
+            
+            const prompt = constructImageAnalysisPrompt();
+            result = await model.generateContent([prompt, imagePart]);
+            
+        } else {
+            // 4b. Process text with Gemini
+            console.log('📝 Processing text with Gemini');
+            const prompt = constructAnalysisPrompt(requestData.sourceText);
+            result = await model.generateContent(prompt);
+        }
+        
+        // 5. Parse AI response
         const response = await result.response;
         const aiResponseText = response.text();
-        
-        // 6. Parse AI response
         const extractedData = await parseAIResponse(aiResponseText);
+        
+        // 6. Clean up internal AI fields before returning
+        if (extractedData.reasoning) {
+            delete extractedData.reasoning;
+        }
         
         // 7. Return structured response
         return createResponse(200, {
             success: true,
             data: {
                 extractedListing: extractedData,
-                sourceText: sourceText.substring(0, 200) + (sourceText.length > 200 ? '...' : ''), // Return snippet for reference
+                sourceText: requestData.type === 'text' ? 
+                    requestData.sourceText.substring(0, 200) + (requestData.sourceText.length > 200 ? '...' : '') :
+                    'Image processed',
                 aiProcessedAt: new Date().toISOString()
             }
         });
@@ -116,30 +185,72 @@ async function parseAndValidateRequest(event) {
         throw createError(401, 'UNAUTHORIZED', 'Missing or invalid authentication token');
     }
 
-    // Parse request body
-    let body;
-    try {
-        body = JSON.parse(event.body || '{}');
-    } catch (error) {
-        throw createError(400, 'INVALID_JSON', 'Request body must be valid JSON');
-    }
+    // Check content type to determine how to parse the request
+    const contentType = event.headers['content-type'] || event.headers['Content-Type'] || '';
+    
+    if (contentType.includes('multipart/form-data')) {
+        // Handle FormData (image upload)
+        console.log('📋 Parsing multipart/form-data request');
+        
+        if (!event.body) {
+            throw createError(400, 'EMPTY_BODY', 'Request body is required for multipart data');
+        }
+        
+        let parsedData;
+        try {
+            // Decode base64 body if it's encoded
+            const bodyData = event.isBase64Encoded ? 
+                Buffer.from(event.body, 'base64').toString('binary') : 
+                event.body;
+                
+            parsedData = parseMultipartData(bodyData, contentType);
+        } catch (error) {
+            console.error('Error parsing multipart data:', error);
+            throw createError(400, 'INVALID_MULTIPART', 'Failed to parse multipart data');
+        }
+        
+        // Check if we have an image
+        if (parsedData.sourceImage && parsedData.sourceImage.type === 'image') {
+            return {
+                type: 'image',
+                imageContent: parsedData.sourceImage.content,
+                mimeType: parsedData.sourceImage.mimeType
+            };
+        } else {
+            throw createError(400, 'MISSING_IMAGE', 'sourceImage file is required for multipart requests');
+        }
+        
+    } else {
+        // Handle JSON (text input)
+        console.log('📋 Parsing JSON request');
+        
+        let body;
+        try {
+            body = JSON.parse(event.body || '{}');
+        } catch (error) {
+            throw createError(400, 'INVALID_JSON', 'Request body must be valid JSON');
+        }
 
-    // Validate sourceText exists
-    if (!body.sourceText || typeof body.sourceText !== 'string') {
-        throw createError(400, 'MISSING_SOURCE_TEXT', 'sourceText is required and must be a string');
-    }
+        // Validate sourceText exists
+        if (!body.sourceText || typeof body.sourceText !== 'string') {
+            throw createError(400, 'MISSING_SOURCE_TEXT', 'sourceText is required and must be a string');
+        }
 
-    // Validate sourceText length
-    const sourceText = body.sourceText.trim();
-    if (sourceText.length === 0) {
-        throw createError(400, 'EMPTY_SOURCE_TEXT', 'sourceText cannot be empty');
-    }
+        // Validate sourceText length
+        const sourceText = body.sourceText.trim();
+        if (sourceText.length === 0) {
+            throw createError(400, 'EMPTY_SOURCE_TEXT', 'sourceText cannot be empty');
+        }
 
-    if (sourceText.length > 10000) {
-        throw createError(400, 'SOURCE_TEXT_TOO_LONG', 'sourceText cannot exceed 10,000 characters');
-    }
+        if (sourceText.length > 10000) {
+            throw createError(400, 'SOURCE_TEXT_TOO_LONG', 'sourceText cannot exceed 10,000 characters');
+        }
 
-    return { sourceText };
+        return { 
+            type: 'text',
+            sourceText 
+        };
+    }
 }
 
 /**
@@ -180,83 +291,153 @@ async function getGeminiApiKey() {
 }
 
 /**
+ * Construct analysis prompt for image processing
+ */
+function constructImageAnalysisPrompt() {
+    return `
+You are a hyper-precise data extraction engine for real estate in Bali, Indonesia. Your ONLY task is to populate a JSON object based *only* on the provided source material (text or image).
+
+<instructions>
+  <rule id="1" importance="MAXIMUM">
+    **CURRENCY DETECTION:** This is your most important task. First, analyze the price to determine the currency. If you see a '$' symbol OR the word 'USD', the 'currency' field in the JSON output MUST be 'USD'. In ALL other cases, assume the currency is 'IDR'.
+  </rule>
+  <rule id="2">
+    **STRICT EXTRACTION:** Extract ONLY what is written. Do not invent, assume, or infer data. If information is missing, its value MUST be null.
+  </rule>
+  <rule id="3">
+    **NO DEFAULTING:** The 'minimumStay' field MUST be null if not mentioned. DO NOT default to '12 months'.
+  </rule>
+  <rule id="4">
+    **REASONING:** You MUST include a 'reasoning' field in your JSON output, containing a brief, one-sentence explanation of your thought process, especially for the currency decision.
+  </rule>
+</instructions>
+
+<json_structure>
+{
+  "title": "string",
+  "bedrooms": "number | null",
+  "bathrooms": "number | null",
+  "landSize": "number | null",
+  "buildingSize": "number | null",
+  "address": "string | null",
+  "currency": "'USD' | 'IDR'",
+  "pricing": {
+    "monthly": "number | null",
+    "yearly": "number | null"
+  },
+  "minimumStay_months": "number | null",
+  "price_yearly_idr": "number | null", 
+  "price_yearly_usd": "number | null",
+  "amenityTags": ["string"],
+  "reasoning": "string" // This field is mandatory
+}
+</json_structure>
+
+<examples>
+  <example id="1_idr">
+    <source>Villa for rent 250jt/yr in Seminyak.</source>
+    <output>
+    {
+      "title": "Villa for rent in Seminyak", "bedrooms": null, "bathrooms": null, "landSize": null, "buildingSize": null, "address": "Seminyak", "currency": "IDR", "pricing": { "monthly": 20833333, "yearly": 250000000 }, "minimumStay": null, "amenityTags": [], "reasoning": "Currency is IDR because no '$' or 'USD' was found in the price."
+    }
+    </output>
+  </example>
+  <example id="2_usd">
+    <source>Apartment available for $1.5k/month in Canggu.</source>
+    <output>
+    {
+      "title": "Apartment in Canggu", "bedrooms": null, "bathrooms": null, "landSize": null, "buildingSize": null, "address": "Canggu", "currency": "USD", "pricing": { "monthly": 1500, "yearly": null }, "minimumStay": null, "amenityTags": [], "reasoning": "Currency is USD because the '$' symbol was found in the price."
+    }
+    </output>
+  </example>
+</examples>
+
+Please analyze the image and return only the JSON object with the extracted information.
+`;
+}
+
+/**
  * Construct detailed analysis prompt for Gemini
  */
 function constructAnalysisPrompt(sourceText) {
     // Normalize price text before analysis
     const normalizedText = normalizePriceText(sourceText);
     
-    const prompt = `
-You are an expert real estate data analyst for Bali. Your task is to extract structured information from a given text or image about a property listing.
+    const promptV6_optimized = `
+You are a hyper-precise data extraction engine for real estate in Bali, Indonesia. Your ONLY task is to populate a JSON object based *only* on the provided source material.
 
-**Instructions:**
-1.  Analyze the provided text and/or image content carefully.
-2.  Extract the information for the fields defined in the JSON schema below.
-3.  If a piece of information is not found, use a null value for that field.
-4.  The "locationArea" should be a general, well-known area like 'Canggu', 'Ubud', 'Pererenan', 'Seminyak', 'Uluwatu'. Do not use the full street address.
-5.  "amenities" should be an array of short, descriptive strings.
-6.  All prices must be integers, without any symbols or commas.
-7.  **You MUST respond ONLY with a single, valid JSON object that adheres to the following schema. Do not include any explanatory text, markdown formatting, or anything else outside of the JSON object.**
-8.  If the text contains a yearly price (e.g. "IDR 550,000,000 per year"), divide that value by 12 **(round to nearest integer)** and assign the result to "monthlyRent". Set "yearlyRent" to the original yearly integer.
-9.  Remove currency symbols (IDR, Rp, $, etc.) and any thousand separators (comma or dot) before returning numeric values.
-10. If both yearly and monthly prices are present, assume the yearly price already includes a bulk-lease discount. Return it unchanged in \`yearlyRent\`. Do **not** overwrite the landlord-stated \`monthlyRent\`; instead, calculate \`monthlyRentFromYearly = yearlyRent / 12\` and append it to the JSON under a new helper field \`monthlyRentEquivalent\`. If the difference is >5%, add a \`priceNote\` field with "landlord discount".
-11. For smoking, pet, furnished policies: if text has no mention, return \`null\` (leave decision to user). Do **not** coerce to \`false\`.
-12. \`locationArea\` may be **any** Bali locality explicitly mentioned (e.g. Kedungu, Kerobokan, Bingin). If no area appears, set \`locationArea\` to \`null\` and leave to user.
-13. When extracting bathroom count, accept "ensuite", "shared" etc. If text shows "5 ensuite bathrooms", "2.5 baths", or "5 suites" (assume 1 bathroom per suite), extract the number. Always return as a number, not string. If unclear, estimate based on bedrooms (minimum 1).
-14. **CRITICAL**: All price fields (monthlyRent, yearlyRent, monthlyRentEquivalent, utilities, deposit) must be integers in JSON without quotes. Never return price values as strings.
-15. If text mentions yearly price but no explicit monthly price, calculate monthlyRent = yearlyRent / 12. If text mentions both, preserve the explicit monthly price and calculate monthlyRentEquivalent separately.
+<critical_instructions>
+  <rule id="1" importance="ABSOLUTE_HIGHEST">
+    **MINIMUM STAY EXTRACTION:** Look for patterns like: "minimum X months", "min X year", "Minimum Y months lease", "Lease: Minimum Z months", "min Take X Year". Extract the EXACT number and unit. Convert to months (1 year = 12 months, 3 years = 36 months). If not found, use null.
+  </rule>
+  <rule id="2" importance="ABSOLUTE_HIGHEST">
+    **AREA SIZE EXTRACTION:** Look for land/building sizes in various formats: "3 Are" (1 Are = 100 sqm), "500sqm", "500 sqm", "500 m2", "Landsize 3 Are", "land size X sqm". Convert everything to square meters. If not found, use null.
+  </rule>
+  <rule id="3" importance="ABSOLUTE_HIGHEST">
+    **PRICE EXTRACTION (NO CALCULATION):** Identify monthly or yearly prices and their currency. Put the raw number directly into the corresponding field ('pricing.monthly', 'pricing.yearly', 'price_yearly_idr', 'price_yearly_usd'). DO NOT perform any calculations like dividing yearly rent by 12. Just extract the original number you see.
+  </rule>
+  <rule id="4" importance="ABSOLUTE_HIGHEST">
+    **PRECISE ADDRESS EXTRACTION:** Do NOT default to "Bali". Extract the specific area mentioned: "Canggu", "Seminyak", "Ubud", "Pererenan", "Berawa", "Kerobokan", "Padang Linjong", "Seseh", etc. Only use "Bali" if NO specific area is mentioned.
+  </rule>
+  <rule id="5" importance="HIGH">
+    **CURRENCY DETECTION:** If the price is mentioned with a '$' symbol OR the word 'USD', the 'currency' field MUST be 'USD'. In ALL other cases, assume the currency is 'IDR'.
+  </rule>
+  <rule id="6">
+    **NO HALLUCINATIONS:** If information is NOT explicitly written in the source material, the value MUST be null. Do NOT guess or default values.
+  </rule>
+  <rule id="7" name="Area/Size Extraction Guide">
+    **HOW TO FIND AREA:** You must actively look for land or building size. The units can be 'sqm', 'm2', or 'Are'. **You must know that 1 Are = 100 sqm**. For example, if the source says "Landsize 3 Are", you must extract the value for the 'landSize' field as \`300\`.
+  </rule>
+  <rule id="8" name="Minimum Stay Extraction Guide">
+    **HOW TO FIND MINIMUM STAY:** You must actively look for minimum stay information. It can be written in many ways, such as "min Take 3 Year", "minimum 12 months", "1 year minimum lease", or "yearly only". You MUST convert the final value into a single number representing months. For example, "min Take 3 Year" becomes \`36\`, and "yearly only" becomes \`12\`.
+  </rule>
+</critical_instructions>
 
-**JSON Schema:**
+<json_structure>
 {
   "title": "string",
-  "locationArea": "string | null",
+  "bedrooms": "number | null",
+  "bathrooms": "number | null",
+  "landSize": "number | null",
+  "buildingSize": "number | null",
   "address": "string | null",
-  "bedrooms": "number",
-  "bathrooms": "number",
-  "monthlyRent": "number",
-  "yearlyRent": "number | null",
-  "monthlyRentEquivalent": "number | null",
-  "utilities": "number | null",
-  "deposit": "number | null",
-  "minimumStay": "number | null",
-  "furnished": "boolean | null",
-  "petFriendly": "boolean | null",
-  "smokingAllowed": "boolean | null",
-  "priceNote": "string | null",
-  "amenities": ["string"]
+  "currency": "'USD' | 'IDR'",
+  "pricing": {
+    "monthly": "number | null",
+    "yearly": "number | null"
+  },
+  "minimumStay_months": "number | null",
+  "price_yearly_idr": "number | null", 
+  "price_yearly_usd": "number | null",
+  "amenityTags": ["string"],
+  "reasoning": "string" // This field is mandatory
 }
+</json_structure>
 
----
+<examples>
+  <example id="1_idr">
+    <source>Villa for rent 250jt/yr in Seminyak.</source>
+    <output>
+    {
+      "title": "Villa for rent in Seminyak", "bedrooms": null, "bathrooms": null, "landSize": null, "buildingSize": null, "address": "Seminyak", "currency": "IDR", "pricing": { "monthly": 20833333, "yearly": 250000000 }, "minimumStay": null, "amenityTags": [], "reasoning": "Currency is IDR because no '$' or 'USD' was found in the price."
+    }
+    </output>
+  </example>
+  <example id="2_usd">
+    <source>Apartment available for $1.5k/month in Canggu.</source>
+    <output>
+    {
+      "title": "Apartment in Canggu", "bedrooms": null, "bathrooms": null, "landSize": null, "buildingSize": null, "address": "Canggu", "currency": "USD", "pricing": { "monthly": 1500, "yearly": null }, "minimumStay": null, "amenityTags": [], "reasoning": "Currency is USD because the '$' symbol was found in the price."
+    }
+    </output>
+  </example>
+</examples>
 
-**Example 1:**
-
-*Input Text:* "For rent: Beautiful 2-bedroom, 2-bathroom villa in Canggu. Fully furnished with a private pool, AC in both rooms, and fast Wi-Fi. Monthly rent is IDR 25,000,000. One month security deposit required. Available August 1st, 2025, minimum stay 6 months. Pets are considered. No smoking indoors. Address: Jl. Pantai Batu Bolong No.5, Canggu, Bali."
-
-*Your JSON Response:*
-{
-  "title": "Beautiful 2BR Villa with Pool",
-  "locationArea": "Canggu",
-  "address": "Jl. Pantai Batu Bolong No.5, Canggu, Bali",
-  "bedrooms": 2,
-  "bathrooms": 2,
-  "monthlyRent": 25000000,
-  "yearlyRent": null,
-  "utilities": null,
-  "deposit": 25000000,
-  "minimumStay": 6,
-  "furnished": true,
-  "petFriendly": true,
-  "smokingAllowed": false,
-  "amenities": ["Private Pool", "AC", "Fast Wi-Fi"]
-}
-
----
-
-Now, analyze the following content:
+Now, analyze the following source material and provide the JSON output:
 ${normalizedText}
-`;
+    `;
     
-    return prompt;
+    return promptV6_optimized;
 }
 
 /**
@@ -316,9 +497,12 @@ async function parseAIResponse(aiResponseText) {
         // Parse JSON
         const parsedData = JSON.parse(cleanedResponse);
         
+        // Debug: Log the parsed AI response
+        console.log('🤖 AI Response parsed:', JSON.stringify(parsedData, null, 2));
+        
         // Post-processing: Fix data types
         // Convert string prices to numbers
-        const priceFields = ['monthlyRent', 'yearlyRent', 'monthlyRentEquivalent', 'utilities', 'deposit'];
+        const priceFields = ['monthlyRent', 'yearlyRent', 'monthlyRentEquivalent', 'utilities', 'deposit', 'price_yearly_idr', 'price_yearly_usd'];
         priceFields.forEach(field => {
             if (parsedData[field] && typeof parsedData[field] === 'string') {
                 // Remove commas and spaces, then convert to number
@@ -337,36 +521,73 @@ async function parseAIResponse(aiResponseText) {
             parsedData.bathrooms = Math.max(1, parsedData.bedrooms || 1);
         }
         
-        // Fix missing monthlyRent when yearlyRent exists
-        if (!parsedData.monthlyRent && parsedData.yearlyRent) {
-            parsedData.monthlyRent = Math.round(parsedData.yearlyRent / 12);
+        // Remove automatic calculation - let frontend handle price calculations
+        // AI should only extract raw prices without performing calculations
+        
+        // Map new AI schema fields to expected format
+        // AI returns: amenityTags, pricing.monthly, currency, etc.
+        // Backend expects: amenities, monthlyRent, etc.
+        if (parsedData.amenityTags && !parsedData.amenities) {
+            parsedData.amenities = parsedData.amenityTags;
+        }
+        if (parsedData.pricing?.monthly && !parsedData.monthlyRent) {
+            parsedData.monthlyRent = parsedData.pricing.monthly;
+        }
+        if (parsedData.pricing?.yearly && !parsedData.yearlyRent) {
+            parsedData.yearlyRent = parsedData.pricing.yearly;
         }
         
-        // Validate required fields for new schema (relaxed validation)
-        const requiredFields = ['title', 'bedrooms', 'bathrooms', 'monthlyRent', 'amenities'];
-        const missingFields = requiredFields.filter(field => !parsedData.hasOwnProperty(field));
-        
-        if (missingFields.length > 0) {
-            throw createError(500, 'AI_PARSING_ERROR', `AI response missing required fields: ${missingFields.join(', ')}`);
+        // Handle new yearly price fields
+        if (parsedData.price_yearly_idr && !parsedData.yearlyRent && parsedData.currency === 'IDR') {
+            parsedData.yearlyRent = parsedData.price_yearly_idr;
         }
+        if (parsedData.price_yearly_usd && !parsedData.yearlyRent && parsedData.currency === 'USD') {
+            parsedData.yearlyRent = parsedData.price_yearly_usd;
+        }
+        
+        // Handle new minimum stay field (convert from minimumStay_months)
+        if (parsedData.minimumStay_months && typeof parsedData.minimumStay_months === 'number') {
+            parsedData.minimumStay = parsedData.minimumStay_months;
+        }
+        
+        // Handle currency conversion - store the detected currency
+        parsedData.detectedCurrency = parsedData.currency || 'IDR';
+        
+        // Relaxed validation - only require basic structure
+        // AI might return null for fields it cannot extract from vague input
+        
+        // If AI explicitly returns null/empty data, that's acceptable
+        // Only fail if the JSON structure is completely invalid or missing critical info
+        
+        // Provide sensible defaults for missing data
+        if (!parsedData.title) {
+            parsedData.title = "Property Listing";
+        }
+        if (!parsedData.bedrooms && parsedData.bedrooms !== 0) {
+            parsedData.bedrooms = 1; // Default
+        }
+        if (!parsedData.bathrooms && parsedData.bathrooms !== 0) {
+            parsedData.bathrooms = 1; // Default
+        }
+        // Don't set default price - let it be null if not found
 
         // Validate and transform data to match the expected format
         const validatedData = {
             title: String(parsedData.title || 'Rental Property'),
-            monthlyRent: Number(parsedData.monthlyRent) || 0,
-            currency: 'IDR', // Default for Bali properties
-            deposit: parsedData.deposit ? Number(parsedData.deposit) : (parsedData.monthlyRent ? Number(parsedData.monthlyRent) : 0),
+            monthlyRent: Number(parsedData.monthlyRent) || null, // Allow null prices
+            currency: parsedData.detectedCurrency || 'IDR', // Use detected currency
+            deposit: parsedData.deposit ? Number(parsedData.deposit) : (parsedData.monthlyRent ? Number(parsedData.monthlyRent) : null),
             utilities: parsedData.utilities ? Number(parsedData.utilities) : 0,
             bedrooms: Number(parsedData.bedrooms) || 1,
             bathrooms: Number(parsedData.bathrooms) || 1,
-            squareFootage: null, // Not provided in current schema
+            squareFootage: parsedData.landSize || parsedData.buildingSize || null, // Use extracted sizes
             furnished: parsedData.furnished === true,
             petFriendly: parsedData.petFriendly === true,
             smokingAllowed: parsedData.smokingAllowed === true,
             address: String(parsedData.address || 'Address not specified'),
             locationArea: String(parsedData.locationArea || 'Bali'),
             availableFrom: new Date().toISOString().split('T')[0], // Default to today
-            minimumStay: parsedData.minimumStay ? Number(parsedData.minimumStay) : 12,
+            minimumStay: parsedData.minimumStay ? Number(parsedData.minimumStay) : null,
             description: String(parsedData.title || `Property in ${parsedData.locationArea || 'Bali'}`),
             amenities: Array.isArray(parsedData.amenities) ? parsedData.amenities : [],
             
@@ -379,10 +600,13 @@ async function parseAIResponse(aiResponseText) {
                 bathrooms: parsedData.bathrooms,
                 monthlyRent: parsedData.monthlyRent,
                 yearlyRent: parsedData.yearlyRent,
+                price_yearly_idr: parsedData.price_yearly_idr,
+                price_yearly_usd: parsedData.price_yearly_usd,
                 monthlyRentEquivalent: parsedData.monthlyRentEquivalent,
                 utilities: parsedData.utilities,
                 deposit: parsedData.deposit,
                 minimumStay: parsedData.minimumStay,
+                minimumStay_months: parsedData.minimumStay_months,
                 furnished: parsedData.furnished,
                 petFriendly: parsedData.petFriendly,
                 smokingAllowed: parsedData.smokingAllowed,

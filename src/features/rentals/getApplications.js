@@ -1,13 +1,9 @@
-const { DynamoDBClient } = require("@aws-sdk/client-dynamodb");
-const { DynamoDBDocumentClient, QueryCommand, GetCommand } = require("@aws-sdk/lib-dynamodb");
+const dynamodb = require('../../utils/dynamoDbClient'); // Use the shared v2 client
 const { getAuthenticatedUser } = require('../../utils/authUtils');
 
-const dbClient = new DynamoDBClient({});
-const docClient = DynamoDBDocumentClient.from(dbClient);
-
-const LISTINGS_TABLE_NAME = process.env.LISTINGS_TABLE_NAME;
-const APPLICATIONS_TABLE_NAME = process.env.APPLICATIONS_TABLE_NAME;
-const USERS_TABLE_NAME = process.env.USERS_TABLE_NAME;
+const LISTINGS_TABLE_NAME = process.env.LISTINGS_TABLE;
+const APPLICATIONS_TABLE_NAME = process.env.APPLICATIONS_TABLE;
+const USERS_TABLE_NAME = process.env.USERS_TABLE;
 
 /**
  * Lambda handler for GET /listings/{listingId}/applications
@@ -17,14 +13,40 @@ exports.handler = async (event) => {
     const { listingId } = event.pathParameters;
 
     const claims = getAuthenticatedUser(event);
-        if (!claims || !claims.sub) {
+    if (!claims || !claims.sub) {
         return { statusCode: 401, body: JSON.stringify({ message: "Unauthorized" }) };
+    }
+    
+    const cognitoSub = claims.sub;
+
+    // Get the actual userId from our Users table
+    let requestingUserId;
+    try {
+        const userQuery = {
+            TableName: process.env.USERS_TABLE,
+            IndexName: 'CognitoSubIndex',
+            KeyConditionExpression: 'cognitoSub = :cognitoSub',
+            ExpressionAttributeValues: {
+                ':cognitoSub': cognitoSub
+            }
+        };
+
+        const userResult = await dynamodb.query(userQuery).promise();
+        if (!userResult.Items || userResult.Items.length === 0) {
+            console.log('❌ User not found in database:', cognitoSub);
+            return { statusCode: 403, body: JSON.stringify({ message: "User profile not found. Please create your profile first." }) };
         }
-    const requestingUserId = claims.sub;
+
+        requestingUserId = userResult.Items[0].userId;
+        console.log(`🔐 Authenticated user - CognitoSub: ${cognitoSub}, UserId: ${requestingUserId}`);
+    } catch (error) {
+        console.error('❌ Error fetching user profile:', error);
+        return { statusCode: 500, body: JSON.stringify({ message: "Failed to verify user profile" }) };
+    }
 
     try {
         // Step 1: Get the listing to verify ownership
-        const listingResult = await docClient.send(new GetCommand({ TableName: LISTINGS_TABLE_NAME, Key: { listingId } }));
+        const listingResult = await dynamodb.get({ TableName: LISTINGS_TABLE_NAME, Key: { listingId } }).promise();
         if (!listingResult.Item) {
             return { statusCode: 404, body: JSON.stringify({ message: "Listing not found" }) };
         }
@@ -36,36 +58,69 @@ exports.handler = async (event) => {
         }
 
         // Step 3: Get applications for this listing
-        const appsResult = await docClient.send(new QueryCommand({
+        const appsResult = await dynamodb.query({
             TableName: APPLICATIONS_TABLE_NAME,
             IndexName: 'ListingApplicationsIndex',
             KeyConditionExpression: 'listingId = :listingId',
             ExpressionAttributeValues: { ':listingId': listingId },
-        }));
+        }).promise();
+
         const applications = appsResult.Items || [];
 
         if (applications.length === 0) {
-            return { statusCode: 200, body: JSON.stringify({ success: true, data: { applications: [] } }) };
+            return { 
+                statusCode: 200, 
+                body: JSON.stringify({ success: true, data: { applications: [] } }) 
+            };
         }
 
-        // --- CRITICAL FIX: Step 4 - Fetch all applicant profiles correctly ---
-        const fullApplications = await Promise.all(applications.map(async (app) => {
-            // Query the UsersTable using the GSI 'CognitoSubIndex'
-                const userQuery = {
-                TableName: USERS_TABLE_NAME,
-                    IndexName: 'CognitoSubIndex',
-                    KeyConditionExpression: 'cognitoSub = :cognitoSub',
-                ExpressionAttributeValues: { ':cognitoSub': app.applicantId },
-            };
-            const userResult = await docClient.send(new QueryCommand(userQuery));
-            const applicantData = (userResult.Items && userResult.Items.length > 0) ? userResult.Items[0] : null;
+        // ===== 强制替换核心逻辑，确保返回申请人完整资料 =====
 
-            return { ...app, applicant: applicantData };
-        }));
+        const applicationsFromDB = applications; // 本地变量重命名保持与说明一致
+
+        // 如果没有申请，直接返回空数组
+        if (applicationsFromDB.length === 0) {
+            return {
+                statusCode: 200,
+                body: JSON.stringify({ success: true, data: [] }),
+            };
+        }
+
+        // Helper: 批量获取用户资料
+        const batchGetUsersByIds = async (userIds) => {
+            const uniqueIds = [...new Set(userIds)];
+            const params = {
+                RequestItems: {
+                    [USERS_TABLE_NAME]: {
+                        Keys: uniqueIds.map(id => ({ userId: id }))
+                    }
+                }
+            };
+            const res = await dynamodb.batchGet(params).promise();
+            return res.Responses[USERS_TABLE_NAME] || [];
+        };
+
+        // 使用所有 applicantId，一次性从 Users 表获取所有用户信息
+        const applicantUserIds = applicationsFromDB.map(app => app.applicantId);
+        const userProfiles = await batchGetUsersByIds(applicantUserIds);
+
+        // 将用户信息映射回申请列表
+        const applicationsWithDetails = applicationsFromDB.map(app => {
+            const applicantProfile = userProfiles.find(p => p.userId === app.applicantId);
+            return {
+                ...app,
+                applicant: applicantProfile || null,
+            };
+        });
 
         return {
             statusCode: 200,
-            body: JSON.stringify({ success: true, data: { applications: fullApplications } }),
+            body: JSON.stringify({ 
+                success: true, 
+                data: { 
+                    applications: applicationsWithDetails 
+                } 
+            }),
         };
 
     } catch (error) {

@@ -18,6 +18,7 @@ exports.handler = async (event) => {
 
   try {
     const claims = getAuthenticatedUser(event);
+    console.log('[DIAGNOSIS] Step 1 - Cognito Sub from token:', claims.sub);
     
     if (!claims || !claims.sub) {
       return {
@@ -34,7 +35,54 @@ exports.handler = async (event) => {
       };
     }
     
-    const userId = claims.sub;
+    const cognitoSub = claims.sub;
+
+    // Get the actual userId from our Users table (using correct logic from createListing.js)
+    let userId;
+    try {
+      const userQuery = {
+        TableName: process.env.USERS_TABLE,
+        IndexName: 'CognitoSubIndex',
+        KeyConditionExpression: 'cognitoSub = :cognitoSub',
+        ExpressionAttributeValues: {
+          ':cognitoSub': cognitoSub
+        }
+      };
+
+      const userResult = await dynamodb.query(userQuery).promise();
+      console.log('[DIAGNOSIS] Step 2 - Found internal userId from DB:', userResult.Items.length > 0 ? userResult.Items[0].userId : null);
+      
+      if (!userResult.Items || userResult.Items.length === 0) {
+        console.log('❌ User not found in database:', cognitoSub);
+        return {
+          statusCode: 403,
+          headers: corsHeaders,
+          body: JSON.stringify({
+            success: false,
+            error: {
+              code: 'USER_NOT_FOUND',
+              message: 'User profile not found. Please create your profile first.'
+            }
+          })
+        };
+      }
+
+      userId = userResult.Items[0].userId;
+      console.log(`🔐 Authenticated user - CognitoSub: ${cognitoSub}, UserId: ${userId}`);
+    } catch (error) {
+      console.error('❌ Error fetching user profile:', error);
+      return {
+        statusCode: 500,
+        headers: corsHeaders,
+        body: JSON.stringify({
+          success: false,
+          error: {
+            code: 'DATABASE_ERROR',
+            message: 'Failed to verify user profile'
+          }
+        })
+      };
+    }
 
     // Parse query parameters
     const { limit = '10', startCursor, status = 'active' } = event.queryStringParameters || {};

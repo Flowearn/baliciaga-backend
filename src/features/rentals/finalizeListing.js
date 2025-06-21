@@ -12,6 +12,7 @@
  */
 
 const dynamodb = require('../../utils/dynamoDbClient');
+const { getAuthenticatedUser } = require('../../utils/authUtils');
 
 const LISTINGS_TABLE = process.env.LISTINGS_TABLE;
 const APPLICATIONS_TABLE = process.env.APPLICATIONS_TABLE;
@@ -25,12 +26,42 @@ exports.handler = async (event) => {
 
     try {
         // 1. Extract and validate authentication
-        const { userId } = await validateAuthentication(event);
+        const claims = getAuthenticatedUser(event);
+        if (!claims || !claims.sub) {
+            throw createError(401, 'UNAUTHORIZED', 'Missing or invalid authentication token');
+        }
+        const cognitoSub = claims.sub;
+
+        // Get the actual userId from our Users table (copied from getUserListings.js)
+        let userId;
+        try {
+            const userQuery = {
+                TableName: process.env.USERS_TABLE,
+                IndexName: 'CognitoSubIndex',
+                KeyConditionExpression: 'cognitoSub = :cognitoSub',
+                ExpressionAttributeValues: {
+                    ':cognitoSub': cognitoSub
+                }
+            };
+
+            const userResult = await dynamodb.query(userQuery).promise();
+            if (!userResult.Items || userResult.Items.length === 0) {
+                console.log('❌ User not found in database:', cognitoSub);
+                throw createError(403, 'USER_NOT_FOUND', 'User profile not found. Please create your profile first.');
+            }
+
+            userId = userResult.Items[0].userId;
+            console.log(`🔐 Authenticated user - CognitoSub: ${cognitoSub}, UserId: ${userId}`);
+        } catch (error) {
+            if (error.statusCode) throw error; // Re-throw our custom errors
+            console.error('❌ Error fetching user profile:', error);
+            throw createError(500, 'DATABASE_ERROR', 'Failed to verify user profile');
+        }
         
         // 2. Parse and validate request parameters
         const { listingId } = parsePathParameters(event);
         
-        // 3. Update listing status with ownership verification
+        // 3. Update listing status with ownership verification using correct userId
         await updateListingStatus(listingId, userId);
         
         // 4. Batch update accepted applications to 'signed'
@@ -74,60 +105,7 @@ exports.handler = async (event) => {
     }
 };
 
-/**
- * Validate Cognito authentication and extract user information
- */
-async function validateAuthentication(event) {
-    const claims = event.requestContext?.authorizer?.claims;
-    
-    if (!claims || !claims.sub) {
-        console.log('❌ Missing or invalid Cognito claims');
-        throw createError(401, 'UNAUTHORIZED', 'Missing or invalid authentication token');
-    }
 
-    const cognitoSub = claims.sub;
-    console.log(`🔐 Authenticated user: ${cognitoSub}`);
-
-    // Get userId from Users table
-    const userId = await getUserIdFromCognitoSub(cognitoSub);
-    
-    return { userId };
-}
-
-/**
- * Get userId from cognitoSub using Users table
- */
-async function getUserIdFromCognitoSub(cognitoSub) {
-    console.log(`🔍 Looking up userId for cognitoSub: ${cognitoSub}`);
-
-    const params = {
-        TableName: process.env.USERS_TABLE,
-        IndexName: 'CognitoSubIndex',
-        KeyConditionExpression: 'cognitoSub = :cognitoSub',
-        ExpressionAttributeValues: {
-            ':cognitoSub': cognitoSub
-        }
-    };
-
-    try {
-        const result = await dynamodb.query(params).promise();
-        
-        if (!result.Items || result.Items.length === 0) {
-            throw createError(404, 'USER_NOT_FOUND', 'User profile not found');
-        }
-
-        const userId = result.Items[0].userId;
-        console.log(`✅ Found userId: ${userId}`);
-        return userId;
-
-    } catch (error) {
-        if (error.statusCode) {
-            throw error; // Re-throw our custom errors
-        }
-        console.error('❌ DynamoDB query error:', error);
-        throw createError(500, 'DATABASE_ERROR', 'Failed to lookup user information');
-    }
-}
 
 /**
  * Parse and validate path parameters

@@ -437,29 +437,25 @@ functions:
     handler: src/features/auth/verifyChallenge.handler
     timeout: 30
 
+  # Cognito Triggers
+  postConfirmation:
+    handler: src/features/auth/postConfirmation.handler
+    timeout: 30
+
 plugins:
   - serverless-offline
   - serverless-dotenv-plugin
-  - serverless-dynamodb
+  # - serverless-dynamodb  # 注释掉以避免连接本地数据库
 
 custom:
   serverless-offline:
     httpPort: 3006 
-  dynamodb:
-    stages:
-      - dev
-    start:
-      port: 8000
-      inMemory: true
-      migrate: true
-      noStart: true
-      javaPath: /opt/homebrew/opt/openjdk@17/bin/java
   dotenv:
     exclude:
+      - vought
+      - AWS_REGION
       - AWS_ACCESS_KEY_ID
       - AWS_SECRET_ACCESS_KEY
-      - AWS_SESSION_TOKEN
-      - AWS_REGION
 
 resources:
   Resources:
@@ -492,6 +488,7 @@ resources:
           EmailSubject: "Baliciaga 验证码"
         # 🔧 自定义认证流程的Lambda触发器配置
         LambdaConfig:
+          PostConfirmation: !GetAtt PostConfirmationLambdaFunction.Arn
           DefineAuthChallenge: !GetAtt DefineAuthChallengeLambdaFunction.Arn
           CreateAuthChallenge: !GetAtt CreateAuthChallengeLambdaFunction.Arn
           VerifyAuthChallengeResponse: !GetAtt VerifyAuthChallengeResponseLambdaFunction.Arn
@@ -673,6 +670,14 @@ resources:
         Principal: cognito-idp.amazonaws.com
         SourceArn: !GetAtt CognitoUserPool.Arn
 
+    PostConfirmationInvocationPermission:
+      Type: AWS::Lambda::Permission
+      Properties:
+        Action: lambda:InvokeFunction
+        FunctionName: !GetAtt PostConfirmationLambdaFunction.Arn
+        Principal: cognito-idp.amazonaws.com
+        SourceArn: !GetAtt CognitoUserPool.Arn
+
     # S3 Bucket for Listing Images
     ListingImagesBucket:
       Type: AWS::S3::Bucket
@@ -712,7 +717,7 @@ resources:
             - Effect: Allow
               Principal: '*'
               Action: s3:GetObject
-              Resource: !Sub '${ProfilePicturesBucket}/*'
+              Resource: !Sub 'arn:aws:s3:::${ProfilePicturesBucket}/*'
 
   Outputs:
     CognitoUserPoolId:

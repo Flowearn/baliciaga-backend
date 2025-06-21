@@ -4,11 +4,12 @@
  */
 
 const { DynamoDBClient } = require("@aws-sdk/client-dynamodb");
-const { DynamoDBDocumentClient, QueryCommand } = require("@aws-sdk/lib-dynamodb");
+const { DynamoDBDocumentClient, QueryCommand, GetCommand } = require("@aws-sdk/lib-dynamodb");
 
 const dbClient = new DynamoDBClient({});
 const docClient = DynamoDBDocumentClient.from(dbClient);
 const APPLICATIONS_TABLE_NAME = process.env.APPLICATIONS_TABLE_NAME;
+const USERS_TABLE_NAME = process.env.USERS_TABLE;
 
 /**
  * Build complete listing response according to frontend Listing interface
@@ -45,6 +46,9 @@ const buildCompleteResponse = async (listing) => {
     // For backward compatibility, treat missing posterRole as 'landlord' (no additional spot)
     const initiatorIsTenant = listing.posterRole === 'tenant' ? 1 : 0;
     const filledSpots = acceptedApplicantsCount + initiatorIsTenant;
+
+    // Get initiator profile information
+    const initiatorProfile = await getInitiatorProfile(listing.initiatorId);
 
     return {
         // Main listing information
@@ -105,8 +109,46 @@ const buildCompleteResponse = async (listing) => {
         // --- NEW FIELDS ---
         acceptedApplicantsCount: filledSpots, // Use new calculation that includes poster role
         totalSpots: listing.bedrooms || 1, // Use bedrooms as total spots, default to 1
+        
+        // Initiator information
+        initiator: {
+            id: listing.initiatorId,
+            name: initiatorProfile?.name || 'Anonymous User',
+            profilePictureUrl: initiatorProfile?.profilePictureUrl || null,
+            role: listing.posterRole || 'landlord', // tenant or landlord
+            whatsApp: initiatorProfile?.whatsApp || null
+        }
         // ---
     };
+};
+
+/**
+ * Get initiator profile information
+ */
+const getInitiatorProfile = async (initiatorId) => {
+    try {
+        const params = {
+            TableName: USERS_TABLE_NAME,
+            Key: { userId: initiatorId }
+        };
+        
+        const result = await docClient.send(new GetCommand(params));
+        
+        if (!result.Item) {
+            console.log(`User profile not found for initiatorId: ${initiatorId}`);
+            return null;
+        }
+
+        // Return only the public profile information
+        return {
+            name: result.Item.profile?.name || result.Item.name || 'Anonymous User',
+            profilePictureUrl: result.Item.profile?.profilePictureUrl || result.Item.profilePictureUrl || null,
+            whatsApp: result.Item.profile?.whatsApp || result.Item.whatsApp || null
+        };
+    } catch (error) {
+        console.error(`Error fetching initiator profile for ${initiatorId}:`, error);
+        return null;
+    }
 };
 
 /**

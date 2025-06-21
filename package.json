@@ -1,10 +1,12 @@
 {
   "name": "baliciaga-backend",
   "version": "1.0.0",
-  "description": "Backend API for Baliciaga Coffee Shop App",
-  "main": "src/fetchCangguCafes.js",
+  "description": "Backend for Baliciaga rental platform",
+  "main": "index.js",
   "scripts": {
     "start": "node src/fetchCangguCafes.js",
+    "scrape-rental-posts": "node scripts/scrape-rental-posts.js",
+    "install-playwright": "npm install playwright && npx playwright install",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
@@ -12,6 +14,9 @@
     "e2e-test": "node scripts/e2e-test.js",
     "e2e-test:load-config": "source scripts/e2e-config.sh && npm run e2e-test"
   },
+  "keywords": ["rental", "bali", "serverless"],
+  "author": "Baliciaga Team",
+  "license": "MIT",
   "dependencies": {
     "@aws-sdk/client-cognito-identity-provider": "^3.826.0",
     "@aws-sdk/client-dynamodb": "^3.826.0",
@@ -21,7 +26,7 @@
     "@aws-sdk/s3-request-presigner": "^3.828.0",
     "@aws-sdk/util-dynamodb": "^3.826.0",
     "@google/generative-ai": "^0.21.0",
-    "aws-sdk": "^2.1692.0",
+    "aws-sdk": "^2.1691.0",
     "axios": "^1.9.0",
     "cors": "^2.8.5",
     "crypto-secure-random-digit": "^1.0.10",
@@ -32,14 +37,15 @@
     "serverless-http": "^3.2.0",
     "sharp": "^0.34.2",
     "sinon": "^20.0.0",
-    "uuid": "^11.1.0",
-    "yargs": "^18.0.0"
+    "uuid": "^10.0.0",
+    "yargs": "^18.0.0",
+    "playwright": "^1.40.0"
   },
   "devDependencies": {
     "aws-dynamodb-local": "^0.0.11",
     "jest": "^30.0.0",
     "serverless-dotenv-plugin": "^6.0.0",
-    "serverless-dynamodb": "^0.2.56",
-    "serverless-offline": "^12.0.4"
+    "serverless-dynamodb": "^0.2.47",
+    "serverless-offline": "^13.8.0"
   }
 }

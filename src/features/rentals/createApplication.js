@@ -80,12 +80,37 @@ async function validateAuthentication(event) {
         throw createError(401, 'UNAUTHORIZED', 'Missing or invalid authentication token');
     }
 
-    const applicantId = claims.sub; // Use cognitoSub as applicantId
+    const cognitoSub = claims.sub;
     const email = claims.email;
 
-    console.log(`🔐 Authenticated user - ApplicantId: ${applicantId}, Email: ${email}`);
+    // Get the actual userId from our Users table
+    try {
+        const userQuery = {
+            TableName: process.env.USERS_TABLE,
+            IndexName: 'CognitoSubIndex',
+            KeyConditionExpression: 'cognitoSub = :cognitoSub',
+            ExpressionAttributeValues: {
+                ':cognitoSub': cognitoSub
+            }
+        };
+
+        const userResult = await dynamodb.query(userQuery).promise();
+        if (!userResult.Items || userResult.Items.length === 0) {
+            console.log('❌ User not found in database:', cognitoSub);
+            throw createError(403, 'USER_NOT_FOUND', 'User profile not found. Please create your profile first.');
+        }
+
+        const applicantId = userResult.Items[0].userId;
+        console.log(`🔐 Authenticated user - CognitoSub: ${cognitoSub}, ApplicantId: ${applicantId}, Email: ${email}`);
 
     return { applicantId };
+    } catch (error) {
+        if (error.statusCode) {
+            throw error;
+        }
+        console.error('❌ Error fetching user profile:', error);
+        throw createError(500, 'DATABASE_ERROR', 'Failed to verify user profile');
+    }
 }
 
 /**
