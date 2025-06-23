@@ -10,6 +10,23 @@ const tableName = process.env.LISTINGS_TABLE;
 
 module.exports.handler = async (event) => {
   console.log(`Fetching listings from table: ${tableName}`);
+  console.log('Request method:', event.httpMethod);
+  console.log('Request headers:', event.headers);
+  
+  // Handle OPTIONS request for CORS
+  if (event.httpMethod === 'OPTIONS') {
+    return {
+      statusCode: 200,
+      headers: {
+        'Access-Control-Allow-Origin': event.headers?.origin || 'http://localhost:8082',
+        'Access-Control-Allow-Credentials': 'true',
+        'Access-Control-Allow-Headers': 'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token,x-test-user-email,x-test-user-sub,x-test-user-groups',
+        'Access-Control-Allow-Methods': 'GET,OPTIONS',
+        'Access-Control-Max-Age': '86400',
+      },
+      body: '',
+    };
+  }
   
   const params = {
     TableName: tableName,
@@ -27,9 +44,10 @@ module.exports.handler = async (event) => {
     return {
       statusCode: 200,
       headers: {
-        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Origin': event.headers?.origin || 'http://localhost:8082',
         'Access-Control-Allow-Credentials': 'true',
-        'Access-Control-Allow-Headers': 'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token',
+        'Access-Control-Allow-Headers': 'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token,x-test-user-email,x-test-user-sub,x-test-user-groups',
+        'Access-Control-Allow-Methods': 'GET,OPTIONS',
       },
       body: JSON.stringify({
         success: true,
@@ -48,9 +66,10 @@ module.exports.handler = async (event) => {
           return {
         statusCode: 500,
         headers: {
-          'Access-Control-Allow-Origin': '*',
+          'Access-Control-Allow-Origin': event.headers?.origin || 'http://localhost:8082',
           'Access-Control-Allow-Credentials': 'true',
-          'Access-Control-Allow-Headers': 'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token',
+          'Access-Control-Allow-Headers': 'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token,x-test-user-email,x-test-user-sub,x-test-user-groups',
+          'Access-Control-Allow-Methods': 'GET,OPTIONS',
         },
         body: JSON.stringify({
           success: false,

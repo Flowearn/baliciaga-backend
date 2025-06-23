@@ -178,7 +178,7 @@ functions:
           path: /listings
           method: get
           cors:
-            origin: '*'
+            origin: 'http://localhost:8082'
             headers:
               - Content-Type
               - X-Amz-Date
@@ -186,13 +186,16 @@ functions:
               - X-Api-Key
               - X-Amz-Security-Token
               - X-Amz-User-Agent
+              - x-test-user-email
+              - x-test-user-sub
+              - x-test-user-groups
             allowCredentials: true
           # No authorizer - this is a public endpoint
       - http:
           path: /listings
           method: options
           cors:
-            origin: '*'
+            origin: 'http://localhost:8082'
             headers:
               - Content-Type
               - X-Amz-Date
@@ -200,6 +203,9 @@ functions:
               - X-Api-Key
               - X-Amz-Security-Token
               - X-Amz-User-Agent
+              - x-test-user-email
+              - x-test-user-sub
+              - x-test-user-groups
             allowCredentials: true
 
   # Get Listing Detail
