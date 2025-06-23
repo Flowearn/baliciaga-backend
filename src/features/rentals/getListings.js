@@ -3,7 +3,7 @@ const { unmarshall } = require('@aws-sdk/util-dynamodb');
 const { buildCompleteResponse } = require('../../utils/responseUtils');
 
 const dynamoDb = new DynamoDBClient({ region: 'ap-southeast-1' });
-const tableName = process.env.LISTINGS_TABLE_NAME;
+const tableName = process.env.LISTINGS_TABLE;
 
 // Lambda handler for fetching rental listings
 // TODO: Implement getListings handler logic
@@ -28,7 +28,8 @@ module.exports.handler = async (event) => {
       statusCode: 200,
       headers: {
         'Access-Control-Allow-Origin': '*',
-        'Access-Control-Allow-Credentials': true,
+        'Access-Control-Allow-Credentials': 'true',
+        'Access-Control-Allow-Headers': 'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token',
       },
       body: JSON.stringify({
         success: true,
@@ -48,7 +49,8 @@ module.exports.handler = async (event) => {
         statusCode: 500,
         headers: {
           'Access-Control-Allow-Origin': '*',
-          'Access-Control-Allow-Credentials': true,
+          'Access-Control-Allow-Credentials': 'true',
+          'Access-Control-Allow-Headers': 'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token',
         },
         body: JSON.stringify({
           success: false,
