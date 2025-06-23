@@ -219,9 +219,19 @@ async function WorkspacePlaces(categoryType) {
         placesMap.set(place.placeId, place);
       });
       
-      // 再添加dining数据，如果placeId已存在则保留cafe的版本
+      // 再添加dining数据
+      // 对于已存在的placeId，我们需要决定保留哪个版本
+      // 策略：如果是同时经营cafe和餐厅的地方，标记为混合类型
       diningPlaces.forEach(place => {
-        if (!placesMap.has(place.placeId)) {
+        if (placesMap.has(place.placeId)) {
+          // 如果已经存在，创建一个混合类型的条目
+          const existingPlace = placesMap.get(place.placeId);
+          placesMap.set(place.placeId, {
+            ...place,
+            category: 'both', // 标记为同时是cafe和dining
+            originalCategories: ['cafe', 'dining'] // 保存原始类别信息
+          });
+        } else {
           placesMap.set(place.placeId, place);
         }
       });
