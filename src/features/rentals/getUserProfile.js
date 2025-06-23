@@ -7,7 +7,7 @@ module.exports.handler = async (event) => {
   console.log("!!! Verifying Table Name !!! The value of process.env.USERS_TABLE is:", process.env.USERS_TABLE);
 
   try {
-    const claims = getAuthenticatedUser(event);
+    const claims = await getAuthenticatedUser(event);
     
     if (!claims || !claims.sub) {
       return sendResponse(401, { 

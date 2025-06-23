@@ -1471,5 +1471,256 @@
     "tableUrl": "",
     "gofoodUrl": "",
     "menuUrl": ""
+  },
+  {
+    "placeId": "ChIJ5Wex6mc50i0RNSHWdVKVoPo",
+    "name": "Hippie Fish Pererenan Beach",
+    "latitude": -8.6517584,
+    "longitude": 115.1214935,
+    "businessStatus": "OPERATIONAL",
+    "photos": [
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/hippie-fish-pererenan-beach/photo_a.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/hippie-fish-pererenan-beach/photo_b.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/hippie-fish-pererenan-beach/photo_c.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/hippie-fish-pererenan-beach/photo_d.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/hippie-fish-pererenan-beach/photo_e.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/hippie-fish-pererenan-beach/photo_f.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/hippie-fish-pererenan-beach/photo_g.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/hippie-fish-pererenan-beach/photo_h.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/hippie-fish-pererenan-beach/photo_i.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/hippie-fish-pererenan-beach/photo_j.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/hippie-fish-pererenan-beach/photo_k.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/hippie-fish-pererenan-beach/photo_l.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/hippie-fish-pererenan-beach/photo_m.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/hippie-fish-pererenan-beach/photo_n.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/hippie-fish-pererenan-beach/photo_o.webp"
+    ],
+    "phoneNumber": "0813-3759-6236",
+    "rating": 4.7,
+    "userRatingsTotal": 802,
+    "website": "https://hippie-fish.com/?utm_source=gbpo&utm_medium=organic&utm_id=gbpo",
+    "openingHours": [
+      "Monday: 12:00 – 11:00 PM",
+      "Tuesday: 12:00 – 11:00 PM",
+      "Wednesday: 12:00 – 11:00 PM",
+      "Thursday: 12:00 – 11:00 PM",
+      "Friday: 12:00 – 11:00 PM",
+      "Saturday: 12:00 – 11:00 PM",
+      "Sunday: 12:00 – 11:00 PM"
+    ],
+    "isOpenNow": false,
+    "openingPeriods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 0,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 1,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 1,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 2,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 3,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 4,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 5,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 6,
+          "hour": 23,
+          "minute": 0
+        }
+      }
+    ],
+    "instagram": "https://www.instagram.com/hippiefishbali/",
+    "region": "Canggu",
+    "googleMapsUri": "https://maps.google.com/?cid=18059598687152513333",
+    "staticMapS3Url": "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/hippie-fish-pererenan-beach_ChIJ5Wex6mc50i0RNSHWdVKVoPo/hippie-fish-pererenan-beach_static.webp",
+    "allowsDogs": true,
+    "outdoorSeating": true,
+    "servesVegetarianFood": true,
+    "tableUrl": "https://bookings.nowbookit.com/?accountid=ef96395c-825b-4544-a723-d82e6e7eec07&venueid=10126&theme=light&colors=hex,e1f5fe,283593&font=Abel",
+    "gofoodUrl": "https://gofood.co.id/jakarta/restaurant/0c47ffc3-27fc-468f-9531-b135049bd7c7?as=gmaps",
+    "menuUrl": "https://drive.google.com/file/d/1hCrvKBk1Bjj-h_ys_lKIoAZKNNmgzBJU/view"
+  },
+  {
+    "placeId": "ChIJYcKvqiJH0i0RtzWDiRmCnI0",
+    "name": "Miss Fish Bali",
+    "latitude": -8.6587757,
+    "longitude": 115.13977519999999,
+    "businessStatus": "OPERATIONAL",
+    "photos": [
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/miss-fish-bali/photo_c.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/miss-fish-bali/photo_a.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/miss-fish-bali/photo_b.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/miss-fish-bali/photo_d.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/miss-fish-bali/photo_e.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/miss-fish-bali/photo_f.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/miss-fish-bali/photo_g.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/miss-fish-bali/photo_h.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/miss-fish-bali/photo_i.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/miss-fish-bali/photo_j.webp"
+    ],
+    "phoneNumber": "0813-9000-6477",
+    "rating": 4.6,
+    "userRatingsTotal": 1055,
+    "website": "http://www.missfishbali.com/",
+    "openingHours": [
+      "Monday: Closed",
+      "Tuesday: 6:00 PM – 3:00 AM",
+      "Wednesday: 6:00 PM – 3:00 AM",
+      "Thursday: 6:00 PM – 3:00 AM",
+      "Friday: 6:00 PM – 3:00 AM",
+      "Saturday: 6:00 PM – 3:00 AM",
+      "Sunday: 6:00 PM – 3:00 AM"
+    ],
+    "isOpenNow": false,
+    "openingPeriods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 18,
+          "minute": 0
+        },
+        "close": {
+          "day": 1,
+          "hour": 3,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 18,
+          "minute": 0
+        },
+        "close": {
+          "day": 3,
+          "hour": 3,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 18,
+          "minute": 0
+        },
+        "close": {
+          "day": 4,
+          "hour": 3,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 18,
+          "minute": 0
+        },
+        "close": {
+          "day": 5,
+          "hour": 3,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 18,
+          "minute": 0
+        },
+        "close": {
+          "day": 6,
+          "hour": 3,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 18,
+          "minute": 0
+        },
+        "close": {
+          "day": 0,
+          "hour": 3,
+          "minute": 0
+        }
+      }
+    ],
+    "instagram": "https://www.instagram.com/missfishbali",
+    "region": "Canggu",
+    "googleMapsUri": "https://maps.google.com/?cid=10204173901907572151",
+    "staticMapS3Url": "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/miss-fish-bali_ChIJYcKvqiJH0i0RtzWDiRmCnI0/miss-fish-bali_static.webp",
+    "allowsDogs": false,
+    "outdoorSeating": false,
+    "servesVegetarianFood": true,
+    "tableUrl": "https://bookings.nowbookit.com/?accountid=ef22cedb-3885-49b5-bf9d-404c84edb9dc&venueid=10057&theme=outlined-dark&colors=hex,ffffff",
+    "gofoodUrl": "",
+    "menuUrl": "https://www.missfishbali.com/wp-content/uploads/2022/09/Miss-Fish-All-Menu.pdf"
   }
 ]

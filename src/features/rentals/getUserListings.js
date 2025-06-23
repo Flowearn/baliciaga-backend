@@ -17,7 +17,7 @@ exports.handler = async (event) => {
   console.log('Event:', JSON.stringify(event, null, 2));
 
   try {
-    const claims = getAuthenticatedUser(event);
+    const claims = await getAuthenticatedUser(event);
     console.log('[DIAGNOSIS] Step 1 - Cognito Sub from token:', claims.sub);
     
     if (!claims || !claims.sub) {

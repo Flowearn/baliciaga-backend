@@ -12,7 +12,7 @@ const USERS_TABLE_NAME = process.env.USERS_TABLE;
 exports.handler = async (event) => {
     const { listingId } = event.pathParameters;
 
-    const claims = getAuthenticatedUser(event);
+    const claims = await getAuthenticatedUser(event);
     if (!claims || !claims.sub) {
         return { statusCode: 401, body: JSON.stringify({ message: "Unauthorized" }) };
     }

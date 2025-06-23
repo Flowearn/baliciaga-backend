@@ -10,7 +10,7 @@ const BUCKET_NAME = process.env.PROFILE_PICTURES_BUCKET_NAME;
 
 exports.handler = async (event) => {
     // --- 关键修复：使用统一的工具来获取用户身份 ---
-    const claims = getAuthenticatedUser(event);
+    const claims = await getAuthenticatedUser(event);
     if (!claims || !claims.sub) {
         return {
             statusCode: 401,

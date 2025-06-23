@@ -16,6 +16,7 @@ const { getAuthenticatedUser } = require('../../utils/authUtils');
 
 const LISTINGS_TABLE = process.env.LISTINGS_TABLE;
 const APPLICATIONS_TABLE = process.env.APPLICATIONS_TABLE;
+const USERS_TABLE = process.env.USERS_TABLE;
 
 /**
  * Main Lambda handler
@@ -26,7 +27,7 @@ exports.handler = async (event) => {
 
     try {
         // 1. Extract and validate authentication
-        const claims = getAuthenticatedUser(event);
+        const claims = await getAuthenticatedUser(event);
         if (!claims || !claims.sub) {
             throw createError(401, 'UNAUTHORIZED', 'Missing or invalid authentication token');
         }
@@ -36,7 +37,7 @@ exports.handler = async (event) => {
         let userId;
         try {
             const userQuery = {
-                TableName: process.env.USERS_TABLE,
+                TableName: USERS_TABLE,
                 IndexName: 'CognitoSubIndex',
                 KeyConditionExpression: 'cognitoSub = :cognitoSub',
                 ExpressionAttributeValues: {
@@ -127,6 +128,28 @@ function parsePathParameters(event) {
  */
 async function updateListingStatus(listingId, userId) {
     console.log(`📝 Updating listing status to 'finalized': ${listingId}`);
+    console.log(`🔐 Using userId for ownership check: ${userId}`);
+    
+    // First, let's fetch the listing to see its current state
+    try {
+        const getListing = {
+            TableName: LISTINGS_TABLE,
+            Key: { listingId }
+        };
+        const listingResult = await dynamodb.get(getListing).promise();
+        if (listingResult.Item) {
+            console.log(`📊 Current listing details:`, {
+                listingId: listingResult.Item.listingId,
+                initiatorId: listingResult.Item.initiatorId,
+                status: listingResult.Item.status,
+                userIdMatch: listingResult.Item.initiatorId === userId
+            });
+        } else {
+            console.log('❌ Listing not found');
+        }
+    } catch (error) {
+        console.error('❌ Error fetching listing:', error);
+    }
 
     const params = {
         TableName: LISTINGS_TABLE,

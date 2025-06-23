@@ -27,8 +27,17 @@ exports.handler = async (event) => {
         // 1. Parse and validate request
         const { cognitoSub, email, profileData } = await parseAndValidateRequest(event);
         
-        // 2. Check if user exists (by cognitoSub)
-        const existingUser = await getUserByCognitoSub(cognitoSub);
+        // 2. Check if user exists (by cognitoSub or email)
+        const existingUser = await getUserByCognitoSubOrEmail(cognitoSub, email);
+        console.log('🔍 User lookup result:', existingUser ? 'EXISTING USER FOUND' : 'NEW USER');
+        
+        // 3. Check for email uniqueness (only for new users)
+        if (!existingUser) {
+            console.log('🚨 NEW USER DETECTED - Running email uniqueness check...');
+            await checkEmailUniqueness(email, cognitoSub);
+        } else {
+            console.log('📝 EXISTING USER - Skipping email uniqueness check');
+        }
         
         // 3. Prepare user data
         const now = new Date().toISOString();
@@ -89,7 +98,7 @@ exports.handler = async (event) => {
  * Parse and validate the incoming request
  */
 async function parseAndValidateRequest(event) {
-    const claims = getAuthenticatedUser(event);
+    const claims = await getAuthenticatedUser(event);
     
     if (!claims || !claims.sub) {
         throw createError(401, 'UNAUTHORIZED', 'Missing or invalid authentication token');
@@ -132,8 +141,11 @@ async function validateProfile(profile) {
         errors.push('Name is required and must be a non-empty string');
     }
 
-    if (!profile.whatsApp || typeof profile.whatsApp !== 'string' || profile.whatsApp.trim().length === 0) {
-        errors.push('WhatsApp number is required');
+    // WhatsApp is now optional
+    if (profile.whatsApp !== undefined && profile.whatsApp !== null) {
+        if (typeof profile.whatsApp !== 'string') {
+            errors.push('WhatsApp must be a string');
+        }
     }
 
     // Optional but validated fields
@@ -177,7 +189,7 @@ async function validateProfile(profile) {
     // Return cleaned profile
     return {
         name: profile.name.trim(),
-        whatsApp: profile.whatsApp.trim(),
+        ...(profile.whatsApp && { whatsApp: profile.whatsApp.trim() }),
         ...(profile.gender && { gender: profile.gender }),
         ...(profile.age && { age: profile.age }),
         ...(profile.languages && { languages: profile.languages.map(lang => lang.trim()) }),
@@ -188,10 +200,51 @@ async function validateProfile(profile) {
 }
 
 /**
- * Get user by cognitoSub from DynamoDB
+ * Check if email is already in use by another user
  */
-async function getUserByCognitoSub(cognitoSub) {
+async function checkEmailUniqueness(email, currentCognitoSub) {
+    console.log(`🔍 Checking email uniqueness for: ${email}`);
+    
     const params = {
+        TableName: USERS_TABLE,
+        FilterExpression: 'email = :email',
+        ExpressionAttributeValues: {
+            ':email': email
+        }
+    };
+
+    try {
+        const result = await dynamodb.scan(params).promise();
+        const existingUsers = result.Items || [];
+        
+        // Filter out the current user (in case of update)
+        const otherUsers = existingUsers.filter(user => user.cognitoSub !== currentCognitoSub);
+        
+        if (otherUsers.length > 0) {
+            console.log(`❌ Email ${email} is already in use by ${otherUsers.length} other user(s)`);
+            otherUsers.forEach((user, index) => {
+                console.log(`   ${index + 1}. User ID: ${user.userId}, CognitoSub: ${user.cognitoSub}`);
+            });
+            throw createError(409, 'EMAIL_ALREADY_EXISTS', 
+                `Email address ${email} is already in use. Please use a different email or sign in to your existing account.`);
+        }
+        
+        console.log(`✅ Email ${email} is available`);
+    } catch (error) {
+        if (error.statusCode) {
+            throw error; // Re-throw our custom errors
+        }
+        console.error('❌ Error checking email uniqueness:', error);
+        throw createError(500, 'DATABASE_ERROR', 'Failed to verify email uniqueness');
+    }
+}
+
+/**
+ * Get user by cognitoSub or email from DynamoDB
+ */
+async function getUserByCognitoSubOrEmail(cognitoSub, email) {
+    // First try to find by cognitoSub
+    const paramsBySub = {
         TableName: USERS_TABLE,
         IndexName: 'CognitoSubIndex',
         KeyConditionExpression: 'cognitoSub = :cognitoSub',
@@ -200,8 +253,43 @@ async function getUserByCognitoSub(cognitoSub) {
         }
     };
 
-    const result = await dynamodb.query(params).promise();
-    return result.Items && result.Items.length > 0 ? result.Items[0] : null;
+    const resultBySub = await dynamodb.query(paramsBySub).promise();
+    if (resultBySub.Items && resultBySub.Items.length > 0) {
+        return resultBySub.Items[0];
+    }
+
+    // If not found by cognitoSub, try to find by email
+    // This handles cases where users were created with different cognitoSub (e.g., before passwordless migration)
+    if (email) {
+        console.log(`🔄 User not found by cognitoSub ${cognitoSub}, trying email ${email}`);
+        const paramsByEmail = {
+            TableName: USERS_TABLE,
+            FilterExpression: 'email = :email',
+            ExpressionAttributeValues: {
+                ':email': email
+            }
+        };
+
+        const resultByEmail = await dynamodb.scan(paramsByEmail).promise();
+        if (resultByEmail.Items && resultByEmail.Items.length > 0) {
+            console.log(`✅ Found user by email, updating cognitoSub from ${resultByEmail.Items[0].cognitoSub} to ${cognitoSub}`);
+            // Update the user's cognitoSub to the new one
+            const user = resultByEmail.Items[0];
+            await dynamodb.update({
+                TableName: USERS_TABLE,
+                Key: { userId: user.userId },
+                UpdateExpression: 'SET cognitoSub = :newSub, updatedAt = :updatedAt',
+                ExpressionAttributeValues: {
+                    ':newSub': cognitoSub,
+                    ':updatedAt': new Date().toISOString()
+                }
+            }).promise();
+            
+            return { ...user, cognitoSub };
+        }
+    }
+
+    return null;
 }
 
 /**

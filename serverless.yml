@@ -21,6 +21,8 @@ provider:
     # Profile Pictures S3 Bucket
     PROFILE_PICTURES_BUCKET_NAME: baliciaga-profile-pictures-${sls:stage}
     STAGE: ${sls:stage}
+    # Cognito User Pool ID for JWT verification
+    USER_POOL_ID: ap-southeast-1_N72jBBIzH
   iamRoleStatements:
     - Effect: "Allow"
       Action:
@@ -424,18 +426,18 @@ functions:
           cors: true
           # No authorizer - this is a public endpoint for tracking views
 
-  # 🔧 无密码认证触发器 - Auth Triggers
-  DefineAuthChallenge:
-    handler: src/features/auth/defineChallenge.handler
-    timeout: 30
+  # 🔧 无密码认证触发器 - Auth Triggers (已禁用)
+  # DefineAuthChallenge:
+  #   handler: src/features/auth/defineChallenge.handler
+  #   timeout: 30
 
-  CreateAuthChallenge:
-    handler: src/features/auth/createChallenge.handler
-    timeout: 30
+  # CreateAuthChallenge:
+  #   handler: src/features/auth/createChallenge.handler
+  #   timeout: 30
 
-  VerifyAuthChallengeResponse:
-    handler: src/features/auth/verifyChallenge.handler
-    timeout: 30
+  # VerifyAuthChallengeResponse:
+  #   handler: src/features/auth/verifyChallenge.handler
+  #   timeout: 30
 
   # Cognito Triggers
   postConfirmation:
@@ -486,12 +488,12 @@ resources:
           DefaultEmailOption: CONFIRM_WITH_CODE
           EmailMessage: "您的验证码是 {####}"
           EmailSubject: "Baliciaga 验证码"
-        # 🔧 自定义认证流程的Lambda触发器配置
+        # 🔧 Lambda触发器配置（仅保留PostConfirmation）
         LambdaConfig:
           PostConfirmation: !GetAtt PostConfirmationLambdaFunction.Arn
-          DefineAuthChallenge: !GetAtt DefineAuthChallengeLambdaFunction.Arn
-          CreateAuthChallenge: !GetAtt CreateAuthChallengeLambdaFunction.Arn
-          VerifyAuthChallengeResponse: !GetAtt VerifyAuthChallengeResponseLambdaFunction.Arn
+          # DefineAuthChallenge: !GetAtt DefineAuthChallengeLambdaFunction.Arn
+          # CreateAuthChallenge: !GetAtt CreateAuthChallengeLambdaFunction.Arn
+          # VerifyAuthChallengeResponse: !GetAtt VerifyAuthChallengeResponseLambdaFunction.Arn
         # 🔧 允许用户自行注册（禁用高级安全功能以符合ESSENTIALS价格层）
         AdminCreateUserConfig:
           AllowAdminCreateUserOnly: false
@@ -503,9 +505,9 @@ resources:
         ClientName: baliciaga-user-pool-client-passwordless-${sls:stage}
         UserPoolId:
           Ref: CognitoUserPool
-        # 🔧 启用自定义认证流程（无密码认证）和标准密码认证
+        # 🔧 启用标准密码认证
         ExplicitAuthFlows:
-          - ALLOW_CUSTOM_AUTH        # 允许自定义认证流程
+          # - ALLOW_CUSTOM_AUTH        # 允许自定义认证流程（已禁用）
           - ALLOW_REFRESH_TOKEN_AUTH # 用于token刷新
           - ALLOW_USER_SRP_AUTH      # 允许标准SRP密码认证
         GenerateSecret: false
@@ -645,30 +647,30 @@ resources:
           AttributeName: ttl
           Enabled: true
 
-    # 🔧 Lambda权限资源 - 允许Cognito调用认证触发器
-    DefineAuthChallengeInvocationPermission:
-      Type: AWS::Lambda::Permission
-      Properties:
-        Action: lambda:InvokeFunction
-        FunctionName: !GetAtt DefineAuthChallengeLambdaFunction.Arn
-        Principal: cognito-idp.amazonaws.com
-        SourceArn: !GetAtt CognitoUserPool.Arn
+    # 🔧 Lambda权限资源 - 允许Cognito调用认证触发器（已禁用无密码认证）
+    # DefineAuthChallengeInvocationPermission:
+    #   Type: AWS::Lambda::Permission
+    #   Properties:
+    #     Action: lambda:InvokeFunction
+    #     FunctionName: !GetAtt DefineAuthChallengeLambdaFunction.Arn
+    #     Principal: cognito-idp.amazonaws.com
+    #     SourceArn: !GetAtt CognitoUserPool.Arn
 
-    CreateAuthChallengeInvocationPermission:
-      Type: AWS::Lambda::Permission
-      Properties:
-        Action: lambda:InvokeFunction
-        FunctionName: !GetAtt CreateAuthChallengeLambdaFunction.Arn
-        Principal: cognito-idp.amazonaws.com
-        SourceArn: !GetAtt CognitoUserPool.Arn
+    # CreateAuthChallengeInvocationPermission:
+    #   Type: AWS::Lambda::Permission
+    #   Properties:
+    #     Action: lambda:InvokeFunction
+    #     FunctionName: !GetAtt CreateAuthChallengeLambdaFunction.Arn
+    #     Principal: cognito-idp.amazonaws.com
+    #     SourceArn: !GetAtt CognitoUserPool.Arn
 
-    VerifyAuthChallengeInvocationPermission:
-      Type: AWS::Lambda::Permission
-      Properties:
-        Action: lambda:InvokeFunction
-        FunctionName: !GetAtt VerifyAuthChallengeResponseLambdaFunction.Arn
-        Principal: cognito-idp.amazonaws.com
-        SourceArn: !GetAtt CognitoUserPool.Arn
+    # VerifyAuthChallengeInvocationPermission:
+    #   Type: AWS::Lambda::Permission
+    #   Properties:
+    #     Action: lambda:InvokeFunction
+    #     FunctionName: !GetAtt VerifyAuthChallengeResponseLambdaFunction.Arn
+    #     Principal: cognito-idp.amazonaws.com
+    #     SourceArn: !GetAtt CognitoUserPool.Arn
 
     PostConfirmationInvocationPermission:
       Type: AWS::Lambda::Permission

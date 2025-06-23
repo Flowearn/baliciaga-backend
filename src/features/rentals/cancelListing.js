@@ -25,7 +25,7 @@ exports.handler = async (event) => {
 
     try {
         // 1. Extract and validate authentication
-        const claims = getAuthenticatedUser(event);
+        const claims = await getAuthenticatedUser(event);
         if (!claims || !claims.sub) {
             throw createError(401, 'UNAUTHORIZED', 'Missing or invalid authentication token');
         }

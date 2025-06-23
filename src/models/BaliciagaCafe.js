@@ -85,6 +85,9 @@ class BaliciagaCafe {
     // Menu URL - manually provided
     this.menuUrl = existingData.menuUrl || '';
 
+    // Category information - for distinguishing cafe vs dinner in food aggregation
+    this.category = existingData.category || null;
+
     // Region information (provided by caller)
     if (region) {
       this.region = region;
@@ -131,7 +134,8 @@ class BaliciagaCafe {
       instagram: this.instagram,
       gofoodUrl: this.gofoodUrl,
       "tableUrl": this.tableUrl,
-      "menuUrl": this.menuUrl
+      "menuUrl": this.menuUrl,
+      category: this.category
       // EXCLUDED FIELDS (not included in output):
       // - address (formattedAddress from API)
       // - priceLevel  

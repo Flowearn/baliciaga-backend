@@ -20,7 +20,7 @@ exports.handler = async (event) => {
         return { statusCode: 400, body: JSON.stringify({ message: "Invalid status." }) };
         }
 
-    const claims = getAuthenticatedUser(event);
+    const claims = await getAuthenticatedUser(event);
     if (!claims || !claims.sub) {
         return { statusCode: 401, body: JSON.stringify({ message: "Unauthorized" }) };
         }

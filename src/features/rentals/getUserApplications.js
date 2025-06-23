@@ -14,7 +14,7 @@ const LISTINGS_TABLE_NAME = process.env.LISTINGS_TABLE;
 // buildCompleteResponse function is now imported from shared utils
 
 exports.handler = async (event) => {
-    const claims = getAuthenticatedUser(event);
+    const claims = await getAuthenticatedUser(event);
 
     if (!claims || !claims.sub) {
         return {

@@ -17,5 +17,8 @@
     "clearMocks": true,
     "resetMocks": true,
     "restoreMocks": true
+  },
+  "dependencies": {
+    "puppeteer": "^24.10.2"
   }
 }

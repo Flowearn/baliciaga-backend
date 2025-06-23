@@ -174,12 +174,12 @@ function getCurrentBaliTime() {
  * 2. 从S3获取数据
  * 3. 为每个场所计算当前的isOpenNow状态
  * 4. 将数据封装为BaliciagaCafe实例返回
- * @param {string} categoryType - 分类类型 ('cafe' 或 'bar')
+ * @param {string} categoryType - 分类类型 ('cafe', 'bar', 'cowork', 'dining', 'food')
  * @returns {Promise<Array<BaliciagaCafe>>} BaliciagaCafe实例的数组
  */
 async function WorkspacePlaces(categoryType) {
   const now = Date.now();
-  const cacheKey = `${categoryType || 'cafe'}`;
+  const cacheKey = categoryType || 'cafe';
   
   if (cafesCache && cafesCache[cacheKey] && cacheTimestamp && (now - cacheTimestamp < CACHE_TTL)) {
     console.log(`Using cached ${categoryType || 'cafe'} data (BaliciagaCafe instances)`);
@@ -188,16 +188,53 @@ async function WorkspacePlaces(categoryType) {
 
   console.log(`Fetching ${categoryType || 'cafe'} data from S3 and calculating current open status`);
   try {
-    // 1. 根据分类类型确定S3对象键
-    let s3ObjectKey = 'data/cafes-dev.json'; // 默认或 'cafe'
-    if (categoryType === 'bar') {
-      s3ObjectKey = 'data/bars-dev.json';
-    } else if (categoryType === 'cowork') {
-      s3ObjectKey = 'data/cowork-dev.json';
-    }
+    let placesData = [];
+    
+    // 处理food类型 - 需要合并cafe和dinner数据
+    if (categoryType === 'food') {
+      console.log('Fetching and merging cafe and dinner data for food category');
+      
+      // 获取cafe数据
+      const cafeData = await fetchDataFromS3('data/cafes-dev.json');
+      // 为cafe数据添加category字段
+      const cafePlaces = cafeData.map(place => ({
+        ...place,
+        category: 'cafe'
+      }));
+      
+      // 获取dining数据
+      const diningData = await fetchDataFromS3('data/dining-dev.json');
+      // 为dining数据添加category字段
+      const diningPlaces = diningData.map(place => ({
+        ...place,
+        category: 'dining'
+      }));
+      
+      // 合并两个数组
+      placesData = [...cafePlaces, ...diningPlaces];
+      console.log(`Merged ${cafePlaces.length} cafe places and ${diningPlaces.length} dining places`);
+    } else {
+      // 1. 根据分类类型确定S3对象键
+      let s3ObjectKey = 'data/cafes-dev.json'; // 默认或 'cafe'
+      if (categoryType === 'bar') {
+        s3ObjectKey = 'data/bars.json'; // 使用正确的酒吧数据文件
+      } else if (categoryType === 'cowork') {
+        s3ObjectKey = 'data/cowork-dev.json';
+      } else if (categoryType === 'dining') {
+        s3ObjectKey = 'data/dining-dev.json';
+      }
 
-    // 2. 从S3获取数据
-    const placesData = await fetchDataFromS3(s3ObjectKey);
+      // 2. 从S3获取数据
+      placesData = await fetchDataFromS3(s3ObjectKey);
+      
+      // 为非food类型的数据添加category字段
+      if (categoryType === 'cafe' || categoryType === 'dining') {
+        placesData = placesData.map(place => ({
+          ...place,
+          category: categoryType
+        }));
+      }
+    }
 
     // 3. 获取巴厘岛当前时间
     const currentBaliTime = getCurrentBaliTime();
@@ -245,7 +282,7 @@ async function WorkspacePlaces(categoryType) {
 /**
  * 根据placeId获取单个场所详情 (BaliciagaCafe 实例)
  * @param {string} placeId - 场所的Place ID
- * @param {string} categoryType - 分类类型 ('cafe' 或 'bar')
+ * @param {string} categoryType - 分类类型 ('cafe', 'bar', 'cowork', 'dining', 'food')
  * @returns {Promise<BaliciagaCafe|null>} BaliciagaCafe实例或null
  */
 async function WorkspacePlaceDetails(placeId, categoryType) {
@@ -253,7 +290,7 @@ async function WorkspacePlaceDetails(placeId, categoryType) {
     // 先尝试从缓存获取所有场所
     let places;
     const now = Date.now();
-    const cacheKey = `${categoryType || 'cafe'}`;
+    const cacheKey = categoryType || 'cafe';
     
     if (cafesCache && cafesCache[cacheKey] && cacheTimestamp && (now - cacheTimestamp < CACHE_TTL)) {
       console.log(`Using cached ${categoryType || 'cafe'} data to find specific place`);

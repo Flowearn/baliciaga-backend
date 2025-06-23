@@ -90,7 +90,7 @@ exports.handler = async (event) => {
 async function validateAuthentication(event) {
     const { getAuthenticatedUser } = require('../../utils/authUtils');
     
-    const userClaims = getAuthenticatedUser(event);
+    const userClaims = await getAuthenticatedUser(event);
     if (!userClaims || !userClaims.sub) {
         console.log('❌ Missing or invalid authentication');
         throw createError(401, 'UNAUTHORIZED', 'Missing or invalid authentication token');

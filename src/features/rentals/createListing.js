@@ -93,7 +93,7 @@ exports.handler = async (event) => {
 async function validateAuthentication(event) {
     const { getAuthenticatedUser } = require('../../utils/authUtils');
     
-    const userClaims = getAuthenticatedUser(event);
+    const userClaims = await getAuthenticatedUser(event);
     if (!userClaims || !userClaims.sub) {
         console.log('❌ Missing or invalid authentication');
         throw createError(401, 'UNAUTHORIZED', 'Missing or invalid authentication token');
@@ -157,13 +157,20 @@ async function parseAndValidateRequest(event) {
         errors.push('address is required and must be a non-empty string');
     }
 
-    if (body.monthlyRent === undefined || !Number.isInteger(body.monthlyRent) || body.monthlyRent <= 0) {
-        errors.push('monthlyRent must be a positive integer');
+    // Convert string numbers to numbers for monthlyRent
+    if (typeof body.monthlyRent === 'string' && !isNaN(body.monthlyRent) && body.monthlyRent.trim() !== '') {
+        body.monthlyRent = parseFloat(body.monthlyRent);
+    }
+    if (body.monthlyRent === undefined || typeof body.monthlyRent !== 'number' || body.monthlyRent <= 0) {
+        errors.push('monthlyRent must be a positive number');
     }
 
-    // Yearly rent validation (optional)
-    if (body.yearlyRent !== undefined && (!Number.isInteger(body.yearlyRent) || body.yearlyRent < 0)) {
-        errors.push('yearlyRent must be a non-negative integer if provided');
+    // Yearly rent validation (optional) - handle string to number conversion
+    if (typeof body.yearlyRent === 'string' && !isNaN(body.yearlyRent) && body.yearlyRent.trim() !== '') {
+        body.yearlyRent = parseFloat(body.yearlyRent);
+    }
+    if (body.yearlyRent !== undefined && body.yearlyRent !== null && (typeof body.yearlyRent !== 'number' || body.yearlyRent < 0)) {
+        errors.push('yearlyRent must be a non-negative number if provided');
     }
 
     if (!body.currency || typeof body.currency !== 'string') {
@@ -177,55 +184,70 @@ async function parseAndValidateRequest(event) {
         errors.push('posterRole must be either "tenant", "landlord", or "platform"');
     }
 
-    // Numeric field validation
-    if (body.deposit !== undefined && (!Number.isInteger(body.deposit) || body.deposit < 0)) {
-        errors.push('deposit must be a non-negative integer if provided');
+    // Numeric field validation with string-to-number conversion and null handling
+    
+    // Helper function to convert string numbers
+    const convertStringToNumber = (field, fieldName) => {
+        if (typeof body[field] === 'string' && !isNaN(body[field]) && body[field].trim() !== '') {
+            body[field] = parseFloat(body[field]);
+        }
+    };
+    
+    convertStringToNumber('deposit', 'deposit');
+    convertStringToNumber('utilities', 'utilities');
+    convertStringToNumber('bedrooms', 'bedrooms');
+    convertStringToNumber('bathrooms', 'bathrooms');
+    convertStringToNumber('squareFootage', 'squareFootage');
+    convertStringToNumber('minimumStay', 'minimumStay');
+
+    if (body.deposit !== undefined && body.deposit !== null && (typeof body.deposit !== 'number' || body.deposit < 0)) {
+        errors.push('deposit must be a non-negative number if provided');
     }
 
-    if (body.utilities !== undefined && (!Number.isInteger(body.utilities) || body.utilities < 0)) {
-        errors.push('utilities must be a non-negative integer if provided');
+    if (body.utilities !== undefined && body.utilities !== null && (typeof body.utilities !== 'number' || body.utilities < 0)) {
+        errors.push('utilities must be a non-negative number if provided');
     }
 
-    if (body.bedrooms !== undefined && (!Number.isInteger(body.bedrooms) || body.bedrooms < 0)) {
-        errors.push('bedrooms must be a non-negative integer if provided');
+    if (body.bedrooms !== undefined && body.bedrooms !== null && (typeof body.bedrooms !== 'number' || body.bedrooms < 0)) {
+        errors.push('bedrooms must be a non-negative number if provided');
     }
 
-    if (body.bathrooms !== undefined && (!Number.isInteger(body.bathrooms) || body.bathrooms < 0)) {
-        errors.push('bathrooms must be a non-negative integer if provided');
+    if (body.bathrooms !== undefined && body.bathrooms !== null && (typeof body.bathrooms !== 'number' || body.bathrooms < 0)) {
+        errors.push('bathrooms must be a non-negative number if provided');
     }
 
-    if (body.squareFootage !== undefined && body.squareFootage !== null && (!Number.isInteger(body.squareFootage) || body.squareFootage <= 0)) {
-        errors.push('squareFootage must be a positive integer if provided');
+    if (body.squareFootage !== undefined && body.squareFootage !== null && (typeof body.squareFootage !== 'number' || body.squareFootage <= 0)) {
+        errors.push('squareFootage must be a positive number if provided');
     }
 
-    if (body.minimumStay !== undefined && (!Number.isInteger(body.minimumStay) || body.minimumStay <= 0)) {
-        errors.push('minimumStay must be a positive integer if provided');
+    if (body.minimumStay !== undefined && body.minimumStay !== null && (typeof body.minimumStay !== 'number' || body.minimumStay <= 0)) {
+        errors.push('minimumStay must be a positive number if provided');
     }
 
-    // Boolean field validation
-    if (body.furnished !== undefined && typeof body.furnished !== 'boolean') {
+    // Boolean field validation (allow null values)
+    if (body.furnished !== undefined && body.furnished !== null && typeof body.furnished !== 'boolean') {
         errors.push('furnished must be a boolean if provided');
     }
 
-    if (body.petFriendly !== undefined && typeof body.petFriendly !== 'boolean') {
+    if (body.petFriendly !== undefined && body.petFriendly !== null && typeof body.petFriendly !== 'boolean') {
         errors.push('petFriendly must be a boolean if provided');
     }
 
-    if (body.smokingAllowed !== undefined && typeof body.smokingAllowed !== 'boolean') {
+    if (body.smokingAllowed !== undefined && body.smokingAllowed !== null && typeof body.smokingAllowed !== 'boolean') {
         errors.push('smokingAllowed must be a boolean if provided');
     }
 
     // Optional fields validation - description field removed
 
-    if (body.amenities !== undefined && (!Array.isArray(body.amenities) || !body.amenities.every(item => typeof item === 'string'))) {
+    if (body.amenities !== undefined && body.amenities !== null && (!Array.isArray(body.amenities) || !body.amenities.every(item => typeof item === 'string'))) {
         errors.push('amenities must be an array of strings if provided');
     }
 
-    if (body.photos !== undefined && (!Array.isArray(body.photos) || !body.photos.every(item => typeof item === 'string'))) {
+    if (body.photos !== undefined && body.photos !== null && (!Array.isArray(body.photos) || !body.photos.every(item => typeof item === 'string'))) {
         errors.push('photos must be an array of strings if provided');
     }
 
-    if (body.availableFrom !== undefined && typeof body.availableFrom !== 'string') {
+    if (body.availableFrom !== undefined && body.availableFrom !== null && typeof body.availableFrom !== 'string') {
         errors.push('availableFrom must be a string if provided');
     }
 
@@ -238,27 +260,27 @@ async function parseAndValidateRequest(event) {
         throw createError(400, 'VALIDATION_ERROR', 'Listing validation failed', errors);
     }
 
-    // Return normalized data structure
+    // Return normalized data structure (convert decimals to integers for money fields, handle nulls)
     return {
         title: body.title.trim(),
         address: body.address.trim(),
         locationArea: body.locationArea || null, // New field for AI-extracted area
         posterRole: body.posterRole, // New field for poster role
-        monthlyRent: body.monthlyRent,
-        yearlyRent: body.yearlyRent || 0,
+        monthlyRent: Math.round(body.monthlyRent), // Convert to integer
+        yearlyRent: body.yearlyRent !== null && body.yearlyRent !== undefined ? Math.round(body.yearlyRent) : 0, // Handle null
         currency: body.currency,
-        deposit: body.deposit || 0,
-        utilities: body.utilities || 0,
-        bedrooms: body.bedrooms || 0,
-        bathrooms: body.bathrooms || 0,
-        squareFootage: body.squareFootage || null,
-        minimumStay: body.minimumStay || 1,
-        furnished: body.furnished || false,
-        petFriendly: body.petFriendly || false,
-        smokingAllowed: body.smokingAllowed || false,
-        amenities: body.amenities || [],
-        photos: body.photos || [],
-        availableFrom: body.availableFrom || ''
+        deposit: body.deposit !== null && body.deposit !== undefined ? Math.round(body.deposit) : 0, // Handle null
+        utilities: body.utilities !== null && body.utilities !== undefined ? Math.round(body.utilities) : 0, // Handle null
+        bedrooms: body.bedrooms !== null && body.bedrooms !== undefined ? Math.round(body.bedrooms) : 0, // Handle null
+        bathrooms: body.bathrooms !== null && body.bathrooms !== undefined ? Math.round(body.bathrooms) : 0, // Handle null
+        squareFootage: body.squareFootage !== null && body.squareFootage !== undefined ? Math.round(body.squareFootage) : null, // Handle null
+        minimumStay: body.minimumStay !== null && body.minimumStay !== undefined ? Math.round(body.minimumStay) : 1, // Handle null
+        furnished: body.furnished !== null && body.furnished !== undefined ? body.furnished : false, // Handle null
+        petFriendly: body.petFriendly !== null && body.petFriendly !== undefined ? body.petFriendly : false, // Handle null
+        smokingAllowed: body.smokingAllowed !== null && body.smokingAllowed !== undefined ? body.smokingAllowed : false, // Handle null
+        amenities: body.amenities !== null && body.amenities !== undefined ? body.amenities : [], // Handle null
+        photos: body.photos !== null && body.photos !== undefined ? body.photos : [], // Handle null
+        availableFrom: body.availableFrom !== null && body.availableFrom !== undefined ? body.availableFrom : '' // Handle null
     };
 }
 
