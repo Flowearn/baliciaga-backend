@@ -185,7 +185,8 @@ functions:
               - Authorization
               - X-Api-Key
               - X-Amz-Security-Token
-            allowCredentials: false
+              - X-Amz-User-Agent
+            allowCredentials: true
           # No authorizer - this is a public endpoint
       - http:
           path: /listings
@@ -198,7 +199,8 @@ functions:
               - Authorization
               - X-Api-Key
               - X-Amz-Security-Token
-            allowCredentials: false
+              - X-Amz-User-Agent
+            allowCredentials: true
 
   # Get Listing Detail
   getListingDetail:
