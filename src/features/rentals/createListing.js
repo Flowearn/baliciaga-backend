@@ -161,8 +161,8 @@ async function parseAndValidateRequest(event) {
     if (typeof body.monthlyRent === 'string' && !isNaN(body.monthlyRent) && body.monthlyRent.trim() !== '') {
         body.monthlyRent = parseFloat(body.monthlyRent);
     }
-    if (body.monthlyRent === undefined || typeof body.monthlyRent !== 'number' || body.monthlyRent <= 0) {
-        errors.push('monthlyRent must be a positive number');
+    if (body.monthlyRent === undefined || typeof body.monthlyRent !== 'number' || body.monthlyRent < 0) {
+        errors.push('monthlyRent must be a non-negative number');
     }
 
     // Yearly rent validation (optional) - handle string to number conversion

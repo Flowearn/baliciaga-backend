@@ -693,6 +693,10 @@ resources:
                 - '*'
               AllowedMethods:
                 - PUT
+                - GET
+                - HEAD
+                - POST
+                - DELETE
 
     # S3 Bucket for Profile Pictures
     ProfilePicturesBucket:
