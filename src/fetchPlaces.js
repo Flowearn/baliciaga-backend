@@ -210,9 +210,25 @@ async function WorkspacePlaces(categoryType) {
         category: 'dining'
       }));
       
-      // 合并两个数组
-      placesData = [...cafePlaces, ...diningPlaces];
-      console.log(`Merged ${cafePlaces.length} cafe places and ${diningPlaces.length} dining places`);
+      // 合并两个数组并去重
+      // 使用Map来去重，基于placeId
+      const placesMap = new Map();
+      
+      // 先添加cafe数据
+      cafePlaces.forEach(place => {
+        placesMap.set(place.placeId, place);
+      });
+      
+      // 再添加dining数据，如果placeId已存在则保留cafe的版本
+      diningPlaces.forEach(place => {
+        if (!placesMap.has(place.placeId)) {
+          placesMap.set(place.placeId, place);
+        }
+      });
+      
+      // 转换回数组
+      placesData = Array.from(placesMap.values());
+      console.log(`Merged ${cafePlaces.length} cafe places and ${diningPlaces.length} dining places into ${placesData.length} unique places`);
     } else {
       // 1. 根据分类类型确定S3对象键
       let s3ObjectKey = 'data/cafes-dev.json'; // 默认或 'cafe'
