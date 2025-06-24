@@ -255,6 +255,10 @@ async function parseAndValidateRequest(event) {
         errors.push('locationArea must be a string if provided');
     }
 
+    if (body.leaseDuration !== undefined && body.leaseDuration !== null && typeof body.leaseDuration !== 'string') {
+        errors.push('leaseDuration must be a string if provided');
+    }
+
     // If any validation errors, throw
     if (errors.length > 0) {
         throw createError(400, 'VALIDATION_ERROR', 'Listing validation failed', errors);
@@ -280,7 +284,8 @@ async function parseAndValidateRequest(event) {
         smokingAllowed: body.smokingAllowed !== null && body.smokingAllowed !== undefined ? body.smokingAllowed : false, // Handle null
         amenities: body.amenities !== null && body.amenities !== undefined ? body.amenities : [], // Handle null
         photos: body.photos !== null && body.photos !== undefined ? body.photos : [], // Handle null
-        availableFrom: body.availableFrom !== null && body.availableFrom !== undefined ? body.availableFrom : '' // Handle null
+        availableFrom: body.availableFrom !== null && body.availableFrom !== undefined ? body.availableFrom : '', // Handle null
+        leaseDuration: body.leaseDuration || null // Handle optional leaseDuration field
     };
 }
 

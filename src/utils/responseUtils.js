@@ -95,7 +95,8 @@ const buildCompleteResponse = async (listing) => {
         availability: {
             availableFrom: listing.availableFrom || listing.leaseDetails?.availableFrom || listing.propertyDetails?.availableFrom || new Date().toISOString(),
             minimumStay: listing.minimumStay || listing.leaseDetails?.minimumStay || listing.propertyDetails?.minimumStay || 1,
-            maximumStay: listing.maximumStay || listing.leaseDetails?.maximumStay || listing.propertyDetails?.maximumStay || null
+            maximumStay: listing.maximumStay || listing.leaseDetails?.maximumStay || listing.propertyDetails?.maximumStay || null,
+            leaseDuration: listing.leaseDuration || null // Add leaseDuration field
         },
         
         // Status (map backend status to frontend status)
@@ -158,7 +159,8 @@ function mapStatusToFrontend(backendStatus) {
     const statusMap = {
         'open': 'active',
         'closed': 'closed',
-        'cancelled': 'paused'
+        'cancelled': 'cancelled',
+        'finalized': 'finalized'
     };
     
     return statusMap[backendStatus] || 'active';

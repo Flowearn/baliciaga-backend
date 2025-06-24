@@ -212,8 +212,8 @@ async function parseAndValidateRequest(event) {
     }
 
     if (body.monthlyRent !== undefined) {
-        if (!Number.isInteger(body.monthlyRent) || body.monthlyRent <= 0) {
-            errors.push('monthlyRent must be a positive integer if provided');
+        if (!Number.isInteger(body.monthlyRent) || body.monthlyRent < 0) {
+            errors.push('monthlyRent must be a non-negative integer if provided');
         } else {
             updateData.monthlyRent = body.monthlyRent;
         }
@@ -326,9 +326,17 @@ async function parseAndValidateRequest(event) {
             errors.push('photos must be an array of strings if provided');
         } else {
                          // Validate photo URLs are from our S3 bucket
+             console.log('Photo URLs validation - received photos:', body.photos);
              const validPhotoUrls = body.photos.filter(url => {
-                 return url.startsWith('https://baliciaga-listing-images-dev') || 
-                        url.startsWith('https://baliciaga-listing-images-prod');
+                 // Accept both old format (with S3 domain) and new format
+                 const isValid = url.startsWith('https://baliciaga-listing-images-dev') || 
+                        url.startsWith('https://baliciaga-listing-images-prod') ||
+                        url.includes('baliciaga-listing-images-dev.s3') ||
+                        url.includes('baliciaga-listing-images-prod.s3') ||
+                        url.includes('baliciaga-listing-photos-dev.s3') ||
+                        url.includes('baliciaga-listing-photos-prod.s3');
+                 console.log(`Photo URL validation - URL: ${url}, Valid: ${isValid}`);
+                 return isValid;
              });
             
             if (validPhotoUrls.length !== body.photos.length) {
@@ -347,8 +355,17 @@ async function parseAndValidateRequest(event) {
         }
     }
 
+    if (body.leaseDuration !== undefined) {
+        if (typeof body.leaseDuration !== 'string') {
+            errors.push('leaseDuration must be a string if provided');
+        } else {
+            updateData.leaseDuration = body.leaseDuration;
+        }
+    }
+
     // If any validation errors, throw
     if (errors.length > 0) {
+        console.log('Validation errors found:', errors);
         throw createError(400, 'VALIDATION_ERROR', 'Listing update validation failed', errors);
     }
 

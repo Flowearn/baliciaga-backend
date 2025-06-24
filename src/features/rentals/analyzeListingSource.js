@@ -319,6 +319,7 @@ You are a hyper-precise data extraction engine for real estate in Bali, Indonesi
   "bathrooms": "number | null",
   "landSize": "number | null",
   "buildingSize": "number | null",
+  "locationArea": "string | null",
   "address": "string | null",
   "currency": "'USD' | 'IDR'",
   "pricing": {
@@ -338,7 +339,7 @@ You are a hyper-precise data extraction engine for real estate in Bali, Indonesi
     <source>Villa for rent 250jt/yr in Seminyak.</source>
     <output>
     {
-      "title": "Villa for rent in Seminyak", "bedrooms": null, "bathrooms": null, "landSize": null, "buildingSize": null, "address": "Seminyak", "currency": "IDR", "pricing": { "monthly": 20833333, "yearly": 250000000 }, "minimumStay": null, "amenityTags": [], "reasoning": "Currency is IDR because no '$' or 'USD' was found in the price."
+      "title": "Villa for rent in Seminyak", "bedrooms": null, "bathrooms": null, "landSize": null, "buildingSize": null, "locationArea": "Seminyak", "address": "Seminyak", "currency": "IDR", "pricing": { "monthly": 20833333, "yearly": 250000000 }, "minimumStay": null, "amenityTags": [], "reasoning": "Currency is IDR because no '$' or 'USD' was found in the price."
     }
     </output>
   </example>
@@ -346,7 +347,7 @@ You are a hyper-precise data extraction engine for real estate in Bali, Indonesi
     <source>Apartment available for $1.5k/month in Canggu.</source>
     <output>
     {
-      "title": "Apartment in Canggu", "bedrooms": null, "bathrooms": null, "landSize": null, "buildingSize": null, "address": "Canggu", "currency": "USD", "pricing": { "monthly": 1500, "yearly": null }, "minimumStay": null, "amenityTags": [], "reasoning": "Currency is USD because the '$' symbol was found in the price."
+      "title": "Apartment in Canggu", "bedrooms": null, "bathrooms": null, "landSize": null, "buildingSize": null, "locationArea": "Canggu", "address": "Canggu", "currency": "USD", "pricing": { "monthly": 1500, "yearly": null }, "minimumStay": null, "amenityTags": [], "reasoning": "Currency is USD because the '$' symbol was found in the price."
     }
     </output>
   </example>
@@ -377,7 +378,10 @@ You are a hyper-precise data extraction engine for real estate in Bali, Indonesi
     **PRICE EXTRACTION (NO CALCULATION):** Identify monthly or yearly prices and their currency. Put the raw number directly into the corresponding field ('pricing.monthly', 'pricing.yearly', 'price_yearly_idr', 'price_yearly_usd'). DO NOT perform any calculations like dividing yearly rent by 12. Just extract the original number you see.
   </rule>
   <rule id="4" importance="ABSOLUTE_HIGHEST">
-    **PRECISE ADDRESS EXTRACTION:** Do NOT default to "Bali". Extract the specific area mentioned: "Canggu", "Seminyak", "Ubud", "Pererenan", "Berawa", "Kerobokan", "Padang Linjong", "Seseh", etc. Only use "Bali" if NO specific area is mentioned.
+    **LOCATION EXTRACTION:** Extract BOTH locationArea AND address:
+    - locationArea: The specific area/neighborhood like "Canggu", "Seminyak", "Ubud", "Pererenan", "Berawa", "Kerobokan", "Padang Linjong", "Seseh", etc.
+    - address: The complete address if available, or same as locationArea if only area is mentioned
+    If NO specific area is mentioned, use null for both fields.
   </rule>
   <rule id="5" importance="HIGH">
     **CURRENCY DETECTION:** If the price is mentioned with a '$' symbol OR the word 'USD', the 'currency' field MUST be 'USD'. In ALL other cases, assume the currency is 'IDR'.
@@ -400,6 +404,7 @@ You are a hyper-precise data extraction engine for real estate in Bali, Indonesi
   "bathrooms": "number | null",
   "landSize": "number | null",
   "buildingSize": "number | null",
+  "locationArea": "string | null",
   "address": "string | null",
   "currency": "'USD' | 'IDR'",
   "pricing": {
@@ -419,7 +424,7 @@ You are a hyper-precise data extraction engine for real estate in Bali, Indonesi
     <source>Villa for rent 250jt/yr in Seminyak.</source>
     <output>
     {
-      "title": "Villa for rent in Seminyak", "bedrooms": null, "bathrooms": null, "landSize": null, "buildingSize": null, "address": "Seminyak", "currency": "IDR", "pricing": { "monthly": 20833333, "yearly": 250000000 }, "minimumStay": null, "amenityTags": [], "reasoning": "Currency is IDR because no '$' or 'USD' was found in the price."
+      "title": "Villa for rent in Seminyak", "bedrooms": null, "bathrooms": null, "landSize": null, "buildingSize": null, "locationArea": "Seminyak", "address": "Seminyak", "currency": "IDR", "pricing": { "monthly": 20833333, "yearly": 250000000 }, "minimumStay": null, "amenityTags": [], "reasoning": "Currency is IDR because no '$' or 'USD' was found in the price."
     }
     </output>
   </example>
@@ -427,7 +432,15 @@ You are a hyper-precise data extraction engine for real estate in Bali, Indonesi
     <source>Apartment available for $1.5k/month in Canggu.</source>
     <output>
     {
-      "title": "Apartment in Canggu", "bedrooms": null, "bathrooms": null, "landSize": null, "buildingSize": null, "address": "Canggu", "currency": "USD", "pricing": { "monthly": 1500, "yearly": null }, "minimumStay": null, "amenityTags": [], "reasoning": "Currency is USD because the '$' symbol was found in the price."
+      "title": "Apartment in Canggu", "bedrooms": null, "bathrooms": null, "landSize": null, "buildingSize": null, "locationArea": "Canggu", "address": "Canggu", "currency": "USD", "pricing": { "monthly": 1500, "yearly": null }, "minimumStay": null, "amenityTags": [], "reasoning": "Currency is USD because the '$' symbol was found in the price."
+    }
+    </output>
+  </example>
+  <example id="3_area_and_address">
+    <source>Beautiful 2BR villa for rent in Pererenan area. Located at Jl. Pantai Pererenan No. 88x, Pererenan, Mengwi, Badung. 300m from beach. IDR 30jt/month.</source>
+    <output>
+    {
+      "title": "Beautiful 2BR villa in Pererenan", "bedrooms": 2, "bathrooms": null, "landSize": null, "buildingSize": null, "locationArea": "Pererenan", "address": "Jl. Pantai Pererenan No. 88x, Pererenan, Mengwi, Badung", "currency": "IDR", "pricing": { "monthly": 30000000, "yearly": null }, "minimumStay_months": null, "price_yearly_idr": null, "price_yearly_usd": null, "amenityTags": [], "reasoning": "Extracted Pererenan as locationArea (the neighborhood) and the full address separately."
     }
     </output>
   </example>

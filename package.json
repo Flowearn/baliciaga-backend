@@ -10,7 +10,7 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
-    "offline": "serverless offline --httpPort 3006",
+    "offline": "serverless offline --httpPort 3006 --host 0.0.0.0",
     "e2e-test": "node scripts/e2e-test.js",
     "e2e-test:load-config": "source scripts/e2e-config.sh && npm run e2e-test"
   },

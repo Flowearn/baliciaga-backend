@@ -27,13 +27,13 @@ exports.handler = async (event) => {
         const { applicantId } = await validateAuthentication(event);
         
         // 2. Parse and validate request parameters
-        const { listingId, applicationMessage } = parseRequestParameters(event);
+        const { listingId, applicationMessage, applicantLeaseDuration } = parseRequestParameters(event);
         
         // 3. Perform critical pre-condition checks
         await performPreConditionChecks(listingId, applicantId);
         
         // 4. Create new application
-        const newApplication = await createNewApplication(listingId, applicantId, applicationMessage);
+        const newApplication = await createNewApplication(listingId, applicantId, applicationMessage, applicantLeaseDuration);
 
         // 5. Return success response
         console.log(`✅ Application created successfully: ${newApplication.applicationId}`);
@@ -125,12 +125,14 @@ function parseRequestParameters(event) {
         throw createError(400, 'INVALID_LISTING_ID', 'listingId is required and must be a valid string');
     }
 
-    // Extract optional applicationMessage from request body
+    // Extract optional applicationMessage and applicantLeaseDuration from request body
     let applicationMessage = null;
+    let applicantLeaseDuration = null;
     if (event.body) {
         try {
             const body = JSON.parse(event.body);
             applicationMessage = body.applicationMessage;
+            applicantLeaseDuration = body.applicantLeaseDuration;
             
             // Validate applicationMessage if provided
             if (applicationMessage !== null && applicationMessage !== undefined) {
@@ -149,6 +151,19 @@ function parseRequestParameters(event) {
                     applicationMessage = null;
                 }
             }
+            
+            // Validate applicantLeaseDuration if provided
+            if (applicantLeaseDuration !== null && applicantLeaseDuration !== undefined) {
+                if (typeof applicantLeaseDuration !== 'string') {
+                    throw createError(400, 'INVALID_LEASE_DURATION', 'applicantLeaseDuration must be a string');
+                }
+                
+                // Trim and set to null if empty
+                applicantLeaseDuration = applicantLeaseDuration.trim();
+                if (applicantLeaseDuration.length === 0) {
+                    applicantLeaseDuration = null;
+                }
+            }
         } catch (parseError) {
             if (parseError.statusCode) {
                 throw parseError; // Re-throw our custom errors
@@ -157,11 +172,12 @@ function parseRequestParameters(event) {
         }
     }
 
-    console.log(`📋 Request params - ListingId: ${listingId}, Message: ${applicationMessage ? 'provided' : 'none'}`);
+    console.log(`📋 Request params - ListingId: ${listingId}, Message: ${applicationMessage ? 'provided' : 'none'}, LeaseDuration: ${applicantLeaseDuration ? 'provided' : 'none'}`);
     
     return {
         listingId: listingId.trim(),
-        applicationMessage
+        applicationMessage,
+        applicantLeaseDuration
     };
 }
 
@@ -248,7 +264,7 @@ async function getExistingApplication(listingId, applicantId) {
 /**
  * Create new application and save to DynamoDB
  */
-async function createNewApplication(listingId, applicantId, applicationMessage) {
+async function createNewApplication(listingId, applicantId, applicationMessage, applicantLeaseDuration) {
     console.log(`📝 Creating new application for listing: ${listingId}`);
 
     const now = new Date().toISOString();
@@ -260,6 +276,7 @@ async function createNewApplication(listingId, applicantId, applicationMessage) 
         applicantId,
         status: 'pending',
         applicationMessage,
+        applicantLeaseDuration,
         createdAt: now,
         updatedAt: now
     };
