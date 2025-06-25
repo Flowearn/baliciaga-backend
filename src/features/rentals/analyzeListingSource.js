@@ -10,58 +10,23 @@
  * - CORS support
  */
 
+// Polyfill for structuredClone if not available (Node.js 18 compatibility)
+if (typeof globalThis.structuredClone === 'undefined') {
+    globalThis.structuredClone = function(obj) {
+        return JSON.parse(JSON.stringify(obj));
+    };
+}
+
 const AWS = require('aws-sdk');
 const { GoogleGenerativeAI } = require('@google/generative-ai');
+const multipartParser = require('lambda-multipart-parser');
+const { getAuthenticatedUser } = require('../../utils/authUtils');
 
 // Initialize SSM for retrieving API keys
 const ssm = new AWS.SSM({
     region: process.env.AWS_REGION || 'ap-southeast-1'
 });
 
-/**
- * Parse multipart/form-data from Lambda event
- */
-function parseMultipartData(body, contentType) {
-    const boundary = contentType.split('boundary=')[1];
-    if (!boundary) {
-        throw new Error('No boundary found in content-type');
-    }
-
-    const parts = body.split(`--${boundary}`);
-    const parsedData = {};
-    
-    for (const part of parts) {
-        if (part.includes('Content-Disposition')) {
-            const nameMatch = part.match(/name="([^"]+)"/);
-            if (nameMatch) {
-                const fieldName = nameMatch[1];
-                
-                // Find where the content starts (after double newline)
-                const contentStart = part.indexOf('\r\n\r\n') + 4;
-                if (contentStart > 3) {
-                    const content = part.substring(contentStart);
-                    
-                    // Remove trailing boundary markers
-                    const cleanContent = content.replace(/\r\n--.*$/, '');
-                    
-                    if (part.includes('Content-Type: image/')) {
-                        // This is a file upload
-                        parsedData[fieldName] = {
-                            type: 'image',
-                            content: cleanContent,
-                            mimeType: part.match(/Content-Type: ([^\r\n]+)/)[1]
-                        };
-                    } else {
-                        // This is a text field
-                        parsedData[fieldName] = cleanContent;
-                    }
-                }
-            }
-        }
-    }
-    
-    return parsedData;
-}
 
 /**
  * Normalize price text by removing currency symbols and thousand separators
@@ -88,7 +53,7 @@ exports.handler = async (event) => {
         
         // 3. Initialize Gemini AI
         const genAI = new GoogleGenerativeAI(geminiApiKey);
-        const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash-preview-05-20" });
+        const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
 
         let result;
         
@@ -98,7 +63,7 @@ exports.handler = async (event) => {
             
             const imagePart = {
                 inlineData: {
-                    data: Buffer.from(requestData.imageContent, 'binary').toString('base64'),
+                    data: requestData.imageContent.toString('base64'), // imageContent is already a Buffer
                     mimeType: requestData.mimeType
                 }
             };
@@ -165,25 +130,14 @@ exports.handler = async (event) => {
  * Parse and validate the incoming request
  */
 async function parseAndValidateRequest(event) {
-    // Extract Cognito claims for authentication
-    const claims = event.requestContext?.authorizer?.claims;
+    // Use authUtils to get authenticated user (supports test headers)
+    const user = await getAuthenticatedUser(event);
     
-    // For local development, allow test tokens to bypass strict validation
-    const authHeader = event.headers?.Authorization || event.headers?.authorization;
-    const isLocalDev = process.env.IS_OFFLINE === 'true';
-    const isTestToken = authHeader && authHeader.includes('test-token');
-    
-    if (!isLocalDev && (!claims || !claims.sub)) {
+    if (!user || !user.sub) {
         throw createError(401, 'UNAUTHORIZED', 'Missing or invalid authentication token');
     }
     
-    // For local development with test token, create mock claims
-    if (isLocalDev && isTestToken) {
-        console.log('🧪 Using test token for local development');
-        // Continue with test execution
-    } else if (!claims || !claims.sub) {
-        throw createError(401, 'UNAUTHORIZED', 'Missing or invalid authentication token');
-    }
+    console.log('🔐 Authenticated user:', user.sub);
 
     // Check content type to determine how to parse the request
     const contentType = event.headers['content-type'] || event.headers['Content-Type'] || '';
@@ -198,23 +152,47 @@ async function parseAndValidateRequest(event) {
         
         let parsedData;
         try {
-            // Decode base64 body if it's encoded
-            const bodyData = event.isBase64Encoded ? 
-                Buffer.from(event.body, 'base64').toString('binary') : 
-                event.body;
-                
-            parsedData = parseMultipartData(bodyData, contentType);
+            // Use lambda-multipart-parser to handle the multipart data
+            parsedData = await multipartParser.parse(event);
+            console.log('📦 Parsed multipart data:', {
+                files: parsedData.files ? parsedData.files.length : 0,
+                fields: Object.keys(parsedData)
+            });
         } catch (error) {
             console.error('Error parsing multipart data:', error);
             throw createError(400, 'INVALID_MULTIPART', 'Failed to parse multipart data');
         }
         
-        // Check if we have an image
-        if (parsedData.sourceImage && parsedData.sourceImage.type === 'image') {
+        // Check if we have an image file
+        const imageFile = parsedData.files ? parsedData.files.find(f => f.fieldname === 'sourceImage') : null;
+        
+        if (imageFile) {
+            console.log('🖼️ Found image file:', {
+                fieldname: imageFile.fieldname,
+                filename: imageFile.filename,
+                mimetype: imageFile.mimetype,
+                size: imageFile.content ? imageFile.content.length : 0
+            });
+            
+            // Fix MIME type if not detected
+            let mimeType = imageFile.mimetype;
+            if (!mimeType && imageFile.filename) {
+                const ext = imageFile.filename.toLowerCase().split('.').pop();
+                const mimeTypeMap = {
+                    'jpg': 'image/jpeg',
+                    'jpeg': 'image/jpeg',
+                    'png': 'image/png',
+                    'webp': 'image/webp',
+                    'gif': 'image/gif'
+                };
+                mimeType = mimeTypeMap[ext] || 'image/jpeg'; // Default to jpeg
+                console.log(`🔧 Fixed MIME type from extension: ${ext} -> ${mimeType}`);
+            }
+            
             return {
                 type: 'image',
-                imageContent: parsedData.sourceImage.content,
-                mimeType: parsedData.sourceImage.mimeType
+                imageContent: imageFile.content, // This is already a Buffer
+                mimeType: mimeType
             };
         } else {
             throw createError(400, 'MISSING_IMAGE', 'sourceImage file is required for multipart requests');
@@ -257,6 +235,13 @@ async function parseAndValidateRequest(event) {
  * Get Gemini API key from SSM Parameter Store or environment variable
  */
 async function getGeminiApiKey() {
+    console.log('🔍 Environment variables:', {
+        IS_OFFLINE: process.env.IS_OFFLINE,
+        STAGE: process.env.STAGE,
+        AWS_REGION: process.env.AWS_REGION,
+        GEMINI_API_KEY_SSM_PATH: process.env.GEMINI_API_KEY_SSM_PATH
+    });
+    
     // For local development, first try environment variable
     const isLocalDev = process.env.IS_OFFLINE === 'true';
     if (isLocalDev && process.env.GEMINI_API_KEY) {
@@ -280,12 +265,18 @@ async function getGeminiApiKey() {
         }
 
         console.log('✅ Successfully retrieved API key from SSM');
+        console.log('🔑 API key length:', result.Parameter.Value ? result.Parameter.Value.length : 0);
         return result.Parameter.Value;
     } catch (error) {
         if (error.statusCode) {
             throw error; // Re-throw custom errors
         }
-        console.error('Error fetching Gemini API key:', error);
+        console.error('❌ Error fetching Gemini API key:', error);
+        console.error('❌ Error details:', {
+            name: error.name,
+            message: error.message,
+            code: error.code
+        });
         throw createError(500, 'API_KEY_RETRIEVAL_ERROR', 'Failed to retrieve API key');
     }
 }
