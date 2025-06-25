@@ -118,7 +118,19 @@ exports.handler = async (event) => {
             body: JSON.stringify({ 
                 success: true, 
                 data: { 
-                    applications: applicationsWithDetails 
+                    applications: applicationsWithDetails,
+                    listing: {
+                        listingId: listing.listingId,
+                        title: listing.title || '',
+                        address: listing.address || '',
+                        monthlyRent: listing.pricing?.monthlyRent || 0,
+                        currency: listing.pricing?.currency || 'USD'
+                    },
+                    pagination: {
+                        nextCursor: null,
+                        hasNextPage: false,
+                        totalCount: applicationsWithDetails.length
+                    }
                 } 
             }),
         };

@@ -71,6 +71,7 @@ provider:
         - "dynamodb:Query"
         - "dynamodb:Scan"
         - "dynamodb:DeleteItem"
+        - "dynamodb:BatchGetItem"
       Resource:
         - "arn:aws:dynamodb:ap-southeast-1:335069051432:table/Baliciaga-Listings-${sls:stage}"
         - "arn:aws:dynamodb:ap-southeast-1:335069051432:table/Baliciaga-Listings-${sls:stage}/index/*"
