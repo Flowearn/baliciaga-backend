@@ -6,7 +6,12 @@ provider:
   name: aws
   runtime: nodejs18.x
   region: ap-southeast-1
-  stage: dev
+  stage: ${opt:stage, 'dev'}
+  apiGateway:
+    binaryMediaTypes:
+      - 'multipart/form-data'
+      - 'image/*'
+      - 'application/octet-stream'
   environment:
     NODE_ENV: production
     S3_BUCKET_NAME_SSM_PATH: /baliciaga/${sls:stage}/s3BucketName
@@ -21,8 +26,10 @@ provider:
     # Profile Pictures S3 Bucket
     PROFILE_PICTURES_BUCKET_NAME: baliciaga-profile-pictures-${sls:stage}
     STAGE: ${sls:stage}
-    # Cognito User Pool ID for JWT verification
-    USER_POOL_ID: ap-southeast-1_N72jBBIzH
+    # Cognito User Pool ID for JWT verification (will be replaced after deployment)
+    USER_POOL_ID: WILL_BE_REPLACED_AFTER_DEPLOYMENT
+    # Frontend URL SSM Path for CORS configuration
+    FRONTEND_URL_SSM_PATH: /baliciaga/${sls:stage}/frontendUrl
   iamRoleStatements:
     - Effect: "Allow"
       Action:
@@ -44,6 +51,10 @@ provider:
         - "arn:aws:ssm:ap-southeast-1:335069051432:parameter/baliciaga/dev/geminiApiKey"
         - "arn:aws:ssm:ap-southeast-1:335069051432:parameter/baliciaga/staging/geminiApiKey"
         - "arn:aws:ssm:ap-southeast-1:335069051432:parameter/baliciaga/prod/geminiApiKey"
+        # Permissions for Frontend URL across stages
+        - "arn:aws:ssm:ap-southeast-1:335069051432:parameter/baliciaga/dev/frontendUrl"
+        - "arn:aws:ssm:ap-southeast-1:335069051432:parameter/baliciaga/staging/frontendUrl"
+        - "arn:aws:ssm:ap-southeast-1:335069051432:parameter/baliciaga/prod/frontendUrl"
     # Add S3 access permissions for reading cafe data
     - Effect: "Allow"
       Action:
@@ -178,7 +189,7 @@ functions:
           path: /listings
           method: get
           cors:
-            origin: 'http://localhost:8082'
+            origin: ${ssm:/baliciaga/${sls:stage}/frontendUrl, '*'}
             headers:
               - Content-Type
               - X-Amz-Date
@@ -195,7 +206,7 @@ functions:
           path: /listings
           method: options
           cors:
-            origin: 'http://localhost:8082'
+            origin: ${ssm:/baliciaga/${sls:stage}/frontendUrl, '*'}
             headers:
               - Content-Type
               - X-Amz-Date
@@ -722,16 +733,17 @@ resources:
                 - GET
 
     # S3 Bucket Policy for Profile Pictures - Allow public read access
-    ProfilePicturesBucketPolicy:
-      Type: AWS::S3::BucketPolicy
-      Properties:
-        Bucket: !Ref ProfilePicturesBucket
-        PolicyDocument:
-          Statement:
-            - Effect: Allow
-              Principal: '*'
-              Action: s3:GetObject
-              Resource: !Sub 'arn:aws:s3:::${ProfilePicturesBucket}/*'
+    # NOTE: Commented out due to BlockPublicAccess restrictions
+    # ProfilePicturesBucketPolicy:
+    #   Type: AWS::S3::BucketPolicy
+    #   Properties:
+    #     Bucket: !Ref ProfilePicturesBucket
+    #     PolicyDocument:
+    #       Statement:
+    #         - Effect: Allow
+    #           Principal: '*'
+    #           Action: s3:GetObject
+    #           Resource: !Sub 'arn:aws:s3:::${ProfilePicturesBucket}/*'
 
   Outputs:
     CognitoUserPoolId:

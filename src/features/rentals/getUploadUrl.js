@@ -2,7 +2,10 @@ const { S3Client, PutObjectCommand } = require('@aws-sdk/client-s3');
 const { getSignedUrl } = require('@aws-sdk/s3-request-presigner');
 const { v4: uuidv4 } = require('uuid');
 
-const STAGE = process.env.STAGE || 'dev';
+if (!process.env.STAGE) {
+    throw new Error('STAGE environment variable is not set');
+}
+const STAGE = process.env.STAGE;
 const BUCKET_NAME = `baliciaga-listing-images-${STAGE}`;
 const REGION = 'ap-southeast-1';
 

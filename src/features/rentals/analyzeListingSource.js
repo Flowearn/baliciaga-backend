@@ -250,7 +250,10 @@ async function getGeminiApiKey() {
     }
 
     try {
-        const parameterName = `/baliciaga/${process.env.STAGE || 'dev'}/geminiApiKey`;
+        if (!process.env.STAGE) {
+            throw createError(500, 'CONFIGURATION_ERROR', 'STAGE environment variable is not set');
+        }
+        const parameterName = `/baliciaga/${process.env.STAGE}/geminiApiKey`;
         
         const params = {
             Name: parameterName,

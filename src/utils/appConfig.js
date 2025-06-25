@@ -52,10 +52,14 @@ async function loadConfig() {
   if (isActualLambdaEnvironment) {
     console.log("Running in ACTUAL AWS Lambda environment. Fetching config from SSM.");
     
-    // 从环境变量读取SSM参数路径，如果未设置则使用默认值
-    const s3BucketNamePath = process.env.S3_BUCKET_NAME_SSM_PATH || '/baliciaga/dev/s3BucketName';
-    const s3CafeDataFileKeyPath = process.env.S3_CAFE_DATA_FILE_KEY_SSM_PATH || '/baliciaga/dev/s3DataFileKeyCafe';
-    const s3BarDataFileKeyPath = process.env.S3_BAR_DATA_FILE_KEY_SSM_PATH || '/baliciaga/dev/s3DataFileKeyBar';
+    // 从环境变量读取SSM参数路径
+    const s3BucketNamePath = process.env.S3_BUCKET_NAME_SSM_PATH;
+    const s3CafeDataFileKeyPath = process.env.S3_CAFE_DATA_FILE_KEY_SSM_PATH;
+    const s3BarDataFileKeyPath = process.env.S3_BAR_DATA_FILE_KEY_SSM_PATH;
+    
+    if (!s3BucketNamePath || !s3CafeDataFileKeyPath || !s3BarDataFileKeyPath) {
+      throw new Error('Required SSM path environment variables are not set: S3_BUCKET_NAME_SSM_PATH, S3_CAFE_DATA_FILE_KEY_SSM_PATH, S3_BAR_DATA_FILE_KEY_SSM_PATH');
+    }
     
     try {
       // 并行获取所有SSM参数 (移除了 MAPS_API_KEY 的获取)
@@ -92,8 +96,8 @@ async function loadConfig() {
       MAPS_API_KEY: process.env.MAPS_API_KEY,
       S3_BUCKET_NAME: process.env.S3_BUCKET_NAME || 'baliciaga-database',
       S3_DATA_FILE_KEYS: {
-        cafe: process.env.LOCAL_S3_CAFE_DATA_FILE_KEY || 'data/cafes-dev.json',
-        bar: process.env.LOCAL_S3_BAR_DATA_FILE_KEY || 'data/bars-dev.json'
+        cafe: process.env.LOCAL_S3_CAFE_DATA_FILE_KEY || 'data/cafes.json',
+        bar: process.env.LOCAL_S3_BAR_DATA_FILE_KEY || 'data/bars.json'
       },
       AWS_REGION: process.env.AWS_REGION || 'ap-southeast-1',
       // Add AWS credentials for local environment
@@ -112,11 +116,11 @@ async function loadConfig() {
     }
     
     if (!config.S3_DATA_FILE_KEYS.cafe) {
-      console.warn('警告: 未设置 LOCAL_S3_CAFE_DATA_FILE_KEY 环境变量，使用默认值 "data/cafes-dev.json"。');
+      console.warn('警告: 未设置 LOCAL_S3_CAFE_DATA_FILE_KEY 环境变量，使用默认值 "data/cafes.json"。');
     }
     
     if (!config.S3_DATA_FILE_KEYS.bar) {
-      console.warn('警告: 未设置 LOCAL_S3_BAR_DATA_FILE_KEY 环境变量，使用默认值 "data/bars-dev.json"。');
+      console.warn('警告: 未设置 LOCAL_S3_BAR_DATA_FILE_KEY 环境变量，使用默认值 "data/bars.json"。');
     }
     
     if (!config.AWS_ACCESS_KEY_ID || !config.AWS_SECRET_ACCESS_KEY) {

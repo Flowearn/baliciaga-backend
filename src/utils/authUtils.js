@@ -64,7 +64,6 @@ const getAuthenticatedUser = async (event) => {
 
   // For offline development, check for both test headers and real JWT tokens
   const isOfflineMode = process.env.IS_OFFLINE === 'true' || 
-                       event.requestContext?.stage === 'dev' ||
                        event.headers?.host?.includes('localhost');
   
   if (isOfflineMode) {
