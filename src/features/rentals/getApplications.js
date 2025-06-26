@@ -14,7 +14,15 @@ exports.handler = async (event) => {
 
     const claims = await getAuthenticatedUser(event);
     if (!claims || !claims.sub) {
-        return { statusCode: 401, body: JSON.stringify({ message: "Unauthorized" }) };
+        return { 
+            statusCode: 401, 
+            headers: {
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Headers': 'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token',
+                'Access-Control-Allow-Methods': 'GET,POST,OPTIONS'
+            },
+            body: JSON.stringify({ message: "Unauthorized" }) 
+        };
     }
     
     const cognitoSub = claims.sub;
@@ -34,27 +42,59 @@ exports.handler = async (event) => {
         const userResult = await dynamodb.query(userQuery).promise();
         if (!userResult.Items || userResult.Items.length === 0) {
             console.log('❌ User not found in database:', cognitoSub);
-            return { statusCode: 403, body: JSON.stringify({ message: "User profile not found. Please create your profile first." }) };
+            return { 
+                statusCode: 403, 
+                headers: {
+                    'Access-Control-Allow-Origin': '*',
+                    'Access-Control-Allow-Headers': 'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token',
+                    'Access-Control-Allow-Methods': 'GET,POST,OPTIONS'
+                },
+                body: JSON.stringify({ message: "User profile not found. Please create your profile first." }) 
+            };
         }
 
         requestingUserId = userResult.Items[0].userId;
         console.log(`🔐 Authenticated user - CognitoSub: ${cognitoSub}, UserId: ${requestingUserId}`);
     } catch (error) {
         console.error('❌ Error fetching user profile:', error);
-        return { statusCode: 500, body: JSON.stringify({ message: "Failed to verify user profile" }) };
+        return { 
+            statusCode: 500, 
+            headers: {
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Headers': 'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token',
+                'Access-Control-Allow-Methods': 'GET,POST,OPTIONS'
+            },
+            body: JSON.stringify({ message: "Failed to verify user profile" }) 
+        };
     }
 
     try {
         // Step 1: Get the listing to verify ownership
         const listingResult = await dynamodb.get({ TableName: LISTINGS_TABLE_NAME, Key: { listingId } }).promise();
         if (!listingResult.Item) {
-            return { statusCode: 404, body: JSON.stringify({ message: "Listing not found" }) };
+            return { 
+                statusCode: 404, 
+                headers: {
+                    'Access-Control-Allow-Origin': '*',
+                    'Access-Control-Allow-Headers': 'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token',
+                    'Access-Control-Allow-Methods': 'GET,POST,OPTIONS'
+                },
+                body: JSON.stringify({ message: "Listing not found" }) 
+            };
         }
         const listing = listingResult.Item;
 
         // Step 2: Authorization Check
         if (listing.initiatorId !== requestingUserId) {
-            return { statusCode: 403, body: JSON.stringify({ message: "Forbidden: You do not own this listing." }) };
+            return { 
+                statusCode: 403, 
+                headers: {
+                    'Access-Control-Allow-Origin': '*',
+                    'Access-Control-Allow-Headers': 'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token',
+                    'Access-Control-Allow-Methods': 'GET,POST,OPTIONS'
+                },
+                body: JSON.stringify({ message: "Forbidden: You do not own this listing." }) 
+            };
         }
 
         // Step 3: Get applications for this listing
@@ -70,6 +110,11 @@ exports.handler = async (event) => {
         if (applications.length === 0) {
             return { 
                 statusCode: 200, 
+                headers: {
+                    'Access-Control-Allow-Origin': '*',
+                    'Access-Control-Allow-Headers': 'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token',
+                    'Access-Control-Allow-Methods': 'GET,POST,OPTIONS'
+                },
                 body: JSON.stringify({ success: true, data: { applications: [] } }) 
             };
         }
@@ -82,6 +127,11 @@ exports.handler = async (event) => {
         if (applicationsFromDB.length === 0) {
             return {
                 statusCode: 200,
+                headers: {
+                    'Access-Control-Allow-Origin': '*',
+                    'Access-Control-Allow-Headers': 'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token',
+                    'Access-Control-Allow-Methods': 'GET,POST,OPTIONS'
+                },
                 body: JSON.stringify({ success: true, data: [] }),
             };
         }
@@ -115,6 +165,11 @@ exports.handler = async (event) => {
 
         return {
             statusCode: 200,
+            headers: {
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Headers': 'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token',
+                'Access-Control-Allow-Methods': 'GET,POST,OPTIONS'
+            },
             body: JSON.stringify({ 
                 success: true, 
                 data: { 
@@ -122,9 +177,9 @@ exports.handler = async (event) => {
                     listing: {
                         listingId: listing.listingId,
                         title: listing.title || '',
-                        address: listing.address || '',
-                        monthlyRent: listing.pricing?.monthlyRent || 0,
-                        currency: listing.pricing?.currency || 'USD'
+                        address: listing.address || listing.location?.address || '',
+                        monthlyRent: listing.monthlyRent || listing.pricing?.monthlyRent || 0,
+                        currency: listing.currency || listing.pricing?.currency || 'USD'
                     },
                     pagination: {
                         nextCursor: null,
@@ -137,6 +192,14 @@ exports.handler = async (event) => {
 
     } catch (error) {
         console.error('Error in getApplications:', error);
-        return { statusCode: 500, body: JSON.stringify({ message: "Internal Server Error" }) };
+        return { 
+            statusCode: 500, 
+            headers: {
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Headers': 'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token',
+                'Access-Control-Allow-Methods': 'GET,POST,OPTIONS'
+            },
+            body: JSON.stringify({ message: "Internal Server Error" }) 
+        };
     }
 };
