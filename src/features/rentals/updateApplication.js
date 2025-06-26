@@ -16,7 +16,7 @@ exports.handler = async (event) => {
     const { applicationId } = event.pathParameters;
     const { status } = JSON.parse(event.body);
 
-    if (!['accepted', 'ignored', 'pending'].includes(status)) {
+    if (!['accepted', 'ignored', 'pending', 'withdrawn'].includes(status)) {
         return { 
             statusCode: 400, 
             headers: {
@@ -128,9 +128,53 @@ exports.handler = async (event) => {
             };
         }
 
-        // Step 4: If authorized, check for irrevocable acceptance logic
-        // Prevent changing accepted applications back to pending/ignored
-        if (application.status === 'accepted' && status !== 'accepted') {
+        // Step 4: Handle special logic for withdrawn status
+        if (status === 'withdrawn') {
+            // Only allow withdrawing from accepted status
+            if (application.status !== 'accepted') {
+                return { 
+                    statusCode: 400, 
+                    headers: {
+                        'Access-Control-Allow-Origin': '*',
+                        'Access-Control-Allow-Headers': 'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token',
+                        'Access-Control-Allow-Methods': 'PUT,OPTIONS'
+                    },
+                    body: JSON.stringify({ 
+                        message: "Can only withdraw applications that are currently accepted." 
+                    }) 
+                };
+            }
+            
+            // Decrement filledSlots in the listing (atomic operation)
+            const decrementParams = {
+                TableName: LISTINGS_TABLE_NAME,
+                Key: { listingId: application.listingId },
+                UpdateExpression: "SET filledSlots = filledSlots - :val, updatedAt = :updatedAt",
+                ConditionExpression: "attribute_exists(filledSlots) AND filledSlots > :zero",
+                ExpressionAttributeValues: {
+                    ":val": 1,
+                    ":zero": 0,
+                    ":updatedAt": new Date().toISOString()
+                }
+            };
+            
+            try {
+                await docClient.send(new UpdateCommand(decrementParams));
+                console.log(`✅ Decremented filledSlots for listing ${application.listingId}`);
+            } catch (error) {
+                console.error('❌ Error decrementing filledSlots:', error);
+                return { 
+                    statusCode: 500, 
+                    headers: {
+                        'Access-Control-Allow-Origin': '*',
+                        'Access-Control-Allow-Headers': 'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token',
+                        'Access-Control-Allow-Methods': 'PUT,OPTIONS'
+                    },
+                    body: JSON.stringify({ message: "Failed to update listing filled slots" }) 
+                };
+            }
+        } else if (application.status === 'accepted' && status !== 'accepted') {
+            // Prevent changing accepted applications to any other status except withdrawn
             return { 
                 statusCode: 400, 
                 headers: {
