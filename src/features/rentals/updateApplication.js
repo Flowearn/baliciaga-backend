@@ -145,33 +145,44 @@ exports.handler = async (event) => {
                 };
             }
             
-            // Decrement filledSlots in the listing (atomic operation)
-            const decrementParams = {
+            // Decrement acceptedApplicantsCount in the listing (atomic operation)
+            // First, try to get the current count
+            const currentListing = await docClient.send(new GetCommand({
                 TableName: LISTINGS_TABLE_NAME,
-                Key: { listingId: application.listingId },
-                UpdateExpression: "SET filledSlots = filledSlots - :val, updatedAt = :updatedAt",
-                ConditionExpression: "attribute_exists(filledSlots) AND filledSlots > :zero",
-                ExpressionAttributeValues: {
-                    ":val": 1,
-                    ":zero": 0,
-                    ":updatedAt": new Date().toISOString()
-                }
-            };
+                Key: { listingId: application.listingId }
+            }));
             
-            try {
-                await docClient.send(new UpdateCommand(decrementParams));
-                console.log(`✅ Decremented filledSlots for listing ${application.listingId}`);
-            } catch (error) {
-                console.error('❌ Error decrementing filledSlots:', error);
-                return { 
-                    statusCode: 500, 
-                    headers: {
-                        'Access-Control-Allow-Origin': '*',
-                        'Access-Control-Allow-Headers': 'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token',
-                        'Access-Control-Allow-Methods': 'PUT,OPTIONS'
-                    },
-                    body: JSON.stringify({ message: "Failed to update listing filled slots" }) 
+            const currentCount = currentListing.Item?.acceptedApplicantsCount || 0;
+            
+            // Only decrement if count is greater than 0
+            if (currentCount > 0) {
+                const decrementParams = {
+                    TableName: LISTINGS_TABLE_NAME,
+                    Key: { listingId: application.listingId },
+                    UpdateExpression: "SET acceptedApplicantsCount = :newCount, updatedAt = :updatedAt",
+                    ExpressionAttributeValues: {
+                        ":newCount": currentCount - 1,
+                        ":updatedAt": new Date().toISOString()
+                    }
                 };
+                
+                try {
+                    await docClient.send(new UpdateCommand(decrementParams));
+                    console.log(`✅ Decremented acceptedApplicantsCount for listing ${application.listingId} from ${currentCount} to ${currentCount - 1}`);
+                } catch (error) {
+                    console.error('❌ Error decrementing acceptedApplicantsCount:', error);
+                    return { 
+                        statusCode: 500, 
+                        headers: {
+                            'Access-Control-Allow-Origin': '*',
+                            'Access-Control-Allow-Headers': 'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token',
+                            'Access-Control-Allow-Methods': 'PUT,OPTIONS'
+                        },
+                        body: JSON.stringify({ message: "Failed to update listing accepted applicants count" }) 
+                    };
+                }
+            } else {
+                console.log(`⚠️ acceptedApplicantsCount is already 0 for listing ${application.listingId}, skipping decrement`);
             }
         } else if (application.status === 'accepted' && status !== 'accepted') {
             // Prevent changing accepted applications to any other status except withdrawn
@@ -188,7 +199,44 @@ exports.handler = async (event) => {
             };
         }
 
-        // Step 5: Update the application status
+        // Step 5: Handle accepting applications - increment acceptedApplicantsCount
+        if (status === 'accepted' && application.status !== 'accepted') {
+            // Increment acceptedApplicantsCount when accepting an application
+            const currentListing = await docClient.send(new GetCommand({
+                TableName: LISTINGS_TABLE_NAME,
+                Key: { listingId: application.listingId }
+            }));
+            
+            const currentCount = currentListing.Item?.acceptedApplicantsCount || 0;
+            
+            const incrementParams = {
+                TableName: LISTINGS_TABLE_NAME,
+                Key: { listingId: application.listingId },
+                UpdateExpression: "SET acceptedApplicantsCount = :newCount, updatedAt = :updatedAt",
+                ExpressionAttributeValues: {
+                    ":newCount": currentCount + 1,
+                    ":updatedAt": new Date().toISOString()
+                }
+            };
+            
+            try {
+                await docClient.send(new UpdateCommand(incrementParams));
+                console.log(`✅ Incremented acceptedApplicantsCount for listing ${application.listingId} from ${currentCount} to ${currentCount + 1}`);
+            } catch (error) {
+                console.error('❌ Error incrementing acceptedApplicantsCount:', error);
+                return { 
+                    statusCode: 500, 
+                    headers: {
+                        'Access-Control-Allow-Origin': '*',
+                        'Access-Control-Allow-Headers': 'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token',
+                        'Access-Control-Allow-Methods': 'PUT,OPTIONS'
+                    },
+                    body: JSON.stringify({ message: "Failed to update listing accepted applicants count" }) 
+                };
+            }
+        }
+
+        // Step 6: Update the application status
         const updateParams = {
             TableName: APPLICATIONS_TABLE_NAME,
             Key: { applicationId },
