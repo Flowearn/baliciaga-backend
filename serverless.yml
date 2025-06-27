@@ -939,13 +939,15 @@ resources:
         BucketName: baliciaga-profile-pictures-${sls:stage}
         CorsConfiguration:
           CorsRules:
-            - AllowedOrigins:
-                - '*' # 在生产环境中应替换为你的前端域名
-              AllowedHeaders:
+            - AllowedHeaders:
                 - '*'
               AllowedMethods:
-                - PUT
                 - GET
+                - PUT   # <-- 这是最关键的新增项
+                - HEAD
+              AllowedOrigins:
+                - 'https://baliciaga.com' # <-- 将来源域精确指定为我们的生产前端
+              MaxAge: 3000
 
     # S3 Bucket Policy for Profile Pictures - Allow public read access
     # NOTE: Commented out due to BlockPublicAccess restrictions
