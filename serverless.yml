@@ -508,8 +508,17 @@ functions:
     events:
       - http:
           path: /users/me/avatar-upload-url
-          method: get
-          cors: true
+          method: post
+          cors:
+            origin: 'https://baliciaga.com'
+            headers:
+              - Content-Type
+              - X-Amz-Date
+              - Authorization
+              - X-Api-Key
+              - X-Amz-Security-Token
+              - X-Amz-User-Agent
+            allowCredentials: true
           authorizer:
             name: CognitoUserPoolAuthorizer
             type: COGNITO_USER_POOLS
