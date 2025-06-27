@@ -136,18 +136,29 @@ exports.handler = async (event) => {
         
         const listingsMap = _.keyBy(listings, 'listingId');
 
-        // --- STAGE 3: Combine application data with full listing data ---
+        // --- STAGE 3: Combine application data with full listing data and filter out cancelled/finalized listings ---
         const fullApplications = await Promise.all(applications.map(async (app) => {
             const fullListing = listingsMap[app.listingId];
+            
+            // Skip applications for cancelled or finalized listings
+            if (fullListing && (fullListing.status === 'cancelled' || fullListing.status === 'finalized')) {
+                console.log(`Filtering out application ${app.applicationId} for ${fullListing.status} listing ${app.listingId}`);
+                return null;
+            }
+            
             return {
                 ...app,
                 // IMPORTANT: Attach the fully transformed listing object
                 listing: fullListing ? await buildCompleteResponse(fullListing) : null
             };
         }));
+        
+        // Remove filtered out (null) applications
+        const validApplications = fullApplications.filter(app => app !== null);
+        console.log(`Filtered from ${applications.length} to ${validApplications.length} applications (removed ${applications.length - validApplications.length} applications for cancelled/finalized listings)`);
 
         // --- STAGE 4: For accepted applications, get roommate information ---
-        const finalApplications = await Promise.all(fullApplications.map(async (app) => {
+        const finalApplications = await Promise.all(validApplications.map(async (app) => {
             // Only fetch roommates for accepted applications
             if (app.status !== 'accepted') {
                 return app;

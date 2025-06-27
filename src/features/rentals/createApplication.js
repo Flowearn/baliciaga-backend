@@ -21,6 +21,7 @@ const APPLICATIONS_TABLE = process.env.APPLICATIONS_TABLE;
 exports.handler = async (event) => {
     console.log('📝 createApplication Lambda triggered');
     console.log('Event:', JSON.stringify(event, null, 2));
+    console.log('[BACKEND-CREATE-DIAGNOSIS-RECEIVED] Raw Body:', event.body);
 
     try {
         // 1. Extract and validate authentication
@@ -289,6 +290,7 @@ async function createNewApplication(listingId, applicantId, applicationMessage, 
     };
 
     try {
+        console.log('[BACKEND-CREATE-DIAGNOSIS-WRITING] Item to be written:', newApplication);
         await dynamodb.put(params).promise();
         console.log(`✅ Application saved to database: ${applicationId}`);
         return newApplication;

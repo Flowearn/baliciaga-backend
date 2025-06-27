@@ -128,10 +128,71 @@ exports.handler = async (event) => {
             };
         }
 
-        // Step 4: Handle special logic for withdrawn status
-        if (status === 'withdrawn') {
-            // Only allow withdrawing from accepted status
-            if (application.status !== 'accepted') {
+        // Step 4: Handle special logic for status transitions to 'pending'
+        if (status === 'pending') {
+            const currentStatus = application.status;
+            
+            // Check if the current status allows transition to pending
+            if (currentStatus === 'accepted') {
+                // When withdrawing from accepted, decrement acceptedApplicantsCount
+                const currentListing = await docClient.send(new GetCommand({
+                    TableName: LISTINGS_TABLE_NAME,
+                    Key: { listingId: application.listingId }
+                }));
+                
+                const currentCount = currentListing.Item?.acceptedApplicantsCount || 0;
+                
+                // Only decrement if count is greater than 0
+                if (currentCount > 0) {
+                    const decrementParams = {
+                        TableName: LISTINGS_TABLE_NAME,
+                        Key: { listingId: application.listingId },
+                        UpdateExpression: "SET acceptedApplicantsCount = :newCount, updatedAt = :updatedAt",
+                        ExpressionAttributeValues: {
+                            ":newCount": currentCount - 1,
+                            ":updatedAt": new Date().toISOString()
+                        }
+                    };
+                    
+                    try {
+                        await docClient.send(new UpdateCommand(decrementParams));
+                        console.log(`✅ Decremented acceptedApplicantsCount for listing ${application.listingId} from ${currentCount} to ${currentCount - 1}`);
+                    } catch (error) {
+                        console.error('❌ Error decrementing acceptedApplicantsCount:', error);
+                        return { 
+                            statusCode: 500, 
+                            headers: {
+                                'Access-Control-Allow-Origin': '*',
+                                'Access-Control-Allow-Headers': 'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token',
+                                'Access-Control-Allow-Methods': 'PUT,OPTIONS'
+                            },
+                            body: JSON.stringify({ message: "Failed to update listing accepted applicants count" }) 
+                        };
+                    }
+                } else {
+                    console.log(`⚠️ acceptedApplicantsCount is already 0 for listing ${application.listingId}, skipping decrement`);
+                }
+            } else if (currentStatus === 'ignored') {
+                // When withdrawing from ignored, no need to update acceptedApplicantsCount
+                console.log(`✅ Transitioning from 'ignored' to 'pending' for application ${applicationId}`);
+            } else if (currentStatus === 'pending') {
+                // Already pending, just return success
+                console.log(`ℹ️ Application ${applicationId} is already in 'pending' status`);
+                return {
+                    statusCode: 200,
+                    headers: {
+                        'Access-Control-Allow-Origin': '*',
+                        'Access-Control-Allow-Headers': 'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token',
+                        'Access-Control-Allow-Methods': 'PUT,OPTIONS'
+                    },
+                    body: JSON.stringify({ 
+                        success: true, 
+                        message: "Application is already in pending status",
+                        data: application 
+                    }),
+                };
+            } else {
+                // Other statuses cannot be transitioned to pending
                 return { 
                     statusCode: 400, 
                     headers: {
@@ -140,63 +201,21 @@ exports.handler = async (event) => {
                         'Access-Control-Allow-Methods': 'PUT,OPTIONS'
                     },
                     body: JSON.stringify({ 
-                        message: "Can only withdraw applications that are currently accepted." 
+                        message: `Cannot transition from '${currentStatus}' to 'pending' status.` 
                     }) 
                 };
             }
-            
-            // Decrement acceptedApplicantsCount in the listing (atomic operation)
-            // First, try to get the current count
-            const currentListing = await docClient.send(new GetCommand({
-                TableName: LISTINGS_TABLE_NAME,
-                Key: { listingId: application.listingId }
-            }));
-            
-            const currentCount = currentListing.Item?.acceptedApplicantsCount || 0;
-            
-            // Only decrement if count is greater than 0
-            if (currentCount > 0) {
-                const decrementParams = {
-                    TableName: LISTINGS_TABLE_NAME,
-                    Key: { listingId: application.listingId },
-                    UpdateExpression: "SET acceptedApplicantsCount = :newCount, updatedAt = :updatedAt",
-                    ExpressionAttributeValues: {
-                        ":newCount": currentCount - 1,
-                        ":updatedAt": new Date().toISOString()
-                    }
-                };
-                
-                try {
-                    await docClient.send(new UpdateCommand(decrementParams));
-                    console.log(`✅ Decremented acceptedApplicantsCount for listing ${application.listingId} from ${currentCount} to ${currentCount - 1}`);
-                } catch (error) {
-                    console.error('❌ Error decrementing acceptedApplicantsCount:', error);
-                    return { 
-                        statusCode: 500, 
-                        headers: {
-                            'Access-Control-Allow-Origin': '*',
-                            'Access-Control-Allow-Headers': 'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token',
-                            'Access-Control-Allow-Methods': 'PUT,OPTIONS'
-                        },
-                        body: JSON.stringify({ message: "Failed to update listing accepted applicants count" }) 
-                    };
-                }
-            } else {
-                console.log(`⚠️ acceptedApplicantsCount is already 0 for listing ${application.listingId}, skipping decrement`);
-            }
-        } else if (application.status === 'accepted' && status !== 'accepted') {
-            // Prevent changing accepted applications to any other status except withdrawn
-            return { 
-                statusCode: 400, 
-                headers: {
-                    'Access-Control-Allow-Origin': '*',
-                    'Access-Control-Allow-Headers': 'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token',
-                    'Access-Control-Allow-Methods': 'PUT,OPTIONS'
-                },
-                body: JSON.stringify({ 
-                    message: "Cannot change status of an accepted application. Acceptance is final and irrevocable." 
-                }) 
-            };
+        }
+        
+        // Handle legacy 'withdrawn' status (for backward compatibility)
+        if (status === 'withdrawn') {
+            // Redirect to pending logic
+            console.log('⚠️ Deprecated: withdrawn status requested, redirecting to pending');
+            // Reprocess as pending
+            return exports.handler({
+                ...event,
+                body: JSON.stringify({ status: 'pending' })
+            });
         }
 
         // Step 5: Handle accepting applications - increment acceptedApplicantsCount

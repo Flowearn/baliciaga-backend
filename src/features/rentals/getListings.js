@@ -30,6 +30,13 @@ module.exports.handler = async (event) => {
   
   const params = {
     TableName: tableName,
+    FilterExpression: '#status = :openStatus',
+    ExpressionAttributeNames: {
+      '#status': 'status'
+    },
+    ExpressionAttributeValues: {
+      ':openStatus': { S: 'open' }
+    }
   };
 
   try {
@@ -39,7 +46,7 @@ module.exports.handler = async (event) => {
     // Transform each listing using the shared buildCompleteResponse function
     const listings = await Promise.all(rawListings.map(listing => buildCompleteResponse(listing)));
     
-    console.log(`Found ${rawListings.length} listings, transformed to complete response format.`);
+    console.log(`Found ${rawListings.length} open listings, transformed to complete response format.`);
 
     return {
       statusCode: 200,
