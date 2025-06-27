@@ -921,16 +921,15 @@ resources:
         BucketName: baliciaga-listing-images-${sls:stage}
         CorsConfiguration:
           CorsRules:
-            - AllowedOrigins:
-                - '*' # 在生产环境中应替换为你的前端域名
-              AllowedHeaders:
+            - AllowedHeaders:
                 - '*'
               AllowedMethods:
-                - PUT
                 - GET
+                - PUT
                 - HEAD
-                - POST
-                - DELETE
+              AllowedOrigins:
+                - 'https://baliciaga.com' # <-- 关键修改：从 '*' 收紧为生产域名
+              MaxAge: 3000
 
     # S3 Bucket for Profile Pictures
     ProfilePicturesBucket:
