@@ -1,0 +1,24 @@
+{
+  "name": "cafe-enrichment-scripts",
+  "version": "1.0.0",
+  "description": "Scripts for enriching cafe data with Google Places API",
+  "type": "commonjs",
+  "scripts": {
+    "test": "jest",
+    "test:interactive": "jest test-interactive-enrichment.js",
+    "test:watch": "jest --watch",
+    "enrich": "node batchEnrichAndFinalizeAllCafes.js"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "clearMocks": true,
+    "resetMocks": true,
+    "restoreMocks": true
+  },
+  "dependencies": {
+    "puppeteer": "^24.10.2"
+  }
+}

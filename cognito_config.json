@@ -1,0 +1,25 @@
+{
+    "UserPoolClient": {
+        "UserPoolId": "ap-southeast-1_gaX6b4Idb",
+        "ClientName": "baliciaga-user-pool-client-dev-rent",
+        "ClientId": "1q1g3dq456j4jgg2iqvt15o55i",
+        "LastModifiedDate": "2025-06-08T11:23:55.090000+08:00",
+        "CreationDate": "2025-06-08T00:59:29.209000+08:00",
+        "RefreshTokenValidity": 30,
+        "TokenValidityUnits": {},
+        "ReadAttributes": [
+            "email"
+        ],
+        "WriteAttributes": [
+            "email"
+        ],
+        "ExplicitAuthFlows": [
+            "ALLOW_REFRESH_TOKEN_AUTH",
+            "ALLOW_USER_SRP_AUTH"
+        ],
+        "AllowedOAuthFlowsUserPoolClient": false,
+        "EnableTokenRevocation": true,
+        "EnablePropagateAdditionalUserContextData": false,
+        "AuthSessionValidity": 3
+    }
+}

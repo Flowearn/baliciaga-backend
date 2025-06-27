@@ -138,6 +138,87 @@
 
 3. **部署完成后，Serverless Framework将输出API Gateway端点URL，您可以使用该URL访问您的API。** 
 
+## 近期主要更新 (自2025年5月下旬以来)
+
+### **核心架构与配置管理**
+
+#### **SSM Parameter Store 集成 (`appConfig.js`, `serverless.yml`)**
+* 后端配置管理已完全重构为通过 **AWS SSM Parameter Store** 进行管理，实现环境与配置的解耦
+* `serverless.yml` 中定义了指向SSM参数路径的环境变量，使用 `${sls:stage}` 实现多环境区分：
+  - 开发环境: `/baliciaga/dev/s3DataFileKeyCafe`, `/baliciaga/dev/s3DataFileKeyBar`
+  - 生产环境: `/baliciaga/prod/s3DataFileKeyCafe`, `/baliciaga/prod/s3DataFileKeyBar`
+* `appConfig.js` 已升级，能根据 Lambda 环境变量动态读取SSM参数，获取实际的S3对象键（文件名）
+* 支持按分类（cafe/bar）和环境（dev/prod）动态加载不同的数据源
+
+#### **Google Maps API Key 配置调整**
+* 已从AWS Lambda函数的环境变量中移除 `MAPS_API_KEY_SSM_PATH`，已部署的API处理程序不再依赖此密钥
+* 本地开发时，相关脚本仍可通过 `.env` 文件配置API密钥，`appConfig.js` 在本地环境下保持兼容
+
+#### **Serverless Framework 版本管理**
+* 解决了全局与本地 Serverless Framework 版本冲突问题
+* `serverless.yml` 中明确指定 `frameworkVersion: '3'`
+* **推荐使用方式**: 通过 `npx serverless ...` 或 `package.json` 中的npm脚本执行所有Serverless命令
+
+### **API 端点架构升级**
+
+#### **路径重构与分类支持**
+* **列表端点**: 从 `/cafes` 迁移到 `/places`，支持分类查询：
+  - `GET /<stage>/places?type=cafe` - 获取咖啡馆列表
+  - `GET /<stage>/places?type=bar` - 获取酒吧列表
+* **详情端点**: 从 `/cafes/{placeId}` 迁移到 `/places/{placeId}`：
+  - `GET /<stage>/places/{placeId}?type=cafe` - 获取咖啡馆详情
+  - `GET /<stage>/places/{placeId}?type=bar` - 获取酒吧详情
+
+### **数据模型增强**
+
+#### **`BaliciagaCafe.js` 模型更新**
+* 构造函数和 `toJSON()` 方法已升级，新增对 `table` 字段的支持
+* `table` 字段用于存储餐桌预订URL，为前端"Book a table"功能提供数据支持
+
+### **AWS 基础设施优化**
+
+#### **S3 存储桶策略扩展**
+* `baliciaga-database` 存储桶策略已更新，新增公共读取权限支持：
+  - 生产环境图片路径: `bar-image/*`
+  - 缩放图片路径: `photo_webp_resized/*` 及其子目录（`600/`, `800/`, `1080/`, `1200/`等）
+
+### **辅助脚本生态系统**
+
+#### **图片处理脚本 (`backend/scripts/`)**
+* **功能特性**:
+  - 自动将非静态地图图片裁剪为正方形（竖图贴底裁剪，横图居中裁剪）
+  - 统一转换为无损 WebP 格式，优化存储和传输效率
+  - 根据指定目标尺寸生成多种缩放版本（1080px, 1200px等）
+  - 智能尺寸处理：源图片小于目标尺寸时避免放大，保持图片质量
+  - 静态地图图片特殊处理：跳过文件名以 `_static.webp` 结尾的图片或原样复制
+* **输出结构**: 按尺寸组织的子文件夹 `../../photo_webp_resized/<尺寸>/<相对路径>/<文件名>.webp`
+* **运行方式**: `node scripts/processNewImages.js` (具体脚本名以实际为准)
+
+#### **JSON图片路径转换脚本**
+* **功能**: 批量更新JSON数据文件中的图片链接路径
+* **典型用例**: 将开发环境路径（`.../bar-image-dev/...`）转换为生产环境路径（`.../bar-image/...`）
+* **运行示例**: 
+  ```bash
+  node scripts/transformBarImagePaths.js \
+    --inputFile scripts/bars-dev.json \
+    --outputFile scripts/bars.json \
+    --devPathSegment /bar-image-dev/ \
+    --prodPathSegment /bar-image/ \
+    --cdnHost <你的CDN域名>
+  ```
+
+### **标准化部署流程**
+
+#### **环境区分部署**
+* **开发环境**: `npx serverless deploy --stage dev`
+* **生产环境**: `npx serverless deploy --stage prod`
+* **前置条件**: 确保对应环境的SSM参数和S3生产数据已正确配置
+
+#### **配置管理最佳实践**
+* 所有环境相关配置通过SSM Parameter Store统一管理
+* 本地开发通过 `.env` 文件配置，生产部署通过SSM参数注入
+* 支持多环境独立的数据源和配置隔离
+
 # 项目开发进展和更新日志
 
 ## 项目概述与目标回顾
@@ -194,22 +275,4 @@ Baliciaga项目是一个专注于展示和管理巴厘岛Canggu地区咖啡馆�
 - **`src/api/placesApiService.js`**:
   - 封装了对Google Places API的调用。包含 `searchNearbyPlaces`, `searchTextPlaces`, `getPlaceDetails`, `getPhotoUrl` 等函数
   - `getPlaceDetails` 使用了优化后的 `fieldMask`
-- **`src/models/BaliciagaCafe.js`**: 定义了咖啡馆数据模型，处理从API原始数据到应用所需数据结构的转换，包含 `openingPeriods` 和 `instagram` 字段
-- **`src/fetchCangguCafes.js`** (或 `handler.js`中的核心逻辑):
-  - `/dev/cafes` 等接口的实现
-  - **当前已修改为从S3读取 `data/cafes.json` 作为数据源**
-  - 实现了 `isOpenNow` 的实时计算
-  - 包含内存缓存机制（例如5分钟TTL）
-- **`scripts/` 目录下的辅助脚本**:
-  - `enrichCafeData.js`: 批量获取地点详情并合并数据
-  - `downloadCafePhotos.js`: 下载Google图片到本地
-  - `renameScreenshotFiles.js` (或 `renameManualPhotos.js`): 重命名本地截图文件
-  - `uploadAssetsToS3.js`: 上传图片到S3并更新JSON中的图片链接
-
-## 重要注意事项和未来工作提示
-
-- **API密钥管理**：`.env` 文件需要正确配置 `MAPS_API_KEY`, `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, `AWS_REGION`, `S3_BUCKET_NAME`
-- **S3权限配置**：S3存储桶策略需要允许对 `image/*` 的公共读取，以及Lambda执行角色需要有读取 `data/cafes.json` 的权限
-- **数据一致性**：如果手动修改了S3上的 `data/cafes.json` 或图片，需要有流程确保所有引用该数据的地方都能获取最新状态
-- **未来可实现的 `isOpenNow` 状态的后台定期更新Lambda**：这是计划中的优化方向
-- **本地脚本的运行环境**：脚本通常在 `BALICIAGA/backend/` 或 `BALICIAGA/backend/scripts/` 目录下通过 `node` 运行，依赖于根目录或 `backend` 目录下的 `.env` 文件 
+- **`src/models/BaliciagaCafe.js`

@@ -1,0 +1,295 @@
+[
+  {
+    "index": 1,
+    "raw": "Surf‑ready studio with sweeping ocean views in Uluwatu. 1 bedroom, 1 bathroom. Fully furnished, fast...",
+    "aiResponse": {
+      "title": "Surf-ready studio with sweeping ocean views",
+      "locationArea": "Uluwatu",
+      "address": null,
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "monthlyRent": 11000000,
+      "yearlyRent": 120000000,
+      "monthlyRentEquivalent": 10000000,
+      "utilities": null,
+      "deposit": 11000000,
+      "minimumStay": null,
+      "furnished": true,
+      "petFriendly": true,
+      "smokingAllowed": false,
+      "priceNote": "landlord discount",
+      "amenities": [
+        "Ocean Views",
+        "Fast Wi-Fi",
+        "Surfboard Rack"
+      ]
+    },
+    "issues": [
+      "yearly/monthly mismatch"
+    ],
+    "status": "ISSUES"
+  },
+  {
+    "index": 2,
+    "raw": "Bright 3‑BR family villa in Canggu near Shortcut. 3 beds 3 baths, large garden, 7×3 m pool, high‑spe...",
+    "aiResponse": {
+      "title": "Bright 3-BR Family Villa",
+      "locationArea": "Canggu",
+      "address": null,
+      "bedrooms": 3,
+      "bathrooms": 3,
+      "monthlyRent": 32000000,
+      "yearlyRent": null,
+      "monthlyRentEquivalent": null,
+      "utilities": 2000000,
+      "deposit": null,
+      "minimumStay": 6,
+      "furnished": null,
+      "petFriendly": true,
+      "smokingAllowed": false,
+      "priceNote": null,
+      "amenities": [
+        "Large Garden",
+        "Private Pool",
+        "High-speed Fibre"
+      ]
+    },
+    "issues": [
+      "furnished not boolean"
+    ],
+    "status": "ISSUES"
+  },
+  {
+    "index": 3,
+    "raw": "Brand‑new minimalist loft in Pererenan rice fields. Open plan, mezzanine bed, 1 bath. Yearly price R...",
+    "aiResponse": {
+      "title": "Brand-new minimalist loft",
+      "locationArea": "Pererenan",
+      "address": null,
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "monthlyRent": 20833333,
+      "yearlyRent": 250000000,
+      "monthlyRentEquivalent": null,
+      "utilities": null,
+      "deposit": null,
+      "minimumStay": null,
+      "furnished": null,
+      "petFriendly": false,
+      "smokingAllowed": false,
+      "priceNote": null,
+      "amenities": [
+        "Weekly cleaning",
+        "Pool maintenance"
+      ]
+    },
+    "issues": [
+      "furnished not boolean"
+    ],
+    "status": "ISSUES"
+  },
+  {
+    "index": 4,
+    "raw": "Chic Seminyak townhouse walkable to Eat Street. 2 bedrooms, 2.5 baths, rooftop terrace. IDR 550,000,...",
+    "aiResponse": {
+      "title": "Chic Seminyak Townhouse Walkable to Eat Street",
+      "locationArea": "Seminyak",
+      "address": null,
+      "bedrooms": 2,
+      "bathrooms": 2.5,
+      "monthlyRent": 45833333,
+      "yearlyRent": 550000000,
+      "monthlyRentEquivalent": null,
+      "utilities": null,
+      "deposit": null,
+      "minimumStay": 12,
+      "furnished": true,
+      "petFriendly": true,
+      "smokingAllowed": null,
+      "priceNote": null,
+      "amenities": [
+        "Rooftop Terrace"
+      ]
+    },
+    "issues": [
+      "smokingAllowed not boolean"
+    ],
+    "status": "ISSUES"
+  },
+  {
+    "index": 5,
+    "raw": "Ubud jungle bamboo cottage. Studio layout with outdoor shower. Monthly 9.5 m IDR, utilities included...",
+    "aiResponse": {
+      "title": "Ubud jungle bamboo cottage",
+      "locationArea": "Ubud",
+      "address": "Banjar Penestanan Kaja",
+      "bedrooms": 0,
+      "bathrooms": 1,
+      "monthlyRent": 9500000,
+      "yearlyRent": null,
+      "monthlyRentEquivalent": null,
+      "utilities": 0,
+      "deposit": 9500000,
+      "minimumStay": 1,
+      "furnished": null,
+      "petFriendly": false,
+      "smokingAllowed": true,
+      "priceNote": null,
+      "amenities": [
+        "Outdoor Shower"
+      ]
+    },
+    "issues": [
+      "furnished not boolean"
+    ],
+    "status": "ISSUES"
+  },
+  {
+    "index": 6,
+    "raw": "Eco‑friendly container home in Kedungu (Tanah Lot). 2 beds 1 bath, solar power, rain‑water harvestin...",
+    "aiResponse": {
+      "title": "Eco-friendly Container Home",
+      "locationArea": "Kedungu",
+      "address": null,
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "monthlyRent": 15000000,
+      "yearlyRent": 180000000,
+      "monthlyRentEquivalent": null,
+      "utilities": null,
+      "deposit": null,
+      "minimumStay": null,
+      "furnished": true,
+      "petFriendly": true,
+      "smokingAllowed": true,
+      "priceNote": null,
+      "amenities": [
+        "Solar Power",
+        "Rain-Water Harvesting"
+      ]
+    },
+    "issues": [],
+    "status": "OK"
+  },
+  {
+    "index": 7,
+    "raw": "Luxury cliff‑edge mansion on Bingin. 5 suites, infinity pool, cinema room, private chef quarters. Mo...",
+    "aiResponse": {
+      "title": "Luxury cliff-edge mansion",
+      "locationArea": "Bingin",
+      "address": null,
+      "bedrooms": 5,
+      "bathrooms": 5,
+      "monthlyRent": 15000,
+      "yearlyRent": null,
+      "monthlyRentEquivalent": null,
+      "utilities": null,
+      "deposit": 45000,
+      "minimumStay": 12,
+      "furnished": null,
+      "petFriendly": false,
+      "smokingAllowed": null,
+      "priceNote": null,
+      "amenities": [
+        "Infinity Pool",
+        "Cinema Room",
+        "Private Chef Quarters"
+      ]
+    },
+    "issues": [
+      "furnished not boolean",
+      "smokingAllowed not boolean"
+    ],
+    "status": "ISSUES"
+  },
+  {
+    "index": 8,
+    "raw": "Compact budget room in shared house, Kerobokan. Private AC bedroom, shared kitchen & bath. 3.8 m IDR...",
+    "aiResponse": {
+      "title": "Compact Budget Room in Shared House",
+      "locationArea": "Kerobokan",
+      "address": null,
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "monthlyRent": 3800000,
+      "yearlyRent": null,
+      "monthlyRentEquivalent": null,
+      "utilities": null,
+      "deposit": null,
+      "minimumStay": null,
+      "furnished": true,
+      "petFriendly": true,
+      "smokingAllowed": null,
+      "priceNote": null,
+      "amenities": [
+        "AC",
+        "Shared Kitchen",
+        "Shared Bathroom",
+        "Wi-Fi"
+      ]
+    },
+    "issues": [
+      "smokingAllowed not boolean"
+    ],
+    "status": "ISSUES"
+  },
+  {
+    "index": 9,
+    "raw": "Pererenan co‑living ensuite. 12 rooms total, fast co‑working fibre 200 Mbps, communal pool. Intro pr...",
+    "aiResponse": {
+      "title": "Pererenan Co-living Ensuite",
+      "locationArea": "Pererenan",
+      "address": null,
+      "bedrooms": 12,
+      "bathrooms": 12,
+      "monthlyRent": 6000000,
+      "yearlyRent": null,
+      "monthlyRentEquivalent": 5454545,
+      "utilities": null,
+      "deposit": 3000000,
+      "minimumStay": 1,
+      "furnished": null,
+      "petFriendly": true,
+      "smokingAllowed": false,
+      "priceNote": "landlord discount",
+      "amenities": [
+        "Co-working Space",
+        "Fast Wi-Fi",
+        "Communal Pool"
+      ]
+    },
+    "issues": [
+      "furnished not boolean"
+    ],
+    "status": "ISSUES"
+  },
+  {
+    "index": 10,
+    "raw": "Traditional teak joglo near Uluwatu Temple. 2 beds, 1 bath, semi‑open living. 95 mio/year paid twice...",
+    "aiResponse": {
+      "title": "Traditional Teak Joglo",
+      "locationArea": "Uluwatu",
+      "address": null,
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "monthlyRent": 7916667,
+      "yearlyRent": 95000000,
+      "monthlyRentEquivalent": null,
+      "utilities": null,
+      "deposit": null,
+      "minimumStay": null,
+      "furnished": true,
+      "petFriendly": true,
+      "smokingAllowed": null,
+      "priceNote": null,
+      "amenities": [
+        "Teak Joglo",
+        "Semi-Open Living"
+      ]
+    },
+    "issues": [
+      "smokingAllowed not boolean"
+    ],
+    "status": "ISSUES"
+  }
+]

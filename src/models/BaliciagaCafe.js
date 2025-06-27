@@ -76,11 +76,17 @@ class BaliciagaCafe {
     this.servesVegetarianFood = newApiPlaceDetailsData.servesVegetarianFood ?? existingData.servesVegetarianFood ?? null;
 
     // Social media and delivery - non-API data, manually provided
-    this.instagramUrl = existingData.instagramUrl || existingData.instagram || '';
+    this.instagram = existingData.instagram || existingData.instagramUrl || '';
     this.gofoodUrl = existingData.gofoodUrl || '';
 
     // Table reservation - manually provided
-    this.table = existingData.table || '';
+    this.tableUrl = existingData.tableUrl || '';
+
+    // Menu URL - manually provided
+    this.menuUrl = existingData.menuUrl || '';
+
+    // Category information - for distinguishing cafe vs dinner in food aggregation
+    this.category = existingData.category || null;
 
     // Region information (provided by caller)
     if (region) {
@@ -125,9 +131,11 @@ class BaliciagaCafe {
       allowsDogs: this.allowsDogs,
       outdoorSeating: this.outdoorSeating,
       servesVegetarianFood: this.servesVegetarianFood,
-      instagramUrl: this.instagramUrl,
+      instagram: this.instagram,
       gofoodUrl: this.gofoodUrl,
-      table: this.table
+      "tableUrl": this.tableUrl,
+      "menuUrl": this.menuUrl,
+      category: this.category
       // EXCLUDED FIELDS (not included in output):
       // - address (formattedAddress from API)
       // - priceLevel  
