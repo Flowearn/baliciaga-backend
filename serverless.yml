@@ -12,6 +12,43 @@ provider:
       - 'multipart/form-data'
       - 'image/*'
       - 'application/octet-stream'
+  iam:
+    role:
+      statements:
+        - Effect: "Allow"
+          Action:
+            - "ssm:GetParameter"
+          Resource:
+            - "arn:aws:ssm:ap-southeast-1:335069051432:parameter/baliciaga/${sls:stage}/*"
+        - Effect: "Allow"
+          Action:
+            - "s3:GetObject"
+          Resource:
+            - "arn:aws:s3:::baliciaga-database/data/*"
+        - Effect: "Allow"
+          Action:
+            - "dynamodb:Query"
+            - "dynamodb:GetItem"
+            - "dynamodb:PutItem"
+            - "dynamodb:UpdateItem"
+            - "dynamodb:Scan"
+            - "dynamodb:BatchGetItem"
+          Resource:
+            - "arn:aws:dynamodb:ap-southeast-1:335069051432:table/Baliciaga-*-${sls:stage}"
+            - "arn:aws:dynamodb:ap-southeast-1:335069051432:table/Baliciaga-*-${sls:stage}/index/*"
+            - "arn:aws:dynamodb:ap-southeast-1:335069051432:table/baliciaga-verification-codes-${sls:stage}"
+        - Effect: "Allow"
+          Action:
+            - "s3:PutObject"
+          Resource:
+            - "arn:aws:s3:::baliciaga-listing-images-${sls:stage}/*"
+            - "arn:aws:s3:::baliciaga-profile-pictures-${sls:stage}/*"
+        - Effect: "Allow"
+          Action:
+            - "ses:SendEmail"
+            - "ses:SendRawEmail"
+            - "sns:Publish"
+          Resource: "*"
   environment:
     NODE_ENV: production
     S3_BUCKET_NAME_SSM_PATH: /baliciaga/${sls:stage}/s3BucketName
@@ -26,8 +63,8 @@ provider:
     # Profile Pictures S3 Bucket
     PROFILE_PICTURES_BUCKET_NAME: baliciaga-profile-pictures-${sls:stage}
     STAGE: ${sls:stage}
-    # Cognito User Pool ID for JWT verification (will be replaced after deployment)
-    USER_POOL_ID: WILL_BE_REPLACED_AFTER_DEPLOYMENT
+    # Cognito User Pool ID for JWT verification
+    USER_POOL_ID: ap-southeast-1_5ZYL8OsmV
     # Frontend URL SSM Path for CORS configuration
     FRONTEND_URL_SSM_PATH: /baliciaga/${sls:stage}/frontendUrl
 
