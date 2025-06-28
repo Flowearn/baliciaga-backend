@@ -510,7 +510,7 @@ functions:
           path: /users/me/avatar-upload-url
           method: post
           cors:
-            origin: 'https://baliciaga.com'
+            origin: ${ssm:/baliciaga/${sls:stage}/frontendUrl, 'https://baliciaga.com'}
             headers:
               - Content-Type
               - X-Amz-Date
