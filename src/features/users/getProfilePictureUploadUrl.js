@@ -14,6 +14,11 @@ exports.handler = async (event) => {
     if (!claims || !claims.sub) {
         return {
             statusCode: 401,
+            headers: {
+                'Access-Control-Allow-Origin': process.env.FRONTEND_URL || 'https://baliciaga.com',
+                'Access-Control-Allow-Credentials': 'true',
+                'Content-Type': 'application/json'
+            },
             body: JSON.stringify({ message: "Unauthorized" }),
         };
     }
@@ -23,7 +28,15 @@ exports.handler = async (event) => {
     try {
         const { fileName, fileType } = JSON.parse(event.body);
         if (!fileName || !fileType) {
-            return { statusCode: 400, body: JSON.stringify({ message: "fileName and fileType are required." })};
+            return { 
+                statusCode: 400, 
+                headers: {
+                    'Access-Control-Allow-Origin': process.env.FRONTEND_URL || 'https://baliciaga.com',
+                    'Access-Control-Allow-Credentials': 'true',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ message: "fileName and fileType are required." })
+            };
         }
 
         const fileExtension = fileName.split('.').pop();
@@ -40,6 +53,11 @@ exports.handler = async (event) => {
 
         return {
             statusCode: 200,
+            headers: {
+                'Access-Control-Allow-Origin': process.env.FRONTEND_URL || 'https://baliciaga.com',
+                'Access-Control-Allow-Credentials': 'true',
+                'Content-Type': 'application/json'
+            },
             body: JSON.stringify({
                 success: true,
                 data: {
@@ -52,6 +70,11 @@ exports.handler = async (event) => {
         console.error("Error generating profile picture upload URL:", error);
         return {
             statusCode: 500,
+            headers: {
+                'Access-Control-Allow-Origin': process.env.FRONTEND_URL || 'https://baliciaga.com',
+                'Access-Control-Allow-Credentials': 'true',
+                'Content-Type': 'application/json'
+            },
             body: JSON.stringify({ message: "Internal Server Error" })
         };
     }

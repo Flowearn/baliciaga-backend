@@ -67,6 +67,8 @@ provider:
     USER_POOL_ID: ap-southeast-1_5ZYL8OsmV
     # Frontend URL SSM Path for CORS configuration
     FRONTEND_URL_SSM_PATH: /baliciaga/${sls:stage}/frontendUrl
+    # Direct frontend URL for CORS headers
+    FRONTEND_URL: https://baliciaga.com
 
 functions:
   placesApi:
