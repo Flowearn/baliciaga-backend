@@ -681,6 +681,7 @@ functions:
 plugins:
   - serverless-offline
   - serverless-dotenv-plugin
+  - serverless-prune-plugin
   # - serverless-dynamodb  # 注释掉以避免连接本地数据库
 
 custom:
@@ -692,6 +693,9 @@ custom:
       - AWS_REGION
       - AWS_ACCESS_KEY_ID
       - AWS_SECRET_ACCESS_KEY
+  prune:
+    automatic: true # 以后每次部署后都自动清理
+    number: 3       # 只保留最近的3个版本
 
 resources:
   Resources:

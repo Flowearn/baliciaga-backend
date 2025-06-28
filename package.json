@@ -54,7 +54,8 @@
     "jest": "^30.0.0",
     "serverless-dotenv-plugin": "^6.0.0",
     "serverless-dynamodb": "^0.2.47",
-    "serverless-offline": "^13.8.0"
+    "serverless-offline": "^13.8.0",
+    "serverless-prune-plugin": "^2.1.0"
   },
   "directories": {
     "doc": "docs"
