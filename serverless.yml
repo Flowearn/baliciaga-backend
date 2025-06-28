@@ -919,6 +919,7 @@ resources:
       Type: AWS::S3::Bucket
       Properties:
         BucketName: baliciaga-listing-images-${sls:stage}
+        # 保留我们之前修正过的CORS配置
         CorsConfiguration:
           CorsRules:
             - AllowedHeaders:
@@ -928,38 +929,66 @@ resources:
                 - PUT
                 - HEAD
               AllowedOrigins:
-                - 'https://baliciaga.com' # <-- 关键修改：从 '*' 收紧为生产域名
+                - 'https://baliciaga.com'
               MaxAge: 3000
+        # 新增：关闭"阻止公开访问"的设置 (与ProfilePicturesBucket保持一致)
+        PublicAccessBlockConfiguration:
+          BlockPublicAcls: false
+          BlockPublicPolicy: false
+          IgnorePublicAcls: false
+          RestrictPublicBuckets: false
 
     # S3 Bucket for Profile Pictures
     ProfilePicturesBucket:
       Type: AWS::S3::Bucket
       Properties:
         BucketName: baliciaga-profile-pictures-${sls:stage}
+        # 1. 添加详细的CORS配置（之前已确认无误）
         CorsConfiguration:
           CorsRules:
             - AllowedHeaders:
                 - '*'
               AllowedMethods:
                 - GET
-                - PUT   # <-- 这是最关键的新增项
+                - PUT
                 - HEAD
               AllowedOrigins:
-                - 'https://baliciaga.com' # <-- 将来源域精确指定为我们的生产前端
+                - 'https://baliciaga.com'
               MaxAge: 3000
+        # 2. 新增：关闭"阻止公开访问"的设置
+        PublicAccessBlockConfiguration:
+          BlockPublicAcls: false
+          BlockPublicPolicy: false
+          IgnorePublicAcls: false
+          RestrictPublicBuckets: false
 
     # S3 Bucket Policy for Profile Pictures - Allow public read access
-    # NOTE: Commented out due to BlockPublicAccess restrictions
-    # ProfilePicturesBucketPolicy:
-    #   Type: AWS::S3::BucketPolicy
-    #   Properties:
-    #     Bucket: !Ref ProfilePicturesBucket
-    #     PolicyDocument:
-    #       Statement:
-    #         - Effect: Allow
-    #           Principal: '*'
-    #           Action: s3:GetObject
-    #           Resource: !Sub 'arn:aws:s3:::${ProfilePicturesBucket}/*'
+    ProfilePicturesBucketPolicy:
+      Type: AWS::S3::BucketPolicy
+      Properties:
+        Bucket: !Ref ProfilePicturesBucket
+        PolicyDocument:
+          Version: '2012-10-17'
+          Statement:
+            - Sid: 'PublicReadGetObject'
+              Effect: 'Allow'
+              Principal: '*'
+              Action: 's3:GetObject'
+              Resource: !Sub 'arn:aws:s3:::${ProfilePicturesBucket}/*'
+
+    # S3 Bucket Policy for Listing Images - Allow public read access
+    ListingImagesBucketPolicy:
+      Type: AWS::S3::BucketPolicy
+      Properties:
+        Bucket: !Ref ListingImagesBucket
+        PolicyDocument:
+          Version: '2012-10-17'
+          Statement:
+            - Sid: 'PublicReadGetObject'
+              Effect: 'Allow'
+              Principal: '*'
+              Action: 's3:GetObject'
+              Resource: !Sub 'arn:aws:s3:::${ListingImagesBucket}/*'
 
   Outputs:
     CognitoUserPoolId:
