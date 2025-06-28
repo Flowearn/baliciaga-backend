@@ -24,14 +24,22 @@ exports.handler = async (event) => {
     console.log('Event:', JSON.stringify(event, null, 2));
 
     try {
-        // 1. Parse and validate request
-        const { cognitoSub, email, profileData } = await parseAndValidateRequest(event);
+        // 1. Get authenticated user
+        const claims = await getAuthenticatedUser(event);
+        if (!claims || !claims.sub) {
+            throw createError(401, 'UNAUTHORIZED', 'Missing or invalid authentication token');
+        }
+        const cognitoSub = claims.sub;
+        const email = claims.email;
         
-        // 2. Check if user exists (by cognitoSub or email)
+        // 2. Check if user exists FIRST (before validation)
         const existingUser = await getUserByCognitoSubOrEmail(cognitoSub, email);
         console.log('🔍 User lookup result:', existingUser ? 'EXISTING USER FOUND' : 'NEW USER');
         
-        // 3. Check for email uniqueness (only for new users)
+        // 3. Parse and validate request based on whether user exists
+        const { profileData } = await parseAndValidateRequest(event, existingUser);
+        
+        // 4. Check for email uniqueness (only for new users)
         if (!existingUser) {
             console.log('🚨 NEW USER DETECTED - Running email uniqueness check...');
             await checkEmailUniqueness(email, cognitoSub);
@@ -54,7 +62,7 @@ exports.handler = async (event) => {
 
         // 4. Save to DynamoDB (upsert operation)
         const savedUser = existingUser 
-            ? await updateUser(existingUser.userId, userData)
+            ? await updateUser(existingUser.userId, userData, existingUser)
             : await createUser(userData);
 
         // 5. Return success response
@@ -97,16 +105,7 @@ exports.handler = async (event) => {
 /**
  * Parse and validate the incoming request
  */
-async function parseAndValidateRequest(event) {
-    const claims = await getAuthenticatedUser(event);
-    
-    if (!claims || !claims.sub) {
-        throw createError(401, 'UNAUTHORIZED', 'Missing or invalid authentication token');
-    }
-
-    const cognitoSub = claims.sub;
-    const email = claims.email;
-
+async function parseAndValidateRequest(event, existingUser = null) {
     // Parse request body
     let body;
     try {
@@ -120,12 +119,10 @@ async function parseAndValidateRequest(event) {
         throw createError(400, 'MISSING_PROFILE', 'Profile data is required');
     }
 
-    // Validate profile fields
-    const validatedProfile = await validateProfile(body.profile);
+    // Validate profile fields - pass existingUser to apply different rules
+    const validatedProfile = await validateProfile(body.profile, existingUser);
 
     return {
-        cognitoSub,
-        email,
         profileData: validatedProfile
     };
 }
@@ -133,12 +130,23 @@ async function parseAndValidateRequest(event) {
 /**
  * Validate profile data according to PRD requirements
  */
-async function validateProfile(profile) {
+async function validateProfile(profile, existingUser = null) {
     const errors = [];
 
-    // Required fields
-    if (!profile.name || typeof profile.name !== 'string' || profile.name.trim().length === 0) {
-        errors.push('Name is required and must be a non-empty string');
+    // For new users, name is required
+    // For existing users, if name is provided, it must be non-empty
+    if (!existingUser) {
+        // New user - name is required
+        if (!profile.name || typeof profile.name !== 'string' || profile.name.trim().length === 0) {
+            errors.push('Name is required and must be a non-empty string');
+        }
+    } else {
+        // Existing user - if name is provided, validate it
+        if (profile.name !== undefined) {
+            if (typeof profile.name !== 'string' || profile.name.trim().length === 0) {
+                errors.push('Name must be a non-empty string');
+            }
+        }
     }
 
     // WhatsApp is now optional
@@ -187,16 +195,35 @@ async function validateProfile(profile) {
     }
 
     // Return cleaned profile
-    return {
-        name: profile.name.trim(),
-        ...(profile.whatsApp && { whatsApp: profile.whatsApp.trim() }),
-        ...(profile.gender && { gender: profile.gender }),
-        ...(profile.age && { age: profile.age }),
-        ...(profile.languages && { languages: profile.languages.map(lang => lang.trim()) }),
-        ...(profile.socialMedia && { socialMedia: profile.socialMedia.trim() }),
-        ...(profile.occupation && { occupation: profile.occupation.trim() }),
-        ...(profile.profilePictureUrl && { profilePictureUrl: profile.profilePictureUrl.trim() })
-    };
+    // For existing users, only include fields that were provided
+    const cleanedProfile = {};
+    
+    if (profile.name !== undefined) {
+        cleanedProfile.name = profile.name.trim();
+    }
+    if (profile.whatsApp !== undefined && profile.whatsApp !== null) {
+        cleanedProfile.whatsApp = profile.whatsApp.trim();
+    }
+    if (profile.gender !== undefined) {
+        cleanedProfile.gender = profile.gender;
+    }
+    if (profile.age !== undefined) {
+        cleanedProfile.age = profile.age;
+    }
+    if (profile.languages !== undefined) {
+        cleanedProfile.languages = profile.languages.map(lang => lang.trim());
+    }
+    if (profile.socialMedia !== undefined) {
+        cleanedProfile.socialMedia = profile.socialMedia.trim();
+    }
+    if (profile.occupation !== undefined) {
+        cleanedProfile.occupation = profile.occupation.trim();
+    }
+    if (profile.profilePictureUrl !== undefined) {
+        cleanedProfile.profilePictureUrl = profile.profilePictureUrl.trim();
+    }
+    
+    return cleanedProfile;
 }
 
 /**
@@ -309,18 +336,25 @@ async function createUser(userData) {
 /**
  * Update existing user in DynamoDB
  */
-async function updateUser(userId, updateData) {
+async function updateUser(userId, updateData, existingUser) {
+    // First get the current profile
+    const currentProfile = existingUser.profile || {};
+    
+    // Merge the new profile data with existing profile
+    const mergedProfile = {
+        ...currentProfile,
+        ...updateData.profile
+    };
+    
     // Prepare update expression
     const updateExpression = [];
     const expressionAttributeNames = {};
     const expressionAttributeValues = {};
 
-    // Profile update
-    if (updateData.profile) {
-        updateExpression.push('#profile = :profile');
-        expressionAttributeNames['#profile'] = 'profile';
-        expressionAttributeValues[':profile'] = updateData.profile;
-    }
+    // Profile update with merged data
+    updateExpression.push('#profile = :profile');
+    expressionAttributeNames['#profile'] = 'profile';
+    expressionAttributeValues[':profile'] = mergedProfile;
 
     // Updated timestamp
     updateExpression.push('#updatedAt = :updatedAt');
