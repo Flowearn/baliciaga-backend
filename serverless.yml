@@ -996,6 +996,20 @@ resources:
               Action: 's3:GetObject'
               Resource: !Sub 'arn:aws:s3:::${ListingImagesBucket}/*'
 
+    # S3 Bucket Policy for Database Bucket - Allow public read access for images
+    BaliciagaDatabaseBucketPolicy:
+      Type: AWS::S3::BucketPolicy
+      Properties:
+        Bucket: baliciaga-database
+        PolicyDocument:
+          Version: '2012-10-17'
+          Statement:
+            - Sid: 'PublicReadGetObject'
+              Effect: 'Allow'
+              Principal: '*'
+              Action: 's3:GetObject'
+              Resource: 'arn:aws:s3:::baliciaga-database/image/*'
+
   Outputs:
     CognitoUserPoolId:
       Value:
