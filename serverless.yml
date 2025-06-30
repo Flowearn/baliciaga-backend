@@ -834,12 +834,6 @@ resources:
                 KeyType: HASH
             Projection:
               ProjectionType: ALL
-          - IndexName: listingId-index
-            KeySchema:
-              - AttributeName: listingId
-                KeyType: HASH
-            Projection:
-              ProjectionType: ALL
         BillingMode: PAY_PER_REQUEST
         PointInTimeRecoverySpecification:
           PointInTimeRecoveryEnabled: true
@@ -913,13 +907,6 @@ resources:
                 KeyType: HASH
               - AttributeName: status
                 KeyType: RANGE
-            Projection:
-              ProjectionType: ALL
-          # GSI for querying applications by listingId only (needed by getListingDetail)
-          - IndexName: listingId-index
-            KeySchema:
-              - AttributeName: listingId
-                KeyType: HASH
             Projection:
               ProjectionType: ALL
         BillingMode: PAY_PER_REQUEST
