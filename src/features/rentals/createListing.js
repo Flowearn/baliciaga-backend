@@ -29,6 +29,10 @@ exports.handler = async (event) => {
         
         // 2. Parse and validate request body
         const listingData = await parseAndValidateRequest(event);
+        console.log('[CREATE_DIAGNOSIS_1] Data returned from parser/validator:', listingData);
+        
+        // 🔍 CCt#4 LOG POINT 1: Data received and parsed from event body
+        console.log('1. [createListing] Data received and parsed from event body:', JSON.stringify(listingData, null, 2));
         
         // 3. Validate platform role permission
         if (listingData.posterRole === 'platform' && !cognitoGroups.includes('InternalStaff')) {
@@ -38,13 +42,63 @@ exports.handler = async (event) => {
         
         // 4. Prepare listing object
         const now = new Date().toISOString();
+        console.log('[CCt#8 Diagnosis] About to create listing with initiatorId:', userId);
         const listing = {
             listingId: uuidv4(),
             initiatorId: userId,
             status: 'open',
             createdAt: now,
             updatedAt: now,
-            ...listingData
+            
+            // Core fields
+            title: listingData.title,
+            description: listingData.description,
+            propertyContact: listingData.propertyContact, // Explicitly include propertyContact
+            posterRole: listingData.posterRole,
+            
+            // Nested location object
+            location: {
+                address: listingData.location.address,
+                locationArea: listingData.location.locationArea,
+                coordinates: {
+                    latitude: 0,
+                    longitude: 0
+                }
+            },
+            
+            // Pricing information
+            pricing: {
+                monthlyRent: listingData.monthlyRent,
+                yearlyRent: listingData.yearlyRent,
+                currency: listingData.currency,
+                deposit: listingData.deposit,
+                utilities: listingData.utilities
+            },
+            
+            // Property details
+            details: {
+                bedrooms: listingData.bedrooms,
+                bathrooms: listingData.bathrooms,
+                squareFootage: listingData.squareFootage,
+                furnished: listingData.furnished,
+                petFriendly: listingData.petFriendly,
+                smokingAllowed: listingData.smokingAllowed
+            },
+            
+            // Availability information
+            availability: {
+                availableFrom: listingData.availableFrom,
+                minimumStay: listingData.minimumStay,
+                leaseDuration: listingData.leaseDuration
+            },
+            
+            // Additional fields
+            amenities: listingData.amenities,
+            photos: listingData.photos,
+            
+            // Auto-calculated fields
+            acceptedApplicantsCount: 0,
+            totalSpots: listingData.bedrooms || 1
         };
 
         // 5. Save to DynamoDB
@@ -121,6 +175,11 @@ async function validateAuthentication(event) {
 
         const userId = userResult.Items[0].userId;
         console.log(`🔐 Authenticated user - CognitoSub: ${cognitoSub}, UserId: ${userId}, Groups: ${JSON.stringify(cognitoGroups)}`);
+        console.log('[CCt#8 Diagnosis] Successfully mapped Cognito Sub to internal userId:', {
+            cognitoSub: cognitoSub,
+            internalUserId: userId,
+            userRecord: userResult.Items[0]
+        });
 
         return { userId, cognitoGroups };
     } catch (error) {
@@ -145,6 +204,11 @@ async function parseAndValidateRequest(event) {
     }
 
     console.log('Request body:', JSON.stringify(body, null, 2));
+    console.log('[DEBUG] Request body propertyContact field:', {
+        propertyContact: body.propertyContact,
+        type: typeof body.propertyContact,
+        exists: 'propertyContact' in body
+    });
 
     const errors = [];
 
@@ -155,6 +219,15 @@ async function parseAndValidateRequest(event) {
 
     if (!body.address || typeof body.address !== 'string' || body.address.trim().length === 0) {
         errors.push('address is required and must be a non-empty string');
+    }
+
+    if (!body.propertyContact || typeof body.propertyContact !== 'string' || body.propertyContact.trim().length === 0) {
+        console.log('PropertyContact validation failed:', { 
+            propertyContact: body.propertyContact, 
+            type: typeof body.propertyContact,
+            trimmedLength: body.propertyContact ? body.propertyContact.toString().trim().length : 0
+        });
+        errors.push('propertyContact is required and must be a non-empty string');
     }
 
     // Convert string numbers to numbers for monthlyRent
@@ -261,15 +334,20 @@ async function parseAndValidateRequest(event) {
 
     // If any validation errors, throw
     if (errors.length > 0) {
-        throw createError(400, 'VALIDATION_ERROR', 'Listing validation failed', errors);
+        throw createError(400, 'VALIDATION_ERROR', 'Invalid request body', errors);
     }
 
-    // Return normalized data structure (convert decimals to integers for money fields, handle nulls)
+    // Return structured listing data object for further processing
+    // Note: description and some others are now optional.
     return {
         title: body.title.trim(),
-        address: body.address.trim(),
-        locationArea: body.locationArea || null, // New field for AI-extracted area
-        posterRole: body.posterRole, // New field for poster role
+        description: body.description ? body.description.trim() : "",
+        propertyContact: body.propertyContact, // Ensure propertyContact is returned
+        posterRole: body.posterRole,
+        location: {
+            address: body.address.trim(),
+            locationArea: body.locationArea || null, // New field for AI-extracted area
+        },
         monthlyRent: Math.round(body.monthlyRent), // Convert to integer
         yearlyRent: body.yearlyRent !== null && body.yearlyRent !== undefined ? Math.round(body.yearlyRent) : 0, // Handle null
         currency: body.currency,
@@ -299,6 +377,10 @@ async function saveListing(listing) {
         TableName: LISTINGS_TABLE,
         Item: listing
     };
+    console.log('[CREATE_DIAGNOSIS_2] Final Item object being sent to DynamoDB:', params.Item);
+    
+    // 🔍 CCt#4 LOG POINT 2: Final Item object just before DynamoDB put operation
+    console.log('2. [createListing] Final Item object just before DynamoDB put operation:', JSON.stringify(params.Item, null, 2));
 
     try {
         await dynamodb.put(params).promise();

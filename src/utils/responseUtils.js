@@ -58,31 +58,31 @@ const buildCompleteResponse = async (listing) => {
         
         // Location object (nested structure expected by frontend)
         location: {
-            address: listing.address || listing.locationName || 'Address not available',
+            address: listing.location?.address || listing.address || 'Address not available',
             coordinates: {
-                latitude: listing.locationCoords?.[0] || 0,
-                longitude: listing.locationCoords?.[1] || 0
+                latitude: listing.location?.coordinates?.latitude || 0,
+                longitude: listing.location?.coordinates?.longitude || 0
             },
-            area: listing.locationArea,
+            area: listing.location?.locationArea || listing.locationArea,
         },
         
         // Pricing object (nested structure expected by frontend)
         pricing: {
-            monthlyRent: listing.monthlyRent || listing.leaseDetails?.monthlyRent || listing.propertyDetails?.monthlyRent || 0,
-            yearlyRent: listing.yearlyRent || listing.leaseDetails?.yearlyRent || listing.propertyDetails?.yearlyRent || 0,
-            deposit: listing.deposit || listing.leaseDetails?.deposit || listing.propertyDetails?.deposit || 0,
-            utilities: listing.utilities || listing.leaseDetails?.utilities || listing.propertyDetails?.utilities || 0,
-            currency: listing.currency || listing.leaseDetails?.currency || listing.propertyDetails?.currency || 'IDR'
+            monthlyRent: listing.pricing?.monthlyRent || 0,
+            yearlyRent: listing.pricing?.yearlyRent || 0,
+            deposit: listing.pricing?.deposit || 0,
+            utilities: listing.pricing?.utilities || 0,
+            currency: listing.pricing?.currency || 'IDR'
         },
         
         // Details object (nested structure expected by frontend)
         details: {
-            bedrooms: listing.bedrooms || listing.propertyDetails?.bedrooms || 1,
-            bathrooms: listing.bathrooms || listing.propertyDetails?.bathrooms || 1,
-            squareFootage: listing.squareFootage || listing.propertyDetails?.squareFootage || null,
-            furnished: listing.furnished || listing.propertyDetails?.furnished || false,
-            petFriendly: listing.petFriendly || listing.propertyDetails?.petFriendly || false,
-            smokingAllowed: listing.smokingAllowed || listing.propertyDetails?.smokingAllowed || false,
+            bedrooms: listing.details?.bedrooms || 1,
+            bathrooms: listing.details?.bathrooms || 1,
+            squareFootage: listing.details?.squareFootage || null,
+            furnished: listing.details?.furnished || false,
+            petFriendly: listing.details?.petFriendly || false,
+            smokingAllowed: listing.details?.smokingAllowed || false,
             amenities: listing.amenities || [],
             otherFeatures: listing.otherFeatures,
             otherAmenities: listing.otherAmenities,
@@ -93,10 +93,10 @@ const buildCompleteResponse = async (listing) => {
         
         // Availability object (nested structure expected by frontend)
         availability: {
-            availableFrom: listing.availableFrom || listing.leaseDetails?.availableFrom || listing.propertyDetails?.availableFrom || new Date().toISOString(),
-            minimumStay: listing.minimumStay || listing.leaseDetails?.minimumStay || listing.propertyDetails?.minimumStay || 1,
-            maximumStay: listing.maximumStay || listing.leaseDetails?.maximumStay || listing.propertyDetails?.maximumStay || null,
-            leaseDuration: listing.leaseDuration || null // Add leaseDuration field
+            availableFrom: listing.availability?.availableFrom || new Date().toISOString(),
+            minimumStay: listing.availability?.minimumStay || 1,
+            maximumStay: listing.availability?.maximumStay || null,
+            leaseDuration: listing.availability?.leaseDuration || null
         },
         
         // Status (map backend status to frontend status)
@@ -109,7 +109,7 @@ const buildCompleteResponse = async (listing) => {
         
         // --- NEW FIELDS ---
         acceptedApplicantsCount: filledSpots, // Use new calculation that includes poster role
-        totalSpots: listing.bedrooms || 1, // Use bedrooms as total spots, default to 1
+        totalSpots: listing.totalSpots || listing.details?.bedrooms || 1, // Use totalSpots if available, otherwise bedrooms
         
         // Initiator information
         initiator: {
