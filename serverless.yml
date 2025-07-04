@@ -64,7 +64,7 @@ provider:
     PROFILE_PICTURES_BUCKET_NAME: baliciaga-profile-pictures-${sls:stage}
     STAGE: ${sls:stage}
     # Cognito User Pool ID for JWT verification
-    USER_POOL_ID: ${ssm:/baliciaga/${sls:stage}/cognitoUserPoolId}
+    USER_POOL_ID: ${self:custom.stage_vars.${sls:stage}.cognitoUserPoolId}
     # Frontend URL SSM Path for CORS configuration
     FRONTEND_URL_SSM_PATH: /baliciaga/${sls:stage}/frontendUrl
     # Direct frontend URL for CORS headers
@@ -463,6 +463,11 @@ custom:
   prune:
     automatic: true # 以后每次部署后都自动清理
     number: 3       # 只保留最近的3个版本
+  stage_vars:
+    dev:
+      cognitoUserPoolId: ap-southeast-1_N72jBBIzH
+    prod:
+      cognitoUserPoolId: ap-southeast-1_5ZYL8OsmV
 
 resources:
   Resources:
@@ -762,6 +767,14 @@ resources:
               Principal: '*'
               Action: 's3:GetObject'
               Resource: !Sub 'arn:aws:s3:::${ListingImagesBucket}/*'
+
+    # SSM Parameter for Cognito User Pool ID
+    CognitoUserPoolIdSsmParameter:
+      Type: AWS::SSM::Parameter
+      Properties:
+        Name: /baliciaga/${sls:stage}/cognitoUserPoolId
+        Type: String
+        Value: ${self:custom.stage_vars.${sls:stage}.cognitoUserPoolId}
 
   Outputs:
     CognitoUserPoolId:
