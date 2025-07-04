@@ -2,6 +2,29 @@ service: baliciaga-backend
 
 frameworkVersion: '4'
 
+package:
+  individually: true
+  exclude:
+    - node_modules/aws-sdk/**
+    - node_modules/playwright/**
+    - node_modules/playwright-core/**
+    - node_modules/@esbuild/**
+    - node_modules/serverless/**
+    - node_modules/serverless-*/**
+    - node_modules/java-invoke-local/**
+    - node_modules/effect/**
+    - node_modules/@effect/**
+    - scripts/**
+    - test/**
+    - docs/**
+    - .git/**
+    - .serverless/**
+    - backend.log
+    - downloaded_s3_cafes.json
+    - '*.zip'
+    - temp-fix/**
+    - data/**
+
 provider:
   name: aws
   runtime: nodejs18.x
