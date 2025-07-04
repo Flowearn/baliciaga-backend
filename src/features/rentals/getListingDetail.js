@@ -42,6 +42,7 @@ exports.handler = async (event) => {
             if (authUser && authUser.sub) {
                 cognitoSub = authUser.sub;
                 console.log(`🔐 Authenticated user detected - Cognito Sub: ${cognitoSub}`);
+                console.log('[Cloud-Debug] 1. Received Cognito sub from request:', cognitoSub);
                 
                 // Get the actual userId from our Users table
                 const userQuery = {
@@ -54,6 +55,7 @@ exports.handler = async (event) => {
                 };
 
                 const userResult = await dynamodb.query(userQuery).promise();
+                console.log('[Cloud-Debug] 2. User lookup result from DB:', userResult.Items);
                 if (userResult.Items && userResult.Items.length > 0) {
                     userId = userResult.Items[0].userId;
                     console.log(`✅ Mapped Cognito Sub to internal userId: ${cognitoSub} -> ${userId}`);
@@ -133,6 +135,8 @@ async function applyConditionalDataFiltering(listingDetail, rawListing, userId) 
     }
     
     // Check if user is the initiator
+    console.log('[Cloud-Debug] 3. Listing fetched from DB, initiatorId is:', rawListing.initiatorId);
+    console.log('[Cloud-Debug] 4. Final values for ownership comparison:', { userIdForCheck: userId, ownerIdInListing: rawListing.initiatorId });
     if (rawListing.initiatorId === userId) {
         console.log('✅ User is the initiator - showing propertyContact');
         filteredListing.propertyContact = rawListing.propertyContact || null;

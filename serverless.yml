@@ -1,6 +1,6 @@
 service: baliciaga-backend
 
-frameworkVersion: '3'
+frameworkVersion: '4'
 
 provider:
   name: aws
@@ -64,7 +64,7 @@ provider:
     PROFILE_PICTURES_BUCKET_NAME: baliciaga-profile-pictures-${sls:stage}
     STAGE: ${sls:stage}
     # Cognito User Pool ID for JWT verification
-    USER_POOL_ID: ap-southeast-1_5ZYL8OsmV
+    USER_POOL_ID: ${ssm:/baliciaga/${sls:stage}/cognitoUserPoolId}
     # Frontend URL SSM Path for CORS configuration
     FRONTEND_URL_SSM_PATH: /baliciaga/${sls:stage}/frontendUrl
     # Direct frontend URL for CORS headers
@@ -74,22 +74,6 @@ functions:
   placesApi:
     handler: src/fetchPlaces.handler
     timeout: 180
-    iam:
-      role:
-        statements:
-          - Effect: "Allow"
-            Action:
-              - "ssm:GetParameter"
-            Resource:
-              - "arn:aws:ssm:ap-southeast-1:335069051432:parameter/baliciaga/${sls:stage}/s3BucketName"
-              - "arn:aws:ssm:ap-southeast-1:335069051432:parameter/baliciaga/${sls:stage}/s3DataFileKeyCafe"
-              - "arn:aws:ssm:ap-southeast-1:335069051432:parameter/baliciaga/${sls:stage}/s3DataFileKeyBar"
-          - Effect: "Allow"
-            Action:
-              - "s3:GetObject"
-            Resource:
-              - "arn:aws:s3:::baliciaga-database/data/cafes.json"
-              - "arn:aws:s3:::baliciaga-database/data/*"
     events:
       - http:
           path: /places
@@ -122,14 +106,6 @@ functions:
   getUserProfile:
     handler: src/features/rentals/getUserProfile.handler
     timeout: 30
-    iam:
-      role:
-        statements:
-          - Effect: "Allow"
-            Action:
-              - "dynamodb:Query"
-            Resource:
-              - "arn:aws:dynamodb:ap-southeast-1:335069051432:table/Baliciaga-Users-${sls:stage}/index/CognitoSubIndex"
     events:
       - http:
           path: /users/me
@@ -147,19 +123,6 @@ functions:
   createUserProfile:
     handler: src/features/rentals/createUserProfile.handler
     timeout: 30
-    iam:
-      role:
-        statements:
-          - Effect: "Allow"
-            Action:
-              - "dynamodb:Query"
-            Resource:
-              - "arn:aws:dynamodb:ap-southeast-1:335069051432:table/Baliciaga-Users-${sls:stage}/index/CognitoSubIndex"
-          - Effect: "Allow"
-            Action:
-              - "dynamodb:PutItem"
-            Resource:
-              - "arn:aws:dynamodb:ap-southeast-1:335069051432:table/Baliciaga-Users-${sls:stage}"
     events:
       - http:
           path: /users/profile
@@ -177,19 +140,6 @@ functions:
   createListing:
     handler: src/features/rentals/createListing.handler
     timeout: 30
-    iam:
-      role:
-        statements:
-          - Effect: "Allow"
-            Action:
-              - "dynamodb:Query"
-            Resource:
-              - "arn:aws:dynamodb:ap-southeast-1:335069051432:table/Baliciaga-Users-${sls:stage}/index/CognitoSubIndex"
-          - Effect: "Allow"
-            Action:
-              - "dynamodb:PutItem"
-            Resource:
-              - "arn:aws:dynamodb:ap-southeast-1:335069051432:table/Baliciaga-Listings-${sls:stage}"
     events:
       - http:
           path: /listings
@@ -207,14 +157,6 @@ functions:
   getListings:
     handler: src/features/rentals/getListings.handler
     timeout: 30
-    iam:
-      role:
-        statements:
-          - Effect: "Allow"
-            Action:
-              - "dynamodb:Scan"
-            Resource:
-              - "arn:aws:dynamodb:ap-southeast-1:335069051432:table/Baliciaga-Listings-${sls:stage}"
     events:
       - http:
           path: /listings
@@ -254,24 +196,6 @@ functions:
   getListingDetail:
     handler: src/features/rentals/getListingDetail.handler
     timeout: 30
-    iam:
-      role:
-        statements:
-          - Effect: "Allow"
-            Action:
-              - "dynamodb:GetItem"
-            Resource:
-              - "arn:aws:dynamodb:ap-southeast-1:335069051432:table/Baliciaga-Listings-${sls:stage}"
-          - Effect: "Allow"
-            Action:
-              - "dynamodb:UpdateItem"
-            Resource:
-              - "arn:aws:dynamodb:ap-southeast-1:335069051432:table/Baliciaga-Listings-${sls:stage}"
-          - Effect: "Allow"
-            Action:
-              - "dynamodb:Query"
-            Resource:
-              - "arn:aws:dynamodb:ap-southeast-1:335069051432:table/Baliciaga-Applications-${sls:stage}/index/listingId-index"
     events:
       - http:
           path: /listings/{listingId}
@@ -283,25 +207,6 @@ functions:
   createApplication:
     handler: src/features/rentals/createApplication.handler
     timeout: 30
-    iam:
-      role:
-        statements:
-          - Effect: "Allow"
-            Action:
-              - "dynamodb:Query"
-            Resource:
-              - "arn:aws:dynamodb:ap-southeast-1:335069051432:table/Baliciaga-Users-${sls:stage}/index/CognitoSubIndex"
-              - "arn:aws:dynamodb:ap-southeast-1:335069051432:table/Baliciaga-Applications-${sls:stage}/index/UserApplicationsIndex"
-          - Effect: "Allow"
-            Action:
-              - "dynamodb:GetItem"
-            Resource:
-              - "arn:aws:dynamodb:ap-southeast-1:335069051432:table/Baliciaga-Listings-${sls:stage}"
-          - Effect: "Allow"
-            Action:
-              - "dynamodb:PutItem"
-            Resource:
-              - "arn:aws:dynamodb:ap-southeast-1:335069051432:table/Baliciaga-Applications-${sls:stage}"
     events:
       - http:
           path: /listings/{listingId}/applications
@@ -319,25 +224,6 @@ functions:
   getApplications:
     handler: src/features/rentals/getApplications.handler
     timeout: 30
-    iam:
-      role:
-        statements:
-          - Effect: "Allow"
-            Action:
-              - "dynamodb:Query"
-            Resource:
-              - "arn:aws:dynamodb:ap-southeast-1:335069051432:table/Baliciaga-Users-${sls:stage}/index/CognitoSubIndex"
-              - "arn:aws:dynamodb:ap-southeast-1:335069051432:table/Baliciaga-Applications-${sls:stage}/index/ListingApplicationsIndex"
-          - Effect: "Allow"
-            Action:
-              - "dynamodb:GetItem"
-            Resource:
-              - "arn:aws:dynamodb:ap-southeast-1:335069051432:table/Baliciaga-Listings-${sls:stage}"
-          - Effect: "Allow"
-            Action:
-              - "dynamodb:BatchGetItem"
-            Resource:
-              - "arn:aws:dynamodb:ap-southeast-1:335069051432:table/Baliciaga-Users-${sls:stage}"
     events:
       - http:
           path: /listings/{listingId}/applications
@@ -355,22 +241,6 @@ functions:
   getUserApplications:
     handler: src/features/rentals/getUserApplications.handler
     timeout: 30
-    iam:
-      role:
-        statements:
-          - Effect: "Allow"
-            Action:
-              - "dynamodb:Query"
-            Resource:
-              - "arn:aws:dynamodb:ap-southeast-1:335069051432:table/Baliciaga-Users-${sls:stage}/index/CognitoSubIndex"
-              - "arn:aws:dynamodb:ap-southeast-1:335069051432:table/Baliciaga-Applications-${sls:stage}/index/UserApplicationsIndex"
-              - "arn:aws:dynamodb:ap-southeast-1:335069051432:table/Baliciaga-Applications-${sls:stage}/index/ListingApplicationsIndex"
-          - Effect: "Allow"
-            Action:
-              - "dynamodb:BatchGetItem"
-            Resource:
-              - "arn:aws:dynamodb:ap-southeast-1:335069051432:table/Baliciaga-Listings-${sls:stage}"
-              - "arn:aws:dynamodb:ap-southeast-1:335069051432:table/Baliciaga-Users-${sls:stage}"
     events:
       - http:
           path: /users/me/applications
@@ -388,15 +258,6 @@ functions:
   getUserListings:
     handler: src/features/rentals/getUserListings.handler
     timeout: 30
-    iam:
-      role:
-        statements:
-          - Effect: "Allow"
-            Action:
-              - "dynamodb:Query"
-            Resource:
-              - "arn:aws:dynamodb:ap-southeast-1:335069051432:table/Baliciaga-Users-${sls:stage}/index/CognitoSubIndex"
-              - "arn:aws:dynamodb:ap-southeast-1:335069051432:table/Baliciaga-Listings-${sls:stage}/index/InitiatorIndex"
     events:
       - http:
           path: /users/me/listings
@@ -414,26 +275,6 @@ functions:
   updateApplication:
     handler: src/features/rentals/updateApplication.handler
     timeout: 30
-    iam:
-      role:
-        statements:
-          - Effect: "Allow"
-            Action:
-              - "dynamodb:Query"
-            Resource:
-              - "arn:aws:dynamodb:ap-southeast-1:335069051432:table/Baliciaga-Users-${sls:stage}/index/CognitoSubIndex"
-          - Effect: "Allow"
-            Action:
-              - "dynamodb:GetItem"
-            Resource:
-              - "arn:aws:dynamodb:ap-southeast-1:335069051432:table/Baliciaga-Applications-${sls:stage}"
-              - "arn:aws:dynamodb:ap-southeast-1:335069051432:table/Baliciaga-Listings-${sls:stage}"
-          - Effect: "Allow"
-            Action:
-              - "dynamodb:UpdateItem"
-            Resource:
-              - "arn:aws:dynamodb:ap-southeast-1:335069051432:table/Baliciaga-Applications-${sls:stage}"
-              - "arn:aws:dynamodb:ap-southeast-1:335069051432:table/Baliciaga-Listings-${sls:stage}"
     events:
       - http:
           path: /applications/{applicationId}
@@ -451,24 +292,6 @@ functions:
   cancelApplication:
     handler: src/handlers/applications/cancelApplication.handler
     timeout: 30
-    iam:
-      role:
-        statements:
-          - Effect: "Allow"
-            Action:
-              - "dynamodb:Query"
-            Resource:
-              - "arn:aws:dynamodb:ap-southeast-1:335069051432:table/Baliciaga-Users-${sls:stage}/index/CognitoSubIndex"
-          - Effect: "Allow"
-            Action:
-              - "dynamodb:GetItem"
-            Resource:
-              - "arn:aws:dynamodb:ap-southeast-1:335069051432:table/Baliciaga-Applications-${sls:stage}"
-          - Effect: "Allow"
-            Action:
-              - "dynamodb:UpdateItem"
-            Resource:
-              - "arn:aws:dynamodb:ap-southeast-1:335069051432:table/Baliciaga-Applications-${sls:stage}"
     events:
       - http:
           path: /applications/{applicationId}/cancel
@@ -486,14 +309,6 @@ functions:
   analyzeListingSource:
     handler: src/features/rentals/analyzeListingSource.handler
     timeout: 60
-    iam:
-      role:
-        statements:
-          - Effect: "Allow"
-            Action:
-              - "ssm:GetParameter"
-            Resource:
-              - "arn:aws:ssm:ap-southeast-1:335069051432:parameter/baliciaga/${sls:stage}/geminiApiKey"
     events:
       - http:
           path: /listings/analyze-source
@@ -511,13 +326,6 @@ functions:
   getUploadUrl:
     handler: src/features/rentals/getUploadUrl.handler
     timeout: 30
-    iam:
-      role:
-        statements:
-          - Effect: "Allow"
-            Action:
-              - "s3:PutObject"
-            Resource: "arn:aws:s3:::baliciaga-listing-images-${sls:stage}/*"
     events:
       - http:
           path: /listings/upload-url
@@ -535,13 +343,6 @@ functions:
   getProfilePictureUploadUrl:
     handler: src/features/users/getProfilePictureUploadUrl.handler
     timeout: 30
-    iam:
-      role:
-        statements:
-          - Effect: "Allow"
-            Action:
-              - "s3:PutObject"
-            Resource: "arn:aws:s3:::baliciaga-profile-pictures-${sls:stage}/*"
     events:
       - http:
           path: /users/me/avatar-upload-url
@@ -568,24 +369,6 @@ functions:
   updateListing:
     handler: src/features/rentals/updateListing.handler
     timeout: 30
-    iam:
-      role:
-        statements:
-          - Effect: "Allow"
-            Action:
-              - "dynamodb:Query"
-            Resource:
-              - "arn:aws:dynamodb:ap-southeast-1:335069051432:table/Baliciaga-Users-${sls:stage}/index/CognitoSubIndex"
-          - Effect: "Allow"
-            Action:
-              - "dynamodb:GetItem"
-            Resource:
-              - "arn:aws:dynamodb:ap-southeast-1:335069051432:table/Baliciaga-Listings-${sls:stage}"
-          - Effect: "Allow"
-            Action:
-              - "dynamodb:UpdateItem"
-            Resource:
-              - "arn:aws:dynamodb:ap-southeast-1:335069051432:table/Baliciaga-Listings-${sls:stage}"
     events:
       - http:
           path: /listings/{listingId}
@@ -603,24 +386,6 @@ functions:
   finalizeListing:
     handler: src/features/rentals/finalizeListing.handler
     timeout: 30
-    iam:
-      role:
-        statements:
-          - Effect: "Allow"
-            Action:
-              - "dynamodb:Query"
-            Resource:
-              - "arn:aws:dynamodb:ap-southeast-1:335069051432:table/Baliciaga-Users-${sls:stage}/index/CognitoSubIndex"
-          - Effect: "Allow"
-            Action:
-              - "dynamodb:GetItem"
-            Resource:
-              - "arn:aws:dynamodb:ap-southeast-1:335069051432:table/Baliciaga-Listings-${sls:stage}"
-          - Effect: "Allow"
-            Action:
-              - "dynamodb:UpdateItem"
-            Resource:
-              - "arn:aws:dynamodb:ap-southeast-1:335069051432:table/Baliciaga-Listings-${sls:stage}"
     events:
       - http:
           path: /listings/{listingId}/finalize
@@ -638,24 +403,6 @@ functions:
   cancelListing:
     handler: src/features/rentals/cancelListing.handler
     timeout: 30
-    iam:
-      role:
-        statements:
-          - Effect: "Allow"
-            Action:
-              - "dynamodb:Query"
-            Resource:
-              - "arn:aws:dynamodb:ap-southeast-1:335069051432:table/Baliciaga-Users-${sls:stage}/index/CognitoSubIndex"
-          - Effect: "Allow"
-            Action:
-              - "dynamodb:GetItem"
-            Resource:
-              - "arn:aws:dynamodb:ap-southeast-1:335069051432:table/Baliciaga-Listings-${sls:stage}"
-          - Effect: "Allow"
-            Action:
-              - "dynamodb:UpdateItem"
-            Resource:
-              - "arn:aws:dynamodb:ap-southeast-1:335069051432:table/Baliciaga-Listings-${sls:stage}"
     events:
       - http:
           path: /listings/{listingId}/cancel
@@ -673,14 +420,6 @@ functions:
   incrementViewCount:
     handler: src/features/rentals/incrementViewCount.handler
     timeout: 30
-    iam:
-      role:
-        statements:
-          - Effect: "Allow"
-            Action:
-              - "dynamodb:UpdateItem"
-            Resource:
-              - "arn:aws:dynamodb:ap-southeast-1:335069051432:table/Baliciaga-Listings-${sls:stage}"
     events:
       - http:
           path: /listings/{listingId}/view
@@ -705,23 +444,6 @@ functions:
   postConfirmation:
     handler: src/features/auth/postConfirmation.handler
     timeout: 30
-    iam:
-      role:
-        statements:
-          - Effect: "Allow"
-            Action:
-              - "dynamodb:PutItem"
-            Resource:
-              - "arn:aws:dynamodb:ap-southeast-1:335069051432:table/Baliciaga-Users-${sls:stage}"
-          - Effect: "Allow"
-            Action:
-              - "ses:SendEmail"
-              - "ses:SendRawEmail"
-            Resource: "*"
-          - Effect: "Allow"
-            Action:
-              - "sns:Publish"
-            Resource: "*"
 
 plugins:
   - serverless-offline
