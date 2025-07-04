@@ -162,8 +162,57 @@ exports.handler = async (event) => {
       }
     }
 
-    // Execute query
-    const result = await dynamodb.query(queryParams).promise();
+    // Execute query with pagination handling for filtered results
+    console.log('[MyListings API] DynamoDB Query Params:', JSON.stringify(queryParams, null, 2));
+    
+    // When using FilterExpression, we need to handle pagination differently
+    // to ensure we get enough filtered results
+    let allItems = [];
+    let lastEvaluatedKey = queryParams.ExclusiveStartKey;
+    let actualScannedCount = 0;
+    
+    // Keep querying until we have enough filtered results or no more data
+    while (allItems.length < limitNum) {
+        const currentQueryParams = { ...queryParams };
+        if (lastEvaluatedKey) {
+            currentQueryParams.ExclusiveStartKey = lastEvaluatedKey;
+        }
+        
+        const result = await dynamodb.query(currentQueryParams).promise();
+        console.log(`[MyListings API] Query iteration - Found ${result.Items.length} items after filtering, ScannedCount: ${result.ScannedCount}`);
+        
+        allItems = allItems.concat(result.Items);
+        actualScannedCount += result.ScannedCount || 0;
+        lastEvaluatedKey = result.LastEvaluatedKey;
+        
+        // Stop if no more items to scan
+        if (!lastEvaluatedKey || result.Items.length === 0) {
+            break;
+        }
+        
+        // Safety limit to prevent infinite loops
+        if (actualScannedCount > 1000) {
+            console.log('[MyListings API] Safety limit reached, stopping pagination');
+            break;
+        }
+    }
+    
+    // Trim to requested limit
+    const hasMoreItems = allItems.length > limitNum || !!lastEvaluatedKey;
+    allItems = allItems.slice(0, limitNum);
+    
+    const result = {
+        Items: allItems,
+        Count: allItems.length,
+        ScannedCount: actualScannedCount,
+        LastEvaluatedKey: hasMoreItems ? lastEvaluatedKey : undefined
+    };
+    
+    console.log('[MyListings API] Final aggregated result:', {
+        itemCount: result.Items.length,
+        scannedCount: result.ScannedCount,
+        hasMore: !!result.LastEvaluatedKey
+    });
     
     console.log(`DynamoDB query result: Found ${result.Items.length} raw items`);
     if (result.Items.length > 0) {

@@ -88,6 +88,10 @@ exports.handler = async (event) => {
             delete extractedData.reasoning;
         }
         
+        // 🔍 DIAGNOSTIC LOG: Check if propertyContact was extracted
+        console.log('[Backend Extraction] Data being sent to frontend:', extractedData);
+        console.log('[Backend Extraction] propertyContact field specifically:', extractedData.propertyContact);
+        
         // 7. Return structured response
         return createResponse(200, {
             success: true,
@@ -304,6 +308,10 @@ You are a hyper-precise data extraction engine for real estate in Bali, Indonesi
   <rule id="4">
     **REASONING:** You MUST include a 'reasoning' field in your JSON output, containing a brief, one-sentence explanation of your thought process, especially for the currency decision.
   </rule>
+  <rule id="5">
+    **CONTACT INFORMATION:** Extract any property contact information visible in the image such as phone numbers (including WhatsApp), contact person names, or contact CTAs. Look for patterns like "Contact: +62...", "WhatsApp: ...", "Call/WA: ...", "Contact [Name]", "For inquiries: ...". If multiple contact methods are found, include all of them.
+    **Important Rule:** If the contact information is a WhatsApp link (e.g., \\\`wa.me/+62...\\\` or \\\`https://wa.me/62...\\\`), you must only extract the phone number part itself (e.g., \\\`+62...\\\` or \\\`62...\\\`). Discard the \\\`wa.me/\\\` prefix and any other URL components.
+  </rule>
 </instructions>
 
 <json_structure>
@@ -324,6 +332,7 @@ You are a hyper-precise data extraction engine for real estate in Bali, Indonesi
   "price_yearly_idr": "number | null", 
   "price_yearly_usd": "number | null",
   "amenityTags": ["string"],
+  "propertyContact": "string | null",
   "reasoning": "string" // This field is mandatory
 }
 </json_structure>
@@ -333,7 +342,7 @@ You are a hyper-precise data extraction engine for real estate in Bali, Indonesi
     <source>Villa for rent 250jt/yr in Seminyak.</source>
     <output>
     {
-      "title": "Villa for rent in Seminyak", "bedrooms": null, "bathrooms": null, "landSize": null, "buildingSize": null, "locationArea": "Seminyak", "address": "Seminyak", "currency": "IDR", "pricing": { "monthly": 20833333, "yearly": 250000000 }, "minimumStay": null, "amenityTags": [], "reasoning": "Currency is IDR because no '$' or 'USD' was found in the price."
+      "title": "Villa for rent in Seminyak", "bedrooms": null, "bathrooms": null, "landSize": null, "buildingSize": null, "locationArea": "Seminyak", "address": "Seminyak", "currency": "IDR", "pricing": { "monthly": 20833333, "yearly": 250000000 }, "minimumStay_months": null, "price_yearly_idr": null, "price_yearly_usd": null, "amenityTags": [], "propertyContact": null, "reasoning": "Currency is IDR because no '$' or 'USD' was found in the price."
     }
     </output>
   </example>
@@ -341,7 +350,7 @@ You are a hyper-precise data extraction engine for real estate in Bali, Indonesi
     <source>Apartment available for $1.5k/month in Canggu.</source>
     <output>
     {
-      "title": "Apartment in Canggu", "bedrooms": null, "bathrooms": null, "landSize": null, "buildingSize": null, "locationArea": "Canggu", "address": "Canggu", "currency": "USD", "pricing": { "monthly": 1500, "yearly": null }, "minimumStay": null, "amenityTags": [], "reasoning": "Currency is USD because the '$' symbol was found in the price."
+      "title": "Apartment in Canggu", "bedrooms": null, "bathrooms": null, "landSize": null, "buildingSize": null, "locationArea": "Canggu", "address": "Canggu", "currency": "USD", "pricing": { "monthly": 1500, "yearly": null }, "minimumStay_months": null, "price_yearly_idr": null, "price_yearly_usd": null, "amenityTags": [], "propertyContact": null, "reasoning": "Currency is USD because the '$' symbol was found in the price."
     }
     </output>
   </example>
@@ -389,6 +398,10 @@ You are a hyper-precise data extraction engine for real estate in Bali, Indonesi
   <rule id="8" name="Minimum Stay Extraction Guide">
     **HOW TO FIND MINIMUM STAY:** You must actively look for minimum stay information. It can be written in many ways, such as "min Take 3 Year", "minimum 12 months", "1 year minimum lease", or "yearly only". You MUST convert the final value into a single number representing months. For example, "min Take 3 Year" becomes \`36\`, and "yearly only" becomes \`12\`.
   </rule>
+  <rule id="9" name="Property Contact Extraction">
+    **CONTACT INFORMATION:** Extract any property contact information such as phone numbers (including WhatsApp), contact person names, or contact CTAs. Look for patterns like "Contact: +62...", "WhatsApp: ...", "Call/WA: ...", "Contact [Name]", "For inquiries: ...". If multiple contact methods are found, include all of them.
+    **Important Rule:** If the contact information is a WhatsApp link (e.g., \\\`wa.me/+62...\\\` or \\\`https://wa.me/62...\\\`), you must only extract the phone number part itself (e.g., \\\`+62...\\\` or \\\`62...\\\`). Discard the \\\`wa.me/\\\` prefix and any other URL components.
+  </rule>
 </critical_instructions>
 
 <json_structure>
@@ -409,6 +422,7 @@ You are a hyper-precise data extraction engine for real estate in Bali, Indonesi
   "price_yearly_idr": "number | null", 
   "price_yearly_usd": "number | null",
   "amenityTags": ["string"],
+  "propertyContact": "string | null",
   "reasoning": "string" // This field is mandatory
 }
 </json_structure>
@@ -418,7 +432,7 @@ You are a hyper-precise data extraction engine for real estate in Bali, Indonesi
     <source>Villa for rent 250jt/yr in Seminyak.</source>
     <output>
     {
-      "title": "Villa for rent in Seminyak", "bedrooms": null, "bathrooms": null, "landSize": null, "buildingSize": null, "locationArea": "Seminyak", "address": "Seminyak", "currency": "IDR", "pricing": { "monthly": 20833333, "yearly": 250000000 }, "minimumStay": null, "amenityTags": [], "reasoning": "Currency is IDR because no '$' or 'USD' was found in the price."
+      "title": "Villa for rent in Seminyak", "bedrooms": null, "bathrooms": null, "landSize": null, "buildingSize": null, "locationArea": "Seminyak", "address": "Seminyak", "currency": "IDR", "pricing": { "monthly": 20833333, "yearly": 250000000 }, "minimumStay_months": null, "price_yearly_idr": null, "price_yearly_usd": null, "amenityTags": [], "propertyContact": null, "reasoning": "Currency is IDR because no '$' or 'USD' was found in the price."
     }
     </output>
   </example>
@@ -426,7 +440,7 @@ You are a hyper-precise data extraction engine for real estate in Bali, Indonesi
     <source>Apartment available for $1.5k/month in Canggu.</source>
     <output>
     {
-      "title": "Apartment in Canggu", "bedrooms": null, "bathrooms": null, "landSize": null, "buildingSize": null, "locationArea": "Canggu", "address": "Canggu", "currency": "USD", "pricing": { "monthly": 1500, "yearly": null }, "minimumStay": null, "amenityTags": [], "reasoning": "Currency is USD because the '$' symbol was found in the price."
+      "title": "Apartment in Canggu", "bedrooms": null, "bathrooms": null, "landSize": null, "buildingSize": null, "locationArea": "Canggu", "address": "Canggu", "currency": "USD", "pricing": { "monthly": 1500, "yearly": null }, "minimumStay_months": null, "price_yearly_idr": null, "price_yearly_usd": null, "amenityTags": [], "propertyContact": null, "reasoning": "Currency is USD because the '$' symbol was found in the price."
     }
     </output>
   </example>
@@ -434,7 +448,23 @@ You are a hyper-precise data extraction engine for real estate in Bali, Indonesi
     <source>Beautiful 2BR villa for rent in Pererenan area. Located at Jl. Pantai Pererenan No. 88x, Pererenan, Mengwi, Badung. 300m from beach. IDR 30jt/month.</source>
     <output>
     {
-      "title": "Beautiful 2BR villa in Pererenan", "bedrooms": 2, "bathrooms": null, "landSize": null, "buildingSize": null, "locationArea": "Pererenan", "address": "Jl. Pantai Pererenan No. 88x, Pererenan, Mengwi, Badung", "currency": "IDR", "pricing": { "monthly": 30000000, "yearly": null }, "minimumStay_months": null, "price_yearly_idr": null, "price_yearly_usd": null, "amenityTags": [], "reasoning": "Extracted Pererenan as locationArea (the neighborhood) and the full address separately."
+      "title": "Beautiful 2BR villa in Pererenan", "bedrooms": 2, "bathrooms": null, "landSize": null, "buildingSize": null, "locationArea": "Pererenan", "address": "Jl. Pantai Pererenan No. 88x, Pererenan, Mengwi, Badung", "currency": "IDR", "pricing": { "monthly": 30000000, "yearly": null }, "minimumStay_months": null, "price_yearly_idr": null, "price_yearly_usd": null, "amenityTags": [], "propertyContact": null, "reasoning": "Extracted Pererenan as locationArea (the neighborhood) and the full address separately."
+    }
+    </output>
+  </example>
+  <example id="4_with_contact">
+    <source>3BR Villa in Uluwatu for rent. 45 million IDR/month. Minimum 1 year. Contact via WhatsApp: +62 812-3456-7890 or call Maya for viewing.</source>
+    <output>
+    {
+      "title": "3BR Villa in Uluwatu", "bedrooms": 3, "bathrooms": null, "landSize": null, "buildingSize": null, "locationArea": "Uluwatu", "address": "Uluwatu", "currency": "IDR", "pricing": { "monthly": 45000000, "yearly": null }, "minimumStay_months": 12, "price_yearly_idr": null, "price_yearly_usd": null, "amenityTags": [], "propertyContact": "WhatsApp: +62 812-3456-7890, Contact Maya for viewing", "reasoning": "Found WhatsApp number and contact person Maya in the description."
+    }
+    </output>
+  </example>
+  <example id="5_with_whatsapp_url">
+    <source>Luxury 2BR apartment in Seminyak. $2500/month. Contact: wa.me/628123456789</source>
+    <output>
+    {
+      "title": "Luxury 2BR apartment in Seminyak", "bedrooms": 2, "bathrooms": null, "landSize": null, "buildingSize": null, "locationArea": "Seminyak", "address": "Seminyak", "currency": "USD", "pricing": { "monthly": 2500, "yearly": null }, "minimumStay_months": null, "price_yearly_idr": null, "price_yearly_usd": null, "amenityTags": [], "propertyContact": "+628123456789", "reasoning": "Extracted phone number from WhatsApp URL, removing the wa.me/ prefix."
     }
     </output>
   </example>
@@ -597,6 +627,7 @@ async function parseAIResponse(aiResponseText) {
             minimumStay: parsedData.minimumStay ? Number(parsedData.minimumStay) : null,
             description: String(parsedData.title || `Property in ${parsedData.locationArea || 'Bali'}`),
             amenities: Array.isArray(parsedData.amenities) ? parsedData.amenities : [],
+            propertyContact: parsedData.propertyContact || null, // Add property contact field
             
             // Store original AI data for reference
             aiExtractedData: {
@@ -618,7 +649,8 @@ async function parseAIResponse(aiResponseText) {
                 petFriendly: parsedData.petFriendly,
                 smokingAllowed: parsedData.smokingAllowed,
                 priceNote: parsedData.priceNote,
-                amenities: parsedData.amenities
+                amenities: parsedData.amenities,
+                propertyContact: parsedData.propertyContact
             }
         };
 
