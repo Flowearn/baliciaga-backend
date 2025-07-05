@@ -469,10 +469,10 @@ functions:
     timeout: 30
 
 plugins:
-  - serverless-offline
   - serverless-dotenv-plugin
   - serverless-prune-plugin
   # - serverless-dynamodb  # 注释掉以避免连接本地数据库
+  # serverless-offline is only for local development, not needed in CI/CD
 
 custom:
   serverless-offline:
