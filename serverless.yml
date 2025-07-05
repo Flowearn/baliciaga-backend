@@ -1,6 +1,6 @@
 service: baliciaga-backend
 
-frameworkVersion: '4'
+frameworkVersion: '3'
 
 package:
   individually: true
