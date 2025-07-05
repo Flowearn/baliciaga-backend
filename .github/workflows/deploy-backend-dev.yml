@@ -50,6 +50,8 @@ jobs:
       - name: Deploy to AWS
         run: |
           echo "🚀 Starting deployment to dev environment..."
+          # Increase file descriptor limit to handle large dependency tree
+          ulimit -n 4096
           serverless deploy --stage dev --verbose
         env:
           # 确保 Serverless Framework 可以访问 AWS 凭证
