@@ -51,7 +51,12 @@ jobs:
         run: |
           echo "🚀 Starting deployment to dev environment..."
           # Increase file descriptor limit to handle large dependency tree
-          ulimit -n 4096
+          ulimit -n 65536
+          # Also increase max user processes
+          ulimit -u 32768
+          # Show current limits for debugging
+          echo "Current file descriptor limit: $(ulimit -n)"
+          echo "Current process limit: $(ulimit -u)"
           serverless deploy --stage dev --verbose
         env:
           # 确保 Serverless Framework 可以访问 AWS 凭证

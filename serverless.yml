@@ -4,6 +4,7 @@ frameworkVersion: '3'
 
 package:
   individually: true
+  excludeDevDependencies: true
   exclude:
     - node_modules/aws-sdk/**
     - node_modules/playwright/**
@@ -14,6 +15,16 @@ package:
     - node_modules/java-invoke-local/**
     - node_modules/effect/**
     - node_modules/@effect/**
+    - node_modules/@types/**
+    - node_modules/typescript/**
+    - node_modules/@smithy/**/dist-types/**
+    - node_modules/@aws-sdk/**/dist-types/**
+    - node_modules/**/*.d.ts
+    - node_modules/**/*.map
+    - node_modules/**/test/**
+    - node_modules/**/tests/**
+    - node_modules/**/docs/**
+    - node_modules/**/examples/**
     - scripts/**
     - test/**
     - docs/**
@@ -24,6 +35,8 @@ package:
     - '*.zip'
     - temp-fix/**
     - data/**
+    - coverage/**
+    - .nyc_output/**
 
 provider:
   name: aws
