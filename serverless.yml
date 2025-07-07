@@ -1,17 +1,20 @@
 service: baliciaga-backend
 
-frameworkVersion: '3'
+frameworkVersion: '4'
 
 package:
   individually: true
   excludeDevDependencies: true
   exclude:
-    - node_modules/aws-sdk/**
+    # - node_modules/aws-sdk/** # 需要包含 aws-sdk，因为 Lambda Node.js 18.x 不再内置
     - node_modules/playwright/**
     - node_modules/playwright-core/**
     - node_modules/@esbuild/**
     - node_modules/serverless/**
-    - node_modules/serverless-*/**
+    - node_modules/serverless-offline/**
+    - node_modules/serverless-dotenv-plugin/**
+    - node_modules/serverless-dynamodb/**
+    - node_modules/serverless-prune-plugin/**
     - node_modules/java-invoke-local/**
     - node_modules/effect/**
     - node_modules/@effect/**

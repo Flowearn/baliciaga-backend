@@ -20,4 +20,4 @@ if (process.env.AWS_LAMBDA_FUNCTION_NAME) {
 
 const dynamodb = new AWS.DynamoDB.DocumentClient();
 
-module.exports = dynamodb; 
+module.exports = dynamodb; // Force redeploy with aws-sdk fix 2025年 7月 7日 星期一 18时38分52秒 WITA
