@@ -69,6 +69,7 @@ exports.handler = async (event) => {
 
       userId = userResult.Items[0].userId;
       console.log(`🔐 Authenticated user - CognitoSub: ${cognitoSub}, UserId: ${userId}`);
+      console.log('[GetUserListings-Debug] 1. Querying listings for internalUserId:', userId);
     } catch (error) {
       console.error('❌ Error fetching user profile:', error);
       return {
@@ -90,11 +91,14 @@ exports.handler = async (event) => {
     // Map frontend status to backend status for database query
     const mapStatusToBackend = (frontendStatus) => {
       const statusMap = {
-        'active': 'open',
+        'active': 'open',    // Backend uses 'open' for active listings
         'closed': 'closed', 
         'paused': 'cancelled'
       };
-      return statusMap[frontendStatus] || frontendStatus;
+      // Log the mapping for debugging
+      const mapped = statusMap[frontendStatus] || frontendStatus;
+      console.log(`[GetUserListings-Debug] Status mapping: frontend "${frontendStatus}" -> backend "${mapped}"`);
+      return mapped;
     };
     
     // Validate limit parameter
@@ -138,6 +142,9 @@ exports.handler = async (event) => {
         '#status': 'status'
       };
       queryParams.ExpressionAttributeValues[':status'] = backendStatus;
+      console.log(`[GetUserListings-Debug] Filtering for status: "${backendStatus}"`);
+    } else {
+      console.log('[GetUserListings-Debug] No status filter - returning all statuses');
     }
 
     // Add pagination cursor if provided
@@ -164,6 +171,7 @@ exports.handler = async (event) => {
 
     // Execute query with pagination handling for filtered results
     console.log('[MyListings API] DynamoDB Query Params:', JSON.stringify(queryParams, null, 2));
+    console.log('[GetUserListings-Debug] 2. DynamoDB Query Params:', JSON.stringify(queryParams, null, 2));
     
     // When using FilterExpression, we need to handle pagination differently
     // to ensure we get enough filtered results
@@ -178,17 +186,59 @@ exports.handler = async (event) => {
             currentQueryParams.ExclusiveStartKey = lastEvaluatedKey;
         }
         
-        const result = await dynamodb.query(currentQueryParams).promise();
-        console.log(`[MyListings API] Query iteration - Found ${result.Items.length} items after filtering, ScannedCount: ${result.ScannedCount}`);
+        const queryResult = await dynamodb.query(currentQueryParams).promise();
+        console.log(`[MyListings API] Query iteration - Found ${queryResult.Items.length} items after filtering, ScannedCount: ${queryResult.ScannedCount}`);
         
-        allItems = allItems.concat(result.Items);
-        actualScannedCount += result.ScannedCount || 0;
-        lastEvaluatedKey = result.LastEvaluatedKey;
+        // Debug: Let's query without filter to see what statuses exist
+        if (queryResult.Items.length === 0 && allItems.length === 0) {
+            const debugParams = {
+                TableName: process.env.LISTINGS_TABLE,
+                IndexName: 'InitiatorIndex',
+                KeyConditionExpression: 'initiatorId = :userId',
+                ExpressionAttributeValues: {
+                    ':userId': userId
+                },
+                Limit: 5
+            };
+            const debugResult = await dynamodb.query(debugParams).promise();
+            console.log('[GetUserListings-Debug] Sample listings without filter:', debugResult.Items.map(item => ({
+                listingId: item.listingId,
+                status: item.status,
+                title: item.title
+            })));
+            
+            // Get ALL listings to see complete status distribution
+            const allDebugParams = {
+                TableName: process.env.LISTINGS_TABLE,
+                IndexName: 'InitiatorIndex',
+                KeyConditionExpression: 'initiatorId = :userId',
+                ExpressionAttributeValues: {
+                    ':userId': userId
+                }
+            };
+            const allDebugResult = await dynamodb.query(allDebugParams).promise();
+            
+            // Count listings by status
+            const statusCounts = {};
+            allDebugResult.Items.forEach(item => {
+                statusCounts[item.status] = (statusCounts[item.status] || 0) + 1;
+            });
+            console.log('[GetUserListings-Debug] Complete status distribution for user listings:', statusCounts);
+            console.log('[GetUserListings-Debug] Total listings for user:', allDebugResult.Items.length);
+        }
+        
+        allItems = allItems.concat(queryResult.Items);
+        actualScannedCount += queryResult.ScannedCount || 0;
+        lastEvaluatedKey = queryResult.LastEvaluatedKey;
         
         // Stop if no more items to scan
-        if (!lastEvaluatedKey || result.Items.length === 0) {
+        if (!lastEvaluatedKey) {
+            console.log('[GetUserListings-Debug] No more pages to scan, stopping pagination');
             break;
         }
+        
+        // Log pagination status
+        console.log(`[GetUserListings-Debug] Pagination status: allItems=${allItems.length}, limitNum=${limitNum}, hasMore=${!!lastEvaluatedKey}`);
         
         // Safety limit to prevent infinite loops
         if (actualScannedCount > 1000) {
@@ -213,6 +263,7 @@ exports.handler = async (event) => {
         scannedCount: result.ScannedCount,
         hasMore: !!result.LastEvaluatedKey
     });
+    console.log('[GetUserListings-Debug] 3. Raw result from DynamoDB:', JSON.stringify(result, null, 2));
     
     console.log(`DynamoDB query result: Found ${result.Items.length} raw items`);
     if (result.Items.length > 0) {
