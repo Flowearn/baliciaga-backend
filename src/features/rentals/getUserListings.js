@@ -91,7 +91,7 @@ exports.handler = async (event) => {
     // Map frontend status to backend status for database query
     const mapStatusToBackend = (frontendStatus) => {
       const statusMap = {
-        'active': 'open',
+        'active': 'open',    // Backend uses 'open' for active listings
         'closed': 'closed', 
         'paused': 'cancelled'
       };
@@ -190,7 +190,7 @@ exports.handler = async (event) => {
         console.log(`[MyListings API] Query iteration - Found ${queryResult.Items.length} items after filtering, ScannedCount: ${queryResult.ScannedCount}`);
         
         // Debug: Let's query without filter to see what statuses exist
-        if (queryResult.Items.length === 0 && queryResult.ScannedCount > 0) {
+        if (queryResult.Items.length === 0 && allItems.length === 0) {
             const debugParams = {
                 TableName: process.env.LISTINGS_TABLE,
                 IndexName: 'InitiatorIndex',
@@ -207,12 +207,24 @@ exports.handler = async (event) => {
                 title: item.title
             })));
             
+            // Get ALL listings to see complete status distribution
+            const allDebugParams = {
+                TableName: process.env.LISTINGS_TABLE,
+                IndexName: 'InitiatorIndex',
+                KeyConditionExpression: 'initiatorId = :userId',
+                ExpressionAttributeValues: {
+                    ':userId': userId
+                }
+            };
+            const allDebugResult = await dynamodb.query(allDebugParams).promise();
+            
             // Count listings by status
             const statusCounts = {};
-            debugResult.Items.forEach(item => {
+            allDebugResult.Items.forEach(item => {
                 statusCounts[item.status] = (statusCounts[item.status] || 0) + 1;
             });
-            console.log('[GetUserListings-Debug] Status distribution for user listings:', statusCounts);
+            console.log('[GetUserListings-Debug] Complete status distribution for user listings:', statusCounts);
+            console.log('[GetUserListings-Debug] Total listings for user:', allDebugResult.Items.length);
         }
         
         allItems = allItems.concat(queryResult.Items);
