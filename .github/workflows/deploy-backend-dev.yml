@@ -36,7 +36,7 @@ jobs:
       - name: Install dependencies
         run: |
           npm ci --production
-          npm install -g serverless@4
+          npm install -g serverless@3
       
       # 4. 配置 AWS 凭证
       - name: Configure AWS credentials
