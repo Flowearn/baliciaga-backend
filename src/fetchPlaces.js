@@ -190,12 +190,16 @@ async function WorkspacePlaces(categoryType) {
   try {
     let placesData = [];
     
+    // 根据环境变量确定是否使用dev后缀
+    const isDev = process.env.STAGE !== 'prod';
+    const devSuffix = isDev ? '-dev' : '';
+    
     // 处理food类型 - 需要合并cafe和dinner数据
     if (categoryType === 'food') {
       console.log('Fetching and merging cafe and dinner data for food category');
       
       // 获取cafe数据
-      const cafeData = await fetchDataFromS3('data/cafes-dev.json');
+      const cafeData = await fetchDataFromS3(`data/cafes${devSuffix}.json`);
       // 为cafe数据添加category字段
       const cafePlaces = cafeData.map(place => ({
         ...place,
@@ -203,7 +207,7 @@ async function WorkspacePlaces(categoryType) {
       }));
       
       // 获取dining数据
-      const diningData = await fetchDataFromS3('data/dining-dev.json');
+      const diningData = await fetchDataFromS3(`data/dining${devSuffix}.json`);
       // 为dining数据添加category字段
       const diningPlaces = diningData.map(place => ({
         ...place,
@@ -241,13 +245,13 @@ async function WorkspacePlaces(categoryType) {
       console.log(`Merged ${cafePlaces.length} cafe places and ${diningPlaces.length} dining places into ${placesData.length} unique places`);
     } else {
       // 1. 根据分类类型确定S3对象键
-      let s3ObjectKey = 'data/cafes-dev.json'; // 默认或 'cafe'
+      let s3ObjectKey = `data/cafes${devSuffix}.json`; // 默认或 'cafe'
       if (categoryType === 'bar') {
-        s3ObjectKey = 'data/bars.json'; // 使用正确的酒吧数据文件
+        s3ObjectKey = `data/bars${devSuffix}.json`;
       } else if (categoryType === 'cowork') {
-        s3ObjectKey = 'data/cowork-dev.json';
+        s3ObjectKey = `data/cowork${devSuffix}.json`;
       } else if (categoryType === 'dining') {
-        s3ObjectKey = 'data/dining-dev.json';
+        s3ObjectKey = `data/dining${devSuffix}.json`;
       }
 
       // 2. 从S3获取数据
