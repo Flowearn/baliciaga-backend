@@ -89,9 +89,15 @@ function streamToString(stream) {
  * 计算咖啡馆当前是否营业
  * @param {Array} openingPeriods - 营业时段数组，每个元素包含星期几、开始时间和结束时间
  * @param {Date} currentTimeInBali - 巴厘岛当前时间
+ * @param {string} businessStatus - 商户的营业状态
  * @returns {boolean} 当前是否营业
  */
-function calculateIsOpenNow(openingPeriods, currentTimeInBali) {
+function calculateIsOpenNow(openingPeriods, currentTimeInBali, businessStatus) {
+  // 如果商户临时关闭，直接返回false
+  if (businessStatus === 'CLOSED_TEMPORARILY') {
+    return false;
+  }
+
   // 如果没有营业时间数据，返回false
   if (!openingPeriods || !Array.isArray(openingPeriods) || openingPeriods.length === 0) {
     return false;
@@ -272,8 +278,8 @@ async function WorkspacePlaces(categoryType) {
 
     // 4. 为每个场所计算当前的isOpenNow状态并创建BaliciagaCafe实例
     const baliciagaPlaces = placesData.map(placeData => {
-      // 计算当前营业状态
-      const isOpenNow = calculateIsOpenNow(placeData.openingPeriods, currentBaliTime);
+      // 计算当前营业状态，传入businessStatus参数
+      const isOpenNow = calculateIsOpenNow(placeData.openingPeriods, currentBaliTime, placeData.businessStatus);
       
       // 创建包含计算后的isOpenNow的数据对象
       const processedData = {
