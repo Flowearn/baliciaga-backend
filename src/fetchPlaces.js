@@ -226,23 +226,34 @@ async function WorkspacePlaces(categoryType) {
       
       // 先添加cafe数据
       cafePlaces.forEach(place => {
-        placesMap.set(place.placeId, place);
+        // 生成去重键，优先使用placeId，如果无效则使用name作为备用
+        const key = (place.placeId && place.placeId.trim()) || place.name;
+        if (!place.placeId || !place.placeId.trim()) {
+          console.warn(`Warning: Venue '${place.name}' has a missing or invalid placeId. Using name as fallback deduplication key.`);
+        }
+        placesMap.set(key, place);
       });
       
       // 再添加dining数据
       // 对于已存在的placeId，我们需要决定保留哪个版本
       // 策略：如果是同时经营cafe和餐厅的地方，标记为混合类型
       diningPlaces.forEach(place => {
-        if (placesMap.has(place.placeId)) {
+        // 生成去重键，优先使用placeId，如果无效则使用name作为备用
+        const key = (place.placeId && place.placeId.trim()) || place.name;
+        if (!place.placeId || !place.placeId.trim()) {
+          console.warn(`Warning: Venue '${place.name}' has a missing or invalid placeId. Using name as fallback deduplication key.`);
+        }
+        
+        if (placesMap.has(key)) {
           // 如果已经存在，创建一个混合类型的条目
-          const existingPlace = placesMap.get(place.placeId);
-          placesMap.set(place.placeId, {
+          const existingPlace = placesMap.get(key);
+          placesMap.set(key, {
             ...place,
             category: 'both', // 标记为同时是cafe和dining
             originalCategories: ['cafe', 'dining'] // 保存原始类别信息
           });
         } else {
-          placesMap.set(place.placeId, place);
+          placesMap.set(key, place);
         }
       });
       

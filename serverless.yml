@@ -484,12 +484,8 @@ functions:
     handler: src/features/auth/postConfirmation.handler
     timeout: 30
 
-# All plugins commented out for production deployment to avoid dependency issues
-# plugins:
-#   - serverless-prune-plugin
-#   - serverless-offline (local server)
-#   - serverless-dotenv-plugin (local env files)
-#   - serverless-dynamodb (local database)
+# Plugins are now dynamically loaded based on environment
+plugins: ${file(./plugins.js)}
 
 custom:
   serverless-offline:
