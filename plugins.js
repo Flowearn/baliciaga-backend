@@ -3,8 +3,8 @@
 
 // 基础插件，在所有环境中都需要
 const basePlugins = [
-  'serverless-prune-plugin',
-  // 在这里可以添加其他所有环境都需要的插件
+  // 在生产环境中不加载任何插件，因为它们都在devDependencies中
+  // 'serverless-prune-plugin',
 ];
 
 // 仅在本地开发 (offline命令) 时加载的插件
