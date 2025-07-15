@@ -88,6 +88,11 @@ class BaliciagaCafe {
     // Category information - for distinguishing cafe vs dinner in food aggregation
     this.category = existingData.category || null;
 
+    // NEW VENUE ATTRIBUTES - for enhanced venue information display
+    this.cuisineStyle = existingData.cuisineStyle || null;
+    this.atmosphere = existingData.atmosphere || null;
+    this.signatureDishes = existingData.signatureDishes || null;
+
     // Region information (provided by caller)
     if (region) {
       this.region = region;
@@ -135,7 +140,10 @@ class BaliciagaCafe {
       gofoodUrl: this.gofoodUrl,
       "tableUrl": this.tableUrl,
       "menuUrl": this.menuUrl,
-      category: this.category
+      category: this.category,
+      cuisineStyle: this.cuisineStyle,
+      atmosphere: this.atmosphere,
+      signatureDishes: this.signatureDishes
       // EXCLUDED FIELDS (not included in output):
       // - address (formattedAddress from API)
       // - priceLevel  
