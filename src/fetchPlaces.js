@@ -204,18 +204,22 @@ async function WorkspacePlaces(categoryType) {
     if (categoryType === 'food') {
       console.log('Fetching and merging cafe and dinner data for food category');
       
-      // 获取cafe数据
+      // 准备S3键
       const cafeS3Key = isDev ? 'data/cafes-dev.json' : 'data/cafes-prod.json';
-      const cafeData = await fetchDataFromS3(cafeS3Key);
+      const diningS3Key = isDev ? 'data/dining-dev.json' : 'data/dining-prod.json';
+      
+      // 并行获取cafe和dining数据
+      const [cafeData, diningData] = await Promise.all([
+        fetchDataFromS3(cafeS3Key),
+        fetchDataFromS3(diningS3Key)
+      ]);
+      
       // 为cafe数据添加category字段
       const cafePlaces = cafeData.map(place => ({
         ...place,
         category: 'cafe'
       }));
       
-      // 获取dining数据
-      const diningS3Key = isDev ? 'data/dining-dev.json' : 'data/dining-prod.json';
-      const diningData = await fetchDataFromS3(diningS3Key);
       // 为dining数据添加category字段
       const diningPlaces = diningData.map(place => ({
         ...place,
