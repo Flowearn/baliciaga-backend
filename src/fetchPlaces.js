@@ -1,12 +1,12 @@
 /**
  * Baliciaga 场所API服务 - 核心处理程序
  * 用于获取巴厘岛苍古地区的场所数据（咖啡馆和酒吧）
- * 现在基于DynamoDB数据库，提供高性能的场所信息查询
+ * 现在基于DynamoDB数据库，使用高性能Query操作优化查询速度
  */
 const serverless = require('serverless-http');
 const express = require('express');
 const cors = require('cors');
-const { DynamoDBClient, ScanCommand } = require("@aws-sdk/client-dynamodb");
+const { DynamoDBClient, ScanCommand, QueryCommand } = require("@aws-sdk/client-dynamodb");
 const { DynamoDBDocumentClient } = require("@aws-sdk/lib-dynamodb");
 const appConfig = require('./utils/appConfig');
 
@@ -25,8 +25,9 @@ app.use(cors());
 // DynamoDB客户端
 let docClient = null;
 
-// DynamoDB表名
+// DynamoDB表名和索引名
 const TABLE_NAME = 'baliciaga-places-dev';
+const TYPE_INDEX_NAME = 'TypeIndex';
 
 /**
  * 获取或创建DynamoDB文档客户端
@@ -43,7 +44,7 @@ async function getDynamoDBDocClient() {
 }
 
 /**
- * 从DynamoDB获取数据
+ * 从DynamoDB获取数据 - 性能优化版本
  * @param {string} categoryType - 分类类型 ('cafe', 'bar', 'cowork', 'dining', 'food')
  * @returns {Promise<Array<Object>>} 包含所有数据的JSON数组
  */
@@ -52,45 +53,75 @@ async function fetchDataFromDynamoDB(categoryType) {
     console.log(`Fetching data from DynamoDB for category: ${categoryType}`);
     
     const client = await getDynamoDBDocClient();
+    let data = [];
     
-    // 扫描参数
-    let scanParams = {
-      TableName: TABLE_NAME
-    };
-    
-    // 如果不是'food'类型，添加过滤条件
-    if (categoryType && categoryType !== 'food') {
+    if (categoryType === 'food') {
+      // 对于food类型，并行查询cafe和dining
+      console.log('Using parallel queries for food category');
+      const [cafeResponse, diningResponse] = await Promise.all([
+        client.send(new QueryCommand({
+          TableName: TABLE_NAME,
+          IndexName: TYPE_INDEX_NAME,
+          KeyConditionExpression: '#type = :type',
+          ExpressionAttributeNames: {
+            '#type': 'type'
+          },
+          ExpressionAttributeValues: {
+            ':type': { S: 'cafe' }
+          }
+        })),
+        client.send(new QueryCommand({
+          TableName: TABLE_NAME,
+          IndexName: TYPE_INDEX_NAME,
+          KeyConditionExpression: '#type = :type',
+          ExpressionAttributeNames: {
+            '#type': 'type'
+          },
+          ExpressionAttributeValues: {
+            ':type': { S: 'dining' }
+          }
+        }))
+      ]);
+      
+      data = [...(cafeResponse.Items || []), ...(diningResponse.Items || [])];
+      console.log(`Parallel query completed: ${cafeResponse.Items?.length || 0} cafes + ${diningResponse.Items?.length || 0} dining = ${data.length} total`);
+      
+    } else if (categoryType && categoryType !== 'all') {
+      // 对于特定类型，使用高效的Query操作
+      console.log(`Using Query operation for category: ${categoryType}`);
+      
       // 映射categoryType到数据库中的type值
       let dbType = categoryType;
       if (categoryType === 'cowork') {
         dbType = 'coworking';
       }
       
-      scanParams.FilterExpression = '#type = :type';
-      scanParams.ExpressionAttributeNames = {
-        '#type': 'type'
-      };
-      scanParams.ExpressionAttributeValues = {
-        ':type': dbType
-      };
-    } else if (categoryType === 'food') {
-      // 对于food类型，我们需要cafe和dining
-      scanParams.FilterExpression = '#type IN (:cafe, :dining)';
-      scanParams.ExpressionAttributeNames = {
-        '#type': 'type'
-      };
-      scanParams.ExpressionAttributeValues = {
-        ':cafe': 'cafe',
-        ':dining': 'dining'
-      };
+      const response = await client.send(new QueryCommand({
+        TableName: TABLE_NAME,
+        IndexName: TYPE_INDEX_NAME,
+        KeyConditionExpression: '#type = :type',
+        ExpressionAttributeNames: {
+          '#type': 'type'
+        },
+        ExpressionAttributeValues: {
+          ':type': { S: dbType }
+        }
+      }));
+      
+      data = response.Items || [];
+      console.log(`Query completed: ${data.length} items for category ${categoryType}`);
+      
+    } else {
+      // 只有在请求所有数据时才使用Scan操作
+      console.log('Using Scan operation for all data (fallback)');
+      
+      const response = await client.send(new ScanCommand({
+        TableName: TABLE_NAME
+      }));
+      
+      data = response.Items || [];
+      console.log(`Scan completed: ${data.length} total items`);
     }
-    
-    // 执行扫描
-    const response = await client.send(new ScanCommand(scanParams));
-    
-    // 提取项目数据
-    const data = response.Items || [];
-    console.log(`Successfully fetched ${data.length} items from DynamoDB`);
     
     return data;
   } catch (error) {
@@ -190,7 +221,7 @@ function getCurrentBaliTime() {
 /**
  * 获取指定分类的场所列表。
  * 流程：
- * 1. 根据分类类型从DynamoDB获取数据
+ * 1. 根据分类类型从DynamoDB获取数据 (使用Query优化性能)
  * 2. 为每个场所计算当前的isOpenNow状态
  * 3. 将数据封装为BaliciagaCafe实例返回
  * @param {string} categoryType - 分类类型 ('cafe', 'bar', 'cowork', 'dining', 'food')
@@ -205,9 +236,9 @@ async function WorkspacePlaces(categoryType) {
     return cafesCache[cacheKey];
   }
 
-  console.log(`Fetching ${categoryType || 'cafe'} data from DynamoDB and calculating current open status`);
+  console.log(`Fetching ${categoryType || 'cafe'} data from DynamoDB using optimized queries`);
   try {
-    // 1. 从DynamoDB获取数据
+    // 1. 从DynamoDB获取数据 (使用优化的Query操作)
     let placesData = await fetchDataFromDynamoDB(categoryType);
     
     // 2. 处理数据，为food类型添加category字段
@@ -256,10 +287,6 @@ async function WorkspacePlaces(categoryType) {
         ...placeData,
         isOpenNow
       };
-      
-      // 🆕 添加诊断日志 - 检查传递给BaliciagaCafe构造函数的原始数据中的table字段
-      console.log(`[fetchPlaces.js] Processing place: ${processedData.name || processedData.placeId}`);
-      console.log(`[fetchPlaces.js] Raw 'table' field BEFORE BaliciagaCafe instantiation:`, processedData.table);
       
       // 创建BaliciagaCafe实例
       return new BaliciagaCafe({}, processedData);
