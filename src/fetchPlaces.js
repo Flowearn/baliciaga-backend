@@ -1,12 +1,13 @@
 /**
  * Baliciaga 场所API服务 - 核心处理程序
  * 用于获取巴厘岛苍古地区的场所数据（咖啡馆和酒吧）
- * 现在基于从AWS S3读取的JSON文件，包含完整的场所信息
+ * 现在基于DynamoDB数据库，提供高性能的场所信息查询
  */
 const serverless = require('serverless-http');
 const express = require('express');
 const cors = require('cors');
-const { S3Client, GetObjectCommand } = require("@aws-sdk/client-s3");
+const { DynamoDBClient, ScanCommand } = require("@aws-sdk/client-dynamodb");
+const { DynamoDBDocumentClient } = require("@aws-sdk/lib-dynamodb");
 const appConfig = require('./utils/appConfig');
 
 // 导入BaliciagaCafe模型
@@ -21,68 +22,81 @@ const CACHE_TTL = 5 * 60 * 1000; // 5分钟缓存时间
 const app = express();
 app.use(cors());
 
-// S3客户端
-let s3Client = null;
+// DynamoDB客户端
+let docClient = null;
+
+// DynamoDB表名
+const TABLE_NAME = 'baliciaga-places-dev';
 
 /**
- * 获取或创建S3客户端
- * @returns {Promise<S3Client>} S3客户端实例
+ * 获取或创建DynamoDB文档客户端
+ * @returns {Promise<DynamoDBDocumentClient>} DynamoDB文档客户端实例
  */
-async function getS3Client() {
-  if (s3Client === null) {
+async function getDynamoDBDocClient() {
+  if (docClient === null) {
     const config = await appConfig.getConfig();
-    s3Client = new S3Client({ region: config.AWS_REGION });
-    console.log(`S3 client initialized with region: ${config.AWS_REGION}`);
+    const dynamoDBClient = new DynamoDBClient({ region: config.AWS_REGION });
+    docClient = DynamoDBDocumentClient.from(dynamoDBClient);
+    console.log(`DynamoDB client initialized with region: ${config.AWS_REGION}`);
   }
-  return s3Client;
+  return docClient;
 }
 
 /**
- * 从S3获取数据
- * @param {string} s3ObjectKey - S3对象键
+ * 从DynamoDB获取数据
+ * @param {string} categoryType - 分类类型 ('cafe', 'bar', 'cowork', 'dining', 'food')
  * @returns {Promise<Array<Object>>} 包含所有数据的JSON数组
  */
-async function fetchDataFromS3(s3ObjectKey) {
+async function fetchDataFromDynamoDB(categoryType) {
   try {
-    const config = await appConfig.getConfig();
-    const S3_BUCKET_NAME = config.S3_BUCKET_NAME;
+    console.log(`Fetching data from DynamoDB for category: ${categoryType}`);
     
-    console.log(`Fetching data from S3: ${S3_BUCKET_NAME}/${s3ObjectKey}`);
+    const client = await getDynamoDBDocClient();
     
-    const client = await getS3Client();
-    const command = new GetObjectCommand({
-      Bucket: S3_BUCKET_NAME,
-      Key: s3ObjectKey
-    });
+    // 扫描参数
+    let scanParams = {
+      TableName: TABLE_NAME
+    };
     
-    const response = await client.send(command);
+    // 如果不是'food'类型，添加过滤条件
+    if (categoryType && categoryType !== 'food') {
+      // 映射categoryType到数据库中的type值
+      let dbType = categoryType;
+      if (categoryType === 'cowork') {
+        dbType = 'coworking';
+      }
+      
+      scanParams.FilterExpression = '#type = :type';
+      scanParams.ExpressionAttributeNames = {
+        '#type': 'type'
+      };
+      scanParams.ExpressionAttributeValues = {
+        ':type': dbType
+      };
+    } else if (categoryType === 'food') {
+      // 对于food类型，我们需要cafe和dining
+      scanParams.FilterExpression = '#type IN (:cafe, :dining)';
+      scanParams.ExpressionAttributeNames = {
+        '#type': 'type'
+      };
+      scanParams.ExpressionAttributeValues = {
+        ':cafe': 'cafe',
+        ':dining': 'dining'
+      };
+    }
     
-    // 将S3对象内容转换为字符串
-    const bodyContents = await streamToString(response.Body);
+    // 执行扫描
+    const response = await client.send(new ScanCommand(scanParams));
     
-    // 解析JSON
-    const data = JSON.parse(bodyContents);
-    console.log(`Successfully fetched ${data.length} items from S3`);
+    // 提取项目数据
+    const data = response.Items || [];
+    console.log(`Successfully fetched ${data.length} items from DynamoDB`);
     
     return data;
   } catch (error) {
-    console.error('Error fetching data from S3:', error);
+    console.error('Error fetching data from DynamoDB:', error);
     throw error;
   }
-}
-
-/**
- * 将流转换为字符串
- * @param {Stream} stream - 要转换的流
- * @returns {Promise<string>} 流内容的字符串
- */
-function streamToString(stream) {
-  return new Promise((resolve, reject) => {
-    const chunks = [];
-    stream.on('data', (chunk) => chunks.push(chunk));
-    stream.on('error', reject);
-    stream.on('end', () => resolve(Buffer.concat(chunks).toString('utf8')));
-  });
 }
 
 /**
@@ -176,10 +190,9 @@ function getCurrentBaliTime() {
 /**
  * 获取指定分类的场所列表。
  * 流程：
- * 1. 根据分类类型确定数据文件
- * 2. 从S3获取数据
- * 3. 为每个场所计算当前的isOpenNow状态
- * 4. 将数据封装为BaliciagaCafe实例返回
+ * 1. 根据分类类型从DynamoDB获取数据
+ * 2. 为每个场所计算当前的isOpenNow状态
+ * 3. 将数据封装为BaliciagaCafe实例返回
  * @param {string} categoryType - 分类类型 ('cafe', 'bar', 'cowork', 'dining', 'food')
  * @returns {Promise<Array<BaliciagaCafe>>} BaliciagaCafe实例的数组
  */
@@ -192,103 +205,41 @@ async function WorkspacePlaces(categoryType) {
     return cafesCache[cacheKey];
   }
 
-  console.log(`Fetching ${categoryType || 'cafe'} data from S3 and calculating current open status`);
+  console.log(`Fetching ${categoryType || 'cafe'} data from DynamoDB and calculating current open status`);
   try {
-    let placesData = [];
+    // 1. 从DynamoDB获取数据
+    let placesData = await fetchDataFromDynamoDB(categoryType);
     
-    // 根据环境变量确定是否使用dev后缀
-    const isDev = process.env.STAGE !== 'prod';
-    const devSuffix = isDev ? '-dev' : '';
-    
-    // 处理food类型 - 需要合并cafe和dinner数据
+    // 2. 处理数据，为food类型添加category字段
     if (categoryType === 'food') {
-      console.log('Fetching and merging cafe and dinner data for food category');
-      
-      // 准备S3键
-      const cafeS3Key = isDev ? 'data/cafes-dev.json' : 'data/cafes-prod.json';
-      const diningS3Key = isDev ? 'data/dining-dev.json' : 'data/dining-prod.json';
-      
-      // 并行获取cafe和dining数据
-      const [cafeData, diningData] = await Promise.all([
-        fetchDataFromS3(cafeS3Key),
-        fetchDataFromS3(diningS3Key)
-      ]);
-      
-      // 为cafe数据添加category字段
-      const cafePlaces = cafeData.map(place => ({
+      placesData = placesData.map(place => ({
         ...place,
-        category: 'cafe'
+        category: place.type === 'cafe' ? 'cafe' : place.type === 'dining' ? 'dining' : place.type
       }));
       
-      // 为dining数据添加category字段
-      const diningPlaces = diningData.map(place => ({
-        ...place,
-        category: 'dining'
-      }));
-      
-      // 合并两个数组并去重
-      // 使用Map来去重，基于placeId
+      // 处理重复的地点（同时是cafe和dining的）
       const placesMap = new Map();
-      
-      // 先添加cafe数据
-      cafePlaces.forEach(place => {
-        // 生成去重键，优先使用placeId，如果无效则使用name作为备用
-        const key = (place.placeId && place.placeId.trim()) || place.name;
-        if (!place.placeId || !place.placeId.trim()) {
-          console.warn(`Warning: Venue '${place.name}' has a missing or invalid placeId. Using name as fallback deduplication key.`);
-        }
-        placesMap.set(key, place);
-      });
-      
-      // 再添加dining数据
-      // 对于已存在的placeId，我们需要决定保留哪个版本
-      // 策略：如果是同时经营cafe和餐厅的地方，标记为混合类型
-      diningPlaces.forEach(place => {
-        // 生成去重键，优先使用placeId，如果无效则使用name作为备用
-        const key = (place.placeId && place.placeId.trim()) || place.name;
-        if (!place.placeId || !place.placeId.trim()) {
-          console.warn(`Warning: Venue '${place.name}' has a missing or invalid placeId. Using name as fallback deduplication key.`);
-        }
-        
+      placesData.forEach(place => {
+        const key = place.placeId;
         if (placesMap.has(key)) {
-          // 如果已经存在，创建一个混合类型的条目
+          // 如果已经存在，标记为混合类型
           const existingPlace = placesMap.get(key);
           placesMap.set(key, {
             ...place,
-            category: 'both', // 标记为同时是cafe和dining
-            originalCategories: ['cafe', 'dining'] // 保存原始类别信息
+            category: 'both',
+            originalCategories: ['cafe', 'dining']
           });
         } else {
           placesMap.set(key, place);
         }
       });
-      
-      // 转换回数组
       placesData = Array.from(placesMap.values());
-      console.log(`Merged ${cafePlaces.length} cafe places and ${diningPlaces.length} dining places into ${placesData.length} unique places`);
-    } else {
-      // 1. 根据分类类型确定S3对象键
-      let s3ObjectKey;
-      if (categoryType === 'cafe' || !categoryType) {
-        s3ObjectKey = isDev ? 'data/cafes-dev.json' : 'data/cafes-prod.json';
-      } else if (categoryType === 'bar') {
-        s3ObjectKey = isDev ? 'data/bars-dev.json' : 'data/bars-prod.json';
-      } else if (categoryType === 'cowork') {
-        s3ObjectKey = isDev ? 'data/cowork-dev.json' : 'data/cowork-prod.json';
-      } else if (categoryType === 'dining') {
-        s3ObjectKey = isDev ? 'data/dining-dev.json' : 'data/dining-prod.json';
-      }
-
-      // 2. 从S3获取数据
-      placesData = await fetchDataFromS3(s3ObjectKey);
-      
+    } else if (categoryType === 'cafe' || categoryType === 'dining') {
       // 为非food类型的数据添加category字段
-      if (categoryType === 'cafe' || categoryType === 'dining') {
-        placesData = placesData.map(place => ({
-          ...place,
-          category: categoryType
-        }));
-      }
+      placesData = placesData.map(place => ({
+        ...place,
+        category: categoryType
+      }));
     }
 
     // 3. 获取巴厘岛当前时间
@@ -410,4 +361,4 @@ module.exports.handler = async (event, context) => {
 
 // 导出工作空间函数，供本地开发和测试使用
 module.exports.WorkspacePlaces = WorkspacePlaces;
-module.exports.WorkspacePlaceDetails = WorkspacePlaceDetails; 
+module.exports.WorkspacePlaceDetails = WorkspacePlaceDetails;

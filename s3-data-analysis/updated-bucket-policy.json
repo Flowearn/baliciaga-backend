@@ -1,0 +1,61 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "PublicReadForImages",
+      "Effect": "Allow",
+      "Principal": "*",
+      "Action": "s3:GetObject",
+      "Resource": [
+        "arn:aws:s3:::baliciaga-database/cafe-image-dev/*",
+        "arn:aws:s3:::baliciaga-database/cafe-image-prod/*"
+      ]
+    },
+    {
+      "Sid": "PublicReadForBarImages",
+      "Effect": "Allow",
+      "Principal": "*",
+      "Action": "s3:GetObject",
+      "Resource": [
+        "arn:aws:s3:::baliciaga-database/bar-image-dev/*",
+        "arn:aws:s3:::baliciaga-database/bar-image-prod/*"
+      ]
+    },
+    {
+      "Sid": "PublicReadForCowrkImages",
+      "Effect": "Allow",
+      "Principal": "*",
+      "Action": "s3:GetObject",
+      "Resource": [
+        "arn:aws:s3:::baliciaga-database/cowork-image-dev/*",
+        "arn:aws:s3:::baliciaga-database/cowork-image-prod/*"
+      ]
+    },
+    {
+      "Sid": "PublicReadForDiningImages",
+      "Effect": "Allow",
+      "Principal": "*",
+      "Action": "s3:GetObject",
+      "Resource": [
+        "arn:aws:s3:::baliciaga-database/dining-image-dev/*",
+        "arn:aws:s3:::baliciaga-database/dining-image-prod/*"
+      ]
+    },
+    {
+      "Sid": "PublicReadForResizedWebPImages",
+      "Effect": "Allow",
+      "Principal": "*",
+      "Action": "s3:GetObject",
+      "Resource": "arn:aws:s3:::baliciaga-database/photo_webp_resized/*"
+    },
+    {
+      "Sid": "PublicReadForJSONFiles",
+      "Effect": "Allow",
+      "Principal": "*",
+      "Action": "s3:GetObject",
+      "Resource": [
+        "arn:aws:s3:::baliciaga-database/*.json"
+      ]
+    }
+  ]
+}

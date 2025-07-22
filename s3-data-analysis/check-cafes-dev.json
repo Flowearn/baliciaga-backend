@@ -122,20 +122,7 @@
     "outdoorSeating": true,
     "servesVegetarianFood": null,
     "menuUrl": "https://desakitsune.com/ina-re/menu, https://desakitsune.com/cafe-kitsune/menu",
-    "tableUrl": "https://desakitsune.com/book-now",
-    "cuisineStyle": "Mediterranean & Latin-Inspired",
-    "atmosphere": [
-      "Hedonistic",
-      "timeless oasis with Balinese tones and vibrant community spirit"
-    ],
-    "signatureDishes": [
-      "Ina Ré Seafood Paella",
-      "Classico Ceviche",
-      "Wood-fired Octopus",
-      "Braised Pork Taco",
-      "Stockyard Beef Burger"
-    ],
-    "slug": "desa-kitsun"
+    "tableUrl": "https://desakitsune.com/book-now"
   },
   {
     "placeId": "ChIJr9bHQS050i0RW_GuYHY3vaU",
@@ -258,24 +245,7 @@
     "outdoorSeating": true,
     "servesVegetarianFood": true,
     "menuUrl": "https://sensoriumbali.co.id/menu",
-    "tableUrl": "",
-    "cuisineStyle": [
-      "Australian-Asian Fusion",
-      "Multi-sensory Brunch"
-    ],
-    "atmosphere": [
-      "Minimalistic",
-      "modern",
-      "and designed to stimulate the senses"
-    ],
-    "signatureDishes": [
-      "Brunch Ramen (Dry or Soup)",
-      "Bulgogi Beef Burger",
-      "Textural of Mushrooms",
-      "Pork Belly Rice Bowl",
-      "Miso Pancake"
-    ],
-    "slug": "sensorium-bali"
+    "tableUrl": ""
   },
   {
     "placeId": "ChIJL3L-Sfc50i0RwlAVew5QCm8",
@@ -401,24 +371,7 @@
     "outdoorSeating": true,
     "servesVegetarianFood": true,
     "menuUrl": "https://uploads.strikinglycdn.com/files/2436d738-df22-4db6-ad9f-358898d86064/MMBR_MENU_V54_WA%20(1).pdf",
-    "tableUrl": "https://wa.me/6281353896153",
-    "cuisineStyle": [
-      "International Cafe",
-      "All-Day Brunch"
-    ],
-    "atmosphere": [
-      "Energetic",
-      "spacious",
-      "and family-friendly with a cozy vibe"
-    ],
-    "signatureDishes": [
-      "The Madu (Eggs Benedict with bacon)",
-      "Breakfast Burrito",
-      "Ricotta Cakes (Syrniki)",
-      "2-for-1 Pizzas (Dinner special)",
-      "Smashed Avo"
-    ],
-    "slug": "milk-madu-beach-road"
+    "tableUrl": "https://wa.me/6281353896153"
   },
   {
     "placeId": "ChIJ36pywXk40i0Rh9ZZCRMb1fQ",
@@ -547,24 +500,7 @@
     "outdoorSeating": true,
     "servesVegetarianFood": true,
     "menuUrl": "https://drive.google.com/drive/folders/1-ugzXvHrOT6h4ams3zIVyu-CpDKdBsnt",
-    "tableUrl": "https://wa.me/6281266884463",
-    "cuisineStyle": [
-      "Avocado-Centric",
-      "Healthy Modern"
-    ],
-    "atmosphere": [
-      "Fresh",
-      "health-conscious",
-      "and Instagram-worthy with a focus on sustainable ingredients"
-    ],
-    "signatureDishes": [
-      "Avocado Striploin and Eggs",
-      "Poke Bowl",
-      "Chicken Katsu Sandwich",
-      "Tacos Birria Beef Avocado",
-      "Avocado Pancake"
-    ],
-    "slug": "the-avocado-factory"
+    "tableUrl": "https://wa.me/6281266884463"
   },
   {
     "placeId": "ChIJnY-evaw50i0RD_tH6R6pDyw",
@@ -689,20 +625,7 @@
     "outdoorSeating": true,
     "servesVegetarianFood": true,
     "menuUrl": "https://revolverbali.com/pages/menu",
-    "tableUrl": "https://revolverbali.com/pages/booking",
-    "cuisineStyle": "Specialty Coffee & Modern Cafe Fare",
-    "atmosphere": [
-      "A unique",
-      "thriving coffee roastery with a sleek and cool central counter"
-    ],
-    "signatureDishes": [
-      "Revs Smash Burger",
-      "Chicken Katsu Sandwich",
-      "Beef Birria Toastie",
-      "Tuna Sashimi & Crispy Rice Salad",
-      "Korean Fried Chicken"
-    ],
-    "slug": "revolver-canggu"
+    "tableUrl": "https://revolverbali.com/pages/booking"
   },
   {
     "placeId": "ChIJ1a70wvFH0i0RajIckWuoU14",
@@ -828,20 +751,7 @@
     "outdoorSeating": true,
     "servesVegetarianFood": true,
     "menuUrl": "https://zin.world/zin-cafe/#newmenu",
-    "tableUrl": "https://wa.me/6281131116647",
-    "cuisineStyle": "Healthy International & Indonesian",
-    "atmosphere": [
-      "Beautiful",
-      "open-air space with traditional charm and modern comforts"
-    ],
-    "signatureDishes": [
-      "Tuna Poke Bowl",
-      "Beef Burger",
-      "Sweet Trinidad Chicken Curry",
-      "Nasi Goreng",
-      "Grilled Halloumi Toast"
-    ],
-    "slug": "zin-cafe"
+    "tableUrl": "https://wa.me/6281131116647"
   },
   {
     "placeId": "ChIJg1ad-75H0i0R8aB_K9oKYj8",
@@ -964,17 +874,7 @@
     "outdoorSeating": null,
     "servesVegetarianFood": null,
     "menuUrl": "https://shorturl.at/LqYdM",
-    "tableUrl": "http://wa.me/6282341788384",
-    "cuisineStyle": "Artisan Bakery & Modern Brunch",
-    "atmosphere": "A passion-driven bakery with a focus on craftsmanship",
-    "signatureDishes": [
-      "The Sun Glasses (Raspberry Pistachio Pastry)",
-      "Truffle and Mushroom Omelette",
-      "Eggs Benedict",
-      "Pastrami Sourdough Sandwich",
-      "Mini Croissant Cereal"
-    ],
-    "slug": "fold-canggu"
+    "tableUrl": "http://wa.me/6282341788384"
   },
   {
     "placeId": "ChIJVwZGvMo50i0R5i1fzyT73S4",
@@ -1099,22 +999,7 @@
     "outdoorSeating": true,
     "servesVegetarianFood": true,
     "menuUrl": "https://www.saricanggu.com/wp-content/uploads/2024/11/SARI-ALLMENU-WEB.pdf",
-    "tableUrl": "https://wa.me/6282145822655",
-    "cuisineStyle": [
-      "Eclectic",
-      "International Brunch & Dinner"
-    ],
-    "atmosphere": [
-      "A vibrant hub for digital nomads and creative minds with a relaxed",
-      "community-focused vibe"
-    ],
-    "signatureDishes": [
-      "Fettuccine Carbonara",
-      "California Roll",
-      "Chicken Zinger with Furikake Fries",
-      "Shakshuka"
-    ],
-    "slug": "sari-kitchen-community-by-ekosistem"
+    "tableUrl": "https://wa.me/6282145822655"
   },
   {
     "placeId": "ChIJq42lSa850i0RziccPzDJXhU",
@@ -1124,6 +1009,7 @@
     "businessStatus": "OPERATIONAL",
     "photos": [
       "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/two-face-coffee-brunch-canggu_ChIJq42lSa850i0RziccPzDJXhU/photo_1.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/two-face-coffee-brunch-canggu_ChIJq42lSa850i0RziccPzDJXhU/photo_2.webp",
       "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/two-face-coffee-brunch-canggu_ChIJq42lSa850i0RziccPzDJXhU/photo_3.webp",
       "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/two-face-coffee-brunch-canggu_ChIJq42lSa850i0RziccPzDJXhU/photo_4.webp",
       "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/two-face-coffee-brunch-canggu_ChIJq42lSa850i0RziccPzDJXhU/photo_5.webp",
@@ -1242,20 +1128,7 @@
     "outdoorSeating": true,
     "servesVegetarianFood": true,
     "menuUrl": "https://www.twofacebali.com/menu",
-    "tableUrl": "https://wa.me/6281239028952",
-    "cuisineStyle": "Specialty Coffee & Elevated Brunch",
-    "atmosphere": [
-      "A modern coffee house with a dual personality",
-      "focused on both coffee and artisanal brunch"
-    ],
-    "signatureDishes": [
-      "Brown Butter Scramble",
-      "Skillet Baked Shakshuka",
-      "Triple Berry Pancake",
-      "Chicken Katsu Sando",
-      "Wagyu Beef Burger"
-    ],
-    "slug": "two-face-coffee-brunch-canggu"
+    "tableUrl": "https://wa.me/6281239028952"
   },
   {
     "placeId": "ChIJSzQz6CQ50i0RalL4caNfcSI",
@@ -1378,27 +1251,7 @@
     "outdoorSeating": true,
     "servesVegetarianFood": null,
     "menuUrl": "https://simplebooklet.com/homecafemenu",
-    "tableUrl": "",
-    "cuisineStyle": [
-      "Healthy Homestyle Cafe",
-      "Comfort Food"
-    ],
-    "atmosphere": [
-      "Cozy",
-      "home-like",
-      "and family-friendly",
-      "with a strong focus on healthy",
-      "MSG-free",
-      "and palm oil-free cooking"
-    ],
-    "signatureDishes": [
-      "Keto King Bowl",
-      "Tuna Poke Bowl",
-      "Truffle Florentine",
-      "Syrniki (Ricotta Cheese Pancakes)",
-      "Salmon Brekky"
-    ],
-    "slug": "home-cafe-canggu"
+    "tableUrl": ""
   },
   {
     "placeId": "ChIJU0lp4SNH0i0R7x72tr13TmY",
@@ -1521,20 +1374,7 @@
     "outdoorSeating": true,
     "servesVegetarianFood": true,
     "menuUrl": "https://baked-global.com/baked-menu/",
-    "tableUrl": "https://wa.me/6287787627769",
-    "cuisineStyle": "Artisan European Bakery & Modern Brunch",
-    "atmosphere": [
-      "Bustling, craft-focused, aromatic, minimalist",
-      "A haven for pastry and bread lovers"
-    ],
-    "signatureDishes": [
-      "The O.G. Best Scramble",
-      "The Lox Bagel",
-      "Kouign Amann",
-      "Pain Au Chocolat",
-      "Pastel de Nata"
-    ],
-    "slug": "baked-berawa"
+    "tableUrl": "https://wa.me/6287787627769"
   },
   {
     "placeId": "ChIJZ6Jj8oFH0i0R0sKhEJMIyd8",
@@ -1660,19 +1500,7 @@
     "outdoorSeating": true,
     "servesVegetarianFood": true,
     "menuUrl": "https://drive.google.com/drive/folders/1kslNoCK4xQn_ey7z99Uf2Ds32h_Wb0_n",
-    "tableUrl": "https://nude-bali.com/book-now/",
-    "cuisineStyle": "Modern Australian & International Cafe Fare",
-    "atmosphere": [
-      "Friendly, welcoming, comfortable, with a quiet air-conditioned co-working space",
-      "A community hub"
-    ],
-    "signatureDishes": [
-      "Truffle Scrambled Eggs",
-      "Rosti Stack",
-      "Chipotle Chicken Burrito Bowl",
-      "House Burger"
-    ],
-    "slug": "nde-cafe-berawa"
+    "tableUrl": "https://nude-bali.com/book-now/"
   },
   {
     "placeId": "ChIJcYpksxVH0i0RCDMFafUy5N4",
@@ -1796,22 +1624,7 @@
     "outdoorSeating": true,
     "servesVegetarianFood": true,
     "menuUrl": "https://www.bysuka.com/s/Lusa-Day-Menu-May-2025.pdf",
-    "tableUrl": "https://booking.chope.co/booking_index?rid=lusa2401bal&source=rest_lusabysuka.com&adults=1&lang=en_US&country_code=BALI&time=12:00%20am&date=29%20Feb%202024&",
-    "cuisineStyle": [
-      "Australian-Style Brunch (Day)",
-      "Modern Italian (Night)"
-    ],
-    "atmosphere": [
-      "Bright and casual by day; moody and intimate with live music by night",
-      "A versatile day-to-night venue"
-    ],
-    "signatureDishes": [
-      "Beef Ragu Pappardelle",
-      "Beef Tenderloin",
-      "Crispy Calamari Rings",
-      "Chicken Skewers"
-    ],
-    "slug": "lusa-bysuka"
+    "tableUrl": "https://booking.chope.co/booking_index?rid=lusa2401bal&source=rest_lusabysuka.com&adults=1&lang=en_US&country_code=BALI&time=12:00%20am&date=29%20Feb%202024&"
   },
   {
     "placeId": "ChIJa2bVbaxcBAURDMj_jEzGDqI",
@@ -1935,21 +1748,7 @@
     "outdoorSeating": true,
     "servesVegetarianFood": true,
     "menuUrl": "http://hungrybird.coffee/",
-    "tableUrl": "",
-    "cuisineStyle": "Specialty Coffee & Classic Cafe Fare",
-    "atmosphere": [
-      "Functional",
-      "spacious",
-      "comfortable",
-      "with a focus on coffee production and co-working"
-    ],
-    "signatureDishes": [
-      "Monster Breakfast",
-      "Yum Yum Ricebowl",
-      "Garlic Basil Noodle",
-      "Specialty Single-Origin Coffee"
-    ],
-    "slug": "hungry-bird-coffee-roaster"
+    "tableUrl": ""
   },
   {
     "placeId": "ChIJnxFCS3pH0i0RE9mJ0v6ZkHA",
@@ -2073,19 +1872,7 @@
     "outdoorSeating": false,
     "servesVegetarianFood": true,
     "menuUrl": "https://brunchclubbali.com/brunch/",
-    "tableUrl": "",
-    "cuisineStyle": "Decadent International Brunch",
-    "atmosphere": [
-      "Fun, lively, bustling, and indulgent",
-      "A popular spot for celebratory or hangover brunches"
-    ],
-    "signatureDishes": [
-      "Lobster Benedict",
-      "Buttermilk Waffles / Porncakes",
-      "Big Brunch Breakfast",
-      "Sweet Corn Fritters"
-    ],
-    "slug": "brunch-club-berawa"
+    "tableUrl": ""
   },
   {
     "placeId": "ChIJqdO8SytH0i0RkcWicB2oqxQ",
@@ -2212,19 +1999,7 @@
     "servesVegetarianFood": null,
     "menuUrl": "https://bokashibali.com/",
     "tableUrl": "https://wa.me/6281803556677",
-    "gofoodUrl": "https://bokashibali.com/delivery/",
-    "cuisineStyle": "Japanese-Indonesian Health Food & Modern Cafe",
-    "atmosphere": [
-      "Peaceful, minimalist, cozy, with an integrated organic grocery store",
-      "Zen-like and health-focused"
-    ],
-    "signatureDishes": [
-      "Breakfast Bento / Chicken Nanban Bento",
-      "Miso Curry Ramen",
-      "Wagyu Tataki Donburi",
-      "Watermelon Tuna Maki"
-    ],
-    "slug": "bokashi-berawa"
+    "gofoodUrl": "https://bokashibali.com/delivery/"
   },
   {
     "placeId": "ChIJOaEQDnk40i0Rzhou4NcRx-w",
@@ -2345,21 +2120,7 @@
     "outdoorSeating": true,
     "servesVegetarianFood": true,
     "menuUrl": "https://lifescrate.com/wp-content/uploads/2025/01/MENU-2025-scaled.jpg",
-    "tableUrl": "",
-    "cuisineStyle": [
-      "Healthy breakfast",
-      "brunch"
-    ],
-    "atmosphere": [
-      "Industrial style",
-      "energetic",
-      "surf culture"
-    ],
-    "signatureDishes": [
-      "Wide variety of Smoothie Bowls and large",
-      "affordable breakfast plates (known for value and portion size)"
-    ],
-    "slug": "crate-cafe"
+    "tableUrl": ""
   },
   {
     "placeId": "ChIJD94dpPY50i0R96D3MPX7rrc",
@@ -2483,19 +2244,7 @@
     "outdoorSeating": true,
     "servesVegetarianFood": null,
     "menuUrl": "",
-    "tableUrl": "",
-    "cuisineStyle": "Melbourne-Style Brunch & Specialty Coffee",
-    "atmosphere": [
-      "Chic, stylish, refined yet relaxed",
-      "A community-focused space with a premium feel"
-    ],
-    "signatureDishes": [
-      "KFC (Korean Fried Chicken) Burger",
-      "Smashed Avocado on Toast",
-      "Lumberjack Breakfast",
-      "Prawn Pasta"
-    ],
-    "slug": "st-ali-bali"
+    "tableUrl": ""
   },
   {
     "placeId": "ChIJkfDSHYg50i0RBdXQigmMn54",
@@ -2618,19 +2367,7 @@
     "outdoorSeating": false,
     "servesVegetarianFood": true,
     "menuUrl": "https://brunchclubbali.com/brunch/",
-    "tableUrl": "mailto:bookings@brunchclubbali.com",
-    "cuisineStyle": "Expansive International All-Day Dining",
-    "atmosphere": [
-      "Clean, friendly, and vibrant",
-      "A reliable and crowd-pleasing option with a vast menu"
-    ],
-    "signatureDishes": [
-      "Lobster Benedict",
-      "Souffle Pancakes",
-      "Tuscan Chicken",
-      "Double Cheese Burger"
-    ],
-    "slug": "brunch-club-pererenan"
+    "tableUrl": "mailto:bookings@brunchclubbali.com"
   },
   {
     "placeId": "ChIJYXyNN5U50i0RmIUNsfH9tHw",
@@ -2756,24 +2493,7 @@
     "outdoorSeating": true,
     "servesVegetarianFood": null,
     "menuUrl": "",
-    "tableUrl": "",
-    "cuisineStyle": [
-      "Specialty Coffee & International Cafe",
-      "Bistro"
-    ],
-    "atmosphere": [
-      "Instagrammable",
-      "well-designed",
-      "modern",
-      "and optimized for co-working and productivity"
-    ],
-    "signatureDishes": [
-      "Miel Wagyu Burger",
-      "Miel Eggs Benny",
-      "Brioche French Toast",
-      "Truffle Soft Scrambled"
-    ],
-    "slug": "miel-specialty-coffee-canggu-co-working"
+    "tableUrl": ""
   },
   {
     "placeId": "ChIJHzyhoW450i0Rub7_EEvisDY",
@@ -2902,21 +2622,7 @@
     "outdoorSeating": true,
     "servesVegetarianFood": true,
     "menuUrl": "https://uploads.strikinglycdn.com/files/b347a95c-848c-42ff-ad39-0120650a1761/TC_WA%20MENU_V35_DEC%202024.pdf",
-    "tableUrl": "https://wa.me/6281246542013",
-    "cuisineStyle": [
-      "International",
-      "Modern Mexican"
-    ],
-    "atmosphere": [
-      "Casual, lively, and social",
-      "Known for its approachable menu and popular happy hours"
-    ],
-    "signatureDishes": [
-      "Burrito Bowls (Chicken/Beef)",
-      "Tacos",
-      "Breakfast Burrito"
-    ],
-    "slug": "the-common"
+    "tableUrl": "https://wa.me/6281246542013"
   },
   {
     "placeId": "ChIJMev9G3w40i0RXZlSucHydMw",
@@ -3040,26 +2746,7 @@
     "outdoorSeating": true,
     "servesVegetarianFood": true,
     "menuUrl": "https://www.facebook.com/cafevidabali/menu/",
-    "tableUrl": "",
-    "cuisineStyle": [
-      "Organic",
-      "Health-Food",
-      "Vegetarian/Vegan"
-    ],
-    "atmosphere": [
-      "Charming",
-      "vibrant",
-      "health-conscious"
-    ],
-    "signatureDishes": [
-      "Breakfast Criminal",
-      "Lovers Pancake (Vegan",
-      "GF)",
-      "Nourish Bowl",
-      "Falafel Pocket",
-      "Buffalo Cauli Wings"
-    ],
-    "slug": "cafe-vida-organic"
+    "tableUrl": ""
   },
   {
     "placeId": "ChIJg_EuN3s40i0R6kCeRoibycg",
@@ -3183,25 +2870,7 @@
     "outdoorSeating": true,
     "servesVegetarianFood": true,
     "menuUrl": "",
-    "tableUrl": "",
-    "cuisineStyle": [
-      "American-style Brunch",
-      "International Cafe"
-    ],
-    "atmosphere": [
-      "Vibrant",
-      "laid-back",
-      "hearty",
-      "fulfilling"
-    ],
-    "signatureDishes": [
-      "Cali Brisket Burrito",
-      "Breakie Burrito",
-      "Eggs Benedict Stack",
-      "Barrel Rolls (Banana Pancakes)",
-      "Hummus Protein Bowl"
-    ],
-    "slug": "rise-shine-cafe-canggu"
+    "tableUrl": ""
   },
   {
     "placeId": "ChIJhz6xqoo50i0RZxslmCS1iow",
@@ -3329,23 +2998,7 @@
     "outdoorSeating": true,
     "servesVegetarianFood": true,
     "menuUrl": "https://menu.dijiwasanctuaries.com/ecozycanggu/blou-cafe-canggu/",
-    "tableUrl": "https://booktable.dijiwasanctuaries.com/at/blou-cafe-canggu",
-    "cuisineStyle": [
-      "International",
-      "All-Day Breakfast & Lunch"
-    ],
-    "atmosphere": [
-      "Inviting",
-      "relaxing",
-      "casual"
-    ],
-    "signatureDishes": [
-      "Blou Big Breaky",
-      "Linguine Di Mare",
-      "Korean Chicken Wings",
-      "Nasi Goreng Bali"
-    ],
-    "slug": "blou-cafe-canggu"
+    "tableUrl": "https://booktable.dijiwasanctuaries.com/at/blou-cafe-canggu"
   },
   {
     "placeId": "ChIJH21JAz5H0i0R9xl0tIvpu1w",
@@ -3354,11 +3007,11 @@
     "longitude": 115.1306317,
     "businessStatus": "OPERATIONAL",
     "photos": [
-      "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/kawisari-coffee-farm-shop-eatery-bali_ChIJH21JAz5H0i0R9xl0tIvpu1w/photo_7.webp",
       "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/kawisari-coffee-farm-shop-eatery-bali_ChIJH21JAz5H0i0R9xl0tIvpu1w/photo_2.webp",
       "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/kawisari-coffee-farm-shop-eatery-bali_ChIJH21JAz5H0i0R9xl0tIvpu1w/photo_3.webp",
       "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/kawisari-coffee-farm-shop-eatery-bali_ChIJH21JAz5H0i0R9xl0tIvpu1w/photo_4.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/kawisari-coffee-farm-shop-eatery-bali_ChIJH21JAz5H0i0R9xl0tIvpu1w/photo_6.webp"
+      "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/kawisari-coffee-farm-shop-eatery-bali_ChIJH21JAz5H0i0R9xl0tIvpu1w/photo_6.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/kawisari-coffee-farm-shop-eatery-bali_ChIJH21JAz5H0i0R9xl0tIvpu1w/photo_7.webp"
     ],
     "phoneNumber": "0811-3883-553",
     "rating": 4.9,
@@ -3469,24 +3122,132 @@
     "outdoorSeating": true,
     "servesVegetarianFood": null,
     "menuUrl": "https://drive.google.com/file/d/1-vgU8wfUpVdRafVqa2edBArMxdrBRTN0/view?usp=sharing",
-    "tableUrl": "",
-    "cuisineStyle": [
-      "Indonesian & International Cafe",
-      "Specialty Coffee"
+    "tableUrl": ""
+  },
+  {
+    "placeId": "ChIJ1_XOtHg40i0R6eyPmtRK6bc",
+    "name": "Cafe The Daun",
+    "latitude": -8.6544449,
+    "longitude": 115.1355073,
+    "businessStatus": "OPERATIONAL",
+    "photos": [
+      "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/cafe-the-daun_ChIJ1_XOtHg40i0R6eyPmtRK6bc/photo_a.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/cafe-the-daun_ChIJ1_XOtHg40i0R6eyPmtRK6bc/photo_b.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/cafe-the-daun_ChIJ1_XOtHg40i0R6eyPmtRK6bc/photo_c.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/cafe-the-daun_ChIJ1_XOtHg40i0R6eyPmtRK6bc/photo_d.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/cafe-the-daun_ChIJ1_XOtHg40i0R6eyPmtRK6bc/photo_1.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/cafe-the-daun_ChIJ1_XOtHg40i0R6eyPmtRK6bc/photo_9.webp"
     ],
-    "atmosphere": [
-      "Cozy",
-      "Farm-To-Table",
-      "Cultural"
+    "phoneNumber": "0859-3532-6552",
+    "rating": 4.4,
+    "userRatingsTotal": 484,
+    "website": "https://www.instagram.com/thedauncoffee/",
+    "openingHours": [
+      "Monday: 7:30 AM – 11:00 PM",
+      "Tuesday: 7:30 AM – 11:00 PM",
+      "Wednesday: 7:30 AM – 11:00 PM",
+      "Thursday: 7:30 AM – 11:00 PM",
+      "Friday: 7:30 AM – 11:00 PM",
+      "Saturday: 7:30 AM – 11:00 PM",
+      "Sunday: 7:30 AM – 11:00 PM"
     ],
-    "signatureDishes": [
-      "Kawisari Farmers Breakfast",
-      "Nasi Goreng Bang Samin",
-      "Wagyu Cheeseburger",
-      "Seafood Laksa",
-      "The Plantation Breakfast Egg Wrap"
+    "isOpenNow": false,
+    "openingPeriods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 7,
+          "minute": 30
+        },
+        "close": {
+          "day": 0,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 1,
+          "hour": 7,
+          "minute": 30
+        },
+        "close": {
+          "day": 1,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 7,
+          "minute": 30
+        },
+        "close": {
+          "day": 2,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 7,
+          "minute": 30
+        },
+        "close": {
+          "day": 3,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 7,
+          "minute": 30
+        },
+        "close": {
+          "day": 4,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 7,
+          "minute": 30
+        },
+        "close": {
+          "day": 5,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 7,
+          "minute": 30
+        },
+        "close": {
+          "day": 6,
+          "hour": 23,
+          "minute": 0
+        }
+      }
     ],
-    "slug": "kawisari-coffee-farm-shop-eatery-bali"
+    "instagram": "",
+    "region": "canggu",
+    "googleMapsUri": "https://maps.google.com/?cid=13252205655501040873",
+    "staticMapS3Url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/cafe-the-daun_ChIJ1_XOtHg40i0R6eyPmtRK6bc/cafe-the-daun_static.webp",
+    "gofoodUrl": "https://gofood.co.id/bali/restaurant/the-daun-cafe-and-coffee-canggu-ba95f63e-5efc-4707-9a15-81386c67076f?as=gmaps",
+    "allowsDogs": null,
+    "outdoorSeating": true,
+    "servesVegetarianFood": true,
+    "menuUrl": "",
+    "tableUrl": ""
   },
   {
     "placeId": "ChIJnT3bt6VH0i0RUgvf_KGh8r8",
@@ -3614,22 +3375,7 @@
     "outdoorSeating": true,
     "servesVegetarianFood": true,
     "menuUrl": "",
-    "tableUrl": "https://letsumai.com/widget/zai-cafe",
-    "cuisineStyle": "Modern Mediterranean & Middle Eastern Fusion",
-    "atmosphere": [
-      "Artsy",
-      "Cool",
-      "Chic",
-      "Thoughtful"
-    ],
-    "signatureDishes": [
-      "Greek Salad with homemade feta",
-      "Veal Cheeks",
-      "Truffle-infused Tuna Tartare Tagliatelle",
-      "Plov (Eastern Rice with Lamb)",
-      "Chicken Kebab"
-    ],
-    "slug": "zai-cafe-breakfast-dinner"
+    "tableUrl": "https://letsumai.com/widget/zai-cafe"
   },
   {
     "placeId": "ChIJD63X4IU50i0RFkjm_Q5AwGs",
@@ -3752,19 +3498,7 @@
     "outdoorSeating": true,
     "servesVegetarianFood": true,
     "menuUrl": "http://amolasgroup.com/AmolasCafe.html",
-    "tableUrl": "https://api.whatsapp.com/send?phone=6281353234290&text=Hello",
-    "cuisineStyle": "International & Indonesian Cafe",
-    "atmosphere": [
-      "Casual",
-      "All-Day Dining"
-    ],
-    "signatureDishes": [
-      "Amolas Breakfast",
-      "BBQ Chicken Pizza",
-      "Wagyu Beef Burger",
-      "Spaghetti Carbonara"
-    ],
-    "slug": "amolas-cafe"
+    "tableUrl": "https://api.whatsapp.com/send?phone=6281353234290&text=Hello"
   },
   {
     "placeId": "ChIJRfVHDQA50i0R78l1hYjP2iM",
@@ -3887,22 +3621,7 @@
     "outdoorSeating": true,
     "servesVegetarianFood": true,
     "menuUrl": "",
-    "tableUrl": "https://wa.me/6285338007745",
-    "cuisineStyle": [
-      "International Cafe",
-      "Coffee Shop"
-    ],
-    "atmosphere": [
-      "Casual",
-      "Relaxed"
-    ],
-    "signatureDishes": [
-      "Specific signature dishes are not detailed",
-      "but the menu includes fresh salads",
-      "sandwiches",
-      "and specialty coffee"
-    ],
-    "slug": "openhouse-cafe"
+    "tableUrl": "https://wa.me/6285338007745"
   },
   {
     "placeId": "ChIJzXC1G0A50i0RRtOZNiTSri0",
@@ -4027,23 +3746,7 @@
     "outdoorSeating": true,
     "servesVegetarianFood": true,
     "menuUrl": "https://bit.ly/MimpiMenu",
-    "tableUrl": "",
-    "cuisineStyle": [
-      "Modern International",
-      "All-Day Brunch"
-    ],
-    "atmosphere": [
-      "Vibey",
-      "Bright",
-      "Greenery-Filled"
-    ],
-    "signatureDishes": [
-      "Croquetas De Guacamole",
-      "St. Louis (Peanut butter banana toast)",
-      "Beef Royale",
-      "Poke Da Casa"
-    ],
-    "slug": "mimpi-grocery"
+    "tableUrl": ""
   },
   {
     "placeId": "ChIJB5JLA1c50i0RRPJ0C5V2DnQ",
@@ -4165,26 +3868,8 @@
     "allowsDogs": null,
     "outdoorSeating": true,
     "servesVegetarianFood": null,
-    "menuUrl": "",
-    "tableUrl": "",
-    "cuisineStyle": [
-      "Specialty Coffee",
-      "Indonesian & Western Fusion"
-    ],
-    "atmosphere": [
-      "Coffee-Centric",
-      "Authentic",
-      "Cultural Hub"
-    ],
-    "signatureDishes": [
-      "Satu Satu Breakfast",
-      "Eggs Benedict",
-      "Chicken Fried Rice",
-      "Salmon Bagel",
-      "Specialty Coffee (e.g.",
-      "Bali Kintamani)"
-    ],
-    "slug": "fine-by-satusatucoffee"
+    "menuUrl": "http://finecoffee.site/",
+    "tableUrl": ""
   },
   {
     "placeId": "ChIJq_svKGxH0i0RU-zAhMppq8Y",
@@ -4310,24 +3995,7 @@
     "outdoorSeating": true,
     "servesVegetarianFood": true,
     "menuUrl": "https://www.neighbourhoodfood.co/menu",
-    "tableUrl": "https://wa.me/message/VQIK742I3EMDF1",
-    "cuisineStyle": [
-      "Modern Australian",
-      "All-Day Eatery"
-    ],
-    "atmosphere": [
-      "Casual",
-      "Laid-Back",
-      "No-Fuss"
-    ],
-    "signatureDishes": [
-      "Turkish Eggs",
-      "Hood Benedict",
-      "Harvest Bowl",
-      "Slow Cooked Pork Belly",
-      "Gnudi (Ricotta and Spinach Dumplings)"
-    ],
-    "slug": "neighbourhood-food"
+    "tableUrl": "https://wa.me/message/VQIK742I3EMDF1"
   },
   {
     "placeId": "ChIJQwwZdJ050i0R0ehpWb6QBQc",
@@ -4449,25 +4117,7 @@
     "outdoorSeating": true,
     "servesVegetarianFood": null,
     "menuUrl": "https://drive.google.com/file/d/1PR5DYUofU4jlNrFaHlfOE0elPGi-kY8m/view",
-    "tableUrl": "https://api.whatsapp.com/send/?phone=6282340690241",
-    "cuisineStyle": [
-      "International Cafe",
-      "Brunch"
-    ],
-    "atmosphere": [
-      "Cozy",
-      "Warm",
-      "Inviting",
-      "Relaxed"
-    ],
-    "signatureDishes": [
-      "Pancakes",
-      "Breakfast Burritos",
-      "Poke Bowls",
-      "Smashed Avocado Toast",
-      "Tuna Melt Sandwich"
-    ],
-    "slug": "barboa-bali"
+    "tableUrl": "https://api.whatsapp.com/send/?phone=6282340690241"
   },
   {
     "placeId": "ChIJt38YXDo50i0RJlB3Oz0PDjg",
@@ -4589,25 +4239,7 @@
     "outdoorSeating": null,
     "servesVegetarianFood": null,
     "menuUrl": "https://simplebooklet.com/homecafemenu#page=1",
-    "tableUrl": "",
-    "cuisineStyle": [
-      "Health-focused Cafe",
-      "Slavic & International"
-    ],
-    "atmosphere": [
-      "Cozy",
-      "Home-like",
-      "Healthy",
-      "Relaxed"
-    ],
-    "signatureDishes": [
-      "Syrniki (Ricotta cheese pancakes)",
-      "Truffle Florentine",
-      "Keto King Bowl",
-      "The Real Hummus",
-      "Salmon Brekky"
-    ],
-    "slug": "home-cafe-mengwi"
+    "tableUrl": ""
   },
   {
     "placeId": "ChIJEaGuegA50i0R3CbgI5uqfq0",
@@ -4616,8 +4248,8 @@
     "longitude": 115.1359286,
     "businessStatus": "OPERATIONAL",
     "photos": [
-      "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/jiwa-cafe_ChIJEaGuegA50i0R3CbgI5uqfq0/photo_b.webp",
       "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/jiwa-cafe_ChIJEaGuegA50i0R3CbgI5uqfq0/photo_a.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/jiwa-cafe_ChIJEaGuegA50i0R3CbgI5uqfq0/photo_b.webp",
       "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/jiwa-cafe_ChIJEaGuegA50i0R3CbgI5uqfq0/photo_c.webp",
       "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/jiwa-cafe_ChIJEaGuegA50i0R3CbgI5uqfq0/photo_d.webp",
       "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/jiwa-cafe_ChIJEaGuegA50i0R3CbgI5uqfq0/photo_e.webp",
@@ -4732,25 +4364,7 @@
     "outdoorSeating": true,
     "servesVegetarianFood": true,
     "menuUrl": "https://www.jiwagarden.com/jiwacafe",
-    "tableUrl": "https://wa.me/6282197538462",
-    "cuisineStyle": [
-      "Japanese Fusion",
-      "Nikkei"
-    ],
-    "atmosphere": [
-      "Cultural",
-      "Scenic",
-      "Historic",
-      "Sunset Views"
-    ],
-    "signatureDishes": [
-      "Dragon of Ji Roll",
-      "Kobe style Black Angus Tenderloin",
-      "Nikkei Ceviche",
-      "Succulent Crispy Pork Belly",
-      "Assorted Tempura"
-    ],
-    "slug": "jiwa-cafe"
+    "tableUrl": "https://wa.me/6282197538462"
   },
   {
     "placeId": "ChIJFay1BbM50i0RLOYPPnFgc2k",
@@ -4874,25 +4488,7 @@
     "outdoorSeating": true,
     "servesVegetarianFood": null,
     "menuUrl": "https://nude-bali.com/menu/",
-    "tableUrl": "https://nude-bali.com/book-now/",
-    "cuisineStyle": [
-      "International Cafe",
-      "Australian Fusion"
-    ],
-    "atmosphere": [
-      "Friendly",
-      "Relaxed",
-      "Comfortable",
-      "Co-Working Friendly"
-    ],
-    "signatureDishes": [
-      "Truffle Scrambled Eggs",
-      "House Burger",
-      "Chipotle Chicken Burrito Bowl",
-      "Tuna Poke Bowl",
-      "Eggs Benedict with Pulled Pork"
-    ],
-    "slug": "nde-cafe-babakan"
+    "tableUrl": "https://nude-bali.com/book-now/"
   },
   {
     "placeId": "ChIJmZf0Vlc50i0RR3Z4gOnFmUM",
@@ -5019,25 +4615,7 @@
     "outdoorSeating": true,
     "servesVegetarianFood": true,
     "menuUrl": "https://secretspot.id/pages/menu",
-    "tableUrl": "https://wa.me/628113993318",
-    "cuisineStyle": [
-      "100% Vegan",
-      "Plant-based Comfort Food"
-    ],
-    "atmosphere": [
-      "Cozy",
-      "Charming",
-      "Laid-Back",
-      "Minimalist"
-    ],
-    "signatureDishes": [
-      "Shawarma (with seitan meat)",
-      "Falafel Bliss Bowl",
-      "Spicy Pumpkin Pizza",
-      "Reuben Sandwich (with seitan pastrami)",
-      "Jackfruit Stroganoff"
-    ],
-    "slug": "secret-spot-canggu"
+    "tableUrl": "https://wa.me/628113993318"
   },
   {
     "placeId": "ChIJQYh7HcM50i0RyZozSuavIhM",
@@ -5161,25 +4739,6 @@
     "outdoorSeating": null,
     "servesVegetarianFood": null,
     "menuUrl": "",
-    "tableUrl": "",
-    "cuisineStyle": [
-      "Japanese-Fusion Brunch",
-      "Modern Cafe",
-      "Specialty Coffee"
-    ],
-    "atmosphere": [
-      "Cozy",
-      "Stylish",
-      "Relaxed",
-      "Home-like"
-    ],
-    "signatureDishes": [
-      "Tamago Sando (Japanese Egg Sandwich)",
-      "Tuna Sando with Balinese Sambal Matah",
-      "Wagyu Sando",
-      "Heritage French Toast",
-      "Premium Matcha Latte"
-    ],
-    "slug": "yume-buduk"
+    "tableUrl": ""
   }
 ]

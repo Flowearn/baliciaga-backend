@@ -1,0 +1,174 @@
+{
+  "dev": {
+    "exists": [
+      {
+        "name": "Potato Head Beach Club",
+        "directory": "patato-head-beach-club",
+        "current_url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/potato-head-beach-club_ChIJ_XZL_xFH0i0RTo0EWBqsnRs/potato-head-beach-club_static.webp",
+        "s3_path": "s3://baliciaga-database/bar-image-dev/potato-head-beach-club_ChIJ_XZL_xFH0i0RTo0EWBqsnRs/potato-head-beach-club_static.webp"
+      },
+      {
+        "name": "Friends Bar",
+        "directory": "friends-bar",
+        "current_url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/friends-bar_ChIJCdPou9hH0i0RgIY7umQ751U/friends-bar_static.webp",
+        "s3_path": "s3://baliciaga-database/bar-image-dev/friends-bar_ChIJCdPou9hH0i0RgIY7umQ751U/friends-bar_static.webp"
+      },
+      {
+        "name": "The Lawn Canggu Beach Club",
+        "directory": "the-lawn",
+        "current_url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/the-lawn-canggu-beach-club_ChIJiQdg1YdH0i0R8ANUMzZizN0/the-lawn-canggu-beach-club_static.webp",
+        "s3_path": "s3://baliciaga-database/bar-image-dev/the-lawn-canggu-beach-club_ChIJiQdg1YdH0i0R8ANUMzZizN0/the-lawn-canggu-beach-club_static.webp"
+      },
+      {
+        "name": "The Shady Pig",
+        "directory": "the-shady-pig",
+        "current_url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/the-shady-pig_ChIJxZh1qu1H0i0R5BXWVSV1zK8/the-shady-pig_static.webp",
+        "s3_path": "s3://baliciaga-database/bar-image-dev/the-shady-pig_ChIJxZh1qu1H0i0R5BXWVSV1zK8/the-shady-pig_static.webp"
+      }
+    ],
+    "missing": [
+      {
+        "name": "Honeycomb Hookah & Eatery",
+        "directory": null,
+        "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image/honeycomb-hookah-eatery_ChIJN5xTyos50i0RiGBQWrCPinA/honeycomb-hookah-eatery_static.webp"
+      },
+      {
+        "name": "LONGTIME | Modern Asian Restaurant & Bar Bali",
+        "directory": null,
+        "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image/longtime-modern-asian-restaurant-bar-bali_ChIJk4MaNPo50i0R4vfuHDwZ_3U/longtime-modern-asian-restaurant-bar-bali_static.webp"
+      },
+      {
+        "name": "PLATONIC",
+        "directory": null,
+        "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image/platonic_ChIJkYxdu3E50i0RrFJjPHk8LqI/platonic_static.webp"
+      },
+      {
+        "name": "The Shady Fox",
+        "directory": null,
+        "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image/the-shady-fox_ChIJOwB4D8E50i0RnmcWbm5B1jI/the-shady-fox_static.webp"
+      },
+      {
+        "name": "Bali Beer Cycle",
+        "directory": null,
+        "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image/bali-beer-cycle_ChIJgfLsf1pF0i0RTDMRSpGD_Zs/bali-beer-cycle_static.webp"
+      },
+      {
+        "name": "The Barn Pub & Kitchen",
+        "directory": null,
+        "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image/the-barn-gastropub_ChIJe7KSn4dH0i0RsfzzpwFhwpQ/the-barn-gastropub_static.webp"
+      },
+      {
+        "name": "Black Sand Brewery",
+        "directory": null,
+        "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image/black-sand-brewery_ChIJNzjyIBI50i0RpFdnd_ZN3pg/black-sand-brewery_static.webp"
+      },
+      {
+        "name": "Shelter Restaurant",
+        "directory": null,
+        "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image/shelter-restaurant_ChIJcfxIJo850i0RsrveoncQeBs/shelter-restaurant_static.webp"
+      },
+      {
+        "name": "Hippie Fish Pererenan Beach",
+        "directory": null,
+        "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/hippie-fish-pererenan-beach_ChIJ5Wex6mc50i0RNSHWdVKVoPo/hippie-fish-pererenan-beach_static.webp"
+      },
+      {
+        "name": "Miss Fish Bali",
+        "directory": null,
+        "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/miss-fish-bali_ChIJYcKvqiJH0i0RtzWDiRmCnI0/miss-fish-bali_static.webp"
+      }
+    ],
+    "no_field": [],
+    "total": 14
+  },
+  "prod": {
+    "exists": [
+      {
+        "name": "Honeycomb Hookah & Eatery",
+        "directory": "honeycomb-hookah-eatery",
+        "current_url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/honeycomb-hookah-eatery_ChIJN5xTyos50i0RiGBQWrCPinA/honeycomb-hookah-eatery_static.webp",
+        "s3_path": "s3://baliciaga-database/bar-image-prod/honeycomb-hookah-eatery_ChIJN5xTyos50i0RiGBQWrCPinA/honeycomb-hookah-eatery_static.webp"
+      },
+      {
+        "name": "LONGTIME | Modern Asian Restaurant & Bar Bali",
+        "directory": "longtime-modern-asian-restaurant-bar-bali",
+        "current_url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/longtime-modern-asian-restaurant-bar-bali_ChIJk4MaNPo50i0R4vfuHDwZ_3U/longtime-modern-asian-restaurant-bar-bali_static.webp",
+        "s3_path": "s3://baliciaga-database/bar-image-prod/longtime-modern-asian-restaurant-bar-bali_ChIJk4MaNPo50i0R4vfuHDwZ_3U/longtime-modern-asian-restaurant-bar-bali_static.webp"
+      },
+      {
+        "name": "PLATONIC",
+        "directory": "platonic",
+        "current_url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/platonic_ChIJkYxdu3E50i0RrFJjPHk8LqI/platonic_static.webp",
+        "s3_path": "s3://baliciaga-database/bar-image-prod/platonic_ChIJkYxdu3E50i0RrFJjPHk8LqI/platonic_static.webp"
+      },
+      {
+        "name": "The Shady Fox",
+        "directory": "the-shady-fox",
+        "current_url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/the-shady-fox_ChIJOwB4D8E50i0RnmcWbm5B1jI/the-shady-fox_static.webp",
+        "s3_path": "s3://baliciaga-database/bar-image-prod/the-shady-fox_ChIJOwB4D8E50i0RnmcWbm5B1jI/the-shady-fox_static.webp"
+      },
+      {
+        "name": "Bali Beer Cycle",
+        "directory": "bali-beer-cycle",
+        "current_url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/bali-beer-cycle_ChIJgfLsf1pF0i0RTDMRSpGD_Zs/bali-beer-cycle_static.webp",
+        "s3_path": "s3://baliciaga-database/bar-image-prod/bali-beer-cycle_ChIJgfLsf1pF0i0RTDMRSpGD_Zs/bali-beer-cycle_static.webp"
+      },
+      {
+        "name": "The Barn Pub & Kitchen",
+        "directory": "barn-gastropub",
+        "current_url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/the-barn-gastropub_ChIJe7KSn4dH0i0RsfzzpwFhwpQ/the-barn-gastropub_static.webp",
+        "s3_path": "s3://baliciaga-database/bar-image-prod/the-barn-gastropub_ChIJe7KSn4dH0i0RsfzzpwFhwpQ/the-barn-gastropub_static.webp"
+      },
+      {
+        "name": "Black Sand Brewery",
+        "directory": "black-sand-brewery",
+        "current_url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/black-sand-brewery_ChIJNzjyIBI50i0RpFdnd_ZN3pg/black-sand-brewery_static.webp",
+        "s3_path": "s3://baliciaga-database/bar-image-prod/black-sand-brewery_ChIJNzjyIBI50i0RpFdnd_ZN3pg/black-sand-brewery_static.webp"
+      },
+      {
+        "name": "Shelter Restaurant",
+        "directory": "shelter-restaurant",
+        "current_url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/shelter-restaurant_ChIJcfxIJo850i0RsrveoncQeBs/shelter-restaurant_static.webp",
+        "s3_path": "s3://baliciaga-database/bar-image-prod/shelter-restaurant_ChIJcfxIJo850i0RsrveoncQeBs/shelter-restaurant_static.webp"
+      },
+      {
+        "name": "Potato Head Beach Club",
+        "directory": "patato-head-beach-club",
+        "current_url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/potato-head-beach-club_ChIJ_XZL_xFH0i0RTo0EWBqsnRs/potato-head-beach-club_static.webp",
+        "s3_path": "s3://baliciaga-database/bar-image-prod/potato-head-beach-club_ChIJ_XZL_xFH0i0RTo0EWBqsnRs/potato-head-beach-club_static.webp"
+      },
+      {
+        "name": "Friends Bar",
+        "directory": "friends-bar",
+        "current_url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/friends-bar_ChIJCdPou9hH0i0RgIY7umQ751U/friends-bar_static.webp",
+        "s3_path": "s3://baliciaga-database/bar-image-prod/friends-bar_ChIJCdPou9hH0i0RgIY7umQ751U/friends-bar_static.webp"
+      },
+      {
+        "name": "The Lawn Canggu Beach Club",
+        "directory": "the-lawn",
+        "current_url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/the-lawn-canggu-beach-club_ChIJiQdg1YdH0i0R8ANUMzZizN0/the-lawn-canggu-beach-club_static.webp",
+        "s3_path": "s3://baliciaga-database/bar-image-prod/the-lawn-canggu-beach-club_ChIJiQdg1YdH0i0R8ANUMzZizN0/the-lawn-canggu-beach-club_static.webp"
+      },
+      {
+        "name": "The Shady Pig",
+        "directory": "the-shady-pig",
+        "current_url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/the-shady-pig_ChIJxZh1qu1H0i0R5BXWVSV1zK8/the-shady-pig_static.webp",
+        "s3_path": "s3://baliciaga-database/bar-image-prod/the-shady-pig_ChIJxZh1qu1H0i0R5BXWVSV1zK8/the-shady-pig_static.webp"
+      }
+    ],
+    "missing": [
+      {
+        "name": "Hippie Fish Pererenan Beach",
+        "directory": null,
+        "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/hippie-fish-pererenan-beach_ChIJ5Wex6mc50i0RNSHWdVKVoPo/hippie-fish-pererenan-beach_static.webp"
+      },
+      {
+        "name": "Miss Fish Bali",
+        "directory": null,
+        "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/miss-fish-bali_ChIJYcKvqiJH0i0RtzWDiRmCnI0/miss-fish-bali_static.webp"
+      }
+    ],
+    "no_field": [],
+    "total": 14
+  }
+}

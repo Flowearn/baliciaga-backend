@@ -1,0 +1,62 @@
+[
+  {
+    "env": "dev",
+    "name": "Honeycomb Hookah & Eatery",
+    "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image/honeycomb-hookah-eatery_ChIJN5xTyos50i0RiGBQWrCPinA/honeycomb-hookah-eatery_static.webp"
+  },
+  {
+    "env": "dev",
+    "name": "LONGTIME | Modern Asian Restaurant & Bar Bali",
+    "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image/longtime-modern-asian-restaurant-bar-bali_ChIJk4MaNPo50i0R4vfuHDwZ_3U/longtime-modern-asian-restaurant-bar-bali_static.webp"
+  },
+  {
+    "env": "dev",
+    "name": "PLATONIC",
+    "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image/platonic_ChIJkYxdu3E50i0RrFJjPHk8LqI/platonic_static.webp"
+  },
+  {
+    "env": "dev",
+    "name": "The Shady Fox",
+    "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image/the-shady-fox_ChIJOwB4D8E50i0RnmcWbm5B1jI/the-shady-fox_static.webp"
+  },
+  {
+    "env": "dev",
+    "name": "Bali Beer Cycle",
+    "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image/bali-beer-cycle_ChIJgfLsf1pF0i0RTDMRSpGD_Zs/bali-beer-cycle_static.webp"
+  },
+  {
+    "env": "dev",
+    "name": "The Barn Pub & Kitchen",
+    "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image/the-barn-gastropub_ChIJe7KSn4dH0i0RsfzzpwFhwpQ/the-barn-gastropub_static.webp"
+  },
+  {
+    "env": "dev",
+    "name": "Black Sand Brewery",
+    "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image/black-sand-brewery_ChIJNzjyIBI50i0RpFdnd_ZN3pg/black-sand-brewery_static.webp"
+  },
+  {
+    "env": "dev",
+    "name": "Shelter Restaurant",
+    "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image/shelter-restaurant_ChIJcfxIJo850i0RsrveoncQeBs/shelter-restaurant_static.webp"
+  },
+  {
+    "env": "dev",
+    "name": "Hippie Fish Pererenan Beach",
+    "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/hippie-fish-pererenan-beach_ChIJ5Wex6mc50i0RNSHWdVKVoPo/hippie-fish-pererenan-beach_static.webp"
+  },
+  {
+    "env": "dev",
+    "name": "Miss Fish Bali",
+    "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/miss-fish-bali_ChIJYcKvqiJH0i0RtzWDiRmCnI0/miss-fish-bali_static.webp"
+  },
+  {
+    "env": "prod",
+    "name": "Hippie Fish Pererenan Beach",
+    "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/hippie-fish-pererenan-beach_ChIJ5Wex6mc50i0RNSHWdVKVoPo/hippie-fish-pererenan-beach_static.webp"
+  },
+  {
+    "env": "prod",
+    "name": "Miss Fish Bali",
+    "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/miss-fish-bali_ChIJYcKvqiJH0i0RtzWDiRmCnI0/miss-fish-bali_static.webp"
+  }
+]

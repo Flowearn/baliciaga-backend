@@ -1,0 +1,1919 @@
+{
+  "s3_total": 165,
+  "json_expected_total": 84,
+  "s3_maps": [
+    {
+      "album": "cafe-image-dev",
+      "folder": "amolas-cafe_ChIJD63X4IU50i0RFkjm_Q5AwGs",
+      "filename": "amolas-cafe_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/amolas-cafe_ChIJD63X4IU50i0RFkjm_Q5AwGs/amolas-cafe_static.webp",
+      "full_path": "cafe-image-dev/amolas-cafe_ChIJD63X4IU50i0RFkjm_Q5AwGs/amolas-cafe_static.webp"
+    },
+    {
+      "album": "cafe-image-dev",
+      "folder": "baked-berawa_ChIJU0lp4SNH0i0R7x72tr13TmY",
+      "filename": "baked-berawa_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/baked-berawa_ChIJU0lp4SNH0i0R7x72tr13TmY/baked-berawa_static.webp",
+      "full_path": "cafe-image-dev/baked-berawa_ChIJU0lp4SNH0i0R7x72tr13TmY/baked-berawa_static.webp"
+    },
+    {
+      "album": "cafe-image-dev",
+      "folder": "barboa-bali_ChIJQwwZdJ050i0R0ehpWb6QBQc",
+      "filename": "barboa-bali_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/barboa-bali_ChIJQwwZdJ050i0R0ehpWb6QBQc/barboa-bali_static.webp",
+      "full_path": "cafe-image-dev/barboa-bali_ChIJQwwZdJ050i0R0ehpWb6QBQc/barboa-bali_static.webp"
+    },
+    {
+      "album": "cafe-image-dev",
+      "folder": "blou-cafe-canggu_ChIJhz6xqoo50i0RZxslmCS1iow",
+      "filename": "blou-cafe-canggu_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/blou-cafe-canggu_ChIJhz6xqoo50i0RZxslmCS1iow/blou-cafe-canggu_static.webp",
+      "full_path": "cafe-image-dev/blou-cafe-canggu_ChIJhz6xqoo50i0RZxslmCS1iow/blou-cafe-canggu_static.webp"
+    },
+    {
+      "album": "cafe-image-dev",
+      "folder": "bokashi-berawa_ChIJqdO8SytH0i0RkcWicB2oqxQ",
+      "filename": "bokashi-berawa_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/bokashi-berawa_ChIJqdO8SytH0i0RkcWicB2oqxQ/bokashi-berawa_static.webp",
+      "full_path": "cafe-image-dev/bokashi-berawa_ChIJqdO8SytH0i0RkcWicB2oqxQ/bokashi-berawa_static.webp"
+    },
+    {
+      "album": "cafe-image-dev",
+      "folder": "brunch-club-berawa_ChIJnxFCS3pH0i0RE9mJ0v6ZkHA",
+      "filename": "brunch-club-berawa_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/brunch-club-berawa_ChIJnxFCS3pH0i0RE9mJ0v6ZkHA/brunch-club-berawa_static.webp",
+      "full_path": "cafe-image-dev/brunch-club-berawa_ChIJnxFCS3pH0i0RE9mJ0v6ZkHA/brunch-club-berawa_static.webp"
+    },
+    {
+      "album": "cafe-image-dev",
+      "folder": "brunch-club-pererenan_ChIJkfDSHYg50i0RBdXQigmMn54",
+      "filename": "brunch-club-pererenan_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/brunch-club-pererenan_ChIJkfDSHYg50i0RBdXQigmMn54/brunch-club-pererenan_static.webp",
+      "full_path": "cafe-image-dev/brunch-club-pererenan_ChIJkfDSHYg50i0RBdXQigmMn54/brunch-club-pererenan_static.webp"
+    },
+    {
+      "album": "cafe-image-dev",
+      "folder": "cafe-the-daun_ChIJ1_XOtHg40i0R6eyPmtRK6bc",
+      "filename": "cafe-the-daun_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/cafe-the-daun_ChIJ1_XOtHg40i0R6eyPmtRK6bc/cafe-the-daun_static.webp",
+      "full_path": "cafe-image-dev/cafe-the-daun_ChIJ1_XOtHg40i0R6eyPmtRK6bc/cafe-the-daun_static.webp"
+    },
+    {
+      "album": "cafe-image-dev",
+      "folder": "cafe-vida-organic_ChIJMev9G3w40i0RXZlSucHydMw",
+      "filename": "cafe-vida-organic_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/cafe-vida-organic_ChIJMev9G3w40i0RXZlSucHydMw/cafe-vida-organic_static.webp",
+      "full_path": "cafe-image-dev/cafe-vida-organic_ChIJMev9G3w40i0RXZlSucHydMw/cafe-vida-organic_static.webp"
+    },
+    {
+      "album": "cafe-image-dev",
+      "folder": "crate-cafe_ChIJOaEQDnk40i0Rzhou4NcRx-w",
+      "filename": "crate-cafe_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/crate-cafe_ChIJOaEQDnk40i0Rzhou4NcRx-w/crate-cafe_static.webp",
+      "full_path": "cafe-image-dev/crate-cafe_ChIJOaEQDnk40i0Rzhou4NcRx-w/crate-cafe_static.webp"
+    },
+    {
+      "album": "cafe-image-dev",
+      "folder": "desa-kitsun_ChIJ9UCFSPE50i0RVVADcFGCGXI",
+      "filename": "desa-kitsun_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/desa-kitsun_ChIJ9UCFSPE50i0RVVADcFGCGXI/desa-kitsun_static.webp",
+      "full_path": "cafe-image-dev/desa-kitsun_ChIJ9UCFSPE50i0RVVADcFGCGXI/desa-kitsun_static.webp"
+    },
+    {
+      "album": "cafe-image-dev",
+      "folder": "fine-by-satusatucoffee_ChIJB5JLA1c50i0RRPJ0C5V2DnQ",
+      "filename": "fine-by-satusatucoffee_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/fine-by-satusatucoffee_ChIJB5JLA1c50i0RRPJ0C5V2DnQ/fine-by-satusatucoffee_static.webp",
+      "full_path": "cafe-image-dev/fine-by-satusatucoffee_ChIJB5JLA1c50i0RRPJ0C5V2DnQ/fine-by-satusatucoffee_static.webp"
+    },
+    {
+      "album": "cafe-image-dev",
+      "folder": "fold-canggu_ChIJg1ad-75H0i0R8aB_K9oKYj8",
+      "filename": "fold-canggu_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/fold-canggu_ChIJg1ad-75H0i0R8aB_K9oKYj8/fold-canggu_static.webp",
+      "full_path": "cafe-image-dev/fold-canggu_ChIJg1ad-75H0i0R8aB_K9oKYj8/fold-canggu_static.webp"
+    },
+    {
+      "album": "cafe-image-dev",
+      "folder": "home-cafe-canggu_ChIJSzQz6CQ50i0RalL4caNfcSI",
+      "filename": "home-cafe-canggu_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/home-cafe-canggu_ChIJSzQz6CQ50i0RalL4caNfcSI/home-cafe-canggu_static.webp",
+      "full_path": "cafe-image-dev/home-cafe-canggu_ChIJSzQz6CQ50i0RalL4caNfcSI/home-cafe-canggu_static.webp"
+    },
+    {
+      "album": "cafe-image-dev",
+      "folder": "home-cafe-mengwi_ChIJt38YXDo50i0RJlB3Oz0PDjg",
+      "filename": "home-cafe-mengwi_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/home-cafe-mengwi_ChIJt38YXDo50i0RJlB3Oz0PDjg/home-cafe-mengwi_static.webp",
+      "full_path": "cafe-image-dev/home-cafe-mengwi_ChIJt38YXDo50i0RJlB3Oz0PDjg/home-cafe-mengwi_static.webp"
+    },
+    {
+      "album": "cafe-image-dev",
+      "folder": "hungry-bird-coffee-roaster_ChIJa2bVbaxcBAURDMj_jEzGDqI",
+      "filename": "hungry-bird-coffee-roaster_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/hungry-bird-coffee-roaster_ChIJa2bVbaxcBAURDMj_jEzGDqI/hungry-bird-coffee-roaster_static.webp",
+      "full_path": "cafe-image-dev/hungry-bird-coffee-roaster_ChIJa2bVbaxcBAURDMj_jEzGDqI/hungry-bird-coffee-roaster_static.webp"
+    },
+    {
+      "album": "cafe-image-dev",
+      "folder": "jiwa-cafe_ChIJEaGuegA50i0R3CbgI5uqfq0",
+      "filename": "jiwa-cafe_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/jiwa-cafe_ChIJEaGuegA50i0R3CbgI5uqfq0/jiwa-cafe_static.webp",
+      "full_path": "cafe-image-dev/jiwa-cafe_ChIJEaGuegA50i0R3CbgI5uqfq0/jiwa-cafe_static.webp"
+    },
+    {
+      "album": "cafe-image-dev",
+      "folder": "kawisari-coffee-farm-shop-eatery-bali_ChIJH21JAz5H0i0R9xl0tIvpu1w",
+      "filename": "kawisari-coffee-farm-shop-eatery-bali_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/kawisari-coffee-farm-shop-eatery-bali_ChIJH21JAz5H0i0R9xl0tIvpu1w/kawisari-coffee-farm-shop-eatery-bali_static.webp",
+      "full_path": "cafe-image-dev/kawisari-coffee-farm-shop-eatery-bali_ChIJH21JAz5H0i0R9xl0tIvpu1w/kawisari-coffee-farm-shop-eatery-bali_static.webp"
+    },
+    {
+      "album": "cafe-image-dev",
+      "folder": "lusa-bysuka_ChIJcYpksxVH0i0RCDMFafUy5N4",
+      "filename": "lusa-bysuka_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/lusa-bysuka_ChIJcYpksxVH0i0RCDMFafUy5N4/lusa-bysuka_static.webp",
+      "full_path": "cafe-image-dev/lusa-bysuka_ChIJcYpksxVH0i0RCDMFafUy5N4/lusa-bysuka_static.webp"
+    },
+    {
+      "album": "cafe-image-dev",
+      "folder": "miel-specialty-coffee-canggu-co-working_ChIJYXyNN5U50i0RmIUNsfH9tHw",
+      "filename": "miel-specialty-coffee-canggu-co-working_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/miel-specialty-coffee-canggu-co-working_ChIJYXyNN5U50i0RmIUNsfH9tHw/miel-specialty-coffee-canggu-co-working_static.webp",
+      "full_path": "cafe-image-dev/miel-specialty-coffee-canggu-co-working_ChIJYXyNN5U50i0RmIUNsfH9tHw/miel-specialty-coffee-canggu-co-working_static.webp"
+    },
+    {
+      "album": "cafe-image-dev",
+      "folder": "milk-madu-beach-road_ChIJL3L-Sfc50i0RwlAVew5QCm8",
+      "filename": "milk-madu-beach-road_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/milk-madu-beach-road_ChIJL3L-Sfc50i0RwlAVew5QCm8/milk-madu-beach-road_static.webp",
+      "full_path": "cafe-image-dev/milk-madu-beach-road_ChIJL3L-Sfc50i0RwlAVew5QCm8/milk-madu-beach-road_static.webp"
+    },
+    {
+      "album": "cafe-image-dev",
+      "folder": "mimpi-grocery_ChIJzXC1G0A50i0RRtOZNiTSri0",
+      "filename": "mimpi-grocery_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/mimpi-grocery_ChIJzXC1G0A50i0RRtOZNiTSri0/mimpi-grocery_static.webp",
+      "full_path": "cafe-image-dev/mimpi-grocery_ChIJzXC1G0A50i0RRtOZNiTSri0/mimpi-grocery_static.webp"
+    },
+    {
+      "album": "cafe-image-dev",
+      "folder": "nde-cafe-babakan_ChIJFay1BbM50i0RLOYPPnFgc2k",
+      "filename": "nde-cafe-babakan_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/nde-cafe-babakan_ChIJFay1BbM50i0RLOYPPnFgc2k/nde-cafe-babakan_static.webp",
+      "full_path": "cafe-image-dev/nde-cafe-babakan_ChIJFay1BbM50i0RLOYPPnFgc2k/nde-cafe-babakan_static.webp"
+    },
+    {
+      "album": "cafe-image-dev",
+      "folder": "nde-cafe-berawa_ChIJZ6Jj8oFH0i0R0sKhEJMIyd8",
+      "filename": "nde-cafe-berawa_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/nde-cafe-berawa_ChIJZ6Jj8oFH0i0R0sKhEJMIyd8/nde-cafe-berawa_static.webp",
+      "full_path": "cafe-image-dev/nde-cafe-berawa_ChIJZ6Jj8oFH0i0R0sKhEJMIyd8/nde-cafe-berawa_static.webp"
+    },
+    {
+      "album": "cafe-image-dev",
+      "folder": "neighbourhood-food_ChIJq_svKGxH0i0RU-zAhMppq8Y",
+      "filename": "neighbourhood-food_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/neighbourhood-food_ChIJq_svKGxH0i0RU-zAhMppq8Y/neighbourhood-food_static.webp",
+      "full_path": "cafe-image-dev/neighbourhood-food_ChIJq_svKGxH0i0RU-zAhMppq8Y/neighbourhood-food_static.webp"
+    },
+    {
+      "album": "cafe-image-dev",
+      "folder": "openhouse-cafe_ChIJRfVHDQA50i0R78l1hYjP2iM",
+      "filename": "openhouse-cafe_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/openhouse-cafe_ChIJRfVHDQA50i0R78l1hYjP2iM/openhouse-cafe_static.webp",
+      "full_path": "cafe-image-dev/openhouse-cafe_ChIJRfVHDQA50i0R78l1hYjP2iM/openhouse-cafe_static.webp"
+    },
+    {
+      "album": "cafe-image-dev",
+      "folder": "revolver-canggu_ChIJnY-evaw50i0RD_tH6R6pDyw",
+      "filename": "revolver-canggu_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/revolver-canggu_ChIJnY-evaw50i0RD_tH6R6pDyw/revolver-canggu_static.webp",
+      "full_path": "cafe-image-dev/revolver-canggu_ChIJnY-evaw50i0RD_tH6R6pDyw/revolver-canggu_static.webp"
+    },
+    {
+      "album": "cafe-image-dev",
+      "folder": "rise-shine-cafe-canggu_ChIJg_EuN3s40i0R6kCeRoibycg",
+      "filename": "rise-shine-cafe-canggu_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/rise-shine-cafe-canggu_ChIJg_EuN3s40i0R6kCeRoibycg/rise-shine-cafe-canggu_static.webp",
+      "full_path": "cafe-image-dev/rise-shine-cafe-canggu_ChIJg_EuN3s40i0R6kCeRoibycg/rise-shine-cafe-canggu_static.webp"
+    },
+    {
+      "album": "cafe-image-dev",
+      "folder": "sari-kitchen-community-by-ekosistem_ChIJVwZGvMo50i0R5i1fzyT73S4",
+      "filename": "sari-kitchen-community-by-ekosistem_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/sari-kitchen-community-by-ekosistem_ChIJVwZGvMo50i0R5i1fzyT73S4/sari-kitchen-community-by-ekosistem_static.webp",
+      "full_path": "cafe-image-dev/sari-kitchen-community-by-ekosistem_ChIJVwZGvMo50i0R5i1fzyT73S4/sari-kitchen-community-by-ekosistem_static.webp"
+    },
+    {
+      "album": "cafe-image-dev",
+      "folder": "secret-spot-canggu_ChIJmZf0Vlc50i0RR3Z4gOnFmUM",
+      "filename": "secret-spot-canggu_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/secret-spot-canggu_ChIJmZf0Vlc50i0RR3Z4gOnFmUM/secret-spot-canggu_static.webp",
+      "full_path": "cafe-image-dev/secret-spot-canggu_ChIJmZf0Vlc50i0RR3Z4gOnFmUM/secret-spot-canggu_static.webp"
+    },
+    {
+      "album": "cafe-image-dev",
+      "folder": "sensorium-bali_ChIJr9bHQS050i0RW_GuYHY3vaU",
+      "filename": "sensorium-bali_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/sensorium-bali_ChIJr9bHQS050i0RW_GuYHY3vaU/sensorium-bali_static.webp",
+      "full_path": "cafe-image-dev/sensorium-bali_ChIJr9bHQS050i0RW_GuYHY3vaU/sensorium-bali_static.webp"
+    },
+    {
+      "album": "cafe-image-dev",
+      "folder": "st-ali-bali_ChIJD94dpPY50i0R96D3MPX7rrc",
+      "filename": "st-ali-bali_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/st-ali-bali_ChIJD94dpPY50i0R96D3MPX7rrc/st-ali-bali_static.webp",
+      "full_path": "cafe-image-dev/st-ali-bali_ChIJD94dpPY50i0R96D3MPX7rrc/st-ali-bali_static.webp"
+    },
+    {
+      "album": "cafe-image-dev",
+      "folder": "the-avocado-factory_ChIJ36pywXk40i0Rh9ZZCRMb1fQ",
+      "filename": "the-avocado-factory_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/the-avocado-factory_ChIJ36pywXk40i0Rh9ZZCRMb1fQ/the-avocado-factory_static.webp",
+      "full_path": "cafe-image-dev/the-avocado-factory_ChIJ36pywXk40i0Rh9ZZCRMb1fQ/the-avocado-factory_static.webp"
+    },
+    {
+      "album": "cafe-image-dev",
+      "folder": "the-common_ChIJHzyhoW450i0Rub7_EEvisDY",
+      "filename": "the-common_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/the-common_ChIJHzyhoW450i0Rub7_EEvisDY/the-common_static.webp",
+      "full_path": "cafe-image-dev/the-common_ChIJHzyhoW450i0Rub7_EEvisDY/the-common_static.webp"
+    },
+    {
+      "album": "cafe-image-dev",
+      "folder": "two-face-coffee-brunch-canggu_ChIJq42lSa850i0RziccPzDJXhU",
+      "filename": "two-face-coffee-brunch-canggu_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/two-face-coffee-brunch-canggu_ChIJq42lSa850i0RziccPzDJXhU/two-face-coffee-brunch-canggu_static.webp",
+      "full_path": "cafe-image-dev/two-face-coffee-brunch-canggu_ChIJq42lSa850i0RziccPzDJXhU/two-face-coffee-brunch-canggu_static.webp"
+    },
+    {
+      "album": "cafe-image-dev",
+      "folder": "yume-buduk_ChIJQYh7HcM50i0RyZozSuavIhM",
+      "filename": "yume-buduk_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/yume-buduk_ChIJQYh7HcM50i0RyZozSuavIhM/yume-buduk_static.webp",
+      "full_path": "cafe-image-dev/yume-buduk_ChIJQYh7HcM50i0RyZozSuavIhM/yume-buduk_static.webp"
+    },
+    {
+      "album": "cafe-image-dev",
+      "folder": "zai-cafe-breakfast-dinner_ChIJnT3bt6VH0i0RUgvf_KGh8r8",
+      "filename": "zai-cafe-breakfast-dinner_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/zai-cafe-breakfast-dinner_ChIJnT3bt6VH0i0RUgvf_KGh8r8/zai-cafe-breakfast-dinner_static.webp",
+      "full_path": "cafe-image-dev/zai-cafe-breakfast-dinner_ChIJnT3bt6VH0i0RUgvf_KGh8r8/zai-cafe-breakfast-dinner_static.webp"
+    },
+    {
+      "album": "cafe-image-dev",
+      "folder": "zin-cafe_ChIJ1a70wvFH0i0RajIckWuoU14",
+      "filename": "zin-cafe_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/zin-cafe_ChIJ1a70wvFH0i0RajIckWuoU14/zin-cafe_static.webp",
+      "full_path": "cafe-image-dev/zin-cafe_ChIJ1a70wvFH0i0RajIckWuoU14/zin-cafe_static.webp"
+    },
+    {
+      "album": "cafe-image-prod",
+      "folder": "amolas-cafe_ChIJD63X4IU50i0RFkjm_Q5AwGs",
+      "filename": "amolas-cafe_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-prod/amolas-cafe_ChIJD63X4IU50i0RFkjm_Q5AwGs/amolas-cafe_static.webp",
+      "full_path": "cafe-image-prod/amolas-cafe_ChIJD63X4IU50i0RFkjm_Q5AwGs/amolas-cafe_static.webp"
+    },
+    {
+      "album": "cafe-image-prod",
+      "folder": "baked-berawa_ChIJU0lp4SNH0i0R7x72tr13TmY",
+      "filename": "baked-berawa_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-prod/baked-berawa_ChIJU0lp4SNH0i0R7x72tr13TmY/baked-berawa_static.webp",
+      "full_path": "cafe-image-prod/baked-berawa_ChIJU0lp4SNH0i0R7x72tr13TmY/baked-berawa_static.webp"
+    },
+    {
+      "album": "cafe-image-prod",
+      "folder": "barboa-bali_ChIJQwwZdJ050i0R0ehpWb6QBQc",
+      "filename": "barboa-bali_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-prod/barboa-bali_ChIJQwwZdJ050i0R0ehpWb6QBQc/barboa-bali_static.webp",
+      "full_path": "cafe-image-prod/barboa-bali_ChIJQwwZdJ050i0R0ehpWb6QBQc/barboa-bali_static.webp"
+    },
+    {
+      "album": "cafe-image-prod",
+      "folder": "blou-cafe-canggu_ChIJhz6xqoo50i0RZxslmCS1iow",
+      "filename": "blou-cafe-canggu_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-prod/blou-cafe-canggu_ChIJhz6xqoo50i0RZxslmCS1iow/blou-cafe-canggu_static.webp",
+      "full_path": "cafe-image-prod/blou-cafe-canggu_ChIJhz6xqoo50i0RZxslmCS1iow/blou-cafe-canggu_static.webp"
+    },
+    {
+      "album": "cafe-image-prod",
+      "folder": "bokashi-berawa_ChIJqdO8SytH0i0RkcWicB2oqxQ",
+      "filename": "bokashi-berawa_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-prod/bokashi-berawa_ChIJqdO8SytH0i0RkcWicB2oqxQ/bokashi-berawa_static.webp",
+      "full_path": "cafe-image-prod/bokashi-berawa_ChIJqdO8SytH0i0RkcWicB2oqxQ/bokashi-berawa_static.webp"
+    },
+    {
+      "album": "cafe-image-prod",
+      "folder": "brunch-club-berawa_ChIJnxFCS3pH0i0RE9mJ0v6ZkHA",
+      "filename": "brunch-club-berawa_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-prod/brunch-club-berawa_ChIJnxFCS3pH0i0RE9mJ0v6ZkHA/brunch-club-berawa_static.webp",
+      "full_path": "cafe-image-prod/brunch-club-berawa_ChIJnxFCS3pH0i0RE9mJ0v6ZkHA/brunch-club-berawa_static.webp"
+    },
+    {
+      "album": "cafe-image-prod",
+      "folder": "brunch-club-pererenan_ChIJkfDSHYg50i0RBdXQigmMn54",
+      "filename": "brunch-club-pererenan_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-prod/brunch-club-pererenan_ChIJkfDSHYg50i0RBdXQigmMn54/brunch-club-pererenan_static.webp",
+      "full_path": "cafe-image-prod/brunch-club-pererenan_ChIJkfDSHYg50i0RBdXQigmMn54/brunch-club-pererenan_static.webp"
+    },
+    {
+      "album": "cafe-image-prod",
+      "folder": "cafe-the-daun_ChIJ1_XOtHg40i0R6eyPmtRK6bc",
+      "filename": "cafe-the-daun_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-prod/cafe-the-daun_ChIJ1_XOtHg40i0R6eyPmtRK6bc/cafe-the-daun_static.webp",
+      "full_path": "cafe-image-prod/cafe-the-daun_ChIJ1_XOtHg40i0R6eyPmtRK6bc/cafe-the-daun_static.webp"
+    },
+    {
+      "album": "cafe-image-prod",
+      "folder": "cafe-vida-organic_ChIJMev9G3w40i0RXZlSucHydMw",
+      "filename": "cafe-vida-organic_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-prod/cafe-vida-organic_ChIJMev9G3w40i0RXZlSucHydMw/cafe-vida-organic_static.webp",
+      "full_path": "cafe-image-prod/cafe-vida-organic_ChIJMev9G3w40i0RXZlSucHydMw/cafe-vida-organic_static.webp"
+    },
+    {
+      "album": "cafe-image-prod",
+      "folder": "crate-cafe_ChIJOaEQDnk40i0Rzhou4NcRx-w",
+      "filename": "crate-cafe_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-prod/crate-cafe_ChIJOaEQDnk40i0Rzhou4NcRx-w/crate-cafe_static.webp",
+      "full_path": "cafe-image-prod/crate-cafe_ChIJOaEQDnk40i0Rzhou4NcRx-w/crate-cafe_static.webp"
+    },
+    {
+      "album": "cafe-image-prod",
+      "folder": "desa-kitsun_ChIJ9UCFSPE50i0RVVADcFGCGXI",
+      "filename": "desa-kitsun_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-prod/desa-kitsun_ChIJ9UCFSPE50i0RVVADcFGCGXI/desa-kitsun_static.webp",
+      "full_path": "cafe-image-prod/desa-kitsun_ChIJ9UCFSPE50i0RVVADcFGCGXI/desa-kitsun_static.webp"
+    },
+    {
+      "album": "cafe-image-prod",
+      "folder": "fine-by-satusatucoffee_ChIJB5JLA1c50i0RRPJ0C5V2DnQ",
+      "filename": "fine-by-satusatucoffee_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-prod/fine-by-satusatucoffee_ChIJB5JLA1c50i0RRPJ0C5V2DnQ/fine-by-satusatucoffee_static.webp",
+      "full_path": "cafe-image-prod/fine-by-satusatucoffee_ChIJB5JLA1c50i0RRPJ0C5V2DnQ/fine-by-satusatucoffee_static.webp"
+    },
+    {
+      "album": "cafe-image-prod",
+      "folder": "fold-canggu_ChIJg1ad-75H0i0R8aB_K9oKYj8",
+      "filename": "fold-canggu_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-prod/fold-canggu_ChIJg1ad-75H0i0R8aB_K9oKYj8/fold-canggu_static.webp",
+      "full_path": "cafe-image-prod/fold-canggu_ChIJg1ad-75H0i0R8aB_K9oKYj8/fold-canggu_static.webp"
+    },
+    {
+      "album": "cafe-image-prod",
+      "folder": "home-cafe-canggu_ChIJSzQz6CQ50i0RalL4caNfcSI",
+      "filename": "home-cafe-canggu_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-prod/home-cafe-canggu_ChIJSzQz6CQ50i0RalL4caNfcSI/home-cafe-canggu_static.webp",
+      "full_path": "cafe-image-prod/home-cafe-canggu_ChIJSzQz6CQ50i0RalL4caNfcSI/home-cafe-canggu_static.webp"
+    },
+    {
+      "album": "cafe-image-prod",
+      "folder": "home-cafe-mengwi_ChIJt38YXDo50i0RJlB3Oz0PDjg",
+      "filename": "home-cafe-mengwi_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-prod/home-cafe-mengwi_ChIJt38YXDo50i0RJlB3Oz0PDjg/home-cafe-mengwi_static.webp",
+      "full_path": "cafe-image-prod/home-cafe-mengwi_ChIJt38YXDo50i0RJlB3Oz0PDjg/home-cafe-mengwi_static.webp"
+    },
+    {
+      "album": "cafe-image-prod",
+      "folder": "hungry-bird-coffee-roaster_ChIJa2bVbaxcBAURDMj_jEzGDqI",
+      "filename": "hungry-bird-coffee-roaster_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-prod/hungry-bird-coffee-roaster_ChIJa2bVbaxcBAURDMj_jEzGDqI/hungry-bird-coffee-roaster_static.webp",
+      "full_path": "cafe-image-prod/hungry-bird-coffee-roaster_ChIJa2bVbaxcBAURDMj_jEzGDqI/hungry-bird-coffee-roaster_static.webp"
+    },
+    {
+      "album": "cafe-image-prod",
+      "folder": "jiwa-cafe_ChIJEaGuegA50i0R3CbgI5uqfq0",
+      "filename": "jiwa-cafe_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-prod/jiwa-cafe_ChIJEaGuegA50i0R3CbgI5uqfq0/jiwa-cafe_static.webp",
+      "full_path": "cafe-image-prod/jiwa-cafe_ChIJEaGuegA50i0R3CbgI5uqfq0/jiwa-cafe_static.webp"
+    },
+    {
+      "album": "cafe-image-prod",
+      "folder": "kawisari-coffee-farm-shop-eatery-bali_ChIJH21JAz5H0i0R9xl0tIvpu1w",
+      "filename": "kawisari-coffee-farm-shop-eatery-bali_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-prod/kawisari-coffee-farm-shop-eatery-bali_ChIJH21JAz5H0i0R9xl0tIvpu1w/kawisari-coffee-farm-shop-eatery-bali_static.webp",
+      "full_path": "cafe-image-prod/kawisari-coffee-farm-shop-eatery-bali_ChIJH21JAz5H0i0R9xl0tIvpu1w/kawisari-coffee-farm-shop-eatery-bali_static.webp"
+    },
+    {
+      "album": "cafe-image-prod",
+      "folder": "lusa-bysuka_ChIJcYpksxVH0i0RCDMFafUy5N4",
+      "filename": "lusa-bysuka_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-prod/lusa-bysuka_ChIJcYpksxVH0i0RCDMFafUy5N4/lusa-bysuka_static.webp",
+      "full_path": "cafe-image-prod/lusa-bysuka_ChIJcYpksxVH0i0RCDMFafUy5N4/lusa-bysuka_static.webp"
+    },
+    {
+      "album": "cafe-image-prod",
+      "folder": "miel-specialty-coffee-canggu-co-working_ChIJYXyNN5U50i0RmIUNsfH9tHw",
+      "filename": "miel-specialty-coffee-canggu-co-working_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-prod/miel-specialty-coffee-canggu-co-working_ChIJYXyNN5U50i0RmIUNsfH9tHw/miel-specialty-coffee-canggu-co-working_static.webp",
+      "full_path": "cafe-image-prod/miel-specialty-coffee-canggu-co-working_ChIJYXyNN5U50i0RmIUNsfH9tHw/miel-specialty-coffee-canggu-co-working_static.webp"
+    },
+    {
+      "album": "cafe-image-prod",
+      "folder": "milk-madu-beach-road_ChIJL3L-Sfc50i0RwlAVew5QCm8",
+      "filename": "milk-madu-beach-road_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-prod/milk-madu-beach-road_ChIJL3L-Sfc50i0RwlAVew5QCm8/milk-madu-beach-road_static.webp",
+      "full_path": "cafe-image-prod/milk-madu-beach-road_ChIJL3L-Sfc50i0RwlAVew5QCm8/milk-madu-beach-road_static.webp"
+    },
+    {
+      "album": "cafe-image-prod",
+      "folder": "mimpi-grocery_ChIJzXC1G0A50i0RRtOZNiTSri0",
+      "filename": "mimpi-grocery_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-prod/mimpi-grocery_ChIJzXC1G0A50i0RRtOZNiTSri0/mimpi-grocery_static.webp",
+      "full_path": "cafe-image-prod/mimpi-grocery_ChIJzXC1G0A50i0RRtOZNiTSri0/mimpi-grocery_static.webp"
+    },
+    {
+      "album": "cafe-image-prod",
+      "folder": "nde-cafe-babakan_ChIJFay1BbM50i0RLOYPPnFgc2k",
+      "filename": "nde-cafe-babakan_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-prod/nde-cafe-babakan_ChIJFay1BbM50i0RLOYPPnFgc2k/nde-cafe-babakan_static.webp",
+      "full_path": "cafe-image-prod/nde-cafe-babakan_ChIJFay1BbM50i0RLOYPPnFgc2k/nde-cafe-babakan_static.webp"
+    },
+    {
+      "album": "cafe-image-prod",
+      "folder": "nde-cafe-berawa_ChIJZ6Jj8oFH0i0R0sKhEJMIyd8",
+      "filename": "nde-cafe-berawa_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-prod/nde-cafe-berawa_ChIJZ6Jj8oFH0i0R0sKhEJMIyd8/nde-cafe-berawa_static.webp",
+      "full_path": "cafe-image-prod/nde-cafe-berawa_ChIJZ6Jj8oFH0i0R0sKhEJMIyd8/nde-cafe-berawa_static.webp"
+    },
+    {
+      "album": "cafe-image-prod",
+      "folder": "neighbourhood-food_ChIJq_svKGxH0i0RU-zAhMppq8Y",
+      "filename": "neighbourhood-food_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-prod/neighbourhood-food_ChIJq_svKGxH0i0RU-zAhMppq8Y/neighbourhood-food_static.webp",
+      "full_path": "cafe-image-prod/neighbourhood-food_ChIJq_svKGxH0i0RU-zAhMppq8Y/neighbourhood-food_static.webp"
+    },
+    {
+      "album": "cafe-image-prod",
+      "folder": "openhouse-cafe_ChIJRfVHDQA50i0R78l1hYjP2iM",
+      "filename": "openhouse-cafe_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-prod/openhouse-cafe_ChIJRfVHDQA50i0R78l1hYjP2iM/openhouse-cafe_static.webp",
+      "full_path": "cafe-image-prod/openhouse-cafe_ChIJRfVHDQA50i0R78l1hYjP2iM/openhouse-cafe_static.webp"
+    },
+    {
+      "album": "cafe-image-prod",
+      "folder": "revolver-canggu_ChIJnY-evaw50i0RD_tH6R6pDyw",
+      "filename": "revolver-canggu_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-prod/revolver-canggu_ChIJnY-evaw50i0RD_tH6R6pDyw/revolver-canggu_static.webp",
+      "full_path": "cafe-image-prod/revolver-canggu_ChIJnY-evaw50i0RD_tH6R6pDyw/revolver-canggu_static.webp"
+    },
+    {
+      "album": "cafe-image-prod",
+      "folder": "rise-shine-cafe-canggu_ChIJg_EuN3s40i0R6kCeRoibycg",
+      "filename": "rise-shine-cafe-canggu_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-prod/rise-shine-cafe-canggu_ChIJg_EuN3s40i0R6kCeRoibycg/rise-shine-cafe-canggu_static.webp",
+      "full_path": "cafe-image-prod/rise-shine-cafe-canggu_ChIJg_EuN3s40i0R6kCeRoibycg/rise-shine-cafe-canggu_static.webp"
+    },
+    {
+      "album": "cafe-image-prod",
+      "folder": "sari-kitchen-community-by-ekosistem_ChIJVwZGvMo50i0R5i1fzyT73S4",
+      "filename": "sari-kitchen-community-by-ekosistem_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-prod/sari-kitchen-community-by-ekosistem_ChIJVwZGvMo50i0R5i1fzyT73S4/sari-kitchen-community-by-ekosistem_static.webp",
+      "full_path": "cafe-image-prod/sari-kitchen-community-by-ekosistem_ChIJVwZGvMo50i0R5i1fzyT73S4/sari-kitchen-community-by-ekosistem_static.webp"
+    },
+    {
+      "album": "cafe-image-prod",
+      "folder": "secret-spot-canggu_ChIJmZf0Vlc50i0RR3Z4gOnFmUM",
+      "filename": "secret-spot-canggu_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-prod/secret-spot-canggu_ChIJmZf0Vlc50i0RR3Z4gOnFmUM/secret-spot-canggu_static.webp",
+      "full_path": "cafe-image-prod/secret-spot-canggu_ChIJmZf0Vlc50i0RR3Z4gOnFmUM/secret-spot-canggu_static.webp"
+    },
+    {
+      "album": "cafe-image-prod",
+      "folder": "sensorium-bali_ChIJr9bHQS050i0RW_GuYHY3vaU",
+      "filename": "sensorium-bali_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-prod/sensorium-bali_ChIJr9bHQS050i0RW_GuYHY3vaU/sensorium-bali_static.webp",
+      "full_path": "cafe-image-prod/sensorium-bali_ChIJr9bHQS050i0RW_GuYHY3vaU/sensorium-bali_static.webp"
+    },
+    {
+      "album": "cafe-image-prod",
+      "folder": "st-ali-bali_ChIJD94dpPY50i0R96D3MPX7rrc",
+      "filename": "st-ali-bali_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-prod/st-ali-bali_ChIJD94dpPY50i0R96D3MPX7rrc/st-ali-bali_static.webp",
+      "full_path": "cafe-image-prod/st-ali-bali_ChIJD94dpPY50i0R96D3MPX7rrc/st-ali-bali_static.webp"
+    },
+    {
+      "album": "cafe-image-prod",
+      "folder": "the-avocado-factory_ChIJ36pywXk40i0Rh9ZZCRMb1fQ",
+      "filename": "the-avocado-factory_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-prod/the-avocado-factory_ChIJ36pywXk40i0Rh9ZZCRMb1fQ/the-avocado-factory_static.webp",
+      "full_path": "cafe-image-prod/the-avocado-factory_ChIJ36pywXk40i0Rh9ZZCRMb1fQ/the-avocado-factory_static.webp"
+    },
+    {
+      "album": "cafe-image-prod",
+      "folder": "the-common_ChIJHzyhoW450i0Rub7_EEvisDY",
+      "filename": "the-common_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-prod/the-common_ChIJHzyhoW450i0Rub7_EEvisDY/the-common_static.webp",
+      "full_path": "cafe-image-prod/the-common_ChIJHzyhoW450i0Rub7_EEvisDY/the-common_static.webp"
+    },
+    {
+      "album": "cafe-image-prod",
+      "folder": "two-face-coffee-brunch-canggu_ChIJq42lSa850i0RziccPzDJXhU",
+      "filename": "two-face-coffee-brunch-canggu_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-prod/two-face-coffee-brunch-canggu_ChIJq42lSa850i0RziccPzDJXhU/two-face-coffee-brunch-canggu_static.webp",
+      "full_path": "cafe-image-prod/two-face-coffee-brunch-canggu_ChIJq42lSa850i0RziccPzDJXhU/two-face-coffee-brunch-canggu_static.webp"
+    },
+    {
+      "album": "cafe-image-prod",
+      "folder": "yume-buduk_ChIJQYh7HcM50i0RyZozSuavIhM",
+      "filename": "yume-buduk_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-prod/yume-buduk_ChIJQYh7HcM50i0RyZozSuavIhM/yume-buduk_static.webp",
+      "full_path": "cafe-image-prod/yume-buduk_ChIJQYh7HcM50i0RyZozSuavIhM/yume-buduk_static.webp"
+    },
+    {
+      "album": "cafe-image-prod",
+      "folder": "zai-cafe-breakfast-dinner_ChIJnT3bt6VH0i0RUgvf_KGh8r8",
+      "filename": "zai-cafe-breakfast-dinner_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-prod/zai-cafe-breakfast-dinner_ChIJnT3bt6VH0i0RUgvf_KGh8r8/zai-cafe-breakfast-dinner_static.webp",
+      "full_path": "cafe-image-prod/zai-cafe-breakfast-dinner_ChIJnT3bt6VH0i0RUgvf_KGh8r8/zai-cafe-breakfast-dinner_static.webp"
+    },
+    {
+      "album": "cafe-image-prod",
+      "folder": "zin-cafe_ChIJ1a70wvFH0i0RajIckWuoU14",
+      "filename": "zin-cafe_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-prod/zin-cafe_ChIJ1a70wvFH0i0RajIckWuoU14/zin-cafe_static.webp",
+      "full_path": "cafe-image-prod/zin-cafe_ChIJ1a70wvFH0i0RajIckWuoU14/zin-cafe_static.webp"
+    },
+    {
+      "album": "dining-image-dev",
+      "folder": "alma-tapas-bar-canggu_ChIJTTj8Ts9H0i0R2XwcfS_i6Mk",
+      "filename": "alma-tapas-bar-canggu_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/alma-tapas-bar-canggu_ChIJTTj8Ts9H0i0R2XwcfS_i6Mk/alma-tapas-bar-canggu_static.webp",
+      "full_path": "dining-image-dev/alma-tapas-bar-canggu_ChIJTTj8Ts9H0i0R2XwcfS_i6Mk/alma-tapas-bar-canggu_static.webp"
+    },
+    {
+      "album": "dining-image-dev",
+      "folder": "anaga-restaurant-authentic-thai-cuisine_ChIJ32m9jCxH0i0RLBCGarQNwNc",
+      "filename": "anaga-restaurant-authentic-thai-cuisine_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/anaga-restaurant-authentic-thai-cuisine_ChIJ32m9jCxH0i0RLBCGarQNwNc/anaga-restaurant-authentic-thai-cuisine_static.webp",
+      "full_path": "dining-image-dev/anaga-restaurant-authentic-thai-cuisine_ChIJ32m9jCxH0i0RLBCGarQNwNc/anaga-restaurant-authentic-thai-cuisine_static.webp"
+    },
+    {
+      "album": "dining-image-dev",
+      "folder": "billy-ho-japanese-restaurant_ChIJ0RSTlvJH0i0R1ozPGwVxSoU",
+      "filename": "billy-ho-japanese-restaurant_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/billy-ho-japanese-restaurant_ChIJ0RSTlvJH0i0R1ozPGwVxSoU/billy-ho-japanese-restaurant_static.webp",
+      "full_path": "dining-image-dev/billy-ho-japanese-restaurant_ChIJ0RSTlvJH0i0R1ozPGwVxSoU/billy-ho-japanese-restaurant_static.webp"
+    },
+    {
+      "album": "dining-image-dev",
+      "folder": "hippie-fish-pererenan-beach_ChIJ5Wex6mc50i0RNSHWdVKVoPo",
+      "filename": "hippie-fish-pererenan-beach_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/hippie-fish-pererenan-beach_ChIJ5Wex6mc50i0RNSHWdVKVoPo/hippie-fish-pererenan-beach_static.webp",
+      "full_path": "dining-image-dev/hippie-fish-pererenan-beach_ChIJ5Wex6mc50i0RNSHWdVKVoPo/hippie-fish-pererenan-beach_static.webp"
+    },
+    {
+      "album": "dining-image-dev",
+      "folder": "ina-r-restaurant_ChIJuWrhQgA50i0Ra0tVN4yy1Dk",
+      "filename": "ina-r-restaurant_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/ina-r-restaurant_ChIJuWrhQgA50i0Ra0tVN4yy1Dk/ina-r-restaurant_static.webp",
+      "full_path": "dining-image-dev/ina-r-restaurant_ChIJuWrhQgA50i0Ra0tVN4yy1Dk/ina-r-restaurant_static.webp"
+    },
+    {
+      "album": "dining-image-dev",
+      "folder": "ji-restaurant-bali_ChIJWVWpMoZH0i0RRFcupYVhVi4",
+      "filename": "ji-restaurant-bali_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/ji-restaurant-bali_ChIJWVWpMoZH0i0RRFcupYVhVi4/ji-restaurant-bali_static.webp",
+      "full_path": "dining-image-dev/ji-restaurant-bali_ChIJWVWpMoZH0i0RRFcupYVhVi4/ji-restaurant-bali_static.webp"
+    },
+    {
+      "album": "dining-image-dev",
+      "folder": "kilo-kitchen-bali-seminyak_ChIJb-BRehhH0i0RUcIoZtXLtUM",
+      "filename": "kilo-kitchen-bali-seminyak_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/kilo-kitchen-bali-seminyak_ChIJb-BRehhH0i0RUcIoZtXLtUM/kilo-kitchen-bali-seminyak_static.webp",
+      "full_path": "dining-image-dev/kilo-kitchen-bali-seminyak_ChIJb-BRehhH0i0RUcIoZtXLtUM/kilo-kitchen-bali-seminyak_static.webp"
+    },
+    {
+      "album": "dining-image-dev",
+      "folder": "la-baracca_ChIJj0tR_mpH0i0RP5h_ieNuzAs",
+      "filename": "la-baracca_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/la-baracca_ChIJj0tR_mpH0i0RP5h_ieNuzAs/la-baracca_static.webp",
+      "full_path": "dining-image-dev/la-baracca_ChIJj0tR_mpH0i0RP5h_ieNuzAs/la-baracca_static.webp"
+    },
+    {
+      "album": "dining-image-dev",
+      "folder": "lacalita-canggu_ChIJPZo4Unk40i0RxI_FwqiKsWQ",
+      "filename": "lacalita-canggu_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/lacalita-canggu_ChIJPZo4Unk40i0RxI_FwqiKsWQ/lacalita-canggu_static.webp",
+      "full_path": "dining-image-dev/lacalita-canggu_ChIJPZo4Unk40i0RxI_FwqiKsWQ/lacalita-canggu_static.webp"
+    },
+    {
+      "album": "dining-image-dev",
+      "folder": "luigis-hot-pizza-canggu_ChIJV8j8ZXk40i0RQ_ByVyakQkc",
+      "filename": "luigis-hot-pizza-canggu_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/luigis-hot-pizza-canggu_ChIJV8j8ZXk40i0RQ_ByVyakQkc/luigis-hot-pizza-canggu_static.webp",
+      "full_path": "dining-image-dev/luigis-hot-pizza-canggu_ChIJV8j8ZXk40i0RQ_ByVyakQkc/luigis-hot-pizza-canggu_static.webp"
+    },
+    {
+      "album": "dining-image-dev",
+      "folder": "m-mason-bar-grill-canggu_ChIJBWxfWhA50i0Rzb3CWOIu8tA",
+      "filename": "m-mason-bar-grill-canggu_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/m-mason-bar-grill-canggu_ChIJBWxfWhA50i0Rzb3CWOIu8tA/m-mason-bar-grill-canggu_static.webp",
+      "full_path": "dining-image-dev/m-mason-bar-grill-canggu_ChIJBWxfWhA50i0Rzb3CWOIu8tA/m-mason-bar-grill-canggu_static.webp"
+    },
+    {
+      "album": "dining-image-dev",
+      "folder": "miss-fish-bali_ChIJYcKvqiJH0i0RtzWDiRmCnI0",
+      "filename": "miss-fish-bali_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/miss-fish-bali_ChIJYcKvqiJH0i0RtzWDiRmCnI0/miss-fish-bali_static.webp",
+      "full_path": "dining-image-dev/miss-fish-bali_ChIJYcKvqiJH0i0RtzWDiRmCnI0/miss-fish-bali_static.webp"
+    },
+    {
+      "album": "dining-image-dev",
+      "folder": "mostly-restaurant-and-bar_ChIJ5fhhx1I50i0RYv-9kVUcpbY",
+      "filename": "mostly-restaurant-and-bar_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/mostly-restaurant-and-bar_ChIJ5fhhx1I50i0RYv-9kVUcpbY/mostly-restaurant-and-bar_static.webp",
+      "full_path": "dining-image-dev/mostly-restaurant-and-bar_ChIJ5fhhx1I50i0RYv-9kVUcpbY/mostly-restaurant-and-bar_static.webp"
+    },
+    {
+      "album": "dining-image-dev",
+      "folder": "mosto-berawa_ChIJD4eq-jFH0i0ROgK2DCf0uNw",
+      "filename": "mosto-berawa_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/mosto-berawa_ChIJD4eq-jFH0i0ROgK2DCf0uNw/mosto-berawa_static.webp",
+      "full_path": "dining-image-dev/mosto-berawa_ChIJD4eq-jFH0i0ROgK2DCf0uNw/mosto-berawa_static.webp"
+    },
+    {
+      "album": "dining-image-dev",
+      "folder": "one-eyed-jack_ChIJC3RsyoJH0i0Rri-AJ8JF9Tg",
+      "filename": "one-eyed-jack_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/one-eyed-jack_ChIJC3RsyoJH0i0Rri-AJ8JF9Tg/one-eyed-jack_static.webp",
+      "full_path": "dining-image-dev/one-eyed-jack_ChIJC3RsyoJH0i0Rri-AJ8JF9Tg/one-eyed-jack_static.webp"
+    },
+    {
+      "album": "dining-image-dev",
+      "folder": "santanera_ChIJYUi2MOI50i0RFUr3eL2-pBk",
+      "filename": "santanera_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/santanera_ChIJYUi2MOI50i0RFUr3eL2-pBk/santanera_static.webp",
+      "full_path": "dining-image-dev/santanera_ChIJYUi2MOI50i0RFUr3eL2-pBk/santanera_static.webp"
+    },
+    {
+      "album": "dining-image-dev",
+      "folder": "shun-omakase-counter_ChIJERK7FYRH0i0RKyvr-65RLZg",
+      "filename": "shun-omakase-counter_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/shun-omakase-counter_ChIJERK7FYRH0i0RKyvr-65RLZg/shun-omakase-counter_static.webp",
+      "full_path": "dining-image-dev/shun-omakase-counter_ChIJERK7FYRH0i0RKyvr-65RLZg/shun-omakase-counter_static.webp"
+    },
+    {
+      "album": "dining-image-dev",
+      "folder": "skool-kitchen_ChIJ2SXWetNH0i0RwwbG9ftXrx4",
+      "filename": "skool-kitchen_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/skool-kitchen_ChIJ2SXWetNH0i0RwwbG9ftXrx4/skool-kitchen_static.webp",
+      "full_path": "dining-image-dev/skool-kitchen_ChIJ2SXWetNH0i0RwwbG9ftXrx4/skool-kitchen_static.webp"
+    },
+    {
+      "album": "dining-image-dev",
+      "folder": "smoke-bali_ChIJwVQNUZU50i0RPESrmvSu12w",
+      "filename": "smoke-bali_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/smoke-bali_ChIJwVQNUZU50i0RPESrmvSu12w/smoke-bali_static.webp",
+      "full_path": "dining-image-dev/smoke-bali_ChIJwVQNUZU50i0RPESrmvSu12w/smoke-bali_static.webp"
+    },
+    {
+      "album": "dining-image-dev",
+      "folder": "teamo",
+      "filename": "staticmap.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/teamo/staticmap.webp",
+      "full_path": "dining-image-dev/teamo/staticmap.webp"
+    },
+    {
+      "album": "dining-image-dev",
+      "folder": "uma-garden-seminyak_ChIJXxe2rXNH0i0Rnt_qeoqnQcc",
+      "filename": "uma-garden-seminyak_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/uma-garden-seminyak_ChIJXxe2rXNH0i0Rnt_qeoqnQcc/uma-garden-seminyak_static.webp",
+      "full_path": "dining-image-dev/uma-garden-seminyak_ChIJXxe2rXNH0i0Rnt_qeoqnQcc/uma-garden-seminyak_static.webp"
+    },
+    {
+      "album": "dining-image-prod",
+      "folder": "agana-mobilindo_ChIJ3zHY2mUW0i0RdZ7SyKjiBC0",
+      "filename": "agana-mobilindo_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/agana-mobilindo_ChIJ3zHY2mUW0i0RdZ7SyKjiBC0/agana-mobilindo_static.webp",
+      "full_path": "dining-image-prod/agana-mobilindo_ChIJ3zHY2mUW0i0RdZ7SyKjiBC0/agana-mobilindo_static.webp"
+    },
+    {
+      "album": "dining-image-prod",
+      "folder": "alma-tapas-bar-canggu_ChIJTTj8Ts9H0i0R2XwcfS_i6Mk",
+      "filename": "alma-tapas-bar-canggu_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/alma-tapas-bar-canggu_ChIJTTj8Ts9H0i0R2XwcfS_i6Mk/alma-tapas-bar-canggu_static.webp",
+      "full_path": "dining-image-prod/alma-tapas-bar-canggu_ChIJTTj8Ts9H0i0R2XwcfS_i6Mk/alma-tapas-bar-canggu_static.webp"
+    },
+    {
+      "album": "dining-image-prod",
+      "folder": "anaga-restaurant-authentic-thai-cuisine_ChIJ32m9jCxH0i0RLBCGarQNwNc",
+      "filename": "anaga-restaurant-authentic-thai-cuisine_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/anaga-restaurant-authentic-thai-cuisine_ChIJ32m9jCxH0i0RLBCGarQNwNc/anaga-restaurant-authentic-thai-cuisine_static.webp",
+      "full_path": "dining-image-prod/anaga-restaurant-authentic-thai-cuisine_ChIJ32m9jCxH0i0RLBCGarQNwNc/anaga-restaurant-authentic-thai-cuisine_static.webp"
+    },
+    {
+      "album": "dining-image-prod",
+      "folder": "billy-ho-japanese-restaurant_ChIJ0RSTlvJH0i0R1ozPGwVxSoU",
+      "filename": "billy-ho-japanese-restaurant_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/billy-ho-japanese-restaurant_ChIJ0RSTlvJH0i0R1ozPGwVxSoU/billy-ho-japanese-restaurant_static.webp",
+      "full_path": "dining-image-prod/billy-ho-japanese-restaurant_ChIJ0RSTlvJH0i0R1ozPGwVxSoU/billy-ho-japanese-restaurant_static.webp"
+    },
+    {
+      "album": "dining-image-prod",
+      "folder": "hippie-fish-pererenan-beach_ChIJ5Wex6mc50i0RNSHWdVKVoPo",
+      "filename": "hippie-fish-pererenan-beach_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/hippie-fish-pererenan-beach_ChIJ5Wex6mc50i0RNSHWdVKVoPo/hippie-fish-pererenan-beach_static.webp",
+      "full_path": "dining-image-prod/hippie-fish-pererenan-beach_ChIJ5Wex6mc50i0RNSHWdVKVoPo/hippie-fish-pererenan-beach_static.webp"
+    },
+    {
+      "album": "dining-image-prod",
+      "folder": "ina-r-restaurant_ChIJuWrhQgA50i0Ra0tVN4yy1Dk",
+      "filename": "ina-r-restaurant_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/ina-r-restaurant_ChIJuWrhQgA50i0Ra0tVN4yy1Dk/ina-r-restaurant_static.webp",
+      "full_path": "dining-image-prod/ina-r-restaurant_ChIJuWrhQgA50i0Ra0tVN4yy1Dk/ina-r-restaurant_static.webp"
+    },
+    {
+      "album": "dining-image-prod",
+      "folder": "ji-restaurant-bali_ChIJWVWpMoZH0i0RRFcupYVhVi4",
+      "filename": "ji-restaurant-bali_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/ji-restaurant-bali_ChIJWVWpMoZH0i0RRFcupYVhVi4/ji-restaurant-bali_static.webp",
+      "full_path": "dining-image-prod/ji-restaurant-bali_ChIJWVWpMoZH0i0RRFcupYVhVi4/ji-restaurant-bali_static.webp"
+    },
+    {
+      "album": "dining-image-prod",
+      "folder": "kilo-kitchen-bali-seminyak_ChIJb-BRehhH0i0RUcIoZtXLtUM",
+      "filename": "kilo-kitchen-bali-seminyak_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/kilo-kitchen-bali-seminyak_ChIJb-BRehhH0i0RUcIoZtXLtUM/kilo-kitchen-bali-seminyak_static.webp",
+      "full_path": "dining-image-prod/kilo-kitchen-bali-seminyak_ChIJb-BRehhH0i0RUcIoZtXLtUM/kilo-kitchen-bali-seminyak_static.webp"
+    },
+    {
+      "album": "dining-image-prod",
+      "folder": "la-baracca_ChIJj0tR_mpH0i0RP5h_ieNuzAs",
+      "filename": "la-baracca_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/la-baracca_ChIJj0tR_mpH0i0RP5h_ieNuzAs/la-baracca_static.webp",
+      "full_path": "dining-image-prod/la-baracca_ChIJj0tR_mpH0i0RP5h_ieNuzAs/la-baracca_static.webp"
+    },
+    {
+      "album": "dining-image-prod",
+      "folder": "lacalita-canggu_ChIJPZo4Unk40i0RxI_FwqiKsWQ",
+      "filename": "lacalita-canggu_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/lacalita-canggu_ChIJPZo4Unk40i0RxI_FwqiKsWQ/lacalita-canggu_static.webp",
+      "full_path": "dining-image-prod/lacalita-canggu_ChIJPZo4Unk40i0RxI_FwqiKsWQ/lacalita-canggu_static.webp"
+    },
+    {
+      "album": "dining-image-prod",
+      "folder": "luigis-hot-pizza-canggu_ChIJV8j8ZXk40i0RQ_ByVyakQkc",
+      "filename": "luigis-hot-pizza-canggu_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/luigis-hot-pizza-canggu_ChIJV8j8ZXk40i0RQ_ByVyakQkc/luigis-hot-pizza-canggu_static.webp",
+      "full_path": "dining-image-prod/luigis-hot-pizza-canggu_ChIJV8j8ZXk40i0RQ_ByVyakQkc/luigis-hot-pizza-canggu_static.webp"
+    },
+    {
+      "album": "dining-image-prod",
+      "folder": "m-mason-bar-grill-canggu_ChIJBWxfWhA50i0Rzb3CWOIu8tA",
+      "filename": "m-mason-bar-grill-canggu_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/m-mason-bar-grill-canggu_ChIJBWxfWhA50i0Rzb3CWOIu8tA/m-mason-bar-grill-canggu_static.webp",
+      "full_path": "dining-image-prod/m-mason-bar-grill-canggu_ChIJBWxfWhA50i0Rzb3CWOIu8tA/m-mason-bar-grill-canggu_static.webp"
+    },
+    {
+      "album": "dining-image-prod",
+      "folder": "miss-fish-bali_ChIJYcKvqiJH0i0RtzWDiRmCnI0",
+      "filename": "miss-fish-bali_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/miss-fish-bali_ChIJYcKvqiJH0i0RtzWDiRmCnI0/miss-fish-bali_static.webp",
+      "full_path": "dining-image-prod/miss-fish-bali_ChIJYcKvqiJH0i0RtzWDiRmCnI0/miss-fish-bali_static.webp"
+    },
+    {
+      "album": "dining-image-prod",
+      "folder": "mostly-restaurant-and-bar_ChIJ5fhhx1I50i0RYv-9kVUcpbY",
+      "filename": "mostly-restaurant-and-bar_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/mostly-restaurant-and-bar_ChIJ5fhhx1I50i0RYv-9kVUcpbY/mostly-restaurant-and-bar_static.webp",
+      "full_path": "dining-image-prod/mostly-restaurant-and-bar_ChIJ5fhhx1I50i0RYv-9kVUcpbY/mostly-restaurant-and-bar_static.webp"
+    },
+    {
+      "album": "dining-image-prod",
+      "folder": "mosto-berawa_ChIJD4eq-jFH0i0ROgK2DCf0uNw",
+      "filename": "mosto-berawa_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/mosto-berawa_ChIJD4eq-jFH0i0ROgK2DCf0uNw/mosto-berawa_static.webp",
+      "full_path": "dining-image-prod/mosto-berawa_ChIJD4eq-jFH0i0ROgK2DCf0uNw/mosto-berawa_static.webp"
+    },
+    {
+      "album": "dining-image-prod",
+      "folder": "one-eyed-jack_ChIJC3RsyoJH0i0Rri-AJ8JF9Tg",
+      "filename": "one-eyed-jack_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/one-eyed-jack_ChIJC3RsyoJH0i0Rri-AJ8JF9Tg/one-eyed-jack_static.webp",
+      "full_path": "dining-image-prod/one-eyed-jack_ChIJC3RsyoJH0i0Rri-AJ8JF9Tg/one-eyed-jack_static.webp"
+    },
+    {
+      "album": "dining-image-prod",
+      "folder": "santanera_ChIJYUi2MOI50i0RFUr3eL2-pBk",
+      "filename": "santanera_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/santanera_ChIJYUi2MOI50i0RFUr3eL2-pBk/santanera_static.webp",
+      "full_path": "dining-image-prod/santanera_ChIJYUi2MOI50i0RFUr3eL2-pBk/santanera_static.webp"
+    },
+    {
+      "album": "dining-image-prod",
+      "folder": "shun-omakase-counter_ChIJERK7FYRH0i0RKyvr-65RLZg",
+      "filename": "shun-omakase-counter_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/shun-omakase-counter_ChIJERK7FYRH0i0RKyvr-65RLZg/shun-omakase-counter_static.webp",
+      "full_path": "dining-image-prod/shun-omakase-counter_ChIJERK7FYRH0i0RKyvr-65RLZg/shun-omakase-counter_static.webp"
+    },
+    {
+      "album": "dining-image-prod",
+      "folder": "skool-kitchen_ChIJ2SXWetNH0i0RwwbG9ftXrx4",
+      "filename": "skool-kitchen_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/skool-kitchen_ChIJ2SXWetNH0i0RwwbG9ftXrx4/skool-kitchen_static.webp",
+      "full_path": "dining-image-prod/skool-kitchen_ChIJ2SXWetNH0i0RwwbG9ftXrx4/skool-kitchen_static.webp"
+    },
+    {
+      "album": "dining-image-prod",
+      "folder": "smoke-bali_ChIJwVQNUZU50i0RPESrmvSu12w",
+      "filename": "smoke-bali_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/smoke-bali_ChIJwVQNUZU50i0RPESrmvSu12w/smoke-bali_static.webp",
+      "full_path": "dining-image-prod/smoke-bali_ChIJwVQNUZU50i0RPESrmvSu12w/smoke-bali_static.webp"
+    },
+    {
+      "album": "dining-image-prod",
+      "folder": "teamo",
+      "filename": "staticmap.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/teamo/staticmap.webp",
+      "full_path": "dining-image-prod/teamo/staticmap.webp"
+    },
+    {
+      "album": "dining-image-prod",
+      "folder": "uma-garden-seminyak_ChIJXxe2rXNH0i0Rnt_qeoqnQcc",
+      "filename": "uma-garden-seminyak_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/uma-garden-seminyak_ChIJXxe2rXNH0i0Rnt_qeoqnQcc/uma-garden-seminyak_static.webp",
+      "full_path": "dining-image-prod/uma-garden-seminyak_ChIJXxe2rXNH0i0Rnt_qeoqnQcc/uma-garden-seminyak_static.webp"
+    },
+    {
+      "album": "bar-image-dev",
+      "folder": "bali-beer-cycle_ChIJgfLsf1pF0i0RTDMRSpGD_Zs",
+      "filename": "bali-beer-cycle_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/bali-beer-cycle_ChIJgfLsf1pF0i0RTDMRSpGD_Zs/bali-beer-cycle_static.webp",
+      "full_path": "bar-image-dev/bali-beer-cycle_ChIJgfLsf1pF0i0RTDMRSpGD_Zs/bali-beer-cycle_static.webp"
+    },
+    {
+      "album": "bar-image-dev",
+      "folder": "barn-gastropub_ChIJe7KSn4dH0i0RsfzzpwFhwpQ",
+      "filename": "barn-gastropub_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/barn-gastropub_ChIJe7KSn4dH0i0RsfzzpwFhwpQ/barn-gastropub_static.webp",
+      "full_path": "bar-image-dev/barn-gastropub_ChIJe7KSn4dH0i0RsfzzpwFhwpQ/barn-gastropub_static.webp"
+    },
+    {
+      "album": "bar-image-dev",
+      "folder": "black-sand-brewery_ChIJNzjyIBI50i0RpFdnd_ZN3pg",
+      "filename": "black-sand-brewery_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/black-sand-brewery_ChIJNzjyIBI50i0RpFdnd_ZN3pg/black-sand-brewery_static.webp",
+      "full_path": "bar-image-dev/black-sand-brewery_ChIJNzjyIBI50i0RpFdnd_ZN3pg/black-sand-brewery_static.webp"
+    },
+    {
+      "album": "bar-image-dev",
+      "folder": "friends-bar_ChIJCdPou9hH0i0RgIY7umQ751U",
+      "filename": "friends-bar_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/friends-bar_ChIJCdPou9hH0i0RgIY7umQ751U/friends-bar_static.webp",
+      "full_path": "bar-image-dev/friends-bar_ChIJCdPou9hH0i0RgIY7umQ751U/friends-bar_static.webp"
+    },
+    {
+      "album": "bar-image-dev",
+      "folder": "hippie-fish-pererenan-beach_ChIJ5Wex6mc50i0RNSHWdVKVoPo",
+      "filename": "hippie-fish-pererenan-beach_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/hippie-fish-pererenan-beach_ChIJ5Wex6mc50i0RNSHWdVKVoPo/hippie-fish-pererenan-beach_static.webp",
+      "full_path": "bar-image-dev/hippie-fish-pererenan-beach_ChIJ5Wex6mc50i0RNSHWdVKVoPo/hippie-fish-pererenan-beach_static.webp"
+    },
+    {
+      "album": "bar-image-dev",
+      "folder": "honeycomb-hookah-eatery_ChIJN5xTyos50i0RiGBQWrCPinA",
+      "filename": "honeycomb-hookah-eatery_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/honeycomb-hookah-eatery_ChIJN5xTyos50i0RiGBQWrCPinA/honeycomb-hookah-eatery_static.webp",
+      "full_path": "bar-image-dev/honeycomb-hookah-eatery_ChIJN5xTyos50i0RiGBQWrCPinA/honeycomb-hookah-eatery_static.webp"
+    },
+    {
+      "album": "bar-image-dev",
+      "folder": "longtime-modern-asian-restaurant-bar-bali_ChIJk4MaNPo50i0R4vfuHDwZ_3U",
+      "filename": "longtime-modern-asian-restaurant-bar-bali_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/longtime-modern-asian-restaurant-bar-bali_ChIJk4MaNPo50i0R4vfuHDwZ_3U/longtime-modern-asian-restaurant-bar-bali_static.webp",
+      "full_path": "bar-image-dev/longtime-modern-asian-restaurant-bar-bali_ChIJk4MaNPo50i0R4vfuHDwZ_3U/longtime-modern-asian-restaurant-bar-bali_static.webp"
+    },
+    {
+      "album": "bar-image-dev",
+      "folder": "miss-fish-bali_ChIJYcKvqiJH0i0RtzWDiRmCnI0",
+      "filename": "miss-fish-bali_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/miss-fish-bali_ChIJYcKvqiJH0i0RtzWDiRmCnI0/miss-fish-bali_static.webp",
+      "full_path": "bar-image-dev/miss-fish-bali_ChIJYcKvqiJH0i0RtzWDiRmCnI0/miss-fish-bali_static.webp"
+    },
+    {
+      "album": "bar-image-dev",
+      "folder": "patato-head-beach-club_ChIJ_XZL_xFH0i0RTo0EWBqsnRs",
+      "filename": "patato-head-beach-club_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/patato-head-beach-club_ChIJ_XZL_xFH0i0RTo0EWBqsnRs/patato-head-beach-club_static.webp",
+      "full_path": "bar-image-dev/patato-head-beach-club_ChIJ_XZL_xFH0i0RTo0EWBqsnRs/patato-head-beach-club_static.webp"
+    },
+    {
+      "album": "bar-image-dev",
+      "folder": "platonic_ChIJkYxdu3E50i0RrFJjPHk8LqI",
+      "filename": "platonic_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/platonic_ChIJkYxdu3E50i0RrFJjPHk8LqI/platonic_static.webp",
+      "full_path": "bar-image-dev/platonic_ChIJkYxdu3E50i0RrFJjPHk8LqI/platonic_static.webp"
+    },
+    {
+      "album": "bar-image-dev",
+      "folder": "shelter-restaurant_ChIJcfxIJo850i0RsrveoncQeBs",
+      "filename": "shelter-restaurant_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/shelter-restaurant_ChIJcfxIJo850i0RsrveoncQeBs/shelter-restaurant_static.webp",
+      "full_path": "bar-image-dev/shelter-restaurant_ChIJcfxIJo850i0RsrveoncQeBs/shelter-restaurant_static.webp"
+    },
+    {
+      "album": "bar-image-dev",
+      "folder": "single-fin-bali_ChIJ0aNPQ_lP0i0RtPlHW6trMHM",
+      "filename": "single-fin-bali_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/single-fin-bali_ChIJ0aNPQ_lP0i0RtPlHW6trMHM/single-fin-bali_static.webp",
+      "full_path": "bar-image-dev/single-fin-bali_ChIJ0aNPQ_lP0i0RtPlHW6trMHM/single-fin-bali_static.webp"
+    },
+    {
+      "album": "bar-image-dev",
+      "folder": "the-lawn_ChIJiQdg1YdH0i0R8ANUMzZizN0",
+      "filename": "the-lawn_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/the-lawn_ChIJiQdg1YdH0i0R8ANUMzZizN0/the-lawn_static.webp",
+      "full_path": "bar-image-dev/the-lawn_ChIJiQdg1YdH0i0R8ANUMzZizN0/the-lawn_static.webp"
+    },
+    {
+      "album": "bar-image-dev",
+      "folder": "the-shady-fox_ChIJOwB4D8E50i0RnmcWbm5B1jI",
+      "filename": "the-shady-fox_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/the-shady-fox_ChIJOwB4D8E50i0RnmcWbm5B1jI/the-shady-fox_static.webp",
+      "full_path": "bar-image-dev/the-shady-fox_ChIJOwB4D8E50i0RnmcWbm5B1jI/the-shady-fox_static.webp"
+    },
+    {
+      "album": "bar-image-dev",
+      "folder": "the-shady-pig_ChIJxZh1qu1H0i0R5BXWVSV1zK8",
+      "filename": "the-shady-pig_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/the-shady-pig_ChIJxZh1qu1H0i0R5BXWVSV1zK8/the-shady-pig_static.webp",
+      "full_path": "bar-image-dev/the-shady-pig_ChIJxZh1qu1H0i0R5BXWVSV1zK8/the-shady-pig_static.webp"
+    },
+    {
+      "album": "bar-image-prod",
+      "folder": "bali-beer-cycle_ChIJgfLsf1pF0i0RTDMRSpGD_Zs",
+      "filename": "bali-beer-cycle_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/bali-beer-cycle_ChIJgfLsf1pF0i0RTDMRSpGD_Zs/bali-beer-cycle_static.webp",
+      "full_path": "bar-image-prod/bali-beer-cycle_ChIJgfLsf1pF0i0RTDMRSpGD_Zs/bali-beer-cycle_static.webp"
+    },
+    {
+      "album": "bar-image-prod",
+      "folder": "barn-gastropub_ChIJe7KSn4dH0i0RsfzzpwFhwpQ",
+      "filename": "barn-gastropub_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/barn-gastropub_ChIJe7KSn4dH0i0RsfzzpwFhwpQ/barn-gastropub_static.webp",
+      "full_path": "bar-image-prod/barn-gastropub_ChIJe7KSn4dH0i0RsfzzpwFhwpQ/barn-gastropub_static.webp"
+    },
+    {
+      "album": "bar-image-prod",
+      "folder": "black-sand-brewery_ChIJNzjyIBI50i0RpFdnd_ZN3pg",
+      "filename": "black-sand-brewery_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/black-sand-brewery_ChIJNzjyIBI50i0RpFdnd_ZN3pg/black-sand-brewery_static.webp",
+      "full_path": "bar-image-prod/black-sand-brewery_ChIJNzjyIBI50i0RpFdnd_ZN3pg/black-sand-brewery_static.webp"
+    },
+    {
+      "album": "bar-image-prod",
+      "folder": "friends-bar_ChIJCdPou9hH0i0RgIY7umQ751U",
+      "filename": "friends-bar_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/friends-bar_ChIJCdPou9hH0i0RgIY7umQ751U/friends-bar_static.webp",
+      "full_path": "bar-image-prod/friends-bar_ChIJCdPou9hH0i0RgIY7umQ751U/friends-bar_static.webp"
+    },
+    {
+      "album": "bar-image-prod",
+      "folder": "hippie-fish-pererenan-beach_ChIJ5Wex6mc50i0RNSHWdVKVoPo",
+      "filename": "hippie-fish-pererenan-beach_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/hippie-fish-pererenan-beach_ChIJ5Wex6mc50i0RNSHWdVKVoPo/hippie-fish-pererenan-beach_static.webp",
+      "full_path": "bar-image-prod/hippie-fish-pererenan-beach_ChIJ5Wex6mc50i0RNSHWdVKVoPo/hippie-fish-pererenan-beach_static.webp"
+    },
+    {
+      "album": "bar-image-prod",
+      "folder": "honeycomb-hookah-eatery_ChIJN5xTyos50i0RiGBQWrCPinA",
+      "filename": "honeycomb-hookah-eatery_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/honeycomb-hookah-eatery_ChIJN5xTyos50i0RiGBQWrCPinA/honeycomb-hookah-eatery_static.webp",
+      "full_path": "bar-image-prod/honeycomb-hookah-eatery_ChIJN5xTyos50i0RiGBQWrCPinA/honeycomb-hookah-eatery_static.webp"
+    },
+    {
+      "album": "bar-image-prod",
+      "folder": "longtime-modern-asian-restaurant-bar-bali_ChIJk4MaNPo50i0R4vfuHDwZ_3U",
+      "filename": "longtime-modern-asian-restaurant-bar-bali_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/longtime-modern-asian-restaurant-bar-bali_ChIJk4MaNPo50i0R4vfuHDwZ_3U/longtime-modern-asian-restaurant-bar-bali_static.webp",
+      "full_path": "bar-image-prod/longtime-modern-asian-restaurant-bar-bali_ChIJk4MaNPo50i0R4vfuHDwZ_3U/longtime-modern-asian-restaurant-bar-bali_static.webp"
+    },
+    {
+      "album": "bar-image-prod",
+      "folder": "miss-fish-bali_ChIJYcKvqiJH0i0RtzWDiRmCnI0",
+      "filename": "miss-fish-bali_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/miss-fish-bali_ChIJYcKvqiJH0i0RtzWDiRmCnI0/miss-fish-bali_static.webp",
+      "full_path": "bar-image-prod/miss-fish-bali_ChIJYcKvqiJH0i0RtzWDiRmCnI0/miss-fish-bali_static.webp"
+    },
+    {
+      "album": "bar-image-prod",
+      "folder": "patato-head-beach-club_ChIJ_XZL_xFH0i0RTo0EWBqsnRs",
+      "filename": "patato-head-beach-club_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/patato-head-beach-club_ChIJ_XZL_xFH0i0RTo0EWBqsnRs/patato-head-beach-club_static.webp",
+      "full_path": "bar-image-prod/patato-head-beach-club_ChIJ_XZL_xFH0i0RTo0EWBqsnRs/patato-head-beach-club_static.webp"
+    },
+    {
+      "album": "bar-image-prod",
+      "folder": "platonic_ChIJkYxdu3E50i0RrFJjPHk8LqI",
+      "filename": "platonic_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/platonic_ChIJkYxdu3E50i0RrFJjPHk8LqI/platonic_static.webp",
+      "full_path": "bar-image-prod/platonic_ChIJkYxdu3E50i0RrFJjPHk8LqI/platonic_static.webp"
+    },
+    {
+      "album": "bar-image-prod",
+      "folder": "shelter-restaurant_ChIJcfxIJo850i0RsrveoncQeBs",
+      "filename": "shelter-restaurant_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/shelter-restaurant_ChIJcfxIJo850i0RsrveoncQeBs/shelter-restaurant_static.webp",
+      "full_path": "bar-image-prod/shelter-restaurant_ChIJcfxIJo850i0RsrveoncQeBs/shelter-restaurant_static.webp"
+    },
+    {
+      "album": "bar-image-prod",
+      "folder": "single-fin-bali_ChIJ0aNPQ_lP0i0RtPlHW6trMHM",
+      "filename": "single-fin-bali_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/single-fin-bali_ChIJ0aNPQ_lP0i0RtPlHW6trMHM/single-fin-bali_static.webp",
+      "full_path": "bar-image-prod/single-fin-bali_ChIJ0aNPQ_lP0i0RtPlHW6trMHM/single-fin-bali_static.webp"
+    },
+    {
+      "album": "bar-image-prod",
+      "folder": "the-lawn_ChIJiQdg1YdH0i0R8ANUMzZizN0",
+      "filename": "the-lawn_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/the-lawn_ChIJiQdg1YdH0i0R8ANUMzZizN0/the-lawn_static.webp",
+      "full_path": "bar-image-prod/the-lawn_ChIJiQdg1YdH0i0R8ANUMzZizN0/the-lawn_static.webp"
+    },
+    {
+      "album": "bar-image-prod",
+      "folder": "the-shady-fox_ChIJOwB4D8E50i0RnmcWbm5B1jI",
+      "filename": "the-shady-fox_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/the-shady-fox_ChIJOwB4D8E50i0RnmcWbm5B1jI/the-shady-fox_static.webp",
+      "full_path": "bar-image-prod/the-shady-fox_ChIJOwB4D8E50i0RnmcWbm5B1jI/the-shady-fox_static.webp"
+    },
+    {
+      "album": "bar-image-prod",
+      "folder": "the-shady-pig_ChIJxZh1qu1H0i0R5BXWVSV1zK8",
+      "filename": "the-shady-pig_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/the-shady-pig_ChIJxZh1qu1H0i0R5BXWVSV1zK8/the-shady-pig_static.webp",
+      "full_path": "bar-image-prod/the-shady-pig_ChIJxZh1qu1H0i0R5BXWVSV1zK8/the-shady-pig_static.webp"
+    },
+    {
+      "album": "cowork-image-dev",
+      "folder": "b-work-bali_ChIJ6fBvIpg50i0R8764BCFFN60",
+      "filename": "b-work-bali_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/b-work-bali_ChIJ6fBvIpg50i0R8764BCFFN60/b-work-bali_static.webp",
+      "full_path": "cowork-image-dev/b-work-bali_ChIJ6fBvIpg50i0R8764BCFFN60/b-work-bali_static.webp"
+    },
+    {
+      "album": "cowork-image-dev",
+      "folder": "ducat-space_ChIJCd9etMVH0i0RNkfYsSkhmZg",
+      "filename": "ducat-space_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/ducat-space_ChIJCd9etMVH0i0RNkfYsSkhmZg/ducat-space_static.webp",
+      "full_path": "cowork-image-dev/ducat-space_ChIJCd9etMVH0i0RNkfYsSkhmZg/ducat-space_static.webp"
+    },
+    {
+      "album": "cowork-image-dev",
+      "folder": "genesis-creative-centre_ChIJSW0wnj9H0i0RBi6QO_C6M_o",
+      "filename": "genesis-creative-centre_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/genesis-creative-centre_ChIJSW0wnj9H0i0RBi6QO_C6M_o/genesis-creative-centre_static.webp",
+      "full_path": "cowork-image-dev/genesis-creative-centre_ChIJSW0wnj9H0i0RBi6QO_C6M_o/genesis-creative-centre_static.webp"
+    },
+    {
+      "album": "cowork-image-dev",
+      "folder": "karya-coworking-bali_ChIJQeo_7VxH0i0RmnzEcibuEb8",
+      "filename": "karya-coworking-bali_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/karya-coworking-bali_ChIJQeo_7VxH0i0RmnzEcibuEb8/karya-coworking-bali_static.webp",
+      "full_path": "cowork-image-dev/karya-coworking-bali_ChIJQeo_7VxH0i0RmnzEcibuEb8/karya-coworking-bali_static.webp"
+    },
+    {
+      "album": "cowork-image-dev",
+      "folder": "nebula-entrepreneur-coworking-space_ChIJY1RJ9Zs50i0R5x8HN0qZa9g",
+      "filename": "nebula-entrepreneur-coworking-space_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/nebula-entrepreneur-coworking-space_ChIJY1RJ9Zs50i0R5x8HN0qZa9g/nebula-entrepreneur-coworking-space_static.webp",
+      "full_path": "cowork-image-dev/nebula-entrepreneur-coworking-space_ChIJY1RJ9Zs50i0R5x8HN0qZa9g/nebula-entrepreneur-coworking-space_static.webp"
+    },
+    {
+      "album": "cowork-image-dev",
+      "folder": "puco-rooftop-coworking-space-eatery_ChIJOy4VgxU50i0R8mawVCoFiRw",
+      "filename": "puco-rooftop-coworking-space-eatery_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/puco-rooftop-coworking-space-eatery_ChIJOy4VgxU50i0R8mawVCoFiRw/puco-rooftop-coworking-space-eatery_static.webp",
+      "full_path": "cowork-image-dev/puco-rooftop-coworking-space-eatery_ChIJOy4VgxU50i0R8mawVCoFiRw/puco-rooftop-coworking-space-eatery_static.webp"
+    },
+    {
+      "album": "cowork-image-dev",
+      "folder": "setter-coworking-private-offices_ChIJc5xIUklH0i0R-2R5iW_1nx0",
+      "filename": "setter-coworking-private-offices_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/setter-coworking-private-offices_ChIJc5xIUklH0i0R-2R5iW_1nx0/setter-coworking-private-offices_static.webp",
+      "full_path": "cowork-image-dev/setter-coworking-private-offices_ChIJc5xIUklH0i0R-2R5iW_1nx0/setter-coworking-private-offices_static.webp"
+    },
+    {
+      "album": "cowork-image-dev",
+      "folder": "tropical-nomad-coworking-space_ChIJvf4Cf7pF0i0RGVMhsUCiNBY",
+      "filename": "tropical-nomad-coworking-space_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/tropical-nomad-coworking-space_ChIJvf4Cf7pF0i0RGVMhsUCiNBY/tropical-nomad-coworking-space_static.webp",
+      "full_path": "cowork-image-dev/tropical-nomad-coworking-space_ChIJvf4Cf7pF0i0RGVMhsUCiNBY/tropical-nomad-coworking-space_static.webp"
+    },
+    {
+      "album": "cowork-image-prod",
+      "folder": "b-work-bali_ChIJ6fBvIpg50i0R8764BCFFN60",
+      "filename": "b-work-bali_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-prod/b-work-bali_ChIJ6fBvIpg50i0R8764BCFFN60/b-work-bali_static.webp",
+      "full_path": "cowork-image-prod/b-work-bali_ChIJ6fBvIpg50i0R8764BCFFN60/b-work-bali_static.webp"
+    },
+    {
+      "album": "cowork-image-prod",
+      "folder": "ducat-space_ChIJCd9etMVH0i0RNkfYsSkhmZg",
+      "filename": "ducat-space_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-prod/ducat-space_ChIJCd9etMVH0i0RNkfYsSkhmZg/ducat-space_static.webp",
+      "full_path": "cowork-image-prod/ducat-space_ChIJCd9etMVH0i0RNkfYsSkhmZg/ducat-space_static.webp"
+    },
+    {
+      "album": "cowork-image-prod",
+      "folder": "genesis-creative-centre_ChIJSW0wnj9H0i0RBi6QO_C6M_o",
+      "filename": "genesis-creative-centre_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-prod/genesis-creative-centre_ChIJSW0wnj9H0i0RBi6QO_C6M_o/genesis-creative-centre_static.webp",
+      "full_path": "cowork-image-prod/genesis-creative-centre_ChIJSW0wnj9H0i0RBi6QO_C6M_o/genesis-creative-centre_static.webp"
+    },
+    {
+      "album": "cowork-image-prod",
+      "folder": "karya-coworking-bali_ChIJQeo_7VxH0i0RmnzEcibuEb8",
+      "filename": "karya-coworking-bali_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-prod/karya-coworking-bali_ChIJQeo_7VxH0i0RmnzEcibuEb8/karya-coworking-bali_static.webp",
+      "full_path": "cowork-image-prod/karya-coworking-bali_ChIJQeo_7VxH0i0RmnzEcibuEb8/karya-coworking-bali_static.webp"
+    },
+    {
+      "album": "cowork-image-prod",
+      "folder": "nebula-entrepreneur-coworking-space_ChIJY1RJ9Zs50i0R5x8HN0qZa9g",
+      "filename": "nebula-entrepreneur-coworking-space_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-prod/nebula-entrepreneur-coworking-space_ChIJY1RJ9Zs50i0R5x8HN0qZa9g/nebula-entrepreneur-coworking-space_static.webp",
+      "full_path": "cowork-image-prod/nebula-entrepreneur-coworking-space_ChIJY1RJ9Zs50i0R5x8HN0qZa9g/nebula-entrepreneur-coworking-space_static.webp"
+    },
+    {
+      "album": "cowork-image-prod",
+      "folder": "puco-rooftop-coworking-space-eatery_ChIJOy4VgxU50i0R8mawVCoFiRw",
+      "filename": "puco-rooftop-coworking-space-eatery_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-prod/puco-rooftop-coworking-space-eatery_ChIJOy4VgxU50i0R8mawVCoFiRw/puco-rooftop-coworking-space-eatery_static.webp",
+      "full_path": "cowork-image-prod/puco-rooftop-coworking-space-eatery_ChIJOy4VgxU50i0R8mawVCoFiRw/puco-rooftop-coworking-space-eatery_static.webp"
+    },
+    {
+      "album": "cowork-image-prod",
+      "folder": "setter-coworking-private-offices_ChIJc5xIUklH0i0R-2R5iW_1nx0",
+      "filename": "setter-coworking-private-offices_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-prod/setter-coworking-private-offices_ChIJc5xIUklH0i0R-2R5iW_1nx0/setter-coworking-private-offices_static.webp",
+      "full_path": "cowork-image-prod/setter-coworking-private-offices_ChIJc5xIUklH0i0R-2R5iW_1nx0/setter-coworking-private-offices_static.webp"
+    },
+    {
+      "album": "cowork-image-prod",
+      "folder": "tropical-nomad-coworking-space_ChIJvf4Cf7pF0i0RGVMhsUCiNBY",
+      "filename": "tropical-nomad-coworking-space_static.webp",
+      "full_url": "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-prod/tropical-nomad-coworking-space_ChIJvf4Cf7pF0i0RGVMhsUCiNBY/tropical-nomad-coworking-space_static.webp",
+      "full_path": "cowork-image-prod/tropical-nomad-coworking-space_ChIJvf4Cf7pF0i0RGVMhsUCiNBY/tropical-nomad-coworking-space_static.webp"
+    }
+  ],
+  "json_expected": [
+    {
+      "merchant_name": "Honeycomb Hookah & Eatery",
+      "place_id": "ChIJN5xTyos50i0RiGBQWrCPinA",
+      "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/honeycomb-hookah-eatery_ChIJN5xTyos50i0RiGBQWrCPinA/honeycomb-hookah-eatery_static.webp",
+      "expected_album": "bar-image-dev",
+      "expected_folder": "honeycomb-hookah-eatery_ChIJN5xTyos50i0RiGBQWrCPinA",
+      "expected_filename": "honeycomb-hookah-eatery_static.webp",
+      "json_source": "bars-dev.json"
+    },
+    {
+      "merchant_name": "LONGTIME | Modern Asian Restaurant & Bar Bali",
+      "place_id": "ChIJk4MaNPo50i0R4vfuHDwZ_3U",
+      "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/longtime-modern-asian-restaurant-bar-bali_ChIJk4MaNPo50i0R4vfuHDwZ_3U/longtime-modern-asian-restaurant-bar-bali_static.webp",
+      "expected_album": "bar-image-dev",
+      "expected_folder": "longtime-modern-asian-restaurant-bar-bali_ChIJk4MaNPo50i0R4vfuHDwZ_3U",
+      "expected_filename": "longtime-modern-asian-restaurant-bar-bali_static.webp",
+      "json_source": "bars-dev.json"
+    },
+    {
+      "merchant_name": "PLATONIC",
+      "place_id": "ChIJkYxdu3E50i0RrFJjPHk8LqI",
+      "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/platonic_ChIJkYxdu3E50i0RrFJjPHk8LqI/platonic_static.webp",
+      "expected_album": "bar-image-dev",
+      "expected_folder": "platonic_ChIJkYxdu3E50i0RrFJjPHk8LqI",
+      "expected_filename": "platonic_static.webp",
+      "json_source": "bars-dev.json"
+    },
+    {
+      "merchant_name": "The Shady Fox",
+      "place_id": "ChIJOwB4D8E50i0RnmcWbm5B1jI",
+      "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/the-shady-fox_ChIJOwB4D8E50i0RnmcWbm5B1jI/the-shady-fox_static.webp",
+      "expected_album": "bar-image-dev",
+      "expected_folder": "the-shady-fox_ChIJOwB4D8E50i0RnmcWbm5B1jI",
+      "expected_filename": "the-shady-fox_static.webp",
+      "json_source": "bars-dev.json"
+    },
+    {
+      "merchant_name": "Bali Beer Cycle",
+      "place_id": "ChIJgfLsf1pF0i0RTDMRSpGD_Zs",
+      "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/bali-beer-cycle_ChIJgfLsf1pF0i0RTDMRSpGD_Zs/bali-beer-cycle_static.webp",
+      "expected_album": "bar-image-dev",
+      "expected_folder": "bali-beer-cycle_ChIJgfLsf1pF0i0RTDMRSpGD_Zs",
+      "expected_filename": "bali-beer-cycle_static.webp",
+      "json_source": "bars-dev.json"
+    },
+    {
+      "merchant_name": "The Barn Pub & Kitchen",
+      "place_id": "ChIJe7KSn4dH0i0RsfzzpwFhwpQ",
+      "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/the-barn-gastropub_ChIJe7KSn4dH0i0RsfzzpwFhwpQ/the-barn-gastropub_static.webp",
+      "expected_album": "bar-image-dev",
+      "expected_folder": "the-barn-gastropub_ChIJe7KSn4dH0i0RsfzzpwFhwpQ",
+      "expected_filename": "the-barn-gastropub_static.webp",
+      "json_source": "bars-dev.json"
+    },
+    {
+      "merchant_name": "Black Sand Brewery",
+      "place_id": "ChIJNzjyIBI50i0RpFdnd_ZN3pg",
+      "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/black-sand-brewery_ChIJNzjyIBI50i0RpFdnd_ZN3pg/black-sand-brewery_static.webp",
+      "expected_album": "bar-image-dev",
+      "expected_folder": "black-sand-brewery_ChIJNzjyIBI50i0RpFdnd_ZN3pg",
+      "expected_filename": "black-sand-brewery_static.webp",
+      "json_source": "bars-dev.json"
+    },
+    {
+      "merchant_name": "Shelter Restaurant",
+      "place_id": "ChIJcfxIJo850i0RsrveoncQeBs",
+      "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/shelter-restaurant_ChIJcfxIJo850i0RsrveoncQeBs/shelter-restaurant_static.webp",
+      "expected_album": "bar-image-dev",
+      "expected_folder": "shelter-restaurant_ChIJcfxIJo850i0RsrveoncQeBs",
+      "expected_filename": "shelter-restaurant_static.webp",
+      "json_source": "bars-dev.json"
+    },
+    {
+      "merchant_name": "Potato Head Beach Club",
+      "place_id": "ChIJ_XZL_xFH0i0RTo0EWBqsnRs",
+      "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/potato-head-beach-club_ChIJ_XZL_xFH0i0RTo0EWBqsnRs/potato-head-beach-club_static.webp",
+      "expected_album": "bar-image-dev",
+      "expected_folder": "potato-head-beach-club_ChIJ_XZL_xFH0i0RTo0EWBqsnRs",
+      "expected_filename": "potato-head-beach-club_static.webp",
+      "json_source": "bars-dev.json"
+    },
+    {
+      "merchant_name": "Friends Bar",
+      "place_id": "ChIJCdPou9hH0i0RgIY7umQ751U",
+      "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/friends-bar_ChIJCdPou9hH0i0RgIY7umQ751U/friends-bar_static.webp",
+      "expected_album": "bar-image-dev",
+      "expected_folder": "friends-bar_ChIJCdPou9hH0i0RgIY7umQ751U",
+      "expected_filename": "friends-bar_static.webp",
+      "json_source": "bars-dev.json"
+    },
+    {
+      "merchant_name": "The Lawn Canggu Beach Club",
+      "place_id": "ChIJiQdg1YdH0i0R8ANUMzZizN0",
+      "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/the-lawn-canggu-beach-club_ChIJiQdg1YdH0i0R8ANUMzZizN0/the-lawn-canggu-beach-club_static.webp",
+      "expected_album": "bar-image-dev",
+      "expected_folder": "the-lawn-canggu-beach-club_ChIJiQdg1YdH0i0R8ANUMzZizN0",
+      "expected_filename": "the-lawn-canggu-beach-club_static.webp",
+      "json_source": "bars-dev.json"
+    },
+    {
+      "merchant_name": "The Shady Pig",
+      "place_id": "ChIJxZh1qu1H0i0R5BXWVSV1zK8",
+      "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/the-shady-pig_ChIJxZh1qu1H0i0R5BXWVSV1zK8/the-shady-pig_static.webp",
+      "expected_album": "bar-image-dev",
+      "expected_folder": "the-shady-pig_ChIJxZh1qu1H0i0R5BXWVSV1zK8",
+      "expected_filename": "the-shady-pig_static.webp",
+      "json_source": "bars-dev.json"
+    },
+    {
+      "merchant_name": "Hippie Fish Pererenan Beach",
+      "place_id": "ChIJ5Wex6mc50i0RNSHWdVKVoPo",
+      "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/hippie-fish-pererenan-beach_ChIJ5Wex6mc50i0RNSHWdVKVoPo/hippie-fish-pererenan-beach_static.webp",
+      "expected_album": "bar-image-dev",
+      "expected_folder": "hippie-fish-pererenan-beach_ChIJ5Wex6mc50i0RNSHWdVKVoPo",
+      "expected_filename": "hippie-fish-pererenan-beach_static.webp",
+      "json_source": "bars-dev.json"
+    },
+    {
+      "merchant_name": "Miss Fish Bali",
+      "place_id": "ChIJYcKvqiJH0i0RtzWDiRmCnI0",
+      "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/miss-fish-bali_ChIJYcKvqiJH0i0RtzWDiRmCnI0/miss-fish-bali_static.webp",
+      "expected_album": "bar-image-dev",
+      "expected_folder": "miss-fish-bali_ChIJYcKvqiJH0i0RtzWDiRmCnI0",
+      "expected_filename": "miss-fish-bali_static.webp",
+      "json_source": "bars-dev.json"
+    },
+    {
+      "merchant_name": "Alma Tapas Bar - Canggu",
+      "place_id": "ChIJTTj8Ts9H0i0R2XwcfS_i6Mk",
+      "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/alma-tapas-bar-canggu_ChIJTTj8Ts9H0i0R2XwcfS_i6Mk/alma-tapas-bar-canggu_static.webp",
+      "expected_album": "dining-image-dev",
+      "expected_folder": "alma-tapas-bar-canggu_ChIJTTj8Ts9H0i0R2XwcfS_i6Mk",
+      "expected_filename": "alma-tapas-bar-canggu_static.webp",
+      "json_source": "dining-dev.json"
+    },
+    {
+      "merchant_name": "Billy Ho Japanese Restaurant",
+      "place_id": "ChIJ0RSTlvJH0i0R1ozPGwVxSoU",
+      "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/billy-ho-japanese-restaurant_ChIJ0RSTlvJH0i0R1ozPGwVxSoU/billy-ho-japanese-restaurant_static.webp",
+      "expected_album": "dining-image-dev",
+      "expected_folder": "billy-ho-japanese-restaurant_ChIJ0RSTlvJH0i0R1ozPGwVxSoU",
+      "expected_filename": "billy-ho-japanese-restaurant_static.webp",
+      "json_source": "dining-dev.json"
+    },
+    {
+      "merchant_name": "Hippie Fish Pererenan Beach",
+      "place_id": "ChIJ5Wex6mc50i0RNSHWdVKVoPo",
+      "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/hippie-fish-pererenan-beach_ChIJ5Wex6mc50i0RNSHWdVKVoPo/hippie-fish-pererenan-beach_static.webp",
+      "expected_album": "dining-image-dev",
+      "expected_folder": "hippie-fish-pererenan-beach_ChIJ5Wex6mc50i0RNSHWdVKVoPo",
+      "expected_filename": "hippie-fish-pererenan-beach_static.webp",
+      "json_source": "dining-dev.json"
+    },
+    {
+      "merchant_name": "Ji Restaurant Bali",
+      "place_id": "ChIJWVWpMoZH0i0RRFcupYVhVi4",
+      "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/ji-restaurant-bali_ChIJWVWpMoZH0i0RRFcupYVhVi4/ji-restaurant-bali_static.webp",
+      "expected_album": "dining-image-dev",
+      "expected_folder": "ji-restaurant-bali_ChIJWVWpMoZH0i0RRFcupYVhVi4",
+      "expected_filename": "ji-restaurant-bali_static.webp",
+      "json_source": "dining-dev.json"
+    },
+    {
+      "merchant_name": "LACALITA Canggu",
+      "place_id": "ChIJPZo4Unk40i0RxI_FwqiKsWQ",
+      "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/lacalita-canggu_ChIJPZo4Unk40i0RxI_FwqiKsWQ/lacalita-canggu_static.webp",
+      "expected_album": "dining-image-dev",
+      "expected_folder": "lacalita-canggu_ChIJPZo4Unk40i0RxI_FwqiKsWQ",
+      "expected_filename": "lacalita-canggu_static.webp",
+      "json_source": "dining-dev.json"
+    },
+    {
+      "merchant_name": "La Baracca Bali (Seminyak)",
+      "place_id": "ChIJj0tR_mpH0i0RP5h_ieNuzAs",
+      "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/la-baracca-bali-seminyak_ChIJj0tR_mpH0i0RP5h_ieNuzAs/la-baracca-bali-seminyak_static.webp",
+      "expected_album": "dining-image-dev",
+      "expected_folder": "la-baracca-bali-seminyak_ChIJj0tR_mpH0i0RP5h_ieNuzAs",
+      "expected_filename": "la-baracca-bali-seminyak_static.webp",
+      "json_source": "dining-dev.json"
+    },
+    {
+      "merchant_name": "Luigi's Hot Pizza Canggu",
+      "place_id": "ChIJV8j8ZXk40i0RQ_ByVyakQkc",
+      "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/luigis-hot-pizza-canggu_ChIJV8j8ZXk40i0RQ_ByVyakQkc/luigis-hot-pizza-canggu_static.webp",
+      "expected_album": "dining-image-dev",
+      "expected_folder": "luigis-hot-pizza-canggu_ChIJV8j8ZXk40i0RQ_ByVyakQkc",
+      "expected_filename": "luigis-hot-pizza-canggu_static.webp",
+      "json_source": "dining-dev.json"
+    },
+    {
+      "merchant_name": "M. MASON Bar | Grill Canggu",
+      "place_id": "ChIJBWxfWhA50i0Rzb3CWOIu8tA",
+      "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/m-mason-bar-grill-canggu_ChIJBWxfWhA50i0Rzb3CWOIu8tA/m-mason-bar-grill-canggu_static.webp",
+      "expected_album": "dining-image-dev",
+      "expected_folder": "m-mason-bar-grill-canggu_ChIJBWxfWhA50i0Rzb3CWOIu8tA",
+      "expected_filename": "m-mason-bar-grill-canggu_static.webp",
+      "json_source": "dining-dev.json"
+    },
+    {
+      "merchant_name": "Miss Fish Bali",
+      "place_id": "ChIJYcKvqiJH0i0RtzWDiRmCnI0",
+      "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/miss-fish-bali_ChIJYcKvqiJH0i0RtzWDiRmCnI0/miss-fish-bali_static.webp",
+      "expected_album": "dining-image-dev",
+      "expected_folder": "miss-fish-bali_ChIJYcKvqiJH0i0RtzWDiRmCnI0",
+      "expected_filename": "miss-fish-bali_static.webp",
+      "json_source": "dining-dev.json"
+    },
+    {
+      "merchant_name": "Mosto | Berawa",
+      "place_id": "ChIJD4eq-jFH0i0ROgK2DCf0uNw",
+      "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/mosto-berawa_ChIJD4eq-jFH0i0ROgK2DCf0uNw/mosto-berawa_static.webp",
+      "expected_album": "dining-image-dev",
+      "expected_folder": "mosto-berawa_ChIJD4eq-jFH0i0ROgK2DCf0uNw",
+      "expected_filename": "mosto-berawa_static.webp",
+      "json_source": "dining-dev.json"
+    },
+    {
+      "merchant_name": "One Eyed Jack",
+      "place_id": "ChIJC3RsyoJH0i0Rri-AJ8JF9Tg",
+      "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/one-eyed-jack_ChIJC3RsyoJH0i0Rri-AJ8JF9Tg/one-eyed-jack_static.webp",
+      "expected_album": "dining-image-dev",
+      "expected_folder": "one-eyed-jack_ChIJC3RsyoJH0i0Rri-AJ8JF9Tg",
+      "expected_filename": "one-eyed-jack_static.webp",
+      "json_source": "dining-dev.json"
+    },
+    {
+      "merchant_name": "SHUN Omakase Counter",
+      "place_id": "ChIJERK7FYRH0i0RKyvr-65RLZg",
+      "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/shun-omakase-counter_ChIJERK7FYRH0i0RKyvr-65RLZg/shun-omakase-counter_static.webp",
+      "expected_album": "dining-image-dev",
+      "expected_folder": "shun-omakase-counter_ChIJERK7FYRH0i0RKyvr-65RLZg",
+      "expected_filename": "shun-omakase-counter_static.webp",
+      "json_source": "dining-dev.json"
+    },
+    {
+      "merchant_name": "SKOOL Kitchen",
+      "place_id": "ChIJ2SXWetNH0i0RwwbG9ftXrx4",
+      "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/skool-kitchen_ChIJ2SXWetNH0i0RwwbG9ftXrx4/skool-kitchen_static.webp",
+      "expected_album": "dining-image-dev",
+      "expected_folder": "skool-kitchen_ChIJ2SXWetNH0i0RwwbG9ftXrx4",
+      "expected_filename": "skool-kitchen_static.webp",
+      "json_source": "dining-dev.json"
+    },
+    {
+      "merchant_name": "Santanera",
+      "place_id": "ChIJYUi2MOI50i0RFUr3eL2-pBk",
+      "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/santanera_ChIJYUi2MOI50i0RFUr3eL2-pBk/santanera_static.webp",
+      "expected_album": "dining-image-dev",
+      "expected_folder": "santanera_ChIJYUi2MOI50i0RFUr3eL2-pBk",
+      "expected_filename": "santanera_static.webp",
+      "json_source": "dining-dev.json"
+    },
+    {
+      "merchant_name": "Smoke Bali",
+      "place_id": "ChIJwVQNUZU50i0RPESrmvSu12w",
+      "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/smoke-bali_ChIJwVQNUZU50i0RPESrmvSu12w/smoke-bali_static.webp",
+      "expected_album": "dining-image-dev",
+      "expected_folder": "smoke-bali_ChIJwVQNUZU50i0RPESrmvSu12w",
+      "expected_filename": "smoke-bali_static.webp",
+      "json_source": "dining-dev.json"
+    },
+    {
+      "merchant_name": "Te'amo",
+      "place_id": "ChIJk3IjCVU50i0RDCA0u-V4WAs",
+      "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/teamo_ChIJk3IjCVU50i0RDCA0u-V4WAs/teamo_static.webp",
+      "expected_album": "dining-image-dev",
+      "expected_folder": "teamo_ChIJk3IjCVU50i0RDCA0u-V4WAs",
+      "expected_filename": "teamo_static.webp",
+      "json_source": "dining-dev.json"
+    },
+    {
+      "merchant_name": "Uma Garden Seminyak",
+      "place_id": "ChIJXxe2rXNH0i0Rnt_qeoqnQcc",
+      "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/uma-garden-seminyak_ChIJXxe2rXNH0i0Rnt_qeoqnQcc/uma-garden-seminyak_static.webp",
+      "expected_album": "dining-image-dev",
+      "expected_folder": "uma-garden-seminyak_ChIJXxe2rXNH0i0Rnt_qeoqnQcc",
+      "expected_filename": "uma-garden-seminyak_static.webp",
+      "json_source": "dining-dev.json"
+    },
+    {
+      "merchant_name": "Lusa By/Suka",
+      "place_id": "ChIJcYpksxVH0i0RCDMFafUy5N4",
+      "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/lusa-bysuka_ChIJcYpksxVH0i0RCDMFafUy5N4/lusa-bysuka_static.webp",
+      "expected_album": "cafe-image-dev",
+      "expected_folder": "lusa-bysuka_ChIJcYpksxVH0i0RCDMFafUy5N4",
+      "expected_filename": "lusa-bysuka_static.webp",
+      "json_source": "dining-dev.json"
+    },
+    {
+      "merchant_name": "Bokashi Berawa",
+      "place_id": "ChIJqdO8SytH0i0RkcWicB2oqxQ",
+      "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/bokashi-berawa_ChIJqdO8SytH0i0RkcWicB2oqxQ/bokashi-berawa_static.webp",
+      "expected_album": "cafe-image-dev",
+      "expected_folder": "bokashi-berawa_ChIJqdO8SytH0i0RkcWicB2oqxQ",
+      "expected_filename": "bokashi-berawa_static.webp",
+      "json_source": "dining-dev.json"
+    },
+    {
+      "merchant_name": "Zai Cafe Breakfast & Dinner",
+      "place_id": "ChIJnT3bt6VH0i0RUgvf_KGh8r8",
+      "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/zai-cafe-breakfast-dinner_ChIJnT3bt6VH0i0RUgvf_KGh8r8/zai-cafe-breakfast-dinner_static.webp",
+      "expected_album": "cafe-image-dev",
+      "expected_folder": "zai-cafe-breakfast-dinner_ChIJnT3bt6VH0i0RUgvf_KGh8r8",
+      "expected_filename": "zai-cafe-breakfast-dinner_static.webp",
+      "json_source": "dining-dev.json"
+    },
+    {
+      "merchant_name": "Ina Ré Restaurant",
+      "place_id": "ChIJuWrhQgA50i0Ra0tVN4yy1Dk",
+      "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/ina-r-restaurant_ChIJuWrhQgA50i0Ra0tVN4yy1Dk/ina-r-restaurant_static.webp",
+      "expected_album": "dining-image-dev",
+      "expected_folder": "ina-r-restaurant_ChIJuWrhQgA50i0Ra0tVN4yy1Dk",
+      "expected_filename": "ina-r-restaurant_static.webp",
+      "json_source": "dining-dev.json"
+    },
+    {
+      "merchant_name": "Kilo Kitchen Bali - Seminyak",
+      "place_id": "ChIJb-BRehhH0i0RUcIoZtXLtUM",
+      "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/kilo-kitchen-bali-seminyak_ChIJb-BRehhH0i0RUcIoZtXLtUM/kilo-kitchen-bali-seminyak_static.webp",
+      "expected_album": "dining-image-dev",
+      "expected_folder": "kilo-kitchen-bali-seminyak_ChIJb-BRehhH0i0RUcIoZtXLtUM",
+      "expected_filename": "kilo-kitchen-bali-seminyak_static.webp",
+      "json_source": "dining-dev.json"
+    },
+    {
+      "merchant_name": "Mostly Restaurant and Bar",
+      "place_id": "ChIJ5fhhx1I50i0RYv-9kVUcpbY",
+      "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/mostly-restaurant-and-bar_ChIJ5fhhx1I50i0RYv-9kVUcpbY/mostly-restaurant-and-bar_static.webp",
+      "expected_album": "dining-image-dev",
+      "expected_folder": "mostly-restaurant-and-bar_ChIJ5fhhx1I50i0RYv-9kVUcpbY",
+      "expected_filename": "mostly-restaurant-and-bar_static.webp",
+      "json_source": "dining-dev.json"
+    },
+    {
+      "merchant_name": "Anaga Restaurant, Authentic Thai Cuisine",
+      "place_id": "ChIJ32m9jCxH0i0RLBCGarQNwNc",
+      "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/anaga-restaurant-authentic-thai-cuisine_ChIJ32m9jCxH0i0RLBCGarQNwNc/anaga-restaurant-authentic-thai-cuisine_static.webp",
+      "expected_album": "dining-image-dev",
+      "expected_folder": "anaga-restaurant-authentic-thai-cuisine_ChIJ32m9jCxH0i0RLBCGarQNwNc",
+      "expected_filename": "anaga-restaurant-authentic-thai-cuisine_static.webp",
+      "json_source": "dining-dev.json"
+    },
+    {
+      "merchant_name": "Desa Kitsuné",
+      "place_id": "ChIJ9UCFSPE50i0RVVADcFGCGXI",
+      "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/desa-kitsun_ChIJ9UCFSPE50i0RVVADcFGCGXI/desa-kitsun_static.webp",
+      "expected_album": "cafe-image-dev",
+      "expected_folder": "desa-kitsun_ChIJ9UCFSPE50i0RVVADcFGCGXI",
+      "expected_filename": "desa-kitsun_static.webp",
+      "json_source": "cafes-dev.json"
+    },
+    {
+      "merchant_name": "Sensorium Bali",
+      "place_id": "ChIJr9bHQS050i0RW_GuYHY3vaU",
+      "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/sensorium-bali_ChIJr9bHQS050i0RW_GuYHY3vaU/sensorium-bali_static.webp",
+      "expected_album": "cafe-image-dev",
+      "expected_folder": "sensorium-bali_ChIJr9bHQS050i0RW_GuYHY3vaU",
+      "expected_filename": "sensorium-bali_static.webp",
+      "json_source": "cafes-dev.json"
+    },
+    {
+      "merchant_name": "Milk & Madu Beach Road",
+      "place_id": "ChIJL3L-Sfc50i0RwlAVew5QCm8",
+      "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/milk-madu-beach-road_ChIJL3L-Sfc50i0RwlAVew5QCm8/milk-madu-beach-road_static.webp",
+      "expected_album": "cafe-image-dev",
+      "expected_folder": "milk-madu-beach-road_ChIJL3L-Sfc50i0RwlAVew5QCm8",
+      "expected_filename": "milk-madu-beach-road_static.webp",
+      "json_source": "cafes-dev.json"
+    },
+    {
+      "merchant_name": "The Avocado Factory",
+      "place_id": "ChIJ36pywXk40i0Rh9ZZCRMb1fQ",
+      "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/the-avocado-factory_ChIJ36pywXk40i0Rh9ZZCRMb1fQ/the-avocado-factory_static.webp",
+      "expected_album": "cafe-image-dev",
+      "expected_folder": "the-avocado-factory_ChIJ36pywXk40i0Rh9ZZCRMb1fQ",
+      "expected_filename": "the-avocado-factory_static.webp",
+      "json_source": "cafes-dev.json"
+    },
+    {
+      "merchant_name": "Revolver Canggu",
+      "place_id": "ChIJnY-evaw50i0RD_tH6R6pDyw",
+      "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/revolver-canggu_ChIJnY-evaw50i0RD_tH6R6pDyw/revolver-canggu_static.webp",
+      "expected_album": "cafe-image-dev",
+      "expected_folder": "revolver-canggu_ChIJnY-evaw50i0RD_tH6R6pDyw",
+      "expected_filename": "revolver-canggu_static.webp",
+      "json_source": "cafes-dev.json"
+    },
+    {
+      "merchant_name": "ZIN Cafe",
+      "place_id": "ChIJ1a70wvFH0i0RajIckWuoU14",
+      "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/zin-cafe_ChIJ1a70wvFH0i0RajIckWuoU14/zin-cafe_static.webp",
+      "expected_album": "cafe-image-dev",
+      "expected_folder": "zin-cafe_ChIJ1a70wvFH0i0RajIckWuoU14",
+      "expected_filename": "zin-cafe_static.webp",
+      "json_source": "cafes-dev.json"
+    },
+    {
+      "merchant_name": "Fold Canggu",
+      "place_id": "ChIJg1ad-75H0i0R8aB_K9oKYj8",
+      "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/fold-canggu_ChIJg1ad-75H0i0R8aB_K9oKYj8/fold-canggu_static.webp",
+      "expected_album": "cafe-image-dev",
+      "expected_folder": "fold-canggu_ChIJg1ad-75H0i0R8aB_K9oKYj8",
+      "expected_filename": "fold-canggu_static.webp",
+      "json_source": "cafes-dev.json"
+    },
+    {
+      "merchant_name": "Sari Kitchen & Community - by Ekosistem",
+      "place_id": "ChIJVwZGvMo50i0R5i1fzyT73S4",
+      "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/sari-kitchen-community-by-ekosistem_ChIJVwZGvMo50i0R5i1fzyT73S4/sari-kitchen-community-by-ekosistem_static.webp",
+      "expected_album": "cafe-image-dev",
+      "expected_folder": "sari-kitchen-community-by-ekosistem_ChIJVwZGvMo50i0R5i1fzyT73S4",
+      "expected_filename": "sari-kitchen-community-by-ekosistem_static.webp",
+      "json_source": "cafes-dev.json"
+    },
+    {
+      "merchant_name": "Two Face / Coffee & Brunch [Canggu]",
+      "place_id": "ChIJq42lSa850i0RziccPzDJXhU",
+      "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/two-face-coffee-brunch-canggu_ChIJq42lSa850i0RziccPzDJXhU/two-face-coffee-brunch-canggu_static.webp",
+      "expected_album": "cafe-image-dev",
+      "expected_folder": "two-face-coffee-brunch-canggu_ChIJq42lSa850i0RziccPzDJXhU",
+      "expected_filename": "two-face-coffee-brunch-canggu_static.webp",
+      "json_source": "cafes-dev.json"
+    },
+    {
+      "merchant_name": "HOME CAFE CANGGU",
+      "place_id": "ChIJSzQz6CQ50i0RalL4caNfcSI",
+      "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/home-cafe-canggu_ChIJSzQz6CQ50i0RalL4caNfcSI/home-cafe-canggu_static.webp",
+      "expected_album": "cafe-image-dev",
+      "expected_folder": "home-cafe-canggu_ChIJSzQz6CQ50i0RalL4caNfcSI",
+      "expected_filename": "home-cafe-canggu_static.webp",
+      "json_source": "cafes-dev.json"
+    },
+    {
+      "merchant_name": "BAKED. Berawa",
+      "place_id": "ChIJU0lp4SNH0i0R7x72tr13TmY",
+      "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/baked-berawa_ChIJU0lp4SNH0i0R7x72tr13TmY/baked-berawa_static.webp",
+      "expected_album": "cafe-image-dev",
+      "expected_folder": "baked-berawa_ChIJU0lp4SNH0i0R7x72tr13TmY",
+      "expected_filename": "baked-berawa_static.webp",
+      "json_source": "cafes-dev.json"
+    },
+    {
+      "merchant_name": "nüde cafe Berawa",
+      "place_id": "ChIJZ6Jj8oFH0i0R0sKhEJMIyd8",
+      "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/nde-cafe-berawa_ChIJZ6Jj8oFH0i0R0sKhEJMIyd8/nde-cafe-berawa_static.webp",
+      "expected_album": "cafe-image-dev",
+      "expected_folder": "nde-cafe-berawa_ChIJZ6Jj8oFH0i0R0sKhEJMIyd8",
+      "expected_filename": "nde-cafe-berawa_static.webp",
+      "json_source": "cafes-dev.json"
+    },
+    {
+      "merchant_name": "Lusa By/Suka",
+      "place_id": "ChIJcYpksxVH0i0RCDMFafUy5N4",
+      "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/lusa-bysuka_ChIJcYpksxVH0i0RCDMFafUy5N4/lusa-bysuka_static.webp",
+      "expected_album": "cafe-image-dev",
+      "expected_folder": "lusa-bysuka_ChIJcYpksxVH0i0RCDMFafUy5N4",
+      "expected_filename": "lusa-bysuka_static.webp",
+      "json_source": "cafes-dev.json"
+    },
+    {
+      "merchant_name": "Hungry Bird Coffee Roaster",
+      "place_id": "ChIJa2bVbaxcBAURDMj_jEzGDqI",
+      "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/hungry-bird-coffee-roaster_ChIJa2bVbaxcBAURDMj_jEzGDqI/hungry-bird-coffee-roaster_static.webp",
+      "expected_album": "cafe-image-dev",
+      "expected_folder": "hungry-bird-coffee-roaster_ChIJa2bVbaxcBAURDMj_jEzGDqI",
+      "expected_filename": "hungry-bird-coffee-roaster_static.webp",
+      "json_source": "cafes-dev.json"
+    },
+    {
+      "merchant_name": "Brunch Club Berawa",
+      "place_id": "ChIJnxFCS3pH0i0RE9mJ0v6ZkHA",
+      "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/brunch-club-berawa_ChIJnxFCS3pH0i0RE9mJ0v6ZkHA/brunch-club-berawa_static.webp",
+      "expected_album": "cafe-image-dev",
+      "expected_folder": "brunch-club-berawa_ChIJnxFCS3pH0i0RE9mJ0v6ZkHA",
+      "expected_filename": "brunch-club-berawa_static.webp",
+      "json_source": "cafes-dev.json"
+    },
+    {
+      "merchant_name": "Bokashi Berawa",
+      "place_id": "ChIJqdO8SytH0i0RkcWicB2oqxQ",
+      "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/bokashi-berawa_ChIJqdO8SytH0i0RkcWicB2oqxQ/bokashi-berawa_static.webp",
+      "expected_album": "cafe-image-dev",
+      "expected_folder": "bokashi-berawa_ChIJqdO8SytH0i0RkcWicB2oqxQ",
+      "expected_filename": "bokashi-berawa_static.webp",
+      "json_source": "cafes-dev.json"
+    },
+    {
+      "merchant_name": "Crate Cafe",
+      "place_id": "ChIJOaEQDnk40i0Rzhou4NcRx-w",
+      "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/crate-cafe_ChIJOaEQDnk40i0Rzhou4NcRx-w/crate-cafe_static.webp",
+      "expected_album": "cafe-image-dev",
+      "expected_folder": "crate-cafe_ChIJOaEQDnk40i0Rzhou4NcRx-w",
+      "expected_filename": "crate-cafe_static.webp",
+      "json_source": "cafes-dev.json"
+    },
+    {
+      "merchant_name": "ST. ALi - Bali",
+      "place_id": "ChIJD94dpPY50i0R96D3MPX7rrc",
+      "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/st-ali-bali_ChIJD94dpPY50i0R96D3MPX7rrc/st-ali-bali_static.webp",
+      "expected_album": "cafe-image-dev",
+      "expected_folder": "st-ali-bali_ChIJD94dpPY50i0R96D3MPX7rrc",
+      "expected_filename": "st-ali-bali_static.webp",
+      "json_source": "cafes-dev.json"
+    },
+    {
+      "merchant_name": "Brunch Club Pererenan",
+      "place_id": "ChIJkfDSHYg50i0RBdXQigmMn54",
+      "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/brunch-club-pererenan_ChIJkfDSHYg50i0RBdXQigmMn54/brunch-club-pererenan_static.webp",
+      "expected_album": "cafe-image-dev",
+      "expected_folder": "brunch-club-pererenan_ChIJkfDSHYg50i0RBdXQigmMn54",
+      "expected_filename": "brunch-club-pererenan_static.webp",
+      "json_source": "cafes-dev.json"
+    },
+    {
+      "merchant_name": "MIEL SPECIALTY COFFEE CANGGU | CO-WORKING",
+      "place_id": "ChIJYXyNN5U50i0RmIUNsfH9tHw",
+      "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/miel-specialty-coffee-canggu-co-working_ChIJYXyNN5U50i0RmIUNsfH9tHw/miel-specialty-coffee-canggu-co-working_static.webp",
+      "expected_album": "cafe-image-dev",
+      "expected_folder": "miel-specialty-coffee-canggu-co-working_ChIJYXyNN5U50i0RmIUNsfH9tHw",
+      "expected_filename": "miel-specialty-coffee-canggu-co-working_static.webp",
+      "json_source": "cafes-dev.json"
+    },
+    {
+      "merchant_name": "The Common",
+      "place_id": "ChIJHzyhoW450i0Rub7_EEvisDY",
+      "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/the-common_ChIJHzyhoW450i0Rub7_EEvisDY/the-common_static.webp",
+      "expected_album": "cafe-image-dev",
+      "expected_folder": "the-common_ChIJHzyhoW450i0Rub7_EEvisDY",
+      "expected_filename": "the-common_static.webp",
+      "json_source": "cafes-dev.json"
+    },
+    {
+      "merchant_name": "Cafe Vida Organic",
+      "place_id": "ChIJMev9G3w40i0RXZlSucHydMw",
+      "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/cafe-vida-organic_ChIJMev9G3w40i0RXZlSucHydMw/cafe-vida-organic_static.webp",
+      "expected_album": "cafe-image-dev",
+      "expected_folder": "cafe-vida-organic_ChIJMev9G3w40i0RXZlSucHydMw",
+      "expected_filename": "cafe-vida-organic_static.webp",
+      "json_source": "cafes-dev.json"
+    },
+    {
+      "merchant_name": "Rise & Shine Cafe Canggu",
+      "place_id": "ChIJg_EuN3s40i0R6kCeRoibycg",
+      "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/rise-shine-cafe-canggu_ChIJg_EuN3s40i0R6kCeRoibycg/rise-shine-cafe-canggu_static.webp",
+      "expected_album": "cafe-image-dev",
+      "expected_folder": "rise-shine-cafe-canggu_ChIJg_EuN3s40i0R6kCeRoibycg",
+      "expected_filename": "rise-shine-cafe-canggu_static.webp",
+      "json_source": "cafes-dev.json"
+    },
+    {
+      "merchant_name": "Blou Cafe Canggu",
+      "place_id": "ChIJhz6xqoo50i0RZxslmCS1iow",
+      "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/blou-cafe-canggu_ChIJhz6xqoo50i0RZxslmCS1iow/blou-cafe-canggu_static.webp",
+      "expected_album": "cafe-image-dev",
+      "expected_folder": "blou-cafe-canggu_ChIJhz6xqoo50i0RZxslmCS1iow",
+      "expected_filename": "blou-cafe-canggu_static.webp",
+      "json_source": "cafes-dev.json"
+    },
+    {
+      "merchant_name": "Kawisari Coffee Farm Shop & Eatery Bali",
+      "place_id": "ChIJH21JAz5H0i0R9xl0tIvpu1w",
+      "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/kawisari-coffee-farm-shop-eatery-bali_ChIJH21JAz5H0i0R9xl0tIvpu1w/kawisari-coffee-farm-shop-eatery-bali_static.webp",
+      "expected_album": "cafe-image-dev",
+      "expected_folder": "kawisari-coffee-farm-shop-eatery-bali_ChIJH21JAz5H0i0R9xl0tIvpu1w",
+      "expected_filename": "kawisari-coffee-farm-shop-eatery-bali_static.webp",
+      "json_source": "cafes-dev.json"
+    },
+    {
+      "merchant_name": "Cafe The Daun",
+      "place_id": "ChIJ1_XOtHg40i0R6eyPmtRK6bc",
+      "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/cafe-the-daun_ChIJ1_XOtHg40i0R6eyPmtRK6bc/cafe-the-daun_static.webp",
+      "expected_album": "cafe-image-dev",
+      "expected_folder": "cafe-the-daun_ChIJ1_XOtHg40i0R6eyPmtRK6bc",
+      "expected_filename": "cafe-the-daun_static.webp",
+      "json_source": "cafes-dev.json"
+    },
+    {
+      "merchant_name": "Zai Cafe Breakfast & Dinner",
+      "place_id": "ChIJnT3bt6VH0i0RUgvf_KGh8r8",
+      "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/zai-cafe-breakfast-dinner_ChIJnT3bt6VH0i0RUgvf_KGh8r8/zai-cafe-breakfast-dinner_static.webp",
+      "expected_album": "cafe-image-dev",
+      "expected_folder": "zai-cafe-breakfast-dinner_ChIJnT3bt6VH0i0RUgvf_KGh8r8",
+      "expected_filename": "zai-cafe-breakfast-dinner_static.webp",
+      "json_source": "cafes-dev.json"
+    },
+    {
+      "merchant_name": "Amolas Cafe",
+      "place_id": "ChIJD63X4IU50i0RFkjm_Q5AwGs",
+      "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/amolas-cafe_ChIJD63X4IU50i0RFkjm_Q5AwGs/amolas-cafe_static.webp",
+      "expected_album": "cafe-image-dev",
+      "expected_folder": "amolas-cafe_ChIJD63X4IU50i0RFkjm_Q5AwGs",
+      "expected_filename": "amolas-cafe_static.webp",
+      "json_source": "cafes-dev.json"
+    },
+    {
+      "merchant_name": "openhouse cafe",
+      "place_id": "ChIJRfVHDQA50i0R78l1hYjP2iM",
+      "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/openhouse-cafe_ChIJRfVHDQA50i0R78l1hYjP2iM/openhouse-cafe_static.webp",
+      "expected_album": "cafe-image-dev",
+      "expected_folder": "openhouse-cafe_ChIJRfVHDQA50i0R78l1hYjP2iM",
+      "expected_filename": "openhouse-cafe_static.webp",
+      "json_source": "cafes-dev.json"
+    },
+    {
+      "merchant_name": "Mimpi Grocery",
+      "place_id": "ChIJzXC1G0A50i0RRtOZNiTSri0",
+      "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/mimpi-grocery_ChIJzXC1G0A50i0RRtOZNiTSri0/mimpi-grocery_static.webp",
+      "expected_album": "cafe-image-dev",
+      "expected_folder": "mimpi-grocery_ChIJzXC1G0A50i0RRtOZNiTSri0",
+      "expected_filename": "mimpi-grocery_static.webp",
+      "json_source": "cafes-dev.json"
+    },
+    {
+      "merchant_name": "Fine by SATUSATUCOFFEE",
+      "place_id": "ChIJB5JLA1c50i0RRPJ0C5V2DnQ",
+      "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/fine-by-satusatucoffee_ChIJB5JLA1c50i0RRPJ0C5V2DnQ/fine-by-satusatucoffee_static.webp",
+      "expected_album": "cafe-image-dev",
+      "expected_folder": "fine-by-satusatucoffee_ChIJB5JLA1c50i0RRPJ0C5V2DnQ",
+      "expected_filename": "fine-by-satusatucoffee_static.webp",
+      "json_source": "cafes-dev.json"
+    },
+    {
+      "merchant_name": "Neighbourhood Food",
+      "place_id": "ChIJq_svKGxH0i0RU-zAhMppq8Y",
+      "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/neighbourhood-food_ChIJq_svKGxH0i0RU-zAhMppq8Y/neighbourhood-food_static.webp",
+      "expected_album": "cafe-image-dev",
+      "expected_folder": "neighbourhood-food_ChIJq_svKGxH0i0RU-zAhMppq8Y",
+      "expected_filename": "neighbourhood-food_static.webp",
+      "json_source": "cafes-dev.json"
+    },
+    {
+      "merchant_name": "Barboa Bali",
+      "place_id": "ChIJQwwZdJ050i0R0ehpWb6QBQc",
+      "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/barboa-bali_ChIJQwwZdJ050i0R0ehpWb6QBQc/barboa-bali_static.webp",
+      "expected_album": "cafe-image-dev",
+      "expected_folder": "barboa-bali_ChIJQwwZdJ050i0R0ehpWb6QBQc",
+      "expected_filename": "barboa-bali_static.webp",
+      "json_source": "cafes-dev.json"
+    },
+    {
+      "merchant_name": "HOME CAFE MENGWI",
+      "place_id": "ChIJt38YXDo50i0RJlB3Oz0PDjg",
+      "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/home-cafe-mengwi_ChIJt38YXDo50i0RJlB3Oz0PDjg/home-cafe-mengwi_static.webp",
+      "expected_album": "cafe-image-dev",
+      "expected_folder": "home-cafe-mengwi_ChIJt38YXDo50i0RJlB3Oz0PDjg",
+      "expected_filename": "home-cafe-mengwi_static.webp",
+      "json_source": "cafes-dev.json"
+    },
+    {
+      "merchant_name": "Jiwa Cafe",
+      "place_id": "ChIJEaGuegA50i0R3CbgI5uqfq0",
+      "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/jiwa-cafe_ChIJEaGuegA50i0R3CbgI5uqfq0/jiwa-cafe_static.webp",
+      "expected_album": "cafe-image-dev",
+      "expected_folder": "jiwa-cafe_ChIJEaGuegA50i0R3CbgI5uqfq0",
+      "expected_filename": "jiwa-cafe_static.webp",
+      "json_source": "cafes-dev.json"
+    },
+    {
+      "merchant_name": "nüde cafe Babakan",
+      "place_id": "ChIJFay1BbM50i0RLOYPPnFgc2k",
+      "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/nde-cafe-babakan_ChIJFay1BbM50i0RLOYPPnFgc2k/nde-cafe-babakan_static.webp",
+      "expected_album": "cafe-image-dev",
+      "expected_folder": "nde-cafe-babakan_ChIJFay1BbM50i0RLOYPPnFgc2k",
+      "expected_filename": "nde-cafe-babakan_static.webp",
+      "json_source": "cafes-dev.json"
+    },
+    {
+      "merchant_name": "Secret Spot Canggu",
+      "place_id": "ChIJmZf0Vlc50i0RR3Z4gOnFmUM",
+      "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/secret-spot-canggu_ChIJmZf0Vlc50i0RR3Z4gOnFmUM/secret-spot-canggu_static.webp",
+      "expected_album": "cafe-image-dev",
+      "expected_folder": "secret-spot-canggu_ChIJmZf0Vlc50i0RR3Z4gOnFmUM",
+      "expected_filename": "secret-spot-canggu_static.webp",
+      "json_source": "cafes-dev.json"
+    },
+    {
+      "merchant_name": "YUME - Buduk",
+      "place_id": "ChIJQYh7HcM50i0RyZozSuavIhM",
+      "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/yume-buduk_ChIJQYh7HcM50i0RyZozSuavIhM/yume-buduk_static.webp",
+      "expected_album": "cafe-image-dev",
+      "expected_folder": "yume-buduk_ChIJQYh7HcM50i0RyZozSuavIhM",
+      "expected_filename": "yume-buduk_static.webp",
+      "json_source": "cafes-dev.json"
+    },
+    {
+      "merchant_name": "B Work Bali",
+      "place_id": "ChIJ6fBvIpg50i0R8764BCFFN60",
+      "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/b-work-bali_ChIJ6fBvIpg50i0R8764BCFFN60/b-work-bali_static.webp",
+      "expected_album": "cowork-image-dev",
+      "expected_folder": "b-work-bali_ChIJ6fBvIpg50i0R8764BCFFN60",
+      "expected_filename": "b-work-bali_static.webp",
+      "json_source": "cowork-dev.json"
+    },
+    {
+      "merchant_name": "Ducat Space",
+      "place_id": "ChIJCd9etMVH0i0RNkfYsSkhmZg",
+      "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/ducat-space-cafe-offices-co-working-meeting-rooms_ChIJCd9etMVH0i0RNkfYsSkhmZg/ducat-space-cafe-offices-co-working-meeting-rooms_static.webp",
+      "expected_album": "cowork-image-dev",
+      "expected_folder": "ducat-space-cafe-offices-co-working-meeting-rooms_ChIJCd9etMVH0i0RNkfYsSkhmZg",
+      "expected_filename": "ducat-space-cafe-offices-co-working-meeting-rooms_static.webp",
+      "json_source": "cowork-dev.json"
+    },
+    {
+      "merchant_name": "Genesis Creative Centre",
+      "place_id": "ChIJSW0wnj9H0i0RBi6QO_C6M_o",
+      "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/genesis-creative-centre_ChIJSW0wnj9H0i0RBi6QO_C6M_o/genesis-creative-centre_static.webp",
+      "expected_album": "cowork-image-dev",
+      "expected_folder": "genesis-creative-centre_ChIJSW0wnj9H0i0RBi6QO_C6M_o",
+      "expected_filename": "genesis-creative-centre_static.webp",
+      "json_source": "cowork-dev.json"
+    },
+    {
+      "merchant_name": "Karya Co-working Bali",
+      "place_id": "ChIJQeo_7VxH0i0RmnzEcibuEb8",
+      "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/karya-co-working-bali_ChIJQeo_7VxH0i0RmnzEcibuEb8/karya-co-working-bali_static.webp",
+      "expected_album": "cowork-image-dev",
+      "expected_folder": "karya-co-working-bali_ChIJQeo_7VxH0i0RmnzEcibuEb8",
+      "expected_filename": "karya-co-working-bali_static.webp",
+      "json_source": "cowork-dev.json"
+    },
+    {
+      "merchant_name": "Nebula Entrepreneur Coworking Space",
+      "place_id": "ChIJY1RJ9Zs50i0R5x8HN0qZa9g",
+      "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/nebula-entrepreneur-coworking-space_ChIJY1RJ9Zs50i0R5x8HN0qZa9g/nebula-entrepreneur-coworking-space_static.webp",
+      "expected_album": "cowork-image-dev",
+      "expected_folder": "nebula-entrepreneur-coworking-space_ChIJY1RJ9Zs50i0R5x8HN0qZa9g",
+      "expected_filename": "nebula-entrepreneur-coworking-space_static.webp",
+      "json_source": "cowork-dev.json"
+    },
+    {
+      "merchant_name": "PUCO Rooftop Coworking space & Eatery",
+      "place_id": "ChIJOy4VgxU50i0R8mawVCoFiRw",
+      "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/puco-rooftop-coworking-space-eatery_ChIJOy4VgxU50i0R8mawVCoFiRw/puco-rooftop-coworking-space-eatery_static.webp",
+      "expected_album": "cowork-image-dev",
+      "expected_folder": "puco-rooftop-coworking-space-eatery_ChIJOy4VgxU50i0R8mawVCoFiRw",
+      "expected_filename": "puco-rooftop-coworking-space-eatery_static.webp",
+      "json_source": "cowork-dev.json"
+    },
+    {
+      "merchant_name": "SETTER Coworking & Private Offices",
+      "place_id": "ChIJc5xIUklH0i0R-2R5iW_1nx0",
+      "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/setter-coworking-private-offices_ChIJc5xIUklH0i0R-2R5iW_1nx0/setter-coworking-private-offices_static.webp",
+      "expected_album": "cowork-image-dev",
+      "expected_folder": "setter-coworking-private-offices_ChIJc5xIUklH0i0R-2R5iW_1nx0",
+      "expected_filename": "setter-coworking-private-offices_static.webp",
+      "json_source": "cowork-dev.json"
+    },
+    {
+      "merchant_name": "Tropical Nomad Coworking Space",
+      "place_id": "ChIJvf4Cf7pF0i0RGVMhsUCiNBY",
+      "expected_url": "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/tropical-nomad-coworking-space_ChIJvf4Cf7pF0i0RGVMhsUCiNBY/tropical-nomad-coworking-space_static.webp",
+      "expected_album": "cowork-image-dev",
+      "expected_folder": "tropical-nomad-coworking-space_ChIJvf4Cf7pF0i0RGVMhsUCiNBY",
+      "expected_filename": "tropical-nomad-coworking-space_static.webp",
+      "json_source": "cowork-dev.json"
+    }
+  ]
+}

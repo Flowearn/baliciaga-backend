@@ -1,0 +1,53 @@
+{
+  "dev_logs": [
+    {
+      "merchant": "B Work Bali",
+      "old_url": "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/b-work-bali_ChIJ6fBvIpg50i0R8764BCFFN60/b-work-bali_static.webp",
+      "new_url": "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/b-work-bali/staticmap.webp",
+      "status": "already_exists"
+    },
+    {
+      "merchant": "Ducat Space",
+      "old_url": "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/ducat-space-cafe-offices-co-working-meeting-rooms_ChIJCd9etMVH0i0RNkfYsSkhmZg/ducat-space-cafe-offices-co-working-meeting-rooms_static.webp",
+      "new_url": "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/ducat-space-cafe-offices-co-working-meeting-rooms/staticmap.webp",
+      "status": "already_exists"
+    },
+    {
+      "merchant": "Genesis Creative Centre",
+      "old_url": "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/genesis-creative-centre_ChIJSW0wnj9H0i0RBi6QO_C6M_o/genesis-creative-centre_static.webp",
+      "new_url": "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/genesis-creative-centre/staticmap.webp",
+      "status": "already_exists"
+    },
+    {
+      "merchant": "Karya Co-working Bali",
+      "old_url": "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/karya-co-working-bali_ChIJQeo_7VxH0i0RmnzEcibuEb8/karya-co-working-bali_static.webp",
+      "new_url": "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/karya-co-working-bali/staticmap.webp",
+      "status": "already_exists"
+    },
+    {
+      "merchant": "Nebula Entrepreneur Coworking Space",
+      "old_url": "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/nebula-entrepreneur-coworking-space_ChIJY1RJ9Zs50i0R5x8HN0qZa9g/nebula-entrepreneur-coworking-space_static.webp",
+      "new_url": "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/nebula-entrepreneur-coworking-space/staticmap.webp",
+      "status": "already_exists"
+    },
+    {
+      "merchant": "PUCO Rooftop Coworking space & Eatery",
+      "old_url": "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/puco-rooftop-coworking-space-eatery_ChIJOy4VgxU50i0R8mawVCoFiRw/puco-rooftop-coworking-space-eatery_static.webp",
+      "new_url": "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/puco-rooftop-coworking-space-eatery/staticmap.webp",
+      "status": "already_exists"
+    },
+    {
+      "merchant": "SETTER Coworking & Private Offices",
+      "old_url": "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/setter-coworking-private-offices_ChIJc5xIUklH0i0R-2R5iW_1nx0/setter-coworking-private-offices_static.webp",
+      "new_url": "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/setter-coworking-private-offices/staticmap.webp",
+      "status": "already_exists"
+    },
+    {
+      "merchant": "Tropical Nomad Coworking Space",
+      "old_url": "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/tropical-nomad-coworking-space_ChIJvf4Cf7pF0i0RGVMhsUCiNBY/tropical-nomad-coworking-space_static.webp",
+      "new_url": "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/tropical-nomad-coworking-space/staticmap.webp",
+      "status": "already_exists"
+    }
+  ],
+  "prod_logs": []
+}

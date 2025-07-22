@@ -23,8 +23,8 @@ const appConfig = require('../src/utils/appConfig');
 const placesApiService = require('../src/api/placesApiService');
 
 // Configuration Constants
-const INPUT_JSON_PATH = path.join(__dirname, 'dining-ske.json');
-const OUTPUT_JSON_PATH = path.join(__dirname, 'dining-dev.json');
+const INPUT_JSON_PATH = path.join(__dirname, 'new-dining-ske.json');
+const OUTPUT_JSON_PATH = path.join(__dirname, 'new-dining-dev.json');
 const S3_BUCKET_NAME = 'baliciaga-database';
 const S3_REGION = 'ap-southeast-1';
 const S3_UPLOAD_IMAGE_PATH_PREFIX = 'dining-image-dev/';

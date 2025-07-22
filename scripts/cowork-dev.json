@@ -43,7 +43,7 @@
     "outdoorSeating": null,
     "servesVegetarianFood": null,
     "instagram": "https://www.instagram.com/bwork.bali/",
-    "staticMapS3Url": "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/b-work-bali_ChIJ6fBvIpg50i0R8764BCFFN60/b-work-bali_static.webp"
+    "staticMapS3Url": "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/b-work-bali/staticmap.webp"
   },
   {
     "name": "Ducat Space",
@@ -162,7 +162,7 @@
     "outdoorSeating": null,
     "servesVegetarianFood": null,
     "instagram": "https://www.instagram.com/ducatspace/",
-    "staticMapS3Url": "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/ducat-space-cafe-offices-co-working-meeting-rooms_ChIJCd9etMVH0i0RNkfYsSkhmZg/ducat-space-cafe-offices-co-working-meeting-rooms_static.webp"
+    "staticMapS3Url": "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/ducat-space/staticmap.webp"
   },
   {
     "name": "Genesis Creative Centre",
@@ -268,7 +268,7 @@
     "outdoorSeating": null,
     "servesVegetarianFood": null,
     "instagram": "https://www.instagram.com/inspireatgenesis/",
-    "staticMapS3Url": "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/genesis-creative-centre_ChIJSW0wnj9H0i0RBi6QO_C6M_o/genesis-creative-centre_static.webp"
+    "staticMapS3Url": "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/genesis-creative-centre/staticmap.webp"
   },
   {
     "name": "Karya Co-working Bali",
@@ -311,7 +311,7 @@
     "outdoorSeating": null,
     "servesVegetarianFood": null,
     "instagram": "https://www.instagram.com/karyacoworking/",
-    "staticMapS3Url": "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/karya-co-working-bali_ChIJQeo_7VxH0i0RmnzEcibuEb8/karya-co-working-bali_static.webp"
+    "staticMapS3Url": "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/karya-coworking-bali/staticmap.webp"
   },
   {
     "name": "Nebula Entrepreneur Coworking Space",
@@ -407,7 +407,7 @@
     "outdoorSeating": null,
     "servesVegetarianFood": null,
     "instagram": "https://www.instagram.com/nebulabali/",
-    "staticMapS3Url": "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/nebula-entrepreneur-coworking-space_ChIJY1RJ9Zs50i0R5x8HN0qZa9g/nebula-entrepreneur-coworking-space_static.webp"
+    "staticMapS3Url": "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/nebula-entrepreneur-coworking-space/staticmap.webp"
   },
   {
     "name": "PUCO Rooftop Coworking space & Eatery",
@@ -528,7 +528,7 @@
     "outdoorSeating": null,
     "servesVegetarianFood": null,
     "instagram": "https://www.instagram.com/pucorooftop/",
-    "staticMapS3Url": "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/puco-rooftop-coworking-space-eatery_ChIJOy4VgxU50i0R8mawVCoFiRw/puco-rooftop-coworking-space-eatery_static.webp"
+    "staticMapS3Url": "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/puco-rooftop-coworking-space-eatery/staticmap.webp"
   },
   {
     "name": "SETTER Coworking & Private Offices",
@@ -573,7 +573,7 @@
     "outdoorSeating": null,
     "servesVegetarianFood": null,
     "instagram": "https://www.instagram.com/setterbali/",
-    "staticMapS3Url": "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/setter-coworking-private-offices_ChIJc5xIUklH0i0R-2R5iW_1nx0/setter-coworking-private-offices_static.webp"
+    "staticMapS3Url": "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/setter-coworking-private-offices/staticmap.webp"
   },
   {
     "name": "Tropical Nomad Coworking Space",
@@ -621,6 +621,6 @@
     "outdoorSeating": null,
     "servesVegetarianFood": null,
     "instagram": "https://www.instagram.com/tropicalnomadcanggu/",
-    "staticMapS3Url": "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/tropical-nomad-coworking-space_ChIJvf4Cf7pF0i0RGVMhsUCiNBY/tropical-nomad-coworking-space_static.webp"
+    "staticMapS3Url": "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/tropical-nomad-coworking-space/staticmap.webp"
   }
 ]

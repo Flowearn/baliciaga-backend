@@ -6,15 +6,15 @@
     "longitude": 115.13945779999999,
     "businessStatus": "CLOSED_TEMPORARILY",
     "photos": [
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/honeycomb-hookah-eatery/photo_g.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/honeycomb-hookah-eatery/photo_h.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/honeycomb-hookah-eatery/photo_i.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/honeycomb-hookah-eatery/photo_a.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/honeycomb-hookah-eatery/photo_b.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/honeycomb-hookah-eatery/photo_c.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/honeycomb-hookah-eatery/photo_d.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/honeycomb-hookah-eatery/photo_e.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/honeycomb-hookah-eatery/photo_f.webp"
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/honeycomb-hookah-eatery/photo_g.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/honeycomb-hookah-eatery/photo_h.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/honeycomb-hookah-eatery/photo_i.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/honeycomb-hookah-eatery/photo_a.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/honeycomb-hookah-eatery/photo_b.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/honeycomb-hookah-eatery/photo_c.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/honeycomb-hookah-eatery/photo_d.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/honeycomb-hookah-eatery/photo_e.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/honeycomb-hookah-eatery/photo_f.webp"
     ],
     "phoneNumber": "0881-0382-06999",
     "rating": 4.8,
@@ -119,31 +119,13 @@
     "instagram": "https://www.instagram.com/honeycomb.bali/",
     "region": "",
     "googleMapsUri": "https://maps.google.com/?cid=8109452066626232456",
-    "staticMapS3Url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/honeycomb-hookah-eatery/staticmap.webp",
+    "staticMapS3Url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/honeycomb-hookah-eatery_ChIJN5xTyos50i0RiGBQWrCPinA/honeycomb-hookah-eatery_static.webp",
     "allowsDogs": true,
     "outdoorSeating": true,
     "servesVegetarianFood": true,
     "tableUrl": "https://wa.me/62881038206999",
     "gofoodUrl": "https://gofood.co.id/bali/restaurant/honeycomb-hookah-eatery-pasta-salad-burger-canggu-95014588-5bb0-40c4-8079-cd7e9bf20074?as=gmaps",
-    "menuUrl": "https://honeycombhookah.com/#rec735403781",
-    "barType": [
-      "Hookah Lounge & Restaurant"
-    ],
-    "drinkFocus": [
-      "Hookah",
-      "Cocktails"
-    ],
-    "atmosphere": [
-      "Chic",
-      "Cozy",
-      "Stylish",
-      "Relaxing"
-    ],
-    "priceRange": "IDR 200k - 400k",
-    "signatureDrinks": [
-      "Weekend 2-for-1 Cocktails",
-      "Extensive selection of hookah flavors"
-    ]
+    "menuUrl": "https://honeycombhookah.com/#rec735403781"
   },
   {
     "placeId": "ChIJk4MaNPo50i0R4vfuHDwZ_3U",
@@ -152,12 +134,12 @@
     "longitude": 115.13954059999999,
     "businessStatus": "OPERATIONAL",
     "photos": [
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/longtime-modern-asian-restaurant-bar-bali/photo_a.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/longtime-modern-asian-restaurant-bar-bali/photo_b.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/longtime-modern-asian-restaurant-bar-bali/photo_d.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/longtime-modern-asian-restaurant-bar-bali/photo_e.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/longtime-modern-asian-restaurant-bar-bali/photo_f.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/longtime-modern-asian-restaurant-bar-bali/photo_g.webp"
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/longtime-modern-asian-restaurant-bar-bali/photo_a.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/longtime-modern-asian-restaurant-bar-bali/photo_b.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/longtime-modern-asian-restaurant-bar-bali/photo_d.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/longtime-modern-asian-restaurant-bar-bali/photo_e.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/longtime-modern-asian-restaurant-bar-bali/photo_f.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/longtime-modern-asian-restaurant-bar-bali/photo_g.webp"
     ],
     "phoneNumber": "0821-4440-8260",
     "rating": 4.8,
@@ -261,33 +243,14 @@
     ],
     "region": "",
     "googleMapsUri": "https://maps.google.com/?cid=8502542367472941026",
-    "staticMapS3Url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/longtime-modern-asian-restaurant-bar-bali/staticmap.webp",
+    "staticMapS3Url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/longtime-modern-asian-restaurant-bar-bali_ChIJk4MaNPo50i0R4vfuHDwZ_3U/longtime-modern-asian-restaurant-bar-bali_static.webp",
     "allowsDogs": false,
     "outdoorSeating": true,
     "servesVegetarianFood": false,
     "tableUrl": "mailto:reservations@longtimebali.com",
     "gofoodUrl": "https://gofood.co.id/bali/restaurant/longtime-berawa-0985f916-adaa-4577-a693-c1f7ecaca261?as=gmaps",
     "instagram": "https://www.instagram.com/longtime.bali/",
-    "menuUrl": "https://www.longtimebali.com/menu",
-    "barType": [
-      "Modern Asian Restaurant & Bar"
-    ],
-    "drinkFocus": [
-      "Cocktails",
-      "Wine"
-    ],
-    "atmosphere": [
-      "Retro",
-      "Stylish",
-      "Vibrant",
-      "Moody",
-      "DJ Nights"
-    ],
-    "priceRange": "IDR 400k - 800k+",
-    "signatureDrinks": [
-      "Signature cocktails",
-      "Extensive wine list"
-    ]
+    "menuUrl": "https://www.longtimebali.com/menu"
   },
   {
     "placeId": "ChIJkYxdu3E50i0RrFJjPHk8LqI",
@@ -296,16 +259,16 @@
     "longitude": 115.13398639999998,
     "businessStatus": "OPERATIONAL",
     "photos": [
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/platonic/photo_a.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/platonic/photo_i.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/platonic/photo_j.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/platonic/photo_k.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/platonic/photo_b.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/platonic/photo_e.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/platonic/photo_f.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/platonic/photo_g.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/platonic/photo_h.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/platonic/photo_l.webp"
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/platonic/photo_a.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/platonic/photo_i.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/platonic/photo_j.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/platonic/photo_k.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/platonic/photo_b.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/platonic/photo_e.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/platonic/photo_f.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/platonic/photo_g.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/platonic/photo_h.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/platonic/photo_l.webp"
     ],
     "phoneNumber": "0821-4478-8810",
     "rating": 4.6,
@@ -397,33 +360,14 @@
     ],
     "region": "",
     "googleMapsUri": "https://maps.google.com/?cid=11686344574474867372",
-    "staticMapS3Url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/platonic/staticmap.webp",
+    "staticMapS3Url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/platonic_ChIJkYxdu3E50i0RrFJjPHk8LqI/platonic_static.webp",
     "allowsDogs": false,
     "outdoorSeating": true,
     "servesVegetarianFood": false,
     "tableUrl": "https://api.whatsapp.com/send/?phone=6282144788810&text&type=phone_number&app_absent=0",
     "gofoodUrl": "",
     "instagram": "https://www.instagram.com/platonicintimate/",
-    "menuUrl": "",
-    "barType": [
-      "Cocktail Bar / Speakeasy"
-    ],
-    "drinkFocus": [
-      "Craft Cocktails"
-    ],
-    "atmosphere": [
-      "Vintage",
-      "Cozy",
-      "Hidden",
-      "Party Vibe"
-    ],
-    "priceRange": "IDR 150k - 300k",
-    "signatureDrinks": [
-      "Hot Girl Summer",
-      "Plan B",
-      "Miami Coco White",
-      "Adults Only"
-    ]
+    "menuUrl": ""
   },
   {
     "placeId": "ChIJOwB4D8E50i0RnmcWbm5B1jI",
@@ -432,10 +376,10 @@
     "longitude": 115.1278125,
     "businessStatus": "OPERATIONAL",
     "photos": [
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/the-shady-fox/photo_a.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/the-shady-fox/photo_b.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/the-shady-fox/photo_c.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/the-shady-fox/photo_d.webp"
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/the-shady-fox/photo_a.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/the-shady-fox/photo_b.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/the-shady-fox/photo_c.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/the-shady-fox/photo_d.webp"
     ],
     "phoneNumber": "",
     "rating": 4.7,
@@ -528,33 +472,13 @@
     "instagram": "https://www.instagram.com/theshadyfox__/",
     "region": "",
     "googleMapsUri": "https://maps.google.com/?cid=3663187289461647262",
-    "staticMapS3Url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/the-shady-fox/staticmap.webp",
+    "staticMapS3Url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/the-shady-fox_ChIJOwB4D8E50i0RnmcWbm5B1jI/the-shady-fox_static.webp",
     "allowsDogs": false,
     "outdoorSeating": false,
     "servesVegetarianFood": false,
     "tableUrl": "",
     "menuUrl": "",
-    "gofoodUrl": "",
-    "barType": [
-      "Speakeasy Cocktail Parlour"
-    ],
-    "drinkFocus": [
-      "Craft Cocktails",
-      "House-distilled spirits"
-    ],
-    "atmosphere": [
-      "Theatrical",
-      "Vintage",
-      "Lavish",
-      "Live Jazz"
-    ],
-    "priceRange": "IDR 200k - 400k",
-    "signatureDrinks": [
-      "Dern Kala",
-      "Shogi Ice Tea",
-      "Porn Star",
-      "The Chester Cup"
-    ]
+    "gofoodUrl": ""
   },
   {
     "placeId": "ChIJgfLsf1pF0i0RTDMRSpGD_Zs",
@@ -563,12 +487,12 @@
     "longitude": 115.173977,
     "businessStatus": "OPERATIONAL",
     "photos": [
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/bali-beer-cycle/photo_a.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/bali-beer-cycle/photo_b.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/bali-beer-cycle/photo_c.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/bali-beer-cycle/photo_d.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/bali-beer-cycle/photo_e.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/bali-beer-cycle/photo_f.webp"
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/bali-beer-cycle/photo_a.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/bali-beer-cycle/photo_b.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/bali-beer-cycle/photo_c.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/bali-beer-cycle/photo_d.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/bali-beer-cycle/photo_e.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/bali-beer-cycle/photo_f.webp"
     ],
     "phoneNumber": "0857-3893-0898",
     "rating": 4.7,
@@ -673,31 +597,13 @@
     "instagram": "https://www.instagram.com/balibeercycle/",
     "region": "",
     "googleMapsUri": "https://maps.google.com/?cid=11240284905022763852",
-    "staticMapS3Url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/bali-beer-cycle/staticmap.webp",
+    "staticMapS3Url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/bali-beer-cycle_ChIJgfLsf1pF0i0RTDMRSpGD_Zs/bali-beer-cycle_static.webp",
     "allowsDogs": false,
     "outdoorSeating": false,
     "servesVegetarianFood": false,
     "tableUrl": "https://balibeercycle.com/#book",
     "menuUrl": "https://balibeercycle.com/",
-    "gofoodUrl": "",
-    "barType": [
-      "Mobile Bar / Party Bus"
-    ],
-    "drinkFocus": [
-      "Beer",
-      "Pre-mixed drinks"
-    ],
-    "atmosphere": [
-      "Fun",
-      "Social",
-      "Sightseeing",
-      "Party"
-    ],
-    "priceRange": "IDR 600k (Alcohol Package)",
-    "signatureDrinks": [
-      "Unlimited Bintang",
-      "Unlimited Smirnoff"
-    ]
+    "gofoodUrl": ""
   },
   {
     "placeId": "ChIJe7KSn4dH0i0RsfzzpwFhwpQ",
@@ -706,13 +612,13 @@
     "longitude": 115.13251989999998,
     "businessStatus": "OPERATIONAL",
     "photos": [
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/the-barn-gastropub/photo_a.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/the-barn-gastropub/photo_b.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/the-barn-gastropub/photo_c.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/the-barn-gastropub/photo_d.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/the-barn-gastropub/photo_e.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/the-barn-gastropub/photo_f.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/the-barn-gastropub/photo_g.webp"
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/barn-gastropub/photo_a.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/barn-gastropub/photo_b.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/barn-gastropub/photo_c.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/barn-gastropub/photo_d.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/barn-gastropub/photo_e.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/barn-gastropub/photo_f.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/barn-gastropub/photo_g.webp"
     ],
     "phoneNumber": "0823-4219-8485",
     "rating": 4.7,
@@ -817,31 +723,13 @@
     "instagram": "",
     "region": "",
     "googleMapsUri": "https://maps.google.com/?cid=10719236722835848369",
-    "staticMapS3Url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/the-barn-gastropub/staticmap.webp",
+    "staticMapS3Url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/the-barn-gastropub_ChIJe7KSn4dH0i0RsfzzpwFhwpQ/the-barn-gastropub_static.webp",
     "allowsDogs": true,
     "outdoorSeating": true,
     "servesVegetarianFood": false,
     "tableUrl": "https://letsumai.com/widget/the-barn",
     "menuUrl": "https://thebarnbali.com/menu/",
-    "gofoodUrl": "",
-    "barType": [
-      "British-style Gastropub / Sports Bar"
-    ],
-    "drinkFocus": [
-      "Draught Beer (Guinness)",
-      "Craft Beer"
-    ],
-    "atmosphere": [
-      "Traditional",
-      "Cozy",
-      "Sports-Focused",
-      "Family-Friendly"
-    ],
-    "priceRange": "IDR 150k - 300k",
-    "signatureDrinks": [
-      "Draught Guinness",
-      "Pint of Heineken & Burger deal"
-    ]
+    "gofoodUrl": ""
   },
   {
     "placeId": "ChIJNzjyIBI50i0RpFdnd_ZN3pg",
@@ -850,18 +738,18 @@
     "longitude": 115.14123629999999,
     "businessStatus": "OPERATIONAL",
     "photos": [
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/black-sand-brewery/photo_e.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/black-sand-brewery/photo_c.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/black-sand-brewery/photo_j.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/black-sand-brewery/photo_a.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/black-sand-brewery/photo_d.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/black-sand-brewery/photo_f.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/black-sand-brewery/photo_h.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/black-sand-brewery/photo_i.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/black-sand-brewery/photo_k.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/black-sand-brewery/photo_l.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/black-sand-brewery/photo_m.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/black-sand-brewery/photo_n.webp"
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/black-sand-brewery/photo_e.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/black-sand-brewery/photo_c.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/black-sand-brewery/photo_j.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/black-sand-brewery/photo_a.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/black-sand-brewery/photo_d.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/black-sand-brewery/photo_f.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/black-sand-brewery/photo_h.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/black-sand-brewery/photo_i.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/black-sand-brewery/photo_k.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/black-sand-brewery/photo_l.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/black-sand-brewery/photo_m.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/black-sand-brewery/photo_n.webp"
     ],
     "phoneNumber": "0811-3858-991",
     "rating": 4.7,
@@ -966,32 +854,13 @@
     "instagram": "https://www.instagram.com/blacksandbrewery/",
     "region": "",
     "googleMapsUri": "https://maps.google.com/?cid=11015327459555366820",
-    "staticMapS3Url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/black-sand-brewery/staticmap.webp",
+    "staticMapS3Url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/black-sand-brewery_ChIJNzjyIBI50i0RpFdnd_ZN3pg/black-sand-brewery_static.webp",
     "allowsDogs": true,
     "outdoorSeating": true,
     "servesVegetarianFood": true,
     "gofoodUrl": "https://gofood.co.id/bali/restaurant/black-sand-brewery-canggu-577ede74-1b3f-4b9e-9444-6a8229137def?as=gmaps",
     "tableUrl": "https://bookings.nowbookit.com/?accountid=0505a50a-8917-4706-afef-777b8d383627&venueid=10558&theme=light&colors=hex,000000",
-    "menuUrl": "https://www.blacksandbrewery.com/menu",
-    "barType": [
-      "Craft Brewery & Restaurant"
-    ],
-    "drinkFocus": [
-      "Craft Beer (IPA, Kolsch, Blonde, Porter)"
-    ],
-    "atmosphere": [
-      "Community Vibe",
-      "Beer Garden",
-      "Relaxed",
-      "Spacious"
-    ],
-    "priceRange": "IDR 200k - 350k",
-    "signatureDrinks": [
-      "IPA",
-      "Kolsch",
-      "Blonde Ale",
-      "Porter"
-    ]
+    "menuUrl": "https://www.blacksandbrewery.com/menu"
   },
   {
     "placeId": "ChIJcfxIJo850i0RsrveoncQeBs",
@@ -1000,10 +869,10 @@
     "longitude": 115.12422600000001,
     "businessStatus": "OPERATIONAL",
     "photos": [
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/shelter-restaurant/photo_a.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/shelter-restaurant/photo_b.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/shelter-restaurant/photo_c.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/shelter-restaurant/photo_d.webp"
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/shelter-restaurant/photo_a.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/shelter-restaurant/photo_b.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/shelter-restaurant/photo_c.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/shelter-restaurant/photo_d.webp"
     ],
     "phoneNumber": "0823-4004-0199",
     "rating": 4.5,
@@ -1108,7 +977,7 @@
     "instagram": "",
     "region": "",
     "googleMapsUri": "https://maps.google.com/?cid=1979350142248991666",
-    "staticMapS3Url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/shelter-restaurant/staticmap.webp",
+    "staticMapS3Url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/shelter-restaurant_ChIJcfxIJo850i0RsrveoncQeBs/shelter-restaurant_static.webp",
     "allowsDogs": false,
     "outdoorSeating": true,
     "servesVegetarianFood": true,
@@ -1123,13 +992,13 @@
     "longitude": 115.1499342,
     "businessStatus": "OPERATIONAL",
     "photos": [
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/potato-head-beach-club/photo_a.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/potato-head-beach-club/photo_b.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/potato-head-beach-club/photo_c.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/potato-head-beach-club/photo_d.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/potato-head-beach-club/photo_e.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/potato-head-beach-club/photo_g.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/potato-head-beach-club/photo_h.webp"
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/patato-head-beach-club/photo_a.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/patato-head-beach-club/photo_b.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/patato-head-beach-club/photo_c.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/patato-head-beach-club/photo_d.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/patato-head-beach-club/photo_e.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/patato-head-beach-club/photo_g.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/patato-head-beach-club/photo_h.webp"
     ],
     "phoneNumber": "(0361) 6207979",
     "rating": 4.6,
@@ -1234,34 +1103,13 @@
     "instagram": "https://www.instagram.com/potatoheadbali/",
     "region": "Seminyak",
     "googleMapsUri": "https://maps.google.com/?cid=1989935839513447758",
-    "staticMapS3Url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/potato-head-beach-club/staticmap.webp",
+    "staticMapS3Url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/potato-head-beach-club_ChIJ_XZL_xFH0i0RTo0EWBqsnRs/potato-head-beach-club_static.webp",
     "allowsDogs": true,
     "outdoorSeating": true,
     "servesVegetarianFood": false,
     "tableUrl": "https://www.tablecheck.com/potato-head-bali-beach-club/reserve?utm_source=google",
     "gofoodUrl": "",
-    "menuUrl": "",
-    "barType": [
-      "Beach Club / Lifestyle Destination"
-    ],
-    "drinkFocus": [
-      "Signature Cocktails",
-      "Wine"
-    ],
-    "atmosphere": [
-      "Vibrant",
-      "High-Energy",
-      "DJ Music",
-      "Poolside",
-      "Sunset Views"
-    ],
-    "priceRange": "IDR 400k - 800k+",
-    "signatureDrinks": [
-      "Kookaburra",
-      "Barong Zombie",
-      "Spicy Dragonfruit Margarita",
-      "Bina Colada"
-    ]
+    "menuUrl": ""
   },
   {
     "placeId": "ChIJCdPou9hH0i0RgIY7umQ751U",
@@ -1270,12 +1118,12 @@
     "longitude": 115.1464366,
     "businessStatus": "OPERATIONAL",
     "photos": [
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/friends-bar/photo_a.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/friends-bar/photo_b.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/friends-bar/photo_c.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/friends-bar/photo_d.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/friends-bar/photo_e.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/friends-bar/photo_f.webp"
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/friends-bar/photo_a.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/friends-bar/photo_b.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/friends-bar/photo_c.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/friends-bar/photo_d.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/friends-bar/photo_e.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/friends-bar/photo_f.webp"
     ],
     "phoneNumber": "0822-3658-6007",
     "rating": 4.9,
@@ -1380,31 +1228,13 @@
     "instagram": "https://instagram.com/friendsbarbali",
     "region": "Canggu",
     "googleMapsUri": "https://maps.google.com/?cid=6189981516651267712",
-    "staticMapS3Url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/friends-bar/staticmap.webp",
+    "staticMapS3Url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/friends-bar_ChIJCdPou9hH0i0RgIY7umQ751U/friends-bar_static.webp",
     "allowsDogs": false,
     "outdoorSeating": true,
     "servesVegetarianFood": false,
     "tableUrl": "https://wa.me/6282236586007",
     "gofoodUrl": "",
-    "menuUrl": "",
-    "barType": [
-      "Neighborhood Bar"
-    ],
-    "drinkFocus": [
-      "Whiskey",
-      "Classic Drinks"
-    ],
-    "atmosphere": [
-      "Friendly",
-      "Cozy",
-      "Home-Like",
-      "Low-Key"
-    ],
-    "priceRange": "IDR 50k - 150k",
-    "signatureDrinks": [
-      "Good whiskey selection",
-      "Classic cocktails"
-    ]
+    "menuUrl": ""
   },
   {
     "placeId": "ChIJiQdg1YdH0i0R8ANUMzZizN0",
@@ -1413,11 +1243,11 @@
     "longitude": 115.12974460000001,
     "businessStatus": "OPERATIONAL",
     "photos": [
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/the-lawn-canggu-beach-club/photo_a.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/the-lawn-canggu-beach-club/photo_b.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/the-lawn-canggu-beach-club/photo_c.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/the-lawn-canggu-beach-club/photo_d.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/the-lawn-canggu-beach-club/photo_e.webp"
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/the-lawn/photo_a.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/the-lawn/photo_b.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/the-lawn/photo_c.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/the-lawn/photo_d.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/the-lawn/photo_e.webp"
     ],
     "phoneNumber": "0811-3800-4951",
     "rating": 4.3,
@@ -1522,33 +1352,13 @@
     "instagram": "https://www.instagram.com/thelawncanggu",
     "region": "Canggu",
     "googleMapsUri": "https://maps.google.com/?cid=15982257162559947760",
-    "staticMapS3Url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/the-lawn-canggu-beach-club/staticmap.webp",
+    "staticMapS3Url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/the-lawn-canggu-beach-club_ChIJiQdg1YdH0i0R8ANUMzZizN0/the-lawn-canggu-beach-club_static.webp",
     "allowsDogs": true,
     "outdoorSeating": true,
     "servesVegetarianFood": false,
     "tableUrl": "https://www.sevenrooms.com/explore/thelawncanggu/reservations/create/search",
     "gofoodUrl": "",
-    "menuUrl": "",
-    "barType": [
-      "Beach Club"
-    ],
-    "drinkFocus": [
-      "Signature Cocktails",
-      "Spritzes"
-    ],
-    "atmosphere": [
-      "Beachfront",
-      "Casual Chic",
-      "Lively",
-      "Sunset Views"
-    ],
-    "priceRange": "IDR 250k - 500k",
-    "signatureDrinks": [
-      "Aperol Slush",
-      "Watermelon Mint Margarita",
-      "Sunset Margarita",
-      "Frozen Mango Margarita"
-    ]
+    "menuUrl": ""
   },
   {
     "placeId": "ChIJxZh1qu1H0i0R5BXWVSV1zK8",
@@ -1557,11 +1367,11 @@
     "longitude": 115.13982150000001,
     "businessStatus": "OPERATIONAL",
     "photos": [
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/the-shady-pig/photo_a.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/the-shady-pig/photo_b.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/the-shady-pig/photo_c.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/the-shady-pig/photo_d.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/the-shady-pig/photo_e.webp"
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/the-shady-pig/photo_a.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/the-shady-pig/photo_b.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/the-shady-pig/photo_c.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/the-shady-pig/photo_d.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/the-shady-pig/photo_e.webp"
     ],
     "phoneNumber": "0811-3981-1192",
     "rating": 4.5,
@@ -1654,32 +1464,13 @@
     "instagram": "https://www.instagram.com/theshadyfamily/",
     "region": "Canggu",
     "googleMapsUri": "https://maps.google.com/?cid=12667628655100696036",
-    "staticMapS3Url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/the-shady-pig/staticmap.webp",
+    "staticMapS3Url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/the-shady-pig_ChIJxZh1qu1H0i0R5BXWVSV1zK8/the-shady-pig_static.webp",
     "allowsDogs": false,
     "outdoorSeating": false,
     "servesVegetarianFood": false,
     "tableUrl": "",
     "gofoodUrl": "",
-    "menuUrl": "",
-    "barType": [
-      "Experimental Speakeasy Lounge"
-    ],
-    "drinkFocus": [
-      "Experimental & Craft Cocktails"
-    ],
-    "atmosphere": [
-      "1920s Theme",
-      "Mysterious",
-      "High-End",
-      "Clubby"
-    ],
-    "priceRange": "IDR 250k - 500k+",
-    "signatureDrinks": [
-      "Sexy Colada",
-      "Banana Old Fashioned",
-      "Shelby",
-      "The Chester"
-    ]
+    "menuUrl": ""
   },
   {
     "placeId": "ChIJ5Wex6mc50i0RNSHWdVKVoPo",
@@ -1688,21 +1479,21 @@
     "longitude": 115.1214935,
     "businessStatus": "OPERATIONAL",
     "photos": [
-      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/hippie-fish-pererenan-beach/photo_a.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/hippie-fish-pererenan-beach/photo_b.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/hippie-fish-pererenan-beach/photo_c.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/hippie-fish-pererenan-beach/photo_d.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/hippie-fish-pererenan-beach/photo_e.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/hippie-fish-pererenan-beach/photo_f.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/hippie-fish-pererenan-beach/photo_g.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/hippie-fish-pererenan-beach/photo_h.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/hippie-fish-pererenan-beach/photo_i.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/hippie-fish-pererenan-beach/photo_j.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/hippie-fish-pererenan-beach/photo_k.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/hippie-fish-pererenan-beach/photo_l.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/hippie-fish-pererenan-beach/photo_m.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/hippie-fish-pererenan-beach/photo_n.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/hippie-fish-pererenan-beach/photo_o.webp"
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/hippie-fish-pererenan-beach/photo_a.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/hippie-fish-pererenan-beach/photo_b.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/hippie-fish-pererenan-beach/photo_c.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/hippie-fish-pererenan-beach/photo_d.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/hippie-fish-pererenan-beach/photo_e.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/hippie-fish-pererenan-beach/photo_f.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/hippie-fish-pererenan-beach/photo_g.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/hippie-fish-pererenan-beach/photo_h.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/hippie-fish-pererenan-beach/photo_i.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/hippie-fish-pererenan-beach/photo_j.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/hippie-fish-pererenan-beach/photo_k.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/hippie-fish-pererenan-beach/photo_l.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/hippie-fish-pererenan-beach/photo_m.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/hippie-fish-pererenan-beach/photo_n.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/hippie-fish-pererenan-beach/photo_o.webp"
     ],
     "phoneNumber": "0813-3759-6236",
     "rating": 4.7,
@@ -1807,31 +1598,13 @@
     "instagram": "https://www.instagram.com/hippiefishbali/",
     "region": "Canggu",
     "googleMapsUri": "https://maps.google.com/?cid=18059598687152513333",
-    "staticMapS3Url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/hippie-fish-pererenan-beach/staticmap.webp",
+    "staticMapS3Url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/hippie-fish-pererenan-beach_ChIJ5Wex6mc50i0RNSHWdVKVoPo/hippie-fish-pererenan-beach_static.webp",
     "allowsDogs": true,
     "outdoorSeating": true,
     "servesVegetarianFood": true,
     "tableUrl": "https://bookings.nowbookit.com/?accountid=ef96395c-825b-4544-a723-d82e6e7eec07&venueid=10126&theme=light&colors=hex,e1f5fe,283593&font=Abel",
     "gofoodUrl": "https://gofood.co.id/jakarta/restaurant/0c47ffc3-27fc-468f-9531-b135049bd7c7?as=gmaps",
-    "menuUrl": "https://drive.google.com/file/d/1hCrvKBk1Bjj-h_ys_lKIoAZKNNmgzBJU/view",
-    "barType": [
-      "Restaurant & Rooftop Bar"
-    ],
-    "drinkFocus": [
-      "Cocktails",
-      "Wine"
-    ],
-    "atmosphere": [
-      "Beachfront",
-      "Rooftop",
-      "Vibrant",
-      "Boho-Chic"
-    ],
-    "priceRange": "IDR 150k - 300k",
-    "signatureDrinks": [
-      "Mediterranean-inspired cocktails",
-      "Balinese twist drinks"
-    ]
+    "menuUrl": "https://drive.google.com/file/d/1hCrvKBk1Bjj-h_ys_lKIoAZKNNmgzBJU/view"
   },
   {
     "placeId": "ChIJYcKvqiJH0i0RtzWDiRmCnI0",
@@ -1840,16 +1613,16 @@
     "longitude": 115.13977519999999,
     "businessStatus": "OPERATIONAL",
     "photos": [
-      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/miss-fish-bali/photo_c.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/miss-fish-bali/photo_a.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/miss-fish-bali/photo_b.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/miss-fish-bali/photo_d.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/miss-fish-bali/photo_e.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/miss-fish-bali/photo_f.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/miss-fish-bali/photo_g.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/miss-fish-bali/photo_h.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/miss-fish-bali/photo_i.webp",
-      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/miss-fish-bali/photo_j.webp"
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/miss-fish-bali/photo_c.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/miss-fish-bali/photo_a.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/miss-fish-bali/photo_b.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/miss-fish-bali/photo_d.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/miss-fish-bali/photo_e.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/miss-fish-bali/photo_f.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/miss-fish-bali/photo_g.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/miss-fish-bali/photo_h.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/miss-fish-bali/photo_i.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/miss-fish-bali/photo_j.webp"
     ],
     "phoneNumber": "0813-9000-6477",
     "rating": 4.6,
@@ -1942,31 +1715,12 @@
     "instagram": "https://www.instagram.com/missfishbali",
     "region": "Canggu",
     "googleMapsUri": "https://maps.google.com/?cid=10204173901907572151",
-    "staticMapS3Url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/miss-fish-bali/staticmap.webp",
+    "staticMapS3Url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-prod/miss-fish-bali_ChIJYcKvqiJH0i0RtzWDiRmCnI0/miss-fish-bali_static.webp",
     "allowsDogs": false,
     "outdoorSeating": false,
     "servesVegetarianFood": true,
     "tableUrl": "https://bookings.nowbookit.com/?accountid=ef22cedb-3885-49b5-bf9d-404c84edb9dc&venueid=10057&theme=outlined-dark&colors=hex,ffffff",
     "gofoodUrl": "",
-    "menuUrl": "https://www.missfishbali.com/wp-content/uploads/2022/09/Miss-Fish-All-Menu.pdf",
-    "barType": [
-      "Japanese Fusion Restaurant & Club"
-    ],
-    "drinkFocus": [
-      "Signature Cocktails",
-      "High-end Spirits"
-    ],
-    "atmosphere": [
-      "Chic",
-      "Delicate (Dining)",
-      "High-Energy",
-      "Fiery (Club)"
-    ],
-    "priceRange": "IDR 400k - 1,000k+",
-    "signatureDrinks": [
-      "KITSUNE (Bourbon, Butterscotch)",
-      "TAKAYUKI (Rum, Mezcal, Pineapple)",
-      "I NO NAKA (Tequila, Port, Amareto)"
-    ]
+    "menuUrl": "https://www.missfishbali.com/wp-content/uploads/2022/09/Miss-Fish-All-Menu.pdf"
   }
 ]

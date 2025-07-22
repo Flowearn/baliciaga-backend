@@ -1,0 +1,2499 @@
+[
+  {
+    "name": "Alma Tapas Bar - Canggu",
+    "photos": [
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/alma-tapas-bar-canggu/photo_a.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/alma-tapas-bar-canggu/photo_b.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/alma-tapas-bar-canggu/photo_c.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/alma-tapas-bar-canggu/photo_d.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/alma-tapas-bar-canggu/photo_e.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/alma-tapas-bar-canggu/photo_f.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/alma-tapas-bar-canggu/photo_g.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/alma-tapas-bar-canggu/photo_h.webp"
+    ],
+    "placeId": "ChIJTTj8Ts9H0i0R2XwcfS_i6Mk",
+    "latitude": -8.6651224,
+    "longitude": 115.1399234,
+    "googleMapsUri": "https://maps.google.com/?cid=14549127289810746585",
+    "businessStatus": "OPERATIONAL",
+    "openingHours": [
+      "Monday: 3:00 – 11:00 PM",
+      "Tuesday: 3:00 – 11:00 PM",
+      "Wednesday: 3:00 – 11:00 PM",
+      "Thursday: 3:00 – 11:00 PM",
+      "Friday: 3:00 – 11:00 PM",
+      "Saturday: 3:00 – 11:00 PM",
+      "Sunday: 3:00 – 11:00 PM"
+    ],
+    "openingPeriods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 15,
+          "minute": 0
+        },
+        "close": {
+          "day": 0,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 1,
+          "hour": 15,
+          "minute": 0
+        },
+        "close": {
+          "day": 1,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 15,
+          "minute": 0
+        },
+        "close": {
+          "day": 2,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 15,
+          "minute": 0
+        },
+        "close": {
+          "day": 3,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 15,
+          "minute": 0
+        },
+        "close": {
+          "day": 4,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 15,
+          "minute": 0
+        },
+        "close": {
+          "day": 5,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 15,
+          "minute": 0
+        },
+        "close": {
+          "day": 6,
+          "hour": 23,
+          "minute": 0
+        }
+      }
+    ],
+    "isOpenNow": false,
+    "website": "http://almatapasbar.com/",
+    "phoneNumber": "0819-9910-5888",
+    "rating": 4.8,
+    "userRatingsTotal": 1200,
+    "allowsDogs": null,
+    "outdoorSeating": true,
+    "servesVegetarianFood": true,
+    "instagram": "https://www.instagram.com/almatapasbar/",
+    "staticMapS3Url": "https://dyyme2yybmi4j.cloudfront.net/dining-image-prod/alma-tapas-bar-canggu/staticmap.png",
+    "menuUrl": "http://almatapasbar.com/#menu",
+    "tableUrl": "https://www.chope.co/bali-restaurants/restaurant/alma-tapas-bar-canggu?rwg_token=ACgRB3ey6jMAokBSE5f39VTz1FKsn498XY3FkTffdqKL6t543aQDjsW7oicclSXQgjsWUn6hnloy0LZvtZ02rc3mtMzuxlGMh7TvSma0MrVql0USJlHkyOo%3D",
+    "gofoodUrl": ""
+  },
+  {
+    "name": "Billy Ho Japanese Restaurant",
+    "photos": [
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/billy-ho-japanese-restaurant/photo_a.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/billy-ho-japanese-restaurant/photo_b.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/billy-ho-japanese-restaurant/photo_c.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/billy-ho-japanese-restaurant/photo_d.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/billy-ho-japanese-restaurant/photo_e.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/billy-ho-japanese-restaurant/photo_f.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/billy-ho-japanese-restaurant/photo_g.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/billy-ho-japanese-restaurant/photo_h.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/billy-ho-japanese-restaurant/photo_i.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/billy-ho-japanese-restaurant/photo_j.webp"
+    ],
+    "placeId": "ChIJ0RSTlvJH0i0R1ozPGwVxSoU",
+    "latitude": -8.6568342,
+    "longitude": 115.1314413,
+    "googleMapsUri": "https://maps.google.com/?cid=9604613422076366038",
+    "businessStatus": "OPERATIONAL",
+    "openingHours": [
+      "Monday: 12:00 – 11:00 PM",
+      "Tuesday: 12:00 – 11:00 PM",
+      "Wednesday: 12:00 – 11:00 PM",
+      "Thursday: 12:00 – 11:00 PM",
+      "Friday: 12:00 – 11:00 PM",
+      "Saturday: 12:00 – 11:00 PM",
+      "Sunday: 12:00 – 11:00 PM"
+    ],
+    "openingPeriods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 0,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 1,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 1,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 2,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 3,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 4,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 5,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 6,
+          "hour": 23,
+          "minute": 0
+        }
+      }
+    ],
+    "isOpenNow": false,
+    "website": "https://billyho.co/",
+    "phoneNumber": "0877-3552-2232",
+    "rating": 4.7,
+    "userRatingsTotal": 858,
+    "allowsDogs": false,
+    "outdoorSeating": null,
+    "servesVegetarianFood": true,
+    "instagram": "https://instagram.com/billyho.co",
+    "staticMapS3Url": "https://dyyme2yybmi4j.cloudfront.net/dining-image-prod/billy-ho-japanese-restaurant/staticmap.png",
+    "menuUrl": "https://billyho.co/dinner-menu/",
+    "tableUrl": "https://billyho.co/booking",
+    "gofoodUrl": ""
+  },
+  {
+    "name": "Hippie Fish Pererenan Beach",
+    "photos": [
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/hippie-fish-pererenan-beach/photo_a.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/hippie-fish-pererenan-beach/photo_b.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/hippie-fish-pererenan-beach/photo_c.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/hippie-fish-pererenan-beach/photo_d.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/hippie-fish-pererenan-beach/photo_e.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/hippie-fish-pererenan-beach/photo_f.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/hippie-fish-pererenan-beach/photo_g.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/hippie-fish-pererenan-beach/photo_h.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/hippie-fish-pererenan-beach/photo_i.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/hippie-fish-pererenan-beach/photo_j.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/hippie-fish-pererenan-beach/photo_k.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/hippie-fish-pererenan-beach/photo_l.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/hippie-fish-pererenan-beach/photo_m.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/hippie-fish-pererenan-beach/photo_n.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/hippie-fish-pererenan-beach/photo_o.webp"
+    ],
+    "placeId": "ChIJ5Wex6mc50i0RNSHWdVKVoPo",
+    "latitude": -8.6517584,
+    "longitude": 115.1214935,
+    "googleMapsUri": "https://maps.google.com/?cid=18059598687152513333",
+    "businessStatus": "OPERATIONAL",
+    "openingHours": [
+      "Monday: 12:00 – 11:00 PM",
+      "Tuesday: 12:00 – 11:00 PM",
+      "Wednesday: 12:00 – 11:00 PM",
+      "Thursday: 12:00 – 11:00 PM",
+      "Friday: 12:00 – 11:00 PM",
+      "Saturday: 12:00 – 11:00 PM",
+      "Sunday: 12:00 – 11:00 PM"
+    ],
+    "openingPeriods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 0,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 1,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 1,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 2,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 3,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 4,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 5,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 6,
+          "hour": 23,
+          "minute": 0
+        }
+      }
+    ],
+    "isOpenNow": false,
+    "website": "https://hippie-fish.com/?utm_source=gbpo&utm_medium=organic&utm_id=gbpo",
+    "phoneNumber": "0813-3759-6236",
+    "rating": 4.7,
+    "userRatingsTotal": 802,
+    "allowsDogs": true,
+    "outdoorSeating": true,
+    "servesVegetarianFood": true,
+    "instagram": "https://www.instagram.com/hippiefishbali/",
+    "staticMapS3Url": "https://dyyme2yybmi4j.cloudfront.net/dining-image-prod/hippie-fish-pererenan-beach/staticmap.png",
+    "menuUrl": "https://drive.google.com/file/d/1hCrvKBk1Bjj-h_ys_lKIoAZKNNmgzBJU/view",
+    "tableUrl": "https://bookings.nowbookit.com/?accountid=ef96395c-825b-4544-a723-d82e6e7eec07&venueid=10126&theme=light&colors=hex,e1f5fe,283593&font=Abel",
+    "gofoodUrl": "https://gofood.co.id/jakarta/restaurant/0c47ffc3-27fc-468f-9531-b135049bd7c7?as=gmaps"
+  },
+  {
+    "name": "Ji Restaurant Bali",
+    "photos": [
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/ji-restaurant-bali/photo_a.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/ji-restaurant-bali/photo_b.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/ji-restaurant-bali/photo_c.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/ji-restaurant-bali/photo_d.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/ji-restaurant-bali/photo_e.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/ji-restaurant-bali/photo_f.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/ji-restaurant-bali/photo_g.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/ji-restaurant-bali/photo_h.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/ji-restaurant-bali/photo_i.webp"
+    ],
+    "placeId": "ChIJWVWpMoZH0i0RRFcupYVhVi4",
+    "latitude": -8.6586879,
+    "longitude": 115.1305736,
+    "googleMapsUri": "https://maps.google.com/?cid=3338963400371623748",
+    "businessStatus": "OPERATIONAL",
+    "openingHours": [
+      "Monday: 12:00 – 11:00 PM",
+      "Tuesday: 12:00 – 11:00 PM",
+      "Wednesday: 12:00 – 11:00 PM",
+      "Thursday: 12:00 – 11:00 PM",
+      "Friday: 12:00 – 11:00 PM",
+      "Saturday: 12:00 – 11:00 PM",
+      "Sunday: 12:00 – 11:00 PM"
+    ],
+    "openingPeriods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 0,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 1,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 1,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 2,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 3,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 4,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 5,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 6,
+          "hour": 23,
+          "minute": 0
+        }
+      }
+    ],
+    "isOpenNow": false,
+    "website": "http://www.jirestaurantbali.com/",
+    "phoneNumber": "0811-3889-599",
+    "rating": 4.6,
+    "userRatingsTotal": 1345,
+    "allowsDogs": null,
+    "outdoorSeating": true,
+    "servesVegetarianFood": true,
+    "instagram": "https://www.instagram.com/jirestaurantbali/",
+    "staticMapS3Url": "https://dyyme2yybmi4j.cloudfront.net/dining-image-prod/ji-restaurant-bali/staticmap.png",
+    "menuUrl": "http://www.jirestaurantbali.com/menu/",
+    "tableUrl": "https://www.google.com/maps/reserve/v/dine/c/yBwP6TlnoDk?source=pa&opi=79508299&hl=zh-CN&gei=hoZXaIeXMe-U4-EP85aBgAQ&sourceurl=https://www.google.com/service/MapsPlaceService/GetPlace?authuser%3D0%26gl%3Did%26hl%3Dzh-CN",
+    "gofoodUrl": "https://gofood.co.id/jakarta/restaurant/79e304f6-0743-4c92-bb37-614ab8ceddd2?as=gmaps"
+  },
+  {
+    "name": "LACALITA Canggu",
+    "photos": [
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/lacalita-canggu/photo_a.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/lacalita-canggu/photo_b.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/lacalita-canggu/photo_c.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/lacalita-canggu/photo_d.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/lacalita-canggu/photo_e.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/lacalita-canggu/photo_f.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/lacalita-canggu/photo_g.webp"
+    ],
+    "placeId": "ChIJPZo4Unk40i0RxI_FwqiKsWQ",
+    "latitude": -8.655695999999999,
+    "longitude": 115.13158299999999,
+    "googleMapsUri": "https://maps.google.com/?cid=7255732932097445828",
+    "businessStatus": "OPERATIONAL",
+    "openingHours": [
+      "Monday: 12:00 PM – 12:00 AM",
+      "Tuesday: 12:00 PM – 12:00 AM",
+      "Wednesday: 12:00 PM – 12:00 AM",
+      "Thursday: 12:00 PM – 12:00 AM",
+      "Friday: 12:00 PM – 12:00 AM",
+      "Saturday: 12:00 PM – 12:00 AM",
+      "Sunday: 12:00 PM – 12:00 AM"
+    ],
+    "openingPeriods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 1,
+          "hour": 0,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 1,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 2,
+          "hour": 0,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 3,
+          "hour": 0,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 4,
+          "hour": 0,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 5,
+          "hour": 0,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 6,
+          "hour": 0,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 0,
+          "hour": 0,
+          "minute": 0
+        }
+      }
+    ],
+    "isOpenNow": false,
+    "website": "https://www.lacalitabali.com/",
+    "phoneNumber": "0822-4731-2217",
+    "rating": 4.3,
+    "userRatingsTotal": 1182,
+    "allowsDogs": null,
+    "outdoorSeating": true,
+    "servesVegetarianFood": true,
+    "instagram": "https://www.instagram.com/lacalitabali/",
+    "staticMapS3Url": "https://dyyme2yybmi4j.cloudfront.net/dining-image-prod/lacalita-canggu/staticmap.png",
+    "menuUrl": "https://www.lacalitabali.com/",
+    "tableUrl": "https://www.lacalitabali.com/booking",
+    "gofoodUrl": "https://gofood.co.id/jakarta/restaurant/211d1a96-73ce-4d90-a02a-54a8af68e773?as=gmaps"
+  },
+  {
+    "name": "La Baracca Bali (Seminyak)",
+    "photos": [
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/la-baracca/photo_b.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/la-baracca/photo_a.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/la-baracca/photo_c.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/la-baracca/photo_d.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/la-baracca/photo_e.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/la-baracca/photo_f.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/la-baracca/photo_g.webp"
+    ],
+    "placeId": "ChIJj0tR_mpH0i0RP5h_ieNuzAs",
+    "latitude": -8.6716594,
+    "longitude": 115.1624609,
+    "googleMapsUri": "https://maps.google.com/?cid=850176353209653311",
+    "businessStatus": "OPERATIONAL",
+    "openingHours": [
+      "Monday: 12:00 – 10:45 PM",
+      "Tuesday: 12:00 – 10:45 PM",
+      "Wednesday: 12:00 – 10:45 PM",
+      "Thursday: 12:00 – 10:45 PM",
+      "Friday: 12:00 – 10:45 PM",
+      "Saturday: 12:00 – 10:45 PM",
+      "Sunday: 12:00 – 10:45 PM"
+    ],
+    "openingPeriods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 0,
+          "hour": 22,
+          "minute": 45
+        }
+      },
+      {
+        "open": {
+          "day": 1,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 1,
+          "hour": 22,
+          "minute": 45
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 2,
+          "hour": 22,
+          "minute": 45
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 3,
+          "hour": 22,
+          "minute": 45
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 4,
+          "hour": 22,
+          "minute": 45
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 5,
+          "hour": 22,
+          "minute": 45
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 6,
+          "hour": 22,
+          "minute": 45
+        }
+      }
+    ],
+    "isOpenNow": false,
+    "website": "https://labaraccabali.com/",
+    "phoneNumber": "0819-9163-2091",
+    "rating": 4.5,
+    "userRatingsTotal": 1173,
+    "allowsDogs": null,
+    "outdoorSeating": true,
+    "servesVegetarianFood": true,
+    "instagram": "",
+    "staticMapS3Url": "https://dyyme2yybmi4j.cloudfront.net/dining-image-prod/la-baracca/staticmap.png",
+    "menuUrl": "https://drive.google.com/file/d/19hdROGoCidEMqywM7a-KV0dHeHxmiADj/view",
+    "tableUrl": "https://www.google.com/maps/reserve/v/dine/c/wUG9hcDEqB8?source=pa&opi=79508299&hl=zh-CN&gei=IIdXaInDDJ6H4-EPlpL12Qo&sourceurl=https://www.google.com/service/MapsPlaceService/GetPlace?authuser%3D0%26gl%3Did%26hl%3Dzh-CN",
+    "gofoodUrl": "https://gofood.co.id/jakarta/restaurant/1545c705-ab14-41a3-871a-c377f4fbb6f9?as=gmaps"
+  },
+  {
+    "name": "Luigi's Hot Pizza Canggu",
+    "photos": [
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/luigis-hot-pizza-canggu/photo_a.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/luigis-hot-pizza-canggu/photo_b.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/luigis-hot-pizza-canggu/photo_c.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/luigis-hot-pizza-canggu/photo_d.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/luigis-hot-pizza-canggu/photo_e.webp"
+    ],
+    "placeId": "ChIJV8j8ZXk40i0RQ_ByVyakQkc",
+    "latitude": -8.651311999999999,
+    "longitude": 115.13372,
+    "googleMapsUri": "https://maps.google.com/?cid=5134847009738649667",
+    "businessStatus": "OPERATIONAL",
+    "openingHours": [
+      "Monday: 4:00 PM – 12:00 AM",
+      "Tuesday: 4:00 PM – 12:00 AM",
+      "Wednesday: 4:00 PM – 12:00 AM",
+      "Thursday: 4:00 PM – 12:00 AM",
+      "Friday: 4:00 PM – 12:00 AM",
+      "Saturday: 4:00 PM – 12:00 AM",
+      "Sunday: 4:00 PM – 12:00 AM"
+    ],
+    "openingPeriods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 16,
+          "minute": 0
+        },
+        "close": {
+          "day": 1,
+          "hour": 0,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 1,
+          "hour": 16,
+          "minute": 0
+        },
+        "close": {
+          "day": 2,
+          "hour": 0,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 16,
+          "minute": 0
+        },
+        "close": {
+          "day": 3,
+          "hour": 0,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 16,
+          "minute": 0
+        },
+        "close": {
+          "day": 4,
+          "hour": 0,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 16,
+          "minute": 0
+        },
+        "close": {
+          "day": 5,
+          "hour": 0,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 16,
+          "minute": 0
+        },
+        "close": {
+          "day": 6,
+          "hour": 0,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 16,
+          "minute": 0
+        },
+        "close": {
+          "day": 0,
+          "hour": 0,
+          "minute": 0
+        }
+      }
+    ],
+    "isOpenNow": false,
+    "website": "http://luigishotpizza.com/",
+    "phoneNumber": "0811-3944-450",
+    "rating": 4.3,
+    "userRatingsTotal": 2120,
+    "allowsDogs": null,
+    "outdoorSeating": true,
+    "servesVegetarianFood": true,
+    "instagram": "https://www.instagram.com/luigishotpizzabali/",
+    "staticMapS3Url": "https://dyyme2yybmi4j.cloudfront.net/dining-image-prod/luigis-hot-pizza-canggu/staticmap.png",
+    "menuUrl": "https://luigishotpizza.com/menu/",
+    "tableUrl": "https://www.sevenrooms.com/reservations/luigishotpizza/goog",
+    "gofoodUrl": "https://gofood.co.id/jakarta/restaurant/2fc8ccab-4cb6-4289-a7b7-fa20a5797269?as=gmaps"
+  },
+  {
+    "name": "M. MASON Bar | Grill Canggu",
+    "photos": [
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/m-mason-bar-grill-canggu/photo_a.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/m-mason-bar-grill-canggu/photo_b.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/m-mason-bar-grill-canggu/photo_c.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/m-mason-bar-grill-canggu/photo_d.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/m-mason-bar-grill-canggu/photo_e.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/m-mason-bar-grill-canggu/photo_f.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/m-mason-bar-grill-canggu/photo_g.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/m-mason-bar-grill-canggu/photo_h.webp"
+    ],
+    "placeId": "ChIJBWxfWhA50i0Rzb3CWOIu8tA",
+    "latitude": -8.653979099999999,
+    "longitude": 115.13183670000001,
+    "googleMapsUri": "https://maps.google.com/?cid=15056148053939633613",
+    "businessStatus": "OPERATIONAL",
+    "openingHours": [
+      "Monday: 12:00 PM – 12:00 AM",
+      "Tuesday: 12:00 PM – 12:00 AM",
+      "Wednesday: 12:00 PM – 12:00 AM",
+      "Thursday: 12:00 PM – 12:00 AM",
+      "Friday: 12:00 PM – 12:00 AM",
+      "Saturday: 12:00 PM – 12:00 AM",
+      "Sunday: 12:00 PM – 12:00 AM"
+    ],
+    "openingPeriods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 1,
+          "hour": 0,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 1,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 2,
+          "hour": 0,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 3,
+          "hour": 0,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 4,
+          "hour": 0,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 5,
+          "hour": 0,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 6,
+          "hour": 0,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 0,
+          "hour": 0,
+          "minute": 0
+        }
+      }
+    ],
+    "isOpenNow": false,
+    "website": "https://www.masonbali.com/",
+    "phoneNumber": "0857-9250-5028",
+    "rating": 4.4,
+    "userRatingsTotal": 1942,
+    "allowsDogs": null,
+    "outdoorSeating": true,
+    "servesVegetarianFood": null,
+    "instagram": "",
+    "staticMapS3Url": "https://dyyme2yybmi4j.cloudfront.net/dining-image-prod/m-mason-bar-grill-canggu/staticmap.png",
+    "menuUrl": "https://masonbali.com/canggu/menu/",
+    "tableUrl": "https://masonbali.com/canggu/bookings/",
+    "gofoodUrl": "https://gofood.co.id/jakarta/restaurant/71c6df23-31fa-44d7-ac56-b62316f6b5d9?as=gmaps"
+  },
+  {
+    "name": "Miss Fish Bali",
+    "photos": [
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/miss-fish-bali/photo_c.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/miss-fish-bali/photo_a.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/miss-fish-bali/photo_b.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/miss-fish-bali/photo_d.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/miss-fish-bali/photo_e.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/miss-fish-bali/photo_f.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/miss-fish-bali/photo_g.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/miss-fish-bali/photo_h.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/miss-fish-bali/photo_i.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/miss-fish-bali/photo_j.webp"
+    ],
+    "placeId": "ChIJYcKvqiJH0i0RtzWDiRmCnI0",
+    "latitude": -8.6587757,
+    "longitude": 115.13977519999999,
+    "googleMapsUri": "https://maps.google.com/?cid=10204173901907572151",
+    "businessStatus": "OPERATIONAL",
+    "openingHours": [
+      "Monday: Closed",
+      "Tuesday: 6:00 PM – 3:00 AM",
+      "Wednesday: 6:00 PM – 3:00 AM",
+      "Thursday: 6:00 PM – 3:00 AM",
+      "Friday: 6:00 PM – 3:00 AM",
+      "Saturday: 6:00 PM – 3:00 AM",
+      "Sunday: 6:00 PM – 3:00 AM"
+    ],
+    "openingPeriods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 18,
+          "minute": 0
+        },
+        "close": {
+          "day": 1,
+          "hour": 3,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 18,
+          "minute": 0
+        },
+        "close": {
+          "day": 3,
+          "hour": 3,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 18,
+          "minute": 0
+        },
+        "close": {
+          "day": 4,
+          "hour": 3,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 18,
+          "minute": 0
+        },
+        "close": {
+          "day": 5,
+          "hour": 3,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 18,
+          "minute": 0
+        },
+        "close": {
+          "day": 6,
+          "hour": 3,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 18,
+          "minute": 0
+        },
+        "close": {
+          "day": 0,
+          "hour": 3,
+          "minute": 0
+        }
+      }
+    ],
+    "isOpenNow": false,
+    "website": "http://www.missfishbali.com/",
+    "phoneNumber": "0813-9000-6477",
+    "rating": 4.6,
+    "userRatingsTotal": 1055,
+    "allowsDogs": false,
+    "outdoorSeating": false,
+    "servesVegetarianFood": true,
+    "instagram": "https://www.instagram.com/missfishbali",
+    "staticMapS3Url": "https://dyyme2yybmi4j.cloudfront.net/dining-image-prod/miss-fish-bali/staticmap.png",
+    "menuUrl": "https://www.missfishbali.com/wp-content/uploads/2022/09/Miss-Fish-All-Menu.pdf",
+    "tableUrl": "https://bookings.nowbookit.com/?accountid=ef22cedb-3885-49b5-bf9d-404c84edb9dc&venueid=10057&theme=outlined-dark&colors=hex,ffffff",
+    "gofoodUrl": ""
+  },
+  {
+    "name": "Mosto | Berawa",
+    "photos": [
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/mosto-berawa/photo_d.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/mosto-berawa/photo_e.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/mosto-berawa/photo_a.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/mosto-berawa/photo_b.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/mosto-berawa/photo_c.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/mosto-berawa/photo_f.webp"
+    ],
+    "placeId": "ChIJD4eq-jFH0i0ROgK2DCf0uNw",
+    "latitude": -8.661413,
+    "longitude": 115.13948849999998,
+    "googleMapsUri": "https://maps.google.com/?cid=15904730532613063226",
+    "businessStatus": "OPERATIONAL",
+    "openingHours": [
+      "Monday: 5:00 PM – 12:30 AM",
+      "Tuesday: 5:00 PM – 12:30 AM",
+      "Wednesday: 5:00 PM – 12:30 AM",
+      "Thursday: 5:00 PM – 12:30 AM",
+      "Friday: 5:00 PM – 12:30 AM",
+      "Saturday: 5:00 PM – 12:30 AM",
+      "Sunday: 5:00 PM – 12:30 AM"
+    ],
+    "openingPeriods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 17,
+          "minute": 0
+        },
+        "close": {
+          "day": 1,
+          "hour": 0,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 1,
+          "hour": 17,
+          "minute": 0
+        },
+        "close": {
+          "day": 2,
+          "hour": 0,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 17,
+          "minute": 0
+        },
+        "close": {
+          "day": 3,
+          "hour": 0,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 17,
+          "minute": 0
+        },
+        "close": {
+          "day": 4,
+          "hour": 0,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 17,
+          "minute": 0
+        },
+        "close": {
+          "day": 5,
+          "hour": 0,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 17,
+          "minute": 0
+        },
+        "close": {
+          "day": 6,
+          "hour": 0,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 17,
+          "minute": 0
+        },
+        "close": {
+          "day": 0,
+          "hour": 0,
+          "minute": 30
+        }
+      }
+    ],
+    "isOpenNow": false,
+    "website": "http://www.mostobali.com/",
+    "phoneNumber": "0811-3980-909",
+    "rating": 4.6,
+    "userRatingsTotal": 374,
+    "allowsDogs": true,
+    "outdoorSeating": true,
+    "servesVegetarianFood": true,
+    "instagram": "https://www.instagram.com/mostobali/",
+    "staticMapS3Url": "https://dyyme2yybmi4j.cloudfront.net/dining-image-prod/mosto-berawa/staticmap.png",
+    "menuUrl": "https://mostobali.com/menu/",
+    "tableUrl": "https://www.sevenrooms.com/reservations/mosto/goog",
+    "gofoodUrl": ""
+  },
+  {
+    "name": "One Eyed Jack",
+    "photos": [
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/one-eyed-jack/photo_a.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/one-eyed-jack/photo_b.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/one-eyed-jack/photo_c.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/one-eyed-jack/photo_d.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/one-eyed-jack/photo_e.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/one-eyed-jack/photo_f.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/one-eyed-jack/photo_g.webp"
+    ],
+    "placeId": "ChIJC3RsyoJH0i0Rri-AJ8JF9Tg",
+    "latitude": -8.6652062,
+    "longitude": 115.1399335,
+    "googleMapsUri": "https://maps.google.com/?cid=4104263335606759342",
+    "businessStatus": "OPERATIONAL",
+    "openingHours": [
+      "Monday: 3:00 – 11:00 PM",
+      "Tuesday: 3:00 – 11:00 PM",
+      "Wednesday: 3:00 – 11:00 PM",
+      "Thursday: 3:00 – 11:00 PM",
+      "Friday: 3:00 – 11:00 PM",
+      "Saturday: 3:00 – 11:00 PM",
+      "Sunday: 3:00 – 11:00 PM"
+    ],
+    "openingPeriods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 15,
+          "minute": 0
+        },
+        "close": {
+          "day": 0,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 1,
+          "hour": 15,
+          "minute": 0
+        },
+        "close": {
+          "day": 1,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 15,
+          "minute": 0
+        },
+        "close": {
+          "day": 2,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 15,
+          "minute": 0
+        },
+        "close": {
+          "day": 3,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 15,
+          "minute": 0
+        },
+        "close": {
+          "day": 4,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 15,
+          "minute": 0
+        },
+        "close": {
+          "day": 5,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 15,
+          "minute": 0
+        },
+        "close": {
+          "day": 6,
+          "hour": 23,
+          "minute": 0
+        }
+      }
+    ],
+    "isOpenNow": false,
+    "website": "http://oneeyedjackbali.com/",
+    "phoneNumber": "0819-9929-1888",
+    "rating": 4.7,
+    "userRatingsTotal": 1052,
+    "allowsDogs": false,
+    "outdoorSeating": true,
+    "servesVegetarianFood": true,
+    "instagram": "https://www.instagram.com/oneeyedjack.bali/",
+    "staticMapS3Url": "https://dyyme2yybmi4j.cloudfront.net/dining-image-prod/one-eyed-jack/staticmap.png",
+    "menuUrl": "http://oneeyedjackbali.com/#food",
+    "tableUrl": "https://www.chope.co/bali-restaurants/restaurant/one-eyed-jack-bali-canggu?rwg_token=ACgRB3dkHlBzosh0IeieMyLSXblms6eEfa0ALRGvWNYxwCVUbTJgyPW5w--J1k8iCb4Ys5rF2y--pUYHdnuq0AVAwqdndM8zxFqG7YQtycVkUgW-5BoRAnw%3D",
+    "gofoodUrl": ""
+  },
+  {
+    "name": "SHUN Omakase Counter",
+    "photos": [
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/shun-omakase-counter/photo_a.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/shun-omakase-counter/photo_b.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/shun-omakase-counter/photo_c.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/shun-omakase-counter/photo_d.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/shun-omakase-counter/photo_e.webp"
+    ],
+    "placeId": "ChIJERK7FYRH0i0RKyvr-65RLZg",
+    "latitude": -8.6606632,
+    "longitude": 115.139206,
+    "googleMapsUri": "https://maps.google.com/?cid=10965510479709678379",
+    "businessStatus": "OPERATIONAL",
+    "openingHours": [
+      "Monday: Closed",
+      "Tuesday: 6:00 – 11:00 PM",
+      "Wednesday: 6:00 – 11:00 PM",
+      "Thursday: 6:00 – 11:00 PM",
+      "Friday: 6:00 – 11:00 PM",
+      "Saturday: 6:00 – 11:00 PM",
+      "Sunday: 6:00 – 11:00 PM"
+    ],
+    "openingPeriods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 18,
+          "minute": 0
+        },
+        "close": {
+          "day": 0,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 18,
+          "minute": 0
+        },
+        "close": {
+          "day": 2,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 18,
+          "minute": 0
+        },
+        "close": {
+          "day": 3,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 18,
+          "minute": 0
+        },
+        "close": {
+          "day": 4,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 18,
+          "minute": 0
+        },
+        "close": {
+          "day": 5,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 18,
+          "minute": 0
+        },
+        "close": {
+          "day": 6,
+          "hour": 23,
+          "minute": 0
+        }
+      }
+    ],
+    "isOpenNow": false,
+    "website": "http://www.shunomakase.com/",
+    "phoneNumber": "0823-2254-4642",
+    "rating": 4.9,
+    "userRatingsTotal": 141,
+    "allowsDogs": null,
+    "outdoorSeating": false,
+    "servesVegetarianFood": null,
+    "instagram": "https://instagram.com/shun.omakase",
+    "staticMapS3Url": "https://dyyme2yybmi4j.cloudfront.net/dining-image-prod/shun-omakase-counter/staticmap.png",
+    "menuUrl": "http://www.shunomakase.com/",
+    "tableUrl": "https://shunomakase.com/reservation?s=g",
+    "gofoodUrl": ""
+  },
+  {
+    "name": "SKOOL Kitchen",
+    "photos": [
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/skool-kitchen/photo_a.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/skool-kitchen/photo_b.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/skool-kitchen/photo_c.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/skool-kitchen/photo_d.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/skool-kitchen/photo_e.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/skool-kitchen/photo_f.webp"
+    ],
+    "placeId": "ChIJ2SXWetNH0i0RwwbG9ftXrx4",
+    "latitude": -8.6584972,
+    "longitude": 115.12985209999998,
+    "googleMapsUri": "https://maps.google.com/?cid=2211082681734006467",
+    "businessStatus": "OPERATIONAL",
+    "openingHours": [
+      "Monday: 5:00 PM – 12:00 AM",
+      "Tuesday: 5:00 PM – 12:00 AM",
+      "Wednesday: 5:00 PM – 12:00 AM",
+      "Thursday: 5:00 PM – 12:00 AM",
+      "Friday: 5:00 PM – 12:00 AM",
+      "Saturday: 5:00 PM – 12:00 AM",
+      "Sunday: 5:00 PM – 12:00 AM"
+    ],
+    "openingPeriods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 17,
+          "minute": 0
+        },
+        "close": {
+          "day": 1,
+          "hour": 0,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 1,
+          "hour": 17,
+          "minute": 0
+        },
+        "close": {
+          "day": 2,
+          "hour": 0,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 17,
+          "minute": 0
+        },
+        "close": {
+          "day": 3,
+          "hour": 0,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 17,
+          "minute": 0
+        },
+        "close": {
+          "day": 4,
+          "hour": 0,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 17,
+          "minute": 0
+        },
+        "close": {
+          "day": 5,
+          "hour": 0,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 17,
+          "minute": 0
+        },
+        "close": {
+          "day": 6,
+          "hour": 0,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 17,
+          "minute": 0
+        },
+        "close": {
+          "day": 0,
+          "hour": 0,
+          "minute": 0
+        }
+      }
+    ],
+    "isOpenNow": false,
+    "website": "https://skoolkitchen.co/",
+    "phoneNumber": "0811-3800-4952",
+    "rating": 4.5,
+    "userRatingsTotal": 905,
+    "allowsDogs": null,
+    "outdoorSeating": true,
+    "servesVegetarianFood": null,
+    "instagram": "https://www.instagram.com/skoolkitchen",
+    "staticMapS3Url": "https://dyyme2yybmi4j.cloudfront.net/dining-image-prod/skool-kitchen/staticmap.png",
+    "menuUrl": "https://skoolkitchen.co/",
+    "tableUrl": "http://www.sevenrooms.com/reservations/skoolcanggu",
+    "gofoodUrl": ""
+  },
+  {
+    "name": "Santanera",
+    "photos": [
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/santanera/photo_o.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/santanera/photo_c.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/santanera/photo_d.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/santanera/photo_e.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/santanera/photo_f.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/santanera/photo_g.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/santanera/photo_h.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/santanera/photo_i.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/santanera/photo_j.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/santanera/photo_k.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/santanera/photo_l.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/santanera/photo_m.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/santanera/photo_a.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/santanera/photo_b.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/santanera/photo_n.webp"
+    ],
+    "placeId": "ChIJYUi2MOI50i0RFUr3eL2-pBk",
+    "latitude": -8.6518446,
+    "longitude": 115.13109059999998,
+    "googleMapsUri": "https://maps.google.com/?cid=1847811468116314645",
+    "businessStatus": "OPERATIONAL",
+    "openingHours": [
+      "Monday: 12:00 PM – 12:00 AM",
+      "Tuesday: 12:00 PM – 12:00 AM",
+      "Wednesday: 12:00 PM – 12:00 AM",
+      "Thursday: 12:00 PM – 12:00 AM",
+      "Friday: 12:00 PM – 12:00 AM",
+      "Saturday: 12:00 PM – 12:00 AM",
+      "Sunday: 12:00 PM – 12:00 AM"
+    ],
+    "openingPeriods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 1,
+          "hour": 0,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 1,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 2,
+          "hour": 0,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 3,
+          "hour": 0,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 4,
+          "hour": 0,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 5,
+          "hour": 0,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 6,
+          "hour": 0,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 12,
+          "minute": 0
+        },
+        "close": {
+          "day": 0,
+          "hour": 0,
+          "minute": 0
+        }
+      }
+    ],
+    "isOpenNow": false,
+    "website": "http://www.santanerabali.com/",
+    "phoneNumber": "0812-4665-8896",
+    "rating": 4.8,
+    "userRatingsTotal": 1840,
+    "allowsDogs": false,
+    "outdoorSeating": true,
+    "servesVegetarianFood": true,
+    "instagram": "https://www.instagram.com/santanerabali/",
+    "staticMapS3Url": "https://dyyme2yybmi4j.cloudfront.net/dining-image-prod/santanera/staticmap.png",
+    "menuUrl": "https://www.santanerabali.com/menu",
+    "tableUrl": "https://www.sevenrooms.com/explore/santanera/reservations/create/search/",
+    "gofoodUrl": ""
+  },
+  {
+    "name": "Smoke Bali",
+    "photos": [
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/smoke-bali/photo_c.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/smoke-bali/photo_b.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/smoke-bali/photo_d.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/smoke-bali/photo_e.webp"
+    ],
+    "placeId": "ChIJwVQNUZU50i0RPESrmvSu12w",
+    "latitude": -8.6520201,
+    "longitude": 115.1286119,
+    "googleMapsUri": "https://maps.google.com/?cid=7842929641679176764",
+    "businessStatus": "OPERATIONAL",
+    "openingHours": [
+      "Monday: 11:45 AM – 11:00 PM",
+      "Tuesday: 11:45 AM – 11:00 PM",
+      "Wednesday: 11:45 AM – 11:00 PM",
+      "Thursday: 11:45 AM – 11:00 PM",
+      "Friday: 11:45 AM – 11:00 PM",
+      "Saturday: 11:45 AM – 11:00 PM",
+      "Sunday: 11:45 AM – 11:00 PM"
+    ],
+    "openingPeriods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 11,
+          "minute": 45
+        },
+        "close": {
+          "day": 0,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 1,
+          "hour": 11,
+          "minute": 45
+        },
+        "close": {
+          "day": 1,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 11,
+          "minute": 45
+        },
+        "close": {
+          "day": 2,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 11,
+          "minute": 45
+        },
+        "close": {
+          "day": 3,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 11,
+          "minute": 45
+        },
+        "close": {
+          "day": 4,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 11,
+          "minute": 45
+        },
+        "close": {
+          "day": 5,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 11,
+          "minute": 45
+        },
+        "close": {
+          "day": 6,
+          "hour": 23,
+          "minute": 0
+        }
+      }
+    ],
+    "isOpenNow": true,
+    "website": "http://smokebali.com/",
+    "phoneNumber": "0821-4607-4272",
+    "rating": 4.7,
+    "userRatingsTotal": 1707,
+    "allowsDogs": null,
+    "outdoorSeating": true,
+    "servesVegetarianFood": null,
+    "instagram": "https://www.instagram.com/smoke.bali/",
+    "staticMapS3Url": "https://dyyme2yybmi4j.cloudfront.net/dining-image-prod/smoke-bali/staticmap.png",
+    "menuUrl": "https://smokebali.com/menu",
+    "tableUrl": "https://www.google.com/maps/reserve/v/dine/c/K9LdFmqEfpc?source=pa&opi=79508299&hl=zh-CN&gei=1ohXaMzsE5Ha4-EP2bma2Qg&sourceurl=https://www.google.com/service/MapsPlaceService/GetPlace?authuser%3D0%26gl%3Did%26hl%3Dzh-CN",
+    "gofoodUrl": ""
+  },
+  {
+    "name": "Te'amo",
+    "photos": [
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/teamo/photo_a.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/teamo/photo_b.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/teamo/photo_c.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/teamo/photo_d.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/teamo/photo_e.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/teamo/photo_f.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/teamo/photo_g.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/teamo/photo_h.webp"
+    ],
+    "placeId": "ChIJk3IjCVU50i0RDCA0u-V4WAs",
+    "latitude": -8.654581,
+    "longitude": 115.12967710000001,
+    "googleMapsUri": "https://maps.google.com/?cid=817536260451344396",
+    "businessStatus": "OPERATIONAL",
+    "openingHours": [
+      "Monday: 8:00 AM – 11:00 PM",
+      "Tuesday: 8:00 AM – 11:00 PM",
+      "Wednesday: 8:00 AM – 11:00 PM",
+      "Thursday: 8:00 AM – 11:00 PM",
+      "Friday: 8:00 AM – 11:00 PM",
+      "Saturday: 8:00 AM – 11:00 PM",
+      "Sunday: 8:00 AM – 11:00 PM"
+    ],
+    "openingPeriods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 8,
+          "minute": 0
+        },
+        "close": {
+          "day": 0,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 1,
+          "hour": 8,
+          "minute": 0
+        },
+        "close": {
+          "day": 1,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 8,
+          "minute": 0
+        },
+        "close": {
+          "day": 2,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 8,
+          "minute": 0
+        },
+        "close": {
+          "day": 3,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 8,
+          "minute": 0
+        },
+        "close": {
+          "day": 4,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 8,
+          "minute": 0
+        },
+        "close": {
+          "day": 5,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 8,
+          "minute": 0
+        },
+        "close": {
+          "day": 6,
+          "hour": 23,
+          "minute": 0
+        }
+      }
+    ],
+    "isOpenNow": true,
+    "website": "https://teamobali.com/",
+    "phoneNumber": "0889-8710-2886",
+    "rating": 4.8,
+    "userRatingsTotal": 1861,
+    "allowsDogs": true,
+    "outdoorSeating": true,
+    "servesVegetarianFood": true,
+    "instagram": "https://www.instagram.com/teamo.bali",
+    "staticMapS3Url": "https://dyyme2yybmi4j.cloudfront.net/dining-image-prod/teamo/staticmap.png",
+    "menuUrl": "https://qr.mydigimenu.com/cf3f0639-b98c-4c3c-bc37-a2745cccd468",
+    "tableUrl": "https://teamobali.com/reservation",
+    "gofoodUrl": "https://gofood.co.id/jakarta/restaurant/58e484cb-6e7f-4afe-a380-ecb5c7027b1b?as=gmaps"
+  },
+  {
+    "name": "Uma Garden Seminyak",
+    "photos": [
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/uma-garden-seminyak/photo_c.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/uma-garden-seminyak/photo_a.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/uma-garden-seminyak/photo_b.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/uma-garden-seminyak/photo_d.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/uma-garden-seminyak/photo_e.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/uma-garden-seminyak/photo_f.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/uma-garden-seminyak/photo_g.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/uma-garden-seminyak/photo_h.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/dining-image-prod/uma-garden-seminyak/photo_i.webp"
+    ],
+    "placeId": "ChIJXxe2rXNH0i0Rnt_qeoqnQcc",
+    "latitude": -8.670247999999999,
+    "longitude": 115.16105990000001,
+    "googleMapsUri": "https://maps.google.com/?cid=14357941300243390366",
+    "businessStatus": "OPERATIONAL",
+    "openingHours": [
+      "Monday: 1:00 – 10:30 PM",
+      "Tuesday: 1:00 – 10:30 PM",
+      "Wednesday: 1:00 – 10:30 PM",
+      "Thursday: 1:00 – 10:30 PM",
+      "Friday: 1:00 – 10:30 PM",
+      "Saturday: 1:00 – 10:30 PM",
+      "Sunday: 1:00 – 10:30 PM"
+    ],
+    "openingPeriods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 13,
+          "minute": 0
+        },
+        "close": {
+          "day": 0,
+          "hour": 22,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 1,
+          "hour": 13,
+          "minute": 0
+        },
+        "close": {
+          "day": 1,
+          "hour": 22,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 13,
+          "minute": 0
+        },
+        "close": {
+          "day": 2,
+          "hour": 22,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 13,
+          "minute": 0
+        },
+        "close": {
+          "day": 3,
+          "hour": 22,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 13,
+          "minute": 0
+        },
+        "close": {
+          "day": 4,
+          "hour": 22,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 13,
+          "minute": 0
+        },
+        "close": {
+          "day": 5,
+          "hour": 22,
+          "minute": 30
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 13,
+          "minute": 0
+        },
+        "close": {
+          "day": 6,
+          "hour": 22,
+          "minute": 30
+        }
+      }
+    ],
+    "isOpenNow": false,
+    "website": "http://umagardenbali.com/?utm_source=gbpo&utm_medium=organic&utm_id=gbpo",
+    "phoneNumber": "0821-4736-9323",
+    "rating": 4.7,
+    "userRatingsTotal": 1235,
+    "allowsDogs": false,
+    "outdoorSeating": true,
+    "servesVegetarianFood": true,
+    "instagram": "http://www.instagram.com/umagardenbali/",
+    "staticMapS3Url": "https://dyyme2yybmi4j.cloudfront.net/dining-image-prod/uma-garden-seminyak/staticmap.png",
+    "menuUrl": "https://umagardenbali.com/food-drinks-menu/",
+    "tableUrl": "https://bookings.nowbookit.com/?accountid=ef96395c-825b-4544-a723-d82e6e7eec07&venueid=10128&theme=light&colors=hex,004d40,6d4c41",
+    "gofoodUrl": ""
+  },
+  {
+    "name": "Lusa By/Suka",
+    "photos": [
+      "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-prod/lusa-bysuka_ChIJcYpksxVH0i0RCDMFafUy5N4/photo_1.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-prod/lusa-bysuka_ChIJcYpksxVH0i0RCDMFafUy5N4/photo_3.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-prod/lusa-bysuka_ChIJcYpksxVH0i0RCDMFafUy5N4/photo_4.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-prod/lusa-bysuka_ChIJcYpksxVH0i0RCDMFafUy5N4/photo_2.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-prod/lusa-bysuka_ChIJcYpksxVH0i0RCDMFafUy5N4/photo_a.webp"
+    ],
+    "placeId": "ChIJcYpksxVH0i0RCDMFafUy5N4",
+    "latitude": -8.6601623,
+    "longitude": 115.13974879999999,
+    "googleMapsUri": "https://maps.google.com/?cid=16061018200720356104",
+    "businessStatus": "OPERATIONAL",
+    "openingHours": [
+      "Monday: 7:30 AM – 11:00 PM",
+      "Tuesday: 7:30 AM – 11:00 PM",
+      "Wednesday: 7:30 AM – 11:00 PM",
+      "Thursday: 7:30 AM – 11:00 PM",
+      "Friday: 7:30 AM – 11:00 PM",
+      "Saturday: 7:30 AM – 11:00 PM",
+      "Sunday: 7:30 AM – 11:00 PM"
+    ],
+    "openingPeriods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 7,
+          "minute": 30
+        },
+        "close": {
+          "day": 0,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 1,
+          "hour": 7,
+          "minute": 30
+        },
+        "close": {
+          "day": 1,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 7,
+          "minute": 30
+        },
+        "close": {
+          "day": 2,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 7,
+          "minute": 30
+        },
+        "close": {
+          "day": 3,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 7,
+          "minute": 30
+        },
+        "close": {
+          "day": 4,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 7,
+          "minute": 30
+        },
+        "close": {
+          "day": 5,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 7,
+          "minute": 30
+        },
+        "close": {
+          "day": 6,
+          "hour": 23,
+          "minute": 0
+        }
+      }
+    ],
+    "isOpenNow": false,
+    "website": "https://www.bysuka.com/lusa-by-suka",
+    "phoneNumber": "0812-3708-9261",
+    "rating": 4.7,
+    "userRatingsTotal": 2225,
+    "allowsDogs": true,
+    "outdoorSeating": true,
+    "servesVegetarianFood": true,
+    "instagram": "https://www.instagram.com/lusabysuka/",
+    "staticMapS3Url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-prod/lusa-bysuka_ChIJcYpksxVH0i0RCDMFafUy5N4/lusa-bysuka_static.webp",
+    "menuUrl": "https://www.bysuka.com/s/Lusa-Day-Menu-May-2025.pdf",
+    "tableUrl": "https://booking.chope.co/booking_index?rid=lusa2401bal&source=rest_lusabysuka.com&adults=1&lang=en_US&country_code=BALI&time=12:00%20am&date=29%20Feb%202024&",
+    "gofoodUrl": "https://gofood.co.id/bali/restaurant/lusa-by-suka-berawa-canggu-09f25db4-dfe1-4626-bac8-ac82e8f7def3?as=gmaps"
+  },
+  {
+    "name": "Bokashi Berawa",
+    "photos": [
+      "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-prod/bokashi-berawa_ChIJqdO8SytH0i0RkcWicB2oqxQ/photo_a.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-prod/bokashi-berawa_ChIJqdO8SytH0i0RkcWicB2oqxQ/photo_b.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-prod/bokashi-berawa_ChIJqdO8SytH0i0RkcWicB2oqxQ/photo_c.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-prod/bokashi-berawa_ChIJqdO8SytH0i0RkcWicB2oqxQ/photo_d.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-prod/bokashi-berawa_ChIJqdO8SytH0i0RkcWicB2oqxQ/photo_e.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-prod/bokashi-berawa_ChIJqdO8SytH0i0RkcWicB2oqxQ/photo_f.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-prod/bokashi-berawa_ChIJqdO8SytH0i0RkcWicB2oqxQ/photo_g.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-prod/bokashi-berawa_ChIJqdO8SytH0i0RkcWicB2oqxQ/photo_8.webp"
+    ],
+    "placeId": "ChIJqdO8SytH0i0RkcWicB2oqxQ",
+    "latitude": -8.6612604,
+    "longitude": 115.14669539999998,
+    "googleMapsUri": "https://maps.google.com/?cid=1489468946173314449",
+    "businessStatus": "OPERATIONAL",
+    "openingHours": [
+      "Monday: 8:00 AM – 11:00 PM",
+      "Tuesday: 8:00 AM – 11:00 PM",
+      "Wednesday: 8:00 AM – 11:00 PM",
+      "Thursday: 8:00 AM – 11:00 PM",
+      "Friday: 8:00 AM – 11:00 PM",
+      "Saturday: 8:00 AM – 11:00 PM",
+      "Sunday: 8:00 AM – 11:00 PM"
+    ],
+    "openingPeriods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 8,
+          "minute": 0
+        },
+        "close": {
+          "day": 0,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 1,
+          "hour": 8,
+          "minute": 0
+        },
+        "close": {
+          "day": 1,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 8,
+          "minute": 0
+        },
+        "close": {
+          "day": 2,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 8,
+          "minute": 0
+        },
+        "close": {
+          "day": 3,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 8,
+          "minute": 0
+        },
+        "close": {
+          "day": 4,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 8,
+          "minute": 0
+        },
+        "close": {
+          "day": 5,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 8,
+          "minute": 0
+        },
+        "close": {
+          "day": 6,
+          "hour": 23,
+          "minute": 0
+        }
+      }
+    ],
+    "isOpenNow": false,
+    "website": "https://bokashibali.com/",
+    "phoneNumber": "0818-0355-6677",
+    "rating": 4.8,
+    "userRatingsTotal": 801,
+    "allowsDogs": null,
+    "outdoorSeating": null,
+    "servesVegetarianFood": null,
+    "instagram": "https://www.instagram.com/bokashipererenan/",
+    "staticMapS3Url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-prod/bokashi-berawa_ChIJqdO8SytH0i0RkcWicB2oqxQ/bokashi-berawa_static.webp",
+    "menuUrl": "https://bokashibali.com/",
+    "tableUrl": "https://wa.me/6281803556677",
+    "gofoodUrl": "https://bokashibali.com/delivery/"
+  },
+  {
+    "name": "Zai Cafe Breakfast & Dinner",
+    "photos": [
+      "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-prod/zai-cafe-breakfast-dinner_ChIJnT3bt6VH0i0RUgvf_KGh8r8/photo_1.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-prod/zai-cafe-breakfast-dinner_ChIJnT3bt6VH0i0RUgvf_KGh8r8/photo_a.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-prod/zai-cafe-breakfast-dinner_ChIJnT3bt6VH0i0RUgvf_KGh8r8/photo_b.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-prod/zai-cafe-breakfast-dinner_ChIJnT3bt6VH0i0RUgvf_KGh8r8/photo_c.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-prod/zai-cafe-breakfast-dinner_ChIJnT3bt6VH0i0RUgvf_KGh8r8/photo_d.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-prod/zai-cafe-breakfast-dinner_ChIJnT3bt6VH0i0RUgvf_KGh8r8/photo_e.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-prod/zai-cafe-breakfast-dinner_ChIJnT3bt6VH0i0RUgvf_KGh8r8/photo_f.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-prod/zai-cafe-breakfast-dinner_ChIJnT3bt6VH0i0RUgvf_KGh8r8/photo_g.webp",
+      "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-prod/zai-cafe-breakfast-dinner_ChIJnT3bt6VH0i0RUgvf_KGh8r8/photo_h.webp"
+    ],
+    "placeId": "ChIJnT3bt6VH0i0RUgvf_KGh8r8",
+    "latitude": -8.6450592,
+    "longitude": 115.14138249999999,
+    "googleMapsUri": "https://maps.google.com/?cid=13831295122712496978",
+    "businessStatus": "OPERATIONAL",
+    "openingHours": [
+      "Monday: 8:00 AM – 11:00 PM",
+      "Tuesday: 8:00 AM – 11:00 PM",
+      "Wednesday: 8:00 AM – 11:00 PM",
+      "Thursday: 8:00 AM – 11:00 PM",
+      "Friday: 8:00 AM – 11:00 PM",
+      "Saturday: 8:00 AM – 11:00 PM",
+      "Sunday: 8:00 AM – 11:00 PM"
+    ],
+    "openingPeriods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 8,
+          "minute": 0
+        },
+        "close": {
+          "day": 0,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 1,
+          "hour": 8,
+          "minute": 0
+        },
+        "close": {
+          "day": 1,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 8,
+          "minute": 0
+        },
+        "close": {
+          "day": 2,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 8,
+          "minute": 0
+        },
+        "close": {
+          "day": 3,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 8,
+          "minute": 0
+        },
+        "close": {
+          "day": 4,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 8,
+          "minute": 0
+        },
+        "close": {
+          "day": 5,
+          "hour": 23,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 8,
+          "minute": 0
+        },
+        "close": {
+          "day": 6,
+          "hour": 23,
+          "minute": 0
+        }
+      }
+    ],
+    "isOpenNow": false,
+    "website": "https://www.instagram.com/zai_cafe/",
+    "phoneNumber": "0812-3160-9807",
+    "rating": 4.7,
+    "userRatingsTotal": 1757,
+    "allowsDogs": null,
+    "outdoorSeating": true,
+    "servesVegetarianFood": true,
+    "instagram": "https://www.instagram.com/zai_cafe/",
+    "staticMapS3Url": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-prod/zai-cafe-breakfast-dinner_ChIJnT3bt6VH0i0RUgvf_KGh8r8/zai-cafe-breakfast-dinner_static.webp",
+    "menuUrl": "",
+    "tableUrl": "https://letsumai.com/widget/zai-cafe",
+    "gofoodUrl": "https://gofood.co.id/bali/restaurant/zai-cafe-canggu-bali-80351-aba55783-cd2c-4234-96dd-8242cb90797c?as=gmaps"
+  }
+]
