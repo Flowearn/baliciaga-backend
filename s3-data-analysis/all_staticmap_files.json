@@ -1,0 +1,1157 @@
+[
+  {
+    "album": "cafe-image-dev",
+    "path": "s3://baliciaga-database/cafe-image-dev/amolas-cafe_ChIJD63X4IU50i0RFkjm_Q5AwGs/amolas-cafe_static.webp",
+    "key": "cafe-image-dev/amolas-cafe_ChIJD63X4IU50i0RFkjm_Q5AwGs/amolas-cafe_static.webp",
+    "filename": "amolas-cafe_static.webp",
+    "pattern": "merchant_placeId"
+  },
+  {
+    "album": "cafe-image-dev",
+    "path": "s3://baliciaga-database/cafe-image-dev/baked-berawa_ChIJU0lp4SNH0i0R7x72tr13TmY/baked-berawa_static.webp",
+    "key": "cafe-image-dev/baked-berawa_ChIJU0lp4SNH0i0R7x72tr13TmY/baked-berawa_static.webp",
+    "filename": "baked-berawa_static.webp",
+    "pattern": "merchant_placeId"
+  },
+  {
+    "album": "cafe-image-dev",
+    "path": "s3://baliciaga-database/cafe-image-dev/barboa-bali_ChIJQwwZdJ050i0R0ehpWb6QBQc/barboa-bali_static.webp",
+    "key": "cafe-image-dev/barboa-bali_ChIJQwwZdJ050i0R0ehpWb6QBQc/barboa-bali_static.webp",
+    "filename": "barboa-bali_static.webp",
+    "pattern": "merchant_placeId"
+  },
+  {
+    "album": "cafe-image-dev",
+    "path": "s3://baliciaga-database/cafe-image-dev/blou-cafe-canggu_ChIJhz6xqoo50i0RZxslmCS1iow/blou-cafe-canggu_static.webp",
+    "key": "cafe-image-dev/blou-cafe-canggu_ChIJhz6xqoo50i0RZxslmCS1iow/blou-cafe-canggu_static.webp",
+    "filename": "blou-cafe-canggu_static.webp",
+    "pattern": "merchant_placeId"
+  },
+  {
+    "album": "cafe-image-dev",
+    "path": "s3://baliciaga-database/cafe-image-dev/bokashi-berawa_ChIJqdO8SytH0i0RkcWicB2oqxQ/bokashi-berawa_static.webp",
+    "key": "cafe-image-dev/bokashi-berawa_ChIJqdO8SytH0i0RkcWicB2oqxQ/bokashi-berawa_static.webp",
+    "filename": "bokashi-berawa_static.webp",
+    "pattern": "merchant_placeId"
+  },
+  {
+    "album": "cafe-image-dev",
+    "path": "s3://baliciaga-database/cafe-image-dev/brunch-club-berawa_ChIJnxFCS3pH0i0RE9mJ0v6ZkHA/brunch-club-berawa_static.webp",
+    "key": "cafe-image-dev/brunch-club-berawa_ChIJnxFCS3pH0i0RE9mJ0v6ZkHA/brunch-club-berawa_static.webp",
+    "filename": "brunch-club-berawa_static.webp",
+    "pattern": "merchant_placeId"
+  },
+  {
+    "album": "cafe-image-dev",
+    "path": "s3://baliciaga-database/cafe-image-dev/brunch-club-pererenan_ChIJkfDSHYg50i0RBdXQigmMn54/brunch-club-pererenan_static.webp",
+    "key": "cafe-image-dev/brunch-club-pererenan_ChIJkfDSHYg50i0RBdXQigmMn54/brunch-club-pererenan_static.webp",
+    "filename": "brunch-club-pererenan_static.webp",
+    "pattern": "merchant_placeId"
+  },
+  {
+    "album": "cafe-image-dev",
+    "path": "s3://baliciaga-database/cafe-image-dev/cafe-the-daun_ChIJ1_XOtHg40i0R6eyPmtRK6bc/cafe-the-daun_static.webp",
+    "key": "cafe-image-dev/cafe-the-daun_ChIJ1_XOtHg40i0R6eyPmtRK6bc/cafe-the-daun_static.webp",
+    "filename": "cafe-the-daun_static.webp",
+    "pattern": "merchant_placeId"
+  },
+  {
+    "album": "cafe-image-dev",
+    "path": "s3://baliciaga-database/cafe-image-dev/cafe-vida-organic_ChIJMev9G3w40i0RXZlSucHydMw/cafe-vida-organic_static.webp",
+    "key": "cafe-image-dev/cafe-vida-organic_ChIJMev9G3w40i0RXZlSucHydMw/cafe-vida-organic_static.webp",
+    "filename": "cafe-vida-organic_static.webp",
+    "pattern": "merchant_placeId"
+  },
+  {
+    "album": "cafe-image-dev",
+    "path": "s3://baliciaga-database/cafe-image-dev/crate-cafe_ChIJOaEQDnk40i0Rzhou4NcRx-w/crate-cafe_static.webp",
+    "key": "cafe-image-dev/crate-cafe_ChIJOaEQDnk40i0Rzhou4NcRx-w/crate-cafe_static.webp",
+    "filename": "crate-cafe_static.webp",
+    "pattern": "merchant_placeId"
+  },
+  {
+    "album": "cafe-image-dev",
+    "path": "s3://baliciaga-database/cafe-image-dev/desa-kitsun_ChIJ9UCFSPE50i0RVVADcFGCGXI/desa-kitsun_static.webp",
+    "key": "cafe-image-dev/desa-kitsun_ChIJ9UCFSPE50i0RVVADcFGCGXI/desa-kitsun_static.webp",
+    "filename": "desa-kitsun_static.webp",
+    "pattern": "merchant_placeId"
+  },
+  {
+    "album": "cafe-image-dev",
+    "path": "s3://baliciaga-database/cafe-image-dev/fine-by-satusatucoffee_ChIJB5JLA1c50i0RRPJ0C5V2DnQ/fine-by-satusatucoffee_static.webp",
+    "key": "cafe-image-dev/fine-by-satusatucoffee_ChIJB5JLA1c50i0RRPJ0C5V2DnQ/fine-by-satusatucoffee_static.webp",
+    "filename": "fine-by-satusatucoffee_static.webp",
+    "pattern": "merchant_placeId"
+  },
+  {
+    "album": "cafe-image-dev",
+    "path": "s3://baliciaga-database/cafe-image-dev/fold-canggu_ChIJg1ad-75H0i0R8aB_K9oKYj8/fold-canggu_static.webp",
+    "key": "cafe-image-dev/fold-canggu_ChIJg1ad-75H0i0R8aB_K9oKYj8/fold-canggu_static.webp",
+    "filename": "fold-canggu_static.webp",
+    "pattern": "merchant_placeId"
+  },
+  {
+    "album": "cafe-image-dev",
+    "path": "s3://baliciaga-database/cafe-image-dev/home-cafe-canggu_ChIJSzQz6CQ50i0RalL4caNfcSI/home-cafe-canggu_static.webp",
+    "key": "cafe-image-dev/home-cafe-canggu_ChIJSzQz6CQ50i0RalL4caNfcSI/home-cafe-canggu_static.webp",
+    "filename": "home-cafe-canggu_static.webp",
+    "pattern": "merchant_placeId"
+  },
+  {
+    "album": "cafe-image-dev",
+    "path": "s3://baliciaga-database/cafe-image-dev/home-cafe-mengwi_ChIJt38YXDo50i0RJlB3Oz0PDjg/home-cafe-mengwi_static.webp",
+    "key": "cafe-image-dev/home-cafe-mengwi_ChIJt38YXDo50i0RJlB3Oz0PDjg/home-cafe-mengwi_static.webp",
+    "filename": "home-cafe-mengwi_static.webp",
+    "pattern": "merchant_placeId"
+  },
+  {
+    "album": "cafe-image-dev",
+    "path": "s3://baliciaga-database/cafe-image-dev/hungry-bird-coffee-roaster_ChIJa2bVbaxcBAURDMj_jEzGDqI/hungry-bird-coffee-roaster_static.webp",
+    "key": "cafe-image-dev/hungry-bird-coffee-roaster_ChIJa2bVbaxcBAURDMj_jEzGDqI/hungry-bird-coffee-roaster_static.webp",
+    "filename": "hungry-bird-coffee-roaster_static.webp",
+    "pattern": "merchant_placeId"
+  },
+  {
+    "album": "cafe-image-dev",
+    "path": "s3://baliciaga-database/cafe-image-dev/jiwa-cafe_ChIJEaGuegA50i0R3CbgI5uqfq0/jiwa-cafe_static.webp",
+    "key": "cafe-image-dev/jiwa-cafe_ChIJEaGuegA50i0R3CbgI5uqfq0/jiwa-cafe_static.webp",
+    "filename": "jiwa-cafe_static.webp",
+    "pattern": "merchant_placeId"
+  },
+  {
+    "album": "cafe-image-dev",
+    "path": "s3://baliciaga-database/cafe-image-dev/kawisari-coffee-farm-shop-eatery-bali_ChIJH21JAz5H0i0R9xl0tIvpu1w/kawisari-coffee-farm-shop-eatery-bali_static.webp",
+    "key": "cafe-image-dev/kawisari-coffee-farm-shop-eatery-bali_ChIJH21JAz5H0i0R9xl0tIvpu1w/kawisari-coffee-farm-shop-eatery-bali_static.webp",
+    "filename": "kawisari-coffee-farm-shop-eatery-bali_static.webp",
+    "pattern": "merchant_placeId"
+  },
+  {
+    "album": "cafe-image-dev",
+    "path": "s3://baliciaga-database/cafe-image-dev/lusa-bysuka_ChIJcYpksxVH0i0RCDMFafUy5N4/lusa-bysuka_static.webp",
+    "key": "cafe-image-dev/lusa-bysuka_ChIJcYpksxVH0i0RCDMFafUy5N4/lusa-bysuka_static.webp",
+    "filename": "lusa-bysuka_static.webp",
+    "pattern": "merchant_placeId"
+  },
+  {
+    "album": "cafe-image-dev",
+    "path": "s3://baliciaga-database/cafe-image-dev/miel-specialty-coffee-canggu-co-working_ChIJYXyNN5U50i0RmIUNsfH9tHw/miel-specialty-coffee-canggu-co-working_static.webp",
+    "key": "cafe-image-dev/miel-specialty-coffee-canggu-co-working_ChIJYXyNN5U50i0RmIUNsfH9tHw/miel-specialty-coffee-canggu-co-working_static.webp",
+    "filename": "miel-specialty-coffee-canggu-co-working_static.webp",
+    "pattern": "merchant_placeId"
+  },
+  {
+    "album": "cafe-image-dev",
+    "path": "s3://baliciaga-database/cafe-image-dev/milk-madu-beach-road_ChIJL3L-Sfc50i0RwlAVew5QCm8/milk-madu-beach-road_static.webp",
+    "key": "cafe-image-dev/milk-madu-beach-road_ChIJL3L-Sfc50i0RwlAVew5QCm8/milk-madu-beach-road_static.webp",
+    "filename": "milk-madu-beach-road_static.webp",
+    "pattern": "merchant_placeId"
+  },
+  {
+    "album": "cafe-image-dev",
+    "path": "s3://baliciaga-database/cafe-image-dev/mimpi-grocery_ChIJzXC1G0A50i0RRtOZNiTSri0/mimpi-grocery_static.webp",
+    "key": "cafe-image-dev/mimpi-grocery_ChIJzXC1G0A50i0RRtOZNiTSri0/mimpi-grocery_static.webp",
+    "filename": "mimpi-grocery_static.webp",
+    "pattern": "merchant_placeId"
+  },
+  {
+    "album": "cafe-image-dev",
+    "path": "s3://baliciaga-database/cafe-image-dev/nde-cafe-babakan_ChIJFay1BbM50i0RLOYPPnFgc2k/nde-cafe-babakan_static.webp",
+    "key": "cafe-image-dev/nde-cafe-babakan_ChIJFay1BbM50i0RLOYPPnFgc2k/nde-cafe-babakan_static.webp",
+    "filename": "nde-cafe-babakan_static.webp",
+    "pattern": "merchant_placeId"
+  },
+  {
+    "album": "cafe-image-dev",
+    "path": "s3://baliciaga-database/cafe-image-dev/nde-cafe-berawa_ChIJZ6Jj8oFH0i0R0sKhEJMIyd8/nde-cafe-berawa_static.webp",
+    "key": "cafe-image-dev/nde-cafe-berawa_ChIJZ6Jj8oFH0i0R0sKhEJMIyd8/nde-cafe-berawa_static.webp",
+    "filename": "nde-cafe-berawa_static.webp",
+    "pattern": "merchant_placeId"
+  },
+  {
+    "album": "cafe-image-dev",
+    "path": "s3://baliciaga-database/cafe-image-dev/neighbourhood-food_ChIJq_svKGxH0i0RU-zAhMppq8Y/neighbourhood-food_static.webp",
+    "key": "cafe-image-dev/neighbourhood-food_ChIJq_svKGxH0i0RU-zAhMppq8Y/neighbourhood-food_static.webp",
+    "filename": "neighbourhood-food_static.webp",
+    "pattern": "merchant_placeId"
+  },
+  {
+    "album": "cafe-image-dev",
+    "path": "s3://baliciaga-database/cafe-image-dev/openhouse-cafe_ChIJRfVHDQA50i0R78l1hYjP2iM/openhouse-cafe_static.webp",
+    "key": "cafe-image-dev/openhouse-cafe_ChIJRfVHDQA50i0R78l1hYjP2iM/openhouse-cafe_static.webp",
+    "filename": "openhouse-cafe_static.webp",
+    "pattern": "merchant_placeId"
+  },
+  {
+    "album": "cafe-image-dev",
+    "path": "s3://baliciaga-database/cafe-image-dev/revolver-canggu_ChIJnY-evaw50i0RD_tH6R6pDyw/revolver-canggu_static.webp",
+    "key": "cafe-image-dev/revolver-canggu_ChIJnY-evaw50i0RD_tH6R6pDyw/revolver-canggu_static.webp",
+    "filename": "revolver-canggu_static.webp",
+    "pattern": "merchant_placeId"
+  },
+  {
+    "album": "cafe-image-dev",
+    "path": "s3://baliciaga-database/cafe-image-dev/rise-shine-cafe-canggu_ChIJg_EuN3s40i0R6kCeRoibycg/rise-shine-cafe-canggu_static.webp",
+    "key": "cafe-image-dev/rise-shine-cafe-canggu_ChIJg_EuN3s40i0R6kCeRoibycg/rise-shine-cafe-canggu_static.webp",
+    "filename": "rise-shine-cafe-canggu_static.webp",
+    "pattern": "merchant_placeId"
+  },
+  {
+    "album": "cafe-image-dev",
+    "path": "s3://baliciaga-database/cafe-image-dev/sari-kitchen-community-by-ekosistem_ChIJVwZGvMo50i0R5i1fzyT73S4/sari-kitchen-community-by-ekosistem_static.webp",
+    "key": "cafe-image-dev/sari-kitchen-community-by-ekosistem_ChIJVwZGvMo50i0R5i1fzyT73S4/sari-kitchen-community-by-ekosistem_static.webp",
+    "filename": "sari-kitchen-community-by-ekosistem_static.webp",
+    "pattern": "merchant_placeId"
+  },
+  {
+    "album": "cafe-image-dev",
+    "path": "s3://baliciaga-database/cafe-image-dev/secret-spot-canggu_ChIJmZf0Vlc50i0RR3Z4gOnFmUM/secret-spot-canggu_static.webp",
+    "key": "cafe-image-dev/secret-spot-canggu_ChIJmZf0Vlc50i0RR3Z4gOnFmUM/secret-spot-canggu_static.webp",
+    "filename": "secret-spot-canggu_static.webp",
+    "pattern": "merchant_placeId"
+  },
+  {
+    "album": "cafe-image-dev",
+    "path": "s3://baliciaga-database/cafe-image-dev/sensorium-bali_ChIJr9bHQS050i0RW_GuYHY3vaU/sensorium-bali_static.webp",
+    "key": "cafe-image-dev/sensorium-bali_ChIJr9bHQS050i0RW_GuYHY3vaU/sensorium-bali_static.webp",
+    "filename": "sensorium-bali_static.webp",
+    "pattern": "merchant_placeId"
+  },
+  {
+    "album": "cafe-image-dev",
+    "path": "s3://baliciaga-database/cafe-image-dev/st-ali-bali_ChIJD94dpPY50i0R96D3MPX7rrc/st-ali-bali_static.webp",
+    "key": "cafe-image-dev/st-ali-bali_ChIJD94dpPY50i0R96D3MPX7rrc/st-ali-bali_static.webp",
+    "filename": "st-ali-bali_static.webp",
+    "pattern": "merchant_placeId"
+  },
+  {
+    "album": "cafe-image-dev",
+    "path": "s3://baliciaga-database/cafe-image-dev/the-avocado-factory_ChIJ36pywXk40i0Rh9ZZCRMb1fQ/the-avocado-factory_static.webp",
+    "key": "cafe-image-dev/the-avocado-factory_ChIJ36pywXk40i0Rh9ZZCRMb1fQ/the-avocado-factory_static.webp",
+    "filename": "the-avocado-factory_static.webp",
+    "pattern": "merchant_placeId"
+  },
+  {
+    "album": "cafe-image-dev",
+    "path": "s3://baliciaga-database/cafe-image-dev/the-common_ChIJHzyhoW450i0Rub7_EEvisDY/the-common_static.webp",
+    "key": "cafe-image-dev/the-common_ChIJHzyhoW450i0Rub7_EEvisDY/the-common_static.webp",
+    "filename": "the-common_static.webp",
+    "pattern": "merchant_placeId"
+  },
+  {
+    "album": "cafe-image-dev",
+    "path": "s3://baliciaga-database/cafe-image-dev/two-face-coffee-brunch-canggu_ChIJq42lSa850i0RziccPzDJXhU/two-face-coffee-brunch-canggu_static.webp",
+    "key": "cafe-image-dev/two-face-coffee-brunch-canggu_ChIJq42lSa850i0RziccPzDJXhU/two-face-coffee-brunch-canggu_static.webp",
+    "filename": "two-face-coffee-brunch-canggu_static.webp",
+    "pattern": "merchant_placeId"
+  },
+  {
+    "album": "cafe-image-dev",
+    "path": "s3://baliciaga-database/cafe-image-dev/yume-buduk_ChIJQYh7HcM50i0RyZozSuavIhM/yume-buduk_static.webp",
+    "key": "cafe-image-dev/yume-buduk_ChIJQYh7HcM50i0RyZozSuavIhM/yume-buduk_static.webp",
+    "filename": "yume-buduk_static.webp",
+    "pattern": "merchant_placeId"
+  },
+  {
+    "album": "cafe-image-dev",
+    "path": "s3://baliciaga-database/cafe-image-dev/zai-cafe-breakfast-dinner_ChIJnT3bt6VH0i0RUgvf_KGh8r8/zai-cafe-breakfast-dinner_static.webp",
+    "key": "cafe-image-dev/zai-cafe-breakfast-dinner_ChIJnT3bt6VH0i0RUgvf_KGh8r8/zai-cafe-breakfast-dinner_static.webp",
+    "filename": "zai-cafe-breakfast-dinner_static.webp",
+    "pattern": "merchant_placeId"
+  },
+  {
+    "album": "cafe-image-dev",
+    "path": "s3://baliciaga-database/cafe-image-dev/zin-cafe_ChIJ1a70wvFH0i0RajIckWuoU14/zin-cafe_static.webp",
+    "key": "cafe-image-dev/zin-cafe_ChIJ1a70wvFH0i0RajIckWuoU14/zin-cafe_static.webp",
+    "filename": "zin-cafe_static.webp",
+    "pattern": "merchant_placeId"
+  },
+  {
+    "album": "cafe-image-prod",
+    "path": "s3://baliciaga-database/cafe-image-prod/amolas-cafe_ChIJD63X4IU50i0RFkjm_Q5AwGs/amolas-cafe_static.webp",
+    "key": "cafe-image-prod/amolas-cafe_ChIJD63X4IU50i0RFkjm_Q5AwGs/amolas-cafe_static.webp",
+    "filename": "amolas-cafe_static.webp",
+    "pattern": "merchant_placeId"
+  },
+  {
+    "album": "cafe-image-prod",
+    "path": "s3://baliciaga-database/cafe-image-prod/baked-berawa_ChIJU0lp4SNH0i0R7x72tr13TmY/baked-berawa_static.webp",
+    "key": "cafe-image-prod/baked-berawa_ChIJU0lp4SNH0i0R7x72tr13TmY/baked-berawa_static.webp",
+    "filename": "baked-berawa_static.webp",
+    "pattern": "merchant_placeId"
+  },
+  {
+    "album": "cafe-image-prod",
+    "path": "s3://baliciaga-database/cafe-image-prod/barboa-bali_ChIJQwwZdJ050i0R0ehpWb6QBQc/barboa-bali_static.webp",
+    "key": "cafe-image-prod/barboa-bali_ChIJQwwZdJ050i0R0ehpWb6QBQc/barboa-bali_static.webp",
+    "filename": "barboa-bali_static.webp",
+    "pattern": "merchant_placeId"
+  },
+  {
+    "album": "cafe-image-prod",
+    "path": "s3://baliciaga-database/cafe-image-prod/blou-cafe-canggu_ChIJhz6xqoo50i0RZxslmCS1iow/blou-cafe-canggu_static.webp",
+    "key": "cafe-image-prod/blou-cafe-canggu_ChIJhz6xqoo50i0RZxslmCS1iow/blou-cafe-canggu_static.webp",
+    "filename": "blou-cafe-canggu_static.webp",
+    "pattern": "merchant_placeId"
+  },
+  {
+    "album": "cafe-image-prod",
+    "path": "s3://baliciaga-database/cafe-image-prod/bokashi-berawa_ChIJqdO8SytH0i0RkcWicB2oqxQ/bokashi-berawa_static.webp",
+    "key": "cafe-image-prod/bokashi-berawa_ChIJqdO8SytH0i0RkcWicB2oqxQ/bokashi-berawa_static.webp",
+    "filename": "bokashi-berawa_static.webp",
+    "pattern": "merchant_placeId"
+  },
+  {
+    "album": "cafe-image-prod",
+    "path": "s3://baliciaga-database/cafe-image-prod/brunch-club-berawa_ChIJnxFCS3pH0i0RE9mJ0v6ZkHA/brunch-club-berawa_static.webp",
+    "key": "cafe-image-prod/brunch-club-berawa_ChIJnxFCS3pH0i0RE9mJ0v6ZkHA/brunch-club-berawa_static.webp",
+    "filename": "brunch-club-berawa_static.webp",
+    "pattern": "merchant_placeId"
+  },
+  {
+    "album": "cafe-image-prod",
+    "path": "s3://baliciaga-database/cafe-image-prod/brunch-club-pererenan_ChIJkfDSHYg50i0RBdXQigmMn54/brunch-club-pererenan_static.webp",
+    "key": "cafe-image-prod/brunch-club-pererenan_ChIJkfDSHYg50i0RBdXQigmMn54/brunch-club-pererenan_static.webp",
+    "filename": "brunch-club-pererenan_static.webp",
+    "pattern": "merchant_placeId"
+  },
+  {
+    "album": "cafe-image-prod",
+    "path": "s3://baliciaga-database/cafe-image-prod/cafe-the-daun_ChIJ1_XOtHg40i0R6eyPmtRK6bc/cafe-the-daun_static.webp",
+    "key": "cafe-image-prod/cafe-the-daun_ChIJ1_XOtHg40i0R6eyPmtRK6bc/cafe-the-daun_static.webp",
+    "filename": "cafe-the-daun_static.webp",
+    "pattern": "merchant_placeId"
+  },
+  {
+    "album": "cafe-image-prod",
+    "path": "s3://baliciaga-database/cafe-image-prod/cafe-vida-organic_ChIJMev9G3w40i0RXZlSucHydMw/cafe-vida-organic_static.webp",
+    "key": "cafe-image-prod/cafe-vida-organic_ChIJMev9G3w40i0RXZlSucHydMw/cafe-vida-organic_static.webp",
+    "filename": "cafe-vida-organic_static.webp",
+    "pattern": "merchant_placeId"
+  },
+  {
+    "album": "cafe-image-prod",
+    "path": "s3://baliciaga-database/cafe-image-prod/crate-cafe_ChIJOaEQDnk40i0Rzhou4NcRx-w/crate-cafe_static.webp",
+    "key": "cafe-image-prod/crate-cafe_ChIJOaEQDnk40i0Rzhou4NcRx-w/crate-cafe_static.webp",
+    "filename": "crate-cafe_static.webp",
+    "pattern": "merchant_placeId"
+  },
+  {
+    "album": "cafe-image-prod",
+    "path": "s3://baliciaga-database/cafe-image-prod/desa-kitsun_ChIJ9UCFSPE50i0RVVADcFGCGXI/desa-kitsun_static.webp",
+    "key": "cafe-image-prod/desa-kitsun_ChIJ9UCFSPE50i0RVVADcFGCGXI/desa-kitsun_static.webp",
+    "filename": "desa-kitsun_static.webp",
+    "pattern": "merchant_placeId"
+  },
+  {
+    "album": "cafe-image-prod",
+    "path": "s3://baliciaga-database/cafe-image-prod/fine-by-satusatucoffee_ChIJB5JLA1c50i0RRPJ0C5V2DnQ/fine-by-satusatucoffee_static.webp",
+    "key": "cafe-image-prod/fine-by-satusatucoffee_ChIJB5JLA1c50i0RRPJ0C5V2DnQ/fine-by-satusatucoffee_static.webp",
+    "filename": "fine-by-satusatucoffee_static.webp",
+    "pattern": "merchant_placeId"
+  },
+  {
+    "album": "cafe-image-prod",
+    "path": "s3://baliciaga-database/cafe-image-prod/fold-canggu_ChIJg1ad-75H0i0R8aB_K9oKYj8/fold-canggu_static.webp",
+    "key": "cafe-image-prod/fold-canggu_ChIJg1ad-75H0i0R8aB_K9oKYj8/fold-canggu_static.webp",
+    "filename": "fold-canggu_static.webp",
+    "pattern": "merchant_placeId"
+  },
+  {
+    "album": "cafe-image-prod",
+    "path": "s3://baliciaga-database/cafe-image-prod/home-cafe-canggu_ChIJSzQz6CQ50i0RalL4caNfcSI/home-cafe-canggu_static.webp",
+    "key": "cafe-image-prod/home-cafe-canggu_ChIJSzQz6CQ50i0RalL4caNfcSI/home-cafe-canggu_static.webp",
+    "filename": "home-cafe-canggu_static.webp",
+    "pattern": "merchant_placeId"
+  },
+  {
+    "album": "cafe-image-prod",
+    "path": "s3://baliciaga-database/cafe-image-prod/home-cafe-mengwi_ChIJt38YXDo50i0RJlB3Oz0PDjg/home-cafe-mengwi_static.webp",
+    "key": "cafe-image-prod/home-cafe-mengwi_ChIJt38YXDo50i0RJlB3Oz0PDjg/home-cafe-mengwi_static.webp",
+    "filename": "home-cafe-mengwi_static.webp",
+    "pattern": "merchant_placeId"
+  },
+  {
+    "album": "cafe-image-prod",
+    "path": "s3://baliciaga-database/cafe-image-prod/hungry-bird-coffee-roaster_ChIJa2bVbaxcBAURDMj_jEzGDqI/hungry-bird-coffee-roaster_static.webp",
+    "key": "cafe-image-prod/hungry-bird-coffee-roaster_ChIJa2bVbaxcBAURDMj_jEzGDqI/hungry-bird-coffee-roaster_static.webp",
+    "filename": "hungry-bird-coffee-roaster_static.webp",
+    "pattern": "merchant_placeId"
+  },
+  {
+    "album": "cafe-image-prod",
+    "path": "s3://baliciaga-database/cafe-image-prod/jiwa-cafe_ChIJEaGuegA50i0R3CbgI5uqfq0/jiwa-cafe_static.webp",
+    "key": "cafe-image-prod/jiwa-cafe_ChIJEaGuegA50i0R3CbgI5uqfq0/jiwa-cafe_static.webp",
+    "filename": "jiwa-cafe_static.webp",
+    "pattern": "merchant_placeId"
+  },
+  {
+    "album": "cafe-image-prod",
+    "path": "s3://baliciaga-database/cafe-image-prod/kawisari-coffee-farm-shop-eatery-bali_ChIJH21JAz5H0i0R9xl0tIvpu1w/kawisari-coffee-farm-shop-eatery-bali_static.webp",
+    "key": "cafe-image-prod/kawisari-coffee-farm-shop-eatery-bali_ChIJH21JAz5H0i0R9xl0tIvpu1w/kawisari-coffee-farm-shop-eatery-bali_static.webp",
+    "filename": "kawisari-coffee-farm-shop-eatery-bali_static.webp",
+    "pattern": "merchant_placeId"
+  },
+  {
+    "album": "cafe-image-prod",
+    "path": "s3://baliciaga-database/cafe-image-prod/lusa-bysuka_ChIJcYpksxVH0i0RCDMFafUy5N4/lusa-bysuka_static.webp",
+    "key": "cafe-image-prod/lusa-bysuka_ChIJcYpksxVH0i0RCDMFafUy5N4/lusa-bysuka_static.webp",
+    "filename": "lusa-bysuka_static.webp",
+    "pattern": "merchant_placeId"
+  },
+  {
+    "album": "cafe-image-prod",
+    "path": "s3://baliciaga-database/cafe-image-prod/miel-specialty-coffee-canggu-co-working_ChIJYXyNN5U50i0RmIUNsfH9tHw/miel-specialty-coffee-canggu-co-working_static.webp",
+    "key": "cafe-image-prod/miel-specialty-coffee-canggu-co-working_ChIJYXyNN5U50i0RmIUNsfH9tHw/miel-specialty-coffee-canggu-co-working_static.webp",
+    "filename": "miel-specialty-coffee-canggu-co-working_static.webp",
+    "pattern": "merchant_placeId"
+  },
+  {
+    "album": "cafe-image-prod",
+    "path": "s3://baliciaga-database/cafe-image-prod/milk-madu-beach-road_ChIJL3L-Sfc50i0RwlAVew5QCm8/milk-madu-beach-road_static.webp",
+    "key": "cafe-image-prod/milk-madu-beach-road_ChIJL3L-Sfc50i0RwlAVew5QCm8/milk-madu-beach-road_static.webp",
+    "filename": "milk-madu-beach-road_static.webp",
+    "pattern": "merchant_placeId"
+  },
+  {
+    "album": "cafe-image-prod",
+    "path": "s3://baliciaga-database/cafe-image-prod/mimpi-grocery_ChIJzXC1G0A50i0RRtOZNiTSri0/mimpi-grocery_static.webp",
+    "key": "cafe-image-prod/mimpi-grocery_ChIJzXC1G0A50i0RRtOZNiTSri0/mimpi-grocery_static.webp",
+    "filename": "mimpi-grocery_static.webp",
+    "pattern": "merchant_placeId"
+  },
+  {
+    "album": "cafe-image-prod",
+    "path": "s3://baliciaga-database/cafe-image-prod/nde-cafe-babakan_ChIJFay1BbM50i0RLOYPPnFgc2k/nde-cafe-babakan_static.webp",
+    "key": "cafe-image-prod/nde-cafe-babakan_ChIJFay1BbM50i0RLOYPPnFgc2k/nde-cafe-babakan_static.webp",
+    "filename": "nde-cafe-babakan_static.webp",
+    "pattern": "merchant_placeId"
+  },
+  {
+    "album": "cafe-image-prod",
+    "path": "s3://baliciaga-database/cafe-image-prod/nde-cafe-berawa_ChIJZ6Jj8oFH0i0R0sKhEJMIyd8/nde-cafe-berawa_static.webp",
+    "key": "cafe-image-prod/nde-cafe-berawa_ChIJZ6Jj8oFH0i0R0sKhEJMIyd8/nde-cafe-berawa_static.webp",
+    "filename": "nde-cafe-berawa_static.webp",
+    "pattern": "merchant_placeId"
+  },
+  {
+    "album": "cafe-image-prod",
+    "path": "s3://baliciaga-database/cafe-image-prod/neighbourhood-food_ChIJq_svKGxH0i0RU-zAhMppq8Y/neighbourhood-food_static.webp",
+    "key": "cafe-image-prod/neighbourhood-food_ChIJq_svKGxH0i0RU-zAhMppq8Y/neighbourhood-food_static.webp",
+    "filename": "neighbourhood-food_static.webp",
+    "pattern": "merchant_placeId"
+  },
+  {
+    "album": "cafe-image-prod",
+    "path": "s3://baliciaga-database/cafe-image-prod/openhouse-cafe_ChIJRfVHDQA50i0R78l1hYjP2iM/openhouse-cafe_static.webp",
+    "key": "cafe-image-prod/openhouse-cafe_ChIJRfVHDQA50i0R78l1hYjP2iM/openhouse-cafe_static.webp",
+    "filename": "openhouse-cafe_static.webp",
+    "pattern": "merchant_placeId"
+  },
+  {
+    "album": "cafe-image-prod",
+    "path": "s3://baliciaga-database/cafe-image-prod/revolver-canggu_ChIJnY-evaw50i0RD_tH6R6pDyw/revolver-canggu_static.webp",
+    "key": "cafe-image-prod/revolver-canggu_ChIJnY-evaw50i0RD_tH6R6pDyw/revolver-canggu_static.webp",
+    "filename": "revolver-canggu_static.webp",
+    "pattern": "merchant_placeId"
+  },
+  {
+    "album": "cafe-image-prod",
+    "path": "s3://baliciaga-database/cafe-image-prod/rise-shine-cafe-canggu_ChIJg_EuN3s40i0R6kCeRoibycg/rise-shine-cafe-canggu_static.webp",
+    "key": "cafe-image-prod/rise-shine-cafe-canggu_ChIJg_EuN3s40i0R6kCeRoibycg/rise-shine-cafe-canggu_static.webp",
+    "filename": "rise-shine-cafe-canggu_static.webp",
+    "pattern": "merchant_placeId"
+  },
+  {
+    "album": "cafe-image-prod",
+    "path": "s3://baliciaga-database/cafe-image-prod/sari-kitchen-community-by-ekosistem_ChIJVwZGvMo50i0R5i1fzyT73S4/sari-kitchen-community-by-ekosistem_static.webp",
+    "key": "cafe-image-prod/sari-kitchen-community-by-ekosistem_ChIJVwZGvMo50i0R5i1fzyT73S4/sari-kitchen-community-by-ekosistem_static.webp",
+    "filename": "sari-kitchen-community-by-ekosistem_static.webp",
+    "pattern": "merchant_placeId"
+  },
+  {
+    "album": "cafe-image-prod",
+    "path": "s3://baliciaga-database/cafe-image-prod/secret-spot-canggu_ChIJmZf0Vlc50i0RR3Z4gOnFmUM/secret-spot-canggu_static.webp",
+    "key": "cafe-image-prod/secret-spot-canggu_ChIJmZf0Vlc50i0RR3Z4gOnFmUM/secret-spot-canggu_static.webp",
+    "filename": "secret-spot-canggu_static.webp",
+    "pattern": "merchant_placeId"
+  },
+  {
+    "album": "cafe-image-prod",
+    "path": "s3://baliciaga-database/cafe-image-prod/sensorium-bali_ChIJr9bHQS050i0RW_GuYHY3vaU/sensorium-bali_static.webp",
+    "key": "cafe-image-prod/sensorium-bali_ChIJr9bHQS050i0RW_GuYHY3vaU/sensorium-bali_static.webp",
+    "filename": "sensorium-bali_static.webp",
+    "pattern": "merchant_placeId"
+  },
+  {
+    "album": "cafe-image-prod",
+    "path": "s3://baliciaga-database/cafe-image-prod/st-ali-bali_ChIJD94dpPY50i0R96D3MPX7rrc/st-ali-bali_static.webp",
+    "key": "cafe-image-prod/st-ali-bali_ChIJD94dpPY50i0R96D3MPX7rrc/st-ali-bali_static.webp",
+    "filename": "st-ali-bali_static.webp",
+    "pattern": "merchant_placeId"
+  },
+  {
+    "album": "cafe-image-prod",
+    "path": "s3://baliciaga-database/cafe-image-prod/the-avocado-factory_ChIJ36pywXk40i0Rh9ZZCRMb1fQ/the-avocado-factory_static.webp",
+    "key": "cafe-image-prod/the-avocado-factory_ChIJ36pywXk40i0Rh9ZZCRMb1fQ/the-avocado-factory_static.webp",
+    "filename": "the-avocado-factory_static.webp",
+    "pattern": "merchant_placeId"
+  },
+  {
+    "album": "cafe-image-prod",
+    "path": "s3://baliciaga-database/cafe-image-prod/the-common_ChIJHzyhoW450i0Rub7_EEvisDY/the-common_static.webp",
+    "key": "cafe-image-prod/the-common_ChIJHzyhoW450i0Rub7_EEvisDY/the-common_static.webp",
+    "filename": "the-common_static.webp",
+    "pattern": "merchant_placeId"
+  },
+  {
+    "album": "cafe-image-prod",
+    "path": "s3://baliciaga-database/cafe-image-prod/two-face-coffee-brunch-canggu_ChIJq42lSa850i0RziccPzDJXhU/two-face-coffee-brunch-canggu_static.webp",
+    "key": "cafe-image-prod/two-face-coffee-brunch-canggu_ChIJq42lSa850i0RziccPzDJXhU/two-face-coffee-brunch-canggu_static.webp",
+    "filename": "two-face-coffee-brunch-canggu_static.webp",
+    "pattern": "merchant_placeId"
+  },
+  {
+    "album": "cafe-image-prod",
+    "path": "s3://baliciaga-database/cafe-image-prod/yume-buduk_ChIJQYh7HcM50i0RyZozSuavIhM/yume-buduk_static.webp",
+    "key": "cafe-image-prod/yume-buduk_ChIJQYh7HcM50i0RyZozSuavIhM/yume-buduk_static.webp",
+    "filename": "yume-buduk_static.webp",
+    "pattern": "merchant_placeId"
+  },
+  {
+    "album": "cafe-image-prod",
+    "path": "s3://baliciaga-database/cafe-image-prod/zai-cafe-breakfast-dinner_ChIJnT3bt6VH0i0RUgvf_KGh8r8/zai-cafe-breakfast-dinner_static.webp",
+    "key": "cafe-image-prod/zai-cafe-breakfast-dinner_ChIJnT3bt6VH0i0RUgvf_KGh8r8/zai-cafe-breakfast-dinner_static.webp",
+    "filename": "zai-cafe-breakfast-dinner_static.webp",
+    "pattern": "merchant_placeId"
+  },
+  {
+    "album": "cafe-image-prod",
+    "path": "s3://baliciaga-database/cafe-image-prod/zin-cafe_ChIJ1a70wvFH0i0RajIckWuoU14/zin-cafe_static.webp",
+    "key": "cafe-image-prod/zin-cafe_ChIJ1a70wvFH0i0RajIckWuoU14/zin-cafe_static.webp",
+    "filename": "zin-cafe_static.webp",
+    "pattern": "merchant_placeId"
+  },
+  {
+    "album": "dining-image-dev",
+    "path": "s3://baliciaga-database/dining-image-dev/alma-tapas-bar-canggu/staticmap.webp",
+    "key": "dining-image-dev/alma-tapas-bar-canggu/staticmap.webp",
+    "filename": "staticmap.webp",
+    "pattern": "simple_webp"
+  },
+  {
+    "album": "dining-image-dev",
+    "path": "s3://baliciaga-database/dining-image-dev/anaga-restaurant-authentic-thai-cuisine_ChIJ32m9jCxH0i0RLBCGarQNwNc/anaga-restaurant-authentic-thai-cuisine_static.webp",
+    "key": "dining-image-dev/anaga-restaurant-authentic-thai-cuisine_ChIJ32m9jCxH0i0RLBCGarQNwNc/anaga-restaurant-authentic-thai-cuisine_static.webp",
+    "filename": "anaga-restaurant-authentic-thai-cuisine_static.webp",
+    "pattern": "merchant_placeId"
+  },
+  {
+    "album": "dining-image-dev",
+    "path": "s3://baliciaga-database/dining-image-dev/billy-ho-japanese-restaurant/staticmap.webp",
+    "key": "dining-image-dev/billy-ho-japanese-restaurant/staticmap.webp",
+    "filename": "staticmap.webp",
+    "pattern": "simple_webp"
+  },
+  {
+    "album": "dining-image-dev",
+    "path": "s3://baliciaga-database/dining-image-dev/hippie-fish-pererenan-beach/staticmap.webp",
+    "key": "dining-image-dev/hippie-fish-pererenan-beach/staticmap.webp",
+    "filename": "staticmap.webp",
+    "pattern": "simple_webp"
+  },
+  {
+    "album": "dining-image-dev",
+    "path": "s3://baliciaga-database/dining-image-dev/ina-r-restaurant_ChIJuWrhQgA50i0Ra0tVN4yy1Dk/ina-r-restaurant_static.webp",
+    "key": "dining-image-dev/ina-r-restaurant_ChIJuWrhQgA50i0Ra0tVN4yy1Dk/ina-r-restaurant_static.webp",
+    "filename": "ina-r-restaurant_static.webp",
+    "pattern": "merchant_placeId"
+  },
+  {
+    "album": "dining-image-dev",
+    "path": "s3://baliciaga-database/dining-image-dev/ji-restaurant-bali/staticmap.webp",
+    "key": "dining-image-dev/ji-restaurant-bali/staticmap.webp",
+    "filename": "staticmap.webp",
+    "pattern": "simple_webp"
+  },
+  {
+    "album": "dining-image-dev",
+    "path": "s3://baliciaga-database/dining-image-dev/kilo-kitchen-bali-seminyak_ChIJb-BRehhH0i0RUcIoZtXLtUM/kilo-kitchen-bali-seminyak_static.webp",
+    "key": "dining-image-dev/kilo-kitchen-bali-seminyak_ChIJb-BRehhH0i0RUcIoZtXLtUM/kilo-kitchen-bali-seminyak_static.webp",
+    "filename": "kilo-kitchen-bali-seminyak_static.webp",
+    "pattern": "merchant_placeId"
+  },
+  {
+    "album": "dining-image-dev",
+    "path": "s3://baliciaga-database/dining-image-dev/la-baracca/staticmap.webp",
+    "key": "dining-image-dev/la-baracca/staticmap.webp",
+    "filename": "staticmap.webp",
+    "pattern": "simple_webp"
+  },
+  {
+    "album": "dining-image-dev",
+    "path": "s3://baliciaga-database/dining-image-dev/lacalita-canggu/staticmap.webp",
+    "key": "dining-image-dev/lacalita-canggu/staticmap.webp",
+    "filename": "staticmap.webp",
+    "pattern": "simple_webp"
+  },
+  {
+    "album": "dining-image-dev",
+    "path": "s3://baliciaga-database/dining-image-dev/luigis-hot-pizza-canggu/staticmap.webp",
+    "key": "dining-image-dev/luigis-hot-pizza-canggu/staticmap.webp",
+    "filename": "staticmap.webp",
+    "pattern": "simple_webp"
+  },
+  {
+    "album": "dining-image-dev",
+    "path": "s3://baliciaga-database/dining-image-dev/m-mason-bar-grill-canggu/staticmap.webp",
+    "key": "dining-image-dev/m-mason-bar-grill-canggu/staticmap.webp",
+    "filename": "staticmap.webp",
+    "pattern": "simple_webp"
+  },
+  {
+    "album": "dining-image-dev",
+    "path": "s3://baliciaga-database/dining-image-dev/miss-fish-bali/staticmap.webp",
+    "key": "dining-image-dev/miss-fish-bali/staticmap.webp",
+    "filename": "staticmap.webp",
+    "pattern": "simple_webp"
+  },
+  {
+    "album": "dining-image-dev",
+    "path": "s3://baliciaga-database/dining-image-dev/mostly-restaurant-and-bar_ChIJ5fhhx1I50i0RYv-9kVUcpbY/mostly-restaurant-and-bar_static.webp",
+    "key": "dining-image-dev/mostly-restaurant-and-bar_ChIJ5fhhx1I50i0RYv-9kVUcpbY/mostly-restaurant-and-bar_static.webp",
+    "filename": "mostly-restaurant-and-bar_static.webp",
+    "pattern": "merchant_placeId"
+  },
+  {
+    "album": "dining-image-dev",
+    "path": "s3://baliciaga-database/dining-image-dev/mosto-berawa/staticmap.webp",
+    "key": "dining-image-dev/mosto-berawa/staticmap.webp",
+    "filename": "staticmap.webp",
+    "pattern": "simple_webp"
+  },
+  {
+    "album": "dining-image-dev",
+    "path": "s3://baliciaga-database/dining-image-dev/one-eyed-jack/staticmap.webp",
+    "key": "dining-image-dev/one-eyed-jack/staticmap.webp",
+    "filename": "staticmap.webp",
+    "pattern": "simple_webp"
+  },
+  {
+    "album": "dining-image-dev",
+    "path": "s3://baliciaga-database/dining-image-dev/santanera/staticmap.webp",
+    "key": "dining-image-dev/santanera/staticmap.webp",
+    "filename": "staticmap.webp",
+    "pattern": "simple_webp"
+  },
+  {
+    "album": "dining-image-dev",
+    "path": "s3://baliciaga-database/dining-image-dev/shun-omakase-counter/staticmap.webp",
+    "key": "dining-image-dev/shun-omakase-counter/staticmap.webp",
+    "filename": "staticmap.webp",
+    "pattern": "simple_webp"
+  },
+  {
+    "album": "dining-image-dev",
+    "path": "s3://baliciaga-database/dining-image-dev/skool-kitchen/staticmap.webp",
+    "key": "dining-image-dev/skool-kitchen/staticmap.webp",
+    "filename": "staticmap.webp",
+    "pattern": "simple_webp"
+  },
+  {
+    "album": "dining-image-dev",
+    "path": "s3://baliciaga-database/dining-image-dev/smoke-bali/staticmap.webp",
+    "key": "dining-image-dev/smoke-bali/staticmap.webp",
+    "filename": "staticmap.webp",
+    "pattern": "simple_webp"
+  },
+  {
+    "album": "dining-image-dev",
+    "path": "s3://baliciaga-database/dining-image-dev/teamo/staticmap.webp",
+    "key": "dining-image-dev/teamo/staticmap.webp",
+    "filename": "staticmap.webp",
+    "pattern": "simple_webp"
+  },
+  {
+    "album": "dining-image-dev",
+    "path": "s3://baliciaga-database/dining-image-dev/uma-garden-seminyak/staticmap.webp",
+    "key": "dining-image-dev/uma-garden-seminyak/staticmap.webp",
+    "filename": "staticmap.webp",
+    "pattern": "simple_webp"
+  },
+  {
+    "album": "dining-image-prod",
+    "path": "s3://baliciaga-database/dining-image-prod/agana-mobilindo_ChIJ3zHY2mUW0i0RdZ7SyKjiBC0/agana-mobilindo_static.webp",
+    "key": "dining-image-prod/agana-mobilindo_ChIJ3zHY2mUW0i0RdZ7SyKjiBC0/agana-mobilindo_static.webp",
+    "filename": "agana-mobilindo_static.webp",
+    "pattern": "merchant_placeId"
+  },
+  {
+    "album": "dining-image-prod",
+    "path": "s3://baliciaga-database/dining-image-prod/alma-tapas-bar-canggu/staticmap.webp",
+    "key": "dining-image-prod/alma-tapas-bar-canggu/staticmap.webp",
+    "filename": "staticmap.webp",
+    "pattern": "simple_webp"
+  },
+  {
+    "album": "dining-image-prod",
+    "path": "s3://baliciaga-database/dining-image-prod/anaga-restaurant-authentic-thai-cuisine_ChIJ32m9jCxH0i0RLBCGarQNwNc/anaga-restaurant-authentic-thai-cuisine_static.webp",
+    "key": "dining-image-prod/anaga-restaurant-authentic-thai-cuisine_ChIJ32m9jCxH0i0RLBCGarQNwNc/anaga-restaurant-authentic-thai-cuisine_static.webp",
+    "filename": "anaga-restaurant-authentic-thai-cuisine_static.webp",
+    "pattern": "merchant_placeId"
+  },
+  {
+    "album": "dining-image-prod",
+    "path": "s3://baliciaga-database/dining-image-prod/billy-ho-japanese-restaurant/staticmap.webp",
+    "key": "dining-image-prod/billy-ho-japanese-restaurant/staticmap.webp",
+    "filename": "staticmap.webp",
+    "pattern": "simple_webp"
+  },
+  {
+    "album": "dining-image-prod",
+    "path": "s3://baliciaga-database/dining-image-prod/hippie-fish-pererenan-beach/staticmap.webp",
+    "key": "dining-image-prod/hippie-fish-pererenan-beach/staticmap.webp",
+    "filename": "staticmap.webp",
+    "pattern": "simple_webp"
+  },
+  {
+    "album": "dining-image-prod",
+    "path": "s3://baliciaga-database/dining-image-prod/ina-r-restaurant_ChIJuWrhQgA50i0Ra0tVN4yy1Dk/ina-r-restaurant_static.webp",
+    "key": "dining-image-prod/ina-r-restaurant_ChIJuWrhQgA50i0Ra0tVN4yy1Dk/ina-r-restaurant_static.webp",
+    "filename": "ina-r-restaurant_static.webp",
+    "pattern": "merchant_placeId"
+  },
+  {
+    "album": "dining-image-prod",
+    "path": "s3://baliciaga-database/dining-image-prod/ji-restaurant-bali/staticmap.webp",
+    "key": "dining-image-prod/ji-restaurant-bali/staticmap.webp",
+    "filename": "staticmap.webp",
+    "pattern": "simple_webp"
+  },
+  {
+    "album": "dining-image-prod",
+    "path": "s3://baliciaga-database/dining-image-prod/kilo-kitchen-bali-seminyak_ChIJb-BRehhH0i0RUcIoZtXLtUM/kilo-kitchen-bali-seminyak_static.webp",
+    "key": "dining-image-prod/kilo-kitchen-bali-seminyak_ChIJb-BRehhH0i0RUcIoZtXLtUM/kilo-kitchen-bali-seminyak_static.webp",
+    "filename": "kilo-kitchen-bali-seminyak_static.webp",
+    "pattern": "merchant_placeId"
+  },
+  {
+    "album": "dining-image-prod",
+    "path": "s3://baliciaga-database/dining-image-prod/la-baracca/staticmap.webp",
+    "key": "dining-image-prod/la-baracca/staticmap.webp",
+    "filename": "staticmap.webp",
+    "pattern": "simple_webp"
+  },
+  {
+    "album": "dining-image-prod",
+    "path": "s3://baliciaga-database/dining-image-prod/lacalita-canggu/staticmap.webp",
+    "key": "dining-image-prod/lacalita-canggu/staticmap.webp",
+    "filename": "staticmap.webp",
+    "pattern": "simple_webp"
+  },
+  {
+    "album": "dining-image-prod",
+    "path": "s3://baliciaga-database/dining-image-prod/luigis-hot-pizza-canggu/staticmap.webp",
+    "key": "dining-image-prod/luigis-hot-pizza-canggu/staticmap.webp",
+    "filename": "staticmap.webp",
+    "pattern": "simple_webp"
+  },
+  {
+    "album": "dining-image-prod",
+    "path": "s3://baliciaga-database/dining-image-prod/m-mason-bar-grill-canggu/staticmap.webp",
+    "key": "dining-image-prod/m-mason-bar-grill-canggu/staticmap.webp",
+    "filename": "staticmap.webp",
+    "pattern": "simple_webp"
+  },
+  {
+    "album": "dining-image-prod",
+    "path": "s3://baliciaga-database/dining-image-prod/miss-fish-bali/staticmap.webp",
+    "key": "dining-image-prod/miss-fish-bali/staticmap.webp",
+    "filename": "staticmap.webp",
+    "pattern": "simple_webp"
+  },
+  {
+    "album": "dining-image-prod",
+    "path": "s3://baliciaga-database/dining-image-prod/mostly-restaurant-and-bar_ChIJ5fhhx1I50i0RYv-9kVUcpbY/mostly-restaurant-and-bar_static.webp",
+    "key": "dining-image-prod/mostly-restaurant-and-bar_ChIJ5fhhx1I50i0RYv-9kVUcpbY/mostly-restaurant-and-bar_static.webp",
+    "filename": "mostly-restaurant-and-bar_static.webp",
+    "pattern": "merchant_placeId"
+  },
+  {
+    "album": "dining-image-prod",
+    "path": "s3://baliciaga-database/dining-image-prod/mosto-berawa/staticmap.webp",
+    "key": "dining-image-prod/mosto-berawa/staticmap.webp",
+    "filename": "staticmap.webp",
+    "pattern": "simple_webp"
+  },
+  {
+    "album": "dining-image-prod",
+    "path": "s3://baliciaga-database/dining-image-prod/one-eyed-jack/staticmap.webp",
+    "key": "dining-image-prod/one-eyed-jack/staticmap.webp",
+    "filename": "staticmap.webp",
+    "pattern": "simple_webp"
+  },
+  {
+    "album": "dining-image-prod",
+    "path": "s3://baliciaga-database/dining-image-prod/santanera/staticmap.webp",
+    "key": "dining-image-prod/santanera/staticmap.webp",
+    "filename": "staticmap.webp",
+    "pattern": "simple_webp"
+  },
+  {
+    "album": "dining-image-prod",
+    "path": "s3://baliciaga-database/dining-image-prod/shun-omakase-counter/staticmap.webp",
+    "key": "dining-image-prod/shun-omakase-counter/staticmap.webp",
+    "filename": "staticmap.webp",
+    "pattern": "simple_webp"
+  },
+  {
+    "album": "dining-image-prod",
+    "path": "s3://baliciaga-database/dining-image-prod/skool-kitchen/staticmap.webp",
+    "key": "dining-image-prod/skool-kitchen/staticmap.webp",
+    "filename": "staticmap.webp",
+    "pattern": "simple_webp"
+  },
+  {
+    "album": "dining-image-prod",
+    "path": "s3://baliciaga-database/dining-image-prod/smoke-bali/staticmap.webp",
+    "key": "dining-image-prod/smoke-bali/staticmap.webp",
+    "filename": "staticmap.webp",
+    "pattern": "simple_webp"
+  },
+  {
+    "album": "dining-image-prod",
+    "path": "s3://baliciaga-database/dining-image-prod/teamo/staticmap.webp",
+    "key": "dining-image-prod/teamo/staticmap.webp",
+    "filename": "staticmap.webp",
+    "pattern": "simple_webp"
+  },
+  {
+    "album": "dining-image-prod",
+    "path": "s3://baliciaga-database/dining-image-prod/uma-garden-seminyak/staticmap.webp",
+    "key": "dining-image-prod/uma-garden-seminyak/staticmap.webp",
+    "filename": "staticmap.webp",
+    "pattern": "simple_webp"
+  },
+  {
+    "album": "bar-image-dev",
+    "path": "s3://baliciaga-database/bar-image-dev/bali-beer-cycle/staticmap.webp",
+    "key": "bar-image-dev/bali-beer-cycle/staticmap.webp",
+    "filename": "staticmap.webp",
+    "pattern": "simple_webp"
+  },
+  {
+    "album": "bar-image-dev",
+    "path": "s3://baliciaga-database/bar-image-dev/barn-gastropub/staticmap.webp",
+    "key": "bar-image-dev/barn-gastropub/staticmap.webp",
+    "filename": "staticmap.webp",
+    "pattern": "simple_webp"
+  },
+  {
+    "album": "bar-image-dev",
+    "path": "s3://baliciaga-database/bar-image-dev/black-sand-brewery/staticmap.webp",
+    "key": "bar-image-dev/black-sand-brewery/staticmap.webp",
+    "filename": "staticmap.webp",
+    "pattern": "simple_webp"
+  },
+  {
+    "album": "bar-image-dev",
+    "path": "s3://baliciaga-database/bar-image-dev/friends-bar/staticmap.webp",
+    "key": "bar-image-dev/friends-bar/staticmap.webp",
+    "filename": "staticmap.webp",
+    "pattern": "simple_webp"
+  },
+  {
+    "album": "bar-image-dev",
+    "path": "s3://baliciaga-database/bar-image-dev/hippie-fish-pererenan-beach/staticmap.webp",
+    "key": "bar-image-dev/hippie-fish-pererenan-beach/staticmap.webp",
+    "filename": "staticmap.webp",
+    "pattern": "simple_webp"
+  },
+  {
+    "album": "bar-image-dev",
+    "path": "s3://baliciaga-database/bar-image-dev/honeycomb-hookah-eatery/staticmap.webp",
+    "key": "bar-image-dev/honeycomb-hookah-eatery/staticmap.webp",
+    "filename": "staticmap.webp",
+    "pattern": "simple_webp"
+  },
+  {
+    "album": "bar-image-dev",
+    "path": "s3://baliciaga-database/bar-image-dev/longtime-modern-asian-restaurant-bar-bali/staticmap.webp",
+    "key": "bar-image-dev/longtime-modern-asian-restaurant-bar-bali/staticmap.webp",
+    "filename": "staticmap.webp",
+    "pattern": "simple_webp"
+  },
+  {
+    "album": "bar-image-dev",
+    "path": "s3://baliciaga-database/bar-image-dev/miss-fish-bali/staticmap.webp",
+    "key": "bar-image-dev/miss-fish-bali/staticmap.webp",
+    "filename": "staticmap.webp",
+    "pattern": "simple_webp"
+  },
+  {
+    "album": "bar-image-dev",
+    "path": "s3://baliciaga-database/bar-image-dev/patato-head-beach-club/staticmap.webp",
+    "key": "bar-image-dev/patato-head-beach-club/staticmap.webp",
+    "filename": "staticmap.webp",
+    "pattern": "simple_webp"
+  },
+  {
+    "album": "bar-image-dev",
+    "path": "s3://baliciaga-database/bar-image-dev/platonic/staticmap.webp",
+    "key": "bar-image-dev/platonic/staticmap.webp",
+    "filename": "staticmap.webp",
+    "pattern": "simple_webp"
+  },
+  {
+    "album": "bar-image-dev",
+    "path": "s3://baliciaga-database/bar-image-dev/shelter-restaurant/staticmap.webp",
+    "key": "bar-image-dev/shelter-restaurant/staticmap.webp",
+    "filename": "staticmap.webp",
+    "pattern": "simple_webp"
+  },
+  {
+    "album": "bar-image-dev",
+    "path": "s3://baliciaga-database/bar-image-dev/single-fin-bali_ChIJ0aNPQ_lP0i0RtPlHW6trMHM/single-fin-bali_static.webp",
+    "key": "bar-image-dev/single-fin-bali_ChIJ0aNPQ_lP0i0RtPlHW6trMHM/single-fin-bali_static.webp",
+    "filename": "single-fin-bali_static.webp",
+    "pattern": "merchant_placeId"
+  },
+  {
+    "album": "bar-image-dev",
+    "path": "s3://baliciaga-database/bar-image-dev/the-lawn/staticmap.webp",
+    "key": "bar-image-dev/the-lawn/staticmap.webp",
+    "filename": "staticmap.webp",
+    "pattern": "simple_webp"
+  },
+  {
+    "album": "bar-image-dev",
+    "path": "s3://baliciaga-database/bar-image-dev/the-shady-fox/staticmap.webp",
+    "key": "bar-image-dev/the-shady-fox/staticmap.webp",
+    "filename": "staticmap.webp",
+    "pattern": "simple_webp"
+  },
+  {
+    "album": "bar-image-dev",
+    "path": "s3://baliciaga-database/bar-image-dev/the-shady-pig/staticmap.webp",
+    "key": "bar-image-dev/the-shady-pig/staticmap.webp",
+    "filename": "staticmap.webp",
+    "pattern": "simple_webp"
+  },
+  {
+    "album": "bar-image-prod",
+    "path": "s3://baliciaga-database/bar-image-prod/bali-beer-cycle/staticmap.webp",
+    "key": "bar-image-prod/bali-beer-cycle/staticmap.webp",
+    "filename": "staticmap.webp",
+    "pattern": "simple_webp"
+  },
+  {
+    "album": "bar-image-prod",
+    "path": "s3://baliciaga-database/bar-image-prod/barn-gastropub/staticmap.webp",
+    "key": "bar-image-prod/barn-gastropub/staticmap.webp",
+    "filename": "staticmap.webp",
+    "pattern": "simple_webp"
+  },
+  {
+    "album": "bar-image-prod",
+    "path": "s3://baliciaga-database/bar-image-prod/black-sand-brewery/staticmap.webp",
+    "key": "bar-image-prod/black-sand-brewery/staticmap.webp",
+    "filename": "staticmap.webp",
+    "pattern": "simple_webp"
+  },
+  {
+    "album": "bar-image-prod",
+    "path": "s3://baliciaga-database/bar-image-prod/friends-bar/staticmap.webp",
+    "key": "bar-image-prod/friends-bar/staticmap.webp",
+    "filename": "staticmap.webp",
+    "pattern": "simple_webp"
+  },
+  {
+    "album": "bar-image-prod",
+    "path": "s3://baliciaga-database/bar-image-prod/hippie-fish-pererenan-beach/staticmap.webp",
+    "key": "bar-image-prod/hippie-fish-pererenan-beach/staticmap.webp",
+    "filename": "staticmap.webp",
+    "pattern": "simple_webp"
+  },
+  {
+    "album": "bar-image-prod",
+    "path": "s3://baliciaga-database/bar-image-prod/honeycomb-hookah-eatery/staticmap.webp",
+    "key": "bar-image-prod/honeycomb-hookah-eatery/staticmap.webp",
+    "filename": "staticmap.webp",
+    "pattern": "simple_webp"
+  },
+  {
+    "album": "bar-image-prod",
+    "path": "s3://baliciaga-database/bar-image-prod/longtime-modern-asian-restaurant-bar-bali/staticmap.webp",
+    "key": "bar-image-prod/longtime-modern-asian-restaurant-bar-bali/staticmap.webp",
+    "filename": "staticmap.webp",
+    "pattern": "simple_webp"
+  },
+  {
+    "album": "bar-image-prod",
+    "path": "s3://baliciaga-database/bar-image-prod/miss-fish-bali/staticmap.webp",
+    "key": "bar-image-prod/miss-fish-bali/staticmap.webp",
+    "filename": "staticmap.webp",
+    "pattern": "simple_webp"
+  },
+  {
+    "album": "bar-image-prod",
+    "path": "s3://baliciaga-database/bar-image-prod/patato-head-beach-club/staticmap.webp",
+    "key": "bar-image-prod/patato-head-beach-club/staticmap.webp",
+    "filename": "staticmap.webp",
+    "pattern": "simple_webp"
+  },
+  {
+    "album": "bar-image-prod",
+    "path": "s3://baliciaga-database/bar-image-prod/platonic/staticmap.webp",
+    "key": "bar-image-prod/platonic/staticmap.webp",
+    "filename": "staticmap.webp",
+    "pattern": "simple_webp"
+  },
+  {
+    "album": "bar-image-prod",
+    "path": "s3://baliciaga-database/bar-image-prod/shelter-restaurant/staticmap.webp",
+    "key": "bar-image-prod/shelter-restaurant/staticmap.webp",
+    "filename": "staticmap.webp",
+    "pattern": "simple_webp"
+  },
+  {
+    "album": "bar-image-prod",
+    "path": "s3://baliciaga-database/bar-image-prod/single-fin-bali_ChIJ0aNPQ_lP0i0RtPlHW6trMHM/single-fin-bali_static.webp",
+    "key": "bar-image-prod/single-fin-bali_ChIJ0aNPQ_lP0i0RtPlHW6trMHM/single-fin-bali_static.webp",
+    "filename": "single-fin-bali_static.webp",
+    "pattern": "merchant_placeId"
+  },
+  {
+    "album": "bar-image-prod",
+    "path": "s3://baliciaga-database/bar-image-prod/the-lawn/staticmap.webp",
+    "key": "bar-image-prod/the-lawn/staticmap.webp",
+    "filename": "staticmap.webp",
+    "pattern": "simple_webp"
+  },
+  {
+    "album": "bar-image-prod",
+    "path": "s3://baliciaga-database/bar-image-prod/the-shady-fox/staticmap.webp",
+    "key": "bar-image-prod/the-shady-fox/staticmap.webp",
+    "filename": "staticmap.webp",
+    "pattern": "simple_webp"
+  },
+  {
+    "album": "bar-image-prod",
+    "path": "s3://baliciaga-database/bar-image-prod/the-shady-pig/staticmap.webp",
+    "key": "bar-image-prod/the-shady-pig/staticmap.webp",
+    "filename": "staticmap.webp",
+    "pattern": "simple_webp"
+  },
+  {
+    "album": "cowork-image-dev",
+    "path": "s3://baliciaga-database/cowork-image-dev/b-work-bali/staticmap.webp",
+    "key": "cowork-image-dev/b-work-bali/staticmap.webp",
+    "filename": "staticmap.webp",
+    "pattern": "simple_webp"
+  },
+  {
+    "album": "cowork-image-dev",
+    "path": "s3://baliciaga-database/cowork-image-dev/ducat-space/staticmap.webp",
+    "key": "cowork-image-dev/ducat-space/staticmap.webp",
+    "filename": "staticmap.webp",
+    "pattern": "simple_webp"
+  },
+  {
+    "album": "cowork-image-dev",
+    "path": "s3://baliciaga-database/cowork-image-dev/genesis-creative-centre/staticmap.webp",
+    "key": "cowork-image-dev/genesis-creative-centre/staticmap.webp",
+    "filename": "staticmap.webp",
+    "pattern": "simple_webp"
+  },
+  {
+    "album": "cowork-image-dev",
+    "path": "s3://baliciaga-database/cowork-image-dev/karya-coworking-bali/staticmap.webp",
+    "key": "cowork-image-dev/karya-coworking-bali/staticmap.webp",
+    "filename": "staticmap.webp",
+    "pattern": "simple_webp"
+  },
+  {
+    "album": "cowork-image-dev",
+    "path": "s3://baliciaga-database/cowork-image-dev/nebula-entrepreneur-coworking-space/staticmap.webp",
+    "key": "cowork-image-dev/nebula-entrepreneur-coworking-space/staticmap.webp",
+    "filename": "staticmap.webp",
+    "pattern": "simple_webp"
+  },
+  {
+    "album": "cowork-image-dev",
+    "path": "s3://baliciaga-database/cowork-image-dev/puco-rooftop-coworking-space-eatery/staticmap.webp",
+    "key": "cowork-image-dev/puco-rooftop-coworking-space-eatery/staticmap.webp",
+    "filename": "staticmap.webp",
+    "pattern": "simple_webp"
+  },
+  {
+    "album": "cowork-image-dev",
+    "path": "s3://baliciaga-database/cowork-image-dev/setter-coworking-private-offices/staticmap.webp",
+    "key": "cowork-image-dev/setter-coworking-private-offices/staticmap.webp",
+    "filename": "staticmap.webp",
+    "pattern": "simple_webp"
+  },
+  {
+    "album": "cowork-image-dev",
+    "path": "s3://baliciaga-database/cowork-image-dev/tropical-nomad-coworking-space/staticmap.webp",
+    "key": "cowork-image-dev/tropical-nomad-coworking-space/staticmap.webp",
+    "filename": "staticmap.webp",
+    "pattern": "simple_webp"
+  },
+  {
+    "album": "cowork-image-prod",
+    "path": "s3://baliciaga-database/cowork-image-prod/b-work-bali/staticmap.webp",
+    "key": "cowork-image-prod/b-work-bali/staticmap.webp",
+    "filename": "staticmap.webp",
+    "pattern": "simple_webp"
+  },
+  {
+    "album": "cowork-image-prod",
+    "path": "s3://baliciaga-database/cowork-image-prod/ducat-space/staticmap.webp",
+    "key": "cowork-image-prod/ducat-space/staticmap.webp",
+    "filename": "staticmap.webp",
+    "pattern": "simple_webp"
+  },
+  {
+    "album": "cowork-image-prod",
+    "path": "s3://baliciaga-database/cowork-image-prod/genesis-creative-centre/staticmap.webp",
+    "key": "cowork-image-prod/genesis-creative-centre/staticmap.webp",
+    "filename": "staticmap.webp",
+    "pattern": "simple_webp"
+  },
+  {
+    "album": "cowork-image-prod",
+    "path": "s3://baliciaga-database/cowork-image-prod/karya-coworking-bali/staticmap.webp",
+    "key": "cowork-image-prod/karya-coworking-bali/staticmap.webp",
+    "filename": "staticmap.webp",
+    "pattern": "simple_webp"
+  },
+  {
+    "album": "cowork-image-prod",
+    "path": "s3://baliciaga-database/cowork-image-prod/nebula-entrepreneur-coworking-space/staticmap.webp",
+    "key": "cowork-image-prod/nebula-entrepreneur-coworking-space/staticmap.webp",
+    "filename": "staticmap.webp",
+    "pattern": "simple_webp"
+  },
+  {
+    "album": "cowork-image-prod",
+    "path": "s3://baliciaga-database/cowork-image-prod/puco-rooftop-coworking-space-eatery/staticmap.webp",
+    "key": "cowork-image-prod/puco-rooftop-coworking-space-eatery/staticmap.webp",
+    "filename": "staticmap.webp",
+    "pattern": "simple_webp"
+  },
+  {
+    "album": "cowork-image-prod",
+    "path": "s3://baliciaga-database/cowork-image-prod/setter-coworking-private-offices/staticmap.webp",
+    "key": "cowork-image-prod/setter-coworking-private-offices/staticmap.webp",
+    "filename": "staticmap.webp",
+    "pattern": "simple_webp"
+  },
+  {
+    "album": "cowork-image-prod",
+    "path": "s3://baliciaga-database/cowork-image-prod/tropical-nomad-coworking-space/staticmap.webp",
+    "key": "cowork-image-prod/tropical-nomad-coworking-space/staticmap.webp",
+    "filename": "staticmap.webp",
+    "pattern": "simple_webp"
+  }
+]

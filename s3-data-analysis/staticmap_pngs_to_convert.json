@@ -1,0 +1,392 @@
+[
+  {
+    "album": "dining-image-dev",
+    "path": "s3://baliciaga-database/dining-image-dev/alma-tapas-bar-canggu/staticmap.png",
+    "key": "dining-image-dev/alma-tapas-bar-canggu/staticmap.png"
+  },
+  {
+    "album": "dining-image-dev",
+    "path": "s3://baliciaga-database/dining-image-dev/billy-ho-japanese-restaurant/staticmap.png",
+    "key": "dining-image-dev/billy-ho-japanese-restaurant/staticmap.png"
+  },
+  {
+    "album": "dining-image-dev",
+    "path": "s3://baliciaga-database/dining-image-dev/hippie-fish-pererenan-beach/staticmap.png",
+    "key": "dining-image-dev/hippie-fish-pererenan-beach/staticmap.png"
+  },
+  {
+    "album": "dining-image-dev",
+    "path": "s3://baliciaga-database/dining-image-dev/ji-restaurant-bali/staticmap.png",
+    "key": "dining-image-dev/ji-restaurant-bali/staticmap.png"
+  },
+  {
+    "album": "dining-image-dev",
+    "path": "s3://baliciaga-database/dining-image-dev/la-baracca/staticmap.png",
+    "key": "dining-image-dev/la-baracca/staticmap.png"
+  },
+  {
+    "album": "dining-image-dev",
+    "path": "s3://baliciaga-database/dining-image-dev/lacalita-canggu/staticmap.png",
+    "key": "dining-image-dev/lacalita-canggu/staticmap.png"
+  },
+  {
+    "album": "dining-image-dev",
+    "path": "s3://baliciaga-database/dining-image-dev/luigis-hot-pizza-canggu/staticmap.png",
+    "key": "dining-image-dev/luigis-hot-pizza-canggu/staticmap.png"
+  },
+  {
+    "album": "dining-image-dev",
+    "path": "s3://baliciaga-database/dining-image-dev/m-mason-bar-grill-canggu/staticmap.png",
+    "key": "dining-image-dev/m-mason-bar-grill-canggu/staticmap.png"
+  },
+  {
+    "album": "dining-image-dev",
+    "path": "s3://baliciaga-database/dining-image-dev/miss-fish-bali/staticmap.png",
+    "key": "dining-image-dev/miss-fish-bali/staticmap.png"
+  },
+  {
+    "album": "dining-image-dev",
+    "path": "s3://baliciaga-database/dining-image-dev/mosto-berawa/staticmap.png",
+    "key": "dining-image-dev/mosto-berawa/staticmap.png"
+  },
+  {
+    "album": "dining-image-dev",
+    "path": "s3://baliciaga-database/dining-image-dev/one-eyed-jack/staticmap.png",
+    "key": "dining-image-dev/one-eyed-jack/staticmap.png"
+  },
+  {
+    "album": "dining-image-dev",
+    "path": "s3://baliciaga-database/dining-image-dev/santanera/staticmap.png",
+    "key": "dining-image-dev/santanera/staticmap.png"
+  },
+  {
+    "album": "dining-image-dev",
+    "path": "s3://baliciaga-database/dining-image-dev/shun-omakase-counter/staticmap.png",
+    "key": "dining-image-dev/shun-omakase-counter/staticmap.png"
+  },
+  {
+    "album": "dining-image-dev",
+    "path": "s3://baliciaga-database/dining-image-dev/skool-kitchen/staticmap.png",
+    "key": "dining-image-dev/skool-kitchen/staticmap.png"
+  },
+  {
+    "album": "dining-image-dev",
+    "path": "s3://baliciaga-database/dining-image-dev/smoke-bali/staticmap.png",
+    "key": "dining-image-dev/smoke-bali/staticmap.png"
+  },
+  {
+    "album": "dining-image-dev",
+    "path": "s3://baliciaga-database/dining-image-dev/teamo/staticmap.png",
+    "key": "dining-image-dev/teamo/staticmap.png"
+  },
+  {
+    "album": "dining-image-dev",
+    "path": "s3://baliciaga-database/dining-image-dev/uma-garden-seminyak/staticmap.png",
+    "key": "dining-image-dev/uma-garden-seminyak/staticmap.png"
+  },
+  {
+    "album": "dining-image-prod",
+    "path": "s3://baliciaga-database/dining-image-prod/alma-tapas-bar-canggu/staticmap.png",
+    "key": "dining-image-prod/alma-tapas-bar-canggu/staticmap.png"
+  },
+  {
+    "album": "dining-image-prod",
+    "path": "s3://baliciaga-database/dining-image-prod/billy-ho-japanese-restaurant/staticmap.png",
+    "key": "dining-image-prod/billy-ho-japanese-restaurant/staticmap.png"
+  },
+  {
+    "album": "dining-image-prod",
+    "path": "s3://baliciaga-database/dining-image-prod/hippie-fish-pererenan-beach/staticmap.png",
+    "key": "dining-image-prod/hippie-fish-pererenan-beach/staticmap.png"
+  },
+  {
+    "album": "dining-image-prod",
+    "path": "s3://baliciaga-database/dining-image-prod/ji-restaurant-bali/staticmap.png",
+    "key": "dining-image-prod/ji-restaurant-bali/staticmap.png"
+  },
+  {
+    "album": "dining-image-prod",
+    "path": "s3://baliciaga-database/dining-image-prod/la-baracca/staticmap.png",
+    "key": "dining-image-prod/la-baracca/staticmap.png"
+  },
+  {
+    "album": "dining-image-prod",
+    "path": "s3://baliciaga-database/dining-image-prod/lacalita-canggu/staticmap.png",
+    "key": "dining-image-prod/lacalita-canggu/staticmap.png"
+  },
+  {
+    "album": "dining-image-prod",
+    "path": "s3://baliciaga-database/dining-image-prod/luigis-hot-pizza-canggu/staticmap.png",
+    "key": "dining-image-prod/luigis-hot-pizza-canggu/staticmap.png"
+  },
+  {
+    "album": "dining-image-prod",
+    "path": "s3://baliciaga-database/dining-image-prod/m-mason-bar-grill-canggu/staticmap.png",
+    "key": "dining-image-prod/m-mason-bar-grill-canggu/staticmap.png"
+  },
+  {
+    "album": "dining-image-prod",
+    "path": "s3://baliciaga-database/dining-image-prod/miss-fish-bali/staticmap.png",
+    "key": "dining-image-prod/miss-fish-bali/staticmap.png"
+  },
+  {
+    "album": "dining-image-prod",
+    "path": "s3://baliciaga-database/dining-image-prod/mosto-berawa/staticmap.png",
+    "key": "dining-image-prod/mosto-berawa/staticmap.png"
+  },
+  {
+    "album": "dining-image-prod",
+    "path": "s3://baliciaga-database/dining-image-prod/one-eyed-jack/staticmap.png",
+    "key": "dining-image-prod/one-eyed-jack/staticmap.png"
+  },
+  {
+    "album": "dining-image-prod",
+    "path": "s3://baliciaga-database/dining-image-prod/santanera/staticmap.png",
+    "key": "dining-image-prod/santanera/staticmap.png"
+  },
+  {
+    "album": "dining-image-prod",
+    "path": "s3://baliciaga-database/dining-image-prod/shun-omakase-counter/staticmap.png",
+    "key": "dining-image-prod/shun-omakase-counter/staticmap.png"
+  },
+  {
+    "album": "dining-image-prod",
+    "path": "s3://baliciaga-database/dining-image-prod/skool-kitchen/staticmap.png",
+    "key": "dining-image-prod/skool-kitchen/staticmap.png"
+  },
+  {
+    "album": "dining-image-prod",
+    "path": "s3://baliciaga-database/dining-image-prod/smoke-bali/staticmap.png",
+    "key": "dining-image-prod/smoke-bali/staticmap.png"
+  },
+  {
+    "album": "dining-image-prod",
+    "path": "s3://baliciaga-database/dining-image-prod/teamo/staticmap.png",
+    "key": "dining-image-prod/teamo/staticmap.png"
+  },
+  {
+    "album": "dining-image-prod",
+    "path": "s3://baliciaga-database/dining-image-prod/uma-garden-seminyak/staticmap.png",
+    "key": "dining-image-prod/uma-garden-seminyak/staticmap.png"
+  },
+  {
+    "album": "bar-image-dev",
+    "path": "s3://baliciaga-database/bar-image-dev/bali-beer-cycle/staticmap.png",
+    "key": "bar-image-dev/bali-beer-cycle/staticmap.png"
+  },
+  {
+    "album": "bar-image-dev",
+    "path": "s3://baliciaga-database/bar-image-dev/barn-gastropub/staticmap.png",
+    "key": "bar-image-dev/barn-gastropub/staticmap.png"
+  },
+  {
+    "album": "bar-image-dev",
+    "path": "s3://baliciaga-database/bar-image-dev/black-sand-brewery/staticmap.png",
+    "key": "bar-image-dev/black-sand-brewery/staticmap.png"
+  },
+  {
+    "album": "bar-image-dev",
+    "path": "s3://baliciaga-database/bar-image-dev/friends-bar/staticmap.png",
+    "key": "bar-image-dev/friends-bar/staticmap.png"
+  },
+  {
+    "album": "bar-image-dev",
+    "path": "s3://baliciaga-database/bar-image-dev/hippie-fish-pererenan-beach/staticmap.png",
+    "key": "bar-image-dev/hippie-fish-pererenan-beach/staticmap.png"
+  },
+  {
+    "album": "bar-image-dev",
+    "path": "s3://baliciaga-database/bar-image-dev/honeycomb-hookah-eatery/staticmap.png",
+    "key": "bar-image-dev/honeycomb-hookah-eatery/staticmap.png"
+  },
+  {
+    "album": "bar-image-dev",
+    "path": "s3://baliciaga-database/bar-image-dev/longtime-modern-asian-restaurant-bar-bali/staticmap.png",
+    "key": "bar-image-dev/longtime-modern-asian-restaurant-bar-bali/staticmap.png"
+  },
+  {
+    "album": "bar-image-dev",
+    "path": "s3://baliciaga-database/bar-image-dev/miss-fish-bali/staticmap.png",
+    "key": "bar-image-dev/miss-fish-bali/staticmap.png"
+  },
+  {
+    "album": "bar-image-dev",
+    "path": "s3://baliciaga-database/bar-image-dev/patato-head-beach-club/staticmap.png",
+    "key": "bar-image-dev/patato-head-beach-club/staticmap.png"
+  },
+  {
+    "album": "bar-image-dev",
+    "path": "s3://baliciaga-database/bar-image-dev/platonic/staticmap.png",
+    "key": "bar-image-dev/platonic/staticmap.png"
+  },
+  {
+    "album": "bar-image-dev",
+    "path": "s3://baliciaga-database/bar-image-dev/shelter-restaurant/staticmap.png",
+    "key": "bar-image-dev/shelter-restaurant/staticmap.png"
+  },
+  {
+    "album": "bar-image-dev",
+    "path": "s3://baliciaga-database/bar-image-dev/the-lawn/staticmap.png",
+    "key": "bar-image-dev/the-lawn/staticmap.png"
+  },
+  {
+    "album": "bar-image-dev",
+    "path": "s3://baliciaga-database/bar-image-dev/the-shady-fox/staticmap.png",
+    "key": "bar-image-dev/the-shady-fox/staticmap.png"
+  },
+  {
+    "album": "bar-image-dev",
+    "path": "s3://baliciaga-database/bar-image-dev/the-shady-pig/staticmap.png",
+    "key": "bar-image-dev/the-shady-pig/staticmap.png"
+  },
+  {
+    "album": "bar-image-prod",
+    "path": "s3://baliciaga-database/bar-image-prod/bali-beer-cycle/staticmap.png",
+    "key": "bar-image-prod/bali-beer-cycle/staticmap.png"
+  },
+  {
+    "album": "bar-image-prod",
+    "path": "s3://baliciaga-database/bar-image-prod/barn-gastropub/staticmap.png",
+    "key": "bar-image-prod/barn-gastropub/staticmap.png"
+  },
+  {
+    "album": "bar-image-prod",
+    "path": "s3://baliciaga-database/bar-image-prod/black-sand-brewery/staticmap.png",
+    "key": "bar-image-prod/black-sand-brewery/staticmap.png"
+  },
+  {
+    "album": "bar-image-prod",
+    "path": "s3://baliciaga-database/bar-image-prod/friends-bar/staticmap.png",
+    "key": "bar-image-prod/friends-bar/staticmap.png"
+  },
+  {
+    "album": "bar-image-prod",
+    "path": "s3://baliciaga-database/bar-image-prod/hippie-fish-pererenan-beach/staticmap.png",
+    "key": "bar-image-prod/hippie-fish-pererenan-beach/staticmap.png"
+  },
+  {
+    "album": "bar-image-prod",
+    "path": "s3://baliciaga-database/bar-image-prod/honeycomb-hookah-eatery/staticmap.png",
+    "key": "bar-image-prod/honeycomb-hookah-eatery/staticmap.png"
+  },
+  {
+    "album": "bar-image-prod",
+    "path": "s3://baliciaga-database/bar-image-prod/longtime-modern-asian-restaurant-bar-bali/staticmap.png",
+    "key": "bar-image-prod/longtime-modern-asian-restaurant-bar-bali/staticmap.png"
+  },
+  {
+    "album": "bar-image-prod",
+    "path": "s3://baliciaga-database/bar-image-prod/miss-fish-bali/staticmap.png",
+    "key": "bar-image-prod/miss-fish-bali/staticmap.png"
+  },
+  {
+    "album": "bar-image-prod",
+    "path": "s3://baliciaga-database/bar-image-prod/patato-head-beach-club/staticmap.png",
+    "key": "bar-image-prod/patato-head-beach-club/staticmap.png"
+  },
+  {
+    "album": "bar-image-prod",
+    "path": "s3://baliciaga-database/bar-image-prod/platonic/staticmap.png",
+    "key": "bar-image-prod/platonic/staticmap.png"
+  },
+  {
+    "album": "bar-image-prod",
+    "path": "s3://baliciaga-database/bar-image-prod/shelter-restaurant/staticmap.png",
+    "key": "bar-image-prod/shelter-restaurant/staticmap.png"
+  },
+  {
+    "album": "bar-image-prod",
+    "path": "s3://baliciaga-database/bar-image-prod/the-lawn/staticmap.png",
+    "key": "bar-image-prod/the-lawn/staticmap.png"
+  },
+  {
+    "album": "bar-image-prod",
+    "path": "s3://baliciaga-database/bar-image-prod/the-shady-fox/staticmap.png",
+    "key": "bar-image-prod/the-shady-fox/staticmap.png"
+  },
+  {
+    "album": "bar-image-prod",
+    "path": "s3://baliciaga-database/bar-image-prod/the-shady-pig/staticmap.png",
+    "key": "bar-image-prod/the-shady-pig/staticmap.png"
+  },
+  {
+    "album": "cowork-image-dev",
+    "path": "s3://baliciaga-database/cowork-image-dev/b-work-bali/staticmap.png",
+    "key": "cowork-image-dev/b-work-bali/staticmap.png"
+  },
+  {
+    "album": "cowork-image-dev",
+    "path": "s3://baliciaga-database/cowork-image-dev/ducat-space/staticmap.png",
+    "key": "cowork-image-dev/ducat-space/staticmap.png"
+  },
+  {
+    "album": "cowork-image-dev",
+    "path": "s3://baliciaga-database/cowork-image-dev/genesis-creative-centre/staticmap.png",
+    "key": "cowork-image-dev/genesis-creative-centre/staticmap.png"
+  },
+  {
+    "album": "cowork-image-dev",
+    "path": "s3://baliciaga-database/cowork-image-dev/karya-coworking-bali/staticmap.png",
+    "key": "cowork-image-dev/karya-coworking-bali/staticmap.png"
+  },
+  {
+    "album": "cowork-image-dev",
+    "path": "s3://baliciaga-database/cowork-image-dev/nebula-entrepreneur-coworking-space/staticmap.png",
+    "key": "cowork-image-dev/nebula-entrepreneur-coworking-space/staticmap.png"
+  },
+  {
+    "album": "cowork-image-dev",
+    "path": "s3://baliciaga-database/cowork-image-dev/puco-rooftop-coworking-space-eatery/staticmap.png",
+    "key": "cowork-image-dev/puco-rooftop-coworking-space-eatery/staticmap.png"
+  },
+  {
+    "album": "cowork-image-dev",
+    "path": "s3://baliciaga-database/cowork-image-dev/setter-coworking-private-offices/staticmap.png",
+    "key": "cowork-image-dev/setter-coworking-private-offices/staticmap.png"
+  },
+  {
+    "album": "cowork-image-dev",
+    "path": "s3://baliciaga-database/cowork-image-dev/tropical-nomad-coworking-space/staticmap.png",
+    "key": "cowork-image-dev/tropical-nomad-coworking-space/staticmap.png"
+  },
+  {
+    "album": "cowork-image-prod",
+    "path": "s3://baliciaga-database/cowork-image-prod/b-work-bali/staticmap.png",
+    "key": "cowork-image-prod/b-work-bali/staticmap.png"
+  },
+  {
+    "album": "cowork-image-prod",
+    "path": "s3://baliciaga-database/cowork-image-prod/ducat-space/staticmap.png",
+    "key": "cowork-image-prod/ducat-space/staticmap.png"
+  },
+  {
+    "album": "cowork-image-prod",
+    "path": "s3://baliciaga-database/cowork-image-prod/genesis-creative-centre/staticmap.png",
+    "key": "cowork-image-prod/genesis-creative-centre/staticmap.png"
+  },
+  {
+    "album": "cowork-image-prod",
+    "path": "s3://baliciaga-database/cowork-image-prod/karya-coworking-bali/staticmap.png",
+    "key": "cowork-image-prod/karya-coworking-bali/staticmap.png"
+  },
+  {
+    "album": "cowork-image-prod",
+    "path": "s3://baliciaga-database/cowork-image-prod/nebula-entrepreneur-coworking-space/staticmap.png",
+    "key": "cowork-image-prod/nebula-entrepreneur-coworking-space/staticmap.png"
+  },
+  {
+    "album": "cowork-image-prod",
+    "path": "s3://baliciaga-database/cowork-image-prod/puco-rooftop-coworking-space-eatery/staticmap.png",
+    "key": "cowork-image-prod/puco-rooftop-coworking-space-eatery/staticmap.png"
+  },
+  {
+    "album": "cowork-image-prod",
+    "path": "s3://baliciaga-database/cowork-image-prod/setter-coworking-private-offices/staticmap.png",
+    "key": "cowork-image-prod/setter-coworking-private-offices/staticmap.png"
+  },
+  {
+    "album": "cowork-image-prod",
+    "path": "s3://baliciaga-database/cowork-image-prod/tropical-nomad-coworking-space/staticmap.png",
+    "key": "cowork-image-prod/tropical-nomad-coworking-space/staticmap.png"
+  }
+]

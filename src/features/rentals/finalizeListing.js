@@ -6,7 +6,7 @@
  * - Authenticated endpoint (Cognito authorization required)
  * - Owner-only access control (only initiator can finalize)
  * - Atomic listing status update to 'finalized'
- * - Batch update accepted applications to 'signed' status
+ * - Batch update accepted applications to 'finalized' status
  * - Comprehensive error handling and rollback
  * - CORS support
  */
@@ -65,7 +65,7 @@ exports.handler = async (event) => {
         // 3. Update listing status with ownership verification using correct userId
         await updateListingStatus(listingId, userId);
         
-        // 4. Batch update accepted applications to 'signed'
+        // 4. Batch update accepted applications to 'finalized'
         const updatedApplicationsCount = await updateAcceptedApplications(listingId);
 
         // 5. Return success response
@@ -76,7 +76,7 @@ exports.handler = async (event) => {
                 listingId,
                 status: 'finalized',
                 updatedApplicationsCount,
-                message: 'Listing successfully finalized and all accepted applications marked as signed'
+                message: 'Listing successfully finalized and all accepted applications marked as finalized'
             }
         });
 
@@ -184,7 +184,7 @@ async function updateListingStatus(listingId, userId) {
 }
 
 /**
- * Batch update all accepted applications to 'signed' status
+ * Batch update all accepted applications to 'finalized' status
  */
 async function updateAcceptedApplications(listingId) {
     console.log(`🔄 Updating accepted applications for listing: ${listingId}`);
@@ -199,14 +199,14 @@ async function updateAcceptedApplications(listingId) {
 
     console.log(`📋 Found ${acceptedApplications.length} accepted applications to update`);
 
-    // 2. Batch update all accepted applications to 'signed'
+    // 2. Batch update all accepted applications to 'finalized'
     const updatePromises = acceptedApplications.map(application => 
         updateApplicationStatus(application.applicationId)
     );
 
     try {
         await Promise.all(updatePromises);
-        console.log(`✅ Successfully updated ${acceptedApplications.length} applications to 'signed'`);
+        console.log(`✅ Successfully updated ${acceptedApplications.length} applications to 'finalized'`);
         return acceptedApplications.length;
 
     } catch (error) {
@@ -247,10 +247,10 @@ async function getAcceptedApplications(listingId) {
 }
 
 /**
- * Update individual application status to 'signed'
+ * Update individual application status to 'finalized'
  */
 async function updateApplicationStatus(applicationId) {
-    console.log(`📝 Updating application status to 'signed': ${applicationId}`);
+    console.log(`📝 Updating application status to 'finalized': ${applicationId}`);
 
     const params = {
         TableName: APPLICATIONS_TABLE,
@@ -260,7 +260,7 @@ async function updateApplicationStatus(applicationId) {
             '#status': 'status'
         },
         ExpressionAttributeValues: {
-            ':status': 'signed',
+            ':status': 'finalized',
             ':updatedAt': new Date().toISOString(),
             ':currentStatus': 'accepted'
         },
@@ -270,7 +270,7 @@ async function updateApplicationStatus(applicationId) {
 
     try {
         const result = await dynamodb.update(params).promise();
-        console.log(`✅ Application ${applicationId} updated to 'signed'`);
+        console.log(`✅ Application ${applicationId} updated to 'finalized'`);
         return result.Attributes;
 
     } catch (error) {

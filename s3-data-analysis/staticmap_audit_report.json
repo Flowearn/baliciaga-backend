@@ -1,0 +1,508 @@
+{
+  "missing_in_s3": {
+    "dining-image-dev": [
+      {
+        "name": "Te'amo",
+        "placeId": "ChIJk3IjCVU50i0RDCA0u-V4WAs",
+        "expectedUrl": "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/teamo_ChIJk3IjCVU50i0RDCA0u-V4WAs/teamo_static.webp"
+      },
+      {
+        "name": "Lusa By/Suka",
+        "placeId": "ChIJcYpksxVH0i0RCDMFafUy5N4",
+        "expectedUrl": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/lusa-bysuka_ChIJcYpksxVH0i0RCDMFafUy5N4/lusa-bysuka_static.webp"
+      },
+      {
+        "name": "Bokashi Berawa",
+        "placeId": "ChIJqdO8SytH0i0RkcWicB2oqxQ",
+        "expectedUrl": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/bokashi-berawa_ChIJqdO8SytH0i0RkcWicB2oqxQ/bokashi-berawa_static.webp"
+      },
+      {
+        "name": "Zai Cafe Breakfast & Dinner",
+        "placeId": "ChIJnT3bt6VH0i0RUgvf_KGh8r8",
+        "expectedUrl": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/zai-cafe-breakfast-dinner_ChIJnT3bt6VH0i0RUgvf_KGh8r8/zai-cafe-breakfast-dinner_static.webp"
+      }
+    ]
+  },
+  "wrong_format": {
+    "dining-image-dev": [
+      {
+        "merchant": {
+          "name": "La Baracca Bali (Seminyak)",
+          "placeId": "ChIJj0tR_mpH0i0RP5h_ieNuzAs",
+          "expectedUrl": "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/la-baracca-bali-seminyak_ChIJj0tR_mpH0i0RP5h_ieNuzAs/la-baracca-bali-seminyak_static.webp"
+        },
+        "actualUrl": "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/la-baracca_ChIJj0tR_mpH0i0RP5h_ieNuzAs/la-baracca_static.webp",
+        "expectedUrl": "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/la-baracca-bali-seminyak_ChIJj0tR_mpH0i0RP5h_ieNuzAs/la-baracca-bali-seminyak_static.webp"
+      }
+    ],
+    "bar-image-dev": [
+      {
+        "merchant": {
+          "name": "The Barn Pub & Kitchen",
+          "placeId": "ChIJe7KSn4dH0i0RsfzzpwFhwpQ",
+          "expectedUrl": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/the-barn-gastropub_ChIJe7KSn4dH0i0RsfzzpwFhwpQ/the-barn-gastropub_static.webp"
+        },
+        "actualUrl": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/barn-gastropub_ChIJe7KSn4dH0i0RsfzzpwFhwpQ/barn-gastropub_static.webp",
+        "expectedUrl": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/the-barn-gastropub_ChIJe7KSn4dH0i0RsfzzpwFhwpQ/the-barn-gastropub_static.webp"
+      },
+      {
+        "merchant": {
+          "name": "Potato Head Beach Club",
+          "placeId": "ChIJ_XZL_xFH0i0RTo0EWBqsnRs",
+          "expectedUrl": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/potato-head-beach-club_ChIJ_XZL_xFH0i0RTo0EWBqsnRs/potato-head-beach-club_static.webp"
+        },
+        "actualUrl": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/patato-head-beach-club_ChIJ_XZL_xFH0i0RTo0EWBqsnRs/patato-head-beach-club_static.webp",
+        "expectedUrl": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/potato-head-beach-club_ChIJ_XZL_xFH0i0RTo0EWBqsnRs/potato-head-beach-club_static.webp"
+      },
+      {
+        "merchant": {
+          "name": "The Lawn Canggu Beach Club",
+          "placeId": "ChIJiQdg1YdH0i0R8ANUMzZizN0",
+          "expectedUrl": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/the-lawn-canggu-beach-club_ChIJiQdg1YdH0i0R8ANUMzZizN0/the-lawn-canggu-beach-club_static.webp"
+        },
+        "actualUrl": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/the-lawn_ChIJiQdg1YdH0i0R8ANUMzZizN0/the-lawn_static.webp",
+        "expectedUrl": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/the-lawn-canggu-beach-club_ChIJiQdg1YdH0i0R8ANUMzZizN0/the-lawn-canggu-beach-club_static.webp"
+      }
+    ],
+    "cowork-image-dev": [
+      {
+        "merchant": {
+          "name": "Ducat Space",
+          "placeId": "ChIJCd9etMVH0i0RNkfYsSkhmZg",
+          "expectedUrl": "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/ducat-space-cafe-offices-co-working-meeting-rooms_ChIJCd9etMVH0i0RNkfYsSkhmZg/ducat-space-cafe-offices-co-working-meeting-rooms_static.webp"
+        },
+        "actualUrl": "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/ducat-space_ChIJCd9etMVH0i0RNkfYsSkhmZg/ducat-space_static.webp",
+        "expectedUrl": "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/ducat-space-cafe-offices-co-working-meeting-rooms_ChIJCd9etMVH0i0RNkfYsSkhmZg/ducat-space-cafe-offices-co-working-meeting-rooms_static.webp"
+      },
+      {
+        "merchant": {
+          "name": "Karya Co-working Bali",
+          "placeId": "ChIJQeo_7VxH0i0RmnzEcibuEb8",
+          "expectedUrl": "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/karya-co-working-bali_ChIJQeo_7VxH0i0RmnzEcibuEb8/karya-co-working-bali_static.webp"
+        },
+        "actualUrl": "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/karya-coworking-bali_ChIJQeo_7VxH0i0RmnzEcibuEb8/karya-coworking-bali_static.webp",
+        "expectedUrl": "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/karya-co-working-bali_ChIJQeo_7VxH0i0RmnzEcibuEb8/karya-co-working-bali_static.webp"
+      }
+    ]
+  },
+  "correct": {
+    "cafe-image-dev": [
+      {
+        "name": "Desa Kitsuné",
+        "placeId": "ChIJ9UCFSPE50i0RVVADcFGCGXI",
+        "expectedUrl": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/desa-kitsun_ChIJ9UCFSPE50i0RVVADcFGCGXI/desa-kitsun_static.webp"
+      },
+      {
+        "name": "Sensorium Bali",
+        "placeId": "ChIJr9bHQS050i0RW_GuYHY3vaU",
+        "expectedUrl": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/sensorium-bali_ChIJr9bHQS050i0RW_GuYHY3vaU/sensorium-bali_static.webp"
+      },
+      {
+        "name": "Milk & Madu Beach Road",
+        "placeId": "ChIJL3L-Sfc50i0RwlAVew5QCm8",
+        "expectedUrl": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/milk-madu-beach-road_ChIJL3L-Sfc50i0RwlAVew5QCm8/milk-madu-beach-road_static.webp"
+      },
+      {
+        "name": "The Avocado Factory",
+        "placeId": "ChIJ36pywXk40i0Rh9ZZCRMb1fQ",
+        "expectedUrl": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/the-avocado-factory_ChIJ36pywXk40i0Rh9ZZCRMb1fQ/the-avocado-factory_static.webp"
+      },
+      {
+        "name": "Revolver Canggu",
+        "placeId": "ChIJnY-evaw50i0RD_tH6R6pDyw",
+        "expectedUrl": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/revolver-canggu_ChIJnY-evaw50i0RD_tH6R6pDyw/revolver-canggu_static.webp"
+      },
+      {
+        "name": "ZIN Cafe",
+        "placeId": "ChIJ1a70wvFH0i0RajIckWuoU14",
+        "expectedUrl": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/zin-cafe_ChIJ1a70wvFH0i0RajIckWuoU14/zin-cafe_static.webp"
+      },
+      {
+        "name": "Fold Canggu",
+        "placeId": "ChIJg1ad-75H0i0R8aB_K9oKYj8",
+        "expectedUrl": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/fold-canggu_ChIJg1ad-75H0i0R8aB_K9oKYj8/fold-canggu_static.webp"
+      },
+      {
+        "name": "Sari Kitchen & Community - by Ekosistem",
+        "placeId": "ChIJVwZGvMo50i0R5i1fzyT73S4",
+        "expectedUrl": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/sari-kitchen-community-by-ekosistem_ChIJVwZGvMo50i0R5i1fzyT73S4/sari-kitchen-community-by-ekosistem_static.webp"
+      },
+      {
+        "name": "Two Face / Coffee & Brunch [Canggu]",
+        "placeId": "ChIJq42lSa850i0RziccPzDJXhU",
+        "expectedUrl": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/two-face-coffee-brunch-canggu_ChIJq42lSa850i0RziccPzDJXhU/two-face-coffee-brunch-canggu_static.webp"
+      },
+      {
+        "name": "HOME CAFE CANGGU",
+        "placeId": "ChIJSzQz6CQ50i0RalL4caNfcSI",
+        "expectedUrl": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/home-cafe-canggu_ChIJSzQz6CQ50i0RalL4caNfcSI/home-cafe-canggu_static.webp"
+      },
+      {
+        "name": "BAKED. Berawa",
+        "placeId": "ChIJU0lp4SNH0i0R7x72tr13TmY",
+        "expectedUrl": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/baked-berawa_ChIJU0lp4SNH0i0R7x72tr13TmY/baked-berawa_static.webp"
+      },
+      {
+        "name": "nüde cafe Berawa",
+        "placeId": "ChIJZ6Jj8oFH0i0R0sKhEJMIyd8",
+        "expectedUrl": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/nde-cafe-berawa_ChIJZ6Jj8oFH0i0R0sKhEJMIyd8/nde-cafe-berawa_static.webp"
+      },
+      {
+        "name": "Lusa By/Suka",
+        "placeId": "ChIJcYpksxVH0i0RCDMFafUy5N4",
+        "expectedUrl": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/lusa-bysuka_ChIJcYpksxVH0i0RCDMFafUy5N4/lusa-bysuka_static.webp"
+      },
+      {
+        "name": "Hungry Bird Coffee Roaster",
+        "placeId": "ChIJa2bVbaxcBAURDMj_jEzGDqI",
+        "expectedUrl": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/hungry-bird-coffee-roaster_ChIJa2bVbaxcBAURDMj_jEzGDqI/hungry-bird-coffee-roaster_static.webp"
+      },
+      {
+        "name": "Brunch Club Berawa",
+        "placeId": "ChIJnxFCS3pH0i0RE9mJ0v6ZkHA",
+        "expectedUrl": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/brunch-club-berawa_ChIJnxFCS3pH0i0RE9mJ0v6ZkHA/brunch-club-berawa_static.webp"
+      },
+      {
+        "name": "Bokashi Berawa",
+        "placeId": "ChIJqdO8SytH0i0RkcWicB2oqxQ",
+        "expectedUrl": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/bokashi-berawa_ChIJqdO8SytH0i0RkcWicB2oqxQ/bokashi-berawa_static.webp"
+      },
+      {
+        "name": "Crate Cafe",
+        "placeId": "ChIJOaEQDnk40i0Rzhou4NcRx-w",
+        "expectedUrl": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/crate-cafe_ChIJOaEQDnk40i0Rzhou4NcRx-w/crate-cafe_static.webp"
+      },
+      {
+        "name": "ST. ALi - Bali",
+        "placeId": "ChIJD94dpPY50i0R96D3MPX7rrc",
+        "expectedUrl": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/st-ali-bali_ChIJD94dpPY50i0R96D3MPX7rrc/st-ali-bali_static.webp"
+      },
+      {
+        "name": "Brunch Club Pererenan",
+        "placeId": "ChIJkfDSHYg50i0RBdXQigmMn54",
+        "expectedUrl": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/brunch-club-pererenan_ChIJkfDSHYg50i0RBdXQigmMn54/brunch-club-pererenan_static.webp"
+      },
+      {
+        "name": "MIEL SPECIALTY COFFEE CANGGU | CO-WORKING",
+        "placeId": "ChIJYXyNN5U50i0RmIUNsfH9tHw",
+        "expectedUrl": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/miel-specialty-coffee-canggu-co-working_ChIJYXyNN5U50i0RmIUNsfH9tHw/miel-specialty-coffee-canggu-co-working_static.webp"
+      },
+      {
+        "name": "The Common",
+        "placeId": "ChIJHzyhoW450i0Rub7_EEvisDY",
+        "expectedUrl": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/the-common_ChIJHzyhoW450i0Rub7_EEvisDY/the-common_static.webp"
+      },
+      {
+        "name": "Cafe Vida Organic",
+        "placeId": "ChIJMev9G3w40i0RXZlSucHydMw",
+        "expectedUrl": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/cafe-vida-organic_ChIJMev9G3w40i0RXZlSucHydMw/cafe-vida-organic_static.webp"
+      },
+      {
+        "name": "Rise & Shine Cafe Canggu",
+        "placeId": "ChIJg_EuN3s40i0R6kCeRoibycg",
+        "expectedUrl": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/rise-shine-cafe-canggu_ChIJg_EuN3s40i0R6kCeRoibycg/rise-shine-cafe-canggu_static.webp"
+      },
+      {
+        "name": "Blou Cafe Canggu",
+        "placeId": "ChIJhz6xqoo50i0RZxslmCS1iow",
+        "expectedUrl": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/blou-cafe-canggu_ChIJhz6xqoo50i0RZxslmCS1iow/blou-cafe-canggu_static.webp"
+      },
+      {
+        "name": "Kawisari Coffee Farm Shop & Eatery Bali",
+        "placeId": "ChIJH21JAz5H0i0R9xl0tIvpu1w",
+        "expectedUrl": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/kawisari-coffee-farm-shop-eatery-bali_ChIJH21JAz5H0i0R9xl0tIvpu1w/kawisari-coffee-farm-shop-eatery-bali_static.webp"
+      },
+      {
+        "name": "Cafe The Daun",
+        "placeId": "ChIJ1_XOtHg40i0R6eyPmtRK6bc",
+        "expectedUrl": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/cafe-the-daun_ChIJ1_XOtHg40i0R6eyPmtRK6bc/cafe-the-daun_static.webp"
+      },
+      {
+        "name": "Zai Cafe Breakfast & Dinner",
+        "placeId": "ChIJnT3bt6VH0i0RUgvf_KGh8r8",
+        "expectedUrl": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/zai-cafe-breakfast-dinner_ChIJnT3bt6VH0i0RUgvf_KGh8r8/zai-cafe-breakfast-dinner_static.webp"
+      },
+      {
+        "name": "Amolas Cafe",
+        "placeId": "ChIJD63X4IU50i0RFkjm_Q5AwGs",
+        "expectedUrl": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/amolas-cafe_ChIJD63X4IU50i0RFkjm_Q5AwGs/amolas-cafe_static.webp"
+      },
+      {
+        "name": "openhouse cafe",
+        "placeId": "ChIJRfVHDQA50i0R78l1hYjP2iM",
+        "expectedUrl": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/openhouse-cafe_ChIJRfVHDQA50i0R78l1hYjP2iM/openhouse-cafe_static.webp"
+      },
+      {
+        "name": "Mimpi Grocery",
+        "placeId": "ChIJzXC1G0A50i0RRtOZNiTSri0",
+        "expectedUrl": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/mimpi-grocery_ChIJzXC1G0A50i0RRtOZNiTSri0/mimpi-grocery_static.webp"
+      },
+      {
+        "name": "Fine by SATUSATUCOFFEE",
+        "placeId": "ChIJB5JLA1c50i0RRPJ0C5V2DnQ",
+        "expectedUrl": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/fine-by-satusatucoffee_ChIJB5JLA1c50i0RRPJ0C5V2DnQ/fine-by-satusatucoffee_static.webp"
+      },
+      {
+        "name": "Neighbourhood Food",
+        "placeId": "ChIJq_svKGxH0i0RU-zAhMppq8Y",
+        "expectedUrl": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/neighbourhood-food_ChIJq_svKGxH0i0RU-zAhMppq8Y/neighbourhood-food_static.webp"
+      },
+      {
+        "name": "Barboa Bali",
+        "placeId": "ChIJQwwZdJ050i0R0ehpWb6QBQc",
+        "expectedUrl": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/barboa-bali_ChIJQwwZdJ050i0R0ehpWb6QBQc/barboa-bali_static.webp"
+      },
+      {
+        "name": "HOME CAFE MENGWI",
+        "placeId": "ChIJt38YXDo50i0RJlB3Oz0PDjg",
+        "expectedUrl": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/home-cafe-mengwi_ChIJt38YXDo50i0RJlB3Oz0PDjg/home-cafe-mengwi_static.webp"
+      },
+      {
+        "name": "Jiwa Cafe",
+        "placeId": "ChIJEaGuegA50i0R3CbgI5uqfq0",
+        "expectedUrl": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/jiwa-cafe_ChIJEaGuegA50i0R3CbgI5uqfq0/jiwa-cafe_static.webp"
+      },
+      {
+        "name": "nüde cafe Babakan",
+        "placeId": "ChIJFay1BbM50i0RLOYPPnFgc2k",
+        "expectedUrl": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/nde-cafe-babakan_ChIJFay1BbM50i0RLOYPPnFgc2k/nde-cafe-babakan_static.webp"
+      },
+      {
+        "name": "Secret Spot Canggu",
+        "placeId": "ChIJmZf0Vlc50i0RR3Z4gOnFmUM",
+        "expectedUrl": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/secret-spot-canggu_ChIJmZf0Vlc50i0RR3Z4gOnFmUM/secret-spot-canggu_static.webp"
+      },
+      {
+        "name": "YUME - Buduk",
+        "placeId": "ChIJQYh7HcM50i0RyZozSuavIhM",
+        "expectedUrl": "https://d2cmxnft4myi1k.cloudfront.net/cafe-image-dev/yume-buduk_ChIJQYh7HcM50i0RyZozSuavIhM/yume-buduk_static.webp"
+      }
+    ],
+    "dining-image-dev": [
+      {
+        "name": "Alma Tapas Bar - Canggu",
+        "placeId": "ChIJTTj8Ts9H0i0R2XwcfS_i6Mk",
+        "expectedUrl": "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/alma-tapas-bar-canggu_ChIJTTj8Ts9H0i0R2XwcfS_i6Mk/alma-tapas-bar-canggu_static.webp"
+      },
+      {
+        "name": "Billy Ho Japanese Restaurant",
+        "placeId": "ChIJ0RSTlvJH0i0R1ozPGwVxSoU",
+        "expectedUrl": "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/billy-ho-japanese-restaurant_ChIJ0RSTlvJH0i0R1ozPGwVxSoU/billy-ho-japanese-restaurant_static.webp"
+      },
+      {
+        "name": "Hippie Fish Pererenan Beach",
+        "placeId": "ChIJ5Wex6mc50i0RNSHWdVKVoPo",
+        "expectedUrl": "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/hippie-fish-pererenan-beach_ChIJ5Wex6mc50i0RNSHWdVKVoPo/hippie-fish-pererenan-beach_static.webp"
+      },
+      {
+        "name": "Ji Restaurant Bali",
+        "placeId": "ChIJWVWpMoZH0i0RRFcupYVhVi4",
+        "expectedUrl": "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/ji-restaurant-bali_ChIJWVWpMoZH0i0RRFcupYVhVi4/ji-restaurant-bali_static.webp"
+      },
+      {
+        "name": "LACALITA Canggu",
+        "placeId": "ChIJPZo4Unk40i0RxI_FwqiKsWQ",
+        "expectedUrl": "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/lacalita-canggu_ChIJPZo4Unk40i0RxI_FwqiKsWQ/lacalita-canggu_static.webp"
+      },
+      {
+        "name": "Luigi's Hot Pizza Canggu",
+        "placeId": "ChIJV8j8ZXk40i0RQ_ByVyakQkc",
+        "expectedUrl": "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/luigis-hot-pizza-canggu_ChIJV8j8ZXk40i0RQ_ByVyakQkc/luigis-hot-pizza-canggu_static.webp"
+      },
+      {
+        "name": "M. MASON Bar | Grill Canggu",
+        "placeId": "ChIJBWxfWhA50i0Rzb3CWOIu8tA",
+        "expectedUrl": "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/m-mason-bar-grill-canggu_ChIJBWxfWhA50i0Rzb3CWOIu8tA/m-mason-bar-grill-canggu_static.webp"
+      },
+      {
+        "name": "Miss Fish Bali",
+        "placeId": "ChIJYcKvqiJH0i0RtzWDiRmCnI0",
+        "expectedUrl": "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/miss-fish-bali_ChIJYcKvqiJH0i0RtzWDiRmCnI0/miss-fish-bali_static.webp"
+      },
+      {
+        "name": "Mosto | Berawa",
+        "placeId": "ChIJD4eq-jFH0i0ROgK2DCf0uNw",
+        "expectedUrl": "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/mosto-berawa_ChIJD4eq-jFH0i0ROgK2DCf0uNw/mosto-berawa_static.webp"
+      },
+      {
+        "name": "One Eyed Jack",
+        "placeId": "ChIJC3RsyoJH0i0Rri-AJ8JF9Tg",
+        "expectedUrl": "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/one-eyed-jack_ChIJC3RsyoJH0i0Rri-AJ8JF9Tg/one-eyed-jack_static.webp"
+      },
+      {
+        "name": "SHUN Omakase Counter",
+        "placeId": "ChIJERK7FYRH0i0RKyvr-65RLZg",
+        "expectedUrl": "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/shun-omakase-counter_ChIJERK7FYRH0i0RKyvr-65RLZg/shun-omakase-counter_static.webp"
+      },
+      {
+        "name": "SKOOL Kitchen",
+        "placeId": "ChIJ2SXWetNH0i0RwwbG9ftXrx4",
+        "expectedUrl": "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/skool-kitchen_ChIJ2SXWetNH0i0RwwbG9ftXrx4/skool-kitchen_static.webp"
+      },
+      {
+        "name": "Santanera",
+        "placeId": "ChIJYUi2MOI50i0RFUr3eL2-pBk",
+        "expectedUrl": "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/santanera_ChIJYUi2MOI50i0RFUr3eL2-pBk/santanera_static.webp"
+      },
+      {
+        "name": "Smoke Bali",
+        "placeId": "ChIJwVQNUZU50i0RPESrmvSu12w",
+        "expectedUrl": "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/smoke-bali_ChIJwVQNUZU50i0RPESrmvSu12w/smoke-bali_static.webp"
+      },
+      {
+        "name": "Uma Garden Seminyak",
+        "placeId": "ChIJXxe2rXNH0i0Rnt_qeoqnQcc",
+        "expectedUrl": "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/uma-garden-seminyak_ChIJXxe2rXNH0i0Rnt_qeoqnQcc/uma-garden-seminyak_static.webp"
+      },
+      {
+        "name": "Ina Ré Restaurant",
+        "placeId": "ChIJuWrhQgA50i0Ra0tVN4yy1Dk",
+        "expectedUrl": "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/ina-r-restaurant_ChIJuWrhQgA50i0Ra0tVN4yy1Dk/ina-r-restaurant_static.webp"
+      },
+      {
+        "name": "Kilo Kitchen Bali - Seminyak",
+        "placeId": "ChIJb-BRehhH0i0RUcIoZtXLtUM",
+        "expectedUrl": "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/kilo-kitchen-bali-seminyak_ChIJb-BRehhH0i0RUcIoZtXLtUM/kilo-kitchen-bali-seminyak_static.webp"
+      },
+      {
+        "name": "Mostly Restaurant and Bar",
+        "placeId": "ChIJ5fhhx1I50i0RYv-9kVUcpbY",
+        "expectedUrl": "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/mostly-restaurant-and-bar_ChIJ5fhhx1I50i0RYv-9kVUcpbY/mostly-restaurant-and-bar_static.webp"
+      },
+      {
+        "name": "Anaga Restaurant, Authentic Thai Cuisine",
+        "placeId": "ChIJ32m9jCxH0i0RLBCGarQNwNc",
+        "expectedUrl": "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/anaga-restaurant-authentic-thai-cuisine_ChIJ32m9jCxH0i0RLBCGarQNwNc/anaga-restaurant-authentic-thai-cuisine_static.webp"
+      }
+    ],
+    "bar-image-dev": [
+      {
+        "name": "Honeycomb Hookah & Eatery",
+        "placeId": "ChIJN5xTyos50i0RiGBQWrCPinA",
+        "expectedUrl": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/honeycomb-hookah-eatery_ChIJN5xTyos50i0RiGBQWrCPinA/honeycomb-hookah-eatery_static.webp"
+      },
+      {
+        "name": "LONGTIME | Modern Asian Restaurant & Bar Bali",
+        "placeId": "ChIJk4MaNPo50i0R4vfuHDwZ_3U",
+        "expectedUrl": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/longtime-modern-asian-restaurant-bar-bali_ChIJk4MaNPo50i0R4vfuHDwZ_3U/longtime-modern-asian-restaurant-bar-bali_static.webp"
+      },
+      {
+        "name": "PLATONIC",
+        "placeId": "ChIJkYxdu3E50i0RrFJjPHk8LqI",
+        "expectedUrl": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/platonic_ChIJkYxdu3E50i0RrFJjPHk8LqI/platonic_static.webp"
+      },
+      {
+        "name": "The Shady Fox",
+        "placeId": "ChIJOwB4D8E50i0RnmcWbm5B1jI",
+        "expectedUrl": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/the-shady-fox_ChIJOwB4D8E50i0RnmcWbm5B1jI/the-shady-fox_static.webp"
+      },
+      {
+        "name": "Bali Beer Cycle",
+        "placeId": "ChIJgfLsf1pF0i0RTDMRSpGD_Zs",
+        "expectedUrl": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/bali-beer-cycle_ChIJgfLsf1pF0i0RTDMRSpGD_Zs/bali-beer-cycle_static.webp"
+      },
+      {
+        "name": "Black Sand Brewery",
+        "placeId": "ChIJNzjyIBI50i0RpFdnd_ZN3pg",
+        "expectedUrl": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/black-sand-brewery_ChIJNzjyIBI50i0RpFdnd_ZN3pg/black-sand-brewery_static.webp"
+      },
+      {
+        "name": "Shelter Restaurant",
+        "placeId": "ChIJcfxIJo850i0RsrveoncQeBs",
+        "expectedUrl": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/shelter-restaurant_ChIJcfxIJo850i0RsrveoncQeBs/shelter-restaurant_static.webp"
+      },
+      {
+        "name": "Friends Bar",
+        "placeId": "ChIJCdPou9hH0i0RgIY7umQ751U",
+        "expectedUrl": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/friends-bar_ChIJCdPou9hH0i0RgIY7umQ751U/friends-bar_static.webp"
+      },
+      {
+        "name": "The Shady Pig",
+        "placeId": "ChIJxZh1qu1H0i0R5BXWVSV1zK8",
+        "expectedUrl": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/the-shady-pig_ChIJxZh1qu1H0i0R5BXWVSV1zK8/the-shady-pig_static.webp"
+      },
+      {
+        "name": "Hippie Fish Pererenan Beach",
+        "placeId": "ChIJ5Wex6mc50i0RNSHWdVKVoPo",
+        "expectedUrl": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/hippie-fish-pererenan-beach_ChIJ5Wex6mc50i0RNSHWdVKVoPo/hippie-fish-pererenan-beach_static.webp"
+      },
+      {
+        "name": "Miss Fish Bali",
+        "placeId": "ChIJYcKvqiJH0i0RtzWDiRmCnI0",
+        "expectedUrl": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/miss-fish-bali_ChIJYcKvqiJH0i0RtzWDiRmCnI0/miss-fish-bali_static.webp"
+      }
+    ],
+    "cowork-image-dev": [
+      {
+        "name": "B Work Bali",
+        "placeId": "ChIJ6fBvIpg50i0R8764BCFFN60",
+        "expectedUrl": "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/b-work-bali_ChIJ6fBvIpg50i0R8764BCFFN60/b-work-bali_static.webp"
+      },
+      {
+        "name": "Genesis Creative Centre",
+        "placeId": "ChIJSW0wnj9H0i0RBi6QO_C6M_o",
+        "expectedUrl": "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/genesis-creative-centre_ChIJSW0wnj9H0i0RBi6QO_C6M_o/genesis-creative-centre_static.webp"
+      },
+      {
+        "name": "Nebula Entrepreneur Coworking Space",
+        "placeId": "ChIJY1RJ9Zs50i0R5x8HN0qZa9g",
+        "expectedUrl": "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/nebula-entrepreneur-coworking-space_ChIJY1RJ9Zs50i0R5x8HN0qZa9g/nebula-entrepreneur-coworking-space_static.webp"
+      },
+      {
+        "name": "PUCO Rooftop Coworking space & Eatery",
+        "placeId": "ChIJOy4VgxU50i0R8mawVCoFiRw",
+        "expectedUrl": "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/puco-rooftop-coworking-space-eatery_ChIJOy4VgxU50i0R8mawVCoFiRw/puco-rooftop-coworking-space-eatery_static.webp"
+      },
+      {
+        "name": "SETTER Coworking & Private Offices",
+        "placeId": "ChIJc5xIUklH0i0R-2R5iW_1nx0",
+        "expectedUrl": "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/setter-coworking-private-offices_ChIJc5xIUklH0i0R-2R5iW_1nx0/setter-coworking-private-offices_static.webp"
+      },
+      {
+        "name": "Tropical Nomad Coworking Space",
+        "placeId": "ChIJvf4Cf7pF0i0RGVMhsUCiNBY",
+        "expectedUrl": "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/tropical-nomad-coworking-space_ChIJvf4Cf7pF0i0RGVMhsUCiNBY/tropical-nomad-coworking-space_static.webp"
+      }
+    ]
+  },
+  "extra_in_s3": {
+    "dining-image-dev": [
+      {
+        "url": "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/teamo/staticmap.webp",
+        "type": "old_format"
+      },
+      {
+        "url": "https://d2cmxnft4myi1k.cloudfront.net/dining-image-dev/la-baracca_ChIJj0tR_mpH0i0RP5h_ieNuzAs/la-baracca_static.webp",
+        "type": "unknown"
+      }
+    ],
+    "bar-image-dev": [
+      {
+        "url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/single-fin-bali_ChIJ0aNPQ_lP0i0RtPlHW6trMHM/single-fin-bali_static.webp",
+        "type": "unknown"
+      },
+      {
+        "url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/barn-gastropub_ChIJe7KSn4dH0i0RsfzzpwFhwpQ/barn-gastropub_static.webp",
+        "type": "unknown"
+      },
+      {
+        "url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/patato-head-beach-club_ChIJ_XZL_xFH0i0RTo0EWBqsnRs/patato-head-beach-club_static.webp",
+        "type": "unknown"
+      },
+      {
+        "url": "https://d2cmxnft4myi1k.cloudfront.net/bar-image-dev/the-lawn_ChIJiQdg1YdH0i0R8ANUMzZizN0/the-lawn_static.webp",
+        "type": "unknown"
+      }
+    ],
+    "cowork-image-dev": [
+      {
+        "url": "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/ducat-space_ChIJCd9etMVH0i0RNkfYsSkhmZg/ducat-space_static.webp",
+        "type": "unknown"
+      },
+      {
+        "url": "https://d2cmxnft4myi1k.cloudfront.net/cowork-image-dev/karya-coworking-bali_ChIJQeo_7VxH0i0RmnzEcibuEb8/karya-coworking-bali_static.webp",
+        "type": "unknown"
+      }
+    ]
+  }
+}
