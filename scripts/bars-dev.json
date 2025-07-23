@@ -126,7 +126,25 @@
     "servesVegetarianFood": true,
     "tableUrl": "https://wa.me/62881038206999",
     "gofoodUrl": "https://gofood.co.id/bali/restaurant/honeycomb-hookah-eatery-pasta-salad-burger-canggu-95014588-5bb0-40c4-8079-cd7e9bf20074?as=gmaps",
-    "menuUrl": "https://honeycombhookah.com/#rec735403781"
+    "menuUrl": "https://honeycombhookah.com/#rec735403781",
+    "barType": [
+      "Hookah Lounge & Restaurant"
+    ],
+    "drinkFocus": [
+      "Hookah",
+      "Cocktails"
+    ],
+    "atmosphere": [
+      "Chic",
+      "Cozy",
+      "Stylish",
+      "Relaxing"
+    ],
+    "priceRange": "IDR 200k - 400k",
+    "signatureDrinks": [
+      "Weekend 2-for-1 Cocktails",
+      "Extensive selection of hookah flavors"
+    ]
   },
   {
     "id": 2,
@@ -252,7 +270,26 @@
     "tableUrl": "mailto:reservations@longtimebali.com",
     "gofoodUrl": "https://gofood.co.id/bali/restaurant/longtime-berawa-0985f916-adaa-4577-a693-c1f7ecaca261?as=gmaps",
     "instagram": "https://www.instagram.com/longtime.bali/",
-    "menuUrl": "https://www.longtimebali.com/menu"
+    "menuUrl": "https://www.longtimebali.com/menu",
+    "barType": [
+      "Modern Asian Restaurant & Bar"
+    ],
+    "drinkFocus": [
+      "Cocktails",
+      "Wine"
+    ],
+    "atmosphere": [
+      "Retro",
+      "Stylish",
+      "Vibrant",
+      "Moody",
+      "DJ Nights"
+    ],
+    "priceRange": "IDR 400k - 800k+",
+    "signatureDrinks": [
+      "Signature cocktails",
+      "Extensive wine list"
+    ]
   },
   {
     "id": 3,
@@ -370,7 +407,26 @@
     "tableUrl": "https://api.whatsapp.com/send/?phone=6282144788810&text&type=phone_number&app_absent=0",
     "gofoodUrl": "",
     "instagram": "https://www.instagram.com/platonicintimate/",
-    "menuUrl": ""
+    "menuUrl": "",
+    "barType": [
+      "Cocktail Bar / Speakeasy"
+    ],
+    "drinkFocus": [
+      "Craft Cocktails"
+    ],
+    "atmosphere": [
+      "Vintage",
+      "Cozy",
+      "Hidden",
+      "Party Vibe"
+    ],
+    "priceRange": "IDR 150k - 300k",
+    "signatureDrinks": [
+      "Hot Girl Summer",
+      "Plan B",
+      "Miami Coco White",
+      "Adults Only"
+    ]
   },
   {
     "id": 4,
@@ -482,7 +538,27 @@
     "servesVegetarianFood": false,
     "tableUrl": "",
     "menuUrl": "",
-    "gofoodUrl": ""
+    "gofoodUrl": "",
+    "barType": [
+      "Speakeasy Cocktail Parlour"
+    ],
+    "drinkFocus": [
+      "Craft Cocktails",
+      "House-distilled spirits"
+    ],
+    "atmosphere": [
+      "Theatrical",
+      "Vintage",
+      "Lavish",
+      "Live Jazz"
+    ],
+    "priceRange": "IDR 200k - 400k",
+    "signatureDrinks": [
+      "Dern Kala",
+      "Shogi Ice Tea",
+      "Porn Star",
+      "The Chester Cup"
+    ]
   },
   {
     "id": 5,
@@ -608,7 +684,25 @@
     "servesVegetarianFood": false,
     "tableUrl": "https://balibeercycle.com/#book",
     "menuUrl": "https://balibeercycle.com/",
-    "gofoodUrl": ""
+    "gofoodUrl": "",
+    "barType": [
+      "Mobile Bar / Party Bus"
+    ],
+    "drinkFocus": [
+      "Beer",
+      "Pre-mixed drinks"
+    ],
+    "atmosphere": [
+      "Fun",
+      "Social",
+      "Sightseeing",
+      "Party"
+    ],
+    "priceRange": "IDR 600k (Alcohol Package)",
+    "signatureDrinks": [
+      "Unlimited Bintang",
+      "Unlimited Smirnoff"
+    ]
   },
   {
     "id": 6,
@@ -1735,6 +1829,25 @@
     "servesVegetarianFood": true,
     "tableUrl": "https://bookings.nowbookit.com/?accountid=ef22cedb-3885-49b5-bf9d-404c84edb9dc&venueid=10057&theme=outlined-dark&colors=hex,ffffff",
     "gofoodUrl": "",
-    "menuUrl": "https://www.missfishbali.com/wp-content/uploads/2022/09/Miss-Fish-All-Menu.pdf"
+    "menuUrl": "https://www.missfishbali.com/wp-content/uploads/2022/09/Miss-Fish-All-Menu.pdf",
+    "barType": [
+      "Japanese Fusion Restaurant & Club"
+    ],
+    "drinkFocus": [
+      "Signature Cocktails",
+      "High-end Spirits"
+    ],
+    "atmosphere": [
+      "Chic",
+      "Delicate (Dining)",
+      "High-Energy",
+      "Fiery (Club)"
+    ],
+    "priceRange": "IDR 400k - 1,000k+",
+    "signatureDrinks": [
+      "KITSUNE (Bourbon, Butterscotch)",
+      "TAKAYUKI (Rum, Mezcal, Pineapple)",
+      "I NO NAKA (Tequila, Port, Amareto)"
+    ]
   }
 ]
