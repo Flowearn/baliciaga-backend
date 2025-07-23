@@ -92,6 +92,12 @@ class BaliciagaCafe {
     this.cuisineStyle = existingData.cuisineStyle || null;
     this.atmosphere = existingData.atmosphere || null;
     this.signatureDishes = existingData.signatureDishes || null;
+    
+    // BAR SPECIFIC ATTRIBUTES
+    this.barType = existingData.barType || null;
+    this.drinkFocus = existingData.drinkFocus || null;
+    this.signatureDrinks = existingData.signatureDrinks || null;
+    this.priceRange = existingData.priceRange || null;
 
     // Region information (provided by caller)
     if (region) {
@@ -143,7 +149,12 @@ class BaliciagaCafe {
       category: this.category,
       cuisineStyle: this.cuisineStyle,
       atmosphere: this.atmosphere,
-      signatureDishes: this.signatureDishes
+      signatureDishes: this.signatureDishes,
+      // Bar specific fields
+      barType: this.barType,
+      drinkFocus: this.drinkFocus,
+      signatureDrinks: this.signatureDrinks,
+      priceRange: this.priceRange
       // EXCLUDED FIELDS (not included in output):
       // - address (formattedAddress from API)
       // - priceLevel  

@@ -76,6 +76,8 @@ provider:
             - "arn:aws:dynamodb:ap-southeast-1:335069051432:table/Baliciaga-*-${sls:stage}"
             - "arn:aws:dynamodb:ap-southeast-1:335069051432:table/Baliciaga-*-${sls:stage}/index/*"
             - "arn:aws:dynamodb:ap-southeast-1:335069051432:table/baliciaga-verification-codes-${sls:stage}"
+            - "arn:aws:dynamodb:ap-southeast-1:335069051432:table/baliciaga-places-${sls:stage}"
+            - "arn:aws:dynamodb:ap-southeast-1:335069051432:table/baliciaga-places-${sls:stage}/index/*"
         - Effect: "Allow"
           Action:
             - "s3:PutObject"
@@ -97,6 +99,7 @@ provider:
     LISTINGS_TABLE: Baliciaga-Listings-${sls:stage}
     USERS_TABLE: Baliciaga-Users-${sls:stage}
     APPLICATIONS_TABLE: Baliciaga-Applications-${sls:stage}
+    PLACES_TABLE: baliciaga-places-${sls:stage}
     # AI Service Environment Variables
     GEMINI_API_KEY_SSM_PATH: /baliciaga/${sls:stage}/geminiApiKey
     # Profile Pictures S3 Bucket

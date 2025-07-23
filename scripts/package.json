@@ -19,6 +19,7 @@
     "restoreMocks": true
   },
   "dependencies": {
+    "@aws-sdk/client-s3": "^3.850.0",
     "puppeteer": "^24.10.2"
   }
 }
